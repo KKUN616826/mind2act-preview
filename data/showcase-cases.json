@@ -94,16 +94,21 @@
         "label": "Medium 演示",
         "path": "media/videos/E__E_medium.mp4",
         "poster": "media/posters/E__E_medium.jpg",
-        "duration_seconds": 123.833
+        "duration_seconds": 123.833333
       },
       {
         "kind": "video",
         "label": "Hard 演示",
         "path": "media/videos/E__E_hard.mp4",
         "poster": "media/posters/E__E_hard.jpg",
-        "duration_seconds": 178.916
+        "duration_seconds": 178.916016
       }
-    ]
+    ],
+    "evidence": {
+      "high": "依据历史选出本批重复件",
+      "low": "目标实际稳定进入提交盘",
+      "feedback": "按实际提交确认本批完成，错选与抓放失败分开记录"
+    }
   },
   {
     "id": "P",
@@ -190,9 +195,14 @@
         "label": "Hard 演示",
         "path": "media/videos/P__P_hard_general_012.mp4",
         "poster": "media/posters/P__P_hard_general_012.jpg",
-        "duration_seconds": 75.917
+        "duration_seconds": 75.916667
       }
-    ]
+    ],
+    "evidence": {
+      "high": "维护各容器累计需求与剩余数量",
+      "low": "食品实际进入对应容器",
+      "feedback": "只在确认投放后更新实绩，新增订单继续累加"
+    }
   },
   {
     "id": "S",
@@ -276,23 +286,28 @@
         "label": "Easy 演示",
         "path": "media/videos/S__S_easy.mp4",
         "poster": "media/posters/S__S_easy.jpg",
-        "duration_seconds": 60.833
+        "duration_seconds": 60.833333
       },
       {
         "kind": "video",
         "label": "Medium 演示",
         "path": "media/videos/S__S_medium.mp4",
         "poster": "media/posters/S__S_medium.jpg",
-        "duration_seconds": 65.833
+        "duration_seconds": 65.833333
       },
       {
         "kind": "video",
         "label": "Hard 演示",
         "path": "media/videos/S__S_hard.mp4",
         "poster": "media/posters/S__S_hard.jpg",
-        "duration_seconds": 66.167
+        "duration_seconds": 66.166667
       }
-    ]
+    ],
+    "evidence": {
+      "high": "把历史颜色绑定映射到停转后的格位",
+      "low": "方块稳定放入目标格位",
+      "feedback": "分别检查目标格位选择与实际落位"
+    }
   },
   {
     "id": "F",
@@ -373,23 +388,28 @@
         "label": "Easy 演示",
         "path": "media/videos/F__F_easy.mp4",
         "poster": "media/posters/F__F_easy.jpg",
-        "duration_seconds": 28.417
+        "duration_seconds": 28.416667
       },
       {
         "kind": "video",
         "label": "Medium 演示",
         "path": "media/videos/F__F_medium.mp4",
         "poster": "media/posters/F__F_medium.jpg",
-        "duration_seconds": 44.667
+        "duration_seconds": 44.666667
       },
       {
         "kind": "video",
         "label": "Hard 演示",
         "path": "media/videos/F__F_hard.mp4",
         "poster": "media/posters/F__F_hard.jpg",
-        "duration_seconds": 55.917
+        "duration_seconds": 55.916667
       }
-    ]
+    ],
+    "evidence": {
+      "high": "根据探索学到的映射规划最短路径",
+      "low": "按钮有效按压并释放，滑台真实移动",
+      "feedback": "用实际位移更新位置，区分越界无位移与无效按压"
+    }
   },
   {
     "id": "M",
@@ -475,23 +495,28 @@
         "label": "Easy 演示",
         "path": "media/videos/M__M_easy_frontlabel.mp4",
         "poster": "media/posters/M__M_easy_frontlabel.jpg",
-        "duration_seconds": 82.167
+        "duration_seconds": 82.166667
       },
       {
         "kind": "video",
         "label": "Medium 演示",
         "path": "media/videos/M__M_medium_frontlabel.mp4",
         "poster": "media/posters/M__M_medium_frontlabel.jpg",
-        "duration_seconds": 122.167
+        "duration_seconds": 122.166667
       },
       {
         "kind": "video",
         "label": "Hard 演示",
         "path": "media/videos/M__M_hard_frontlabel.mp4",
         "poster": "media/posters/M__M_hard_frontlabel.jpg",
-        "duration_seconds": 120.583
+        "duration_seconds": 120.583333
       }
-    ]
+    ],
+    "evidence": {
+      "high": "保留初始位置与有重复的目标路线",
+      "low": "每站均松手并放稳工件",
+      "feedback": "只有有效提交推进序列索引，无关交换和临时放置不推进"
+    }
   },
   {
     "id": "FR1",
@@ -565,26 +590,31 @@
     "media": [
       {
         "kind": "video",
-        "label": "演示 01 · 档位未标注",
+        "label": "运控演示 1（档位未标注）",
         "path": "media/videos/FR1__picking__01.mp4",
         "poster": "media/posters/FR1__picking__01.jpg",
         "duration_seconds": 26.5
       },
       {
         "kind": "video",
-        "label": "演示 02 · 档位未标注",
+        "label": "运控演示 2（档位未标注）",
         "path": "media/videos/FR1__picking__02.mp4",
         "poster": "media/posters/FR1__picking__02.jpg",
-        "duration_seconds": 24.333
+        "duration_seconds": 24.333333
       },
       {
         "kind": "video",
-        "label": "演示 03 · 档位未标注",
+        "label": "运控演示 3（档位未标注）",
         "path": "media/videos/FR1__picking__03.mp4",
         "poster": "media/posters/FR1__picking__03.jpg",
-        "duration_seconds": 38.667
+        "duration_seconds": 38.666667
       }
-    ]
+    ],
+    "evidence": {
+      "high": "当前目标明确，认知选择负担受控",
+      "low": "在运动窗口内抓取并稳定落盘",
+      "feedback": "按落盘统计吞吐与漏取，不把控制器步频当作交互频率"
+    }
   },
   {
     "id": "FR2",
@@ -667,12 +697,17 @@
     "media": [
       {
         "kind": "video",
-        "label": "任务演示",
+        "label": "运控演示",
         "path": "media/videos/FR2__FR2.mp4",
         "poster": "media/posters/FR2__FR2.jpg",
-        "duration_seconds": 31.333
+        "duration_seconds": 31.333333
       }
-    ]
+    ],
+    "evidence": {
+      "high": "从当前亮灯识别目标按钮",
+      "low": "时限内达到阈值并在一秒内释放",
+      "feedback": "独立触发—释放事件对应提示次数，持续按住不推进"
+    }
   },
   {
     "id": "PR1",
@@ -753,16 +788,21 @@
         "label": "Medium 演示",
         "path": "media/videos/PR1__PR1_Medium_control_20260919.mp4",
         "poster": "media/posters/PR1__PR1_Medium_control_20260919.jpg",
-        "duration_seconds": 19.333
+        "duration_seconds": 19.333333
       },
       {
         "kind": "video",
         "label": "Hard 演示",
         "path": "media/videos/PR1__PR1_Hard_control_20260919.mp4",
         "poster": "media/posters/PR1__PR1_Hard_control_20260919.jpg",
-        "duration_seconds": 19.333
+        "duration_seconds": 19.333333
       }
-    ]
+    ],
+    "evidence": {
+      "high": "把目标阻值转换为刻度读数和调节方向",
+      "low": "调节后松手撤离并在容差内保持一秒",
+      "feedback": "通过稳定后的阻值残差决定继续微调或完成"
+    }
   },
   {
     "id": "PR2",
@@ -837,23 +877,28 @@
         "label": "Easy 演示",
         "path": "media/videos/PR2__PR2_Easy_control_20260919.mp4",
         "poster": "media/posters/PR2__PR2_Easy_control_20260919.jpg",
-        "duration_seconds": 22.583
+        "duration_seconds": 22.583333
       },
       {
         "kind": "video",
         "label": "Medium 演示",
         "path": "media/videos/PR2__PR2_Medium_control_20260919.mp4",
         "poster": "media/posters/PR2__PR2_Medium_control_20260919.jpg",
-        "duration_seconds": 22.583
+        "duration_seconds": 22.583333
       },
       {
         "kind": "video",
         "label": "Hard 演示",
         "path": "media/videos/PR2__PR2_Hard_control_20260919.mp4",
         "poster": "media/posters/PR2__PR2_Hard_control_20260919.jpg",
-        "duration_seconds": 22.583
+        "duration_seconds": 22.583333
       }
-    ]
+    ],
+    "evidence": {
+      "high": "把目标电压转换为角度与调节方向",
+      "low": "旋钮松手后保持目标电压一秒",
+      "feedback": "以稳定读数确认完成，区分读数推断与角度控制误差"
+    }
   },
   {
     "id": "PR3",
@@ -940,49 +985,55 @@
         "label": "Easy 演示",
         "path": "media/videos/PR3__PR3_Easy_head_reference_20260919.mp4",
         "poster": "media/posters/PR3__PR3_Easy_head_reference_20260919.jpg",
-        "duration_seconds": 36.667
+        "duration_seconds": 36.666667
       },
       {
         "kind": "video",
         "label": "Medium 演示",
         "path": "media/videos/PR3__PR3_Medium_head_reference_20260919.mp4",
         "poster": "media/posters/PR3__PR3_Medium_head_reference_20260919.jpg",
-        "duration_seconds": 38.333
+        "duration_seconds": 38.333333
       },
       {
         "kind": "video",
         "label": "Hard 演示",
         "path": "media/videos/PR3__PR3_Hard_head_reference_20260919.mp4",
         "poster": "media/posters/PR3__PR3_Hard_head_reference_20260919.jpg",
-        "duration_seconds": 38.333
+        "duration_seconds": 38.333333
       }
-    ]
+    ],
+    "evidence": {
+      "high": "沿可见参考线按起终点顺序推进",
+      "low": "笔尖真实接触产生连续墨迹",
+      "feedback": "以实际墨迹覆盖与偏离验收，悬空运动不算描线"
+    }
   },
   {
     "id": "CP01",
-    "title": "样品记忆驱动的传送带复检分拣",
+    "title": "传送带配餐",
     "suite": "coupling",
-    "description": "参考商品随托盘经过观察区，离开全部相机视野后开始分拣。机器人记住参考款式，从持续经过的商品中各收取一件同款新实体。漏抓可在规定循环次数内等待回流。",
-    "challenge": "历史选件与动态执行，能否通过真实入盘反馈保持同步？",
+    "description": "参考订单样品随传送带经过，机器人记住每份订单的三种食品。样品离场后，从持续运动的传送带抓取对应食品，放入各自餐盘。Medium 与 Hard 还需从左侧盘堆依次取盘，完成多份订单。",
+    "challenge": "参考订单离场后，能否把食品组合记忆转化为动态抓取，并维护每一盘的实际完成量？",
     "abilities": [
-      "参考款式记忆与待收集合维护",
-      "运动中筛选、抓取与提交",
-      "依据漏抓、回流和入盘更新进度"
+      "订单与三种食品组合的关联记忆",
+      "运动目标的跟踪与抓取时机选择",
+      "取盘、配餐与跨订单切换",
+      "依据实际入盘结果更新剩余需求"
     ],
-    "success": "每种参考款式恰好有一个对应商品稳定进入收纳盘，且没有非目标物品；在规定循环和时间预算内完成。",
+    "success": "全部订单对应的三种食品实际进入各自餐盘，并完成该档取盘流程；分别记录错食品、错盘、遗漏和未稳定入盘。",
     "notes": [
-      "只有释放并稳定留盘才能关闭待收目标。回流次数与落盘稳定窗需在配置中固定。",
-      "当前展示场景预览，完整执行视频待补充。"
+      "三档带速均为 0.025 m/s；难度增加订单数、食品数和取盘流程，不以提速区分档位。",
+      "候选食品为长条派、盒装薯条、鸡块盒和盒装汉堡；每份订单选三种。",
+      "动态响应压力需结合可抓窗口与端到端时延标定；未定义回流、补料及漏取恢复规则，不预设循环重试预算。"
     ],
     "flow": [
-      "观察移动参考组",
-      "参考完全离场",
-      "记住待收款式",
-      "筛选来件",
-      "动态抓取并放盘",
-      "确认入盘更新清单",
-      "漏抓等回流",
-      "全部目标验收"
+      "观察经过的参考订单",
+      "保持各订单食品组合",
+      "按档位取盘",
+      "跟踪并抓取所需食品",
+      "确认食品进入对应餐盘",
+      "更新剩余需求并切换订单",
+      "验收全部餐盘"
     ],
     "difficulty": {
       "columns": [
@@ -993,81 +1044,99 @@
       ],
       "rows": [
         [
-          "参考商品款式数",
-          "3 种",
-          "4 种",
-          "5 种"
+          "订单数",
+          "1 份",
+          "2 份",
+          "3 份"
         ],
         [
-          "后续商品总数（不含参考组，回流不重复计数）",
-          "9 件",
-          "12 件",
-          "15 件"
+          "食品总数",
+          "3 件",
+          "6 件",
+          "9 件"
         ],
         [
-          "需要收取的目标",
-          "每款 1 件，共 3 件",
-          "每款 1 件，共 4 件",
-          "每款 1 件，共 5 件"
+          "餐盘流程",
+          "中央预放 1 只餐盘，不取盘",
+          "从左侧盘堆依次取 2 只餐盘",
+          "从左侧盘堆依次取 3 只餐盘"
         ],
         [
-          "分拣阶段带速",
-          "低速匀速",
-          "中速匀速",
-          "较高速匀速"
+          "传送带速度",
+          "0.025 m/s",
+          "0.025 m/s",
+          "0.025 m/s"
+        ],
+        [
+          "主要难点",
+          "单订单记忆与连续抓放",
+          "多订单记忆、取盘与跨订单切换",
+          "更长流程、三盘管理与持续稳定执行"
         ]
       ]
     },
     "metrics": [
-      "全目标正确收集率",
-      "误收／漏收／重复收取",
-      "记忆选件准确率",
-      "抓取和入盘成功率",
-      "错误完成标记",
-      "回流恢复成本"
+      "整单完成率与全部订单成功率",
+      "食品选择与订单分配正确率",
+      "目标正确时的抓取及稳定入盘率",
+      "漏取数与有效抓放吞吐",
+      "实际入盘量与维护进度的偏差"
     ],
     "media": [
       {
-        "kind": "image",
-        "label": "场景预览",
-        "path": "media/images/CP01__Q39tb3haAo4aHmxfRtgcFyNbnwd.png"
+        "kind": "video",
+        "label": "Easy 演示",
+        "path": "media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+        "poster": "media/posters/CP01__CP01_easy_adaptive_v2_20260920.jpg",
+        "duration_seconds": 67.666667
       },
       {
-        "kind": "image",
-        "label": "场景预览",
-        "path": "media/images/CP01__HhA4bLh94o5EBQxqO5OcM6RsnEU.png"
+        "kind": "video",
+        "label": "Medium 演示",
+        "path": "media/videos/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+        "poster": "media/posters/CP01__CP01_medium_adaptive_v2_20260920.jpg",
+        "duration_seconds": 164.916667
+      },
+      {
+        "kind": "video",
+        "label": "Hard 演示",
+        "path": "media/videos/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+        "poster": "media/posters/CP01__CP01_hard_adaptive_v2_20260920.jpg",
+        "duration_seconds": 215.083333
       }
-    ]
+    ],
+    "evidence": {
+      "high": "记住每份订单的食品组合并分配餐盘",
+      "low": "动态抓取并稳定放入对应盘",
+      "feedback": "实际入盘才扣减需求，抓空或错盘不能计入完成量"
+    }
   },
   {
     "id": "CP02",
     "title": "旋转蛋糕装饰",
     "suite": "coupling",
-    "description": "机器人观察三秒蛋糕装饰样例，记住四种马卡龙的位置。示范消失后，在持续旋转的蛋糕上复现布局。更高档位包含开配料盒、按启动、按停止、等待停稳和盖上保护罩。",
-    "challenge": "记忆目标、动态放置和多阶段操作，能否围绕真实物理状态连成闭环？",
+    "description": "先观察样品蛋糕完整旋转一圈，记住马卡龙身份与蛋糕局部位置的对应关系，再对持续旋转的蛋糕复现布局。Easy 放置四件，Medium 与 Hard 各六件；后两档增加开盒和启动，Hard 还需停机、等停稳并盖罩。",
+    "challenge": "能否保持配料与局部位置的绑定，在目标持续运动时完成放置，并根据真实效果推进整段流程？",
     "abilities": [
-      "四种装饰与位置的关联记忆",
-      "旋转目标上的释放与落位控制",
-      "开盒、启停和盖罩的前置条件维护"
+      "马卡龙身份与蛋糕局部位置的空间记忆",
+      "旋转坐标更新与动作时机控制",
+      "开盒、启停、装饰和盖罩的前置依赖管理",
+      "落位确认与剩余装饰目标更新"
     ],
-    "success": "四件装饰稳定落在对应位置，并满足装饰圈数限制。Medium 完成开盒和启动流程；Hard 还需真实停稳后落罩并松手。",
+    "success": "各马卡龙在蛋糕局部坐标中正确复现布局，并完成该档要求的准备与收尾；Hard 需确认停稳后完成盖罩。具体落位容差需固定。",
     "notes": [
-      "三档均为四件、20°/s；主要区别是动作链。装饰最多四圈，全流程动作预算为 135 秒，不含示范。",
-      "四圈相当于 72 秒旋转时间，与全流程动作预算分别计时。位置、停稳及盖罩阈值需标定。",
-      "视频画面内的 CP03 标识对应本页蛋糕装饰任务 CP02。"
+      "暂定转速为 Easy 12°/s、Medium 20°/s、Hard 28°/s；数量为 4/6/6 件。",
+      "Easy→Medium 同时改变记忆数量、转速和动作链，不能把档位差异单独归因于频率；单因素归因需控制其他变量。",
+      "Medium→Hard 保持六件，提高转速并增加收尾流程。落位容差与时间预算需在比较前固定。"
     ],
     "flow": [
-      "观察 3 秒示范并记住布局",
-      "示范消失",
-      "按档位打开配料盒",
-      "按档位启动转盘",
-      "逐件抓取并随旋转放置四件",
-      "检查实际落位",
-      "Hard 按停止",
-      "等待真实停稳",
-      "提起搬运保护罩",
-      "落罩并松手",
-      "验收布局与最终状态"
+      "观察完整一圈并记忆布局",
+      "按档位开盒并启动",
+      "跟踪当前目标位置",
+      "抓取并随旋转放置",
+      "确认落位并更新剩余目标",
+      "Hard 停机并等待静止",
+      "Hard 提罩盖合并松手"
     ],
     "difficulty": {
       "columns": [
@@ -1080,93 +1149,86 @@
         [
           "需记忆并放置的马卡龙",
           "4 种，各 1 件",
-          "4 种，各 1 件",
-          "4 种，各 1 件"
+          "6 种，各 1 件",
+          "6 种，各 1 件"
         ],
         [
-          "转盘速度",
-          "统一 20°/s",
-          "统一 20°/s",
-          "统一 20°/s"
+          "执行阶段转速（暂定）",
+          "12°/s",
+          "20°/s",
+          "28°/s"
         ],
         [
           "动作链（难度递增）",
           "盒盖已开，转盘自动启动；抓取并随转盘放置 ×4；无按钮盒",
-          "左臂开盒 → 右臂按启动 → 左臂完成四件旋转装饰",
-          "Medium 全流程 → 右臂按停止 → 等待停稳 → 右臂提罩、搬运、落罩并松手"
-        ],
-        [
-          "放置区域与统一预算",
-          "4 个相同白巧克力圈全部使用，不提示颜色对应；装饰最多 4 圈，动作预算 135 秒（不含示范）",
-          "相同",
-          "相同"
+          "左臂开盒 → 右臂按启动 → 左臂完成六件旋转装饰",
+          "以更快转速完成 Medium 全流程（仍为 6 件）→ 右臂按停止 → 等待停稳 → 右臂提罩、搬运、落罩并松手"
         ]
       ]
     },
     "metrics": [
-      "完整动作链成功率",
-      "颜色—位置记忆错误",
-      "动态落点误差",
-      "错误阶段推进",
-      "按启动／停止有效率",
-      "停稳前落罩次数",
-      "盖罩完成率",
-      "各阶段耗时与总预算超时"
+      "完整流程成功率",
+      "身份—局部位置绑定准确率",
+      "局部坐标下的落位误差",
+      "目标正确时的动态放置成功率",
+      "端到端时延与运动窗口错失",
+      "启停、停稳和盖罩阶段完成率"
     ],
     "media": [
       {
         "kind": "video",
         "label": "Easy 演示",
-        "path": "media/videos/CP02__CP02_easy_20260920.mp4",
-        "poster": "media/posters/CP02__CP02_easy_20260920.jpg",
-        "duration_seconds": 56.583
+        "path": "media/videos/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "poster": "media/posters/CP02__CP02_easy_v6_完整示范与运控_20260920.jpg",
+        "duration_seconds": 64.333333
       },
       {
         "kind": "video",
         "label": "Medium 演示",
-        "path": "media/videos/CP02__CP02_medium_20260920.mp4",
-        "poster": "media/posters/CP02__CP02_medium_20260920.jpg",
-        "duration_seconds": 73.833
+        "path": "media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+        "poster": "media/posters/CP02__CP02_medium_v6_完整示范与运控_20260920.jpg",
+        "duration_seconds": 100.083333
       },
       {
         "kind": "video",
         "label": "Hard 演示",
-        "path": "media/videos/CP02__CP02_hard_20260920.mp4",
-        "poster": "media/posters/CP02__CP02_hard_20260920.jpg",
-        "duration_seconds": 101.667
+        "path": "media/videos/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+        "poster": "media/posters/CP02__CP02_hard_v6_完整示范与运控_20260920.jpg",
+        "duration_seconds": 128.0
       }
-    ]
+    ],
+    "evidence": {
+      "high": "保持配料—局部位置绑定和操作前提",
+      "low": "随旋转落位，Hard 停稳后稳定盖罩",
+      "feedback": "按落位确认装饰进度，停机指令之后仍需确认转盘停止"
+    }
   },
   {
     "id": "CP03",
-    "title": "配方跟随的分阶段配液与搅拌",
+    "title": "实验配液",
     "suite": "coupling",
-    "description": "完整配方始终显示在桌面终端。机器人按原料顺序和加液量自由倾倒，并在指定阶段抓取搅拌棒、搅拌、归位，然后继续配液。四只原料瓶已由工作人员备料并开盖。",
-    "challenge": "工单可见时，能否依据实际加液、搅拌与归位效果正确推进阶段？",
+    "description": "完整配方在桌面终端全程可见。机器人选择原料，依据烧杯刻度自由倒液，并按阶段完成搅拌、工具归位及后续配液。开头两秒仅用于观察与稳定；任务考察可见配方执行中的顺序、剂量和物理完成条件。",
+    "challenge": "每一步实际添加量和工具状态，能否可靠地支持下一阶段配液？",
     "abilities": [
-      "可见配方的依赖顺序与进度管理",
-      "倾倒、余流停止和剂量控制",
-      "瓶具与搅拌棒之间的技能切换"
+      "可见配方的顺序与阶段依赖管理",
+      "自由倾倒中的剂量估计、停止和残余流动控制",
+      "搅拌工具的抓持、使用和稳定归位",
+      "基于实际剂量及完成阶段推进流程"
     ],
-    "success": "各阶段的来源、顺序、实际加液量、搅拌安排及工具归位均满足配方。分别记录剂量残差、溢出和错误阶段推进。",
+    "success": "原料种类与顺序正确，各步添加量满足标定后的容差，并按档位完成搅拌及每次工具归位。",
     "notes": [
-      "配方全程可见，本任务考察多阶段执行与反馈，不以隐藏配方记忆为前提。",
-      "每步加液量为 20／30／40 mL，统一暂定容差 ±5 mL；当前为标称粒子体积，可见液面的绝对 mL 标定尚待完成。",
-      "当前提供场景预览，完整执行视频待补充。"
+      "配方全程可见，不将隐藏配方记忆作为核心能力。剂量从 20/30/40 mL 采样，暂定 ±5 mL 需液体标定。",
+      "两段视频分别为倒液与搅拌初步预览，不能作为 Easy/Medium/Hard 完整流程通过的证据。",
+      "Easy 两次加液；Medium 三次加液后搅拌归位；Hard 在第二次、第四次加液后分别搅拌归位。"
     ],
     "flow": [
-      "观察可见配方并等待 2 秒",
-      "选择本步原料",
-      "抓瓶与定位",
-      "按刻度倾倒",
-      "回正并等待稳定",
-      "核验本步增量",
-      "放回原料瓶",
-      "到指定阶段取搅拌棒",
-      "搅拌",
-      "工具归位",
+      "观察可见配方并稳定两秒",
+      "选择当前原料",
+      "倾倒并确认本步增量",
+      "按配方进入搅拌阶段",
+      "搅拌棒稳定归位",
       "继续剩余配液",
-      "最终验收"
+      "验收剂量与工具状态"
     ],
     "difficulty": {
       "columns": [
@@ -1203,49 +1265,65 @@
       ]
     },
     "metrics": [
-      "完整配方与阶段通过率",
-      "每步稳定增量残差",
-      "错源／错序／跳过搅拌",
-      "搅拌与归位完成率",
-      "溢出量",
-      "错误阶段推进",
-      "技能切换耗时"
+      "完整配方执行成功率",
+      "原料选择与阶段顺序错误数",
+      "每步增量剂量误差与溢洒量",
+      "停止倾倒后的剂量偏移",
+      "搅拌及工具归位完成率"
     ],
     "media": [
       {
+        "kind": "video",
+        "label": "倒液初步预览",
+        "path": "media/videos/CP03__CP03_CP09_pour_preliminary_20260920.mp4",
+        "poster": "media/posters/CP03__CP03_CP09_pour_preliminary_20260920.jpg",
+        "duration_seconds": 42.0
+      },
+      {
+        "kind": "video",
+        "label": "搅拌初步预览",
+        "path": "media/videos/CP03__CP03_CP09_stir_preliminary_20260920.mp4",
+        "poster": "media/posters/CP03__CP03_CP09_stir_preliminary_20260920.jpg",
+        "duration_seconds": 42.666667
+      },
+      {
         "kind": "image",
-        "label": "场景预览",
+        "label": "场景图",
         "path": "media/images/CP03__H1ugbqxBuoakKgxyoUVcl2Tbnze.png"
       }
-    ]
+    ],
+    "evidence": {
+      "high": "按全程可见配方选择原料与搅拌阶段",
+      "low": "控制本步添加量，完成搅拌及工具归位",
+      "feedback": "按本步实际剂量和工具状态推进，预览不证明完整配方通过"
+    }
   },
   {
     "id": "CP04",
-    "title": "野餐篮打包与布局调整",
+    "title": "野餐篮打包",
     "suite": "coupling",
-    "description": "机器人将餐盒、点心盒和直立饮料瓶装入带盖野餐篮。箱内没有固定槽位，机器人自主安排位置与顺序；允许取出多件重新摆放，最终使所有物品入篮并正常关盖。",
-    "challenge": "真实占用与空间干涉，能否及时改变接下来的摆放计划？",
+    "description": "将三明治、带把手杯、饮料罐及碗碟装入野餐篮，自行规划朝向、位置和顺序，利用器皿空腔与篮内净高。允许取出多件重排；全部装入后，抓起右侧可拆卸盖，对齐篮口并稳定盖合。",
+    "challenge": "空间上可行的布局，能否经由实际抓放实现，并在盖合前根据占用和干涉调整？",
     "abilities": [
-      "共享空间中的布局与顺序规划",
-      "朝向约束下的精确抓放",
-      "依据实际位姿和关盖效果局部重排"
+      "不规则物体朝向、净高与器皿空腔的空间推理",
+      "层次与套放的操作顺序规划",
+      "接触、间隙和盖合的精细控制",
+      "根据实际占用更新布局并按需重排"
     ],
-    "success": "全部指定物品在篮内，饮料瓶保持直立，箱盖实际闭合。允许多种合法布局和预算内的局部调整。",
+    "success": "所有物品稳定位于篮内且无实体穿透；盖子由篮沿稳定支撑，物品不顶盖，机械臂撤离。当前版本不设置搭扣。",
     "notes": [
-      "任务采用单层摆放，允许多件暂存，不要求必须发生返工。",
-      "视频和场景图待补充；物品尺寸、预算和闭盖验收阈值需在实例配置中固定。"
+      "三档为 3/4/5 件，空间编排压力与套放依赖仍待实例验证。",
+      "不限制单层、不强制饮料直立，允许多件桌面暂存；遇到干涉可提盖整理，但不强制发生返工。",
+      "当前提供场景图，未附完整执行视频；没有外部动态响应窗口，不作为频率主轴。"
     ],
     "flow": [
-      "观察物品和篮内空间",
-      "提出可行布局",
-      "选择物品和朝向",
-      "抓放",
-      "复查真实占用",
-      "必要时调整或取回",
-      "装入全部",
-      "尝试关盖",
-      "有干涉则重开修订",
-      "最终验收"
+      "观察篮内空间与器皿轮廓",
+      "规划底层、朝向与套放顺序",
+      "逐件放置并确认占用",
+      "必要时取出多件重排",
+      "提起并转正可拆卸盖",
+      "对齐篮口后落盖松手",
+      "确认稳定支撑并撤离"
     ],
     "difficulty": {
       "columns": [
@@ -1262,16 +1340,16 @@
           "5 件"
         ],
         [
-          "摆放余量",
-          "宽松，多种布局可行",
-          "较紧，需要安排朝向与位置",
-          "紧凑，小偏移可能阻塞后续放置"
+          "空间编排压力（待实例验证）",
+          "宽松，选择不规则物品朝向，多种布局可行",
+          "增加一处层次或套放依赖，需安排底层位置",
+          "联合安排底层、把手朝向与套放位置，错误布局可能需重排"
         ],
         [
           "摆放规则",
-          "单层，饮料瓶直立",
-          "相同",
-          "相同"
+          "候选：三明治、带把手杯、饮料罐；不强制套放",
+          "候选：增加大碗；验证一处套放或层次关系",
+          "候选：再增加浅碗；验证更多空间冲突与顺序依赖"
         ],
         [
           "调整与暂存",
@@ -1282,43 +1360,52 @@
       ]
     },
     "metrics": [
-      "装箱＋关盖完整成功率",
-      "放置位姿残差",
-      "阻塞后重复无效尝试",
-      "额外搬移／开关盖次数",
-      "首次可行布局率",
-      "局部恢复成本"
+      "全部装入并稳定盖合的成功率",
+      "空间约束与实体穿透违反数",
+      "物品稳定性及盖合干涉",
+      "重排次数与额外操作成本",
+      "实际占用变化后的计划修订"
     ],
-    "media": []
+    "media": [
+      {
+        "kind": "image",
+        "label": "场景图",
+        "path": "media/images/CP04__LXDlbJfqvo3mN1xAeoKcdzbqn7K.png"
+      }
+    ],
+    "evidence": {
+      "high": "规划朝向、底层布局、套放和盖合顺序",
+      "low": "稳定放入且无穿透，盖子由篮沿支撑",
+      "feedback": "以实际占用修订余下布局，最终闭盖检查空间方案是否成立"
+    }
   },
   {
     "id": "CP05",
-    "title": "电子琴短句记忆与精确复奏",
+    "title": "电子琴复奏",
     "suite": "coupling",
-    "description": "机器人抓稳敲击棒，观察按顺序亮起的目标琴键并记住短句。示范结束后，目标提示撤去，机器人使用单臂或双臂按顺序复奏；只有棒头真实下压到阈值才产生触键反馈。",
-    "challenge": "记住的音符序列，能否与左右臂分工和实际触键事件保持一致？",
+    "description": "按档位打开琴盖并取用敲击棒，用棒头敲击开始按钮以启动示范。记住琴键顺序和重复次数，提示结束后用棒头逐键复奏，最后归还工具、恢复琴盖状态并撤离。执行不要求复现示范速度，双棒可以轮流操作。",
+    "challenge": "能否将有重复的序列记忆转换为独立有效触键，并完成准备、复奏和收尾的完整任务？",
     "abilities": [
-      "隐藏短句与重复音的序列记忆",
-      "物理持棒、精确触键和独立释放",
-      "左右臂分区与跨区域动作衔接"
+      "琴键身份、顺序和重复次数的序列记忆",
+      "棒头准确接触、触发深度与释放控制",
+      "双臂双棒的目标分配和空间协调",
+      "准备、示范启动、复奏、工具归位与合盖的进度管理"
     ],
-    "success": "目标顺序、独立触发与释放均正确，并按定义的执行时窗完成。记录漏击、双击、索引漂移和跨区切换成本。",
+    "success": "琴键顺序和次数正确，每次由棒头真实触发后释放；工具稳定归位，琴盖恢复该档初始状态，机械臂撤离。错序、漏击、额外击打、邻键误触及工具失败均影响成功。",
     "notes": [
-      "三档周期均为 2 秒/次，区别在于候选键域、单／双臂和序列长度。",
-      "示范结束立即转为执行信号；执行时不提示下一个目标，触键后亮灯仅用于效果反馈。",
-      "首音时窗、触发时间容差与异常处理规则仍需固定。"
+      "示范暂定每两秒一个事件；执行没有节拍窗口、不要求跟拍或双臂同步。",
+      "Easy 为 7 键/8 次/单棒；Medium 为 14 键/8 次/双棒；Hard 为 21 键/12 次/双棒。",
+      "现有三段视频是旧版取棒与复奏预览，未覆盖开始按钮、归棒及琴盖开合；新版完整流程视频待补。",
+      "开始按钮释放至示范播放的过渡时间待验证。"
     ],
     "flow": [
-      "抓稳一／两根棒",
-      "撤到两侧观察",
-      "记住目标短句",
-      "最后示范结束立即绿灯",
-      "按记忆选择目标及手臂",
-      "允许提前对准",
-      "棒头有效触键",
-      "释放抬棒",
-      "按反馈与顺序继续",
-      "验收完整短句"
+      "按档位打开琴盖",
+      "取用一根或两根棒",
+      "用棒敲开始按钮并释放",
+      "观察并记忆示范序列",
+      "逐键触发并抬棒释放",
+      "将所用棒稳定归位",
+      "按档位合盖并撤离"
     ],
     "difficulty": {
       "columns": [
@@ -1335,16 +1422,28 @@
           "左端、中央、右端，共 21 个"
         ],
         [
-          "敲击棒",
-          "单臂单棒",
-          "双臂双棒",
-          "双臂双棒"
+          "敲击序列",
+          "8 次",
+          "8 次",
+          "12 次"
         ],
         [
-          "序列长度",
-          "8 次敲击",
-          "8 次敲击",
-          "12 次敲击"
+          "工具",
+          "单臂单棒",
+          "双臂双棒，可轮流操作",
+          "双臂双棒，可轮流操作"
+        ],
+        [
+          "初始琴盖与准备",
+          "已打开；取一根棒",
+          "关闭；自行开盖、取两根棒",
+          "同 Medium"
+        ],
+        [
+          "启动示范",
+          "用棒敲开始按钮",
+          "相同",
+          "相同"
         ],
         [
           "目标区域总跨度",
@@ -1353,50 +1452,59 @@
           "65.8 cm"
         ],
         [
-          "演示与执行周期",
-          "2 秒/次",
-          "2 秒/次",
-          "2 秒/次"
+          "示范速度／执行要求",
+          "示范暂定 2 秒/次；执行不要求跟拍",
+          "相同",
+          "相同"
         ],
         [
-          "主要难点",
-          "局部顺序记忆与单棒精确触键",
-          "双臂分区和左右交接",
-          "更长记忆、全琴跨度与同臂远近切换"
+          "收尾",
+          "归还一根棒并撤离，琴盖保持打开",
+          "归还两棒、合盖并撤离",
+          "同 Medium"
+        ],
+        [
+          "主要压力",
+          "局部顺序与准确触键",
+          "左右目标记忆、双棒轮流操作及开合盖",
+          "更长序列、更大跨度、更多连续同侧操作"
         ]
       ]
     },
     "metrics": [
-      "完整短句成功率",
-      "键位错误／漏击／双击",
-      "释放是否完整",
-      "音符索引漂移",
-      "左右臂任务分配",
-      "跨区切换成本",
-      "触发时序偏差（按已定义窗口）"
+      "完整任务成功率与复奏序列正确率",
+      "漏击、额外击打和邻键误触数",
+      "有效触发及释放率",
+      "工具归位和琴盖恢复成功率",
+      "分阶段完成率与总执行时间（无跟拍要求）"
     ],
     "media": [
       {
         "kind": "video",
-        "label": "Easy 演示",
+        "label": "Easy · 旧版局部流程预览",
         "path": "media/videos/CP05__CP05_Easy_8hits.mp4",
         "poster": "media/posters/CP05__CP05_Easy_8hits.jpg",
         "duration_seconds": 42.25
       },
       {
         "kind": "video",
-        "label": "Medium 演示",
+        "label": "Medium · 旧版局部流程预览",
         "path": "media/videos/CP05__CP05_Medium_8hits.mp4",
         "poster": "media/posters/CP05__CP05_Medium_8hits.jpg",
-        "duration_seconds": 51.917
+        "duration_seconds": 51.916667
       },
       {
         "kind": "video",
-        "label": "Hard 演示",
+        "label": "Hard · 旧版局部流程预览",
         "path": "media/videos/CP05__CP05_Hard_12hits.mp4",
         "poster": "media/posters/CP05__CP05_Hard_12hits.jpg",
-        "duration_seconds": 67.917
+        "duration_seconds": 67.916667
       }
-    ]
+    ],
+    "evidence": {
+      "high": "保留琴键顺序与重复次数，管理准备和收尾",
+      "low": "棒头触发后释放，归棒稳定并恢复琴盖",
+      "feedback": "有效触键才推进序列；复奏结束仍需完成收尾，无跟拍要求"
+    }
   }
 ]

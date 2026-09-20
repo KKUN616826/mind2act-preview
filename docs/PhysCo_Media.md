@@ -1,6 +1,6 @@
 # PhysCo 演示素材索引
 
-32 段视频、3 张场景图。文件路径与任务编号对应。
+37 段视频、2 张场景图。
 
 ## E · 多批次物料重复件识别
 
@@ -32,13 +32,13 @@
 
 ## FR1 · 快递输送线连续取件
 
-- [演示 01 · 档位未标注](../media/videos/FR1__picking__01.mp4)
-- [演示 02 · 档位未标注](../media/videos/FR1__picking__02.mp4)
-- [演示 03 · 档位未标注](../media/videos/FR1__picking__03.mp4)
+- [运控演示 1（档位未标注）](../media/videos/FR1__picking__01.mp4)
+- [运控演示 2（档位未标注）](../media/videos/FR1__picking__02.mp4)
+- [运控演示 3（档位未标注）](../media/videos/FR1__picking__03.mp4)
 
 ## FR2 · 亮灯按钮连续响应
 
-- [任务演示](../media/videos/FR2__FR2.mp4)
+- [运控演示](../media/videos/FR2__FR2.mp4)
 
 ## PR1 · 滑动变阻器阻值调节
 
@@ -58,27 +58,30 @@
 - [Medium 演示](../media/videos/PR3__PR3_Medium_head_reference_20260919.mp4)
 - [Hard 演示](../media/videos/PR3__PR3_Hard_head_reference_20260919.mp4)
 
-## CP01 · 样品记忆驱动的传送带复检分拣
+## CP01 · 传送带配餐
 
-- [场景图 1](../media/images/CP01__Q39tb3haAo4aHmxfRtgcFyNbnwd.png)
-- [场景图 2](../media/images/CP01__HhA4bLh94o5EBQxqO5OcM6RsnEU.png)
+- [Easy 演示](../media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4)
+- [Medium 演示](../media/videos/CP01__CP01_medium_adaptive_v2_20260920.mp4)
+- [Hard 演示](../media/videos/CP01__CP01_hard_adaptive_v2_20260920.mp4)
 
 ## CP02 · 旋转蛋糕装饰
 
-- [Easy 演示](../media/videos/CP02__CP02_easy_20260920.mp4)
-- [Medium 演示](../media/videos/CP02__CP02_medium_20260920.mp4)
-- [Hard 演示](../media/videos/CP02__CP02_hard_20260920.mp4)
+- [Easy 演示](../media/videos/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4)
+- [Medium 演示](../media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4)
+- [Hard 演示](../media/videos/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4)
 
-## CP03 · 配方跟随的分阶段配液与搅拌
+## CP03 · 实验配液
 
-- [场景图 1](../media/images/CP03__H1ugbqxBuoakKgxyoUVcl2Tbnze.png)
+- [倒液初步预览](../media/videos/CP03__CP03_CP09_pour_preliminary_20260920.mp4)
+- [搅拌初步预览](../media/videos/CP03__CP03_CP09_stir_preliminary_20260920.mp4)
+- [场景图](../media/images/CP03__H1ugbqxBuoakKgxyoUVcl2Tbnze.png)
 
-## CP04 · 野餐篮打包与布局调整
+## CP04 · 野餐篮打包
 
-可视化素材待补充。
+- [场景图](../media/images/CP04__LXDlbJfqvo3mN1xAeoKcdzbqn7K.png)
 
-## CP05 · 电子琴短句记忆与精确复奏
+## CP05 · 电子琴复奏
 
-- [Easy 演示](../media/videos/CP05__CP05_Easy_8hits.mp4)
-- [Medium 演示](../media/videos/CP05__CP05_Medium_8hits.mp4)
-- [Hard 演示](../media/videos/CP05__CP05_Hard_12hits.mp4)
+- [Easy · 旧版局部流程预览](../media/videos/CP05__CP05_Easy_8hits.mp4)
+- [Medium · 旧版局部流程预览](../media/videos/CP05__CP05_Medium_8hits.mp4)
+- [Hard · 旧版局部流程预览](../media/videos/CP05__CP05_Hard_12hits.mp4)
