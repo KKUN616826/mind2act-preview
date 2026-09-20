@@ -20,4 +20,4 @@
 
 运行 `python3 scripts/build.py` 重新生成 HTML、逐任务文档及媒体索引，再用 `python3 scripts/validate.py` 检查资源一致性。不要只改生成后的 HTML，否则下次构建会覆盖。
 
-当前任务与素材同步自 MEMbench 文档 revision 819（2026-09-20）。CP03 为局部预览、CP04 为场景图、CP05 为旧版局部流程视频；这些素材不构成完整任务或模型性能验证。
+当前任务与素材同步自 MEMbench 文档 revision 830（2026-09-20）。CP05 已更新为三档完整流程视频，Easy 无琴盖，Medium/Hard 包含开合盖。CP03 仍为局部预览、CP04 为场景图；演示素材不构成模型性能验证。

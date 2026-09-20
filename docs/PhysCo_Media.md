@@ -82,6 +82,6 @@
 
 ## CP05 · 电子琴复奏
 
-- [Easy · 旧版局部流程预览](../media/videos/CP05__CP05_Easy_8hits.mp4)
-- [Medium · 旧版局部流程预览](../media/videos/CP05__CP05_Medium_8hits.mp4)
-- [Hard · 旧版局部流程预览](../media/videos/CP05__CP05_Hard_12hits.mp4)
+- [Easy · 完整流程演示](../media/videos/CP05__CP05_easy_完整流程_20260920.mp4)
+- [Medium · 完整流程演示](../media/videos/CP05__CP05_medium_完整流程_20260920.mp4)
+- [Hard · 完整流程演示](../media/videos/CP05__CP05_hard_完整流程_20260920.mp4)
