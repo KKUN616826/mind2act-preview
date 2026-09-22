@@ -1,0 +1,26 @@
+{
+  "repo": "https://github.com/MuQY1818/mem-planner-harness",
+  "branch": "evomemharness",
+  "commit": "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
+  "revision": "mindaccord-v3",
+  "base_stylesheet_sha256": "a354f9424cb2513f05c581b2ebdafcc21e9eda97b9840d6975afe273f44021b7",
+  "stylesheet_reuse": "Bundled stylesheet snapshot plus model overrides",
+  "image_generation": "Architecture: editable SVG; lifecycle: original ImageGen; docs/Figure_Notes.md",
+  "figures": [
+    {
+      "id": "architecture",
+      "path": "media/mindaccord-architecture.svg",
+      "title": "双层 Agent 与执行后端",
+      "description": "认知授权流向 Reactive，Reactive 经 Runtime 派发动作；观察与回执返回双方。虚线为待接入的 VLA 路径。",
+      "sha256": "161a81431a063ee7031aa7049c0294d218481d71f6c0f3c53e44b74f524f8152"
+    },
+    {
+      "id": "experience",
+      "path": "media/experience-lifecycle-v2.png",
+      "title": "从执行记录到跨局经验",
+      "description": "开发记录经 Critic 形成候选，验证通过后才能进入冻结快照。当前原生候选保留，晋升环节待验证。",
+      "sha256": "dfe6c0e5733f60ed2868479be4643eaa551ee3f8012c97e09abb04d8645b7d99"
+    }
+  ],
+  "claims": "Architecture explanation; no Bench cases reproduced; no new robot evaluations."
+}

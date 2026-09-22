@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">MindAccord architecture</title>
+  <desc id="desc">Cognitive and Reactive agents coordinate through versioned subgoal contracts and execution feedback. Runtime dispatches to the current native controller; the VLA integration is pending.</desc>
+  <defs>
+    <marker id="green" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto"><path d="M0 0 9 4 0 8Z" fill="#19655b"/></marker>
+    <marker id="blue" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto"><path d="M0 0 9 4 0 8Z" fill="#356680"/></marker>
+    <marker id="amber" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto"><path d="M0 0 9 4 0 8Z" fill="#986421"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#203b38;text-anchor:middle} .heading{font-size:29px;font-weight:600}.body{font-size:22px;fill:#456368}.arrow{fill:none;stroke:#19655b;stroke-width:3;marker-end:url(#green)}.feedback{fill:none;stroke:#356680;stroke-width:3;marker-end:url(#blue)}.pending{fill:none;stroke:#986421;stroke-width:3;stroke-dasharray:10 7;marker-end:url(#amber)}</style>
+  </defs>
+  <rect width="1536" height="1024" fill="#fff"/>
+  <text x="768" y="62" font-size="48" font-weight="700">MindAccord</text>
+  <text x="768" y="103" font-size="23">Contract-Guided Coordination of Cognitive and Reactive Agents</text>
+  <text x="768" y="133" font-size="23">for Robotic Manipulation</text>
+  <rect x="170" y="169" width="1196" height="67" rx="5" fill="#eff5f8" stroke="#356680" stroke-width="2"/>
+  <text x="768" y="211" class="heading">Task + RGB + proprioception</text>
+  <path d="M385 236V279" class="feedback"/><path d="M1140 236V279" class="feedback"/>
+  <rect x="175" y="279" width="440" height="109" rx="5" fill="#edf7f3" stroke="#19655b" stroke-width="2"/>
+  <text x="395" y="321" class="heading">Cognitive Agent</text><text x="395" y="360" class="body">Goals / plans / authorization</text>
+  <rect x="926" y="279" width="440" height="109" rx="5" fill="#eff5f8" stroke="#356680" stroke-width="2"/>
+  <text x="1146" y="321" class="heading">Reactive Agent</text><text x="1146" y="360" class="body">Local actions / checkpoints</text>
+  <path d="M615 310H926" class="arrow"/><text x="770" y="287" font-size="22">Subgoal contract</text>
+  <path d="M926 365H615" class="feedback"/><text x="770" y="400" font-size="22">Execution feedback</text>
+  <rect x="290" y="453" width="410" height="65" rx="5" fill="#eff5f8" stroke="#356680" stroke-width="2"/>
+  <text x="495" y="495" class="heading">Notes + Perceive</text>
+  <path d="M395 453V388" class="feedback"/><path d="M700 481H1000V388" class="feedback"/>
+  <path d="M1146 388V554" class="arrow"/>
+  <rect x="840" y="554" width="466" height="103" rx="5" fill="#eff5f8" stroke="#356680" stroke-width="2"/>
+  <text x="1073" y="596" class="heading">Execution Runtime</text><text x="1073" y="634" class="body">Validate / dispatch / cancel</text>
+  <path d="M990 657V689H867V724" class="arrow"/>
+  <path d="M1145 657V689H1214V724" class="pending"/>
+  <rect x="711" y="724" width="310" height="96" rx="5" fill="#edf7f3" stroke="#19655b" stroke-width="2"/>
+  <text x="866" y="762" class="heading">Native Controller</text><text x="866" y="798" class="body">Current path</text>
+  <rect x="1065" y="724" width="301" height="96" rx="5" fill="#fff8ee" stroke="#986421" stroke-width="2" stroke-dasharray="10 7"/>
+  <text x="1215" y="762" class="heading">Execution VLA</text><text x="1215" y="798" class="body">Integration pending</text>
+  <path d="M866 820V873" class="arrow"/>
+  <path d="M1215 820V909H1095" class="pending"/>
+  <rect x="445" y="873" width="650" height="76" rx="5" fill="#eff5f8" stroke="#356680" stroke-width="2"/>
+  <text x="770" y="922" class="heading">Robot / Environment</text>
+  <path d="M445 911H115V334H175" class="feedback"/>
+  <path d="M1095 935H1421V334H1366" class="feedback"/>
+  <text x="266" y="706" font-size="20">Observations + receipts</text>
+  <text x="1320" y="507" font-size="18"><tspan x="1320">Observations</tspan><tspan x="1320" dy="26">+ receipts</tspan></text>
+  <path d="M322 991H390" class="arrow"/><text x="570" y="998" font-size="20">Current native path</text>
+  <path d="M807 991H875" class="pending"/><text x="1067" y="998" font-size="20">VLA integration pending</text>
+</svg>

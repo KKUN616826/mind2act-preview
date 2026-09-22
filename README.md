@@ -2,7 +2,7 @@
 
 **Evaluating Reasoning–Acting Coordination in Robotic Manipulation**
 
-研究主线：计划如何适应物理约束，前一步的实际结果如何改变后一步。展示名称为 MindActWorld，配套方法拟名 MindAct；仓库地址、兼容文件名与任务 ID 保持不变。
+研究主线：计划如何适应物理约束，前一步的实际结果如何改变后一步。展示名称为 MindActWorld，配套方法名为 MindAccord；仓库地址、兼容文件名与任务 ID 保持不变。
 
 打开 `index.html` 即可浏览项目介绍、15 项任务与 37 段演示及预览、2 张场景图。请保持 media/、docs/ 和 data/ 的相对位置。
 
@@ -27,3 +27,7 @@
 运行 `python3 scripts/build.py` 重新生成 HTML、逐任务文档及媒体索引，再用 `python3 scripts/validate.py` 检查资源一致性。不要只改生成后的 HTML，否则下次构建会覆盖。
 
 当前任务与素材同步自 MEMbench 文档 revision 830（2026-09-20）。CP05 已更新为三档完整流程视频，Easy 无琴盖，Medium/Hard 包含开合盖。CP03 仍为局部预览、CP04 为场景图；演示素材不构成模型性能验证。
+
+## 配套模型网站
+
+[MindAccord 模型架构](mindaccord/index.html)：Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation。构建与状态边界见 [模型 README](mindaccord/README.md)。

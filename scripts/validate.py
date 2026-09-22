@@ -66,6 +66,8 @@ def main():
     assert '真实任务同时要求 agent' not in content
     assert 'Closed-Loop Coordination' not in content
     assert '闭环协同' not in content
+    assert 'Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation' in content
+    assert 'href="mindaccord/index.html"' in content
     print('PASS: approved subtitle, MindActWorld branding and three named dimensions')
 
 if __name__ == '__main__':

@@ -4,7 +4,7 @@
 
 让推理适应执行，让执行结果改变下一步。
 
-MindActWorld 为 benchmark 名称，配套方法拟名 MindAct。当前任务与素材为既有 15 项定义、37 段演示及预览、2 张场景图。本文是研究设计说明，不包含模型实测结论。
+MindActWorld 为 benchmark 名称，配套方法名为 MindAccord。当前任务与素材为既有 15 项定义、37 段演示及预览、2 张场景图。本文是研究设计说明，不包含模型实测结论。
 
 ## 1. 为什么需要推理—执行协同评测
 
@@ -94,15 +94,19 @@ VLA/WAM 计划参评 hyVLA、dm0.5、g0.5、openwam、pi0.5；Coding Agent 候�
 
 [技术报告 v0.1](PhysCo_Technical_Report_v0.1.pdf) 为早期研究框架，原件保留；当前叙事与任务说明以本页为准。
 
-## 配套方法拟名：MindAct
+## 配套方法：MindAccord
 
-MindAct 是与 MindActWorld 对应的混合系统研究构想，名称与架构尚属提案。当前仓库未发布其实现、权重或实测结果。
+**Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation**
 
-- **Reasoner**：维护任务状态、阶段前提和高层计划，选择当前子目标。
-- **Executor**：拟调用 VLA/WAM 或声明的控制工具，在物理约束下执行子目标。
-- **Coordinator**：根据可观察效果复核完成条件，更新进度并组织计划修订和恢复。
+MindAccord 以 EvoMemHarness 为实现基础，通过子目标契约协调 Cognitive 与 Reactive 两个角色；Runtime 管理实际执行与授权交接。
 
-模块名称描述拟研究的职责，不代表已验证优势，也不将三模块架构设为 benchmark 参评要求。执行成功判据应与模型输入隔离，特权信息、工具和控制器贡献必须披露。
+- **Cognitive Agent**：维护任务目标、依赖、有效进度与版本化子目标授权。
+- **Reactive Agent**：在授权范围内选择工具、动作参数和检查点，根据新观测报告效果或请求恢复。
+- **Subgoal Contract + Runtime**：限定执行范围、许可与预算，管理单一动作入口、逐步派发、取消确认及过期请求拒绝。
+
+[模型网站](../mindaccord/index.html) 的实现说明固定到 EvoMemHarness 提交 `6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41`。当前原生路径为双角色加固定控制器；VLA 动作块接口已有，双角色原生 checkpoint 接入仍待完成。跨局经验候选暂不晋升，RGB 原生运行只接受空经验快照。在线模型判断与最终环境评分独立，当前未发布模型成绩。
+
+该架构是 benchmark 配套方法，不构成参评系统必须采用双角色的要求。
 
 
 ---
