@@ -1,0 +1,31 @@
+{
+  "example_only": true,
+  "observation_id": "obs-12",
+  "facts": [
+    {
+      "entity_id": "food-04",
+      "attribute": "identity",
+      "value": "fries",
+      "source_tool": "semantic_perception",
+      "source_observation": "obs-12",
+      "status": "inferred"
+    },
+    {
+      "entity_id": "food-04",
+      "attribute": "position",
+      "value": null,
+      "coordinate_frame": "camera",
+      "base_transform_status": "unknown",
+      "validity": "unbound"
+    }
+  ],
+  "last_receipt": {
+    "action_id": "a-02",
+    "status": "completed"
+  },
+  "effect": {
+    "status": "unknown",
+    "evidence_refs": []
+  },
+  "note": "A completed command is not evidence of a successful grasp."
+}

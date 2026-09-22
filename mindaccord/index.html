@@ -1,388 +1,425 @@
-<!doctype html>
-<html lang="zh-CN"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: file:; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'">
-<title>MindAccord: Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation</title>
-<meta name="description" content="MindAccord 的双层 Agent 架构、执行反馈与认知和运动经验机制。基于 EvoMemHarness 实现，配有架构与生命周期图。">
-<meta name="theme-color" content="#174c3b">
-<style>
-:root{--bg:#f7f5ed;--paper:#fffef9;--ink:#203a30;--green:#174c3b;--muted:#69756b;--line:#d8dfd1;--mint:#e9efe3;--amber:#a0763d;--sand:#f3ead9;--serif:"Iowan Old Style","Palatino Linotype","Songti SC",serif;--sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--mono:"SFMono-Regular",Consolas,monospace}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:98px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.85 var(--sans)}h1,h2,h3,h4,p,figure{margin:0}h1,h2{font-family:var(--serif);font-weight:500;line-height:1.25}h3{font-weight:600;line-height:1.5}a{color:var(--green);text-underline-offset:4px}button,input,select{font:inherit;color:inherit}button,a,summary{touch-action:manipulation}button,summary{cursor:pointer}button{border:1px solid var(--line);background:var(--paper);padding:9px 16px;border-radius:3px}button:hover{border-color:var(--green)}:focus-visible{outline:3px solid var(--amber);outline-offset:4px}ul,ol{padding-left:22px}li{margin:5px 0}[hidden]{display:none!important}.wrap{max-width:1400px;padding:0 58px;margin:auto}.muted{color:var(--muted)}.eyebrow{font:11px var(--mono);letter-spacing:2px;text-transform:uppercase}.section-label{color:var(--amber);font-size:11px;letter-spacing:2px;margin-bottom:15px}.skip{position:fixed;top:-80px;left:15px;padding:12px;background:white;z-index:100}.skip:focus{top:10px}.header{position:sticky;top:0;z-index:50;background:#f7f5edf5;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.header-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font:32px var(--serif);letter-spacing:-1.5px;text-decoration:none;white-space:nowrap}.brand small{font:9px var(--mono);letter-spacing:1.6px;color:var(--muted);margin-left:12px}.nav{display:flex;align-items:center;gap:27px}.nav a{font-size:12px;text-decoration:none;color:var(--muted);white-space:nowrap}.nav a:hover{color:var(--green)}.nav .paper-link{border:1px solid var(--green);padding:6px 13px;color:var(--green)}#menuToggle{display:none;font-size:12px;padding:5px 10px}.hero{padding-top:66px;padding-bottom:45px}.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:52px;align-items:center}.hero .eyebrow{color:var(--amber)}.hero h1{font-size:clamp(43px,4.3vw,66px);letter-spacing:-1.3px;margin:23px 0}.hero h1 em{font-style:normal;color:var(--green)}.hero .english{font:18px/1.55 var(--serif);max-width:530px;margin-bottom:20px}.hero .intro{font-size:14px;color:var(--muted);max-width:520px;line-height:1.95}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.button{font-size:12px;padding:10px 18px;border:1px solid var(--line);background:var(--paper);text-decoration:none;border-radius:2px;display:inline-flex;align-items:center;gap:18px}.button.primary{background:var(--green);color:#fffcef;border-color:var(--green)}.hero-stats{display:flex;gap:0;margin-top:36px;border-top:1px solid var(--line);padding-top:20px}.hero-stats div{padding:0 24px;border-right:1px solid var(--line)}.hero-stats div:first-child{padding-left:0}.hero-stats div:last-child{border:0}.hero-stats b{font:32px var(--serif);margin-right:8px}.hero-stats span{font-size:11px;color:var(--muted)}.featured{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}.featured a{display:block;text-decoration:none;background:var(--paper);border:1px solid var(--line);min-width:0;transition:transform .2s}.featured a:hover{transform:translateY(-3px)}.featured a:first-child{grid-column:1/-1}.featured img{display:block;width:100%;object-fit:cover;aspect-ratio:16/10}.featured a:first-child img{aspect-ratio:16/9;object-position:50% 38%}.featured figcaption{display:flex;gap:10px;justify-content:space-between;align-items:center;padding:10px 13px}.featured figcaption b{font-size:12px;font-weight:500}.featured figcaption small{font:10px var(--mono);color:var(--muted)}.featured figcaption span{font-size:14px}.hero-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:10px;color:var(--muted);letter-spacing:.6px}.section{padding:65px 0;border-top:1px solid var(--line);scroll-margin-top:76px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:29px}.section-head h2{font-size:38px;letter-spacing:-.4px}.section-head p{max-width:500px;font-size:13px;color:var(--muted)}.insights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:29px}.insight{padding-top:14px;border-top:2px solid var(--green)}.insight .number{font:28px var(--serif);color:#91a085;display:block;margin-bottom:8px}.insight h3{font-size:18px;margin-bottom:12px}.insight p{font-size:13px;color:var(--muted)}.insight a{display:inline-block;font-size:11px;margin-top:14px}.loop-panel{margin-top:34px;border:1px solid var(--line);background:var(--mint);padding:24px 28px}.loop-title{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:20px}.loop-title b{font-size:13px}.loop-title span{font-size:11px;color:var(--muted)}.loop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px;list-style:none;padding:0;margin:0}.loop li{position:relative;background:#f8faf2;padding:15px 16px;border-top:2px solid #71917b;margin:0}.loop li:not(:last-child)::after{content:'→';position:absolute;right:-20px;top:32px;color:#62806c}.loop small{font:9px var(--mono);letter-spacing:1px;color:var(--muted)}.loop h4{font-size:15px;margin:5px 0}.loop p{font-size:11px;color:var(--muted)}.feedback-arrow{margin:13px 4px 0;border-bottom:1px solid #8da18b;border-left:1px solid #8da18b;border-right:1px solid #8da18b;text-align:center;height:26px;color:#5f7d67;font-size:10px;letter-spacing:1px}.feedback-arrow span{background:var(--mint);padding:0 12px;position:relative;top:12px}.example{display:grid;grid-template-columns:1.1fr 1fr;gap:25px;margin-top:28px;padding-top:22px;border-top:1px solid #cdd8c4;align-items:center}.example p{font-size:12px;color:var(--muted)}.example strong{font-size:13px;color:var(--ink)}.example a{font-size:11px}.effect-choice{display:flex;gap:7px;margin-bottom:10px}.effect-choice button{font-size:11px;padding:6px 11px;background:transparent;border-color:#b5c5ae}.effect-choice button[aria-pressed=true]{color:white;background:var(--green);border-color:var(--green)}.effect-result{padding:10px 14px;border-left:3px solid var(--amber);background:#fffaf0;font-size:12px;min-height:65px}.effect-result b{display:block;margin-bottom:3px}.effect-result.complete{background:#f5f9ed;border-color:var(--green)}.suite-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);margin:32px 0}.suite{padding:22px 25px;border-right:1px solid var(--line);background:#f0f2e8}.suite:last-child{border:0}.suite small{font:10px var(--mono);letter-spacing:1px;color:var(--muted)}.suite h3{font:24px var(--serif);margin:7px 0 10px}.suite p{font-size:12px;color:var(--muted)}.suite .five{float:right;font:28px var(--serif);color:var(--green)}.catalog-tools{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.filters{display:flex;gap:7px;flex-wrap:wrap}.filters button{font-size:12px;padding:8px 15px;background:transparent}.filters button[aria-pressed=true]{color:#fffef0;background:var(--green);border-color:var(--green)}.search{min-width:210px;max-width:340px;flex:1}.search input{width:100%;font-size:13px;padding:10px 13px;background:var(--paper);border:1px solid var(--line);border-radius:3px;min-width:0}.catalog-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;font-size:11px;color:var(--muted)}.catalog-actions{display:flex;gap:8px;flex-wrap:wrap}.catalog-actions button{font-size:10px;padding:4px 9px;background:transparent}.case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}.case-card{min-width:0;background:var(--paper);border:1px solid var(--line);scroll-margin-top:93px}.case-card>summary{list-style:none;cursor:pointer;position:relative}.case-card>summary::-webkit-details-marker{display:none}.cover{position:relative;overflow:hidden;background:#e2e8dc;border-bottom:1px solid var(--line)}.cover img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s}.case-card:not([open]):hover .cover img{transform:scale(1.035)}.cover-kind{position:absolute;left:12px;bottom:11px;color:#fffdf2;background:#173e30df;border:1px solid #b5c6ac77;padding:2px 7px;font:10px/1.8 var(--mono)}.no-cover{aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#edf0e5;color:#6e826b;border-bottom:1px solid var(--line);gap:10px}.no-cover b{font:55px var(--serif);font-weight:400}.no-cover span{font-size:11px;letter-spacing:1px}.card-intro{padding:18px 19px 19px}.card-eyebrow{display:flex;justify-content:space-between;gap:10px;font:10px var(--mono);color:var(--muted);margin-bottom:9px}.card-eyebrow .cid{color:var(--green);font-weight:650}.card-intro h3{font:21px/1.45 var(--serif);margin-bottom:11px}.card-intro p{font-size:12px;color:var(--muted);line-height:1.85;min-height:45px}.card-more{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:17px;padding-top:11px;border-top:1px solid var(--line);font-size:11px;color:var(--green)}.card-more .sign{font-size:20px;line-height:1}.case-card[open]{grid-column:1/-1}.case-card[open]>summary{display:grid;grid-template-columns:minmax(240px,.73fr) 1fr;border-bottom:1px solid var(--line)}.case-card[open] .cover{border-right:1px solid var(--line);border-bottom:0}.case-card[open] .cover img,.case-card[open] .no-cover{aspect-ratio:16/10;max-height:330px;object-fit:contain}.case-card[open] .card-intro{padding:27px 30px;align-self:center}.case-card[open] .card-intro h3{font-size:31px}.case-card[open] .card-intro p{font-size:14px;max-width:670px}.case-card[open] .card-more .sign{transform:rotate(45deg)}.case-card[open] .card-more .more-label{font-size:0}.case-card[open] .card-more .more-label:after{content:'收起详情';font-size:11px}.case-body{padding:28px 30px 34px}.case-body h4{font-size:14px;margin:24px 0 12px}.case-body h4:first-child{margin-top:0}.description{font-size:14px;line-height:2;max-width:950px;color:#4c5f52}.detail-label{display:flex;gap:12px;align-items:baseline;margin:27px 0 14px}.detail-label small{font:10px var(--mono);color:var(--amber)}.detail-label h4{margin:0;font-size:15px}.media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.media-grid.single{grid-template-columns:minmax(0,680px)}.media-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.media-item{min-width:0;border:1px solid var(--line);background:#f0f3e9}.media-item video{display:block;width:100%;aspect-ratio:4/3;background:#14291f;object-fit:contain}.media-item img{display:block;width:100%;height:auto}.media-item figcaption{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 12px;flex-wrap:wrap;font-size:11px}.media-item figcaption span{color:var(--muted);font-size:10px}.media-item a{font-size:10px}.media-pending{border-left:2px solid var(--line);padding:11px 15px;font-size:12px;color:var(--muted)}.detail-columns{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}.detail-columns ul{font-size:13px;color:#4d6053;margin:0;padding-left:20px}.flow{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}.flow li{padding:5px 10px;background:var(--mint);font-size:11px;margin:0}.flow li+li:before{content:'→';margin-right:9px;color:#8a9d83}.success{background:var(--mint);padding:16px 18px;font-size:13px;line-height:1.9;border-left:3px solid #6c8a70}.metric-list{display:flex;gap:7px;flex-wrap:wrap;list-style:none;padding:0;margin:13px 0}.metric-list li{margin:0;padding:4px 9px;border:1px solid var(--line);font-size:11px;color:var(--muted)}.table-wrap{overflow-x:auto;border:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-size:12px}th,td{text-align:left;vertical-align:top;padding:11px 13px;border-bottom:1px solid var(--line);line-height:1.85}th{background:#ebefe3;font-size:11px;color:var(--muted);font-weight:500}td:first-child{font-weight:500;min-width:105px}tr:last-child td{border-bottom:0}.notes{margin-top:18px;border-top:1px solid var(--line)}.notes summary{font-size:12px;padding:13px 0;color:var(--muted)}.notes ul{font-size:12px;color:var(--muted);margin:0;padding-bottom:10px}.case-footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-top:15px;margin-top:18px;font-size:11px;color:var(--muted)}.empty{border:1px dashed var(--line);padding:40px 20px;text-align:center;font-size:13px;color:var(--muted)}.tracks{display:grid;grid-template-columns:1fr 1fr;gap:22px}.track{background:var(--paper);border:1px solid var(--line);padding:26px}.track .track-id{font:10px var(--mono);letter-spacing:1.5px;color:var(--amber)}.track h3{font:26px var(--serif);margin:9px 0 12px}.track p{font-size:13px;color:var(--muted)}.track-flow{display:flex;gap:6px;flex-wrap:wrap;margin-top:20px;align-items:center;font-size:11px}.track-flow span{background:var(--mint);padding:5px 9px}.eval-principle{margin:21px 0 0;font-size:12px;color:var(--muted);padding:15px 18px;border-left:3px solid var(--green);background:var(--mint)}.measures{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;margin-top:29px}.measure{border-top:1px solid var(--line);padding-top:13px}.measure h4{font-size:14px;margin-bottom:8px}.measure p{font-size:12px;color:var(--muted)}.protocol{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}.protocol div{border-top:1px solid var(--line);padding-top:15px}.protocol h4{font-size:13px;margin-bottom:8px}.protocol p{font-size:12px;color:var(--muted)}.evaluation-status{font-size:11px;color:var(--muted);margin-top:24px}.resources{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:19px}.resource{display:flex;flex-direction:column;align-items:flex-start;padding:24px;background:var(--paper);border:1px solid var(--line)}.resource .type{font:10px var(--mono);letter-spacing:1px;color:var(--amber)}.resource h3{font:23px var(--serif);margin:12px 0}.resource p{font-size:12px;color:var(--muted);margin-bottom:17px}.resource>a{font-size:12px;margin-top:auto}.resource .sub-link{margin-top:10px;font-size:10px}.footer{border-top:1px solid var(--line);padding:24px 0 37px;color:var(--muted);font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer .wordmark{font:21px var(--serif);color:var(--green)}.backtop{position:fixed;bottom:18px;right:18px;z-index:30;font-size:12px;padding:6px 11px;box-shadow:0 3px 16px #1237280c}.noscript{padding:20px;background:var(--sand)}
-@media(min-width:1700px){.wrap{max-width:1510px;padding-left:70px;padding-right:70px}.hero{padding-top:82px}}
-@media(max-width:1100px){.wrap{padding:0 30px}.hero-grid{gap:30px}.hero h1{font-size:44px}.hero .english{font-size:16px}.hero-stats div{padding:0 14px}.hero-stats b{font-size:28px}.nav{gap:20px}.insights{gap:20px}.loop{gap:20px}.loop li{padding:13px}.loop li:not(:last-child)::after{right:-17px}.case-grid{gap:13px}.card-intro{padding:15px}.card-intro h3{font-size:19px}.case-body{padding:23px}.media-grid{gap:10px}.measures{gap:14px}.resources{gap:14px}.resource{padding:20px}}
-@media(max-width:760px){html{scroll-padding-top:82px}.wrap{padding:0 18px}.header-inner{height:65px}.brand{font-size:28px}.brand small{font-size:8px;margin-left:9px}#menuToggle{display:block}.nav{display:none;position:absolute;top:65px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:18px;gap:18px;flex-wrap:wrap;box-shadow:0 15px 25px #1936260c}.nav.open{display:flex}.hero{padding-top:35px;padding-bottom:28px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero h1{font-size:clamp(30px,9vw,39px);line-height:1.35;letter-spacing:-.6px;margin:17px 0}.hero .english{font-size:16px}.hero .intro{font-size:13px}.hero-stats{margin-top:25px;padding-top:15px}.hero-stats div{padding:0 18px}.hero-stats b{font-size:28px}.hero-stats span{font-size:10px}.hero-bottom{display:block;margin-top:23px;font-size:9px}.hero-bottom span{display:block;margin:3px 0}.featured{gap:10px}.featured figcaption{padding:9px}.featured figcaption b{font-size:11px}.featured figcaption small{font-size:9px}.section{padding:39px 0;scroll-margin-top:65px}.section-head{display:block;margin-bottom:23px}.section-head h2{font-size:30px;margin-bottom:14px}.section-head p{font-size:12px}.insights{grid-template-columns:1fr;gap:25px}.insight .number{float:right;margin:0}.insight{padding-top:12px}.insight h3{font-size:17px}.insight p{font-size:12px}.loop-panel{padding:18px;margin-top:26px}.loop-title{display:block;margin-bottom:15px}.loop-title span{display:block;margin-top:5px;font-size:10px}.loop{grid-template-columns:1fr 1fr;gap:13px}.loop li{padding:12px}.loop li::after{display:none}.loop h4{font-size:14px}.loop p{font-size:10px}.feedback-arrow{font-size:9px}.example{grid-template-columns:1fr;gap:16px;margin-top:24px;padding-top:17px}.suite-grid{grid-template-columns:1fr;margin:22px 0}.suite{border-right:0;border-bottom:1px solid var(--line);padding:18px 20px}.suite h3{font-size:22px;margin:5px 0 9px}.suite p{font-size:11px}.catalog-tools{display:block}.filters{gap:5px}.filters button{padding:7px 11px;font-size:11px}.search{display:block;max-width:none;margin-top:12px}.catalog-meta{align-items:flex-start;font-size:10px;flex-wrap:wrap}.catalog-actions{gap:6px}.catalog-actions button{font-size:9px;padding:4px 7px}.case-grid{grid-template-columns:1fr;gap:17px}.case-card{scroll-margin-top:81px}.card-intro{padding:18px}.card-intro h3{font-size:22px}.card-intro p{font-size:12px;min-height:0}.cover img{aspect-ratio:16/10}.case-card[open]>summary{display:block}.case-card[open] .cover{border-right:0;border-bottom:1px solid var(--line)}.case-card[open] .card-intro{padding:20px}.case-card[open] .card-intro h3{font-size:25px}.case-card[open] .card-intro p{font-size:12px}.case-body{padding:20px 17px 24px}.description{font-size:13px}.media-grid,.media-grid.two,.media-grid.single{grid-template-columns:1fr}.detail-columns{grid-template-columns:1fr;gap:21px}.detail-columns ul{font-size:12px}.flow li{font-size:10px;padding:5px 8px}.success{font-size:12px;padding:13px 14px}.metric-list li{font-size:10px}.table-wrap table{min-width:470px}td,th{padding:9px 10px;font-size:11px}.notes ul{font-size:11px}.case-footer{font-size:10px}.tracks,.protocol,.resources{grid-template-columns:1fr;gap:16px}.track{padding:22px}.track h3{font-size:24px}.track p{font-size:12px}.measures{grid-template-columns:1fr 1fr;gap:20px}.measure:last-child{grid-column:1/-1}.measure p{font-size:11px}.resource{padding:22px}.resource h3{font-size:23px}.resource p{font-size:12px}.footer-inner{display:block}.footer-inner>div{margin-top:10px}.backtop{right:12px;bottom:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-@media print{body{background:white;font-size:11px}.header,.hero-actions,.catalog-tools,.catalog-meta,.backtop,.skip,.case-footer,.effect-choice{display:none!important}.wrap{max-width:none;padding:0}.hero{padding:0 0 22px}.hero-grid{grid-template-columns:1fr 1fr;gap:24px}.hero h1{font-size:30px}.hero .english{font-size:13px}.hero .intro{font-size:11px}.hero-stats{margin-top:15px}.hero-stats b{font-size:25px}.featured img{max-height:140px}.featured figcaption{font-size:10px}.section{padding:25px 0}.section-head h2{font-size:25px}.insights{gap:16px}.insight p{font-size:11px}.loop-panel{break-inside:avoid}.suite-grid{grid-template-columns:repeat(3,1fr)}.suite{padding:15px}.case-grid{display:block}.case-card{break-before:page;margin-bottom:20px}.case-card[hidden]{display:none!important}.case-card[open]>summary{grid-template-columns:.6fr 1fr}.case-card[open] .card-intro{padding:18px}.case-card[open] .card-intro h3{font-size:23px}.case-card[open] .cover img{max-height:210px}.case-body{padding:17px}.media-grid{grid-template-columns:repeat(3,1fr)}.detail-label,.media-item,.success,.notes{break-inside:avoid}.media-item video{max-height:160px}.table-wrap{overflow:visible}.table-wrap table{min-width:0}.tracks,.resources{grid-template-columns:1fr 1fr}.resource,.track{break-inside:avoid}.footer{font-size:9px}.loop-panel,.success,.suite{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
-</style>
-<style>
-*{letter-spacing:0!important}p,a,h1,h2,h3,dd,td,code{overflow-wrap:anywhere}.nav{gap:23px}.brand{font-size:30px}.hero{padding:45px 0 35px}.hero h1{font-size:54px;margin:12px 0 15px;line-height:1.15}.hero .english{max-width:970px;font:22px/1.6 var(--sans);margin-bottom:16px}.hero .intro{max-width:850px;font-size:14px}.hero-actions{margin-top:20px}.hero-bottom{margin-top:25px}.hero .eyebrow{font-size:10px}.section{padding:47px 0}.section-head{margin-bottom:25px}.section-head h2{font-size:33px}.model-figure{max-width:1080px;margin:0 auto}.model-figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}.figure-open{display:block;cursor:zoom-in}.model-figure figcaption{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:11px;color:var(--muted)}.model-figure figcaption a{font-size:23px;min-width:32px;text-align:center;text-decoration:none}.module-tools{margin-top:30px;border-bottom:1px solid var(--line);display:flex;gap:4px 17px;flex-wrap:wrap}.module-tools button{border:0;border-bottom:2px solid transparent;background:transparent;border-radius:0;padding:11px 0;font-size:12px;color:var(--muted)}.module-tools button[aria-pressed=true]{border-bottom-color:var(--green);color:var(--green);font-weight:600}.module-detail{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:25px 0 0;min-height:285px}.module-detail h3{font:28px var(--serif);margin:11px 0}.module-detail p{font-size:13px;color:var(--muted)}.module-detail dl{margin:0}.module-detail dt{font:10px var(--mono);color:var(--amber);margin:0 0 5px}.module-detail dd{margin:0 0 16px;font-size:12px}.state{display:inline-block;font:10px/1.65 var(--mono);padding:3px 8px;color:var(--green);border:1px solid #adc0aa;background:var(--mint)}.state.pending{background:#f6edde;border-color:#d8c4a5;color:#8b612c}.boundary{font-size:12px!important;color:var(--muted);padding:10px 14px;border-left:2px solid var(--amber);margin-top:14px}.small-links{display:flex;gap:8px 17px;flex-wrap:wrap;margin-top:15px;font-size:11px}.sequence{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin:20px 0 30px;padding:0;list-style:none}.sequence li{position:relative;border-top:2px solid var(--green);padding-top:13px;margin:0}.sequence li:not(:last-child):after{content:'→';position:absolute;right:-21px;top:28px;color:var(--muted)}.sequence small{font:10px var(--mono);color:var(--amber)}.sequence h3{font-size:17px;margin:8px 0}.sequence p{font-size:12px;color:var(--muted)}.effect-choice{margin:0;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap}.effect-choice button{font-size:12px}.state-result{min-height:260px;padding-top:20px}.state-result>h3{font:25px var(--serif);margin-bottom:22px}.state-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.state-columns h4{font-size:13px;font-weight:500;margin:0 0 8px}.state-columns p{font-size:12px;color:var(--muted)}.memory-intro{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-bottom:30px}.memory-intro h3{font:24px var(--serif);margin-bottom:9px}.memory-intro p{font-size:13px;color:var(--muted)}.memory-intro article{border-top:2px solid var(--line);padding-top:17px}.memory-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}.memory-notes h4{font-size:14px;margin-bottom:8px}.memory-notes p{font-size:12px;color:var(--muted)}.alignment-section .section-head{margin-bottom:21px}.alignment-section .table-wrap{margin-top:18px}.source-list{display:grid;grid-template-columns:1fr 1fr;gap:0 30px;margin-top:22px}.source-item{padding:15px 0;border-top:1px solid var(--line)}.source-item a{font-size:12px}.source-item p,.source-item code{font-size:10px;color:var(--muted);display:block;margin-top:5px}.source-meta{font-size:11px;color:var(--muted);margin:22px 0 0}.resources{grid-template-columns:repeat(3,1fr)}.resource{padding:21px}.code-details{margin-top:28px}.code-details>summary{font-size:13px;color:var(--green);padding:14px 0;border-top:1px solid var(--line)}.status-table{margin-top:25px}.backtop{font-size:20px;padding:6px 13px}.figure-dialog{max-width:96vw;width:1450px;max-height:95vh;background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:12px}.figure-dialog::backdrop{background:#132d27ba}.dialog-bar{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:0 0 10px}.dialog-bar h3{font-size:15px}.dialog-actions{display:flex;align-items:center;gap:8px}.dialog-actions a,.dialog-actions button{font-size:22px;display:grid;place-items:center;min-width:38px;height:38px;text-decoration:none;padding:0}.dialog-image{max-height:calc(95vh - 78px);overflow:auto}.dialog-image img{display:block;width:100%;height:auto}.footer .wordmark{font-size:26px}
-@media(max-width:1100px){.nav{gap:15px}.brand small{display:none}.hero h1{font-size:48px}.module-detail{gap:30px}}
-@media(max-width:760px){.hero{padding:30px 0 24px}.hero h1{font-size:38px}.hero .english{font-size:19px}.hero .intro{font-size:13px}.hero-bottom{margin-top:20px}.section{padding:33px 0}.section-head h2{font-size:28px}.model-figure{margin:0 -8px}.model-figure figcaption{font-size:10px;padding:10px 8px}.module-tools{gap:0 16px;margin-top:18px}.module-tools button{font-size:11px;padding:10px 0}.module-detail{grid-template-columns:1fr;gap:20px;min-height:0}.module-detail h3{font-size:25px}.sequence{grid-template-columns:1fr 1fr;gap:22px 24px}.sequence li:after{display:none}.sequence h3{font-size:15px}.state-columns{grid-template-columns:1fr;gap:18px}.state-result{min-height:0}.state-result>h3{font-size:22px;line-height:1.5}.memory-intro,.memory-notes,.resources,.source-list{grid-template-columns:1fr;gap:20px}.source-list{gap:0}.memory-intro h3{font-size:22px}.nav{gap:18px}.figure-dialog{width:96vw;padding:8px}.dialog-bar h3{font-size:12px}.dialog-image{overflow:auto}.dialog-image img{min-width:950px}.dialog-actions{gap:3px}.dialog-actions a,.dialog-actions button{min-width:33px;height:33px}.brand{font-size:27px}}
-@media print{.module-tools,.effect-choice,.backtop,.hero-actions{display:none!important}.model-figure{max-width:750px;break-inside:avoid}.model-figure img{max-height:430px}.section{padding:20px 0}.module-detail,.memory-intro{grid-template-columns:1fr 1fr;min-height:0}.state-columns,.memory-notes{grid-template-columns:repeat(3,1fr)}.source-item{break-inside:avoid}.source-list{display:block}.hero h1{font-size:34px}}
+<title>MindAccord · Cost-Aware Astra–Jev Coordination</title><meta name="description" content="MindAccord proposal：通过带证据的结构化感知、候选约束的 Jev harness 和有界工作记忆，研究成本感知的 Astra–Jev 机器人操作协同。"><style>:root{--ink:#202a30;--muted:#53656c;--line:#dce5e6;--accent:#21675d;--blue:#3b6382;--tint:#f3f8f7;--font:"PingFang SC","Microsoft YaHei",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:#fff;color:var(--ink);font:16px/1.9 var(--font)}a{color:var(--accent);text-underline-offset:4px}button,select{font:inherit}button,a,select{touch-action:manipulation}button{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:4px;padding:8px 13px;color:var(--ink)}button:hover{border-color:var(--accent)}:focus-visible{outline:3px solid #bc7e30;outline-offset:4px}.skip{position:absolute;top:-100px}.skip:focus{top:5px;z-index:10;background:white}header{position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line);background:#fffffff5;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:15px max(24px,calc((100% - 1200px)/2))}.brand{text-decoration:none;font-size:27px;font-weight:700;white-space:nowrap}header nav{display:flex;gap:20px;align-items:center;font-size:12px}header nav a{text-decoration:none;white-space:nowrap}#menuToggle{display:none}main{max-width:1060px;margin:auto;padding:0 36px}section{padding:58px 0;border-bottom:1px solid var(--line);scroll-margin-top:90px}h1,h2,h3,h4,p,figure{margin:0}h1{font-size:58px;line-height:1.15}h2{font-size:31px;line-height:1.5;margin:10px 0 22px}h3{font-size:20px;line-height:1.6;margin:24px 0 10px}h4{font-size:15px;margin-bottom:10px}p{margin:15px 0;overflow-wrap:anywhere}.kicker{font-size:11px;font-weight:650;color:var(--blue);margin:0 0 16px}.hero{text-align:center;padding:50px 0 35px}.subtitle{font-size:23px;line-height:1.6;max-width:850px;margin:18px auto;text-wrap:balance}.lead{font-size:25px;line-height:1.7;margin:26px 0 18px}.abstract{font-size:15px;max-width:810px;margin:0 auto;color:var(--muted)}.links{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0;font-size:13px}.hero .links{justify-content:center}.status{font-size:12px;color:var(--muted)}.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:32px 0 0}.principles article{border-top:3px solid var(--accent);padding-top:15px;min-width:0}.principles article:nth-child(2){border-color:var(--blue)}.principles article:nth-child(3){border-color:#a96843}.principles span{font-size:12px;color:var(--muted)}.principles h3{font-size:17px;margin:10px 0;overflow-wrap:anywhere}.principles p{font-size:14px;color:var(--muted)}.note{font-size:13px;color:var(--muted);border-left:3px solid #c7d9df;padding:8px 0 8px 15px;margin:20px 0}.model-figure{margin:32px 0}.model-figure img{width:100%;height:auto;display:block;background:white}.model-figure figcaption{font-size:12px;color:var(--muted);padding:12px 0;border-bottom:1px solid var(--line)}.model-figure a{cursor:zoom-in}.module-tools,.state-tools{display:flex;gap:7px;flex-wrap:wrap;margin:24px 0 0}.module-tools button,.state-tools button{font-size:12px}.module-tools [aria-pressed=true],.state-tools [aria-pressed=true]{color:white;background:var(--accent);border-color:var(--accent)}.inspector{display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:22px 0;min-height:340px}.inspector small{color:var(--blue);font-size:12px}.inspector h3{margin-top:8px}.inspector p{font-size:14px}.inspector dt{font-size:12px;color:var(--muted)}.inspector dd{margin:3px 0 15px;font-size:14px}.inspector dl{margin:0}.table-scroll{overflow:auto;max-width:100%;border:1px solid var(--line);margin:25px 0}table{width:100%;border-collapse:collapse;font-size:13px;min-width:580px}th,td{padding:14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--tint);font-weight:600}tr:last-child td{border-bottom:0}.schema-label{display:flex;align-items:center;gap:15px;font-size:13px;margin-top:25px}.schema-label select{font-size:13px;border:1px solid var(--line);padding:8px;max-width:100%;border-radius:4px;background:white}pre{background:#f3f6f8;border:1px solid var(--line);padding:22px;overflow:auto;max-height:420px;font:13px/1.8 Menlo,Consolas,monospace;tab-size:2}code{font-family:Menlo,Consolas,monospace}.sequence{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;padding:0;gap:22px}.sequence li{border-top:2px solid var(--blue);padding-top:12px}.sequence b,.sequence span{display:block}.sequence span{font-size:13px;color:var(--muted);margin-top:9px}.state-result{min-height:300px}.state-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.state-columns p{font-size:14px;color:var(--muted)}.formula{font:14px/2 Menlo,Consolas,monospace;background:var(--tint);padding:18px;overflow-wrap:anywhere}.source-list{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px}.source-list article{border-top:1px solid var(--line);padding-top:15px;scroll-margin-top:100px}.source-list a{font-size:14px}.source-list p{font-size:12px;color:var(--muted)}footer{max-width:1060px;margin:auto;padding:30px 36px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}dialog{border:1px solid var(--line);width:1440px;max-width:96vw;max-height:94vh;padding:16px;background:white}dialog::backdrop{background:#152a35b0}.dialog-bar{display:flex;gap:15px;align-items:center;justify-content:space-between}.dialog-bar h3{font-size:15px;margin:0}.dialog-bar a{font-size:12px;white-space:nowrap}.dialog-image{overflow:auto;max-height:calc(94vh - 85px);margin-top:14px}.dialog-image img{width:100%;height:auto;display:block}
+@media(max-width:800px){header{padding:12px 18px}#menuToggle{display:block;font-size:12px}header nav{display:none;position:absolute;top:65px;left:0;right:0;background:white;padding:20px;flex-wrap:wrap;border-bottom:1px solid var(--line)}header nav.open{display:flex}main{padding:0 20px}.hero{padding:32px 0}h1{font-size:42px}.subtitle{font-size:19px}.lead{font-size:22px}.abstract{font-size:14px}section{padding:35px 0}h2{font-size:25px}.principles,.inspector,.state-columns,.source-list{grid-template-columns:1fr;gap:20px}.inspector,.state-result{min-height:0}.sequence{grid-template-columns:1fr 1fr}p{font-size:15px}.schema-label{display:block}.schema-label select{display:block;margin-top:8px;width:100%}.dialog-image img{min-width:1100px}.dialog-bar h3{font-size:12px}.dialog-bar button{font-size:12px}.formula{font-size:12px}footer{padding:24px 20px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,.module-tools,.state-tools,.links,#schemaSelect{display:none}main{max-width:none}.hero{padding-top:0}section{padding:20px 0}.model-figure,table{break-inside:avoid}.table-scroll{overflow:visible}table{min-width:0}pre{max-height:none;white-space:pre-wrap}.principles{grid-template-columns:repeat(3,1fr)}}
 </style></head><body>
-<a class="skip" href="#architecture">跳到模型架构</a>
-<header class="header"><div class="wrap header-inner"><a class="brand" href="#overview">MindAccord<small>MODEL / EVOMEMHARNESS</small></a><button id="menuToggle" aria-expanded="false" aria-controls="siteNav">导航</button><nav class="nav" id="siteNav" aria-label="主导航"><a href="#architecture">总体架构</a><a href="#execution">执行协作</a><a href="#memory">双层经验</a><a href="#alignment">能力对应</a><a href="#resources">代码与资料</a><a class="paper-link" href="../index.html">MindActWorld ↗</a></nav></div></header>
-<main class="wrap">
-<section class="hero" id="overview"><div class="eyebrow">Contract-Guided Cognitive–Reactive Coordination</div><h1>MindAccord</h1><p class="english">Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation</p><p class="intro">任务层保持目标与计划，动作层处理当前执行，物理反馈连接两者。以 EvoMemHarness 为实现基础，通过版本化子目标契约、唯一执行入口与取消确认协议协调 Cognitive 和 Reactive，连接长程推理与局部执行。</p><div class="hero-actions"><a class="button primary" href="#architecture">查看架构 <span aria-hidden="true">↓</span></a><a class="button" href="https://github.com/MuQY1818/mem-planner-harness/tree/evomemharness" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div><div class="hero-bottom"><span>2 个在线 Agent · 1 个执行入口 · 认知 / 运动两类经验</span><span>当前：原生运控已接入 · VLA checkpoint 待接入</span></div></section>
+<a class="skip" href="#architecture">跳到方法</a>
+<header><a class="brand" href="#overview">MindAccord</a><button id="menuToggle" aria-controls="siteNav" aria-expanded="false">导航</button><nav id="siteNav"><a href="#architecture">方法</a><a href="#handoff">结构化交接</a><a href="#memory">工作记忆</a><a href="#cost">成本路由</a><a href="#evaluation">验证设计</a><a href="../index.html">MindActWorld ↗</a></nav></header>
+<main>
+<section class="hero" id="overview"><p class="kicker">METHOD PROPOSAL / ASTRA × JEV</p><h1>MindAccord</h1><p class="subtitle" lang="en">Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation</p><p class="lead">把复杂推理交给 Astra，<br>把有证据、有候选的局部决策交给 Jev。</p><p class="abstract">上游完成子任务拆解，并调用感知工具获取结构化信息；下游通过专门的 harness 接收契约、有效场景状态与局内记忆。研究重点是：这些信息能否复用，哪些事件值得重新调用大模型，以及完整系统能否以更低总成本完成相同任务。</p><div class="links"><a href="docs/MindAccord_Proposal_v2.md" download>Proposal v2 ↓</a><a href="#handoff">交接接口</a><a href="../index.html">Benchmark ↗</a></div><p class="status">方案设计 · 尚未完成 Astra–Jev 端到端接入及成本评测 · 本轮不研究 RSI</p></section>
 
-<section class="section" id="architecture"><div class="section-head"><div><div class="section-label">01 / SYSTEM ARCHITECTURE</div><h2>从任务意图，<br>到局部执行。</h2></div><p>Cognitive 维护任务与授权，Reactive 决定当前动作。两者共享观察与按需工具，物理执行由 Runtime 统一派发，执行结果再返回双方。</p></div>
-<figure class="model-figure" id="figure-architecture"><a class="figure-open" href="media/mindaccord-architecture.svg" data-figure="architecture" aria-label="放大：双层 Agent 与执行后端" target="_blank"><img src="media/mindaccord-architecture.svg" alt="认知授权流向 Reactive，Reactive 经 Runtime 派发动作；观察与回执返回双方。虚线为待接入的 VLA 路径。" width="1536" height="1024" loading="lazy"></a><figcaption><span>认知授权流向 Reactive，Reactive 经 Runtime 派发动作；观察与回执返回双方。虚线为待接入的 VLA 路径。</span><a href="media/mindaccord-architecture.svg" download title="下载原图" aria-label="下载：双层 Agent 与执行后端">↓</a></figcaption></figure>
-<div class="module-tools" role="group" aria-label="模型模块"><button data-module="cognitive" aria-pressed="true">Cognitive Agent</button><button data-module="reactive" aria-pressed="false">Reactive Agent</button><button data-module="contract" aria-pressed="false">Subgoal Contract</button><button data-module="runtime" aria-pressed="false">Execution Runtime</button><button data-module="tools" aria-pressed="false">Notes + Perceive</button><button data-module="controller" aria-pressed="false">Native Controller</button><button data-module="vla" aria-pressed="false">Execution VLA</button><button data-module="experience" aria-pressed="false">Experience Engine</button></div><div class="module-detail" id="moduleInspector" aria-live="polite"><div><span class="state">已实现 · 原生协议</span><h3>Cognitive Agent</h3><p>维护长程目标和有效进度，决定当前应完成哪个子目标。可以在 Reactive 执行期间推理后续计划；普通笔记和无关未来计划更新不应撤销正在执行的授权。</p></div><div><dl><dt>INPUT</dt><dd>任务文本、当前 RGB / 本体状态、执行事件、局内笔记</dd><dt>OUTPUT</dt><dd>任务依赖图、当前子目标、版本化授权与计划修订</dd></dl><p class="boundary">不直接提交物理动作；完成声明属于模型判断。</p><div class="small-links"><a href="#source-roles">Cognitive / Reactive 结构化接口 ↗</a><a href="#source-runner">双会话异步运行 ↗</a></div></div></div>
-</section>
+<section id="motivation"><p class="kicker">01 / THE RESEARCH QUESTION</p><h2>减少重复推理，不能以丢失任务信息为代价。</h2><p>把大模型换成更便宜的决策模型，并不自动降低系统成本。视觉理解、状态整理、动作候选生成，以及错误后的重试和升级，都可能成为新的主要开销。</p><p>我们的假设是：高层规划与局部执行需要的信息并不完全相同。Astra 可以在子目标边界建立契约和感知计划，harness 则持续维护可追溯状态；Jev 只在有意义的决策事件上选择适用候选。收益需要在同等任务条件和完整成本账本下验证。</p><div class="principles"><article><span>01</span><h3>Evidence-Grounded<br>State Compilation</h3><p>将感知结果编译成带来源、坐标系、不确定性与失效条件的文本状态。</p></article><article><span>02</span><h3>Candidate-Constrained<br>Reactive Decision</h3><p>将完整动作绑定为候选，由 Jev 选择；数值、权限与时效检查留给代码。</p></article><article><span>03</span><h3>Budgeted Working Memory<br>and Routing</h3><p>保留关键任务事实，限制无关历史，按事件选择刷新、局部判断或升级。</p></article></div></section>
 
-<section class="section" id="execution"><div class="section-head"><div><div class="section-label">02 / ONLINE COORDINATION</div><h2>执行在继续，<br>认知也在更新。</h2></div><p>两个 Agent 独立运行，按事件交换进度。任务计划、动作回执和效果判断具有不同含义，只有一致的授权与证据才能支持下一步。</p></div>
-<ol class="sequence"><li><small>01 / AUTHORIZE</small><h3>确定当前子目标</h3><p>明确目标、允许工具、约束与预算，发布稳定的授权版本。</p></li><li><small>02 / EXECUTE</small><h3>派发有限动作</h3><p>Reactive 提交动作或最多八步的批次，由 Runtime 核对后执行。</p></li><li><small>03 / OBSERVE</small><h3>在检查点重观察</h3><p>保留动作回执和来源帧；按需判断效果、补充信息或请求恢复。</p></li><li><small>04 / RECONCILE</small><h3>更新任务与授权</h3><p>根据反馈维持、修订或撤销子目标，让下一动作与当前任务一致。</p></li></ol>
-<div class="effect-choice" role="group" aria-label="执行状态"><button data-state="ongoing" aria-pressed="true">执行进行中</button><button data-state="unknown" aria-pressed="false">效果不确定</button><button data-state="revoked" aria-pressed="false">授权改变</button></div><div class="state-result" id="stateResult" aria-live="polite"><h3>当前执行继续，任务层可规划后续</h3><div class="state-columns"><article><h4>Cognitive</h4><p>保持当前子目标的授权，利用已有反馈维护未来依赖。无关计划变更不打断当前动作。</p></article><article><h4>Reactive</h4><p>等待动作回执，或在显式检查点接收新观测，再决定下一步。</p></article><article><h4>Runtime</h4><p>独占动作入口，逐步派发并记录实际执行量；推理期间环境仍可继续推进。</p></article></div><p class="boundary">动作已派发、正在执行与子目标已完成是不同状态。</p></div>
-</section>
+<section id="architecture"><p class="kicker">02 / METHOD</p><h2>从任务拆解到物理执行，明确每一层的职责。</h2><p>Astra 是上游规划与感知调度者；Jev 是文本状态上的候选选择者；Runtime 与控制器负责真实动作。图中连线表示目标设计，不代表新系统已经接通。</p><figure class="model-figure" id="figure-architecture"><a href="figures/architecture.svg" data-figure="architecture" aria-label="放大：Astra–Jev：带证据的结构化交接"><img src="figures/architecture.svg" width="1480" height="760" loading="lazy" alt="目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。"></a><figcaption>目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。</figcaption></figure><div class="module-tools" role="group" aria-label="模型模块"><button data-module="cognitive" aria-pressed="true">GPT-6 Astra · Task Planner</button><button data-module="tools" aria-pressed="false">Perception Tools</button><button data-module="compiler" aria-pressed="false">Evidence-Grounded State Compiler</button><button data-module="registry" aria-pressed="false">Candidate Registry</button><button data-module="reactive" aria-pressed="false">Jev · Candidate Selector</button><button data-module="runtime" aria-pressed="false">Guarded Execution Runtime</button><button data-module="memory" aria-pressed="false">Bounded Working Memory</button><button data-module="router" aria-pressed="false">Cost-Aware Router</button></div><div id="moduleInspector" class="inspector" aria-live="polite"><div><small>方案设计 · 待实现与验证</small><h3>GPT-6 Astra · Task Planner</h3><p>在子目标边界或冲突时组织复杂推理，调用 perception tools 并声明当前执行目标。</p></div><div><dl><dt>输入</dt><dd>任务指令、可见图像、精确任务账本和异常事件</dd><dt>输出</dt><dd>子目标契约、感知计划与任务记忆</dd></dl><p class="note">实际 API 标识与调用配置待固定；不把每帧大模型调用当作默认循环。</p></div></div><p class="note">GPT-6 Astra 为指定的上游配置名称，实际 API 标识与调用设置待固定。Jev 的版本与输入限制以运行前官方文档核验为准；不将 API 延迟或控制器频率当作系统实时性结论。</p></section>
 
-<section class="section" id="memory"><div class="section-head"><div><div class="section-label">03 / TRACE-GROUNDED EXPERIENCE</div><h2>把经历沉淀成经验，<br>需要一道验证边界。</h2></div><p>认知经验改善任务决策，运动经验改善局部执行。两者共享可追溯的执行记录，但分别保存适用条件、归因与验证结果。</p></div>
-<div class="memory-intro"><article><h3>局内：保留正在使用的状态</h3><p>Private / Shared Notes 保存本局的目标、假设和进度。Agent 主动读写正文，版本检查避免覆盖冲突；笔记不自动成为跨局经验。</p></article><article><h3>跨局：复用经过验证的经验</h3><p>开发记录进入离线 Critic，形成认知或运动候选。候选只有通过适用范围内的验证，才能写入冻结快照供后续 Episode 使用。</p></article></div>
-<figure class="model-figure" id="figure-experience"><a class="figure-open" href="media/experience-lifecycle-v2.png" data-figure="experience" aria-label="放大：从执行记录到跨局经验" target="_blank"><img src="media/experience-lifecycle-v2.png" alt="开发记录经 Critic 形成候选，验证通过后才能进入冻结快照。当前原生候选保留，晋升环节待验证。" width="1536" height="1024" loading="lazy"></a><figcaption><span>开发记录经 Critic 形成候选，验证通过后才能进入冻结快照。当前原生候选保留，晋升环节待验证。</span><a href="media/experience-lifecycle-v2.png" download title="下载原图" aria-label="下载：从执行记录到跨局经验">↓</a></figcaption></figure>
-<div class="memory-notes"><article><h4>认知经验保存什么</h4><p>任务拆解、证据解释、前置依赖和恢复判断。指向何时采用、何时拒绝某种决策原则。</p></article><article><h4>运动经验保存什么</h4><p>局部动作与参数选择、失败模式和恢复条件。当前 motor 卡和独立程序修复试点还不等于训练好的 VLA。</p></article><article><h4>SEM-Memory 的后续位置</h4><p>利用独立 command-effect evidence 建立效果后验，再提出受限残差。支持域、校准与回滚仍需接入验证。</p></article></div>
-<p class="boundary">代码边界：原生 Critic 当前保留候选，尚无成对原生回放与回归验证；新的 RGB 原生运行要求空经验快照。图中的验证后晋升路径属于待完成的原生闭环。</p>
-</section>
+<section id="handoff"><p class="kicker">03 / STRUCTURED HANDOFF</p><h2>交给 Jev 的是可审计的决策状态。</h2><p>Jev 接收文本而非图像，不能直接代替视觉 Reactive 或连续动作生成。结构化交接必须说明当前目标、观察依据、剩余任务和可执行选项；仅把图像路径或自由描述放进 JSON 不构成完成 grounding。<a href="#source-state">[State]</a> <a href="#source-choice">[Choice]</a></p><div class="table-scroll"><table><thead><tr><th>接口</th><th>必要信息</th><th>谁负责</th></tr></thead><tbody><tr><td>SubgoalContract</td><td>目标、版本、前置条件、工具许可、检查点与预算</td><td>Astra 提议，harness 校验</td></tr><tr><td>SceneState</td><td>对象绑定、事实来源、时间、单位、坐标系与未知项</td><td>Perception + 状态维护</td></tr><tr><td>Candidate Registry</td><td>ID 绑定完整动作、参数、来源、期限与授权版本</td><td>候选提供者 + 执行适配器</td></tr><tr><td>DecisionPacket</td><td>契约引用、有效证据、相关记忆和合法候选</td><td>State Compiler → Jev</td></tr></tbody></table></div>
+<p class="note">下列为合成接口示例，不是运行日志。示例中坐标变换未知，所以不提供运动候选；selected_id 为空，尚未调用 Jev。实际运动参数必须由经过声明和验证的候选提供者绑定。</p><label class="schema-label">接口示例<select id="schemaSelect"><option value="subgoal-contract">SubgoalContract</option><option value="scene-state">SceneState</option><option value="decision-packet">DecisionPacket</option><option value="jev-request">Jev request（示意）</option></select></label><pre><code id="schemaCode">{
+  &quot;example_only&quot;: true,
+  &quot;episode_id&quot;: &quot;illustration-cp01&quot;,
+  &quot;goal_id&quot;: &quot;fill-plate-a&quot;,
+  &quot;contract_version&quot;: 3,
+  &quot;objective&quot;: &quot;Place the required food in plate A; count only evidence-supported deposits.&quot;,
+  &quot;preconditions&quot;: [
+    &quot;correct food identity&quot;,
+    &quot;fresh evidence before motion&quot;
+  ],
+  &quot;allowed_tools&quot;: [
+    &quot;observe&quot;,
+    &quot;perceive&quot;,
+    &quot;execute_registered_candidate&quot;
+  ],
+  &quot;completion_conditions&quot;: [
+    &quot;required items stably in plate A&quot;
+  ],
+  &quot;budget&quot;: {
+    &quot;max_calls&quot;: &quot;configured before run&quot;,
+    &quot;remaining_usd&quot;: null
+  },
+  &quot;on_conflict&quot;: &quot;request_astra_revision&quot;
+}</code></pre><a id="schemaDownload" href="data/examples/subgoal-contract.json" download>下载当前示例 ↓</a>
+<h3>回应必须再次校验，才能进入物理执行。</h3><ol class="sequence"><li><b>编译</b><span>保留来源，拒绝未知单位与过期绑定。</span></li><li><b>选择</b><span>一次选择一个完整候选，避免独立参数错误拼接。</span></li><li><b>复核</b><span>响应回来后重新检查目标版本、时效和预算。</span></li><li><b>执行</b><span>唯一动作入口派发；实际效果另行确认。</span></li></ol><p class="note">合法候选不等于物理上必然成功。confidence 不能代替真实抓取、放稳或触发证据；最终任务结果由独立环境判据确认。</p></section>
 
-<section class="section alignment-section" id="alignment"><div class="section-head"><div><div class="section-label">04 / BENCH ↔ MODEL</div><h2>同一能力框架，<br>不同模块承担责任。</h2></div><p>MindActWorld 定义要测量的能力，模型页说明实现这些能力的组织方式。具体任务、难度与演示统一保留在 Bench 页面。</p></div><div class="table-wrap"><table><thead><tr><th>评测维度</th><th>模型模块</th><th>目标能力</th><th>需要观察的证据</th></tr></thead><tbody><tr><td>Task-Level Reasoning · 任务级推理</td><td>Cognitive + Notes</td><td>任务理解、状态维护与重规划</td><td>检查目标、依赖和剩余需求是否正确。</td></tr><tr><td>Constraint-Aware Execution · 约束感知执行</td><td>Reactive + 执行后端</td><td>精度、响应与持续接触</td><td>记录实际物理误差、执行时延与有效交互频率。</td></tr><tr><td>Reasoning–Acting Coordination · 推理—执行协同</td><td>Contract + 执行反馈</td><td>效果驱动的进度推进</td><td>检查是否根据实际执行反馈修订后续决策。</td></tr><tr><td>迁移（附加协议）</td><td>Cognitive / Motor Experience</td><td>冻结经验的跨局复用</td><td>在独立实例上比较首次表现、恢复成本与负迁移。</td></tr></tbody></table></div><div class="small-links"><a href="../index.html#cases">任务定义与演示 ↗</a><a href="../index.html#evaluation">评测设计 ↗</a></div><p class="boundary">迁移是附加研究协议。对比时分别披露 Agent 推理频率、控制器执行频率和有效物理交互频率，以及观察权限、checkpoint、预算与环境时钟设置。</p></section>
+<section id="memory"><p class="kicker">04 / EPISODE-LOCAL MEMORY</p><h2>窗口可以缩短，未完成的任务事实不能丢。</h2><p>Jev 不自动记住上一轮请求。harness 为每次请求组织必要上下文，把稳定任务事实、近期执行事件、历史摘要与当前几何分开维护。</p><figure class="model-figure" id="figure-memory"><a href="figures/packet-memory.svg" data-figure="memory" aria-label="放大：DecisionPacket：事实、记忆与候选"><img src="figures/packet-memory.svg" width="1480" height="760" loading="lazy" alt="任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。"></a><figcaption>任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。</figcaption></figure><div class="table-scroll"><table><thead><tr><th>记忆类型</th><th>保留什么</th><th>何时失效或压缩</th></tr></thead><tbody><tr><td>Pinned task facts</td><td>未完成订单、规则、完整待执行路线与阶段前提</td><td>按依赖保留；不能随短窗口淘汰</td></tr><tr><td>Recent event window</td><td>最近 K 个动作、回执、失败与效果判断</td><td>K 与 token 预算由开发集选择并冻结</td></tr><tr><td>Evidence-linked text</td><td>带来源索引的早期事件摘要、待确认假设</td><td>矛盾触发复核；不能覆盖精确账本</td></tr><tr><td>Live scene cache</td><td>当前对象位置、跟踪状态和接触证据</td><td>随运动、遮挡或身份变化失效；不能从旧摘要复活坐标</td></tr></tbody></table></div><p class="note">自由文本摘要由 Astra 或声明的摘要模块生成，费用记账。这里仅讨论单次任务内的工作记忆；跨局经验晋升、RSI 与权重更新不属于当前 proposal。</p></section>
 
-<section class="section" id="resources"><div class="section-head"><div><div class="section-label">05 / IMPLEMENTATION & RESOURCES</div><h2>机制有依据，<br>能力留给实验验证。</h2></div><p>MindAccord 是配套方法名称，EvoMemHarness 是实现基础。以下状态依据指定提交，避免把独立后端、接口或轻量演示合并成已完成的系统能力。</p></div>
-<div class="table-wrap status-table"><table><thead><tr><th>组成</th><th>当前状态</th><th>后续验证</th></tr></thead><tbody><tr><td>双 Agent 协作</td><td>异步会话、授权、批次和事件反馈已实现。</td><td>相同观察与预算下的单 / 双 Agent 对照。</td></tr><tr><td>原生执行</td><td>RGB 三路 + 本体状态，按需 RGB 推断，固定运动工具。</td><td>当前协议下的物理验收与任务复现。</td></tr><tr><td>Execution VLA</td><td>已定义动作块接口，仓库其他路径已有 VLA 后端；当前双 Agent 原生运行未加载 checkpoint。</td><td>后端接入、动作空间、时延和取消语义。</td></tr><tr><td>跨局经验</td><td>Record / Critic / candidate / snapshot 机制已有；原生候选尚不晋升。</td><td>成对回放、回归检查与冻结经验迁移。</td></tr></tbody></table></div>
-<div class="resources" style="margin-top:28px"><article class="resource"><span class="type">ARCHITECTURE · MARKDOWN</span><h3>模型架构说明</h3><p>模块分工、执行协作、经验生命周期及简要能力对应。</p><a href="docs/PhysCo_Model_Architecture.md" download>下载架构说明 ↓</a></article><article class="resource"><span class="type">FIGURES · ARCHITECTURE</span><h3>模型图与生成记录</h3><p>系统架构为可编辑 SVG；经验生命周期图保留既有机制与验证边界。</p><a href="media/mindaccord-architecture.svg" download>总架构图 ↓</a><a class="sub-link" href="media/experience-lifecycle-v2.png" download>经验流程图 ↓</a><a class="sub-link" href="docs/Figure_Notes.md">图示来源与校核记录</a></article><article class="resource"><span class="type">IMPLEMENTATION · GITHUB</span><h3>EvoMemHarness</h3><p>当前原生协议、模块实现和独立后端的源码快照。</p><a href="https://github.com/MuQY1818/mem-planner-harness/tree/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41" target="_blank" rel="noreferrer">查看源码快照 ↗</a><a class="sub-link" href="data/model.json" download>模型结构数据 · JSON</a></article></div>
-<p class="source-meta">evomemharness · 6d3c53eab6ad · 源码核对：2026-09-21 · 本页无模型成绩</p><details class="code-details" id="codeDetails"><summary>源码依据 · 14 项</summary><div class="source-list"><article class="source-item" id="source-protocol"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/docs/runtime-tools-notes-v3.md#L1" target="_blank" rel="noreferrer">当前原生协议 · coordination-v3 ↗</a><p>职责、RGB 推断感知、notes、动作批次与效果判断的当前定义。</p><code>cognitive-reactive-harness/docs/runtime-tools-notes-v3.md:1</code></article>
-<article class="source-item" id="source-roles"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/rgb_protocol.py#L25" target="_blank" rel="noreferrer">Cognitive / Reactive 结构化接口 ↗</a><p>RGBPlan、RGBAction、两角色工具请求与提示词。</p><code>cognitive-reactive-harness/src/cr_harness/robodojo/rgb_protocol.py:25</code></article>
-<article class="source-item" id="source-runner"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/runner.py#L294" target="_blank" rel="noreferrer">双会话异步运行 ↗</a><p>观测、认知、反应与环境事件的独立循环。</p><code>cognitive-reactive-harness/src/cr_harness/robodojo/runner.py:294</code></article>
-<article class="source-item" id="source-effects"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/coordination.py#L392" target="_blank" rel="noreferrer">效果判断的证据与版本 ↗</a><p>当前 RGB 路径记录 agent_judgment，verified=False。</p><code>cognitive-reactive-harness/src/cr_harness/robodojo/coordination.py:392</code></article>
-<article class="source-item" id="source-notes"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/notes.py#L8" target="_blank" rel="noreferrer">局内私有 / 共享笔记 ↗</a><p>按 Episode 隔离；主动读写、版本冲突检查、容量约束。</p><code>cognitive-reactive-harness/src/cr_harness/notes.py:8</code></article>
-<article class="source-item" id="source-perception"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/agent_tools.py#L153" target="_blank" rel="noreferrer">按需 RGB 感知 ↗</a><p>Depth Pro / SAM3 与同帧测量；预测相机空间结果。</p><code>cognitive-reactive-harness/src/cr_harness/robodojo/agent_tools.py:153</code></article>
-<article class="source-item" id="source-boundary"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/observation_policy.py#L1" target="_blank" rel="noreferrer">观察和经验输入边界 ↗</a><p>rgb_proprio_inferred_tools_v2；禁止环境深度与标定；当前原生路径要求空经验快照。</p><code>cognitive-reactive-harness/src/cr_harness/robodojo/observation_policy.py:1</code></article>
-<article class="source-item" id="source-vla"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/vla.py#L11" target="_blank" rel="noreferrer">VLA 动作块接口 ↗</a><p>VLAInput → ActionChunk；动作空间、维度、时长和取消检查。</p><code>cognitive-reactive-harness/src/cr_harness/vla.py:11</code></article>
-<article class="source-item" id="source-campaign"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/campaign.py#L85" target="_blank" rel="noreferrer">原生运行配置 ↗</a><p>25 Hz 动作行、持续物理时钟、vla_mode=unavailable。</p><code>cognitive-reactive-harness/src/cr_harness/robodojo/campaign.py:85</code></article>
-<article class="source-item" id="source-memory"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/memory.py#L11" target="_blank" rel="noreferrer">跨局双经验库 ↗</a><p>每三条开发 Record 分组；候选验证、关联卡原子发布与版本快照。</p><code>cognitive-reactive-harness/src/cr_harness/memory.py:11</code></article>
-<article class="source-item" id="source-critic"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/critic.py#L11" target="_blank" rel="noreferrer">原生 Critic 的晋升边界 ↗</a><p>原生候选缺少 paired replay / regression validator，当前 admitted=False。</p><code>cognitive-reactive-harness/src/cr_harness/robodojo/critic.py:11</code></article>
-<article class="source-item" id="source-legacy"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/docs/EVOMEMHARNESS.md#L1" target="_blank" rel="noreferrer">EvoMemHarness · Planner–Runner–RSI ↗</a><p>program-v1 的逐调用账本、经验目录、Critic 与独立 DEV 验证。</p><code>docs/EVOMEMHARNESS.md:1</code></article>
-<article class="source-item" id="source-xvla"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/robots/rmbench/xvla_backend.py#L101" target="_blank" rel="noreferrer">仓库已有 RMBench X-VLA 适配 ↗</a><p>三路 RGB、本体状态及 20D 动作转换；不同于双 Agent 原生路径的接入状态。</p><code>robots/rmbench/xvla_backend.py:101</code></article>
-<article class="source-item" id="source-motor"><a href="https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/robots/rmbench/motor/README.md#L1" target="_blank" rel="noreferrer">独立 Motor RSI 试点 ↗</a><p>Swap T 的受限程序修复试点，不能当作已整合的 VLA 或双层自进化结果。</p><code>robots/rmbench/motor/README.md:1</code></article></div></details></section>
-</main>
-<footer class="footer"><div class="wrap footer-inner"><div><span class="wordmark">MindAccord</span> · Model</div><div>Cognitive · Reactive · Execution · Experience</div></div></footer>
-<button class="backtop" id="backTop" aria-label="回到顶部" title="回到顶部">↑</button>
-<dialog class="figure-dialog" id="figureDialog" aria-labelledby="figureTitle"><div class="dialog-bar"><h3 id="figureTitle">模型图</h3><div class="dialog-actions"><a id="figureOriginal" target="_blank" title="打开原图" aria-label="打开原图">↗</a><a id="figureDownload" download title="下载原图" aria-label="下载原图">↓</a><button id="closeFigure" title="关闭" aria-label="关闭图片">×</button></div></div><div class="dialog-image"><img id="dialogImage" alt=""></div></dialog>
+<section id="cost"><p class="kicker">05 / COST-AWARE ROUTING</p><h2>调用谁，取决于新信息和剩余预算。</h2><p>已有健康动作继续执行时，无需模型反复回答“继续”。证据过期先局部刷新；有效状态中的语义选择交给 Jev；目标冲突、候选不足或重大歧义再回到 Astra。</p><figure class="model-figure" id="figure-routing"><a href="figures/routing.svg" data-figure="routing" aria-label="放大：成本感知的事件路由"><img src="figures/routing.svg" width="1480" height="760" loading="lazy" alt="继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。"></a><figcaption>继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。</figcaption></figure><div class="state-tools" role="group" aria-label="路由场景"><button data-state="ongoing" aria-pressed="true">动作仍在执行</button><button data-state="unknown" aria-pressed="false">感知已过期</button><button data-state="revoked" aria-pressed="false">子目标冲突</button><button data-state="budget" aria-pressed="false">预算不足</button></div><div id="stateResult" class="state-result" aria-live="polite"><h3>保留授权，等待实际事件</h3><div class="state-columns"><article><h4>Astra</h4><p>不为无关未来计划更新撤销当前授权。</p></article><article><h4>Jev harness</h4><p>不向 Jev 重复询问确定性的“继续”。</p></article><article><h4>Runtime</h4><p>保持健康动作，等待回执或显式检查点。</p></article></div><p class="note">调用数减少属于待测目标；没有新的模型或机器人结果。</p></div><p class="note">以上为路由设计示意，不是实际决策结果。预算不足不能成为跳过必要观测或放宽物理检查的理由。</p><h3>总成本必须包含所有层与失败路径。</h3><p class="formula">C_total = C_Astra + C_perception + C_candidates + C_Jev + C_summary + C_retries/fallback + C_execution</p><p>API、GPU/工具与仿真开销分开记录，每次实际调用只记一次。报告所有尝试的平均成本，以及<strong>所有尝试的总成本 / 成功 episode 数</strong>，包括失败与升级的费用；成功数为零时该比值未定义。</p><p>先固定任务成功与时限约束，再比较成本。时延按实际关键路径测量，异步耗时不简单相加；固定环境时钟、time_scale、负载和并发。当前不提供虚构价格、节省比例或成本曲线。</p></section>
+
+<section id="alignment"><p class="kicker">06 / TASK REQUIREMENTS</p><h2>从案例依赖反推状态与记忆需求。</h2><div class="table-scroll"><table><thead><tr><th>案例</th><th>需要保留</th><th>主要待验证点</th></tr></thead><tbody><tr><td>E / P</td><td>身份、累计需求与实际完成量</td><td>感知绑定与账本更新，不以动作回执代替入盘</td></tr><tr><td>S / M / F</td><td>空间绑定、完整顺序与映射假设</td><td>窗口压缩是否丢失必要依赖</td></tr><tr><td>FR1 / FR2</td><td>当前目标、窗口与释放状态</td><td>刷新频率和完整端到端时延</td></tr><tr><td>PR1 / PR2 / PR3</td><td>目标读数、参考轨迹与实际残差</td><td>候选参数绑定与连续控制能力</td></tr><tr><td>CP01 / CP02</td><td>订单 / 局部位置与阶段前提</td><td>运动中的状态失效与升级成本</td></tr><tr><td>其他组合任务</td><td>按核定规范保留配方、空间或序列依赖</td><td>环境、候选与判据接入后再测，不宣称已覆盖</td></tr></tbody></table></div><a href="../index.html#cases">返回 MindActWorld 任务库 →</a></section>
+
+<section id="evaluation"><p class="kicker">07 / EVALUATION PLAN</p><h2>比较完整系统，也隔离选择器的贡献。</h2><p>当前没有新实验结果。先获取原生 trace，随后做无动作的影子评估，再做在线闭环；离线决策一致不能替代物理成功。</p><div class="table-scroll"><table><thead><tr><th>组别</th><th>配置</th><th>检验内容</th></tr></thead><tbody><tr><td>A</td><td>Astra 主导的完整流程</td><td>系统级基线</td></tr><tr><td>B</td><td>统一状态 / 候选 + 规则</td><td>是否需要模型选择</td></tr><tr><td>C</td><td>统一状态 / 候选 + Astra 仅输出 ID</td><td>公平的输出与输入对照</td></tr><tr><td>D</td><td>统一状态 / 候选 + Jev</td><td>选择器表现与时延</td></tr><tr><td>E</td><td>D + 有界记忆 + 事件路由</td><td>完整成本—任务表现权衡</td></tr></tbody></table></div><p>B–E 共享感知与候选提供模块；A 是系统比较。逐任务报告成功率、候选覆盖率、过期拒绝率、升级率、总成本与时延分位数，并附样本数和不确定性。</p><div class="principles"><article><h3>信息是否足够？</h3><p>消融 pinned facts，比较长历史与窗口摘要；检查序列、计数及证据丢失。</p></article><article><h3>路由是否有效？</h3><p>比较每决策事件刷新与事件触发复用；固定阈值后在独立实例测试。</p></article><article><h3>收益是否真实？</h3><p>计入感知、摘要、候选和 fallback；保留失败费用，披露可用任务范围。</p></article></div><p class="note">若每次 Jev 决策都依赖 Astra 完整重做视觉推理，或总成本和尾延迟未改善，应报告负面结果并调整分工。</p></section>
+
+<section id="resources"><p class="kicker">08 / STATUS & SOURCES</p><h2>已有工程基础，新组合仍待验证。</h2><p>EvoMemHarness 的固定快照可提供授权、Runtime、取消确认与 notes 的参考基础。本页新增的状态编译、完整候选注册表、Jev 适配和预算路由均为方案设计。没有修改机器人运行代码、调用付费模型或产生新测评成绩。</p><div class="links"><a href="docs/MindAccord_Proposal_v2.md" download>完整 Proposal ↓</a><a href="data/model.json" download>架构数据 ↓</a><a href="docs/Figure_Notes.md">图示与复现说明</a></div><div class="source-list"><article id="source-state"><a href="https://docs.typesafe.ai/concepts/state" target="_blank" rel="noreferrer">TypeSafe · State</a><p>文本状态与每请求上下文；图片不是 Jev 输入。</p></article><article id="source-choice"><a href="https://docs.typesafe.ai/primitives/choice" target="_blank" rel="noreferrer">TypeSafe · Choice</a><p>从声明的候选中选择；不代替连续动作参数生成。</p></article><article id="source-models"><a href="https://docs.typesafe.ai/models" target="_blank" rel="noreferrer">TypeSafe · Models</a><p>运行前复核版本、限制与计费；本提案不预设实时性或价格优势。</p></article><article id="source-confidence"><a href="https://docs.typesafe.ai/confidence" target="_blank" rel="noreferrer">TypeSafe · Confidence</a><p>阈值需开发集验证；不把置信度当作物理成功证据。</p></article><article id="source-baseline"><a href="https://github.com/MuQY1818/mem-planner-harness/tree/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41" target="_blank" rel="noreferrer">EvoMemHarness · 参考实现快照</a><p>已有授权、Runtime 与 notes 的基础，不代表新 Astra–Jev 组合已实现。</p></article><article id="source-style"><a href="https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/" target="_blank" rel="noreferrer">RoboICL · 叙事与图文参考</a><p>仅参考页面组织形式；不沿用其算法主张或实验结果。</p></article></div></section>
+</main><footer><span>MindAccord · Astra–Jev Proposal</span><a href="../index.html">MindActWorld</a></footer>
+<dialog id="figureDialog" aria-labelledby="figureTitle"><div class="dialog-bar"><h3 id="figureTitle">方法图</h3><a id="figureDownload" download>下载 SVG ↓</a><button id="closeFigure" aria-label="关闭图片">关闭</button></div><div class="dialog-image"><img id="dialogImage" alt=""></div></dialog>
 <script id="modelData" type="application/json">{
   "model": "MindAccord",
   "subtitle": "Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation",
-  "implementation": "EvoMemHarness / Cognitive–Reactive",
-  "commit": "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
+  "status": "proposal",
+  "proposal_version": 2,
+  "baseline_commit": "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
+  "upstream": {
+    "name": "GPT-6 Astra",
+    "api_model_id": null
+  },
+  "downstream": {
+    "name": "Jev",
+    "version": null
+  },
+  "results": null,
   "modules": [
     {
       "id": "cognitive",
-      "name": "Cognitive Agent",
-      "label": "任务层",
-      "state": "已实现 · 原生协议",
-      "inputs": "任务文本、当前 RGB / 本体状态、执行事件、局内笔记",
-      "outputs": "任务依赖图、当前子目标、版本化授权与计划修订",
-      "body": "维护长程目标和有效进度，决定当前应完成哪个子目标。可以在 Reactive 执行期间推理后续计划；普通笔记和无关未来计划更新不应撤销正在执行的授权。",
-      "boundary": "不直接提交物理动作；完成声明属于模型判断。",
-      "sources": [
-        "roles",
-        "runner"
-      ]
-    },
-    {
-      "id": "reactive",
-      "name": "Reactive Agent",
-      "label": "动作决策层",
-      "state": "已实现 · 原生协议",
-      "inputs": "当前授权、RGB / 本体状态、动作回执、局内笔记",
-      "outputs": "原子动作、最多八步的有限批次、检查点、恢复或升级请求",
-      "body": "在 Cognitive 的授权下选择工具与参数，依据新观测判断动作效果。当前它仍是模型会话，不等于高频控制器，也不等于 VLA；高频关节跟踪交给执行后端。",
-      "boundary": "不能自行更换授权目标；批次完成只表示动作执行结束。",
-      "sources": [
-        "roles",
-        "protocol"
-      ]
-    },
-    {
-      "id": "contract",
-      "name": "Subgoal Contract",
-      "label": "层间接口",
-      "state": "已实现 · 原生协议",
-      "inputs": "Cognitive 的当前子目标、工具许可、预算与任务依赖",
-      "outputs": "Reactive 可使用的稳定授权及其版本",
-      "body": "将任务意图绑定到有限执行范围。动作携带子目标与授权版本；撤销授权时先停止派发并等待取消确认。过期结果不能恢复旧授权。",
-      "boundary": "合同管理执行权限，不为任务生成坐标或预设成功答案。",
-      "sources": [
-        "roles",
-        "runner",
-        "protocol"
-      ]
-    },
-    {
-      "id": "runtime",
-      "name": "Execution Runtime",
-      "label": "唯一动作入口",
-      "state": "已实现 · 原生协议",
-      "inputs": "动作请求、当前授权、批次游标、来源帧与预算",
-      "outputs": "控制指令、动作回执、拒绝 / 取消事件与执行记录",
-      "body": "管理单一动作归属、请求去重、来源时效、逐步派发和取消确认。Agent 显式设定检查点；失败、预算耗尽和授权失效也会停止下一步。",
-      "boundary": "不自动试抬、重抓或计算任务完成；工作空间范围不是通用避碰证明。",
-      "sources": [
-        "protocol",
-        "runner"
-      ]
+      "name": "GPT-6 Astra · Task Planner",
+      "label": "任务拆解与升级处理",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "任务指令、可见图像、精确任务账本和异常事件",
+      "outputs": "子目标契约、感知计划与任务记忆",
+      "body": "在子目标边界或冲突时组织复杂推理，调用 perception tools 并声明当前执行目标。",
+      "boundary": "实际 API 标识与调用配置待固定；不把每帧大模型调用当作默认循环。"
     },
     {
       "id": "tools",
-      "name": "Notes + Perceive",
-      "label": "双角色共享工具",
-      "state": "已实现 · 按需调用",
-      "inputs": "当前 RGB、显式像素 / 框提示，私有或共享笔记的键与版本",
-      "outputs": "分割 / 预测深度 / 相机空间测量，主动读取的笔记正文",
-      "body": "两角色都可主动调用感知与笔记。感知只处理实际提供的 RGB，Depth Pro 的深度属于预测；notes 保存局内自由文本，另一角色须显式读取共享正文。",
-      "boundary": "无环境 GT 深度或相机标定；笔记不等于跨 Episode 经验。",
-      "sources": [
-        "notes",
-        "perception",
-        "boundary"
-      ]
+      "name": "Perception Tools",
+      "label": "带来源的场景证据",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "允许访问的 RGB / 本体信息与观察目标",
+      "outputs": "SceneState：对象、属性、时效、单位和坐标系",
+      "body": "将感知结果转为结构化事实；任务改变或几何过期时按需刷新。",
+      "boundary": "预测不是真值；未知坐标变换禁止绑定运动目标。"
     },
     {
-      "id": "controller",
-      "name": "Native Controller",
-      "label": "当前执行后端",
-      "state": "已实现 · 原生接口",
-      "inputs": "observe / move_to / set_gripper / wait_steps",
-      "outputs": "IK / 轨迹转换后的实际关节动作及本体回执",
-      "body": "当前原生接口使用确定性运控。25 Hz 指执行动作行，底层物理子步与 Agent 推理频率另行记录；模型推理时物理继续推进，wall time scale 仍需披露。",
-      "boundary": "工具执行成功不能单独证明抓住、放稳或任务达标。",
-      "sources": [
-        "campaign",
-        "protocol"
-      ]
+      "id": "compiler",
+      "name": "Evidence-Grounded State Compiler",
+      "label": "可审计的交接",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "契约、SceneState、回执、记忆与候选引用",
+      "outputs": "紧凑 DecisionPacket",
+      "body": "显式组织来源、未知项和当前决策需要的条件。计数、版本和预算比较留在代码中。",
+      "boundary": "新模块待实现；压缩不得无声丢失关键任务信息。"
     },
     {
-      "id": "vla",
-      "name": "Execution VLA",
-      "label": "学习式执行扩展",
-      "state": "已有接口 · 双 Agent 接入待完成",
-      "inputs": "局部指令、相机图像、本体状态、动作长度与时长预算",
-      "outputs": "带 policy_id、动作空间和控制周期的 ActionChunk",
-      "body": "目标架构中，Reactive 可将适合学习式执行的局部动作交给 VLA。仓库已定义 checkpoint 无关接口，并有独立 RMBench / RoboTwin VLA 后端；当前双 Agent 原生 campaign 仍设置 unavailable。",
-      "boundary": "尚不能将这条双 Agent 原生路径称为已运行的 checkpoint VLA 系统。",
-      "sources": [
-        "vla",
-        "campaign",
-        "xvla"
-      ]
+      "id": "registry",
+      "name": "Candidate Registry",
+      "label": "完整候选绑定",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "授权工具、技能模板、感知结果与允许的变换",
+      "outputs": "不可变 ID → 完整动作 / 工具请求",
+      "body": "将连续参数、坐标来源、有效期和检查点绑定为一个候选，不交给独立问题随意拼接。",
+      "boundary": "协议合法不证明物理可行；候选覆盖与生成成本需要单独测量。"
     },
     {
-      "id": "experience",
-      "name": "Experience Engine",
-      "label": "离线跨局更新",
-      "state": "已有机制 · 原生晋升待验证",
-      "inputs": "已结束的开发 EpisodeRecord、调用事件与最终结果",
-      "outputs": "认知 / 运动候选卡、验证记录、冻结经验版本",
-      "body": "三条新开发记录触发离线 Critic；候选区分认知、运动与系统原因。通用存储支持验证后原子发布。原生 Critic 当前保留候选，新的 RGB 原生运行只接受空经验快照。",
-      "boundary": "轻量环境验证不替代原生回放；SEM-Memory 效果后验和自动回滚仍属后续设计。",
-      "sources": [
-        "memory",
-        "critic",
-        "boundary",
-        "motor"
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "id": "protocol",
-      "title": "当前原生协议 · coordination-v3",
-      "path": "cognitive-reactive-harness/docs/runtime-tools-notes-v3.md",
-      "line": 1,
-      "description": "职责、RGB 推断感知、notes、动作批次与效果判断的当前定义。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/docs/runtime-tools-notes-v3.md#L1"
+      "id": "reactive",
+      "name": "Jev · Candidate Selector",
+      "label": "局部离散决策",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "文本 DecisionPacket 与预定义候选 criteria",
+      "outputs": "候选 ID 或拒答 / 升级选项",
+      "body": "在有效结构化状态上选择完整候选；不直接处理图像或生成任意连续参数。",
+      "boundary": "版本与限制部署前复核；confidence 不等于物理成功概率。"
     },
     {
-      "id": "roles",
-      "title": "Cognitive / Reactive 结构化接口",
-      "path": "cognitive-reactive-harness/src/cr_harness/robodojo/rgb_protocol.py",
-      "line": 25,
-      "description": "RGBPlan、RGBAction、两角色工具请求与提示词。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/rgb_protocol.py#L25"
-    },
-    {
-      "id": "runner",
-      "title": "双会话异步运行",
-      "path": "cognitive-reactive-harness/src/cr_harness/robodojo/runner.py",
-      "line": 294,
-      "description": "观测、认知、反应与环境事件的独立循环。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/runner.py#L294"
-    },
-    {
-      "id": "effects",
-      "title": "效果判断的证据与版本",
-      "path": "cognitive-reactive-harness/src/cr_harness/robodojo/coordination.py",
-      "line": 392,
-      "description": "当前 RGB 路径记录 agent_judgment，verified=False。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/coordination.py#L392"
-    },
-    {
-      "id": "notes",
-      "title": "局内私有 / 共享笔记",
-      "path": "cognitive-reactive-harness/src/cr_harness/notes.py",
-      "line": 8,
-      "description": "按 Episode 隔离；主动读写、版本冲突检查、容量约束。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/notes.py#L8"
-    },
-    {
-      "id": "perception",
-      "title": "按需 RGB 感知",
-      "path": "cognitive-reactive-harness/src/cr_harness/robodojo/agent_tools.py",
-      "line": 153,
-      "description": "Depth Pro / SAM3 与同帧测量；预测相机空间结果。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/agent_tools.py#L153"
-    },
-    {
-      "id": "boundary",
-      "title": "观察和经验输入边界",
-      "path": "cognitive-reactive-harness/src/cr_harness/robodojo/observation_policy.py",
-      "line": 1,
-      "description": "rgb_proprio_inferred_tools_v2；禁止环境深度与标定；当前原生路径要求空经验快照。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/observation_policy.py#L1"
-    },
-    {
-      "id": "vla",
-      "title": "VLA 动作块接口",
-      "path": "cognitive-reactive-harness/src/cr_harness/vla.py",
-      "line": 11,
-      "description": "VLAInput → ActionChunk；动作空间、维度、时长和取消检查。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/vla.py#L11"
-    },
-    {
-      "id": "campaign",
-      "title": "原生运行配置",
-      "path": "cognitive-reactive-harness/src/cr_harness/robodojo/campaign.py",
-      "line": 85,
-      "description": "25 Hz 动作行、持续物理时钟、vla_mode=unavailable。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/campaign.py#L85"
+      "id": "runtime",
+      "name": "Guarded Execution Runtime",
+      "label": "唯一物理执行入口",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "候选 ID、注册表、当前授权和新事件",
+      "outputs": "动作派发、回执、停止或拒绝",
+      "body": "Jev 返回后再次检查版本、时效与预算；健康动作由执行循环延续。",
+      "boundary": "已有 Runtime 可复用，Jev 适配待实现；独立环境评分器确认最终成功。"
     },
     {
       "id": "memory",
-      "title": "跨局双经验库",
-      "path": "cognitive-reactive-harness/src/cr_harness/memory.py",
-      "line": 11,
-      "description": "每三条开发 Record 分组；候选验证、关联卡原子发布与版本快照。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/memory.py#L11"
+      "name": "Bounded Working Memory",
+      "label": "局内历史而非 RSI",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "任务事实、近期事件、带证据摘要与当前场景",
+      "outputs": "预算内的相关上下文",
+      "body": "保留未完成依赖，裁剪无关历史；将稳定任务事实与易过期几何分开管理。",
+      "boundary": "自由摘要由 Astra 或声明的模块生成；不涉及跨局经验晋升。"
     },
     {
-      "id": "critic",
-      "title": "原生 Critic 的晋升边界",
-      "path": "cognitive-reactive-harness/src/cr_harness/robodojo/critic.py",
-      "line": 11,
-      "description": "原生候选缺少 paired replay / regression validator，当前 admitted=False。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/cognitive-reactive-harness/src/cr_harness/robodojo/critic.py#L11"
-    },
-    {
-      "id": "legacy",
-      "title": "EvoMemHarness · Planner–Runner–RSI",
-      "path": "docs/EVOMEMHARNESS.md",
-      "line": 1,
-      "description": "program-v1 的逐调用账本、经验目录、Critic 与独立 DEV 验证。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/docs/EVOMEMHARNESS.md#L1"
-    },
-    {
-      "id": "xvla",
-      "title": "仓库已有 RMBench X-VLA 适配",
-      "path": "robots/rmbench/xvla_backend.py",
-      "line": 101,
-      "description": "三路 RGB、本体状态及 20D 动作转换；不同于双 Agent 原生路径的接入状态。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/robots/rmbench/xvla_backend.py#L101"
-    },
-    {
-      "id": "motor",
-      "title": "独立 Motor RSI 试点",
-      "path": "robots/rmbench/motor/README.md",
-      "line": 1,
-      "description": "Swap T 的受限程序修复试点，不能当作已整合的 VLA 或双层自进化结果。",
-      "url": "https://github.com/MuQY1818/mem-planner-harness/blob/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41/robots/rmbench/motor/README.md#L1"
+      "id": "router",
+      "name": "Cost-Aware Router",
+      "label": "选择何时调用谁",
+      "state": "方案设计 · 待实现与验证",
+      "inputs": "时效、候选覆盖、事件、剩余预算与开发阈值",
+      "outputs": "继续 / 刷新 / Jev / Astra / 停止",
+      "body": "在任务质量和时限约束下减少冗余调用，记录所有路径的实际总成本。",
+      "boundary": "路由策略待验证；必要证据不足时不能为省钱绕过检查。"
     }
   ],
   "states": {
     "ongoing": {
-      "label": "执行进行中",
-      "title": "当前执行继续，任务层可规划后续",
-      "cognitive": "保持当前子目标的授权，利用已有反馈维护未来依赖。无关计划变更不打断当前动作。",
-      "reactive": "等待动作回执，或在显式检查点接收新观测，再决定下一步。",
-      "runtime": "独占动作入口，逐步派发并记录实际执行量；推理期间环境仍可继续推进。",
-      "evidence": "动作已派发、正在执行与子目标已完成是不同状态。"
+      "label": "动作仍在执行",
+      "title": "保留授权，等待实际事件",
+      "cognitive": "不为无关未来计划更新撤销当前授权。",
+      "reactive": "不向 Jev 重复询问确定性的“继续”。",
+      "runtime": "保持健康动作，等待回执或显式检查点。",
+      "evidence": "调用数减少属于待测目标；没有新的模型或机器人结果。"
     },
     "unknown": {
-      "label": "效果不确定",
-      "title": "补充证据，再决定是否推进",
-      "cognitive": "保留未确认状态，避免把后继子目标建立在未经确认的前提上。",
-      "reactive": "主动观察，必要时调用感知或读取笔记，提交带来源的效果判断。",
-      "runtime": "检查动作 ID、帧来源、授权和判断版本；记录 agent_judgment，不替模型判断图像中的物理真值。",
-      "evidence": "在线 achieved 是由模型判断支持的状态；最终成功由独立环境评分器确认。"
+      "label": "感知已过期",
+      "title": "刷新证据，再构造决策",
+      "cognitive": "有新身份或新任务歧义时才升级；否则复用授权的感知计划。",
+      "reactive": "位置过期或变换未知时，不提供可执行运动候选。",
+      "runtime": "调用已授权工具刷新，更新来源版本并重建绑定。",
+      "evidence": "过期事实不能因文本仍在上下文中而继续有效。"
     },
     "revoked": {
-      "label": "授权改变",
-      "title": "先停止旧执行，再接受新任务",
-      "cognitive": "根据关键反馈修订当前子目标，发布新版本授权。",
-      "reactive": "取消旧动作或批次；收到确认后，在新授权下重新决策。",
-      "runtime": "停止后续派发，等待取消确认；拒绝迟到的旧版本请求，避免两个意图同时控制机器人。",
-      "evidence": "计划更新不等于物理动作立即停止；取消确认属于层间交接协议。"
+      "label": "子目标冲突",
+      "title": "升级 Astra，并等待旧执行取消确认",
+      "cognitive": "修订子目标，发布新的授权版本。",
+      "reactive": "候选不足或冲突时选择升级；旧版本响应不得执行。",
+      "runtime": "停止后续派发，收到取消确认后再交接。",
+      "evidence": "模型名称替换不等于协议适配完成；此流程是设计说明。"
+    },
+    "budget": {
+      "label": "预算不足",
+      "title": "保留未完成状态，显式停止",
+      "cognitive": "必要信息无法在剩余预算内取得时，返回未完成与原因。",
+      "reactive": "不为降低费用而选择缺乏证据的动作。",
+      "runtime": "记录累计成本和终止原因，保留失败及升级费用。",
+      "evidence": "成功 episode 为零时成本 / 成功数未定义，不填零。"
     }
   },
   "alignment": [
     [
-      "Task-Level Reasoning · 任务级推理",
-      "Cognitive + Notes",
-      "任务理解、状态维护与重规划",
-      "检查目标、依赖和剩余需求是否正确。"
+      "Task-Level Reasoning",
+      "Astra + 契约 + 任务事实",
+      "任务拆解与进度维护",
+      "目标、顺序、依赖是否正确"
     ],
     [
-      "Constraint-Aware Execution · 约束感知执行",
-      "Reactive + 执行后端",
-      "精度、响应与持续接触",
-      "记录实际物理误差、执行时延与有效交互频率。"
+      "Constraint-Aware Execution",
+      "感知 + 候选绑定 + Runtime",
+      "时机、参数与接触约束",
+      "残差、有效动作与过期拒绝"
     ],
     [
-      "Reasoning–Acting Coordination · 推理—执行协同",
-      "Contract + 执行反馈",
-      "效果驱动的进度推进",
-      "检查是否根据实际执行反馈修订后续决策。"
-    ],
-    [
-      "迁移（附加协议）",
-      "Cognitive / Motor Experience",
-      "冻结经验的跨局复用",
-      "在独立实例上比较首次表现、恢复成本与负迁移。"
+      "Reasoning–Acting Coordination",
+      "State Compiler + Jev harness + Router",
+      "结果驱动后续选择",
+      "错误推进、恢复与升级成本"
     ]
   ],
   "figures": [
     {
       "id": "architecture",
-      "path": "media/mindaccord-architecture.svg",
-      "title": "双层 Agent 与执行后端",
-      "description": "认知授权流向 Reactive，Reactive 经 Runtime 派发动作；观察与回执返回双方。虚线为待接入的 VLA 路径。"
+      "path": "figures/architecture.svg",
+      "title": "Astra–Jev：带证据的结构化交接",
+      "description": "目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。"
     },
     {
-      "id": "experience",
-      "path": "media/experience-lifecycle-v2.png",
-      "title": "从执行记录到跨局经验",
-      "description": "开发记录经 Critic 形成候选，验证通过后才能进入冻结快照。当前原生候选保留，晋升环节待验证。"
+      "id": "memory",
+      "path": "figures/packet-memory.svg",
+      "title": "DecisionPacket：事实、记忆与候选",
+      "description": "任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。"
+    },
+    {
+      "id": "routing",
+      "path": "figures/routing.svg",
+      "title": "成本感知的事件路由",
+      "description": "继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。"
     }
-  ]
-}</script>
-<script>
-'use strict';
+  ],
+  "sources": [
+    {
+      "id": "state",
+      "title": "TypeSafe · State",
+      "url": "https://docs.typesafe.ai/concepts/state",
+      "description": "文本状态与每请求上下文；图片不是 Jev 输入。"
+    },
+    {
+      "id": "choice",
+      "title": "TypeSafe · Choice",
+      "url": "https://docs.typesafe.ai/primitives/choice",
+      "description": "从声明的候选中选择；不代替连续动作参数生成。"
+    },
+    {
+      "id": "models",
+      "title": "TypeSafe · Models",
+      "url": "https://docs.typesafe.ai/models",
+      "description": "运行前复核版本、限制与计费；本提案不预设实时性或价格优势。"
+    },
+    {
+      "id": "confidence",
+      "title": "TypeSafe · Confidence",
+      "url": "https://docs.typesafe.ai/confidence",
+      "description": "阈值需开发集验证；不把置信度当作物理成功证据。"
+    },
+    {
+      "id": "baseline",
+      "title": "EvoMemHarness · 参考实现快照",
+      "url": "https://github.com/MuQY1818/mem-planner-harness/tree/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
+      "description": "已有授权、Runtime 与 notes 的基础，不代表新 Astra–Jev 组合已实现。"
+    },
+    {
+      "id": "style",
+      "title": "RoboICL · 叙事与图文参考",
+      "url": "https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/",
+      "description": "仅参考页面组织形式；不沿用其算法主张或实验结果。"
+    }
+  ],
+  "examples": {
+    "decision-packet": {
+      "example_only": true,
+      "request_id": "illustration-request-01",
+      "goal_id": "fill-plate-a",
+      "contract_version": 3,
+      "evidence_version": "obs-12",
+      "memory": {
+        "pinned_facts": [
+          "Plate A still needs fries; grasp outcome is unknown."
+        ],
+        "recent_events": [
+          "a-02 completed; no confirmed deposit"
+        ],
+        "summary": "No task success is inferred from command completion.",
+        "evidence_refs": [
+          "obs-12",
+          "a-02"
+        ]
+      },
+      "valid_candidates": [
+        {
+          "id": "refresh",
+          "description": "Request the already-authorized perception refresh.",
+          "bound_request_id": "tool-refresh-01"
+        },
+        {
+          "id": "escalate",
+          "description": "Ask Astra to resolve target binding or revise the subgoal.",
+          "bound_request_id": "upstream-review-01"
+        },
+        {
+          "id": "abstain",
+          "description": "Do not dispatch motion; report insufficient evidence.",
+          "bound_request_id": "hold-01"
+        }
+      ],
+      "motion_binding": "unavailable; camera-to-control transform unknown",
+      "selected_id": null
+    },
+    "jev-request": {
+      "model": "\u003cfixed-version-at-run-time\u003e",
+      "state": {
+        "example_only": true,
+        "request_id": "illustration-request-01",
+        "goal_id": "fill-plate-a",
+        "contract_version": 3,
+        "evidence_version": "obs-12",
+        "memory": {
+          "pinned_facts": [
+            "Plate A still needs fries; grasp outcome is unknown."
+          ],
+          "recent_events": [
+            "a-02 completed; no confirmed deposit"
+          ],
+          "summary": "No task success is inferred from command completion.",
+          "evidence_refs": [
+            "obs-12",
+            "a-02"
+          ]
+        },
+        "valid_candidates": [
+          {
+            "id": "refresh",
+            "description": "Request the already-authorized perception refresh.",
+            "bound_request_id": "tool-refresh-01"
+          },
+          {
+            "id": "escalate",
+            "description": "Ask Astra to resolve target binding or revise the subgoal.",
+            "bound_request_id": "upstream-review-01"
+          },
+          {
+            "id": "abstain",
+            "description": "Do not dispatch motion; report insufficient evidence.",
+            "bound_request_id": "hold-01"
+          }
+        ],
+        "motion_binding": "unavailable; camera-to-control transform unknown",
+        "selected_id": null
+      },
+      "questions": {
+        "next_candidate": {
+          "type": "choice",
+          "instructions": "Choose one supplied candidate. Do not infer unobserved geometry or success.",
+          "criteria": {
+            "refresh": "Request the already-authorized perception refresh.",
+            "escalate": "Ask Astra to resolve target binding or revise the subgoal.",
+            "abstain": "Do not dispatch motion; report insufficient evidence."
+          }
+        }
+      }
+    },
+    "scene-state": {
+      "example_only": true,
+      "observation_id": "obs-12",
+      "facts": [
+        {
+          "entity_id": "food-04",
+          "attribute": "identity",
+          "value": "fries",
+          "source_tool": "semantic_perception",
+          "source_observation": "obs-12",
+          "status": "inferred"
+        },
+        {
+          "entity_id": "food-04",
+          "attribute": "position",
+          "value": null,
+          "coordinate_frame": "camera",
+          "base_transform_status": "unknown",
+          "validity": "unbound"
+        }
+      ],
+      "last_receipt": {
+        "action_id": "a-02",
+        "status": "completed"
+      },
+      "effect": {
+        "status": "unknown",
+        "evidence_refs": []
+      },
+      "note": "A completed command is not evidence of a successful grasp."
+    },
+    "subgoal-contract": {
+      "example_only": true,
+      "episode_id": "illustration-cp01",
+      "goal_id": "fill-plate-a",
+      "contract_version": 3,
+      "objective": "Place the required food in plate A; count only evidence-supported deposits.",
+      "preconditions": [
+        "correct food identity",
+        "fresh evidence before motion"
+      ],
+      "allowed_tools": [
+        "observe",
+        "perceive",
+        "execute_registered_candidate"
+      ],
+      "completion_conditions": [
+        "required items stably in plate A"
+      ],
+      "budget": {
+        "max_calls": "configured before run",
+        "remaining_usd": null
+      },
+      "on_conflict": "request_astra_revision"
+    }
+  }
+}</script><script>
 const data=JSON.parse(document.getElementById('modelData').textContent);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function inspect(id){const m=data.modules.find(x=>x.id===id);if(!m)return;document.querySelectorAll('[data-module]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.module===id)));document.getElementById('moduleInspector').innerHTML=`<div><span class="state ${['vla','experience'].includes(id)?'pending':''}">${esc(m.state)}</span><h3>${esc(m.name)}</h3><p>${esc(m.body)}</p></div><div><dl><dt>INPUT</dt><dd>${esc(m.inputs)}</dd><dt>OUTPUT</dt><dd>${esc(m.outputs)}</dd></dl><p class="boundary">${esc(m.boundary)}</p><div class="small-links">${m.sources.map(s=>`<a href="#source-${esc(s)}">${esc(data.sources.find(x=>x.id===s).title)} ↗</a>`).join('')}</div></div>`;}
-document.querySelectorAll('[data-module]').forEach(b=>b.addEventListener('click',()=>inspect(b.dataset.module)));
-function state(id){const w=data.states[id];document.querySelectorAll('[data-state]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.state===id)));document.getElementById('stateResult').innerHTML=`<h3>${esc(w.title)}</h3><div class="state-columns">${['cognitive','reactive','runtime'].map(k=>`<article><h4>${k[0].toUpperCase()+k.slice(1)}</h4><p>${esc(w[k])}</p></article>`).join('')}</div><p class="boundary">${esc(w.evidence)}</p>`;}
-document.querySelectorAll('[data-state]').forEach(b=>b.addEventListener('click',()=>state(b.dataset.state)));
-const dialog=document.getElementById('figureDialog');let opener=null;
-document.querySelectorAll('[data-figure]').forEach(a=>a.addEventListener('click',event=>{event.preventDefault();opener=a;const fig=data.figures.find(f=>f.id===a.dataset.figure);document.getElementById('figureTitle').textContent=fig.title;document.getElementById('dialogImage').src=fig.path;document.getElementById('dialogImage').alt=fig.description;document.getElementById('figureOriginal').href=fig.path;document.getElementById('figureDownload').href=fig.path;dialog.showModal();document.body.style.overflow='hidden';}));
-document.getElementById('closeFigure').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});dialog.addEventListener('close',()=>{document.body.style.overflow='';opener?.focus({preventScroll:true});});
-function closeMenu(){document.getElementById('siteNav').classList.remove('open');document.getElementById('menuToggle').setAttribute('aria-expanded','false');}
-document.getElementById('menuToggle').addEventListener('click',()=>{const open=document.getElementById('siteNav').classList.toggle('open');document.getElementById('menuToggle').setAttribute('aria-expanded',String(open));});document.querySelectorAll('#siteNav a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
-function openSource(){if(!location.hash.startsWith('#source-'))return;const element=document.getElementById(location.hash.slice(1));if(!element)return;document.getElementById('codeDetails').open=true;requestAnimationFrame(()=>element.scrollIntoView({block:'center'}));}
-window.addEventListener('hashchange',openSource);document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#source-"]');if(a&&a.hash===location.hash)openSource();});if(location.hash)openSource();document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+function moduleView(id){const m=data.modules.find(x=>x.id===id);document.querySelectorAll('[data-module]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.module===id)));document.getElementById('moduleInspector').innerHTML=`<div><small>${esc(m.state)}</small><h3>${esc(m.name)}</h3><p>${esc(m.body)}</p></div><div><dl><dt>输入</dt><dd>${esc(m.inputs)}</dd><dt>输出</dt><dd>${esc(m.outputs)}</dd></dl><p class="note">${esc(m.boundary)}</p></div>`;}
+document.querySelectorAll('[data-module]').forEach(b=>b.addEventListener('click',()=>moduleView(b.dataset.module)));
+function stateView(id){const s=data.states[id];document.querySelectorAll('[data-state]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.state===id)));document.getElementById('stateResult').innerHTML=`<h3>${esc(s.title)}</h3><div class="state-columns">${[['cognitive','Astra'],['reactive','Jev harness'],['runtime','Runtime']].map(([k,n])=>`<article><h4>${n}</h4><p>${esc(s[k])}</p></article>`).join('')}</div><p class="note">${esc(s.evidence)}</p>`;}
+document.querySelectorAll('[data-state]').forEach(b=>b.addEventListener('click',()=>stateView(b.dataset.state)));
+const select=document.getElementById('schemaSelect');select.addEventListener('change',()=>{document.getElementById('schemaCode').textContent=JSON.stringify(data.examples[select.value],null,2);document.getElementById('schemaDownload').href='data/examples/'+select.value+'.json';});
+document.getElementById('schemaDownload').addEventListener('click',e=>{e.preventDefault();const url=URL.createObjectURL(new Blob([JSON.stringify(data.examples[select.value],null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=select.value+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+const dialog=document.getElementById('figureDialog');let opener=null;document.querySelectorAll('[data-figure]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();opener=a;const f=data.figures.find(f=>f.id===a.dataset.figure);document.getElementById('figureTitle').textContent=f.title;document.getElementById('dialogImage').src=f.path;document.getElementById('dialogImage').alt=f.description;document.getElementById('figureDownload').href=f.path;dialog.showModal();document.body.style.overflow='hidden';}));document.getElementById('closeFigure').onclick=()=>dialog.close();dialog.addEventListener('close',()=>{document.body.style.overflow='';opener?.focus({preventScroll:true});});
+function closeMenu(){document.getElementById('siteNav').classList.remove('open');document.getElementById('menuToggle').setAttribute('aria-expanded','false');}document.getElementById('menuToggle').onclick=()=>{const open=document.getElementById('siteNav').classList.toggle('open');document.getElementById('menuToggle').setAttribute('aria-expanded',String(open));};document.querySelectorAll('#siteNav a').forEach(a=>a.onclick=closeMenu);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+document.querySelectorAll('main section').forEach(s=>s.setAttribute('tabindex','-1'));
 </script></body></html>

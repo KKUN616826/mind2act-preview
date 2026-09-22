@@ -94,19 +94,17 @@ VLA/WAM 计划参评 hyVLA、dm0.5、g0.5、openwam、pi0.5；Coding Agent 候�
 
 [技术报告 v0.1](PhysCo_Technical_Report_v0.1.pdf) 为早期研究框架，原件保留；当前叙事与任务说明以本页为准。
 
-## 配套方法：MindAccord
+## 配套方法：MindAccord · Proposal v2
 
 **Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation**
 
-MindAccord 以 EvoMemHarness 为实现基础，通过子目标契约协调 Cognitive 与 Reactive 两个角色；Runtime 管理实际执行与授权交接。
+新版方案以 GPT-6 Astra 为上游规划与感知调度者，以 Jev 为结构化文本上的局部候选选择者。harness 编译契约、带来源场景状态、相关记忆和完整动作候选；Runtime 核验版本、时效与预算后派发动作。
 
-- **Cognitive Agent**：维护任务目标、依赖、有效进度与版本化子目标授权。
-- **Reactive Agent**：在授权范围内选择工具、动作参数和检查点，根据新观测报告效果或请求恢复。
-- **Subgoal Contract + Runtime**：限定执行范围、许可与预算，管理单一动作入口、逐步派发、取消确认及过期请求拒绝。
+重点是带证据的状态编译、候选约束的局部决策、有预算的工作记忆和事件路由。费用统计包含感知、候选生成、摘要、重试与升级，不预设整体收益。
 
-[模型网站](../mindaccord/index.html) 的实现说明固定到 EvoMemHarness 提交 `6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41`。当前原生路径为双角色加固定控制器；VLA 动作块接口已有，双角色原生 checkpoint 接入仍待完成。跨局经验候选暂不晋升，RGB 原生运行只接受空经验快照。在线模型判断与最终环境评分独立，当前未发布模型成绩。
+当前为新架构提案，尚未完成端到端接入或机器人测评。既有 EvoMemHarness 仅作为参考基础，RSI 和跨局经验晋升退出本轮主线。
 
-该架构是 benchmark 配套方法，不构成参评系统必须采用双角色的要求。
+[模型网站](../mindaccord/index.html) · [完整 Proposal v2](../mindaccord/docs/MindAccord_Proposal_v2.md)
 
 
 ---

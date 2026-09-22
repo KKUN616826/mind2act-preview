@@ -1,26 +1,34 @@
 {
-  "repo": "https://github.com/MuQY1818/mem-planner-harness",
-  "branch": "evomemharness",
-  "commit": "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
-  "revision": "mindaccord-v3",
-  "base_stylesheet_sha256": "a354f9424cb2513f05c581b2ebdafcc21e9eda97b9840d6975afe273f44021b7",
-  "stylesheet_reuse": "Bundled stylesheet snapshot plus model overrides",
-  "image_generation": "Architecture: editable SVG; lifecycle: original ImageGen; docs/Figure_Notes.md",
+  "revision": "mindaccord-astrajev-proposal-v2",
+  "status": "proposal",
+  "baseline": {
+    "repo": "https://github.com/MuQY1818/mem-planner-harness",
+    "commit": "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
+    "scope": "prior implementation reference, not new integration"
+  },
   "figures": [
     {
       "id": "architecture",
-      "path": "media/mindaccord-architecture.svg",
-      "title": "双层 Agent 与执行后端",
-      "description": "认知授权流向 Reactive，Reactive 经 Runtime 派发动作；观察与回执返回双方。虚线为待接入的 VLA 路径。",
-      "sha256": "161a81431a063ee7031aa7049c0294d218481d71f6c0f3c53e44b74f524f8152"
+      "path": "figures/architecture.svg",
+      "title": "Astra–Jev：带证据的结构化交接",
+      "description": "目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。",
+      "sha256": "64d54e940f042c26d471131040c97ff0fdd2a7c78538e3032c32da54a3060b31"
     },
     {
-      "id": "experience",
-      "path": "media/experience-lifecycle-v2.png",
-      "title": "从执行记录到跨局经验",
-      "description": "开发记录经 Critic 形成候选，验证通过后才能进入冻结快照。当前原生候选保留，晋升环节待验证。",
-      "sha256": "dfe6c0e5733f60ed2868479be4643eaa551ee3f8012c97e09abb04d8645b7d99"
+      "id": "memory",
+      "path": "figures/packet-memory.svg",
+      "title": "DecisionPacket：事实、记忆与候选",
+      "description": "任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。",
+      "sha256": "f345729fd6c24e1eab75816b32910dd8ffc9ffa29640a9f2b72c72add0a3c566"
+    },
+    {
+      "id": "routing",
+      "path": "figures/routing.svg",
+      "title": "成本感知的事件路由",
+      "description": "继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。",
+      "sha256": "2f72334e0070b97d0a5082ea857f48da6ebf00fe5a7036740b43c585420632b6"
     }
   ],
-  "claims": "Architecture explanation; no Bench cases reproduced; no new robot evaluations."
+  "results": null,
+  "scope": "No model inference, robot experiments, costs or integration results produced."
 }

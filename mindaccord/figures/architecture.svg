@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 760" width="1480" height="760" font-family="Arial, sans-serif">
+  <rect width="1480" height="760" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrow-default" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#555555"/>
+    </marker>
+    <marker id="arrow-c0" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-c1" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#10B981"/>
+    </marker>
+    <marker id="arrow-c2" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#7C3AED"/>
+    </marker>
+    <marker id="arrow-c3" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#EA580C"/>
+    </marker>
+    <marker id="arrow-c4" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#C62828"/>
+    </marker>
+    <marker id="arrow-c5" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#0D47A1"/>
+    </marker>
+    <marker id="arrow-c6" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#1B5E20"/>
+    </marker>
+    <marker id="arrow-c7" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#4A148C"/>
+    </marker>
+    <marker id="arrow-c8" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#BF360C"/>
+    </marker>
+    <marker id="arrow-c9" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#37474F"/>
+    </marker>
+  </defs>
+  <path d="M 315.0,220.0 L 745.0,220.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="444.4" y="202.0" width="171.2" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="530.0" y="214.0" font-size="17" fill="#777777" text-anchor="middle">subgoal contract</text>
+  <path d="M 276.8,270.0 L 433.2,360.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="310.2" y="297.0" width="89.6" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="355.0" y="309.0" font-size="17" fill="#777777" text-anchor="middle">requests</text>
+  <path d="M 612.1,360.0 L 777.9,270.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="665.5" y="297.0" width="59.0" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="695.0" y="309.0" font-size="17" fill="#777777" text-anchor="middle">facts</text>
+  <path d="M 995.0,220.0 L 1160.0,220.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="1042.9" y="202.0" width="69.2" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="1077.5" y="214.0" font-size="17" fill="#777777" text-anchor="middle">packet</text>
+  <path d="M 1285.0,270.0 L 1285.0,540.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="1224.9" y="387.0" width="120.2" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="1285.0" y="399.0" font-size="17" fill="#777777" text-anchor="middle">selected ID</text>
+  <path d="M 1160.0,590.0 L 1015.0,590.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="1047.8" y="572.0" width="79.4" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="1087.5" y="584.0" font-size="17" fill="#777777" text-anchor="middle">actions</text>
+  <path d="M 685.0,590.0 L 340.0,590.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="477.9" y="572.0" width="69.2" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="512.5" y="584.0" font-size="17" fill="#777777" text-anchor="middle">events</text>
+  <path d="M 758.3,540.0 L 611.7,460.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)" stroke-dasharray="8,4"/>
+  <rect x="604.5" y="482.0" width="161.0" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="685.0" y="494.0" font-size="17" fill="#777777" text-anchor="middle">new observation</text>
+  <path d="M 190.0,540.0 L 190.0,270.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)" stroke-dasharray="8,4"/>
+  <rect x="145.2" y="387.0" width="89.6" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="190.0" y="399.0" font-size="17" fill="#777777" text-anchor="middle">escalate</text>
+  <path d="M 281.7,540.0 L 428.3,460.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)" stroke-dasharray="8,4"/>
+  <rect x="284.7" y="482.0" width="140.6" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="355.0" y="494.0" font-size="17" fill="#777777" text-anchor="middle">local refresh</text>
+  <rect x="65.0" y="170.0" width="250.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
+  <text x="190.0" y="215.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">GPT-6 Astra</text>
+  <text x="190.0" y="238.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Task + subgoals</text>
+  <rect x="395.0" y="360.0" width="250.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
+  <text x="520.0" y="405.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Perception tools</text>
+  <text x="520.0" y="428.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Evidence + bindings</text>
+  <rect x="745.0" y="170.0" width="250.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
+  <text x="870.0" y="215.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">State compiler</text>
+  <text x="870.0" y="238.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Memory + candidates</text>
+  <rect x="1160.0" y="170.0" width="250.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
+  <text x="1285.0" y="215.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Jev</text>
+  <text x="1285.0" y="238.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Choose candidate ID</text>
+  <rect x="1160.0" y="540.0" width="250.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
+  <text x="1285.0" y="585.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Runtime + controller</text>
+  <text x="1285.0" y="608.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Validate / execute</text>
+  <rect x="685.0" y="540.0" width="330.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
+  <text x="850.0" y="585.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Robot / environment</text>
+  <text x="850.0" y="608.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Observations + receipts</text>
+  <rect x="40.0" y="540.0" width="300.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
+  <text x="190.0" y="585.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Event + cost router</text>
+  <text x="190.0" y="608.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Reuse / refresh / escalate</text>
+  <text x="740.0" y="60.0" font-size="32" fill="#193D3A" text-anchor="middle">MindAccord · Cost-aware Astra–Jev coordination</text>
+  <text x="740.0" y="105.0" font-size="20" fill="#193D3A" text-anchor="middle">Proposal: interfaces, refresh rules and costs remain to be validated</text>
+  <text x="740.0" y="705.0" font-size="21" fill="#193D3A" text-anchor="middle">Jev selects complete candidates; perception and control remain separate.</text>
+</svg>

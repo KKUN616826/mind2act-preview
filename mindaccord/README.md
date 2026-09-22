@@ -1,17 +1,21 @@
-# MindAccord
+# MindAccord · Astra–Jev Proposal v2
 
 **Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation**
 
-[模型网站](index.html) · [MindActWorld](../index.html) · [架构说明](docs/PhysCo_Model_Architecture.md)
+[模型网站](index.html) · [Proposal v2](docs/MindAccord_Proposal_v2.md) · [MindActWorld](../index.html)
 
-基于 EvoMemHarness 固定提交的 Cognitive–Reactive 架构说明。当前原生路径使用固定控制器；双角色原生路径中的 VLA checkpoint 接入和跨局候选经验晋升仍待完成。没有新增模型成绩。
+新版聚焦 GPT-6 Astra 的子目标拆解与感知调度、结构化交接、Jev 候选选择 harness、有界工作记忆与成本路由。当前为设计 proposal，不是已完成的 Astra–Jev 系统；未运行新模型调用或机器人实验。RSI 不在当前范围内。
 
-## 维护
+## 维护入口
 
-`python3 scripts/build.py` 生成网站、模型 JSON、架构 Markdown 与素材 provenance。
+- `scripts/proposal.html` / `scripts/proposal.css`：新模型网页。
+- `scripts/content.py` / `scripts/presentation.py`：模块、路由示意、来源和三张方法图。
+- `docs/MindAccord_Proposal_v2.md`：完整 proposal。
+- `data/examples/`：明确标注为合成示例的四类交接 JSON。
+- `figures/specs/`：FigureSpec 图源；`figures/`：SVG 和 PDF。
 
-`python3 scripts/verify.py --static-only` 检查名称、副标题、本地链接与模型数据。安装 Python Playwright 和 Chrome 后可运行完整验证。
+运行 `python3 scripts/build.py` 生成网站、公开结构数据和兼容路径的架构 Markdown；运行 `python3 scripts/verify.py --static-only` 检查链接、状态、示例与图源一致性。两命令都不调用模型或机器人。
 
-名称与副标题由 `scripts/content.py` 中的 MODEL_NAME / MODEL_SUBTITLE 维护；`scripts/model.html` 为模板，`scripts/presentation.py` 为执行状态和能力映射。可编辑架构图为 `media/mindaccord-architecture.svg`。
+图源使用项目 figure-spec 技能的 `figure_renderer.py validate` / `render` 生成；不可把直接手改 SVG 当作可复现图源。PDF 是 SVG 的浏览器打印版本。
 
-研究目录是本次发布的来源；后续以当前 Git 仓库内文件维护公开模型页。文件名 PhysCo_Model_Architecture.md 保留以兼容旧链接。
+原模型网页由 Git 历史保留，本地研究目录另有 `archive/pre-astrajev-v2/`。旧 `media/` 图和原模板保留为历史文件，不由当前构建使用。今后以此 Git 子目录维护公开页面。

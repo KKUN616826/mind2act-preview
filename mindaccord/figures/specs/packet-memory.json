@@ -1,0 +1,174 @@
+{
+  "title": "Memory-aware DecisionPacket",
+  "canvas": {
+    "width": 1480,
+    "height": 760
+  },
+  "style": {
+    "font_family": "Arial, sans-serif",
+    "font_size": 20,
+    "bg_color": "#FFFFFF"
+  },
+  "nodes": [
+    {
+      "id": "goal",
+      "label": "Pinned task facts\nGoals / rules / unfinished work",
+      "x": 250,
+      "y": 220,
+      "width": 360,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "events",
+      "label": "Recent event window\nReceipts / failures / effects",
+      "x": 250,
+      "y": 410,
+      "width": 360,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "summary",
+      "label": "Evidence-linked memory text\nRelevant past events",
+      "x": 250,
+      "y": 600,
+      "width": 360,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "compile",
+      "label": "Typed state compiler\nProvenance / unknowns\nversions / token budget",
+      "x": 760,
+      "y": 410,
+      "width": 320,
+      "height": 140,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "live",
+      "label": "Live scene cache\nAge / units / coordinate frames",
+      "x": 1230,
+      "y": 220,
+      "width": 380,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EFF4FA",
+      "stroke": "#426D98",
+      "font_size": 21
+    },
+    {
+      "id": "packet",
+      "label": "DecisionPacket → Jev\nOne candidate-selection request",
+      "x": 1230,
+      "y": 410,
+      "width": 380,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "candidates",
+      "label": "Bound candidate registry\nID → complete executable request",
+      "x": 1230,
+      "y": 600,
+      "width": 380,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#FFF4EB",
+      "stroke": "#9F6634",
+      "font_size": 21
+    }
+  ],
+  "edges": [
+    {
+      "from": "goal",
+      "to": "compile",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "events",
+      "to": "compile",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "summary",
+      "to": "compile",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "live",
+      "to": "compile",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "candidates",
+      "to": "compile",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "compile",
+      "to": "packet",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    }
+  ],
+  "labels": [
+    {
+      "text": "Keep task dependencies. Refresh physical evidence.",
+      "x": 740,
+      "y": 58,
+      "font_size": 32,
+      "color": "#193D3A",
+      "anchor": "middle"
+    },
+    {
+      "text": "Illustrative interface design · episode-local memory only · no RSI",
+      "x": 740,
+      "y": 104,
+      "font_size": 20,
+      "color": "#193D3A",
+      "anchor": "middle"
+    },
+    {
+      "text": "Short context must not erase unfinished orders, routes or action preconditions.",
+      "x": 740,
+      "y": 714,
+      "font_size": 21,
+      "color": "#193D3A",
+      "anchor": "middle"
+    }
+  ]
+}

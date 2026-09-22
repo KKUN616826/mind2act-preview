@@ -1,0 +1,154 @@
+{
+  "title": "Cost-aware event routing",
+  "canvas": {
+    "width": 1480,
+    "height": 760
+  },
+  "style": {
+    "font_family": "Arial, sans-serif",
+    "font_size": 20,
+    "bg_color": "#FFFFFF"
+  },
+  "nodes": [
+    {
+      "id": "event",
+      "label": "New event / checkpoint",
+      "x": 740,
+      "y": 175,
+      "width": 330,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "reuse",
+      "label": "Healthy action in flight\nRuntime continues; no model call",
+      "x": 230,
+      "y": 355,
+      "width": 390,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "refresh",
+      "label": "Stale or incomplete evidence\nRefresh authorized perception",
+      "x": 740,
+      "y": 355,
+      "width": 390,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EFF4FA",
+      "stroke": "#426D98",
+      "font_size": 21
+    },
+    {
+      "id": "choose",
+      "label": "Fresh, protocol-valid candidates\nJev selects a candidate",
+      "x": 1250,
+      "y": 355,
+      "width": 390,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "astra",
+      "label": "Plan conflict / no useful candidate\nAstra revises grounding or goal",
+      "x": 460,
+      "y": 585,
+      "width": 520,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#FFF4EB",
+      "stroke": "#9F6634",
+      "font_size": 21
+    },
+    {
+      "id": "stop",
+      "label": "Insufficient remaining budget\nStop with incomplete status",
+      "x": 1050,
+      "y": 585,
+      "width": 510,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#FAEFEF",
+      "stroke": "#9E5555",
+      "font_size": 21
+    }
+  ],
+  "edges": [
+    {
+      "from": "event",
+      "to": "reuse",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "event",
+      "to": "refresh",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "event",
+      "to": "choose",
+      "label": "",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "refresh",
+      "to": "astra",
+      "label": "unresolved",
+      "style": "solid",
+      "color": "#496575",
+      "thickness": 2
+    },
+    {
+      "from": "choose",
+      "to": "stop",
+      "label": "budget exhausted",
+      "style": "dashed",
+      "color": "#496575",
+      "thickness": 2
+    }
+  ],
+  "labels": [
+    {
+      "text": "Spend reasoning where it changes the next decision.",
+      "x": 740,
+      "y": 56,
+      "font_size": 32,
+      "color": "#193D3A",
+      "anchor": "middle"
+    },
+    {
+      "text": "Illustrative branches; checks are applied before dispatch and after model return.",
+      "x": 740,
+      "y": 105,
+      "font_size": 20,
+      "color": "#193D3A",
+      "anchor": "middle"
+    },
+    {
+      "text": "All paths log actual tool, model, retry and escalation costs.",
+      "x": 740,
+      "y": 710,
+      "font_size": 21,
+      "color": "#193D3A",
+      "anchor": "middle"
+    }
+  ]
+}

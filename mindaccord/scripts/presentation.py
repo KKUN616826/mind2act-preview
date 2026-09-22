@@ -1,16 +1,4 @@
-"""Model-only execution states and compact Bench alignment."""
-ALIGNMENT = [
-    ("Task-Level Reasoning · 任务级推理", "Cognitive + Notes", "任务理解、状态维护与重规划", "检查目标、依赖和剩余需求是否正确。"),
-    ("Constraint-Aware Execution · 约束感知执行", "Reactive + 执行后端", "精度、响应与持续接触", "记录实际物理误差、执行时延与有效交互频率。"),
-    ("Reasoning–Acting Coordination · 推理—执行协同", "Contract + 执行反馈", "效果驱动的进度推进", "检查是否根据实际执行反馈修订后续决策。"),
-    ("迁移（附加协议）", "Cognitive / Motor Experience", "冻结经验的跨局复用", "在独立实例上比较首次表现、恢复成本与负迁移。"),
-]
-STATES = {
-    "ongoing": dict(label="执行进行中", title="当前执行继续，任务层可规划后续", cognitive="保持当前子目标的授权，利用已有反馈维护未来依赖。无关计划变更不打断当前动作。", reactive="等待动作回执，或在显式检查点接收新观测，再决定下一步。", runtime="独占动作入口，逐步派发并记录实际执行量；推理期间环境仍可继续推进。", evidence="动作已派发、正在执行与子目标已完成是不同状态。"),
-    "unknown": dict(label="效果不确定", title="补充证据，再决定是否推进", cognitive="保留未确认状态，避免把后继子目标建立在未经确认的前提上。", reactive="主动观察，必要时调用感知或读取笔记，提交带来源的效果判断。", runtime="检查动作 ID、帧来源、授权和判断版本；记录 agent_judgment，不替模型判断图像中的物理真值。", evidence="在线 achieved 是由模型判断支持的状态；最终成功由独立环境评分器确认。"),
-    "revoked": dict(label="授权改变", title="先停止旧执行，再接受新任务", cognitive="根据关键反馈修订当前子目标，发布新版本授权。", reactive="取消旧动作或批次；收到确认后，在新授权下重新决策。", runtime="停止后续派发，等待取消确认；拒绝迟到的旧版本请求，避免两个意图同时控制机器人。", evidence="计划更新不等于物理动作立即停止；取消确认属于层间交接协议。"),
-}
-FIGURES = [
-    dict(id="architecture", path="media/mindaccord-architecture.svg", title="双层 Agent 与执行后端", description="认知授权流向 Reactive，Reactive 经 Runtime 派发动作；观察与回执返回双方。虚线为待接入的 VLA 路径。"),
-    dict(id="experience", path="media/experience-lifecycle-v2.png", title="从执行记录到跨局经验", description="开发记录经 Critic 形成候选，验证通过后才能进入冻结快照。当前原生候选保留，晋升环节待验证。"),
-]
+"""Proposed states and diagrams; not observed traces."""
+STATES = {'ongoing': {'label': '动作仍在执行', 'title': '保留授权，等待实际事件', 'cognitive': '不为无关未来计划更新撤销当前授权。', 'reactive': '不向 Jev 重复询问确定性的“继续”。', 'runtime': '保持健康动作，等待回执或显式检查点。', 'evidence': '调用数减少属于待测目标；没有新的模型或机器人结果。'}, 'unknown': {'label': '感知已过期', 'title': '刷新证据，再构造决策', 'cognitive': '有新身份或新任务歧义时才升级；否则复用授权的感知计划。', 'reactive': '位置过期或变换未知时，不提供可执行运动候选。', 'runtime': '调用已授权工具刷新，更新来源版本并重建绑定。', 'evidence': '过期事实不能因文本仍在上下文中而继续有效。'}, 'revoked': {'label': '子目标冲突', 'title': '升级 Astra，并等待旧执行取消确认', 'cognitive': '修订子目标，发布新的授权版本。', 'reactive': '候选不足或冲突时选择升级；旧版本响应不得执行。', 'runtime': '停止后续派发，收到取消确认后再交接。', 'evidence': '模型名称替换不等于协议适配完成；此流程是设计说明。'}, 'budget': {'label': '预算不足', 'title': '保留未完成状态，显式停止', 'cognitive': '必要信息无法在剩余预算内取得时，返回未完成与原因。', 'reactive': '不为降低费用而选择缺乏证据的动作。', 'runtime': '记录累计成本和终止原因，保留失败及升级费用。', 'evidence': '成功 episode 为零时成本 / 成功数未定义，不填零。'}}
+FIGURES = [{'id': 'architecture', 'path': 'figures/architecture.svg', 'title': 'Astra–Jev：带证据的结构化交接', 'description': '目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。'}, {'id': 'memory', 'path': 'figures/packet-memory.svg', 'title': 'DecisionPacket：事实、记忆与候选', 'description': '任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。'}, {'id': 'routing', 'path': 'figures/routing.svg', 'title': '成本感知的事件路由', 'description': '继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。'}]
+ALIGNMENT = [('Task-Level Reasoning', 'Astra + 契约 + 任务事实', '任务拆解与进度维护', '目标、顺序、依赖是否正确'), ('Constraint-Aware Execution', '感知 + 候选绑定 + Runtime', '时机、参数与接触约束', '残差、有效动作与过期拒绝'), ('Reasoning–Acting Coordination', 'State Compiler + Jev harness + Router', '结果驱动后续选择', '错误推进、恢复与升级成本')]

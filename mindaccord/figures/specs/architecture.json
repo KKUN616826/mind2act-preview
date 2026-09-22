@@ -1,0 +1,189 @@
+{
+  "title": "MindAccord: proposed Astra–Jev architecture",
+  "canvas": {
+    "width": 1480,
+    "height": 760
+  },
+  "style": {
+    "font_family": "Arial, sans-serif",
+    "font_size": 20,
+    "bg_color": "#FFFFFF"
+  },
+  "nodes": [
+    {
+      "id": "astra",
+      "label": "GPT-6 Astra\nTask + subgoals",
+      "x": 190,
+      "y": 220,
+      "width": 250,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "tools",
+      "label": "Perception tools\nEvidence + bindings",
+      "x": 520,
+      "y": 410,
+      "width": 250,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "compiler",
+      "label": "State compiler\nMemory + candidates",
+      "x": 870,
+      "y": 220,
+      "width": 250,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "jev",
+      "label": "Jev\nChoose candidate ID",
+      "x": 1285,
+      "y": 220,
+      "width": 250,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "runtime",
+      "label": "Runtime + controller\nValidate / execute",
+      "x": 1285,
+      "y": 590,
+      "width": 250,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "world",
+      "label": "Robot / environment\nObservations + receipts",
+      "x": 850,
+      "y": 590,
+      "width": 330,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    },
+    {
+      "id": "router",
+      "label": "Event + cost router\nReuse / refresh / escalate",
+      "x": 190,
+      "y": 590,
+      "width": 300,
+      "height": 100,
+      "shape": "rounded",
+      "fill": "#EDF5F4",
+      "stroke": "#19655B",
+      "font_size": 21
+    }
+  ],
+  "edges": [
+    {
+      "from": "astra",
+      "to": "compiler",
+      "label": "subgoal contract",
+      "color": "#496575"
+    },
+    {
+      "from": "astra",
+      "to": "tools",
+      "label": "requests",
+      "color": "#496575"
+    },
+    {
+      "from": "tools",
+      "to": "compiler",
+      "label": "facts",
+      "color": "#496575"
+    },
+    {
+      "from": "compiler",
+      "to": "jev",
+      "label": "packet",
+      "color": "#496575"
+    },
+    {
+      "from": "jev",
+      "to": "runtime",
+      "label": "selected ID",
+      "color": "#496575"
+    },
+    {
+      "from": "runtime",
+      "to": "world",
+      "label": "actions",
+      "color": "#496575"
+    },
+    {
+      "from": "world",
+      "to": "router",
+      "label": "events",
+      "color": "#496575"
+    },
+    {
+      "from": "world",
+      "to": "tools",
+      "label": "new observation",
+      "style": "dashed",
+      "color": "#496575"
+    },
+    {
+      "from": "router",
+      "to": "astra",
+      "label": "escalate",
+      "style": "dashed",
+      "color": "#496575"
+    },
+    {
+      "from": "router",
+      "to": "tools",
+      "label": "local refresh",
+      "style": "dashed",
+      "color": "#496575"
+    }
+  ],
+  "labels": [
+    {
+      "text": "MindAccord · Cost-aware Astra–Jev coordination",
+      "x": 740,
+      "y": 60,
+      "font_size": 32,
+      "color": "#193D3A",
+      "anchor": "middle"
+    },
+    {
+      "text": "Proposal: interfaces, refresh rules and costs remain to be validated",
+      "x": 740,
+      "y": 105,
+      "font_size": 20,
+      "color": "#193D3A",
+      "anchor": "middle"
+    },
+    {
+      "text": "Jev selects complete candidates; perception and control remain separate.",
+      "x": 740,
+      "y": 705,
+      "font_size": 21,
+      "color": "#193D3A",
+      "anchor": "middle"
+    }
+  ]
+}

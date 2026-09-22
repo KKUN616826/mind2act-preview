@@ -1,71 +1,42 @@
 #!/usr/bin/env python3
-"""Build the model site; reuse only the Bench visual template."""
+"""Build the Astra–Jev proposal site; no model or robot execution."""
 import argparse
 import hashlib
 import html
 import json
 import re
 from pathlib import Path
-from content import COMMIT, MODULES, REPO, SOURCES, MODEL_NAME, MODEL_SUBTITLE
+from content import MODEL_NAME, MODEL_SUBTITLE, COMMIT, REPO, MODULES, SOURCES
 from presentation import ALIGNMENT, FIGURES, STATES
-
 ROOT = Path(__file__).resolve().parents[1]
-
-e = lambda value: html.escape(str(value), quote=True)
-dump = lambda value: json.dumps(value, ensure_ascii=False, indent=2)
-digest = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
-SOURCE_DATA = [dict(id=sid, title=title, path=path, line=line, description=description,
-                    url=f'{REPO}/blob/{COMMIT}/{path}#L{line}') for sid, title, path, line, description in SOURCES]
-SOURCE_BY_ID = {s['id']: s for s in SOURCE_DATA}
+e = lambda x: html.escape(str(x), quote=True)
+dump = lambda x: json.dumps(x, ensure_ascii=False, indent=2)
 
 def module_html(m):
-    pending = ' pending' if m['id'] in {'vla', 'experience'} else ''
-    return f'<div><span class="state{pending}">{e(m["state"])}</span><h3>{e(m["name"])}</h3><p>{e(m["body"])}</p></div><div><dl><dt>INPUT</dt><dd>{e(m["inputs"])}</dd><dt>OUTPUT</dt><dd>{e(m["outputs"])}</dd></dl><p class="boundary">{e(m["boundary"])}</p><div class="small-links">' + ''.join(f'<a href="#source-{s}">{e(SOURCE_BY_ID[s]["title"])} ↗</a>' for s in m['sources']) + '</div></div>'
+    return f'<div><small>{e(m["state"])}</small><h3>{e(m["name"])}</h3><p>{e(m["body"])}</p></div><div><dl><dt>输入</dt><dd>{e(m["inputs"])}</dd><dt>输出</dt><dd>{e(m["outputs"])}</dd></dl><p class="note">{e(m["boundary"])}</p></div>'
 
-def state_html(w):
-    return '<h3>' + e(w['title']) + '</h3><div class="state-columns">' + ''.join(f'<article><h4>{label}</h4><p>{e(w[key])}</p></article>' for key, label in [('cognitive', 'Cognitive'), ('reactive', 'Reactive'), ('runtime', 'Runtime')]) + '</div><p class="boundary">' + e(w['evidence']) + '</p>'
-
-def figure_html(f):
-    return f'<figure class="model-figure" id="figure-{f["id"]}"><a class="figure-open" href="{f["path"]}" data-figure="{f["id"]}" aria-label="放大：{e(f["title"])}" target="_blank"><img src="{f["path"]}" alt="{e(f["description"])}" width="1536" height="1024" loading="lazy"></a><figcaption><span>{e(f["description"])}</span><a href="{f["path"]}" download title="下载原图" aria-label="下载：{e(f["title"])}">↓</a></figcaption></figure>'
+def state_html(s):
+    columns = ''.join(f'<article><h4>{label}</h4><p>{e(s[key])}</p></article>' for key,label in [('cognitive','Astra'),('reactive','Jev harness'),('runtime','Runtime')])
+    return f'<h3>{e(s["title"])}</h3><div class="state-columns">{columns}</div><p class="note">{e(s["evidence"])}</p>'
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--bench-link", default="../index.html")
-    args = parser.parse_args()
-    bench_link = args.bench_link
-    modules = [{k: v for k, v in m.items() if k != 'cases'} for m in MODULES]
-    payload = dict(model=MODEL_NAME, subtitle=MODEL_SUBTITLE, implementation='EvoMemHarness / Cognitive–Reactive', commit=COMMIT, modules=modules, sources=SOURCE_DATA, states=STATES, alignment=ALIGNMENT, figures=FIGURES)
-    (ROOT / 'data/model.json').write_text(dump(payload) + '\n')
-    template = ROOT / 'scripts/base.css'
-    css = template.read_text()
-    safe_data = dump(payload).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
-    substitutions = {
-        '__BENCH_CSS__': css, '__BENCH_LINK__': bench_link, '__MODEL_NAME__': MODEL_NAME, '__MODEL_SUBTITLE__': MODEL_SUBTITLE, '__REPO__': REPO, '__SHA__': COMMIT, '__SHORT_SHA__': COMMIT[:12], '__DATA__': safe_data,
-        '__ARCHITECTURE_FIGURE__': figure_html(FIGURES[0]), '__EXPERIENCE_FIGURE__': figure_html(FIGURES[1]),
-        '__INITIAL_MODULE__': module_html(modules[0]), '__INITIAL_STATE__': state_html(STATES['ongoing']),
-        '__MODULE_BUTTONS__': ''.join(f'<button data-module="{m["id"]}" aria-pressed="{str(i == 0).lower()}">{e(m["name"])}</button>' for i, m in enumerate(modules)),
-        '__ALIGNMENT__': ''.join('<tr>' + ''.join(f'<td>{e(cell)}</td>' for cell in row) + '</tr>' for row in ALIGNMENT),
-        '__SOURCES__': '\n'.join(f'<article class="source-item" id="source-{s["id"]}"><a href="{e(s["url"])}" target="_blank" rel="noreferrer">{e(s["title"])} ↗</a><p>{e(s["description"])}</p><code>{e(s["path"])}:{s["line"]}</code></article>' for s in SOURCE_DATA),
-    }
-    page = (ROOT / 'scripts/model.html').read_text()
-    for key, value in substitutions.items():
-        page = page.replace(key, value)
-    assert not re.search(r'__[A-Z_]+__', page)
-    (ROOT / 'index.html').write_text(page)
-    provenance = dict(repo=REPO, branch='evomemharness', commit=COMMIT, revision='mindaccord-v3', base_stylesheet_sha256=digest(template), stylesheet_reuse='Bundled stylesheet snapshot plus model overrides', image_generation='Architecture: editable SVG; lifecycle: original ImageGen; docs/Figure_Notes.md', figures=[f | dict(sha256=digest(ROOT / f['path'])) for f in FIGURES], claims='Architecture explanation; no Bench cases reproduced; no new robot evaluations.')
-    (ROOT / 'data/provenance.json').write_text(dump(provenance) + '\n')
-    md = [f'# {MODEL_NAME}', '', MODEL_SUBTITLE, '', f'实现基础：[EvoMemHarness]({REPO}/tree/{COMMIT})。', '', '当前原生路径为 Cognitive–Reactive + 固定控制器；VLA 接口已经定义，checkpoint 接入待完成。', '', '## 总体架构', '', '![双层 Agent 架构](../media/mindaccord-architecture.svg)', '', 'Cognitive 通过 Subgoal Contract 授权 Reactive；Reactive 经 Runtime 派发动作。Notes 与 Perceive 服务两个角色，但不持有物理执行权。环境观察和动作回执回到双方。', '', '## 模块职责', '']
-    for m in modules:
-        md += [f'### {m["name"]}', '', f'**状态：** {m["state"]}', '', m['body'], '', f'- 输入：{m["inputs"]}', f'- 输出：{m["outputs"]}', f'- 边界：{m["boundary"]}', '', '代码依据：' + '；'.join(f'[{SOURCE_BY_ID[s]["title"]}]({SOURCE_BY_ID[s]["url"]})' for s in m['sources']), '']
-    md += ['## 执行反馈', '']
-    for w in STATES.values():
-        md += [f'### {w["title"]}', '', f'- Cognitive：{w["cognitive"]}', f'- Reactive：{w["reactive"]}', f'- Runtime：{w["runtime"]}', '', w['evidence'], '']
-    md += ['## 双层经验', '', '![跨局经验生命周期](../media/experience-lifecycle-v2.png)', '', '局内 notes 按 Episode 隔离，正文由 Agent 主动读写。跨局经验从开发 Record 开始，每三条触发离线 Critic，形成认知或运动候选。只有验证通过后才能发布冻结快照供后续 Episode 使用。', '', '当前原生候选缺少 paired native replay / regression validator，暂不晋升；RGB 原生入口只接受空经验快照。SEM-Memory 效果后验与自动回滚属于后续设计。', '', '## 与 Bench 的能力对应', '', '| 维度 | 模块 | 能力 | 证据 |', '|---|---|---|---|']
-    md += ['| ' + ' | '.join(row) + ' |' for row in ALIGNMENT]
-    md += ['', f'[任务定义与演示见 MindActWorld]({"../" + bench_link})。迁移是附加协议，不是新增任务套件。', '', '## 来源', '']
-    md += [f'- [{s["title"]}]({s["url"]})：{s["description"]}' for s in SOURCE_DATA]
-    (ROOT / 'docs/PhysCo_Model_Architecture.md').write_text('\n'.join(md) + '\n')
-    print(dump(dict(output=str(ROOT / 'index.html'), modules=len(modules), figures=2, case_cards=0)))
-
-if __name__ == '__main__':
-    main()
+    ap=argparse.ArgumentParser();ap.add_argument('--bench-link',default='../index.html');args=ap.parse_args()
+    examples={p.stem:json.loads(p.read_text()) for p in sorted((ROOT/'data/examples').glob('*.json'))}
+    payload=dict(model=MODEL_NAME,subtitle=MODEL_SUBTITLE,status='proposal',proposal_version=2,baseline_commit=COMMIT,upstream=dict(name='GPT-6 Astra',api_model_id=None),downstream=dict(name='Jev',version=None),results=None,modules=MODULES,states=STATES,alignment=ALIGNMENT,figures=FIGURES,sources=SOURCES,examples=examples)
+    (ROOT/'data/model.json').write_text(dump(payload)+'\n')
+    data=dump(payload)
+    for a,b in [('<','\\u003c'),('>','\\u003e'),('&','\\u0026'),('\u2028','\\u2028'),('\u2029','\\u2029')]:data=data.replace(a,b)
+    replacements={'__CSS__':(ROOT/'scripts/proposal.css').read_text(),'__SUBTITLE__':MODEL_SUBTITLE,'__BENCH_LINK__':args.bench_link,'__DATA__':data,'__INITIAL_MODULE__':module_html(MODULES[0]),'__INITIAL_STATE__':state_html(STATES['ongoing']),'__INITIAL_SCHEMA__':e(dump(examples['subgoal-contract'])),'__MODULE_BUTTONS__':''.join(f'<button data-module="{m["id"]}" aria-pressed="{str(i==0).lower()}">{e(m["name"])}</button>' for i,m in enumerate(MODULES)),'__STATE_BUTTONS__':''.join(f'<button data-state="{key}" aria-pressed="{str(i==0).lower()}">{e(s["label"])}</button>' for i,(key,s) in enumerate(STATES.items())),'__SOURCES__':''.join(f'<article id="source-{s["id"]}"><a href="{e(s["url"])}" target="_blank" rel="noreferrer">{e(s["title"])}</a><p>{e(s["description"])}</p></article>' for s in SOURCES)}
+    for f in FIGURES:
+        assert (ROOT/f['path']).is_file()
+        replacements['__FIGURE_'+f['id']+'__']=f'<figure class="model-figure" id="figure-{f["id"]}"><a href="{e(f["path"])}" data-figure="{f["id"]}" aria-label="放大：{e(f["title"])}"><img src="{e(f["path"])}" width="1480" height="760" loading="lazy" alt="{e(f["description"])}"></a><figcaption>{e(f["description"])}</figcaption></figure>'
+    page=(ROOT/'scripts/proposal.html').read_text()
+    for key,value in replacements.items():page=page.replace(key,value)
+    assert not re.search(r'__[A-Z_a-z]+__',page)
+    (ROOT/'index.html').write_text(page)
+    # Retain the historical download path while making the current proposal canonical.
+    (ROOT/'docs/PhysCo_Model_Architecture.md').write_text((ROOT/'docs/MindAccord_Proposal_v2.md').read_text())
+    provenance=dict(revision='mindaccord-astrajev-proposal-v2',status='proposal',baseline=dict(repo=REPO,commit=COMMIT,scope='prior implementation reference, not new integration'),figures=[f|dict(sha256=hashlib.sha256((ROOT/f['path']).read_bytes()).hexdigest()) for f in FIGURES],results=None,scope='No model inference, robot experiments, costs or integration results produced.')
+    (ROOT/'data/provenance.json').write_text(dump(provenance)+'\n')
+    print('Built MindAccord proposal:',len(MODULES),'modules,',len(FIGURES),'figures; no measured results.')
+if __name__=='__main__':main()

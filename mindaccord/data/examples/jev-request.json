@@ -1,0 +1,53 @@
+{
+  "model": "<fixed-version-at-run-time>",
+  "state": {
+    "example_only": true,
+    "request_id": "illustration-request-01",
+    "goal_id": "fill-plate-a",
+    "contract_version": 3,
+    "evidence_version": "obs-12",
+    "memory": {
+      "pinned_facts": [
+        "Plate A still needs fries; grasp outcome is unknown."
+      ],
+      "recent_events": [
+        "a-02 completed; no confirmed deposit"
+      ],
+      "summary": "No task success is inferred from command completion.",
+      "evidence_refs": [
+        "obs-12",
+        "a-02"
+      ]
+    },
+    "valid_candidates": [
+      {
+        "id": "refresh",
+        "description": "Request the already-authorized perception refresh.",
+        "bound_request_id": "tool-refresh-01"
+      },
+      {
+        "id": "escalate",
+        "description": "Ask Astra to resolve target binding or revise the subgoal.",
+        "bound_request_id": "upstream-review-01"
+      },
+      {
+        "id": "abstain",
+        "description": "Do not dispatch motion; report insufficient evidence.",
+        "bound_request_id": "hold-01"
+      }
+    ],
+    "motion_binding": "unavailable; camera-to-control transform unknown",
+    "selected_id": null
+  },
+  "questions": {
+    "next_candidate": {
+      "type": "choice",
+      "instructions": "Choose one supplied candidate. Do not infer unobserved geometry or success.",
+      "criteria": {
+        "refresh": "Request the already-authorized perception refresh.",
+        "escalate": "Ask Astra to resolve target binding or revise the subgoal.",
+        "abstain": "Do not dispatch motion; report insufficient evidence."
+      }
+    }
+  }
+}
