@@ -1,0 +1,44 @@
+<section class="research-opening" id="overview" aria-labelledby="project-title">
+  <p class="eyebrow">Research blog / Benchmark overview</p>
+  <h1 id="project-title">PhysCo</h1>
+  <p class="research-subtitle">从正确的目标，到真实的完成。</p><p class="article-meta">PhysCo · 研究设计说明 · 更新于 2026 年 9 月 22 日</p>
+  <p class="research-lead">机器人能否把记忆与规划转化为物理效果，<br class="desktop-break">并根据实际发生的结果，决定下一步？</p>
+  <p class="research-abstract">PhysCo 将<strong>目标选择、物理执行与状态更新</strong>放在同一条任务链中考察。15 项任务分别提供认知、动作和耦合三个观察入口，研究历史信息、动态时机与接触约束如何共同影响完整任务的完成。</p>
+  <div class="research-links"><a href="#insight">核心观点 ↓</a><a href="#cases">任务与演示</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a><a href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank" rel="noreferrer">技术报告 ↗</a></div>
+  <p class="research-status">任务设计与运控演示 · 15 项任务 · __VIDEO_COUNT__ 段演示及预览 · 模型比较与能力归因待实验验证</p>
+  <div class="research-media">__INSIGHT_MEDIA__</div>
+</section>
+
+<section class="section research-section" id="motivation"><p class="section-label">THE QUESTION</p><h2>为什么要在同一任务中考察认知与动作？</h2><p class="article-paragraph">一份正确的订单记忆并不保证食品被抓到；一段成功的抓放，也不能保证机器人正确维护了剩余需求。只记录最终成功或失败，会把目标选择、物理执行与进度更新混在一起。</p><p class="article-paragraph">PhysCo 从机器人操作中的这种依赖出发：历史信息决定物理目标，动作受到时机和接触条件约束，而实际效果又会改变下一步计划。我们希望用具体任务和过程判据，让这些环节能够被分别检查，并在完整流程中联合评价。</p><blockquote class="research-question">当模型知道该做什么，也具备基本操作能力时，<strong>它能否依据真实物理反馈持续完成任务？</strong></blockquote><p class="article-paragraph">这是一条待实验检验的主线。当前工作将它落实为三组任务与诊断设计；模型表现、失败占比及干预效果，需要在后续重复实验中建立。</p></section>
+<section class="section research-section" id="insight" aria-labelledby="insight-title">
+  <div class="section-head"><div><p class="section-label">01 / CORE INSIGHTS</p><h2 id="insight-title">理解目标、实现目标、确认完成，<br>是三个不同的问题。</h2></div></div>
+  <p class="section-intro">PhysCo 的设计出发点：<strong>单项认知能力和单项动作能力，能否解释它们在完整任务中的联合表现？</strong>我们用三个可检验的观点组织任务。它们是待验证的研究假设；演示用于说明任务机制。</p>
+
+  <article class="research-point" id="insight-goal"><div class="point-number">01<span>REASON</span></div><div class="point-body"><h3>高层：历史与规则决定此刻的目标。</h3><p class="point-thesis">当关键线索已经离场，机器人仍需知道该选谁、放哪里、按什么顺序做。</p><p>高层认知需要维护与动作有关的任务状态：已见身份、累计需求、空间绑定、控制规则和事件顺序。这些信息必须最终落实到对象、位置、约束与剩余目标，才能成为可评价的行为。</p><div class="point-example"><strong>例：订单配餐</strong><p>新增订单改变“应该放多少”；真实投放改变“已经完成多少”。这两份记录需要分别维护，剩余需求由二者共同决定。</p><a href="#case-P">P · 查看增量订单任务 →</a></div>
+__POINT_DEMO_P__
+<p class="point-test"><b>怎样检验</b>记录目标与顺序是否正确；在物理条件固定时改变历史负担。接口允许时，以可靠执行器辅助检查认知决策，避免把抓取失败直接归为记忆错误。</p></div></article>
+
+  <article class="research-point" id="insight-action"><div class="point-number">02<span>ACT</span></div><div class="point-body"><h3>低层：正确目标必须满足真实的时间与接触约束。</h3><p class="point-thesis">知道该抓哪个物体，还需要及时抓到；知道目标读数，还需要松手后仍然达标。</p><p>动作侧关注目标能否在动态窗口和精度要求下实现。传送带持续运动，动作可能因时延错过窗口；旋钮在松手后可能偏离目标；描线只有笔尖实际接触才留下墨迹。评价必须落到物体与环境的真实状态。</p><div class="point-example"><strong>例：调节与描线</strong><p>PR1/PR2 检查释放后读数是否稳定，PR3 检查实际墨迹的连续性与偏离。动作命令结束，不能直接作为物理成功的判据。</p><a href="#case-PR3">PR3 · 查看接触描线任务 →</a></div>
+__POINT_DEMO_PR3__
+<p class="point-test"><b>怎样检验</b>在目标明确的条件下记录物理残差、有效接触和响应时延。动态任务说明推理时环境是否继续推进；有效交互频率与控制器内部步频分别报告。</p></div></article>
+
+  <article class="research-point" id="insight-feedback"><div class="point-number">03<span>UPDATE</span></div><div class="point-body"><h3>耦合：物理效果会改写下一步的目标与计划。</h3><p class="point-thesis">闭环的关键，是让“打算完成什么”持续与“实际完成了什么”保持一致。</p><p>认知先为执行指定目标和约束，执行结果再决定哪些目标仍待完成、哪些前提仍然成立。偏差可能改变下一次抓取、后续空间布局或阶段推进。我们关注这种双向依赖在长程流程中能否持续成立。</p><div class="point-example"><strong>例：旋转蛋糕装饰</strong><p>高层记住马卡龙与蛋糕局部位置的绑定；执行时要把该位置转换成随旋转变化的当前目标；放置后还需确认真实落位，再更新剩余装饰。Hard 的盖罩操作也必须等转盘实际停稳。</p><a href="#case-CP02">CP02 · 查看动态空间绑定任务 →</a></div>
+__POINT_DEMO_CP02__
+<p class="point-test"><b>怎样检验</b>对齐“当前目标—实际效果—下一步行为”的事件轨迹，并使用可实施的目标、执行或反馈对照。完整任务成功率下降本身，尚不足以证明出现额外的耦合瓶颈。</p></div></article>
+
+  <div class="feedback-study"><div><p class="section-label">ONE ACTION, TWO OUTCOMES</p><h3>同一次抓取尝试，下一步取决于什么？</h3><p>以 CP01 传送带配餐为例，正确食品仍属于同一份订单，但一次抓取产生不同物理结果时，剩余需求应相应变化。</p><p class="muted">机制示意；不是实际模型失败记录。</p></div><div><div class="effect-choice" role="group" aria-label="选择示例执行结果"><button data-effect="miss" aria-pressed="true">抓空</button><button data-effect="deposited" aria-pressed="false">稳定入盘</button></div><div id="effectResult" class="effect-result" role="status" aria-live="polite"><b>目标仍待收取</b><span>保持该订单的剩余需求，检查目标是否仍可抓取；未入盘不能记为完成。</span></div><a href="#case-CP01">查看 CP01 的目标与完成条件 →</a></div></div>
+</section>
+
+<section class="section research-section" id="design" aria-labelledby="design-title">
+  <div class="section-head"><div><p class="section-label">02 / BENCHMARK DESIGN</p><h2 id="design-title">分开检查基础能力，<br>在完整任务中检验依赖。</h2></div></div>
+  <p class="section-intro">认知核心突出历史与规则如何选择目标；动作核心突出目标如何被物理实现；耦合套件把两者放入具有阶段依赖的流程。<strong>三类任务提供诊断入口，不能仅凭跨任务分数差完成因果归因。</strong></p>
+  <div class="design-columns"><article><p class="section-label">5 COGNITIVE TASKS</p><h3>目标是否正确？</h3><p>E / P / S / F / M</p><p>身份、累计需求、空间变换、未知映射与路线记忆。重点检查历史信息如何改变当前选择。</p><a href="#case-E">从跨批识别开始 →</a></article><article><p class="section-label">5 MOTOR TASKS</p><h3>效果是否达标？</h3><p>FR1 / FR2 / PR1 / PR2 / PR3</p><p>动态取件、事件响应、线性与旋转调节、接触描线。重点检查窗口、残差和稳定性。</p><a href="#case-FR2">从限时响应开始 →</a></article><article><p class="section-label">5 COUPLING TASKS</p><h3>下一步是否仍然成立？</h3><p>CP01–CP05</p><p>配餐、装饰、配液、打包和复奏。重点检查任务进度与实际物理状态的对应关系。</p><a href="#case-CP04">从空间布局开始 →</a></article></div>
+  <h3 class="subsection-title">四个压力维度，各有明确的证据要求。</h3>
+  <div class="table-wrap"><table><thead><tr><th>维度</th><th>设计关注</th><th>不能直接据此推断</th></tr></thead><tbody>
+    <tr><td>记忆与规则</td><td>当前观察之外的信息，是否用于选择目标与顺序</td><td>指令长、对象多，不自动构成记忆依赖</td></tr>
+    <tr><td>长程与规划</td><td>阶段前提、有效进度与偏差后的计划修订</td><td>重复很多次抓放，不自动证明复杂规划能力</td></tr>
+    <tr><td>动态响应</td><td>运动窗口、端到端延迟与有效操作吞吐</td><td>模拟器步频高，不等于模型能实时响应</td></tr>
+    <tr><td>精细与接触</td><td>实际读数、轨迹、剂量、间隙与触发约束</td><td>动作轨迹看起来准确，不等于效果达到容差</td></tr>
+  </tbody></table></div>
+  <p class="research-note">高层与低层是评测视角，不限定模型必须采用双模块架构。CP02 的现有档位同时改变数量、转速和动作链；单因素归因需要额外的控制变量切片。CP05 执行不要求跟拍。</p>
+</section>

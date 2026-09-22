@@ -14,7 +14,8 @@
 ## 修改与构建
 
 - 修改任务定义、媒体路径、难度和证据说明：`data/showcase-cases.json`。
-- 修改网站布局、开头介绍与交互：`scripts/showcase.html`。
+- 修改核心观点与任务设计介绍：`scripts/research_intro.html`。
+- 修改介绍样式：`scripts/research.css`；目录与交互：`scripts/showcase.html`。
 - 修改完整研究介绍：`docs/PhysCo_Showcase.md`。
 - 新媒体放在 `media/videos/` 或 `media/images/`，视频封面放在 `media/posters/`。
 

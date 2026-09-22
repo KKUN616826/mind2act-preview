@@ -28,6 +28,8 @@ def main():
     page = Page(); page.feed((ROOT/'index.html').read_text())
     assert json.loads(page.payload) == records, 'HTML data differs from JSON'
     assert len(page.ids) == len(set(page.ids)), 'Duplicate HTML IDs'
+    for section in ['overview', 'motivation', 'insight', 'insight-goal', 'insight-action', 'insight-feedback', 'design', 'cases', 'evaluation', 'resources']:
+        assert section in page.ids, 'Missing research section: ' + section
     for link in page.links:
         url = urlsplit(link)
         if url.scheme or url.netloc: continue
