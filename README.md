@@ -17,6 +17,7 @@
 - 修改核心观点与任务设计介绍：`scripts/research_intro.html`。
 - 修改介绍样式：`scripts/research.css`；目录与交互：`scripts/showcase.html`。
 - 修改完整研究介绍：`docs/PhysCo_Showcase.md`。
+- 修改排行榜候选：`data/leaderboard.json`；表格与交互：`scripts/leaderboard.py`、`scripts/leaderboard.html`、`scripts/leaderboard.js`。当前只接受待评测占位，不能以零值代替缺失成绩；发布实测结果前须完善协议与校验，详见 `docs/Leaderboard.md`。
 - 新媒体放在 `media/videos/` 或 `media/images/`，视频封面放在 `media/posters/`。
 
 运行 `python3 scripts/build.py` 重新生成 HTML、逐任务文档及媒体索引，再用 `python3 scripts/validate.py` 检查资源一致性。不要只改生成后的 HTML，否则下次构建会覆盖。

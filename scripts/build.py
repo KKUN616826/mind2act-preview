@@ -4,6 +4,7 @@ import json
 import re
 from pathlib import Path
 from render_cases import card, case_md, cover, e
+from leaderboard import render as render_leaderboard
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,6 +34,8 @@ def main():
     page = (ROOT / 'scripts/showcase.html').read_text()
     page = page.replace('__RESEARCH_INTRO__', (ROOT / 'scripts/research_intro.html').read_text())
     page = page.replace('__RESEARCH_CSS__', (ROOT / 'scripts/research.css').read_text())
+    page = page.replace('__LEADERBOARD__', render_leaderboard(records))
+    page = page.replace('__LEADERBOARD_JS__', (ROOT / 'scripts/leaderboard.js').read_text())
     by_id = {c['id']: c for c in records}
     for cid in ['P', 'PR3', 'CP02']:
         c = by_id[cid]

@@ -5,30 +5,32 @@ from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from leaderboard import load as load_leaderboard
 
 ROOT = Path(__file__).resolve().parents[1]
 
 class Page(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.links, self.ids, self.payload = [], [], ''
+        self.links, self.ids, self.payload, self.board_payload = [], [], '', ''
         self.in_data = False
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         self.links += [a[k] for k in ('src', 'href', 'poster') if k in a]
         if 'id' in a: self.ids.append(a['id'])
-        if tag == 'script': self.in_data = a.get('id') == 'showcaseData'
+        if tag == 'script': self.in_data = a.get('id')
     def handle_endtag(self, tag):
         if tag == 'script': self.in_data = False
     def handle_data(self, data):
-        if self.in_data: self.payload += data
+        if self.in_data == 'showcaseData': self.payload += data
+        if self.in_data == 'leaderboardData': self.board_payload += data
 
 def main():
     records = json.loads((ROOT/'data/showcase-cases.json').read_text())
     page = Page(); page.feed((ROOT/'index.html').read_text())
     assert json.loads(page.payload) == records, 'HTML data differs from JSON'
     assert len(page.ids) == len(set(page.ids)), 'Duplicate HTML IDs'
-    for section in ['overview', 'motivation', 'insight', 'insight-goal', 'insight-action', 'insight-feedback', 'design', 'cases', 'evaluation', 'resources']:
+    for section in ['overview', 'motivation', 'insight', 'insight-goal', 'insight-action', 'insight-feedback', 'design', 'leaderboard', 'cases', 'evaluation', 'resources']:
         assert section in page.ids, 'Missing research section: ' + section
     for link in page.links:
         url = urlsplit(link)
@@ -36,6 +38,10 @@ def main():
         if url.path: assert (ROOT/unquote(url.path)).is_file(), link
         elif url.fragment: assert unquote(url.fragment) in page.ids, link
     assert Counter(c['suite'] for c in records) == {'cognitive':5, 'motor':5, 'coupling':5}
+    board = load_leaderboard(records)
+    assert json.loads(page.board_payload) == board, 'HTML leaderboard differs from source JSON'
+    assert Counter(r['track'] for r in board['candidates']) == {'vla':5, 'coding':9}
+    assert [r['name'] for r in board['candidates'] if r['track']=='vla'] == ['hyVLA','dm0.5','g0.5','openwam','pi0.5']
     media = [a for c in records for a in c['media']]
     assert len({a['path'] for a in media}) == len(media), 'Duplicate media'
     for c in records:
@@ -46,6 +52,7 @@ def main():
         assert all(c['evidence'][k] in doc for k in c['evidence']), c['id']
     print('PASS: embedded data, all HTML links, case documents, evidence and media coverage')
     print(dict(Counter(a['kind'] for a in media)))
+    print('PASS: leaderboard roster, 15-task coverage, null scores/ranks/costs and pending status')
 
 if __name__ == '__main__':
     main()

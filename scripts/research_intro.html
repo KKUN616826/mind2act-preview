@@ -1,24 +1,37 @@
 <section class="research-opening" id="overview" aria-labelledby="project-title">
   <p class="eyebrow">Research blog / Benchmark overview</p>
   <h1 id="project-title">PhysCo</h1>
-  <p class="research-subtitle">从正确的目标，到真实的完成。</p><p class="article-meta">PhysCo · 研究设计说明 · 更新于 2026 年 9 月 22 日</p>
-  <p class="research-lead">机器人能否把记忆与规划转化为物理效果，<br class="desktop-break">并根据实际发生的结果，决定下一步？</p>
-  <p class="research-abstract">PhysCo 将<strong>目标选择、物理执行与状态更新</strong>放在同一条任务链中考察。15 项任务分别提供认知、动作和耦合三个观察入口，研究历史信息、动态时机与接触约束如何共同影响完整任务的完成。</p>
-  <div class="research-links"><a href="#insight">核心观点 ↓</a><a href="#cases">任务与演示</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a><a href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank" rel="noreferrer">技术报告 ↗</a></div>
+  <p class="research-subtitle">高层认知与肌肉记忆，共同完成物理任务。</p><p class="article-meta">PhysCo · 研究设计说明 · 更新于 2026 年 9 月 22 日</p>
+  <p class="research-lead">面向未来 Embodied Agent，<br class="desktop-break">评估理解任务、熟练行动与持续协同的能力。</p>
+  <p class="research-abstract">高层认知让 agent 理解目标、记住经验并组织计划；肌肉记忆让它把目标落实为及时、精确、稳定的动作。PhysCo 通过<strong>认知、动作与耦合</strong>三组任务，追问两种能力能否在真实物理反馈中共同支撑任务完成。</p>
+  <div class="research-links"><a href="#motivation">为什么需要 PhysCo ↓</a><a href="#leaderboard">排行榜占位</a><a href="#cases">任务与演示</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a><a href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank" rel="noreferrer">技术报告 ↗</a></div>
   <p class="research-status">任务设计与运控演示 · 15 项任务 · __VIDEO_COUNT__ 段演示及预览 · 模型比较与能力归因待实验验证</p>
   <div class="research-media">__INSIGHT_MEDIA__</div>
 </section>
 
-<section class="section research-section" id="motivation"><p class="section-label">THE QUESTION</p><h2>为什么要在同一任务中考察认知与动作？</h2><p class="article-paragraph">一份正确的订单记忆并不保证食品被抓到；一段成功的抓放，也不能保证机器人正确维护了剩余需求。只记录最终成功或失败，会把目标选择、物理执行与进度更新混在一起。</p><p class="article-paragraph">PhysCo 从机器人操作中的这种依赖出发：历史信息决定物理目标，动作受到时机和接触条件约束，而实际效果又会改变下一步计划。我们希望用具体任务和过程判据，让这些环节能够被分别检查，并在完整流程中联合评价。</p><blockquote class="research-question">当模型知道该做什么，也具备基本操作能力时，<strong>它能否依据真实物理反馈持续完成任务？</strong></blockquote><p class="article-paragraph">这是一条待实验检验的主线。当前工作将它落实为三组任务与诊断设计；模型表现、失败占比及干预效果，需要在后续重复实验中建立。</p></section>
+<section class="section research-section" id="motivation">
+  <p class="section-label">WHY PHYSCO / EMBODIED COMPETENCE</p><h2>从单个操作技能，走向能够持续完成任务的 agent。</h2>
+  <p class="article-paragraph">面向未来，具身智能体需要在目标变化、信息不完整和物理结果不确定的条件下完成任务。一次抓取是否成功，只回答了其中一小部分：它还需要理解为什么抓、记住此前发生了什么、判断什么时候该换一种做法，并在连续执行中保持这些判断有效。</p>
+  <p class="article-paragraph">RoboDojo 的研究动机指出，短程或技能覆盖较窄、操作模式相似的任务，难以全面刻画通用操作策略。PhysCo 沿着能力评测这一问题进一步聚焦：<strong>当任务同时需要高层认知与熟练动作时，分别表现出的能力能否在同一条物理任务链中协同工作？</strong><a class="reference-link" href="https://robodojo-benchmark.com/" target="_blank" rel="noreferrer">[RoboDojo]</a></p>
+  <div class="capability-pair"><article><p class="section-label">HIGH-LEVEL COGNITION</p><h3>高层认知：理解情境，组织行动。</h3><p>把观察与历史转化为任务状态，维护身份、数量、规则与关系；据此决定对象、顺序、阶段前提和剩余目标。当条件改变时，重新判断计划是否仍然成立。</p><p class="capability-question">此刻应该做什么，为什么，接下来如何推进？</p></article><article><p class="section-label">MOTOR SKILLS / MUSCLE MEMORY</p><h3>肌肉记忆：把意图变成熟练动作。</h3><p>将学习或练习形成的感知—动作技能用于抓持、调节、跟踪和接触操作。在不断变化的观测中把握时机、控制误差并保持稳定，使一个抽象目标产生可靠的物理效果。</p><p class="capability-question">怎样及时、精确、稳定地把这一步做成？</p></article></div>
+  <p class="research-note">这里的“肌肉记忆”是习得动作技能的功能性表述，不指定生物机制、显式记忆模块或特定网络架构。动作核心检验技能的行为表现；技能如何习得、保持或迁移，需要另设训练与跨任务实验。</p>
+  <h3 class="subsection-title">两种能力的协同，决定任务能否持续推进。</h3>
+  <p class="article-paragraph">认知给出的目标必须适应物理世界的约束：记住蛋糕上的局部位置，还需随旋转及时更新落点；规划装箱顺序，还需考虑放置后的真实姿态和剩余空间。物理执行也会反向改变认知状态：抓空不应扣减订单，未稳定归位的工具不能被当成已经可用。两者在不同时间尺度上持续交换约束与结果。</p>
+  <blockquote class="research-question">未来的 Embodied Agent，<strong>能否既理解任务、又熟练行动，<br>并让两种能力在执行中保持一致？</strong></blockquote>
+  <p class="article-paragraph">因此，PhysCo 希望提供一幅能力剖面：既看 agent 能否维护正确目标，也看它能否实现物理效果，更看偏差发生后是否正确更新下一步。认知核心、动作核心和耦合套件分别提供观察入口，配合过程记录与受控对照，定位“想错了”“没做到”与“没有按结果更新”的不同问题。</p>
+  <h3 class="subsection-title">可复现的诊断，是走向实际部署的一步。</h3>
+  <p class="article-paragraph">RoboDojo 同时强调仿真与真实世界评测的互补性。对 PhysCo 而言，可控条件有助于固定历史、时限与精度要求，系统检查能力边界；对实际部署的判断仍需真实物理验证。当前页面提供仿真任务素材与评测设计，尚未发布统一的 sim-to-real 对照结果，也不将仿真演示等同于部署可靠性。</p>
+  <p class="research-note">上述是 benchmark 的研究定位与待检验假设。模型比较、失败比例以及耦合是否构成独立瓶颈，均需要重复实验和对照证据。</p>
+</section>
 <section class="section research-section" id="insight" aria-labelledby="insight-title">
-  <div class="section-head"><div><p class="section-label">01 / CORE INSIGHTS</p><h2 id="insight-title">理解目标、实现目标、确认完成，<br>是三个不同的问题。</h2></div></div>
+  <div class="section-head"><div><p class="section-label">01 / CORE INSIGHTS</p><h2 id="insight-title">两种能力，一个持续闭环。<br>三个可检验的研究问题。</h2></div></div>
   <p class="section-intro">PhysCo 的设计出发点：<strong>单项认知能力和单项动作能力，能否解释它们在完整任务中的联合表现？</strong>我们用三个可检验的观点组织任务。它们是待验证的研究假设；演示用于说明任务机制。</p>
 
   <article class="research-point" id="insight-goal"><div class="point-number">01<span>REASON</span></div><div class="point-body"><h3>高层：历史与规则决定此刻的目标。</h3><p class="point-thesis">当关键线索已经离场，机器人仍需知道该选谁、放哪里、按什么顺序做。</p><p>高层认知需要维护与动作有关的任务状态：已见身份、累计需求、空间绑定、控制规则和事件顺序。这些信息必须最终落实到对象、位置、约束与剩余目标，才能成为可评价的行为。</p><div class="point-example"><strong>例：订单配餐</strong><p>新增订单改变“应该放多少”；真实投放改变“已经完成多少”。这两份记录需要分别维护，剩余需求由二者共同决定。</p><a href="#case-P">P · 查看增量订单任务 →</a></div>
 __POINT_DEMO_P__
 <p class="point-test"><b>怎样检验</b>记录目标与顺序是否正确；在物理条件固定时改变历史负担。接口允许时，以可靠执行器辅助检查认知决策，避免把抓取失败直接归为记忆错误。</p></div></article>
 
-  <article class="research-point" id="insight-action"><div class="point-number">02<span>ACT</span></div><div class="point-body"><h3>低层：正确目标必须满足真实的时间与接触约束。</h3><p class="point-thesis">知道该抓哪个物体，还需要及时抓到；知道目标读数，还需要松手后仍然达标。</p><p>动作侧关注目标能否在动态窗口和精度要求下实现。传送带持续运动，动作可能因时延错过窗口；旋钮在松手后可能偏离目标；描线只有笔尖实际接触才留下墨迹。评价必须落到物体与环境的真实状态。</p><div class="point-example"><strong>例：调节与描线</strong><p>PR1/PR2 检查释放后读数是否稳定，PR3 检查实际墨迹的连续性与偏离。动作命令结束，不能直接作为物理成功的判据。</p><a href="#case-PR3">PR3 · 查看接触描线任务 →</a></div>
+  <article class="research-point" id="insight-action"><div class="point-number">02<span>ACT</span></div><div class="point-body"><h3>肌肉记忆：熟练动作如何应对时间与接触约束？</h3><p class="point-thesis">知道该抓哪个物体，还需要及时抓到；知道目标读数，还需要松手后仍然达标。</p><p>动作侧关注技能能否在动态窗口和精度要求下实现。传送带持续运动，动作可能因时延错过窗口；旋钮在松手后可能偏离目标；描线只有笔尖实际接触才留下墨迹。评价必须落到物体与环境的真实状态，并说明被测策略获得了哪些控制器与工具支持。</p><div class="point-example"><strong>例：调节与描线</strong><p>PR1/PR2 检查释放后读数是否稳定，PR3 检查实际墨迹的连续性与偏离。动作命令结束，不能直接作为物理成功的判据。</p><a href="#case-PR3">PR3 · 查看接触描线任务 →</a></div>
 __POINT_DEMO_PR3__
 <p class="point-test"><b>怎样检验</b>在目标明确的条件下记录物理残差、有效接触和响应时延。动态任务说明推理时环境是否继续推进；有效交互频率与控制器内部步频分别报告。</p></div></article>
 
