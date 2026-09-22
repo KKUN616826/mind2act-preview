@@ -1,4 +1,8 @@
-# PhysCo Benchmark Showcase
+# MindActWorld Benchmark Showcase
+
+**Evaluating Reasoning–Acting Coordination in Robotic Manipulation**
+
+研究主线：计划如何适应物理约束，前一步的实际结果如何改变后一步。展示名称为 MindActWorld，配套方法拟名 MindAct；仓库地址、兼容文件名与任务 ID 保持不变。
 
 打开 `index.html` 即可浏览项目介绍、15 项任务与 37 段演示及预览、2 张场景图。请保持 media/、docs/ 和 data/ 的相对位置。
 

@@ -1,4 +1,4 @@
-# PhysCo 排行榜占位与发布约定
+# MindActWorld 排行榜占位与发布约定
 
 截至 2026-09-22，所有模型均为**计划参评、尚未测量**。页面不提供真实名次或模型成绩，列表顺序没有性能含义。
 
@@ -16,9 +16,9 @@
 
 ## Coding Agent
 
-候选模型与参考 harness 来自 [RLE-Bench 公开排行榜数据](https://rle-bench.github.io/assets/data/leaderboard.json)，读取日期为 2026-09-22。仅借用候选名单与配置线索，不移植分数、成本或运行记录。以下按名称排序；PhysCo 最终配置尚待确认。
+候选模型与参考 harness 来自 [RLE-Bench 公开排行榜数据](https://rle-bench.github.io/assets/data/leaderboard.json)，读取日期为 2026-09-22。仅借用候选名单与配置线索，不移植分数、成本或运行记录。以下按名称排序；MindActWorld 最终配置尚待确认。
 
-| 候选模型 | RLE-Bench 中的参考 Harness | PhysCo 状态 |
+| 候选模型 | RLE-Bench 中的参考 Harness | MindActWorld 状态 |
 |---|---|---|
 | Claude Opus 4.8 | Claude Code | 待评测 |
 | Claude Opus 5 | Claude Code | 待评测 |
@@ -30,11 +30,11 @@
 | GPT-5.6 Terra | Codex | 待评测 |
 | GPT-6 Astra | Codex | 待评测 |
 
-参考 harness 不能替代 PhysCo 中所用工具、控制器、权限和预算的具体配置。动作成绩包含执行接口的贡献，不等于基础模型自身习得了动作技能。
+参考 harness 不能替代 MindActWorld 中所用工具、控制器、权限和预算的具体配置。动作成绩包含执行接口的贡献，不等于基础模型自身习得了动作技能。
 
 ## 三个视图
 
-1. **能力概览**：预留名次、综合分、认知核心、动作核心和耦合套件结果。
+1. **能力概览**：预留名次、综合分、任务级推理（Task-Level Reasoning）、约束感知执行（Constraint-Aware Execution）和自适应协同（Adaptive Reasoning–Acting Coordination）结果。
 2. **逐任务结果**：覆盖 E/P/S/F/M、FR1/FR2/PR1/PR2/PR3、CP01–CP05，列标题可跳转到任务定义。
 3. **运行与成本**：预留回合数、端到端时延、任务运行时长、API 成本。API、GPU 与仿真成本须分开报告；不适用项与缺失项应明确区别。
 

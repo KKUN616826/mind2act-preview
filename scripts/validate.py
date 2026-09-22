@@ -27,10 +27,16 @@ class Page(HTMLParser):
 
 def main():
     records = json.loads((ROOT/'data/showcase-cases.json').read_text())
-    page = Page(); page.feed((ROOT/'index.html').read_text())
+    content = (ROOT/'index.html').read_text()
+    page = Page(); page.feed(content)
+    subtitle = 'Evaluating Reasoning–Acting Coordination in Robotic Manipulation'
+    assert subtitle in content and subtitle in (ROOT/'docs/PhysCo_Showcase.md').read_text()
+    assert '<h1 id="project-title">MindActWorld</h1>' in content
+    for stale in ['肌肉记忆', 'MUSCLE MEMORY', 'Cognitive–Motor Coupling', 'Cognitive Core', 'Motor Core', 'Coupling Suite', '>PhysCo<']:
+        assert stale not in content, 'Outdated public narrative: ' + stale
     assert json.loads(page.payload) == records, 'HTML data differs from JSON'
     assert len(page.ids) == len(set(page.ids)), 'Duplicate HTML IDs'
-    for section in ['overview', 'motivation', 'insight', 'insight-goal', 'insight-action', 'insight-feedback', 'design', 'leaderboard', 'cases', 'evaluation', 'resources']:
+    for section in ['overview', 'motivation', 'insight', 'insight-goal', 'insight-action', 'insight-feedback', 'design', 'mindact', 'leaderboard', 'cases', 'evaluation', 'resources']:
         assert section in page.ids, 'Missing research section: ' + section
     for link in page.links:
         url = urlsplit(link)
@@ -53,6 +59,11 @@ def main():
     print('PASS: embedded data, all HTML links, case documents, evidence and media coverage')
     print(dict(Counter(a['kind'] for a in media)))
     print('PASS: leaderboard roster, 15-task coverage, null scores/ranks/costs and pending status')
+    for dimension in ['Task-Level Reasoning', 'Constraint-Aware Execution', 'Adaptive Reasoning–Acting Coordination']:
+        assert dimension in content, 'Missing named dimension: ' + dimension
+    assert 'Closed-Loop Coordination' not in content
+    assert '闭环协同' not in content
+    print('PASS: approved subtitle, MindActWorld branding and three named dimensions')
 
 if __name__ == '__main__':
     main()
