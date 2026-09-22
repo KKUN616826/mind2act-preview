@@ -34,7 +34,7 @@
 
 ## 三个视图
 
-1. **能力概览**：预留名次、综合分、任务级推理（Task-Level Reasoning）、约束感知执行（Constraint-Aware Execution）和自适应协同（Adaptive Reasoning–Acting Coordination）结果。
+1. **能力概览**：预留名次、综合分、任务级推理（Task-Level Reasoning）、约束感知执行（Constraint-Aware Execution）和推理—执行协同（Reasoning–Acting Coordination）结果。
 2. **逐任务结果**：覆盖 E/P/S/F/M、FR1/FR2/PR1/PR2/PR3、CP01–CP05，列标题可跳转到任务定义。
 3. **运行与成本**：预留回合数、端到端时延、任务运行时长、API 成本。API、GPU 与仿真成本须分开报告；不适用项与缺失项应明确区别。
 

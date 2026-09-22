@@ -59,8 +59,11 @@ def main():
     print('PASS: embedded data, all HTML links, case documents, evidence and media coverage')
     print(dict(Counter(a['kind'] for a in media)))
     print('PASS: leaderboard roster, 15-task coverage, null scores/ranks/costs and pending status')
-    for dimension in ['Task-Level Reasoning', 'Constraint-Aware Execution', 'Adaptive Reasoning–Acting Coordination']:
+    for dimension in ['Task-Level Reasoning', 'Constraint-Aware Execution', 'Reasoning–Acting Coordination']:
         assert dimension in content, 'Missing named dimension: ' + dimension
+    assert 'Adaptive Coordination' not in content
+    assert 'Adaptive Reasoning–Acting Coordination' not in content
+    assert '真实任务同时要求 agent' not in content
     assert 'Closed-Loop Coordination' not in content
     assert '闭环协同' not in content
     print('PASS: approved subtitle, MindActWorld branding and three named dimensions')

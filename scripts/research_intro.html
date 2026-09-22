@@ -4,7 +4,7 @@
   <p class="research-subtitle" lang="en">Evaluating Reasoning–Acting Coordination in Robotic Manipulation</p>
   <p class="article-meta">研究设计说明 · 更新于 2026 年 9 月 23 日</p>
   <p class="research-lead">让推理适应执行，让执行结果改变下一步。</p>
-  <p class="research-abstract">真实任务同时要求 agent 理解目标、组织多阶段行动，并在时间与接触约束下精确执行。MindActWorld 通过 <strong>任务级推理、约束感知执行与自适应协同</strong> 三组任务，检验两种能力能否依据实际物理结果持续协同。</p>
+  <p class="research-abstract">真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。MindActWorld 面向 <strong>VLA/WAM、Coding Agent 与混合架构</strong>，分别评估任务级推理、约束感知执行，以及两者在实际物理反馈中的协同表现。</p>
   <div class="research-links"><a href="#motivation">核心问题 ↓</a><a href="#insight-feedback">什么是协同</a><a href="#leaderboard">排行榜占位</a><a href="#cases">完整任务库</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a></div>
   <p class="research-status">任务设计与运控演示 · 15 项任务 · __VIDEO_COUNT__ 段演示及预览 · 模型比较与能力归因待实验验证</p>
   <div class="research-media">__INSIGHT_MEDIA__</div>
@@ -13,7 +13,7 @@
 <section class="section research-section" id="motivation">
   <p class="section-label">THE REASONING–ACTING GAP</p>
   <h2>能规划、能操作，是否就能完成整个任务？</h2>
-  <p class="article-paragraph">面向真实任务的具身智能体，需要同时具备两种能力：理解目标、利用历史并组织多阶段行动的推理能力，以及在时间、几何和接触约束下可靠完成操作的执行能力。分别具备这两种能力，是否足以保证完整任务成功，仍需要直接检验。</p>
+  <p class="article-paragraph">面向真实任务的机器人操作模型与系统，需要同时具备两种能力：理解目标、利用历史并组织多阶段行动的推理能力，以及在时间、几何和接触约束下可靠完成操作的执行能力。分别具备这两种能力，是否足以保证完整任务成功，仍需要直接检验。</p>
   <p class="article-paragraph">如果规划任务的执行过程被可靠的原子技能包办，就难以观察规划如何应对动作偏差；如果操作测试只要求完成一个短步骤，就难以观察执行结果怎样影响后续计划。两种评测各有价值，完整任务还需要检查它们之间的依赖。</p>
   <div class="capability-pair"><article><p class="section-label">REASONING</p><h3>理解情境，组织行动。</h3><p>结合观察、历史与规则，选择目标、安排顺序、判断阶段前提，并在条件变化时修订计划。记忆是支持这些判断的一种能力，研究范围也包括空间推理、任务拆解和进度维护。</p><p class="capability-question">当前应该做什么，哪些前提必须成立？</p></article><article><p class="section-label">ACTING</p><h3>满足约束，实现物理效果。</h3><p>把目标转化为及时、精确、稳定的操作：在窗口内抓取移动物体，沿参考线维持接触，或将读数调到容差内。完成与否由实际效果决定。</p><p class="capability-question">这一步是否在时间与精度要求内真正完成？</p></article></div>
   <blockquote class="research-question">从推理到执行的关键问题是：<strong>计划能否适应物理约束，<br>执行结果能否正确改变后续计划？</strong></blockquote>
@@ -22,13 +22,13 @@
 </section>
 
 <section class="section research-section" id="insight" aria-labelledby="insight-title">
-  <div class="section-head"><div><p class="section-label">01 / THREE EVALUATION DIMENSIONS</p><h2 id="insight-title">Task-Level Reasoning · Constraint-Aware Execution<br>Adaptive Reasoning–Acting Coordination</h2></div></div>
-  <p class="section-intro">三个评测维度分别对应高层推理、低层执行与两者的自适应协同。Mind 指任务理解与规划，Act 指满足物理约束的行动；World 是两者共同作用并获得反馈的环境，并非额外的“世界模型”能力主张。</p>
+  <div class="section-head"><div><p class="section-label">01 / THREE EVALUATION DIMENSIONS</p><h2 id="insight-title">Task-Level Reasoning · Constraint-Aware Execution<br>Reasoning–Acting Coordination</h2></div></div>
+  <p class="section-intro">三个评测维度分别对应高层推理、低层执行与两者的推理—执行协同。Mind 指任务理解与规划，Act 指满足物理约束的行动；World 是两者共同作用并获得反馈的环境，并非额外的“世界模型”能力主张。</p>
   <article class="research-point" id="insight-goal"><div class="point-number">01<span>MIND</span></div><div class="point-body">
     <p class="dimension-name" lang="en">Task-Level Reasoning</p><h3>任务级推理：从情境中确定目标与计划。</h3>
     <p class="point-thesis">高层推理把指令、观察、历史和规则转化为当前可执行的目标。</p>
     <p>它需要识别任务对象、建立关系、安排顺序并维护阶段前提。记忆提供必要的历史依据，规划决定如何组织行动；环境状态变化后，还需判断原计划是否继续成立。</p>
-    <div class="point-example"><strong>P · 订单配餐</strong><p>新增订单改变累计需求，实际投放改变已完成量。Agent 要据此选择当前食材与容器，并维护剩余需求，避免遗漏和重复。</p><a href="#case-P">查看任务与判据 →</a></div>
+    <div class="point-example"><strong>P · 订单配餐</strong><p>新增订单改变累计需求，实际投放改变已完成量。被测系统要据此选择当前食材与容器，并维护剩余需求，避免遗漏和重复。</p><a href="#case-P">查看任务与判据 →</a></div>
     __POINT_DEMO_P__
     <p class="point-test"><b>可检验证据</b>对象与目标选择、顺序及前置条件是否正确；需求和进度是否一致。接口允许时，用可靠执行辅助检查原生决策，披露观察权限与预算。</p>
   </div></article>
@@ -41,13 +41,13 @@
     <p class="point-test"><b>可检验证据</b>实际读数或轨迹残差、有效接触、释放稳定性与端到端响应时延。正确子目标辅助的对照只适用于可替换接口，结果包含工具和控制器的贡献。</p>
   </div></article>
   <article class="research-point" id="insight-feedback"><div class="point-number">03<span>COORDINATION</span></div><div class="point-body">
-    <p class="dimension-name" lang="en">Adaptive Reasoning–Acting Coordination</p><h3>自适应协同：让推理与执行随真实结果共同调整。</h3>
-    <p class="point-thesis">当前目标、操作时机与后续计划，应随实际执行结果调整。</p>
+    <p class="dimension-name" lang="en">Reasoning–Acting Coordination</p><h3>推理—执行协同：让计划与物理过程相互约束。</h3>
+    <p class="point-thesis">推理为执行确定目标与约束，物理结果为后续推理提供依据。</p>
     <p>高层给出的计划约束执行，真实执行结果又反向改变剩余目标与阶段前提。独立子任务的简单串联难以检验这种依赖；需要明确执行后的哪一个状态改变了后续正确行为。</p>
     <div class="point-example"><strong>CP02 · 旋转蛋糕装饰</strong><p>记忆给出马卡龙与蛋糕局部位置的绑定，旋转决定当前落点与时机；真实落位才推进装饰任务。Hard 阶段发出停止指令后，还必须确认转盘实际停稳才能盖罩。</p><a href="#case-CP02">查看阶段依赖 →</a></div>
     __POINT_DEMO_CP02__
     <div class="table-wrap"><table><caption>从物理结果到后续决策</caption><thead><tr><th>实际结果</th><th>它改变的下一步</th><th>检查点</th></tr></thead><tbody><tr><td>食品是否稳定入盘</td><td>订单剩余需求与食品选择</td><td>抓空是否被错误记为完成</td></tr><tr><td>装饰是否落位、转盘是否停稳</td><td>剩余装饰与盖罩前提</td><td>阶段推进是否依据实际状态</td></tr></tbody></table></div>
-    <p class="research-note">Adaptive 指单次任务内依据实际状态调整行为，不预设在线训练、参数更新或跨任务迁移。它要求后续行为响应结果，而不只是循环读取反馈。</p>
+    <p class="research-note">这里的 Coordination 指任务层面的双向依赖：执行必须满足计划中的约束，后续目标与计划必须反映实际效果。不要求模型具有独立的推理、执行或协调模块。</p>
     <p class="point-test"><b>可检验证据</b>对齐目标、效果和后续行为，记录错误推进、重复操作与恢复成本。反馈干预需要可实施的对照，完整任务得分下降本身不能证明独立的协同瓶颈。</p>
   </div></article>
   <div class="feedback-study"><div><p class="section-label">ONE ACTION, TWO OUTCOMES</p><h3>一次抓取的结果，怎样改变下一步？</h3><p>以 CP01 配餐为例，同样的目标食品可能抓空，也可能稳定入盘。剩余需求应随真实结果更新。</p><p class="muted">机制示意；不是实际模型失败记录。</p></div><div><div class="effect-choice" role="group" aria-label="选择示例执行结果"><button data-effect="miss" aria-pressed="true">抓空</button><button data-effect="deposited" aria-pressed="false">稳定入盘</button></div><div id="effectResult" class="effect-result" role="status" aria-live="polite"><b>目标仍待收取</b><span>保持该订单的剩余需求，检查目标是否仍可抓取；未入盘不能记为完成。</span></div><a href="#case-CP01">查看任务定义 →</a></div></div>
@@ -56,7 +56,7 @@
 <section class="section research-section" id="design" aria-labelledby="design-title">
   <div class="section-head"><div><p class="section-label">02 / BENCHMARK DESIGN</p><h2 id="design-title">两种能力，三组任务，<br>四个压力维度。</h2></div></div>
   <p class="section-intro">任务从完整流程的依赖出发，分别突出推理、执行与协同要求。当前任务库保留 15 项定义和既有素材；各任务的实现与标定状态在详情中说明。</p>
-  <div class="design-columns"><article><p class="section-label">TASK-LEVEL REASONING · 5</p><h3>任务级推理</h3><p>E / P / S / F / M</p><p>身份、需求、空间关系、未知映射与路线顺序如何决定当前目标。</p><a href="#case-E">查看跨批识别 →</a></article><article><p class="section-label">CONSTRAINT-AWARE EXECUTION · 5</p><h3>约束感知执行</h3><p>FR1 / FR2 / PR1 / PR2 / PR3</p><p>动态取件、限时响应、读数调节和接触描线如何满足物理约束。</p><a href="#case-FR2">查看限时响应 →</a></article><article><p class="section-label">ADAPTIVE COORDINATION · 5</p><h3>自适应协同</h3><p>CP01–CP05</p><p>真实执行结果如何约束剩余目标、操作顺序和阶段推进。</p><a href="#case-CP02">查看旋转蛋糕装饰 →</a></article></div>
+  <div class="design-columns"><article><p class="section-label">TASK-LEVEL REASONING · 5</p><h3>任务级推理</h3><p>E / P / S / F / M</p><p>身份、需求、空间关系、未知映射与路线顺序如何决定当前目标。</p><a href="#case-E">查看跨批识别 →</a></article><article><p class="section-label">CONSTRAINT-AWARE EXECUTION · 5</p><h3>约束感知执行</h3><p>FR1 / FR2 / PR1 / PR2 / PR3</p><p>动态取件、限时响应、读数调节和接触描线如何满足物理约束。</p><a href="#case-FR2">查看限时响应 →</a></article><article><p class="section-label">REASONING–ACTING COORDINATION · 5</p><h3>推理—执行协同</h3><p>CP01–CP05</p><p>真实执行结果如何约束剩余目标、操作顺序和阶段推进。</p><a href="#case-CP02">查看旋转蛋糕装饰 →</a></article></div>
   <h3 class="subsection-title">分层难度：观察能力在哪里失效。</h3><p class="article-paragraph">对同一任务逐级增加历史负担、阶段依赖、精度或动态窗口压力，比较成功率、物理残差和恢复成本。可控难度加压是贯穿三个维度的评测方法，不作为第四种能力。CP02 当前档位同时改变数量、转速和动作链，单因素归因还需额外的控制变量切片。</p>
   <h3 class="subsection-title">四个压力变量支撑三个评测维度。</h3>
   <div class="table-wrap"><table><thead><tr><th>压力维度</th><th>具体检查什么</th><th>证据边界</th></tr></thead><tbody>

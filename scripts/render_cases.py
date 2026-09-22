@@ -3,7 +3,7 @@
 import html,json,re,hashlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-SUITES={'cognitive':('任务级推理','Task-Level Reasoning'),'motor':('约束感知执行','Constraint-Aware Execution'),'coupling':('自适应协同','Adaptive Coordination')}
+SUITES={'cognitive':('任务级推理','Task-Level Reasoning'),'motor':('约束感知执行','Constraint-Aware Execution'),'coupling':('推理—执行协同','Reasoning–Acting Coordination')}
 FEATURED={'CP02':'Hard','CP05':'Medium','PR3':'Hard'}
 e=lambda x:html.escape(str(x),quote=True)
 def ul(values):return '<ul>'+''.join('<li>'+e(v)+'</li>' for v in values)+'</ul>'

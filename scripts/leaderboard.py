@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 esc = lambda value: html.escape(str(value), quote=True)
-METRICS = [('overall', '综合分'), ('cognitive', '任务级推理'), ('motor', '约束感知执行'), ('coupling', '自适应协同')]
+METRICS = [('overall', '综合分'), ('cognitive', '任务级推理'), ('motor', '约束感知执行'), ('coupling', '推理—执行协同')]
 
 def load(records):
     data = json.loads((ROOT/'data/leaderboard.json').read_text())
