@@ -31,7 +31,7 @@ def main():
     page = Page(); page.feed(content)
     subtitle = 'Evaluating Reasoning–Acting Coordination in Robotic Manipulation'
     assert subtitle in content and subtitle in (ROOT/'docs/PhysCo_Showcase.md').read_text()
-    assert '<h1 id="project-title">MindActWorld</h1>' in content
+    assert '<h1 id="project-title">Mind2Act World</h1>' in content
     for stale in ['肌肉记忆', 'MUSCLE MEMORY', 'Cognitive–Motor Coupling', 'Cognitive Core', 'Motor Core', 'Coupling Suite', '>PhysCo<']:
         assert stale not in content, 'Outdated public narrative: ' + stale
     assert json.loads(page.payload) == records, 'HTML data differs from JSON'
@@ -68,7 +68,7 @@ def main():
     assert '闭环协同' not in content
     assert 'Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation' in content
     assert 'href="mindaccord/index.html"' in content
-    print('PASS: approved subtitle, MindActWorld branding and three named dimensions')
+    print('PASS: approved subtitle, Mind2Act World branding and three named dimensions')
 
 if __name__ == '__main__':
     main()

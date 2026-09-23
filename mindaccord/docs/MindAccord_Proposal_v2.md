@@ -1,4 +1,4 @@
-# MindAccord · Proposal v2
+# Mind2Act Harness · Proposal v2
 
 **Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation**
 

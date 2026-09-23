@@ -1,5 +1,7 @@
 {
-  "model": "MindAccord",
+  "project": "Mind2Act",
+  "benchmark": "Mind2Act World",
+  "model": "Mind2Act Harness",
   "subtitle": "Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation",
   "status": "proposal",
   "proposal_version": 2,

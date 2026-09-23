@@ -1,10 +1,10 @@
 <section class="research-opening" id="overview" aria-labelledby="project-title">
-  <p class="eyebrow">Research blog / Benchmark overview</p>
-  <h1 id="project-title">MindActWorld</h1>
+  <p class="eyebrow">Mind2Act / Benchmark</p>
+  <h1 id="project-title">Mind2Act World</h1>
   <p class="research-subtitle" lang="en">Evaluating Reasoning–Acting Coordination in Robotic Manipulation</p>
   <p class="article-meta">研究设计说明 · 更新于 2026 年 9 月 23 日</p>
   <p class="research-lead">让推理适应执行，让执行结果改变下一步。</p>
-  <p class="research-abstract">真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。MindActWorld 面向 <strong>VLA/WAM、Coding Agent 与混合架构</strong>，分别评估任务级推理、约束感知执行，以及两者在实际物理反馈中的协同表现。</p>
+  <p class="research-abstract">真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。Mind2Act World 面向 <strong>VLA/WAM、Coding Agent 与混合架构</strong>，分别评估任务级推理、约束感知执行，以及两者在实际物理反馈中的协同表现。</p>
   <div class="research-links"><a href="#motivation">核心问题 ↓</a><a href="#insight-feedback">什么是协同</a><a href="#leaderboard">排行榜占位</a><a href="#cases">完整任务库</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a></div>
   <p class="research-status">任务设计与运控演示 · 15 项任务 · __VIDEO_COUNT__ 段演示及预览 · 模型比较与能力归因待实验验证</p>
   <div class="research-media">__INSIGHT_MEDIA__</div>
@@ -17,13 +17,13 @@
   <p class="article-paragraph">如果规划任务的执行过程被可靠的原子技能包办，就难以观察规划如何应对动作偏差；如果操作测试只要求完成一个短步骤，就难以观察执行结果怎样影响后续计划。两种评测各有价值，完整任务还需要检查它们之间的依赖。</p>
   <div class="capability-pair"><article><p class="section-label">REASONING</p><h3>理解情境，组织行动。</h3><p>结合观察、历史与规则，选择目标、安排顺序、判断阶段前提，并在条件变化时修订计划。记忆是支持这些判断的一种能力，研究范围也包括空间推理、任务拆解和进度维护。</p><p class="capability-question">当前应该做什么，哪些前提必须成立？</p></article><article><p class="section-label">ACTING</p><h3>满足约束，实现物理效果。</h3><p>把目标转化为及时、精确、稳定的操作：在窗口内抓取移动物体，沿参考线维持接触，或将读数调到容差内。完成与否由实际效果决定。</p><p class="capability-question">这一步是否在时间与精度要求内真正完成？</p></article></div>
   <blockquote class="research-question">从推理到执行的关键问题是：<strong>计划能否适应物理约束，<br>执行结果能否正确改变后续计划？</strong></blockquote>
-  <p class="article-paragraph">MindActWorld 将这种双向依赖作为评测中心。推理决定当前操作的对象、目标、约束与时机；真实执行结果决定哪些目标仍待完成、哪些前提仍然成立，以及下一步是否可行。长程、记忆、精度和动态响应在同一流程中共同施加压力。</p>
+  <p class="article-paragraph">Mind2Act World 将这种双向依赖作为评测中心。推理决定当前操作的对象、目标、约束与时机；真实执行结果决定哪些目标仍待完成、哪些前提仍然成立，以及下一步是否可行。长程、记忆、精度和动态响应在同一流程中共同施加压力。</p>
   <p class="research-note">Reasoning 与 Acting 是评测视角，不要求模型采用显式双层架构。现阶段提供任务定义、演示和诊断设计；是否存在额外的协同瓶颈，需要由实验建立。</p>
 </section>
 
 <section class="section research-section" id="insight" aria-labelledby="insight-title">
   <div class="section-head"><div><p class="section-label">01 / THREE EVALUATION DIMENSIONS</p><h2 id="insight-title">Task-Level Reasoning · Constraint-Aware Execution<br>Reasoning–Acting Coordination</h2></div></div>
-  <p class="section-intro">三个评测维度分别对应高层推理、低层执行与两者的推理—执行协同。Mind 指任务理解与规划，Act 指满足物理约束的行动；World 是两者共同作用并获得反馈的环境，并非额外的“世界模型”能力主张。</p>
+  <p class="section-intro">三个评测维度分别对应高层推理、低层执行与两者的推理—执行协同。Mind2Act 是推理与执行协同的项目品牌；World 是评测任务集合，Harness 是配套模型方案，并非额外的“世界模型”能力主张。</p>
   <article class="research-point" id="insight-goal"><div class="point-number">01<span>MIND</span></div><div class="point-body">
     <p class="dimension-name" lang="en">Task-Level Reasoning</p><h3>任务级推理：从情境中确定目标与计划。</h3>
     <p class="point-thesis">高层推理把指令、观察、历史和规则转化为当前可执行的目标。</p>

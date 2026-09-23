@@ -21,7 +21,7 @@ def main():
         (ROOT / 'docs/cases' / (c['id'] + '.md')).write_text(case_md(c, '../../'))
     intro = (ROOT / 'docs/PhysCo_Showcase.md').read_text()
     (ROOT / 'docs/PhysCo_Cases.md').write_text(intro + '\n\n---\n\n' + '\n\n---\n\n'.join(case_md(c, '../') for c in records))
-    media = ['# MindActWorld 演示素材索引', '', f'{videos} 段视频、{images} 张场景图。', '']
+    media = ['# Mind2Act World 演示素材索引', '', f'{videos} 段视频、{images} 张场景图。', '']
     for c in records:
         media += ['## ' + c['id'] + ' · ' + c['title'], '']
         for a in c['media']:

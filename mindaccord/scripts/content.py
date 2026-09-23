@@ -1,5 +1,5 @@
 """Astra–Jev proposal content. All new integration claims are explicitly unmeasured."""
-MODEL_NAME = "MindAccord"
+MODEL_NAME = "Mind2Act Harness"
 MODEL_SUBTITLE = "Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation"
 COMMIT = "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41"
 REPO = "https://github.com/MuQY1818/mem-planner-harness"

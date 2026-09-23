@@ -1,5 +1,5 @@
 {
-  "title": "MindAccord: proposed Astra–Jev architecture",
+  "title": "Mind2Act Harness: proposed Astra–Jev architecture",
   "canvas": {
     "width": 1480,
     "height": 760
@@ -162,7 +162,7 @@
   ],
   "labels": [
     {
-      "text": "MindAccord · Cost-aware Astra–Jev coordination",
+      "text": "Mind2Act Harness · Cost-aware Astra–Jev coordination",
       "x": 740,
       "y": 60,
       "font_size": 32,

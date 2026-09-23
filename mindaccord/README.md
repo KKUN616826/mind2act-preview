@@ -1,8 +1,8 @@
-# MindAccord · Astra–Jev Proposal v2
+# Mind2Act Harness · Astra–Jev Proposal v2
 
 **Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation**
 
-[模型网站](index.html) · [Proposal v2](docs/MindAccord_Proposal_v2.md) · [MindActWorld](../index.html)
+[模型网站](index.html) · [Proposal v2](docs/MindAccord_Proposal_v2.md) · [Mind2Act World](../index.html)
 
 新版聚焦 GPT-6 Astra 的子目标拆解与感知调度、结构化交接、Jev 候选选择 harness、有界工作记忆与成本路由。当前为设计 proposal，不是已完成的 Astra–Jev 系统；未运行新模型调用或机器人实验。RSI 不在当前范围内。
 

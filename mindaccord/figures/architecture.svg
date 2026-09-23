@@ -86,7 +86,7 @@
   <rect x="40.0" y="540.0" width="300.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
   <text x="190.0" y="585.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Event + cost router</text>
   <text x="190.0" y="608.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Reuse / refresh / escalate</text>
-  <text x="740.0" y="60.0" font-size="32" fill="#193D3A" text-anchor="middle">MindAccord · Cost-aware Astra–Jev coordination</text>
+  <text x="740.0" y="60.0" font-size="32" fill="#193D3A" text-anchor="middle">Mind2Act Harness · Cost-aware Astra–Jev coordination</text>
   <text x="740.0" y="105.0" font-size="20" fill="#193D3A" text-anchor="middle">Proposal: interfaces, refresh rules and costs remain to be validated</text>
   <text x="740.0" y="705.0" font-size="21" fill="#193D3A" text-anchor="middle">Jev selects complete candidates; perception and control remain separate.</text>
 </svg>

@@ -1,4 +1,4 @@
-# MindActWorld 演示素材索引
+# Mind2Act World 演示素材索引
 
 37 段视频、2 张场景图。
 

@@ -12,7 +12,7 @@
       "path": "figures/architecture.svg",
       "title": "Astra–Jev：带证据的结构化交接",
       "description": "目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。",
-      "sha256": "64d54e940f042c26d471131040c97ff0fdd2a7c78538e3032c32da54a3060b31"
+      "sha256": "e17c52c1748975d99e0cdb2863d54b769648b238e81ab405a96f9fe59b2fbe90"
     },
     {
       "id": "memory",

@@ -1,14 +1,14 @@
-# MindActWorld
+# Mind2Act World
 
 **Evaluating Reasoning–Acting Coordination in Robotic Manipulation**
 
 让推理适应执行，让执行结果改变下一步。
 
-MindActWorld 为 benchmark 名称，配套方法名为 MindAccord。当前任务与素材为既有 15 项定义、37 段演示及预览、2 张场景图。本文是研究设计说明，不包含模型实测结论。
+Mind2Act World 为 benchmark 名称，配套方法名为 Mind2Act Harness。当前任务与素材为既有 15 项定义、37 段演示及预览、2 张场景图。本文是研究设计说明，不包含模型实测结论。
 
 ## 1. 为什么需要推理—执行协同评测
 
-真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。MindActWorld 面向 VLA/WAM、Coding Agent 与混合架构，评估其推理、执行及二者的协同表现。分别具备推理与执行能力，是否足以保证完整任务成功，仍需要直接检验。
+真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。Mind2Act World 面向 VLA/WAM、Coding Agent 与混合架构，评估其推理、执行及二者的协同表现。分别具备推理与执行能力，是否足以保证完整任务成功，仍需要直接检验。
 
 如果规划测试中的物理执行被可靠原子技能包办，就难以观察计划如何应对动作偏差；如果操作测试只要求完成一个短步骤，就难以观察实际结果对后续计划的影响。这两类评测各有价值，完整任务还需要检查它们之间的依赖。
 
@@ -45,7 +45,7 @@ Coordination 指任务层面的双向依赖：推理为执行确定目标与约�
 
 简单串联独立子任务只会增加长度；动态场景也不自动证明强依赖。需要对齐“目标—实际效果—后续行为”的轨迹，检查错误推进、重复操作与恢复成本。反馈干预可作为诊断方法，不将完整任务成功率下降直接解释为独立协同瓶颈。
 
-MindActWorld 的 Mind 对应任务理解与推理，Act 对应物理执行，World 是两者共同作用并接收反馈的环境。这一名称不意味着新增了“世界模型”评测维度。
+Mind2Act World 的 Mind 对应任务理解与推理，Act 对应物理执行，World 是两者共同作用并接收反馈的环境。这一名称不意味着新增了“世界模型”评测维度。
 
 ## 3. 三个评测维度与四个压力变量
 
@@ -94,7 +94,7 @@ VLA/WAM 计划参评 hyVLA、dm0.5、g0.5、openwam、pi0.5；Coding Agent 候�
 
 [技术报告 v0.1](PhysCo_Technical_Report_v0.1.pdf) 为早期研究框架，原件保留；当前叙事与任务说明以本页为准。
 
-## 配套方法：MindAccord · Proposal v2
+## 配套方法：Mind2Act Harness · Proposal v2
 
 **Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation**
 

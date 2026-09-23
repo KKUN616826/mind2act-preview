@@ -23,7 +23,7 @@ class Page(HTMLParser):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--static-only',action='store_true',help='Compatibility flag; validation is static.');ap.parse_args()
     data=json.loads((ROOT/'data/model.json').read_text());p=Page();page=(ROOT/'index.html').read_text();p.feed(page)
-    assert data['model']=='MindAccord' and data['status']=='proposal' and data['results'] is None
+    assert data['model']=='Mind2Act Harness' and data['status']=='proposal' and data['results'] is None
     assert data['upstream']['name']=='GPT-6 Astra' and data['downstream']['name']=='Jev'
     assert data['upstream']['api_model_id'] is None and data['downstream']['version'] is None
     assert json.loads(p.payload)==data
