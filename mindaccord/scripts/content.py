@@ -72,9 +72,9 @@ MODULES = [{'id': 'cognitive',
   'label': '局间改进与独立验证',
   'state': '近期实现重点 · 尚未接入 Jev 闭环',
   'inputs': '已结束开发局的合法记录、当前策略版本与改进预算',
-  'outputs': '带来源的经验／策略候选、验证报告与新快照或回退',
-  'body': 'Critic 先根据回执归因，再提出认知或工具使用经验；独立验证后版本化发布，后续扩展受限交接与调度补丁。',
-  'boundary': '每局固定快照；验证／正式测试不回流到改进队列，不修改观察权限、评分器或 Runtime 授权边界。'}]
+ 'outputs': '带来源的经验／策略候选、验证报告与新快照或回退',
+  'body': '动作 RSI 只改进工具使用经验：Runtime 固定提取短 ActionSlice，离线 Critic 分批归因并生成经验卡；在线 Jev 只读少量摘要，详情按需读取，验证后随 PolicySnapshot 发布。',
+  'boundary': 'Jev 不携带完整回放或低层轨迹；每局固定快照，经验按角色／工具／版本兼容性限量注入，不修改观察权限、评分器或 Runtime 授权边界。'}]
 SOURCES = [{'id': 'state',
   'title': 'TypeSafe · State',
   'url': 'https://docs.typesafe.ai/concepts/state',
