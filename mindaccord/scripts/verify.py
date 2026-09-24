@@ -49,8 +49,9 @@ def main():
     for f in data['figures']:
         ET.parse(ROOT/f['path'])
         assert (ROOT/'figures/specs'/ (Path(f['path']).stem+'.json')).is_file()
-    assert len(data['figures'])==3 and len(data['modules'])==8
-    assert 'experience-lifecycle-v2.png' not in page and 'experience' not in [m['id'] for m in data['modules']]
+    assert len(data['figures'])==3 and len(data['modules'])==9
+    assert 'experience-lifecycle-v2.png' not in page
+    assert 'rsi' in p.ids and 'rsi' in [m['id'] for m in data['modules']]
     assert (ROOT/'docs/PhysCo_Model_Architecture.md').read_bytes()==(ROOT/'docs/MindAccord_Proposal_v2.md').read_bytes()
     print('PASS: proposal status, identities, embedded data, local links, 3 SVG specs, memory examples and no fabricated result.')
 if __name__=='__main__':main()

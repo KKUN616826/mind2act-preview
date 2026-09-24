@@ -30,7 +30,7 @@
       "inputs": "任务、合法图像／本体状态、实际回执与待处理事件",
       "outputs": "可见事实、未知项、短期意图与授权修订",
       "body": "形成可复用的任务依据，按生命周期、固定事件或 Jev 升级请求更新；当前仍保留巡检和放置后更新。",
-      "boundary": "按需减少认知介入是待测目标；不代写 Jev 的动作记忆。"
+      "boundary": "按需更新收益待测；在线会话与离线 Critic 分开，Cognitive 不代写 Jev 的局内动作记忆。"
     },
     {
       "id": "tools",
@@ -90,7 +90,7 @@
       "inputs": "Jev 当前可访问的动作回执与当时可见依据",
       "outputs": "固定字段 ActionMemory、索引及显式读取正文",
       "body": "Jev 选择保存、读取或删除；程序记录来源、参数、进度、终态与错误，最多 32 条／32 KiB。",
-      "boundary": "不自动摘要或写入；最近四次交互与 Cognitive 持久会话分开维护。"
+      "boundary": "局内记忆仍由 Jev 主动管理并每局清空；跨局已验证经验属于待接入的 RSI 版本库。"
     },
     {
       "id": "router",
@@ -101,6 +101,16 @@
       "outputs": "等待事件／局部决策／请求 Cognitive／终止",
       "body": "研究可复用的目标与易变化的执行证据如何分工；固定现有混合触发，单独比较按需更新。",
       "boundary": "目标是成功能力、成本和完成时间的取舍，不预设调用更少必然更快。"
+    },
+    {
+      "id": "rsi",
+      "name": "RSI · Critic & Versioned Improvement",
+      "label": "局间改进与独立验证",
+      "state": "近期实现重点 · 尚未接入 Jev 闭环",
+      "inputs": "已结束开发局的合法记录、当前策略版本与改进预算",
+      "outputs": "带来源的经验／策略候选、验证报告与新快照或回退",
+      "body": "Critic 先根据回执归因，再提出认知或工具使用经验；独立验证后版本化发布，后续扩展受限交接与调度补丁。",
+      "boundary": "每局固定快照；验证／正式测试不回流到改进队列，不修改观察权限、评分器或 Runtime 授权边界。"
     }
   ],
   "states": {
@@ -206,7 +216,7 @@
       "id": "baseline",
       "title": "EvoMemHarness · 参考实现快照",
       "url": "https://github.com/MuQY1818/mem-planner-harness/tree/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
-      "description": "授权、会话与执行生命周期的工程基础；当前 Case7 原型在独立工作区。"
+      "description": "授权、执行生命周期及 Record–Critic–经验候选–验证发布的参考基础；当前 Jev RSI 需重新适配。"
     },
     {
       "id": "style",
