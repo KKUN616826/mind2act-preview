@@ -42,28 +42,28 @@
   <path d="M 1106.3,550.0 L 920.0,474.7" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
   <path d="M 920.0,410.0 L 1040.0,410.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
   <rect x="70.0" y="170.0" width="360.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
-  <text x="250.0" y="215.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Pinned task facts</text>
-  <text x="250.0" y="238.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Goals / rules / unfinished work</text>
+  <text x="250.0" y="215.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Current cognitive context</text>
+  <text x="250.0" y="238.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Report / intents / sources</text>
   <rect x="70.0" y="360.0" width="360.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
-  <text x="250.0" y="405.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Recent event window</text>
-  <text x="250.0" y="428.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Receipts / failures / effects</text>
+  <text x="250.0" y="405.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Recent tool interactions</text>
+  <text x="250.0" y="428.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Window: 4 interactions</text>
   <rect x="70.0" y="550.0" width="360.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
-  <text x="250.0" y="595.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Evidence-linked memory text</text>
-  <text x="250.0" y="618.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Relevant past events</text>
+  <text x="250.0" y="595.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Action memory</text>
+  <text x="250.0" y="618.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Jev saves / reads / deletes</text>
   <rect x="600.0" y="340.0" width="320.0" height="140.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
   <text x="760.0" y="394.4" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Typed state compiler</text>
   <text x="760.0" y="417.4" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Provenance / unknowns</text>
   <text x="760.0" y="440.4" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">versions / token budget</text>
   <rect x="1040.0" y="170.0" width="380.0" height="100.0" fill="#EFF4FA" stroke="#426D98" stroke-width="2" rx="8"/>
-  <text x="1230.0" y="215.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Live scene cache</text>
+  <text x="1230.0" y="215.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Current visible evidence</text>
   <text x="1230.0" y="238.8" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Age / units / coordinate frames</text>
   <rect x="1040.0" y="360.0" width="380.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
   <text x="1230.0" y="405.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">DecisionPacket → Jev</text>
-  <text x="1230.0" y="428.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">One candidate-selection request</text>
+  <text x="1230.0" y="428.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Tool + bound input selection</text>
   <rect x="1040.0" y="550.0" width="380.0" height="100.0" fill="#FFF4EB" stroke="#9F6634" stroke-width="2" rx="8"/>
   <text x="1230.0" y="595.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Bound candidate registry</text>
-  <text x="1230.0" y="618.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">ID → complete executable request</text>
-  <text x="740.0" y="58.0" font-size="32" fill="#193D3A" text-anchor="middle">Keep task dependencies. Refresh physical evidence.</text>
-  <text x="740.0" y="104.0" font-size="20" fill="#193D3A" text-anchor="middle">Illustrative interface design · episode-local memory only · no RSI</text>
-  <text x="740.0" y="714.0" font-size="21" fill="#193D3A" text-anchor="middle">Short context must not erase unfinished orders, routes or action preconditions.</text>
+  <text x="1230.0" y="618.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">ID → complete tool request</text>
+  <text x="740.0" y="58.0" font-size="32" fill="#193D3A" text-anchor="middle">Reuse current context. Read older evidence explicitly.</text>
+  <text x="740.0" y="104.0" font-size="20" fill="#193D3A" text-anchor="middle">Deterministic action encoding · 32 records / 32 KiB · no automatic summary</text>
+  <text x="740.0" y="714.0" font-size="20" fill="#193D3A" text-anchor="middle">Only accessible receipts may be saved; expired unsaved records cannot be recovered from logs.</text>
 </svg>

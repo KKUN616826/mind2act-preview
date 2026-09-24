@@ -1,34 +1,39 @@
 {
-  "revision": "mindaccord-astrajev-proposal-v2",
+  "revision": "mindaccord-astrajev-proposal-v2-20260924",
   "status": "proposal",
   "baseline": {
     "repo": "https://github.com/MuQY1818/mem-planner-harness",
     "commit": "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
-    "scope": "prior implementation reference, not new integration"
+    "scope": "prior implementation reference; external Case7 prototype documented separately"
   },
   "figures": [
     {
       "id": "architecture",
       "path": "figures/architecture.svg",
       "title": "Astra–Jev：带证据的结构化交接",
-      "description": "目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。",
-      "sha256": "e17c52c1748975d99e0cdb2863d54b769648b238e81ab405a96f9fe59b2fbe90"
+      "description": "方法分工：Cognitive 提供可复用意图，Jev 选择动作、信息或升级，视觉工具负责连续控制；通用收益待验证。",
+      "sha256": "ba86bd5d2cab31de5edc272637c17713b88f935bfaaad750de4a978d9c4133ea"
     },
     {
       "id": "memory",
       "path": "figures/packet-memory.svg",
-      "title": "DecisionPacket：事实、记忆与候选",
-      "description": "任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。",
-      "sha256": "f345729fd6c24e1eab75816b32910dd8ffc9ffa29640a9f2b72c72add0a3c566"
+      "title": "DecisionPacket：当前依据、近期事件与主动记忆",
+      "description": "当前报告与计划、最近工具交互、显式读取的动作记忆进入决策输入；Jev 决定保存／读／删，程序固定编码。",
+      "sha256": "8c4a90009a7a45c08b1595602bed9fbe3f253863ec39195a415053e90c63b6e6"
     },
     {
       "id": "routing",
       "path": "figures/routing.svg",
-      "title": "成本感知的事件路由",
-      "description": "继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。",
-      "sha256": "2f72334e0070b97d0a5082ea857f48da6ebf00fe5a7036740b43c585420632b6"
+      "title": "基于执行反馈的认知更新",
+      "description": "当前执行等待事件，Jev 选择局部动作、补证据或升级；现有固定认知触发与完全按需方案需分别比较。",
+      "sha256": "0b805a68395c8c9058294625a3351ef081127281b2f090aacce6e5215b85b773"
     }
   ],
   "results": null,
-  "scope": "No model inference, robot experiments, costs or integration results produced."
+  "development_evidence": {
+    "path": "data/research/case7_development_evidence_20260924.json",
+    "sha256": "d56aef3ba7eaf52db73dc4b0345eb9dffae918142de240a2c5e183604da6805a",
+    "scope": "Historical external Case7 seed034 development runs; not benchmark results or matched comparisons."
+  },
+  "scope": "Documentation update using historical external prototype logs; no new model inference or robot experiments. Benchmark results and comparative benefits remain unmeasured."
 }

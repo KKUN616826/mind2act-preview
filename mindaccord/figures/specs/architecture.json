@@ -12,10 +12,10 @@
   "nodes": [
     {
       "id": "astra",
-      "label": "GPT-6 Astra\nTask + subgoals",
+      "label": "GPT-6 Astra\nFacts + intents",
       "x": 190,
       "y": 220,
-      "width": 250,
+      "width": 290,
       "height": 100,
       "shape": "rounded",
       "fill": "#EDF5F4",
@@ -24,7 +24,7 @@
     },
     {
       "id": "tools",
-      "label": "Perception tools\nEvidence + bindings",
+      "label": "Perception tools\nRequested evidence",
       "x": 520,
       "y": 410,
       "width": 250,
@@ -36,7 +36,7 @@
     },
     {
       "id": "compiler",
-      "label": "State compiler\nMemory + candidates",
+      "label": "State compiler\nEvidence + references\nTool candidates",
       "x": 870,
       "y": 220,
       "width": 250,
@@ -48,10 +48,10 @@
     },
     {
       "id": "jev",
-      "label": "Jev\nChoose candidate ID",
+      "label": "Jev\nChoose a bound tool\nor information request",
       "x": 1285,
       "y": 220,
-      "width": 250,
+      "width": 290,
       "height": 100,
       "shape": "rounded",
       "fill": "#EDF5F4",
@@ -60,7 +60,7 @@
     },
     {
       "id": "runtime",
-      "label": "Runtime + controller\nValidate / execute",
+      "label": "Runtime + tools\nAuthorize / control",
       "x": 1285,
       "y": 590,
       "width": 250,
@@ -68,7 +68,7 @@
       "shape": "rounded",
       "fill": "#EDF5F4",
       "stroke": "#19655B",
-      "font_size": 21
+      "font_size": 20
     },
     {
       "id": "world",
@@ -84,7 +84,7 @@
     },
     {
       "id": "router",
-      "label": "Event + cost router\nReuse / refresh / escalate",
+      "label": "Cognitive updates\nEvents / escalation",
       "x": 190,
       "y": 590,
       "width": 300,
@@ -148,21 +148,21 @@
     {
       "from": "router",
       "to": "astra",
-      "label": "escalate",
+      "label": "update trigger",
       "style": "dashed",
       "color": "#496575"
     },
     {
       "from": "router",
       "to": "tools",
-      "label": "local refresh",
+      "label": "requested refresh",
       "style": "dashed",
       "color": "#496575"
     }
   ],
   "labels": [
     {
-      "text": "Mind2Act Harness · Cost-aware Astra–Jev coordination",
+      "text": "Mind2Act Harness · Feedback-driven reasoning allocation",
       "x": 740,
       "y": 60,
       "font_size": 32,
@@ -170,7 +170,7 @@
       "anchor": "middle"
     },
     {
-      "text": "Proposal: interfaces, refresh rules and costs remain to be validated",
+      "text": "Case7 prototype exists; cross-task benefits and update policies remain under evaluation",
       "x": 740,
       "y": 105,
       "font_size": 20,
@@ -178,7 +178,7 @@
       "anchor": "middle"
     },
     {
-      "text": "Jev selects complete candidates; perception and control remain separate.",
+      "text": "Jev selects tools and information requests; visual tools handle continuous control.",
       "x": 740,
       "y": 705,
       "font_size": 21,

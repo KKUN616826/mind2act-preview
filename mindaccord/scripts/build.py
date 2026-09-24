@@ -22,7 +22,9 @@ def state_html(s):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--bench-link',default='../index.html');args=ap.parse_args()
     examples={p.stem:json.loads(p.read_text()) for p in sorted((ROOT/'data/examples').glob('*.json'))}
-    payload=dict(project="Mind2Act",benchmark="Mind2Act World",model=MODEL_NAME,subtitle=MODEL_SUBTITLE,status='proposal',proposal_version=2,baseline_commit=COMMIT,upstream=dict(name='GPT-6 Astra',api_model_id=None),downstream=dict(name='Jev',version=None),results=None,modules=MODULES,states=STATES,alignment=ALIGNMENT,figures=FIGURES,sources=SOURCES,examples=examples)
+    evidence_path = ROOT/'data/research/case7_development_evidence_20260924.json'
+    development_evidence = dict(path=str(evidence_path.relative_to(ROOT)), sha256=hashlib.sha256(evidence_path.read_bytes()).hexdigest(), scope='Historical external Case7 seed034 development runs; not benchmark results or matched comparisons.')
+    payload=dict(project="Mind2Act",benchmark="Mind2Act World",model=MODEL_NAME,subtitle=MODEL_SUBTITLE,status='proposal',proposal_version=2,updated_at='2026-09-24',baseline_commit=COMMIT,upstream=dict(name='GPT-6 Astra',api_model_id=None),downstream=dict(name='Jev',version=None),results=None,development_evidence=development_evidence,modules=MODULES,states=STATES,alignment=ALIGNMENT,figures=FIGURES,sources=SOURCES,examples=examples)
     (ROOT/'data/model.json').write_text(dump(payload)+'\n')
     data=dump(payload)
     for a,b in [('<','\\u003c'),('>','\\u003e'),('&','\\u0026'),('\u2028','\\u2028'),('\u2029','\\u2029')]:data=data.replace(a,b)
@@ -36,7 +38,7 @@ def main():
     (ROOT/'index.html').write_text(page)
     # Retain the historical download path while making the current proposal canonical.
     (ROOT/'docs/PhysCo_Model_Architecture.md').write_text((ROOT/'docs/MindAccord_Proposal_v2.md').read_text())
-    provenance=dict(revision='mindaccord-astrajev-proposal-v2',status='proposal',baseline=dict(repo=REPO,commit=COMMIT,scope='prior implementation reference, not new integration'),figures=[f|dict(sha256=hashlib.sha256((ROOT/f['path']).read_bytes()).hexdigest()) for f in FIGURES],results=None,scope='No model inference, robot experiments, costs or integration results produced.')
+    provenance=dict(revision='mindaccord-astrajev-proposal-v2-20260924',status='proposal',baseline=dict(repo=REPO,commit=COMMIT,scope='prior implementation reference; external Case7 prototype documented separately'),figures=[f|dict(sha256=hashlib.sha256((ROOT/f['path']).read_bytes()).hexdigest()) for f in FIGURES],results=None,development_evidence=development_evidence,scope='Documentation update using historical external prototype logs; no new model inference or robot experiments. Benchmark results and comparative benefits remain unmeasured.')
     (ROOT/'data/provenance.json').write_text(dump(provenance)+'\n')
-    print('Built Mind2Act Harness proposal:',len(MODULES),'modules,',len(FIGURES),'figures; no measured results.')
+    print('Built Mind2Act Harness proposal:',len(MODULES),'modules,',len(FIGURES),'figures; historical development evidence linked, benchmark results remain empty.')
 if __name__=='__main__':main()

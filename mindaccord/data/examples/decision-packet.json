@@ -5,17 +5,21 @@
   "contract_version": 3,
   "evidence_version": "obs-12",
   "memory": {
-    "pinned_facts": [
-      "Plate A still needs fries; grasp outcome is unknown."
-    ],
+    "index": [],
     "recent_events": [
-      "a-02 completed; no confirmed deposit"
+      {
+        "action_ref": "a-02",
+        "status": "completed",
+        "effect": "unknown",
+        "source_ref": "obs-12"
+      }
     ],
-    "summary": "No task success is inferred from command completion.",
-    "evidence_refs": [
-      "obs-12",
-      "a-02"
-    ]
+    "read_records": [],
+    "write_policy": "Jev selects save(action_ref); deterministic encoding; no automatic summary.",
+    "capacity": {
+      "records": 32,
+      "body_bytes": 32768
+    }
   },
   "valid_candidates": [
     {
@@ -35,5 +39,11 @@
     }
   ],
   "motion_binding": "unavailable; camera-to-control transform unknown",
-  "selected_id": null
+  "selected_id": null,
+  "cognitive_context": {
+    "report_ref": "obs-12",
+    "author": "Cognitive",
+    "task_fact": "Plate A still needs fries; grasp outcome is unknown.",
+    "effect_status": "No confirmed deposit; command completion is not task success."
+  }
 }

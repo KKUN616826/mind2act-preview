@@ -1,0 +1,591 @@
+{
+  "schema": "mind2act_local_development_evidence_v1",
+  "created_at": "2026-09-24T15:25:23.605416+08:00",
+  "upstream_base_commit": "bac37da0013f3712621a41d5c37a957f2d1f23f5",
+  "scope": "Selected historical seed034 development runs; not exhaustive, not a frozen comparison, not Mind2Act World benchmark scores. No new rollout in this documentation update.",
+  "source_access": "Original files remain in the RoboStream++ workspace. Paths and hashes are locators, not bundled raw evidence. Private scorer object records and model request bodies are deliberately excluded.",
+  "runs": [
+    {
+      "label": "v3_menu_overflow",
+      "run_id": "cognitive-jev-case7-libero-close-official-unbounded-local-patch-v3-development-r1-seed034-20260923-142447",
+      "counts_semantics": "Runtime counters include failed/cancelled requests and action starts; HTTP attempts include transport retries.",
+      "termination": "RuntimeError: TypeSafe HTTP 400: {\"detail\":\"Too many choices. Must have at most 255 choices.\"}",
+      "counts": {
+        "cognitive": 13,
+        "jev": 56,
+        "actions": 12
+      },
+      "jev_http_attempts": 56,
+      "tool_counts": {
+        "prepare_geometry": 21,
+        "pick": 7,
+        "inspect_support": 3,
+        "prepare_place": 4,
+        "place": 5,
+        "wait": 10,
+        "observe_regions": 3,
+        "inspect_region": 1,
+        "read_details": 1
+      },
+      "terminal_tool_status_counts": {
+        "pick": {
+          "completed": 5,
+          "failed": 2
+        },
+        "place": {
+          "completed": 5
+        },
+        "prepare_geometry": {
+          "completed": 7,
+          "rejected": 14
+        },
+        "prepare_place": {
+          "completed": 4
+        }
+      },
+      "memory": {
+        "save": 0,
+        "read": 0,
+        "delete": 0,
+        "peak_bytes": 0,
+        "peak_records": 0,
+        "read_after_source_expired": 0
+      },
+      "elapsed_s": 444.9014300754643,
+      "request_bytes": {
+        "min": 9112,
+        "max": 87109,
+        "logged_requests": 56
+      },
+      "offline_score": {
+        "profile": "case2_clear_frame_v1",
+        "clear_frame_success": false,
+        "moved_out": 5,
+        "frame_residual": 2,
+        "table_lost_or_unsupported": 0,
+        "held_count": 0
+      },
+      "sources": [
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-local-patch-v3-development-r1-seed034-20260923-142447/runtime_result.json",
+          "sha256": "f9fae40623ba7faf28a270e9ee29c396877257161c121b9e9ea5cbefe2ef01c2"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-local-patch-v3-development-r1-seed034-20260923-142447/private_score.json",
+          "sha256": "cc18d87ba81b0d38655a6e8781b8af03b7f98b37e506a50dead869708b71756f"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-local-patch-v3-development-r1-seed034-20260923-142447/run_manifest.json",
+          "sha256": "af6bd1ad99c9b405ac4475d675900e83d70b38ba7873145b1e1650d8d5e6e4ad"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-local-patch-v3-development-r1-seed034-20260923-142447/events_runtime_original.jsonl",
+          "sha256": "531247b33d5e61eb691fe998d284acb95e5b2f24aa61db94dc0908b0c1b4d784"
+        }
+      ]
+    },
+    {
+      "label": "v5",
+      "run_id": "cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-210117",
+      "counts_semantics": "Runtime counters include failed/cancelled requests and action starts; HTTP attempts include transport retries.",
+      "termination": "agent_finish_confirmed",
+      "counts": {
+        "cognitive": 17,
+        "jev": 116,
+        "actions": 14
+      },
+      "jev_http_attempts": 116,
+      "tool_counts": {
+        "prepare_geometry": 40,
+        "pick": 7,
+        "wait": 9,
+        "prepare_place": 6,
+        "place": 7,
+        "read_details": 6,
+        "inspect_region": 25,
+        "inspect_support": 3,
+        "request_finish": 1
+      },
+      "terminal_tool_status_counts": {
+        "pick": {
+          "completed": 7
+        },
+        "place": {
+          "completed": 7
+        },
+        "prepare_geometry": {
+          "completed": 7,
+          "rejected": 33
+        },
+        "prepare_place": {
+          "completed": 6
+        }
+      },
+      "memory": {
+        "save": 0,
+        "read": 0,
+        "delete": 0,
+        "peak_bytes": 0,
+        "peak_records": 0,
+        "read_after_source_expired": 0
+      },
+      "elapsed_s": 562.1861844763625,
+      "request_bytes": {
+        "min": 9390,
+        "max": 21828,
+        "logged_requests": 116
+      },
+      "offline_score": {
+        "profile": "case2_clear_frame_v1",
+        "clear_frame_success": true,
+        "moved_out": 7,
+        "frame_residual": 0,
+        "table_lost_or_unsupported": 0,
+        "held_count": 0
+      },
+      "sources": [
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-210117/runtime_result.json",
+          "sha256": "20d87ba57cf13938780398a6bd896e5e602ee83f8aac493057841d7602e3bddf"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-210117/private_score.json",
+          "sha256": "d908339e188d5b2bc030c5ceade0bba760d9d3aef7ece84c74737d1a6016dedf"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-210117/run_manifest.json",
+          "sha256": "5fd66955eadae6d8e599007f1b079725996e296fff504f2c54485168e34a6c9f"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-210117/events_runtime_original.jsonl",
+          "sha256": "cf7710265d47a165c04574b87f3cfc4a468519bf215d92609c8acc6940364c28"
+        }
+      ]
+    },
+    {
+      "label": "early_v6_with_v5_run_name",
+      "run_id": "cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-222210",
+      "counts_semantics": "Runtime counters include failed/cancelled requests and action starts; HTTP attempts include transport retries.",
+      "termination": "RuntimeError: context_limit: TypeSafe HTTP 400: {\"detail\":{\"error_type\":\"max_tokens_exceeded\"}}",
+      "counts": {
+        "cognitive": 4,
+        "jev": 22,
+        "actions": 5
+      },
+      "jev_http_attempts": 22,
+      "tool_counts": {
+        "prepare_geometry": 5,
+        "pick": 3,
+        "wait": 2,
+        "prepare_place": 2,
+        "place": 2,
+        "observe_regions": 7
+      },
+      "terminal_tool_status_counts": {
+        "pick": {
+          "completed": 2,
+          "failed": 1
+        },
+        "place": {
+          "completed": 2
+        },
+        "prepare_geometry": {
+          "completed": 2,
+          "rejected": 3
+        },
+        "prepare_place": {
+          "completed": 2
+        }
+      },
+      "memory": {
+        "save": 0,
+        "read": 0,
+        "delete": 0,
+        "peak_bytes": 0,
+        "peak_records": 0,
+        "read_after_source_expired": 0
+      },
+      "elapsed_s": 232.55621031631017,
+      "request_bytes": {
+        "min": 9917,
+        "max": 65163,
+        "logged_requests": 22
+      },
+      "offline_score": {
+        "profile": "case2_clear_frame_v1",
+        "clear_frame_success": false,
+        "moved_out": 2,
+        "frame_residual": 5,
+        "table_lost_or_unsupported": 0,
+        "held_count": 0
+      },
+      "sources": [
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-222210/runtime_result.json",
+          "sha256": "eaac9b469cfb89b8abb7873fe98fdd891164e99c661c0a23378cf9af0c168cd9"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-222210/private_score.json",
+          "sha256": "be5c501c1ba4402a936be1653b3fa998d5fc4b682ea50cf8835c4796f54bbbcb"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-222210/run_manifest.json",
+          "sha256": "76987c877a1d01794861974380ab2be9cceb621745e392cf76c3e59a9fbda83a"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-detail-browser-v5-development-r1-seed034-20260923-222210/events_runtime_original.jsonl",
+          "sha256": "177a6f1575496b148ea43b0ed8d9e1b9b5e9b2d2e2935ca582d46f5ac01e2afb"
+        }
+      ]
+    },
+    {
+      "label": "v6",
+      "run_id": "cognitive-jev-case7-libero-close-official-unbounded-geometry-retry-v6-development-r1-seed034-20260923-223510",
+      "counts_semantics": "Runtime counters include failed/cancelled requests and action starts; HTTP attempts include transport retries.",
+      "termination": "agent_finish_confirmed",
+      "counts": {
+        "cognitive": 19,
+        "jev": 74,
+        "actions": 14
+      },
+      "jev_http_attempts": 74,
+      "tool_counts": {
+        "prepare_geometry": 28,
+        "pick": 7,
+        "inspect_support": 5,
+        "place": 7,
+        "wait": 13,
+        "observe_regions": 11,
+        "prepare_place": 2,
+        "request_finish": 1
+      },
+      "terminal_tool_status_counts": {
+        "pick": {
+          "completed": 7
+        },
+        "place": {
+          "completed": 7
+        },
+        "prepare_geometry": {
+          "completed": 7,
+          "rejected": 21
+        },
+        "prepare_place": {
+          "completed": 2
+        }
+      },
+      "memory": {
+        "save": 0,
+        "read": 0,
+        "delete": 0,
+        "peak_bytes": 0,
+        "peak_records": 0,
+        "read_after_source_expired": 0
+      },
+      "elapsed_s": 889.9285599275609,
+      "request_bytes": {
+        "min": 9923,
+        "max": 37096,
+        "logged_requests": 74
+      },
+      "offline_score": {
+        "profile": "case2_clear_frame_v1",
+        "clear_frame_success": true,
+        "moved_out": 7,
+        "frame_residual": 0,
+        "table_lost_or_unsupported": 0,
+        "held_count": 0
+      },
+      "sources": [
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-geometry-retry-v6-development-r1-seed034-20260923-223510/runtime_result.json",
+          "sha256": "722cd7ac77f548335176b0bbb37e1863523147234ef05694a6cd9b559ea2ebf5"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-geometry-retry-v6-development-r1-seed034-20260923-223510/private_score.json",
+          "sha256": "9fa9eb290c49bf93697f7000baf3fdc462749489a6040945ced4eed2282cc6b8"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-geometry-retry-v6-development-r1-seed034-20260923-223510/run_manifest.json",
+          "sha256": "fe6f0021496efca828fe88fa93b5479e8d2019b7de5007318399dfcc03e79343"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-geometry-retry-v6-development-r1-seed034-20260923-223510/events_runtime_original.jsonl",
+          "sha256": "0f15f19466a0fef493f67f81c68bc3a29e0a2f8762a2915976368943c77b1bda"
+        }
+      ]
+    },
+    {
+      "label": "v7_first",
+      "run_id": "cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260923-231209",
+      "counts_semantics": "Runtime counters include failed/cancelled requests and action starts; HTTP attempts include transport retries.",
+      "termination": "RuntimeError: TypeSafe HTTP 520: error code: 520\n",
+      "counts": {
+        "cognitive": 7,
+        "jev": 40,
+        "actions": 4
+      },
+      "jev_http_attempts": 41,
+      "tool_counts": {
+        "prepare_geometry": 14,
+        "pick": 2,
+        "prepare_place": 2,
+        "place": 2,
+        "wait": 3,
+        "observe_regions": 1,
+        "inspect_region": 6,
+        "read_details": 3
+      },
+      "terminal_tool_status_counts": {
+        "pick": {
+          "completed": 2
+        },
+        "place": {
+          "completed": 2
+        },
+        "prepare_geometry": {
+          "completed": 2,
+          "rejected": 12
+        },
+        "prepare_place": {
+          "completed": 2
+        }
+      },
+      "memory": {
+        "save": 0,
+        "read": 0,
+        "delete": 0,
+        "peak_bytes": 0,
+        "peak_records": 0,
+        "read_after_source_expired": 0
+      },
+      "elapsed_s": 378.08367747691227,
+      "request_bytes": {
+        "min": 10175,
+        "max": 25541,
+        "logged_requests": 40
+      },
+      "offline_score": {
+        "profile": "case2_clear_frame_v1",
+        "clear_frame_success": false,
+        "moved_out": 2,
+        "frame_residual": 5,
+        "table_lost_or_unsupported": 0,
+        "held_count": 0
+      },
+      "sources": [
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260923-231209/runtime_result.json",
+          "sha256": "91ca8a1b0bac0b6efd0f50b5c3e875dd0928f19cd0bf64269592904bada9f672"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260923-231209/private_score.json",
+          "sha256": "cad4132d95abf099b5aab98431e9a94b031c1ef652dd65f6bbd4422668855c92"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260923-231209/run_manifest.json",
+          "sha256": "a2e4fc17f8c998b7de217bec9412059f942cfac22b26fb86ff4eb61cb03f486b"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260923-231209/events_runtime_original.jsonl",
+          "sha256": "180e6643e9446a07335d2992d45d832ea177f8ac644701b6fb95f877ec7199dc"
+        }
+      ]
+    },
+    {
+      "label": "v7_second",
+      "run_id": "cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260924-094742",
+      "counts_semantics": "Runtime counters include failed/cancelled requests and action starts; HTTP attempts include transport retries.",
+      "termination": "RuntimeError: context_limit: TypeSafe HTTP 400: {\"detail\":{\"error_type\":\"max_tokens_exceeded\"}}",
+      "counts": {
+        "cognitive": 18,
+        "jev": 122,
+        "actions": 12
+      },
+      "jev_http_attempts": 123,
+      "tool_counts": {
+        "prepare_geometry": 40,
+        "pick": 6,
+        "inspect_support": 3,
+        "place": 6,
+        "wait": 5,
+        "prepare_place": 4,
+        "observe_regions": 49,
+        "inspect_region": 7,
+        "escalate": 1
+      },
+      "terminal_tool_status_counts": {
+        "pick": {
+          "completed": 6
+        },
+        "place": {
+          "completed": 6
+        },
+        "prepare_geometry": {
+          "completed": 6,
+          "rejected": 34
+        },
+        "prepare_place": {
+          "completed": 4
+        }
+      },
+      "memory": {
+        "save": 0,
+        "read": 0,
+        "delete": 0,
+        "peak_bytes": 0,
+        "peak_records": 0,
+        "read_after_source_expired": 0
+      },
+      "elapsed_s": 773.7642503036186,
+      "request_bytes": {
+        "min": 10168,
+        "max": 64669,
+        "logged_requests": 122
+      },
+      "offline_score": {
+        "profile": "case2_clear_frame_v1",
+        "clear_frame_success": false,
+        "moved_out": 6,
+        "frame_residual": 1,
+        "table_lost_or_unsupported": 0,
+        "held_count": 0
+      },
+      "sources": [
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260924-094742/runtime_result.json",
+          "sha256": "d8503ddaf88808cb6ed22a92347a8493aa62e46ab2d81a8715b80236f0a80ecc"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260924-094742/private_score.json",
+          "sha256": "f4b1ad6b8778f2908946b7e171ba275d701d19440ef8726c8c8f1d6dd9f8fa0b"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260924-094742/run_manifest.json",
+          "sha256": "363a08925c7cb6422d59c01c411c83353b5b4da4b2814a43bd0b45b57e854f89"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260924-094742/events_runtime_original.jsonl",
+          "sha256": "479682f7aa127ab6f5936ba3c1328384d9404dab85fe3624e617d3b2cbd7c055"
+        }
+      ]
+    },
+    {
+      "label": "v8",
+      "run_id": "cognitive-jev-case7-libero-close-official-unbounded-report-refs-v8-development-r1-seed034-20260924-103340",
+      "counts_semantics": "Runtime counters include failed/cancelled requests and action starts; HTTP attempts include transport retries.",
+      "termination": "agent_finish_confirmed",
+      "counts": {
+        "cognitive": 17,
+        "jev": 88,
+        "actions": 17
+      },
+      "jev_http_attempts": 88,
+      "tool_counts": {
+        "prepare_geometry": 29,
+        "pick": 8,
+        "prepare_place": 8,
+        "place": 9,
+        "inspect_support": 4,
+        "wait": 5,
+        "observe_regions": 8,
+        "inspect_region": 10,
+        "read_details": 2,
+        "request_finish": 1
+      },
+      "terminal_tool_status_counts": {
+        "pick": {
+          "completed": 8
+        },
+        "place": {
+          "completed": 8,
+          "failed": 1
+        },
+        "prepare_geometry": {
+          "completed": 8,
+          "rejected": 21
+        },
+        "prepare_place": {
+          "completed": 6,
+          "rejected": 2
+        }
+      },
+      "memory": {
+        "save": 0,
+        "read": 0,
+        "delete": 0,
+        "peak_bytes": 0,
+        "peak_records": 0,
+        "read_after_source_expired": 0
+      },
+      "elapsed_s": 585.3743480936391,
+      "request_bytes": {
+        "min": 10830,
+        "max": 31753,
+        "logged_requests": 88
+      },
+      "offline_score": {
+        "profile": "case2_clear_frame_v1",
+        "clear_frame_success": true,
+        "moved_out": 7,
+        "frame_residual": 0,
+        "table_lost_or_unsupported": 0,
+        "held_count": 0
+      },
+      "sources": [
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-report-refs-v8-development-r1-seed034-20260924-103340/runtime_result.json",
+          "sha256": "955a1248338ddcb7e9d88902bcfb22e4910383c6942c9ce583cdf1715b63d990"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-report-refs-v8-development-r1-seed034-20260924-103340/private_score.json",
+          "sha256": "3691d2a45699cd1f9bbc9b2ebda6b6de4749e8c4e765a557042fa0225bbb3136"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-report-refs-v8-development-r1-seed034-20260924-103340/run_manifest.json",
+          "sha256": "aa1c5304623bdfd6cb376bfb9e6e99be391d342f2b11a326cf5ef12d9c16516c"
+        },
+        {
+          "workspace_relative_path": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-report-refs-v8-development-r1-seed034-20260924-103340/events_runtime_original.jsonl",
+          "sha256": "f493ed2294a77e40038dd76813006dd01c8dcd5d923497c21c8bccd858243638"
+        }
+      ]
+    }
+  ],
+  "offline_request_replay": {
+    "result": {
+      "run": "results/runs/cognitive-jev-case7-libero-close-official-unbounded-async-prefetch-v7-development-r1-seed034-20260924-094742",
+      "call": "jev-0122",
+      "historical_reconstruction_exact": true,
+      "old_request_bytes": 64669,
+      "new_request_bytes": 25969,
+      "reduction_percent": 59.84320153396527,
+      "latest_cards_unchanged": true,
+      "latest_region_count": 21,
+      "deferred_reports": [
+        {
+          "ref": "report:f22368b48990ee0c0d26",
+          "regions": 21,
+          "read_matches_old_body": true
+        },
+        {
+          "ref": "report:e9633589a298efe0ca1d",
+          "regions": 21,
+          "read_matches_old_body": true
+        },
+        {
+          "ref": "report:a607c8d56d9bd6d0dde7",
+          "regions": 23,
+          "read_matches_old_body": true
+        }
+      ],
+      "historical_artifacts_modified": false,
+      "api_calls": 0,
+      "note": "Includes the new runtime prompt. Byte reduction is not a provider token estimate or a live acceptance guarantee. Reconstructed inputs are used only for offline audit."
+    },
+    "source": {
+      "workspace_relative_path": "output/implementation/case7-report-refs-v8/replay_result.json",
+      "sha256": "adc39fb4d36492d5addb9ac37d648377fd3d8bc03441932635b5869abc95354c"
+    }
+  }
+}

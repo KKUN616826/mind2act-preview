@@ -1,5 +1,5 @@
 {
-  "title": "Memory-aware DecisionPacket",
+  "title": "Evidence and agent-managed action memory",
   "canvas": {
     "width": 1480,
     "height": 760
@@ -12,7 +12,7 @@
   "nodes": [
     {
       "id": "goal",
-      "label": "Pinned task facts\nGoals / rules / unfinished work",
+      "label": "Current cognitive context\nReport / intents / sources",
       "x": 250,
       "y": 220,
       "width": 360,
@@ -24,7 +24,7 @@
     },
     {
       "id": "events",
-      "label": "Recent event window\nReceipts / failures / effects",
+      "label": "Recent tool interactions\nWindow: 4 interactions",
       "x": 250,
       "y": 410,
       "width": 360,
@@ -36,7 +36,7 @@
     },
     {
       "id": "summary",
-      "label": "Evidence-linked memory text\nRelevant past events",
+      "label": "Action memory\nJev saves / reads / deletes",
       "x": 250,
       "y": 600,
       "width": 360,
@@ -60,7 +60,7 @@
     },
     {
       "id": "live",
-      "label": "Live scene cache\nAge / units / coordinate frames",
+      "label": "Current visible evidence\nAge / units / coordinate frames",
       "x": 1230,
       "y": 220,
       "width": 380,
@@ -72,7 +72,7 @@
     },
     {
       "id": "packet",
-      "label": "DecisionPacket → Jev\nOne candidate-selection request",
+      "label": "DecisionPacket → Jev\nTool + bound input selection",
       "x": 1230,
       "y": 410,
       "width": 380,
@@ -84,7 +84,7 @@
     },
     {
       "id": "candidates",
-      "label": "Bound candidate registry\nID → complete executable request",
+      "label": "Bound candidate registry\nID → complete tool request",
       "x": 1230,
       "y": 600,
       "width": 380,
@@ -147,7 +147,7 @@
   ],
   "labels": [
     {
-      "text": "Keep task dependencies. Refresh physical evidence.",
+      "text": "Reuse current context. Read older evidence explicitly.",
       "x": 740,
       "y": 58,
       "font_size": 32,
@@ -155,7 +155,7 @@
       "anchor": "middle"
     },
     {
-      "text": "Illustrative interface design · episode-local memory only · no RSI",
+      "text": "Deterministic action encoding · 32 records / 32 KiB · no automatic summary",
       "x": 740,
       "y": 104,
       "font_size": 20,
@@ -163,10 +163,10 @@
       "anchor": "middle"
     },
     {
-      "text": "Short context must not erase unfinished orders, routes or action preconditions.",
+      "text": "Only accessible receipts may be saved; expired unsaved records cannot be recovered from logs.",
       "x": 740,
       "y": 714,
-      "font_size": 21,
+      "font_size": 20,
       "color": "#193D3A",
       "anchor": "middle"
     }

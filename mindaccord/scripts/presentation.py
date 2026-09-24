@@ -1,4 +1,40 @@
-"""Proposed states and diagrams; not observed traces."""
-STATES = {'ongoing': {'label': '动作仍在执行', 'title': '保留授权，等待实际事件', 'cognitive': '不为无关未来计划更新撤销当前授权。', 'reactive': '不向 Jev 重复询问确定性的“继续”。', 'runtime': '保持健康动作，等待回执或显式检查点。', 'evidence': '调用数减少属于待测目标；没有新的模型或机器人结果。'}, 'unknown': {'label': '感知已过期', 'title': '刷新证据，再构造决策', 'cognitive': '有新身份或新任务歧义时才升级；否则复用授权的感知计划。', 'reactive': '位置过期或变换未知时，不提供可执行运动候选。', 'runtime': '调用已授权工具刷新，更新来源版本并重建绑定。', 'evidence': '过期事实不能因文本仍在上下文中而继续有效。'}, 'revoked': {'label': '子目标冲突', 'title': '升级 Astra，并等待旧执行取消确认', 'cognitive': '修订子目标，发布新的授权版本。', 'reactive': '候选不足或冲突时选择升级；旧版本响应不得执行。', 'runtime': '停止后续派发，收到取消确认后再交接。', 'evidence': '模型名称替换不等于协议适配完成；此流程是设计说明。'}, 'budget': {'label': '预算不足', 'title': '保留未完成状态，显式停止', 'cognitive': '必要信息无法在剩余预算内取得时，返回未完成与原因。', 'reactive': '不为降低费用而选择缺乏证据的动作。', 'runtime': '记录累计成本和终止原因，保留失败及升级费用。', 'evidence': '成功 episode 为零时成本 / 成功数未定义，不填零。'}}
-FIGURES = [{'id': 'architecture', 'path': 'figures/architecture.svg', 'title': 'Astra–Jev：带证据的结构化交接', 'description': '目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。'}, {'id': 'memory', 'path': 'figures/packet-memory.svg', 'title': 'DecisionPacket：事实、记忆与候选', 'description': '任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。'}, {'id': 'routing', 'path': 'figures/routing.svg', 'title': '成本感知的事件路由', 'description': '继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。'}]
-ALIGNMENT = [('Task-Level Reasoning', 'Astra + 契约 + 任务事实', '任务拆解与进度维护', '目标、顺序、依赖是否正确'), ('Constraint-Aware Execution', '感知 + 候选绑定 + Runtime', '时机、参数与接触约束', '残差、有效动作与过期拒绝'), ('Reasoning–Acting Coordination', 'State Compiler + Jev harness + Router', '结果驱动后续选择', '错误推进、恢复与升级成本')]
+"""Method illustrations; figure paths are not measured trajectories."""
+STATES = {'ongoing': {'label': '动作仍在执行',
+             'title': '保留授权，等待实际事件',
+             'cognitive': '保留当前有效授权；独立的认知触发仍可更新后续计划。',
+             'reactive': '无新事件时等待，不反复询问“继续”。',
+             'runtime': '执行工具负责动作内部控制，Runtime 收集终态和新事件。',
+             'evidence': 'Case7 已按事件运行；相对其他调度的成本与时延收益尚未隔离验证。'},
+ 'unknown': {'label': '感知已过期',
+             'title': '刷新证据，再构造决策',
+             'cognitive': 'Jev 升级或既有认知触发到达时，获取新帧并更新理解。',
+             'reactive': '可选择补观察、检查或升级；不把旧报告当作新证据。',
+             'runtime': '提供合法候选与来源状态，执行所选工具并返回实际结果。',
+             'evidence': '局部证据不足不等于必须全局重规划；如何选择仍需比较。'},
+ 'revoked': {'label': '子目标冲突',
+             'title': '升级 Astra，并等待旧执行取消确认',
+             'cognitive': '修订子目标，发布新的授权版本。',
+             'reactive': '候选不足或冲突时选择升级；旧版本响应不得执行。',
+             'runtime': '停止后续派发，收到取消确认后再交接。',
+             'evidence': 'Case7 已有版本与取消接口；通用任务覆盖与升级收益仍需验证。'},
+ 'budget': {'label': '预算不足',
+            'title': '保留未完成状态，显式停止',
+            'cognitive': '必要信息无法在剩余预算内取得时，返回未完成与原因。',
+            'reactive': '不为降低费用而选择缺乏证据的动作。',
+            'runtime': '记录累计成本和终止原因，保留失败及升级费用。',
+            'evidence': '成功 episode 为零时成本 / 成功数未定义，不填零。'}}
+FIGURES = [{'id': 'architecture',
+  'path': 'figures/architecture.svg',
+  'title': 'Astra–Jev：带证据的结构化交接',
+  'description': '方法分工：Cognitive 提供可复用意图，Jev 选择动作、信息或升级，视觉工具负责连续控制；通用收益待验证。'},
+ {'id': 'memory',
+  'path': 'figures/packet-memory.svg',
+  'title': 'DecisionPacket：当前依据、近期事件与主动记忆',
+  'description': '当前报告与计划、最近工具交互、显式读取的动作记忆进入决策输入；Jev 决定保存／读／删，程序固定编码。'},
+ {'id': 'routing',
+  'path': 'figures/routing.svg',
+  'title': '基于执行反馈的认知更新',
+  'description': '当前执行等待事件，Jev 选择局部动作、补证据或升级；现有固定认知触发与完全按需方案需分别比较。'}]
+ALIGNMENT = [('Task-Level Reasoning', 'Astra + 契约 + 任务事实', '任务拆解与进度维护', '目标、顺序、依赖是否正确'),
+ ('Constraint-Aware Execution', '感知 + 候选绑定 + Runtime', '时机、参数与接触约束', '残差、有效动作与过期拒绝'),
+ ('Reasoning–Acting Coordination', 'State Compiler + Jev harness + Router', '结果驱动后续选择', '错误推进、恢复与升级成本')]

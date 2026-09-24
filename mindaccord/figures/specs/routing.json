@@ -1,5 +1,5 @@
 {
-  "title": "Cost-aware event routing",
+  "title": "Feedback-driven cognitive updates",
   "canvas": {
     "width": 1480,
     "height": 760
@@ -12,7 +12,7 @@
   "nodes": [
     {
       "id": "event",
-      "label": "New event / checkpoint",
+      "label": "New receipt / report",
       "x": 740,
       "y": 175,
       "width": 330,
@@ -24,7 +24,7 @@
     },
     {
       "id": "reuse",
-      "label": "Healthy action in flight\nRuntime continues; no model call",
+      "label": "Motion active\nNo new decision needed\nTool continues; wait for event",
       "x": 230,
       "y": 355,
       "width": 390,
@@ -36,7 +36,7 @@
     },
     {
       "id": "refresh",
-      "label": "Stale or incomplete evidence\nRefresh authorized perception",
+      "label": "Local evidence insufficient\nJev may request an observation",
       "x": 740,
       "y": 355,
       "width": 390,
@@ -48,7 +48,7 @@
     },
     {
       "id": "choose",
-      "label": "Fresh, protocol-valid candidates\nJev selects a candidate",
+      "label": "Current intent still applicable\nJev may select a bound tool",
       "x": 1250,
       "y": 355,
       "width": 390,
@@ -60,7 +60,7 @@
     },
     {
       "id": "astra",
-      "label": "Plan conflict / no useful candidate\nAstra revises grounding or goal",
+      "label": "Unresolved binding or changed plan\nJev may request Cognitive update",
       "x": 460,
       "y": 585,
       "width": 520,
@@ -72,7 +72,7 @@
     },
     {
       "id": "stop",
-      "label": "Insufficient remaining budget\nStop with incomplete status",
+      "label": "Configured budget exhausted\nRecord incomplete status",
       "x": 1050,
       "y": 585,
       "width": 510,
@@ -111,7 +111,7 @@
     {
       "from": "refresh",
       "to": "astra",
-      "label": "unresolved",
+      "label": "escalation selected",
       "style": "solid",
       "color": "#496575",
       "thickness": 2
@@ -135,7 +135,7 @@
       "anchor": "middle"
     },
     {
-      "text": "Illustrative branches; checks are applied before dispatch and after model return.",
+      "text": "Decision options, not automatic semantic routing; authorization is checked at dispatch.",
       "x": 740,
       "y": 105,
       "font_size": 20,
@@ -143,10 +143,10 @@
       "anchor": "middle"
     },
     {
-      "text": "All paths log actual tool, model, retry and escalation costs.",
+      "text": "Current prototype also uses watchdog, post-place and plan-refill triggers; adaptive scheduling is unverified.",
       "x": 740,
       "y": 710,
-      "font_size": 21,
+      "font_size": 18,
       "color": "#193D3A",
       "anchor": "middle"
     }
