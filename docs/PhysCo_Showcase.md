@@ -104,6 +104,6 @@ CP03 Medium 难度表给出的目标槽通过间隔约 20 秒，与 160 mm 槽�
 
 重点是带证据的状态编译、候选约束的局部决策、有预算的工作记忆和事件路由。费用统计包含感知、候选生成、摘要、重试与升级，不预设整体收益。
 
-当前为新架构提案，尚未完成端到端接入或机器人测评。既有 EvoMemHarness 仅作为参考基础，RSI 和跨局经验晋升退出本轮主线。
+方法状态以最新 Harness 文档为准：已有外部 Case7 开发原型，RSI 与正式 benchmark 收益仍待验证。本次 case 同步不产生新的模型成绩或成本结论。
 
 [模型网站](../mindaccord/index.html) · [完整 Proposal v2](../mindaccord/docs/MindAccord_Proposal_v2.md)
