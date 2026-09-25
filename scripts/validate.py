@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check generated data, local links and media coverage before publishing."""
+import hashlib
 import json
 from collections import Counter
 from html.parser import HTMLParser
@@ -50,6 +51,19 @@ def main():
     assert [r['name'] for r in board['candidates'] if r['track']=='vla'] == ['hyVLA','dm0.5','g0.5','openwam','pi0.5']
     media = [a for c in records for a in c['media']]
     assert len({a['path'] for a in media}) == len(media), 'Duplicate media'
+    sync = json.loads((ROOT/'data/case-sync.json').read_text())
+    assert sync['case_count'] == len(records)
+    assert sync['video_count'] == sum(a['kind']=='video' for a in media)
+    assert sync['image_count'] == sum(a['kind']=='image' for a in media)
+    assert {a['path'] for a in sync['media']} == {a['path'] for a in media}
+    for asset in sync['media']:
+        path = ROOT/asset['path']
+        assert path.stat().st_size == asset['bytes'], 'Size mismatch: ' + asset['path']
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == asset['sha256'], 'Hash mismatch: ' + asset['path']
+    dimensions = json.loads((ROOT/'data/coupling-dimensions.json').read_text())
+    assert dimensions['source_revision'] == sync['source_revision']
+    assert [row[0] for row in dimensions['rows']] == [c['id']+' '+c['title'] for c in records if c['suite']=='coupling']
+    assert all(len(row)==len(dimensions['columns']) for row in dimensions['rows'])
     for c in records:
         assert set(c['evidence']) == {'high', 'low', 'feedback'}
         assert all(len(r) == len(c['difficulty']['columns']) for r in c['difficulty']['rows'])
@@ -58,6 +72,7 @@ def main():
         assert all(c['evidence'][k] in doc for k in c['evidence']), c['id']
     print('PASS: embedded data, all HTML links, case documents, evidence and media coverage')
     print(dict(Counter(a['kind'] for a in media)))
+    print('PASS: source revision, all media hashes and current coupling task names')
     print('PASS: leaderboard roster, 15-task coverage, null scores/ranks/costs and pending status')
     for dimension in ['Task-Level Reasoning', 'Constraint-Aware Execution', 'Reasoning–Acting Coordination']:
         assert dimension in content, 'Missing named dimension: ' + dimension

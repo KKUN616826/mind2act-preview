@@ -1,0 +1,248 @@
+{
+  "source_revision": 903,
+  "synced_at": "2026-09-25",
+  "case_count": 15,
+  "video_count": 39,
+  "image_count": 0,
+  "changed_cases": [
+    "CP03",
+    "CP04",
+    "CP05"
+  ],
+  "media": [
+    {
+      "case_id": "E",
+      "path": "media/videos/E__E_easy.mp4",
+      "bytes": 8736424,
+      "sha256": "de92fbea360421811744a7a3a84afb11fd1dfee5900cedc0c66cc071643fe251"
+    },
+    {
+      "case_id": "E",
+      "path": "media/videos/E__E_medium.mp4",
+      "bytes": 15410908,
+      "sha256": "dc5fbf37f59013fb4870ec11480b4cd286ac0059ae5a526a80d07de34a0c525f"
+    },
+    {
+      "case_id": "E",
+      "path": "media/videos/E__E_hard.mp4",
+      "bytes": 12389037,
+      "sha256": "c905bbbf71fe292932510ade4165341bdd78b2c83447bf12f852e5b5f55beadd"
+    },
+    {
+      "case_id": "P",
+      "path": "media/videos/P__P_hard_general_012.mp4",
+      "bytes": 13046088,
+      "sha256": "05a9f3e1c5d932db3374fb1e43f72ed5d302ab0ebe92081b1f4446c98cd76bd5"
+    },
+    {
+      "case_id": "S",
+      "path": "media/videos/S__S_easy.mp4",
+      "bytes": 8443567,
+      "sha256": "a0d4c572bd248580db7a5143af8f681d20b084d3f75f620a1a0ab274b9821ea1"
+    },
+    {
+      "case_id": "S",
+      "path": "media/videos/S__S_medium.mp4",
+      "bytes": 9046983,
+      "sha256": "73415f9f23813f225842895e018c9325399e094c09212a610cdda5b4dd530981"
+    },
+    {
+      "case_id": "S",
+      "path": "media/videos/S__S_hard.mp4",
+      "bytes": 9210041,
+      "sha256": "ab5f36461fd169f95e22460dc8d99284304bf6c4f3f05df5ca5437f4024d07f3"
+    },
+    {
+      "case_id": "F",
+      "path": "media/videos/F__F_easy.mp4",
+      "bytes": 4294352,
+      "sha256": "907149e480b0699cb597a6116c1a55afecd6af00ed7c58d13ac6e4c1ddb43915"
+    },
+    {
+      "case_id": "F",
+      "path": "media/videos/F__F_medium.mp4",
+      "bytes": 6529349,
+      "sha256": "e91a48b51ec76f09b61df4e8b2b92919278065557393f72e78f4ec2b9c5ddb90"
+    },
+    {
+      "case_id": "F",
+      "path": "media/videos/F__F_hard.mp4",
+      "bytes": 8114137,
+      "sha256": "754a4bfc3bd7ceb36ded881b4907fdeb484aeae71f724e0c7b51de41c5c6175b"
+    },
+    {
+      "case_id": "M",
+      "path": "media/videos/M__M_easy_frontlabel.mp4",
+      "bytes": 10752470,
+      "sha256": "c51aae54b9499a2fe4fc97060081eb963da3b6c7cb77d7372080d2c0b21d828b"
+    },
+    {
+      "case_id": "M",
+      "path": "media/videos/M__M_medium_frontlabel.mp4",
+      "bytes": 17093035,
+      "sha256": "4f2c8c9cfc780ebd5bee7278d03e41d8540270ef5452dac9b5b881112251c98d"
+    },
+    {
+      "case_id": "M",
+      "path": "media/videos/M__M_hard_frontlabel.mp4",
+      "bytes": 15955794,
+      "sha256": "ecb1db4836d518a1866b02e3ec0811a9e863ac0a6c73d56b31f074c98b95d5be"
+    },
+    {
+      "case_id": "FR1",
+      "path": "media/videos/FR1__picking__01.mp4",
+      "bytes": 833312,
+      "sha256": "97cfcd4fcdaf7ccb36489e6a00ea388f039bb36cb419de4ff8c5942eed691da0"
+    },
+    {
+      "case_id": "FR1",
+      "path": "media/videos/FR1__picking__02.mp4",
+      "bytes": 816572,
+      "sha256": "1278fc4524b039bb7410bca58cf72240c680d84b2a9e12d34d1c576f5ca848ba"
+    },
+    {
+      "case_id": "FR1",
+      "path": "media/videos/FR1__picking__03.mp4",
+      "bytes": 1468951,
+      "sha256": "0873a3e88414b66397c2331048420d2c5443f4d0df7292f03a5e7fd30ddae1af"
+    },
+    {
+      "case_id": "FR2",
+      "path": "media/videos/FR2__FR2.mp4",
+      "bytes": 3965296,
+      "sha256": "6a76fc76e4f354c2b357ba5986924609bb5feda1fdf9a879a395e91838e5c16a"
+    },
+    {
+      "case_id": "PR1",
+      "path": "media/videos/PR1__PR1_Easy_control_20260919.mp4",
+      "bytes": 1860695,
+      "sha256": "d9239fb2cf3ce7f14a2382402c4e1d6f66b1b5ad20ba556bf66d01d5638cb1fc"
+    },
+    {
+      "case_id": "PR1",
+      "path": "media/videos/PR1__PR1_Medium_control_20260919.mp4",
+      "bytes": 1675275,
+      "sha256": "9a77b4930f2b5cf060e3616d03a64d7d8ee90de60c3759ece06f10cb8db03a66"
+    },
+    {
+      "case_id": "PR1",
+      "path": "media/videos/PR1__PR1_Hard_control_20260919.mp4",
+      "bytes": 1638054,
+      "sha256": "f6a26fbedd9caa01b192047c26b7d804efc17c0d43b7b1c841667cf4d81d928c"
+    },
+    {
+      "case_id": "PR2",
+      "path": "media/videos/PR2__PR2_Easy_control_20260919.mp4",
+      "bytes": 2134251,
+      "sha256": "f47279705c58f2dce2fdda065f60b67caa61fd4835ff6a7bfdd3008726e94a4e"
+    },
+    {
+      "case_id": "PR2",
+      "path": "media/videos/PR2__PR2_Medium_control_20260919.mp4",
+      "bytes": 2065715,
+      "sha256": "2e0c2eda0b86fe1b62aeb8f14c1f03a251ddba867f1fbcf38e01ab3d11e7cdfa"
+    },
+    {
+      "case_id": "PR2",
+      "path": "media/videos/PR2__PR2_Hard_control_20260919.mp4",
+      "bytes": 2052897,
+      "sha256": "e012d09d325f2d6b134f6853afd8895f70dcf522ce5f7ebe785a19fcb7bc6982"
+    },
+    {
+      "case_id": "PR3",
+      "path": "media/videos/PR3__PR3_Easy_head_reference_20260919.mp4",
+      "bytes": 3936053,
+      "sha256": "503bee6c6182270d758a47442c7492547d39d6917c8818466126d8febaf04862"
+    },
+    {
+      "case_id": "PR3",
+      "path": "media/videos/PR3__PR3_Medium_head_reference_20260919.mp4",
+      "bytes": 3989657,
+      "sha256": "28267616407855507872a17eb037116e7f932485e350ec92f92139049972f66e"
+    },
+    {
+      "case_id": "PR3",
+      "path": "media/videos/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "bytes": 3992557,
+      "sha256": "f673fcb76e545d882c49a1bf5bbb22ed25935e7321f56330a124192706aa5f69"
+    },
+    {
+      "case_id": "CP01",
+      "path": "media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+      "bytes": 3978611,
+      "sha256": "011656dfd0740060b689cd6404d49c6f37393fd41b826651a190eb59af5d6beb"
+    },
+    {
+      "case_id": "CP01",
+      "path": "media/videos/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+      "bytes": 11087449,
+      "sha256": "21e8935754a32a07dbc6e4961570ef4f4239885d7375e07a3cce0bb366195187"
+    },
+    {
+      "case_id": "CP01",
+      "path": "media/videos/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+      "bytes": 15639371,
+      "sha256": "bcee731a3fef11af2c9597fd6eb1cd965b35bfe6d3ef89fee5ff03463b30fb91"
+    },
+    {
+      "case_id": "CP02",
+      "path": "media/videos/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "bytes": 8036977,
+      "sha256": "817426d177809ac2be9c0f6e061dcb332cff8a159e2d5c82b23d303ac193e3f1"
+    },
+    {
+      "case_id": "CP02",
+      "path": "media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "bytes": 14069442,
+      "sha256": "97fbe4fe0ac6feeeac5918f5751014238b60439224f4e98120bb40b9ace01bf6"
+    },
+    {
+      "case_id": "CP02",
+      "path": "media/videos/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "bytes": 18239147,
+      "sha256": "4b17341769548a48d60a5de8d2895de5c8824a8d4ed14b21d67f1cf5b2d8bf9b"
+    },
+    {
+      "case_id": "CP03",
+      "path": "media/videos/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+      "bytes": 7307694,
+      "sha256": "14264f1f9cc360f618900b7292112c701f5a1f9022f29b2d39dd316b3f6ffdde"
+    },
+    {
+      "case_id": "CP03",
+      "path": "media/videos/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+      "bytes": 16946439,
+      "sha256": "f4d91c65c0ca5daa4b0f6440dd55c364e7964332437147034e1d5a7cdb437671"
+    },
+    {
+      "case_id": "CP03",
+      "path": "media/videos/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+      "bytes": 12555441,
+      "sha256": "1ad47f57b56b1f23472b52212e8dc02dab6f2c13045114dbbb71a998484db7bd"
+    },
+    {
+      "case_id": "CP04",
+      "path": "media/videos/CP04__CP04_easy.mp4",
+      "bytes": 68719193,
+      "sha256": "5ad7c709bc42ac713cd8c415429b34937ac14e929501a31d70c1a0c08906c769"
+    },
+    {
+      "case_id": "CP05",
+      "path": "media/videos/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+      "bytes": 13399868,
+      "sha256": "c255981e651d9ab8c903ebca2e65827e2acdf06a3d8353074f6a7b9ad792abf5"
+    },
+    {
+      "case_id": "CP05",
+      "path": "media/videos/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "bytes": 9534867,
+      "sha256": "fcfca7e209fb76edebc812455965e710310106038f4164d427d0922b8f434ab1"
+    },
+    {
+      "case_id": "CP05",
+      "path": "media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+      "bytes": 12282236,
+      "sha256": "e498519c78ecfe8f1dad9171dfe40a0cfc86bc5b6277bbf031e8145d51e04811"
+    }
+  ]
+}

@@ -8,7 +8,7 @@
 
 研究主线：计划如何适应物理约束，前一步的实际结果如何改变后一步。展示名称为 Mind2Act World，配套方法名为 Mind2Act Harness；仓库地址、兼容文件名与任务 ID 保持不变。
 
-打开 `index.html` 即可浏览项目介绍、15 项任务与 37 段演示及预览、2 张场景图。请保持 media/、docs/ 和 data/ 的相对位置。
+打开 `index.html` 即可浏览项目介绍、15 项任务与 39 段演示及预览。请保持 media/、docs/ 和 data/ 的相对位置。
 
 如果浏览器限制本地视频，可在解压目录运行 `python3 -m http.server 8765`，访问 http://127.0.0.1:8765/。
 
@@ -30,7 +30,7 @@
 
 运行 `python3 scripts/build.py` 重新生成 HTML、逐任务文档及媒体索引，再用 `python3 scripts/validate.py` 检查资源一致性。不要只改生成后的 HTML，否则下次构建会覆盖。
 
-当前任务与素材同步自 MEMbench 文档 revision 830（2026-09-20）。CP05 已更新为三档完整流程视频，Easy 无琴盖，Medium/Hard 包含开合盖。CP03 仍为局部预览、CP04 为场景图；演示素材不构成模型性能验证。
+当前任务与素材同步自 MEMbench 文档 revision 903（2026-09-25）。CP03 为动态槽架装盘，CP04 为双臂配料与温控烹饪，CP05 更新为揭防尘布与 Hard 音量调节流程。CP03 是使用仿真状态的专家运控；CP04 仅有 Easy 预览；所有演示均不代表模型测评成绩。
 
 ## 配套模型网站
 

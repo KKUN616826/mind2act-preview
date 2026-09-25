@@ -2,7 +2,7 @@
   <p class="eyebrow">Mind2Act / Benchmark</p>
   <h1 id="project-title">Mind2Act World</h1>
   <p class="research-subtitle" lang="en">Evaluating Reasoning–Acting Coordination in Robotic Manipulation</p>
-  <p class="article-meta">研究设计说明 · 更新于 2026 年 9 月 23 日</p>
+  <p class="article-meta">研究设计说明 · 更新于 2026 年 9 月 25 日</p>
   <p class="research-lead">让推理适应执行，让执行结果改变下一步。</p>
   <p class="research-abstract">真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。Mind2Act World 面向 <strong>VLA/WAM、Coding Agent 与混合架构</strong>，分别评估任务级推理、约束感知执行，以及两者在实际物理反馈中的协同表现。</p>
   <div class="research-links"><a href="#motivation">核心问题 ↓</a><a href="#insight-feedback">什么是协同</a><a href="#leaderboard">排行榜占位</a><a href="#cases">完整任务库</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a></div>
@@ -65,5 +65,6 @@
     <tr><td>精细执行</td><td>真实读数、轨迹、剂量、间隙与触发条件</td><td>需固定容差并标定；命令完成不等于效果达标</td></tr>
     <tr><td>动态响应</td><td>环境变化、可用窗口、端到端时延与有效吞吐</td><td>需声明推理时钟；控制器步频不等于模型响应能力</td></tr>
   </tbody></table></div>
+  <details class="notes"><summary>五项协同任务分别施加哪些压力？</summary>__COUPLING_DIMENSIONS__<p class="research-note">这些是任务设计标签，不是模型能力结论。未标注不等于不存在该能力要求；动态响应窗口、物理容差及双臂必要性按各任务说明核验。</p></details>
   <p class="research-note">三组任务提供诊断入口，不是严格隔离的能力测量。模型架构、工具支持与训练条件须分别披露；单套件得分或跨套件差值不能直接作为模块能力的因果证据。</p>
 </section>

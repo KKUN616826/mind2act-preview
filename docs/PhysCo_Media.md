@@ -1,6 +1,6 @@
 # Mind2Act World 演示素材索引
 
-37 段视频、2 张场景图。
+39 段视频、0 张场景图。
 
 ## E · 多批次物料重复件识别
 
@@ -70,18 +70,18 @@
 - [Medium 演示](../media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4)
 - [Hard 演示](../media/videos/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4)
 
-## CP03 · 实验配液
+## CP03 · 动态槽架装盘
 
-- [倒液初步预览](../media/videos/CP03__CP03_CP09_pour_preliminary_20260920.mp4)
-- [搅拌初步预览](../media/videos/CP03__CP03_CP09_stir_preliminary_20260920.mp4)
-- [场景图](../media/images/CP03__H1ugbqxBuoakKgxyoUVcl2Tbnze.png)
+- [Easy · 专家运控演示（仿真状态）](../media/videos/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4)
+- [Medium · 专家运控演示（仿真状态）](../media/videos/CP03__CP03_Medium_5盘_二档16mms_原速.mp4)
+- [Hard · 专家运控演示（仿真状态）](../media/videos/CP03__CP03_Hard_7盘_三档20mms_原速.mp4)
 
-## CP04 · 野餐篮打包
+## CP04 · 双臂配料与温控烹饪
 
-- [场景图](../media/images/CP04__LXDlbJfqvo3mN1xAeoKcdzbqn7K.png)
+- [Easy · 场景/流程预览](../media/videos/CP04__CP04_easy.mp4)
 
 ## CP05 · 电子琴复奏
 
-- [Easy · 完整流程演示](../media/videos/CP05__CP05_easy_完整流程_20260920.mp4)
-- [Medium · 完整流程演示](../media/videos/CP05__CP05_medium_完整流程_20260920.mp4)
-- [Hard · 完整流程演示](../media/videos/CP05__CP05_hard_完整流程_20260920.mp4)
+- [Easy · 中央单棒复奏](../media/videos/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4)
+- [Medium · 双臂揭罩流程](../media/videos/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4)
+- [Hard · 揭罩与音量调节流程](../media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4)
