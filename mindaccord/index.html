@@ -1,22 +1,22 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: file:; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Mind2Act Harness · Cost-Aware Astra–Jev Coordination</title><meta name="description" content="Mind2Act Harness proposal：通过带证据的结构化感知、候选约束的 Jev harness 和有界工作记忆，研究成本感知的 Astra–Jev 机器人操作协同。"><style>:root{--ink:#202a30;--muted:#53656c;--line:#dce5e6;--accent:#21675d;--blue:#3b6382;--tint:#f3f8f7;--font:"PingFang SC","Microsoft YaHei",Arial,sans-serif}
+<title>Mind2Act Harness · Coordination and Self-Improvement</title><meta name="description" content="Mind2Act Harness：面向目标可复用、执行证据会变化的多步机器人任务，研究局内推理分配与局间可验证的 RSI 改进。"><style>:root{--ink:#202a30;--muted:#53656c;--line:#dce5e6;--accent:#21675d;--blue:#3b6382;--tint:#f3f8f7;--font:"PingFang SC","Microsoft YaHei",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:#fff;color:var(--ink);font:16px/1.9 var(--font)}a{color:var(--accent);text-underline-offset:4px}button,select{font:inherit}button,a,select{touch-action:manipulation}button{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:4px;padding:8px 13px;color:var(--ink)}button:hover{border-color:var(--accent)}:focus-visible{outline:3px solid #bc7e30;outline-offset:4px}.skip{position:absolute;top:-100px}.skip:focus{top:5px;z-index:10;background:white}header{position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line);background:#fffffff5;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:15px max(24px,calc((100% - 1200px)/2))}.brand{text-decoration:none;font-size:27px;font-weight:700;white-space:nowrap}header nav{display:flex;gap:20px;align-items:center;font-size:12px}header nav a{text-decoration:none;white-space:nowrap}#menuToggle{display:none}main{max-width:1060px;margin:auto;padding:0 36px}section{padding:58px 0;border-bottom:1px solid var(--line);scroll-margin-top:90px}h1,h2,h3,h4,p,figure{margin:0}h1{font-size:58px;line-height:1.15}h2{font-size:31px;line-height:1.5;margin:10px 0 22px}h3{font-size:20px;line-height:1.6;margin:24px 0 10px}h4{font-size:15px;margin-bottom:10px}p{margin:15px 0;overflow-wrap:anywhere}.kicker{font-size:11px;font-weight:650;color:var(--blue);margin:0 0 16px}.hero{text-align:center;padding:50px 0 35px}.subtitle{font-size:23px;line-height:1.6;max-width:850px;margin:18px auto;text-wrap:balance}.lead{font-size:25px;line-height:1.7;margin:26px 0 18px}.abstract{font-size:15px;max-width:810px;margin:0 auto;color:var(--muted)}.links{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0;font-size:13px}.hero .links{justify-content:center}.status{font-size:12px;color:var(--muted)}.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:32px 0 0}.principles article{border-top:3px solid var(--accent);padding-top:15px;min-width:0}.principles article:nth-child(2){border-color:var(--blue)}.principles article:nth-child(3){border-color:#a96843}.principles span{font-size:12px;color:var(--muted)}.principles h3{font-size:17px;margin:10px 0;overflow-wrap:anywhere}.principles p{font-size:14px;color:var(--muted)}.note{font-size:13px;color:var(--muted);border-left:3px solid #c7d9df;padding:8px 0 8px 15px;margin:20px 0}.model-figure{margin:32px 0}.model-figure img{width:100%;height:auto;display:block;background:white}.model-figure figcaption{font-size:12px;color:var(--muted);padding:12px 0;border-bottom:1px solid var(--line)}.model-figure a{cursor:zoom-in}.module-tools,.state-tools{display:flex;gap:7px;flex-wrap:wrap;margin:24px 0 0}.module-tools button,.state-tools button{font-size:12px}.module-tools [aria-pressed=true],.state-tools [aria-pressed=true]{color:white;background:var(--accent);border-color:var(--accent)}.inspector{display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:22px 0;min-height:340px}.inspector small{color:var(--blue);font-size:12px}.inspector h3{margin-top:8px}.inspector p{font-size:14px}.inspector dt{font-size:12px;color:var(--muted)}.inspector dd{margin:3px 0 15px;font-size:14px}.inspector dl{margin:0}.table-scroll{overflow:auto;max-width:100%;border:1px solid var(--line);margin:25px 0}table{width:100%;border-collapse:collapse;font-size:13px;min-width:580px}th,td{padding:14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--tint);font-weight:600}tr:last-child td{border-bottom:0}.schema-label{display:flex;align-items:center;gap:15px;font-size:13px;margin-top:25px}.schema-label select{font-size:13px;border:1px solid var(--line);padding:8px;max-width:100%;border-radius:4px;background:white}pre{background:#f3f6f8;border:1px solid var(--line);padding:22px;overflow:auto;max-height:420px;font:13px/1.8 Menlo,Consolas,monospace;tab-size:2}code{font-family:Menlo,Consolas,monospace}.sequence{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;padding:0;gap:22px}.sequence li{border-top:2px solid var(--blue);padding-top:12px}.sequence b,.sequence span{display:block}.sequence span{font-size:13px;color:var(--muted);margin-top:9px}.state-result{min-height:300px}.state-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.state-columns p{font-size:14px;color:var(--muted)}.formula{font:14px/2 Menlo,Consolas,monospace;background:var(--tint);padding:18px;overflow-wrap:anywhere}.source-list{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px}.source-list article{border-top:1px solid var(--line);padding-top:15px;scroll-margin-top:100px}.source-list a{font-size:14px}.source-list p{font-size:12px;color:var(--muted)}footer{max-width:1060px;margin:auto;padding:30px 36px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}dialog{border:1px solid var(--line);width:1440px;max-width:96vw;max-height:94vh;padding:16px;background:white}dialog::backdrop{background:#152a35b0}.dialog-bar{display:flex;gap:15px;align-items:center;justify-content:space-between}.dialog-bar h3{font-size:15px;margin:0}.dialog-bar a{font-size:12px;white-space:nowrap}.dialog-image{overflow:auto;max-height:calc(94vh - 85px);margin-top:14px}.dialog-image img{width:100%;height:auto;display:block}
 @media(max-width:800px){header{padding:12px 18px}#menuToggle{display:block;font-size:12px}header nav{display:none;position:absolute;top:65px;left:0;right:0;background:white;padding:20px;flex-wrap:wrap;border-bottom:1px solid var(--line)}header nav.open{display:flex}main{padding:0 20px}.hero{padding:32px 0}h1{font-size:42px}.subtitle{font-size:19px}.lead{font-size:22px}.abstract{font-size:14px}section{padding:35px 0}h2{font-size:25px}.principles,.inspector,.state-columns,.source-list{grid-template-columns:1fr;gap:20px}.inspector,.state-result{min-height:0}.sequence{grid-template-columns:1fr 1fr}p{font-size:15px}.schema-label{display:block}.schema-label select{display:block;margin-top:8px;width:100%}.dialog-image img{min-width:1100px}.dialog-bar h3{font-size:12px}.dialog-bar button{font-size:12px}.formula{font-size:12px}footer{padding:24px 20px;flex-wrap:wrap}}
 header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media(max-width:800px){h1{font-size:36px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,.module-tools,.state-tools,.links,#schemaSelect{display:none}main{max-width:none}.hero{padding-top:0}section{padding:20px 0}.model-figure,table{break-inside:avoid}.table-scroll{overflow:visible}table{min-width:0}pre{max-height:none;white-space:pre-wrap}.principles{grid-template-columns:repeat(3,1fr)}}
 </style></head><body>
 <a class="skip" href="#architecture">跳到方法</a>
-<header><a class="brand" href="../index.html">Mind2Act</a><button id="menuToggle" aria-controls="siteNav" aria-expanded="false">导航</button><nav id="siteNav"><a href="#overview" aria-current="page">Harness</a><a href="#architecture">方法</a><a href="#handoff">结构化交接</a><a href="#memory">工作记忆</a><a href="#cost">成本路由</a><a href="#evaluation">验证设计</a><a href="../index.html">Mind2Act World ↗</a></nav></header>
+<header><a class="brand" href="../index.html">Mind2Act</a><button id="menuToggle" aria-controls="siteNav" aria-expanded="false">导航</button><nav id="siteNav"><a href="#overview" aria-current="page">Harness</a><a href="#architecture">方法</a><a href="#handoff">结构化交接</a><a href="#memory">工作记忆</a><a href="#cost">认知更新</a><a href="#rsi">RSI</a><a href="#evaluation">验证设计</a><a href="../index.html">Mind2Act World ↗</a></nav></header>
 <main>
-<section class="hero" id="overview"><p class="kicker">Mind2Act / Harness proposal / Astra × Jev</p><h1>Mind2Act Harness</h1><p class="subtitle" lang="en">Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation</p><p class="lead">把复杂推理交给 Astra，<br>把有证据、有候选的局部决策交给 Jev。</p><p class="abstract">上游完成子任务拆解，并调用感知工具获取结构化信息；下游通过专门的 harness 接收契约、有效场景状态与局内记忆。研究重点是：这些信息能否复用，哪些事件值得重新调用大模型，以及完整系统能否以更低总成本完成相同任务。</p><div class="links"><a href="docs/MindAccord_Proposal_v2.md" download>Proposal v2 ↓</a><a href="#handoff">交接接口</a><a href="../index.html">Benchmark ↗</a></div><p class="status">方案设计 · 尚未完成 Astra–Jev 端到端接入及成本评测 · 本轮不研究 RSI</p></section>
+<section class="hero" id="overview"><p class="kicker">Mind2Act / Harness proposal / Astra × Jev</p><h1>Mind2Act Harness</h1><p class="subtitle" lang="en">Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation</p><p class="lead">让可复用的理解支持行动，<br>让新的执行反馈决定认知需求。</p><p class="abstract">多步机器人操作中，任务目标可能保持不变，行动所依赖的证据却会改变。Mind2Act Harness 研究如何分配视觉推理：Cognitive 提供可见事实与短期意图，Jev 根据回执选择工具、补观察、读取信息或请求重规划，视觉执行工具完成连续控制。RSI 将开发反馈转为经过验证的跨局经验与策略改进。局内决定下一步，局间改进协作方式，共同追求任务能力、成本和完成时间的改善。</p><div class="links"><a href="docs/MindAccord_Proposal_v2.md" download>Proposal v2 ↓</a><a href="#handoff">交接接口</a><a href="../index.html">Benchmark ↗</a></div><p class="status">2026-09-24 更新 · Case7 外部原型已运行 · RSI 为近期实现重点，尚未接入 · 协作与改进收益待验证</p></section>
 
-<section id="motivation"><p class="kicker">01 / THE RESEARCH QUESTION</p><h2>减少重复推理，不能以丢失任务信息为代价。</h2><p>把大模型换成更便宜的决策模型，并不自动降低系统成本。视觉理解、状态整理、动作候选生成，以及错误后的重试和升级，都可能成为新的主要开销。</p><p>我们的假设是：高层规划与局部执行需要的信息并不完全相同。Astra 可以在子目标边界建立契约和感知计划，harness 则持续维护可追溯状态；Jev 只在有意义的决策事件上选择适用候选。收益需要在同等任务条件和完整成本账本下验证。</p><div class="principles"><article><span>01</span><h3>Evidence-Grounded<br>State Compilation</h3><p>将感知结果编译成带来源、坐标系、不确定性与失效条件的文本状态。</p></article><article><span>02</span><h3>Candidate-Constrained<br>Reactive Decision</h3><p>将完整动作绑定为候选，由 Jev 选择；数值、权限与时效检查留给代码。</p></article><article><span>03</span><h3>Budgeted Working Memory<br>and Routing</h3><p>保留关键任务事实，限制无关历史，按事件选择刷新、局部判断或升级。</p></article></div></section>
+<section id="motivation"><p class="kicker">01 / THE RESEARCH QUESTION</p><h2>目标可以复用，执行依据需要更新。</h2><p>GPT-6 Astra 这类视觉工具 Agent 可以解释任务并调用机器人，但动作会改变场景，重新看图和推理又需要时间。每个工具边界都完整重想可能产生冗余开销；长期沿用旧计划，则可能在目标移动、遮挡变化或执行失败后继续使用失效依据。</p><p><strong>核心 insight 是：语义目标与局部执行证据可能以不同速度变化。</strong> 一次失败可能只需要局部测量，也可能需要重新理解场景。研究问题是如何依据反馈选择所需推理层级，而不是预设双 Agent 一定更快。</p><p>Jev 的作用是让一次 Cognitive 理解支持多次局部选择，并将信息获取和升级纳入选择范围。文本交接、候选构造与额外调用也有成本；若每次仍需 Astra 完整看图，或规则已足够可靠，增加 Jev 可能没有收益。</p><div class="principles"><article><span>01</span><h3>Reusable<br>Cognitive Context</h3><p>带来源的事实与短期意图可以复用；测量哪些决策仍有足够依据。</p></article><article><span>02</span><h3>Feedback-Guided<br>Local Decisions</h3><p>由 Jev 选择动作、信息获取或升级，与相同工具的 Astra 和规则比较。</p></article><article><span>03</span><h3>Demand-Driven<br>Cognitive Updates</h3><p>比较固定与按需更新，在成功能力、总成本和完成时间之间寻找更好的取舍。</p></article></div><p>不同布局和任务还可能反复暴露相似的交接与工具使用问题。RSI 进一步研究：系统能否依据自己的开发记录，提出并验证改进，让下一局使用更合适的经验与协作策略，而不依赖逐次人工修改。</p><p class="note">局内调度与局间改进是相连的研究方向。已有机制的组合不自动构成创新；协作与自我改进收益均需独立验证。</p></section>
 
-<section id="architecture"><p class="kicker">02 / METHOD</p><h2>从任务拆解到物理执行，明确每一层的职责。</h2><p>Astra 是上游规划与感知调度者；Jev 是文本状态上的候选选择者；Runtime 与控制器负责真实动作。图中连线表示目标设计，不代表新系统已经接通。</p><figure class="model-figure" id="figure-architecture"><a href="figures/architecture.svg" data-figure="architecture" aria-label="放大：Astra–Jev：带证据的结构化交接"><img src="figures/architecture.svg" width="1480" height="760" loading="lazy" alt="目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。"></a><figcaption>目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。</figcaption></figure><div class="module-tools" role="group" aria-label="模型模块"><button data-module="cognitive" aria-pressed="true">GPT-6 Astra · Task Planner</button><button data-module="tools" aria-pressed="false">Perception Tools</button><button data-module="compiler" aria-pressed="false">Evidence-Grounded State Compiler</button><button data-module="registry" aria-pressed="false">Candidate Registry</button><button data-module="reactive" aria-pressed="false">Jev · Candidate Selector</button><button data-module="runtime" aria-pressed="false">Guarded Execution Runtime</button><button data-module="memory" aria-pressed="false">Bounded Working Memory</button><button data-module="router" aria-pressed="false">Cost-Aware Router</button></div><div id="moduleInspector" class="inspector" aria-live="polite"><div><small>方案设计 · 待实现与验证</small><h3>GPT-6 Astra · Task Planner</h3><p>在子目标边界或冲突时组织复杂推理，调用 perception tools 并声明当前执行目标。</p></div><div><dl><dt>输入</dt><dd>任务指令、可见图像、精确任务账本和异常事件</dd><dt>输出</dt><dd>子目标契约、感知计划与任务记忆</dd></dl><p class="note">实际 API 标识与调用配置待固定；不把每帧大模型调用当作默认循环。</p></div></div><p class="note">GPT-6 Astra 为指定的上游配置名称，实际 API 标识与调用设置待固定。Jev 的版本与输入限制以运行前官方文档核验为准；不将 API 延迟或控制器频率当作系统实时性结论。</p></section>
+<section id="architecture"><p class="kicker">02 / METHOD</p><h2>短期意图、局部选择与连续控制分工协作。</h2><p>Cognitive 负责视觉理解与计划修订；Jev 根据当前报告与新回执决定下一次工具调用；视觉工具负责动作内部控制。Runtime 管事件、授权和取消，独立评分器在结束后判断实际结果。下图展示局内分工；局间 RSI 由独立 Critic、验证器与版本管理连接到后续任务。</p><figure class="model-figure" id="figure-architecture"><a href="figures/architecture.svg" data-figure="architecture" aria-label="放大：Astra–Jev：带证据的结构化交接"><img src="figures/architecture.svg" width="1480" height="760" loading="lazy" alt="方法分工：Cognitive 提供可复用意图，Jev 选择动作、信息或升级，视觉工具负责连续控制；通用收益待验证。"></a><figcaption>方法分工：Cognitive 提供可复用意图，Jev 选择动作、信息或升级，视觉工具负责连续控制；通用收益待验证。</figcaption></figure><div class="module-tools" role="group" aria-label="模型模块"><button data-module="cognitive" aria-pressed="true">GPT-6 Astra · Task Planner</button><button data-module="tools" aria-pressed="false">Visual Perception &amp; Execution Tools</button><button data-module="compiler" aria-pressed="false">Evidence-Grounded State Compiler</button><button data-module="registry" aria-pressed="false">Candidate Registry</button><button data-module="reactive" aria-pressed="false">Jev · Candidate Selector</button><button data-module="runtime" aria-pressed="false">Guarded Execution Runtime</button><button data-module="memory" aria-pressed="false">Bounded Working Memory</button><button data-module="router" aria-pressed="false">Feedback-Driven Cognitive Updates</button><button data-module="rsi" aria-pressed="false">RSI · Critic &amp; Versioned Improvement</button></div><div id="moduleInspector" class="inspector" aria-live="polite"><div><small>Case7 外部原型已接通 · 跨任务待验证</small><h3>GPT-6 Astra · Task Planner</h3><p>形成可复用的任务依据，按生命周期、固定事件或 Jev 升级请求更新；当前仍保留巡检和放置后更新。</p></div><div><dl><dt>输入</dt><dd>任务、合法图像／本体状态、实际回执与待处理事件</dd><dt>输出</dt><dd>可见事实、未知项、短期意图与授权修订</dd></dl><p class="note">按需更新收益待测；在线会话与离线 Critic 分开，Cognitive 不代写 Jev 的局内动作记忆。</p></div></div><p class="note">Case7 外部原型已接通该分工，本仓库维护方法提案与展示。RSI 模块是近期设计，其验证与发布链尚未接入 Jev；正式比较前固定调用设置并记录实际模型版本。</p></section>
 
-<section id="handoff"><p class="kicker">03 / STRUCTURED HANDOFF</p><h2>交给 Jev 的是可审计的决策状态。</h2><p>Jev 接收文本而非图像，不能直接代替视觉 Reactive 或连续动作生成。结构化交接必须说明当前目标、观察依据、剩余任务和可执行选项；仅把图像路径或自由描述放进 JSON 不构成完成 grounding。<a href="#source-state">[State]</a> <a href="#source-choice">[Choice]</a></p><div class="table-scroll"><table><thead><tr><th>接口</th><th>必要信息</th><th>谁负责</th></tr></thead><tbody><tr><td>SubgoalContract</td><td>目标、版本、前置条件、工具许可、检查点与预算</td><td>Astra 提议，harness 校验</td></tr><tr><td>SceneState</td><td>对象绑定、事实来源、时间、单位、坐标系与未知项</td><td>Perception + 状态维护</td></tr><tr><td>Candidate Registry</td><td>ID 绑定完整动作、参数、来源、期限与授权版本</td><td>候选提供者 + 执行适配器</td></tr><tr><td>DecisionPacket</td><td>契约引用、有效证据、相关记忆和合法候选</td><td>State Compiler → Jev</td></tr></tbody></table></div>
-<p class="note">下列为合成接口示例，不是运行日志。示例中坐标变换未知，所以不提供运动候选；selected_id 为空，尚未调用 Jev。实际运动参数必须由经过声明和验证的候选提供者绑定。</p><label class="schema-label">接口示例<select id="schemaSelect"><option value="subgoal-contract">SubgoalContract</option><option value="scene-state">SceneState</option><option value="decision-packet">DecisionPacket</option><option value="jev-request">Jev request（示意）</option></select></label><pre><code id="schemaCode">{
+<section id="handoff"><p class="kicker">03 / STRUCTURED HANDOFF</p><h2>交给 Jev 的是可审计的决策状态。</h2><p>Jev 接收文本而非图像，不能直接代替视觉 Reactive 或连续动作生成。结构化交接必须说明当前目标、观察依据、剩余任务和可执行选项；仅把图像路径或自由描述放进 JSON 不构成完成 grounding。<a href="#source-state">[State]</a> <a href="#source-choice">[Choice]</a></p><div class="table-scroll"><table><thead><tr><th>接口</th><th>必要信息</th><th>谁负责</th></tr></thead><tbody><tr><td>SubgoalContract</td><td>目标、版本、区域引用、约束、工具许可与预算</td><td>Astra 提议，harness 校验</td></tr><tr><td>SceneState</td><td>当前区域引用、事实来源、时间、单位、坐标系与未知项</td><td>Perception + 状态维护</td></tr><tr><td>Candidate Registry</td><td>ID 绑定完整工具请求、输入引用、来源与授权版本</td><td>候选提供者 + 执行适配器</td></tr><tr><td>DecisionPacket</td><td>契约引用、有效证据、相关记忆和合法候选</td><td>State Compiler → Jev</td></tr></tbody></table></div>
+<p class="note">下列为合成接口示例，不是运行日志。示例中坐标变换未知，所以不提供运动候选；selected_id 为空，尚未调用 Jev。几何准备被选中后才启动计算；实际运动参数由执行工具依据合法观察绑定。</p><label class="schema-label">接口示例<select id="schemaSelect"><option value="subgoal-contract">SubgoalContract</option><option value="scene-state">SceneState</option><option value="decision-packet">DecisionPacket</option><option value="jev-request">Jev request（示意）</option></select></label><pre><code id="schemaCode">{
   &quot;example_only&quot;: true,
   &quot;episode_id&quot;: &quot;illustration-cp01&quot;,
   &quot;goal_id&quot;: &quot;fill-plate-a&quot;,
@@ -42,15 +42,17 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
 }</code></pre><a id="schemaDownload" href="data/examples/subgoal-contract.json" download>下载当前示例 ↓</a>
 <h3>回应必须再次校验，才能进入物理执行。</h3><ol class="sequence"><li><b>编译</b><span>保留来源，拒绝未知单位与过期绑定。</span></li><li><b>选择</b><span>一次选择一个完整候选，避免独立参数错误拼接。</span></li><li><b>复核</b><span>响应回来后重新检查目标版本、时效和预算。</span></li><li><b>执行</b><span>唯一动作入口派发；实际效果另行确认。</span></li></ol><p class="note">合法候选不等于物理上必然成功。confidence 不能代替真实抓取、放稳或触发证据；最终任务结果由独立环境判据确认。</p></section>
 
-<section id="memory"><p class="kicker">04 / EPISODE-LOCAL MEMORY</p><h2>窗口可以缩短，未完成的任务事实不能丢。</h2><p>Jev 不自动记住上一轮请求。harness 为每次请求组织必要上下文，把稳定任务事实、近期执行事件、历史摘要与当前几何分开维护。</p><figure class="model-figure" id="figure-memory"><a href="figures/packet-memory.svg" data-figure="memory" aria-label="放大：DecisionPacket：事实、记忆与候选"><img src="figures/packet-memory.svg" width="1480" height="760" loading="lazy" alt="任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。"></a><figcaption>任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。</figcaption></figure><div class="table-scroll"><table><thead><tr><th>记忆类型</th><th>保留什么</th><th>何时失效或压缩</th></tr></thead><tbody><tr><td>Pinned task facts</td><td>未完成订单、规则、完整待执行路线与阶段前提</td><td>按依赖保留；不能随短窗口淘汰</td></tr><tr><td>Recent event window</td><td>最近 K 个动作、回执、失败与效果判断</td><td>K 与 token 预算由开发集选择并冻结</td></tr><tr><td>Evidence-linked text</td><td>带来源索引的早期事件摘要、待确认假设</td><td>矛盾触发复核；不能覆盖精确账本</td></tr><tr><td>Live scene cache</td><td>当前对象位置、跟踪状态和接触证据</td><td>随运动、遮挡或身份变化失效；不能从旧摘要复活坐标</td></tr></tbody></table></div><p class="note">自由文本摘要由 Astra 或声明的摘要模块生成，费用记账。这里仅讨论单次任务内的工作记忆；跨局经验晋升、RSI 与权重更新不属于当前 proposal。</p></section>
+<section id="memory"><p class="kicker">04 / EPISODE-LOCAL MEMORY</p><h2>Jev 决定记什么，程序如实记录动作。</h2><p>Jev 每次读取提交的文本状态。动作记忆的保存、读取和删除由 Jev 主动选择，确定性程序提取固定字段；Cognitive 持久会话独立维护，不代写动作记忆。</p><figure class="model-figure" id="figure-memory"><a href="figures/packet-memory.svg" data-figure="memory" aria-label="放大：DecisionPacket：当前依据、近期事件与主动记忆"><img src="figures/packet-memory.svg" width="1480" height="760" loading="lazy" alt="当前报告与计划、最近工具交互、显式读取的动作记忆进入决策输入；Jev 决定保存／读／删，程序固定编码。"></a><figcaption>当前报告与计划、最近工具交互、显式读取的动作记忆进入决策输入；Jev 决定保存／读／删，程序固定编码。</figcaption></figure><div class="table-scroll"><table><thead><tr><th>信息</th><th>内容</th><th>访问与失效</th></tr></thead><tbody><tr><td>当前认知与计划</td><td>可见事实、未知项、有效授权与来源时间</td><td>保留报告年龄，更新不伪造新观察</td></tr><tr><td>Recent event window</td><td>最近四次工具交互与引用</td><td>读取也计入窗口，未保存的过期记录不能从日志恢复</td></tr><tr><td>ActionMemory</td><td>Jev 选定回执的来源、参数、实际进度、终态及错误</td><td>32 条／32 KiB；默认仅索引，正文主动读；满容量由 Jev 删除</td></tr><tr><td>当前感知与搬运状态</td><td>最新区域卡片、临时关联及实际测量</td><td>不建立全局身份表，不从旧摘要恢复未知几何</td></tr></tbody></table></div><p class="note">局内记录不自动摘要、写入或淘汰；跨局经验由离线 Critic 提出，经 RSI 验证发布后按需读取，不复活旧日志。已核对的 Case7 开发局未使用主动记忆，不能用该机制解释成功；记忆收益需在信息消失后的序列或订单任务中验证。</p></section>
 
-<section id="cost"><p class="kicker">05 / COST-AWARE ROUTING</p><h2>调用谁，取决于新信息和剩余预算。</h2><p>已有健康动作继续执行时，无需模型反复回答“继续”。证据过期先局部刷新；有效状态中的语义选择交给 Jev；目标冲突、候选不足或重大歧义再回到 Astra。</p><figure class="model-figure" id="figure-routing"><a href="figures/routing.svg" data-figure="routing" aria-label="放大：成本感知的事件路由"><img src="figures/routing.svg" width="1480" height="760" loading="lazy" alt="继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。"></a><figcaption>继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。</figcaption></figure><div class="state-tools" role="group" aria-label="路由场景"><button data-state="ongoing" aria-pressed="true">动作仍在执行</button><button data-state="unknown" aria-pressed="false">感知已过期</button><button data-state="revoked" aria-pressed="false">子目标冲突</button><button data-state="budget" aria-pressed="false">预算不足</button></div><div id="stateResult" class="state-result" aria-live="polite"><h3>保留授权，等待实际事件</h3><div class="state-columns"><article><h4>Astra</h4><p>不为无关未来计划更新撤销当前授权。</p></article><article><h4>Jev harness</h4><p>不向 Jev 重复询问确定性的“继续”。</p></article><article><h4>Runtime</h4><p>保持健康动作，等待回执或显式检查点。</p></article></div><p class="note">调用数减少属于待测目标；没有新的模型或机器人结果。</p></div><p class="note">以上为路由设计示意，不是实际决策结果。预算不足不能成为跳过必要观测或放宽物理检查的理由。</p><h3>总成本必须包含所有层与失败路径。</h3><p class="formula">C_total = C_Astra + C_perception + C_candidates + C_Jev + C_summary + C_retries/fallback + C_execution</p><p>API、GPU/工具与仿真开销分开记录，每次实际调用只记一次。报告所有尝试的平均成本，以及<strong>所有尝试的总成本 / 成功 episode 数</strong>，包括失败与升级的费用；成功数为零时该比值未定义。</p><p>先固定任务成功与时限约束，再比较成本。时延按实际关键路径测量，异步耗时不简单相加；固定环境时钟、time_scale、负载和并发。当前不提供虚构价格、节省比例或成本曲线。</p></section>
+<section id="cost"><p class="kicker">05 / FEEDBACK-DRIVEN COGNITIVE UPDATES</p><h2>从执行反馈判断需要哪一层支持。</h2><p>Jev 在新回执或新报告到达时选择工具；无事件时等待。执行中不逐运动阶段重复询问模型。局部信息不足时可以补观察，意图或指代需要修订时可以升级 Cognitive。</p><figure class="model-figure" id="figure-routing"><a href="figures/routing.svg" data-figure="routing" aria-label="放大：基于执行反馈的认知更新"><img src="figures/routing.svg" width="1480" height="760" loading="lazy" alt="当前执行等待事件，Jev 选择局部动作、补证据或升级；现有固定认知触发与完全按需方案需分别比较。"></a><figcaption>当前执行等待事件，Jev 选择局部动作、补证据或升级；现有固定认知触发与完全按需方案需分别比较。</figcaption></figure><div class="state-tools" role="group" aria-label="路由场景"><button data-state="ongoing" aria-pressed="true">动作仍在执行</button><button data-state="unknown" aria-pressed="false">感知已过期</button><button data-state="revoked" aria-pressed="false">子目标冲突</button><button data-state="budget" aria-pressed="false">预算不足</button></div><div id="stateResult" class="state-result" aria-live="polite"><h3>保留授权，等待实际事件</h3><div class="state-columns"><article><h4>Astra</h4><p>保留当前有效授权；独立的认知触发仍可更新后续计划。</p></article><article><h4>Jev harness</h4><p>无新事件时等待，不反复询问“继续”。</p></article><article><h4>Runtime</h4><p>执行工具负责动作内部控制，Runtime 收集终态和新事件。</p></article></div><p class="note">Case7 已按事件运行；相对其他调度的成本与时延收益尚未隔离验证。</p></div><p class="note">当前 Case7 仍保留 40 秒巡检、放置后更新、计划耗尽和补计划等触发。完全按需更新是待验证方案，不能把已有规则等同于只在必要时思考。</p><h3>比较完整成本与实际关键路径。</h3><p class="formula">C_total = C_Astra + C_perception + C_candidates + C_Jev + C_memory + C_retries + C_execution</p><p>API、感知、编码／检索、会话压缩、候选生成和执行成本分别记录。报告所有尝试的平均成本与总成本／成功 episode 数，包括失败费用；成功数为零时该比值未定义，未知费用记未知。</p><p>少一次调用不保证节省其整个响应时间，该调用可能与动作重叠。延迟按真实时间区间与关键路径测量，固定环境时钟、实际倍率、负载和并发；不以控制器频率替代系统响应速度。</p></section>
 
-<section id="alignment"><p class="kicker">06 / TASK REQUIREMENTS</p><h2>从案例依赖反推状态与记忆需求。</h2><div class="table-scroll"><table><thead><tr><th>案例</th><th>需要保留</th><th>主要待验证点</th></tr></thead><tbody><tr><td>E / P</td><td>身份、累计需求与实际完成量</td><td>感知绑定与账本更新，不以动作回执代替入盘</td></tr><tr><td>S / M / F</td><td>空间绑定、完整顺序与映射假设</td><td>窗口压缩是否丢失必要依赖</td></tr><tr><td>FR1 / FR2</td><td>当前目标、窗口与释放状态</td><td>刷新频率和完整端到端时延</td></tr><tr><td>PR1 / PR2 / PR3</td><td>目标读数、参考轨迹与实际残差</td><td>候选参数绑定与连续控制能力</td></tr><tr><td>CP01 / CP02</td><td>订单 / 局部位置与阶段前提</td><td>运动中的状态失效与升级成本</td></tr><tr><td>其他组合任务</td><td>按核定规范保留配方、空间或序列依赖</td><td>环境、候选与判据接入后再测，不宣称已覆盖</td></tr></tbody></table></div><a href="../index.html#cases">返回 Mind2Act World 任务库 →</a></section>
+<section id="rsi"><p class="kicker">06 / NEAR-TERM RSI</p><h2>局内反馈指导行动，跨局反馈改进协作。</h2><p>RSI 是紧接当前原型的实现重点。动作 RSI 改进的是“如何使用已注册工具”，不把完整回放或低层轨迹塞进 Jev。在线 Jev 只看当前报告、最近交互、少量经验摘要，完整动作记录交给局间 Critic 分批分析；当前是待实现设计，不声明 Jev 已具备自主改进收益。</p><ol class="sequence"><li><b>记录与归因</b><span>Runtime 固定提取短 ActionSlice；独立 Critic 核对实际回执，识别重复问题。</span></li><li><b>提出改进</b><span>生成带来源、适用条件、反例和父版本的经验卡或策略补丁。</span></li><li><b>隔离验证</b><span>比较父版本与候选的闭环效果；无收益或有退化则不激活。</span></li><li><b>版本化复用</b><span>后续局使用固定快照；退化时回滚，新开发记录支持下一轮。</span></li></ol><div class="table-scroll"><table><thead><tr><th>改进对象</th><th>作用</th><th>接入顺序</th></tr></thead><tbody><tr><td>Cognitive 经验</td><td>改善可见事实、意图交接与重规划判断</td><td>首版双经验库</td></tr><tr><td>Jev 工具使用经验</td><td>辅助判断信息缺口、工具回执、重试与升级</td><td>首版按需读取；Agent 仍决定动作</td></tr><tr><td>交接与调度补丁</td><td>修改声明范围内的提示、编码或调用配置</td><td>经验闭环接通后扩展，独立验证</td></tr></tbody></table></div><p>每局固定一个策略与经验版本，局内动作记忆仍从空开始；Critic 不控制实时机械臂。Runtime 只按角色、工具能力和版本做兼容性过滤，在线最多带入少量卡片，经验详情一次只读一张；Choice 选项过多时采用分层读取，不展开整库。</p><p class="note">验证与正式测试不进入改进队列，正式测试期间冻结版本。评分器、观察权限与授权协议不属于候选可修改范围；改进成本包括 Critic、验证及失败候选。首个里程碑是完成一次有证据的候选接受或拒绝闭环。</p></section>
 
-<section id="evaluation"><p class="kicker">07 / EVALUATION PLAN</p><h2>比较完整系统，也隔离选择器的贡献。</h2><p>当前没有新实验结果。先获取原生 trace，随后做无动作的影子评估，再做在线闭环；离线决策一致不能替代物理成功。</p><div class="table-scroll"><table><thead><tr><th>组别</th><th>配置</th><th>检验内容</th></tr></thead><tbody><tr><td>A</td><td>Astra 主导的完整流程</td><td>系统级基线</td></tr><tr><td>B</td><td>统一状态 / 候选 + 规则</td><td>是否需要模型选择</td></tr><tr><td>C</td><td>统一状态 / 候选 + Astra 仅输出 ID</td><td>公平的输出与输入对照</td></tr><tr><td>D</td><td>统一状态 / 候选 + Jev</td><td>选择器表现与时延</td></tr><tr><td>E</td><td>D + 有界记忆 + 事件路由</td><td>完整成本—任务表现权衡</td></tr></tbody></table></div><p>B–E 共享感知与候选提供模块；A 是系统比较。逐任务报告成功率、候选覆盖率、过期拒绝率、升级率、总成本与时延分位数，并附样本数和不确定性。</p><div class="principles"><article><h3>信息是否足够？</h3><p>消融 pinned facts，比较长历史与窗口摘要；检查序列、计数及证据丢失。</p></article><article><h3>路由是否有效？</h3><p>比较每决策事件刷新与事件触发复用；固定阈值后在独立实例测试。</p></article><article><h3>收益是否真实？</h3><p>计入感知、摘要、候选和 fallback；保留失败费用，披露可用任务范围。</p></article></div><p class="note">若每次 Jev 决策都依赖 Astra 完整重做视觉推理，或总成本和尾延迟未改善，应报告负面结果并调整分工。</p></section>
+<section id="alignment"><p class="kicker">07 / TASK REQUIREMENTS</p><h2>目标在一段时间内稳定，反馈会改变下一步选择。</h2><p>这类多步任务允许复用部分理解，同时要求识别局部信息不足或计划失效。长程本身不保证需要复杂策略；无分支流水线可能只需规则，每步都需新语义理解的任务也可能没有认知复用空间。</p><div class="table-scroll"><table><thead><tr><th>案例</th><th>任务特性</th><th>主要待验证点</th></tr></thead><tbody><tr><td>Case7 清框原型</td><td>多次搬运共享目标，动作改变可见区域</td><td>已有可运行证据；尚不足以证明强记忆或动态时限能力</td></tr><tr><td>E / P</td><td>身份、累计需求与实际完成量</td><td>反馈后的任务进度，不能以命令结束替代入盘</td></tr><tr><td>S / M / F</td><td>空间绑定、完整顺序与映射假设</td><td>观测消失后的信息保持与更新</td></tr><tr><td>FR1 / FR2</td><td>目标明确但有运动窗口</td><td>控制语义难度后，端到端吞吐是否改善</td></tr><tr><td>PR1 / PR2 / PR3</td><td>精确轨迹、接触与实际残差</td><td>执行器是前提，调度不能替代精细控制</td></tr><tr><td>CP01 / CP02</td><td>订单／布局相对稳定，目标位置与实际效果变化</td><td>认知复用、局部刷新与动态窗口的取舍</td></tr><tr><td>其他组合任务</td><td>按规范确定配方、空间或序列依赖</td><td>接入环境与判据后再测，不宣称已经覆盖</td></tr></tbody></table></div><p class="note">历史 Case7 的公共 RGB-D 授权不迁移到 RoboDojo：后者使用 RGB／本体及主动请求的 RGB 推断工具。部分可观测也不等于环境完整状态转移非马尔可夫。</p><a href="../index.html#cases">返回 Mind2Act World 任务库 →</a></section>
 
-<section id="resources"><p class="kicker">08 / STATUS & SOURCES</p><h2>已有工程基础，新组合仍待验证。</h2><p>EvoMemHarness 的固定快照可提供授权、Runtime、取消确认与 notes 的参考基础。本页新增的状态编译、完整候选注册表、Jev 适配和预算路由均为方案设计。没有修改机器人运行代码、调用付费模型或产生新测评成绩。</p><div class="links"><a href="docs/MindAccord_Proposal_v2.md" download>完整 Proposal ↓</a><a href="data/model.json" download>架构数据 ↓</a><a href="docs/Figure_Notes.md">图示与复现说明</a></div><div class="source-list"><article id="source-state"><a href="https://docs.typesafe.ai/concepts/state" target="_blank" rel="noreferrer">TypeSafe · State</a><p>文本状态与每请求上下文；图片不是 Jev 输入。</p></article><article id="source-choice"><a href="https://docs.typesafe.ai/primitives/choice" target="_blank" rel="noreferrer">TypeSafe · Choice</a><p>从声明的候选中选择；不代替连续动作参数生成。</p></article><article id="source-models"><a href="https://docs.typesafe.ai/models" target="_blank" rel="noreferrer">TypeSafe · Models</a><p>运行前复核版本、限制与计费；本提案不预设实时性或价格优势。</p></article><article id="source-confidence"><a href="https://docs.typesafe.ai/confidence" target="_blank" rel="noreferrer">TypeSafe · Confidence</a><p>阈值需开发集验证；不把置信度当作物理成功证据。</p></article><article id="source-baseline"><a href="https://github.com/MuQY1818/mem-planner-harness/tree/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41" target="_blank" rel="noreferrer">EvoMemHarness · 参考实现快照</a><p>已有授权、Runtime 与 notes 的基础，不代表新 Astra–Jev 组合已实现。</p></article><article id="source-style"><a href="https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/" target="_blank" rel="noreferrer">RoboICL · 叙事与图文参考</a><p>仅参考页面组织形式；不沿用其算法主张或实验结果。</p></article></div></section>
+<section id="evaluation"><p class="kicker">08 / EVIDENCE & EVALUATION</p><h2>原型验证可运行性，对照检验协作收益。</h2><p>Case7 清框原型已完成视觉理解、工具选择与机器人执行的闭环，并实现全部拼块出框。开发迭代减少了部分重复调用，但尚未体现整体加速、Cognitive 调用减少或主动记忆收益。同一场景的结果仍不足以证明优于单 Agent 或跨任务泛化。</p><div class="principles"><article><h3>局部选择</h3><p>固定报告、候选与工具，对比 Jev、Astra 和规则选择，检验下放决策是否值得。</p></article><article><h3>认知更新</h3><p>固定选择器与执行工具，对比频繁更新、现有固定触发和按需升级。</p></article><article><h3>整体收益</h3><p>与同工具的单 Astra Agent 比较，在独立布局及动态反馈任务中检验成功率、总成本和完成时间。</p></article></div><p>各组保持一致的输入权限、工具能力与资源预算，保留失败记录；记忆和异步机制单独消融。RSI 比较冻结版本与同等开发预算下的自主更新版本，计入改进开销，并在冻结的独立测试中检查收益与退化。详细运行记录见 <a href="data/research/case7_development_evidence_20260924.json">开发证据</a>。</p></section>
+
+<section id="resources"><p class="kicker">09 / STATUS & SOURCES</p><h2>实现范围、开发证据与正式评测分开记录。</h2><p>EvoMemHarness 快照提供会话、授权、取消确认与执行生命周期基础。RoboStream++ 的 Case7 外部原型已实现 Cognitive–Jev 清框；本目录是方法提案与展示，RSI 为下一阶段的直接实现任务，通用跨任务能力和改进收益仍待验证。本次更新仅补充方法设计与历史证据，没有启动新实验。</p><p>与社区方案比较需核对具体版本的观察、工具和更新机制，不能将其概括为只有单一方向控制；结构化游戏状态也不能与视觉输入直接比较。</p><div class="links"><a href="docs/MindAccord_Proposal_v2.md" download>完整 Proposal ↓</a><a href="data/model.json" download>架构数据 ↓</a><a href="docs/Figure_Notes.md">图示与复现说明</a><a href="docs/Proposal_v2_Changes.md">更新记录</a></div><div class="source-list"><article id="source-state"><a href="https://docs.typesafe.ai/concepts/state" target="_blank" rel="noreferrer">TypeSafe · State</a><p>文本状态与每请求上下文；图片不是 Jev 输入。</p></article><article id="source-choice"><a href="https://docs.typesafe.ai/primitives/choice" target="_blank" rel="noreferrer">TypeSafe · Choice</a><p>从声明的候选中选择；不代替连续动作参数生成。</p></article><article id="source-models"><a href="https://docs.typesafe.ai/models" target="_blank" rel="noreferrer">TypeSafe · Models</a><p>运行前复核版本、限制与计费；本提案不预设实时性或价格优势。</p></article><article id="source-confidence"><a href="https://docs.typesafe.ai/confidence" target="_blank" rel="noreferrer">TypeSafe · Confidence</a><p>阈值需开发集验证；不把置信度当作物理成功证据。</p></article><article id="source-baseline"><a href="https://github.com/MuQY1818/mem-planner-harness/tree/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41" target="_blank" rel="noreferrer">EvoMemHarness · 参考实现快照</a><p>授权、执行生命周期及 Record–Critic–经验候选–验证发布的参考基础；当前 Jev RSI 需重新适配。</p></article><article id="source-style"><a href="https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/" target="_blank" rel="noreferrer">RoboICL · 叙事与图文参考</a><p>仅参考页面组织形式；不沿用其算法主张或实验结果。</p></article><article id="source-case7"><a href="data/research/case7_development_evidence_20260924.json" target="_blank" rel="noreferrer">Case7 · 历史开发证据</a><p>同一 seed034 的开发计数、离线评分摘要和来源哈希；不是 World 正式成绩或比较优势。</p></article></div></section>
 </main><footer><span>Mind2Act Harness · Astra–Jev Proposal</span><a href="../index.html">Mind2Act World</a></footer>
 <dialog id="figureDialog" aria-labelledby="figureTitle"><div class="dialog-bar"><h3 id="figureTitle">方法图</h3><a id="figureDownload" download>下载 SVG ↓</a><button id="closeFigure" aria-label="关闭图片">关闭</button></div><div class="dialog-image"><img id="dialogImage" alt=""></div></dialog>
 <script id="modelData" type="application/json">{
@@ -60,6 +62,7 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
   "subtitle": "Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation",
   "status": "proposal",
   "proposal_version": 2,
+  "updated_at": "2026-09-24",
   "baseline_commit": "6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
   "upstream": {
     "name": "GPT-6 Astra",
@@ -70,104 +73,119 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
     "version": null
   },
   "results": null,
+  "development_evidence": {
+    "path": "data/research/case7_development_evidence_20260924.json",
+    "sha256": "d56aef3ba7eaf52db73dc4b0345eb9dffae918142de240a2c5e183604da6805a",
+    "scope": "Historical external Case7 seed034 development runs; not benchmark results or matched comparisons."
+  },
   "modules": [
     {
       "id": "cognitive",
       "name": "GPT-6 Astra · Task Planner",
-      "label": "任务拆解与升级处理",
-      "state": "方案设计 · 待实现与验证",
-      "inputs": "任务指令、可见图像、精确任务账本和异常事件",
-      "outputs": "子目标契约、感知计划与任务记忆",
-      "body": "在子目标边界或冲突时组织复杂推理，调用 perception tools 并声明当前执行目标。",
-      "boundary": "实际 API 标识与调用配置待固定；不把每帧大模型调用当作默认循环。"
+      "label": "可复用的视觉理解与短期意图",
+      "state": "Case7 外部原型已接通 · 跨任务待验证",
+      "inputs": "任务、合法图像／本体状态、实际回执与待处理事件",
+      "outputs": "可见事实、未知项、短期意图与授权修订",
+      "body": "形成可复用的任务依据，按生命周期、固定事件或 Jev 升级请求更新；当前仍保留巡检和放置后更新。",
+      "boundary": "按需更新收益待测；在线会话与离线 Critic 分开，Cognitive 不代写 Jev 的局内动作记忆。"
     },
     {
       "id": "tools",
-      "name": "Perception Tools",
-      "label": "带来源的场景证据",
-      "state": "方案设计 · 待实现与验证",
-      "inputs": "允许访问的 RGB / 本体信息与观察目标",
-      "outputs": "SceneState：对象、属性、时效、单位和坐标系",
-      "body": "将感知结果转为结构化事实；任务改变或几何过期时按需刷新。",
-      "boundary": "预测不是真值；未知坐标变换禁止绑定运动目标。"
+      "name": "Visual Perception \u0026 Execution Tools",
+      "label": "局部证据与连续控制",
+      "state": "Case7 外部原型已接通 · 工具覆盖有限",
+      "inputs": "当前授权目标与环境允许的观察",
+      "outputs": "区域报告、操作几何、实际执行回执与不确定性",
+      "body": "按请求更新局部证据；完成有限抓取或放置的连续控制，不逐运动阶段请求模型。",
+      "boundary": "历史 Case7 使用授权 RGB-D；RoboDojo 仅 RGB／本体及主动请求的 RGB 推断工具。"
     },
     {
       "id": "compiler",
       "name": "Evidence-Grounded State Compiler",
       "label": "可审计的交接",
-      "state": "方案设计 · 待实现与验证",
+      "state": "Case7 编码已有验证 · 选择质量影响待测",
       "inputs": "契约、SceneState、回执、记忆与候选引用",
       "outputs": "紧凑 DecisionPacket",
-      "body": "显式组织来源、未知项和当前决策需要的条件。计数、版本和预算比较留在代码中。",
-      "boundary": "新模块待实现；压缩不得无声丢失关键任务信息。"
+      "body": "当前意图与最新区域卡片直接提供；旧报告、完整轮廓和诊断按需读取，保留来源与未知项。",
+      "boundary": "详情遵守访问窗口；精简字节数不等于节省费用或改善任务表现。"
     },
     {
       "id": "registry",
       "name": "Candidate Registry",
       "label": "完整候选绑定",
-      "state": "方案设计 · 待实现与验证",
+      "state": "Case7 工具绑定已实现 · 通用注册表待验证",
       "inputs": "授权工具、技能模板、感知结果与允许的变换",
-      "outputs": "不可变 ID → 完整动作 / 工具请求",
-      "body": "将连续参数、坐标来源、有效期和检查点绑定为一个候选，不交给独立问题随意拼接。",
-      "boundary": "协议合法不证明物理可行；候选覆盖与生成成本需要单独测量。"
+      "outputs": "不可变 ID → 工具＋完整输入绑定",
+      "body": "按接口、授权和可用输入生成候选；普通动作一次选择，详情查询单独分级。昂贵计算在工具被选中后启动。",
+      "boundary": "候选覆盖限制模型能力；几何失败门控等额外干预必须在对照中披露。"
     },
     {
       "id": "reactive",
       "name": "Jev · Candidate Selector",
-      "label": "局部离散决策",
-      "state": "方案设计 · 待实现与验证",
+      "label": "动作、信息获取与升级选择",
+      "state": "Case7 外部原型已接通 · 对照收益待测",
       "inputs": "文本 DecisionPacket 与预定义候选 criteria",
-      "outputs": "候选 ID 或拒答 / 升级选项",
-      "body": "在有效结构化状态上选择完整候选；不直接处理图像或生成任意连续参数。",
-      "boundary": "版本与限制部署前复核；confidence 不等于物理成功概率。"
+      "outputs": "已绑定工具请求、补观察、详情／记忆操作或升级",
+      "body": "结合当前报告和新回执决定继续执行、补信息或请求重规划；只在有新事件时选择。",
+      "boundary": "不直接看 RGB，不生成任意控制；相比 Astra 或规则是否更划算仍需验证。"
     },
     {
       "id": "runtime",
       "name": "Guarded Execution Runtime",
       "label": "唯一物理执行入口",
-      "state": "方案设计 · 待实现与验证",
+      "state": "Case7 生命周期已运行 · 跨任务适配待验证",
       "inputs": "候选 ID、注册表、当前授权和新事件",
       "outputs": "动作派发、回执、停止或拒绝",
-      "body": "Jev 返回后再次检查版本、时效与预算；健康动作由执行循环延续。",
-      "boundary": "已有 Runtime 可复用，Jev 适配待实现；独立环境评分器确认最终成功。"
+      "body": "保留在途事件，合并唤醒；派发前检查授权与动作所有权，撤销后等待物理取消确认。",
+      "boundary": "不以终局评分指导在线恢复；语义判断属于 Agent，执行协议由 Runtime 管理。"
     },
     {
       "id": "memory",
       "name": "Bounded Working Memory",
-      "label": "局内历史而非 RSI",
-      "state": "方案设计 · 待实现与验证",
-      "inputs": "任务事实、近期事件、带证据摘要与当前场景",
-      "outputs": "预算内的相关上下文",
-      "body": "保留未完成依赖，裁剪无关历史；将稳定任务事实与易过期几何分开管理。",
-      "boundary": "自由摘要由 Astra 或声明的模块生成；不涉及跨局经验晋升。"
+      "label": "Jev 主动管理的局内动作记录",
+      "state": "接口已实现 · 当前开发局未使用",
+      "inputs": "Jev 当前可访问的动作回执与当时可见依据",
+      "outputs": "固定字段 ActionMemory、索引及显式读取正文",
+      "body": "Jev 选择保存、读取或删除；程序记录来源、参数、进度、终态与错误，最多 32 条／32 KiB。",
+      "boundary": "局内记忆仍由 Jev 主动管理并每局清空；跨局已验证经验属于待接入的 RSI 版本库。"
     },
     {
       "id": "router",
-      "name": "Cost-Aware Router",
-      "label": "选择何时调用谁",
-      "state": "方案设计 · 待实现与验证",
-      "inputs": "时效、候选覆盖、事件、剩余预算与开发阈值",
-      "outputs": "继续 / 刷新 / Jev / Astra / 停止",
-      "body": "在任务质量和时限约束下减少冗余调用，记录所有路径的实际总成本。",
-      "boundary": "路由策略待验证；必要证据不足时不能为省钱绕过检查。"
+      "name": "Feedback-Driven Cognitive Updates",
+      "label": "按反馈分配认知更新",
+      "state": "混合触发已运行 · 按需调度收益待测",
+      "inputs": "执行事件、最新证据、授权、Jev 请求与预算",
+      "outputs": "等待事件／局部决策／请求 Cognitive／终止",
+      "body": "研究可复用的目标与易变化的执行证据如何分工；固定现有混合触发，单独比较按需更新。",
+      "boundary": "目标是成功能力、成本和完成时间的取舍，不预设调用更少必然更快。"
+    },
+    {
+      "id": "rsi",
+      "name": "RSI · Critic \u0026 Versioned Improvement",
+      "label": "局间改进与独立验证",
+      "state": "近期实现重点 · 尚未接入 Jev 闭环",
+      "inputs": "已结束开发局的合法记录、当前策略版本与改进预算",
+      "outputs": "带来源的经验／策略候选、验证报告与新快照或回退",
+      "body": "动作 RSI 只改进工具使用经验：Runtime 固定提取短 ActionSlice，离线 Critic 分批归因并生成经验卡；在线 Jev 只读少量摘要，详情按需读取，验证后随 PolicySnapshot 发布。",
+      "boundary": "Jev 不携带完整回放或低层轨迹；每局固定快照，经验按角色／工具／版本兼容性限量注入，不修改观察权限、评分器或 Runtime 授权边界。"
     }
   ],
   "states": {
     "ongoing": {
       "label": "动作仍在执行",
       "title": "保留授权，等待实际事件",
-      "cognitive": "不为无关未来计划更新撤销当前授权。",
-      "reactive": "不向 Jev 重复询问确定性的“继续”。",
-      "runtime": "保持健康动作，等待回执或显式检查点。",
-      "evidence": "调用数减少属于待测目标；没有新的模型或机器人结果。"
+      "cognitive": "保留当前有效授权；独立的认知触发仍可更新后续计划。",
+      "reactive": "无新事件时等待，不反复询问“继续”。",
+      "runtime": "执行工具负责动作内部控制，Runtime 收集终态和新事件。",
+      "evidence": "Case7 已按事件运行；相对其他调度的成本与时延收益尚未隔离验证。"
     },
     "unknown": {
       "label": "感知已过期",
       "title": "刷新证据，再构造决策",
-      "cognitive": "有新身份或新任务歧义时才升级；否则复用授权的感知计划。",
-      "reactive": "位置过期或变换未知时，不提供可执行运动候选。",
-      "runtime": "调用已授权工具刷新，更新来源版本并重建绑定。",
-      "evidence": "过期事实不能因文本仍在上下文中而继续有效。"
+      "cognitive": "Jev 升级或既有认知触发到达时，获取新帧并更新理解。",
+      "reactive": "可选择补观察、检查或升级；不把旧报告当作新证据。",
+      "runtime": "提供合法候选与来源状态，执行所选工具并返回实际结果。",
+      "evidence": "局部证据不足不等于必须全局重规划；如何选择仍需比较。"
     },
     "revoked": {
       "label": "子目标冲突",
@@ -175,7 +193,7 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
       "cognitive": "修订子目标，发布新的授权版本。",
       "reactive": "候选不足或冲突时选择升级；旧版本响应不得执行。",
       "runtime": "停止后续派发，收到取消确认后再交接。",
-      "evidence": "模型名称替换不等于协议适配完成；此流程是设计说明。"
+      "evidence": "Case7 已有版本与取消接口；通用任务覆盖与升级收益仍需验证。"
     },
     "budget": {
       "label": "预算不足",
@@ -211,19 +229,19 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
       "id": "architecture",
       "path": "figures/architecture.svg",
       "title": "Astra–Jev：带证据的结构化交接",
-      "description": "目标方案：Astra 组织子目标和感知，Jev 选择候选，Runtime 执行；事件反馈驱动刷新与升级。"
+      "description": "方法分工：Cognitive 提供可复用意图，Jev 选择动作、信息或升级，视觉工具负责连续控制；通用收益待验证。"
     },
     {
       "id": "memory",
       "path": "figures/packet-memory.svg",
-      "title": "DecisionPacket：事实、记忆与候选",
-      "description": "任务关键事实持久保留；短窗口保留近期事件；易过期几何与带证据摘要分开管理。"
+      "title": "DecisionPacket：当前依据、近期事件与主动记忆",
+      "description": "当前报告与计划、最近工具交互、显式读取的动作记忆进入决策输入；Jev 决定保存／读／删，程序固定编码。"
     },
     {
       "id": "routing",
       "path": "figures/routing.svg",
-      "title": "成本感知的事件路由",
-      "description": "继续、刷新、局部选择、升级或停止由状态和预算决定；没有预设成本收益。"
+      "title": "基于执行反馈的认知更新",
+      "description": "当前执行等待事件，Jev 选择局部动作、补证据或升级；现有固定认知触发与完全按需方案需分别比较。"
     }
   ],
   "sources": [
@@ -255,13 +273,19 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
       "id": "baseline",
       "title": "EvoMemHarness · 参考实现快照",
       "url": "https://github.com/MuQY1818/mem-planner-harness/tree/6d3c53eab6adcdfc7b7c4fdda7c9dba5d4fcce41",
-      "description": "已有授权、Runtime 与 notes 的基础，不代表新 Astra–Jev 组合已实现。"
+      "description": "授权、执行生命周期及 Record–Critic–经验候选–验证发布的参考基础；当前 Jev RSI 需重新适配。"
     },
     {
       "id": "style",
       "title": "RoboICL · 叙事与图文参考",
       "url": "https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/",
       "description": "仅参考页面组织形式；不沿用其算法主张或实验结果。"
+    },
+    {
+      "id": "case7",
+      "title": "Case7 · 历史开发证据",
+      "url": "data/research/case7_development_evidence_20260924.json",
+      "description": "同一 seed034 的开发计数、离线评分摘要和来源哈希；不是 World 正式成绩或比较优势。"
     }
   ],
   "examples": {
@@ -272,17 +296,21 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
       "contract_version": 3,
       "evidence_version": "obs-12",
       "memory": {
-        "pinned_facts": [
-          "Plate A still needs fries; grasp outcome is unknown."
-        ],
+        "index": [],
         "recent_events": [
-          "a-02 completed; no confirmed deposit"
+          {
+            "action_ref": "a-02",
+            "status": "completed",
+            "effect": "unknown",
+            "source_ref": "obs-12"
+          }
         ],
-        "summary": "No task success is inferred from command completion.",
-        "evidence_refs": [
-          "obs-12",
-          "a-02"
-        ]
+        "read_records": [],
+        "write_policy": "Jev selects save(action_ref); deterministic encoding; no automatic summary.",
+        "capacity": {
+          "records": 32,
+          "body_bytes": 32768
+        }
       },
       "valid_candidates": [
         {
@@ -302,7 +330,13 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
         }
       ],
       "motion_binding": "unavailable; camera-to-control transform unknown",
-      "selected_id": null
+      "selected_id": null,
+      "cognitive_context": {
+        "report_ref": "obs-12",
+        "author": "Cognitive",
+        "task_fact": "Plate A still needs fries; grasp outcome is unknown.",
+        "effect_status": "No confirmed deposit; command completion is not task success."
+      }
     },
     "jev-request": {
       "model": "\u003cfixed-version-at-run-time\u003e",
@@ -313,17 +347,21 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
         "contract_version": 3,
         "evidence_version": "obs-12",
         "memory": {
-          "pinned_facts": [
-            "Plate A still needs fries; grasp outcome is unknown."
-          ],
+          "index": [],
           "recent_events": [
-            "a-02 completed; no confirmed deposit"
+            {
+              "action_ref": "a-02",
+              "status": "completed",
+              "effect": "unknown",
+              "source_ref": "obs-12"
+            }
           ],
-          "summary": "No task success is inferred from command completion.",
-          "evidence_refs": [
-            "obs-12",
-            "a-02"
-          ]
+          "read_records": [],
+          "write_policy": "Jev selects save(action_ref); deterministic encoding; no automatic summary.",
+          "capacity": {
+            "records": 32,
+            "body_bytes": 32768
+          }
         },
         "valid_candidates": [
           {
@@ -343,7 +381,13 @@ header nav a[aria-current=page]{font-weight:700}h1{overflow-wrap:anywhere}@media
           }
         ],
         "motion_binding": "unavailable; camera-to-control transform unknown",
-        "selected_id": null
+        "selected_id": null,
+        "cognitive_context": {
+          "report_ref": "obs-12",
+          "author": "Cognitive",
+          "task_fact": "Plate A still needs fries; grasp outcome is unknown.",
+          "effect_status": "No confirmed deposit; command completion is not task success."
+        }
       },
       "questions": {
         "next_candidate": {

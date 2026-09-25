@@ -39,29 +39,30 @@
   <path d="M 740.0,225.0 L 740.0,305.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
   <path d="M 881.7,225.0 L 1108.3,305.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
   <path d="M 679.1,405.0 L 520.9,535.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
-  <rect x="545.0" y="452.0" width="110.0" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
-  <text x="600.0" y="464.0" font-size="17" fill="#777777" text-anchor="middle">unresolved</text>
+  <rect x="499.1" y="452.0" width="201.8" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
+  <text x="600.0" y="464.0" font-size="17" fill="#777777" text-anchor="middle">escalation selected</text>
   <path d="M 1206.5,405.0 L 1093.5,535.0" stroke="#496575" stroke-width="2" fill="none" marker-end="url(#arrow-default)" stroke-dasharray="8,4"/>
   <rect x="1064.4" y="452.0" width="171.2" height="16" fill="#FFFFFF" rx="3" opacity="0.85"/>
   <text x="1150.0" y="464.0" font-size="17" fill="#777777" text-anchor="middle">budget exhausted</text>
   <rect x="575.0" y="125.0" width="330.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
-  <text x="740.0" y="182.3" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">New event / checkpoint</text>
+  <text x="740.0" y="182.3" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">New receipt / report</text>
   <rect x="35.0" y="305.0" width="390.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
-  <text x="230.0" y="350.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Healthy action in flight</text>
-  <text x="230.0" y="373.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Runtime continues; no model call</text>
+  <text x="230.0" y="339.4" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Motion active</text>
+  <text x="230.0" y="362.4" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">No new decision needed</text>
+  <text x="230.0" y="385.4" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Tool continues; wait for event</text>
   <rect x="545.0" y="305.0" width="390.0" height="100.0" fill="#EFF4FA" stroke="#426D98" stroke-width="2" rx="8"/>
-  <text x="740.0" y="350.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Stale or incomplete evidence</text>
-  <text x="740.0" y="373.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Refresh authorized perception</text>
+  <text x="740.0" y="350.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Local evidence insufficient</text>
+  <text x="740.0" y="373.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Jev may request an observation</text>
   <rect x="1055.0" y="305.0" width="390.0" height="100.0" fill="#EDF5F4" stroke="#19655B" stroke-width="2" rx="8"/>
-  <text x="1250.0" y="350.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Fresh, protocol-valid candidates</text>
-  <text x="1250.0" y="373.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Jev selects a candidate</text>
+  <text x="1250.0" y="350.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Current intent still applicable</text>
+  <text x="1250.0" y="373.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Jev may select a bound tool</text>
   <rect x="200.0" y="535.0" width="520.0" height="100.0" fill="#FFF4EB" stroke="#9F6634" stroke-width="2" rx="8"/>
-  <text x="460.0" y="580.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Plan conflict / no useful candidate</text>
-  <text x="460.0" y="603.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Astra revises grounding or goal</text>
+  <text x="460.0" y="580.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Unresolved binding or changed plan</text>
+  <text x="460.0" y="603.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Jev may request Cognitive update</text>
   <rect x="795.0" y="535.0" width="510.0" height="100.0" fill="#FAEFEF" stroke="#9E5555" stroke-width="2" rx="8"/>
-  <text x="1050.0" y="580.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Insufficient remaining budget</text>
-  <text x="1050.0" y="603.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Stop with incomplete status</text>
+  <text x="1050.0" y="580.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Configured budget exhausted</text>
+  <text x="1050.0" y="603.9" font-size="21" fill="#333333" text-anchor="middle" font-weight="bold">Record incomplete status</text>
   <text x="740.0" y="56.0" font-size="32" fill="#193D3A" text-anchor="middle">Spend reasoning where it changes the next decision.</text>
-  <text x="740.0" y="105.0" font-size="20" fill="#193D3A" text-anchor="middle">Illustrative branches; checks are applied before dispatch and after model return.</text>
-  <text x="740.0" y="710.0" font-size="21" fill="#193D3A" text-anchor="middle">All paths log actual tool, model, retry and escalation costs.</text>
+  <text x="740.0" y="105.0" font-size="20" fill="#193D3A" text-anchor="middle">Decision options, not automatic semantic routing; authorization is checked at dispatch.</text>
+  <text x="740.0" y="710.0" font-size="18" fill="#193D3A" text-anchor="middle">Current prototype also uses watchdog, post-place and plan-refill triggers; adaptive scheduling is unverified.</text>
 </svg>
