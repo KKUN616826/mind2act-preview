@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: file:; media-src 'self' file: blob:; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="description" content="Mind2Act World — Evaluating Reasoning–Acting Coordination in Robotic Manipulation. 通过推理、执行与协同任务，检查物理结果如何影响后续计划。">
 <meta name="theme-color" content="#174c3b">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2319655b'/%3E%3Cpath d='M13 43V21h8l11 13 11-13h8v22h-8V32L32 45 21 32v11z' fill='white'/%3E%3C/svg%3E">
 <title>Mind2Act World · Evaluating Reasoning–Acting Coordination in Robotic Manipulation</title>
 <style>
 :root{--bg:#f7f5ed;--paper:#fffef9;--ink:#203a30;--green:#174c3b;--muted:#69756b;--line:#d8dfd1;--mint:#e9efe3;--amber:#a0763d;--sand:#f3ead9;--serif:"Iowan Old Style","Palatino Linotype","Songti SC",serif;--sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--mono:"SFMono-Regular",Consolas,monospace}
@@ -34,6 +35,19 @@
 @media(max-width:1050px){.article-layout{display:block}.article-nav{position:static;padding:22px 0 0}.article-nav nav{flex-direction:row;flex-wrap:wrap;gap:4px}.article-nav a.sub{display:none}.article-nav a{font-size:12px}.article-paragraph{font-size:15px}.research-question{font-size:19px}.article-demo{max-width:100%}}
 @media print{.article-layout{display:block}.article-nav{display:none}.research-opening{padding-top:0}.research-media{grid-template-columns:repeat(3,1fr)}.research-point{break-inside:avoid}.research-point,.design-columns{grid-template-columns:1fr}.research-links,.effect-choice{display:none}}
 
+/* Academic benchmark edition: paper-first, data-forward, restrained. */
+:root{--bg:#f7f9fb;--paper:#fff;--ink:#15202b;--green:#096b62;--muted:#5b6773;--line:#d8e0e7;--mint:#edf7f5;--amber:#9c4f3e;--sand:#f3f6f8}
+body{background:#fff;color:var(--ink)}.wrap{max-width:1240px}.header{background:#ffffffed;box-shadow:0 1px 0 #dce3e8}.brand{color:#113c39}.nav .paper-link{background:#096b62;color:#fff;border-color:#096b62;border-radius:6px}
+.article-layout{grid-template-columns:180px minmax(0,1fr);gap:54px}.article-nav{top:92px}.article-nav a[aria-current]{background:#eaf5f3;color:#096b62}
+.research-opening{padding:68px 0 52px;text-align:center}.research-opening .eyebrow{display:inline-block;background:#eaf5f3;color:#096b62;padding:6px 11px;border-radius:999px;font:600 11px var(--mono)}.research-opening h1{font:750 clamp(48px,7vw,78px)/1.05 var(--sans);letter-spacing:-.045em!important;margin:22px 0 12px;color:#112f30}.research-opening .research-subtitle{font-size:clamp(20px,2.4vw,29px);line-height:1.4;color:#264d4d;max-width:930px}.research-lead{font-size:20px;color:#22313e}.research-abstract{font-size:16px;line-height:1.85;max-width:850px}
+.benchmark-facts{max-width:880px;margin:30px auto 8px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 10px 32px #294b4310}.benchmark-facts div{padding:18px 12px;border-right:1px solid var(--line)}.benchmark-facts div:last-child{border:0}.benchmark-facts b{display:block;font:700 27px/1.2 var(--sans);color:#096b62}.benchmark-facts span{display:block;margin-top:5px;color:var(--muted);font:11px/1.4 var(--mono)}
+.research-links a{border:1px solid #cbd5dc;border-radius:6px;padding:8px 13px;text-decoration:none;background:#fff;color:#36505b}.research-links a:hover{border-color:#096b62;color:#096b62}.research-status{font-family:var(--mono)}
+.research-media{gap:12px;margin-top:32px}.research-media a{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 4px 14px #294b430b}.research-media img{background:#f4f7f8;aspect-ratio:16/10;object-fit:cover}.research-media figcaption{padding:12px 14px}.research-media figcaption b{font-size:13px}.research-media figcaption span{font-size:11px}
+.section{padding:58px 0}.research-section>h2,.section-head h2{color:#142d35;letter-spacing:-.02em!important}.section-label{font-weight:700;color:#527189}.research-question{background:#f0f7f6;border-radius:0 8px 8px 0}.research-point{padding:38px 0}.point-number{font-family:var(--sans);font-weight:700}.point-example{background:#f7f9fb;padding:18px 20px;border-radius:0 7px 7px 0}.feedback-study{background:#f7f9fb;padding:28px;border-radius:9px}.design-columns article{background:#fff;border:1px solid var(--line);border-top:4px solid #19655b;border-radius:8px;padding:22px}.design-columns article:nth-child(2){border-top-color:#426d98}.design-columns article:nth-child(3){border-top-color:#a44736}
+.table-wrap{border-radius:8px}.lb-scroll table{font-variant-numeric:tabular-nums}.case-card{border-radius:8px;overflow:hidden;box-shadow:0 3px 12px #31475a0a}.case-card:not([open]):hover{box-shadow:0 12px 28px #31475a18;transform:translateY(-2px)}.filters button,.catalog-actions button{border-radius:6px}.filters button[aria-pressed=true],.lb-tracks [aria-pressed=true]{background:#096b62}.resource,.track{background:#fff}.footer{background:#f6f8fa}
+@media(max-width:1050px){.article-layout{display:block}.benchmark-facts{max-width:760px}}
+@media(max-width:760px){.research-opening{padding-top:38px}.research-opening h1{font-size:45px}.benchmark-facts{grid-template-columns:1fr 1fr}.benchmark-facts div:nth-child(2){border-right:0}.benchmark-facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}.research-media{grid-template-columns:1fr}.research-media a:not(:first-child){display:none}.research-links{gap:8px}.research-links a{font-size:12px;padding:7px 10px}}
+
 </style>
 </head>
 <body>
@@ -47,6 +61,9 @@
   <p class="article-meta">研究设计说明 · 更新于 2026 年 9 月 25 日</p>
   <p class="research-lead">让推理适应执行，让执行结果改变下一步。</p>
   <p class="research-abstract">真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。Mind2Act World 面向 <strong>VLA/WAM、Coding Agent 与混合架构</strong>，分别评估任务级推理、约束感知执行，以及两者在实际物理反馈中的协同表现。</p>
+  <div class="benchmark-facts" aria-label="Benchmark 规模">
+    <div><b>15</b><span>Tasks</span></div><div><b>45</b><span>Task × Difficulty</span></div><div><b>3</b><span>Evaluation Dimensions</span></div><div><b>39</b><span>Demos & Previews</span></div>
+  </div>
   <div class="research-links"><a href="#motivation">核心问题 ↓</a><a href="#insight-feedback">什么是协同</a><a href="#leaderboard">排行榜占位</a><a href="#cases">完整任务库</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a></div>
   <p class="research-status">任务设计与运控演示 · 15 项任务 · 39 段演示及预览 · 模型比较与能力归因待实验验证</p>
   <div class="research-media"><a href="#case-CP01"><figure><img src="media/posters/CP01__research_overview.jpg" alt="传送带配餐" loading="eager"><figcaption><b>CP01 · 历史订单 → 动态取料</b><span>实际入盘才更新剩余需求</span></figcaption></figure></a><a href="#case-CP03"><figure><img src="media/posters/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.jpg" alt="动态槽架装盘" loading="eager"><figcaption><b>CP03 · 移动槽口 → 精确装盘</b><span>专家运控演示；非学习策略成绩</span></figcaption></figure></a><a href="#case-CP04"><figure><img src="media/posters/CP04__CP04_easy.jpg" alt="双臂配料与温控烹饪" loading="eager"><figcaption><b>CP04 · 配方记忆 → 限时温控</b><span>Easy 预览；其余档位视频待补</span></figcaption></figure></a></div>
