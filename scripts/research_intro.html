@@ -8,9 +8,22 @@
   <div class="benchmark-facts" aria-label="Benchmark 规模">
     <div><b>15</b><span>Tasks</span></div><div><b>45</b><span>Task × Difficulty</span></div><div><b>3</b><span>Evaluation Dimensions</span></div><div><b>__VIDEO_COUNT__</b><span>Demos & Previews</span></div>
   </div>
-  <div class="research-links"><a href="#motivation">核心问题 ↓</a><a href="#insight-feedback">什么是协同</a><a href="#leaderboard">排行榜占位</a><a href="#cases">完整任务库</a><a href="docs/PhysCo_Showcase.md" download>研究概览 ↓</a></div>
+  <div class="research-links"><a class="paper-button" href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank">Paper ↗</a><a href="https://github.com/yu2hi13/physco-bench" target="_blank" rel="noreferrer">Code ↗</a><a href="#cases">Tasks ↓</a><a href="#leaderboard">Leaderboard ↓</a><a href="docs/PhysCo_Showcase.md" download>Overview ↓</a></div>
   <p class="research-status">任务设计与运控演示 · 15 项任务 · __VIDEO_COUNT__ 段演示及预览 · 模型比较与能力归因待实验验证</p>
   <div class="research-media">__INSIGHT_MEDIA__</div>
+</section>
+
+<section class="benchmark-preview" aria-labelledby="preview-title">
+  <div class="preview-heading"><div><p class="section-label">BENCHMARK PREVIEW</p><h2 id="preview-title">从任务定义到可核验结果。</h2></div><p>页面将统一展示任务演示、模型轨迹、最终状态与分项得分。当前结果区域使用占位结构，待统一协议完成后直接接入真实数据。</p></div>
+  <div class="preview-panels">
+    <article><span>01 · DEMONSTRATIONS</span><h3>任务与三档难度</h3><p>每项任务公开目标、难度变化、关键物理约束及对应演示。</p></article>
+    <article><span>02 · TRAJECTORIES</span><h3>成功与失败证据</h3><p>并列展示关键观察、执行过程和环境侧最终判定。</p></article>
+    <article><span>03 · RESULTS</span><h3>统一协议下的比较</h3><p>按系统类型、能力维度和任务难度报告结果与运行配置。</p></article>
+  </div>
+  <div class="result-placeholder" aria-label="未来评测结果表格样式示意">
+    <div class="placeholder-title"><div><b>Leaderboard preview</b><span>示意结构 · 真实结果待统一评测后填入</span></div><a href="#leaderboard">查看完整排行榜区域 →</a></div>
+    <div class="table-wrap"><table><thead><tr><th>Track</th><th>Model</th><th>Overall</th><th>Reasoning</th><th>Execution</th><th>Coordination</th><th>Status</th></tr></thead><tbody><tr><td>Coding Agent</td><td>Model A</td><td colspan="4"><span class="pending-bar"></span></td><td><span class="pending-pill">Pending</span></td></tr><tr><td>VLA / WAM</td><td>Model B</td><td colspan="4"><span class="pending-bar short"></span></td><td><span class="pending-pill">Pending</span></td></tr></tbody></table></div>
+  </div>
 </section>
 
 <section class="section research-section" id="motivation">

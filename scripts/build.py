@@ -49,7 +49,16 @@ def main():
         page = page.replace('__POINT_DEMO_' + cid + '__', demo)
     highlights = [('CP01', '历史订单 → 动态取料', '实际入盘才更新剩余需求'), ('CP03', '移动槽口 → 精确装盘', '专家运控演示；非学习策略成绩'), ('CP04', '配方记忆 → 限时温控', 'Easy 预览；其余档位视频待补')]
     previews = {'CP01': 'media/posters/CP01__research_overview.jpg'}
-    media = ''.join(f'<a href="#case-{cid}"><figure><img src="{e(previews.get(cid) or cover(by_id[cid]))}" alt="{e(by_id[cid]["title"])}" loading="eager"><figcaption><b>{cid} · {e(title)}</b><span>{e(note)}</span></figcaption></figure></a>' for cid, title, note in highlights)
+    highlight_cards = []
+    for cid, title, note in highlights:
+        case = by_id[cid]
+        asset = next((item for item in case['media'] if item['kind'] == 'video'), None)
+        if asset:
+            visual = f'<video autoplay muted loop playsinline preload="metadata" poster="{e(asset.get("poster", cover(case)))}" aria-label="{e(case["title"])}任务演示"><source src="{e(asset["path"])}" type="video/mp4"></video>'
+        else:
+            visual = f'<img src="{e(previews.get(cid) or cover(case))}" alt="{e(case["title"])}" loading="eager">'
+        highlight_cards.append(f'<a href="#case-{cid}"><figure>{visual}<figcaption><b>{cid} · {e(title)}</b><span>{e(note)}</span></figcaption></figure></a>')
+    media = ''.join(highlight_cards)
     for key, value in {'INSIGHT_MEDIA': media, 'CASES': '\n'.join(card(c) for c in records), 'PUBLIC_DATA': payload, 'VIDEO_COUNT': str(videos), 'IMAGE_COUNT': str(images)}.items():
         page = page.replace('__' + key + '__', value)
     assert not re.search(r'__[A-Z_]+__', page)
