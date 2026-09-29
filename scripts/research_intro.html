@@ -1,29 +1,39 @@
 <section class="research-opening" id="overview" aria-labelledby="project-title">
-  <p class="eyebrow">MIND2ACT WORLD · RESEARCH PREVIEW</p>
-  <h1 id="project-title">Mind2Act World</h1>
-  <p class="research-subtitle" lang="en">Evaluating Reasoning–Acting Coordination in Robotic Manipulation</p>
-  <p class="article-meta">研究设计说明 · 更新于 2026 年 9 月 25 日</p>
-  <p class="research-lead">Reason through the task. Act in the world. Adapt to what actually happened. <span>想得清，也做得到。</span></p>
-  <p class="research-abstract">真实机器人操作既需要理解任务、组织多阶段行动，也需要在时间、几何与接触约束下可靠执行。Mind2Act World 面向 <strong>VLA/WAM、Coding Agent 与混合架构</strong>，分别评估任务级推理、约束感知执行，以及两者在实际物理反馈中的协同表现。</p>
-  <div class="benchmark-facts" aria-label="Benchmark 规模">
-    <div><b>15</b><span>Tasks</span></div><div><b>45</b><span>Task × Difficulty</span></div><div><b>3</b><span>Evaluation Dimensions</span></div><div><b>__VIDEO_COUNT__</b><span>Demos & Previews</span></div>
+  <div class="wordmark-stage" aria-label="项目艺术字占位">
+    <span class="wordmark-note">ARTWORK PLACEHOLDER · REPLACE WITH FINAL LOGO</span>
+    <div class="wordmark-art"><i>MIND</i><b>2</b><i>ACT</i><em>WORLD</em></div>
   </div>
-  <div class="research-links"><a class="paper-button" href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank">Paper ↗</a><a href="https://github.com/yu2hi13/physco-bench" target="_blank" rel="noreferrer">Code ↗</a><a href="#cases">Tasks ↓</a><a href="#leaderboard">Leaderboard ↓</a><a href="docs/PhysCo_Showcase.md" download>Overview ↓</a></div>
-  <p class="research-status"><span>RESEARCH PREVIEW</span> 任务设计与运控演示 · 15 项任务 · __VIDEO_COUNT__ 段演示及预览 · 模型结果待统一协议完成后接入</p>
-  <div class="research-media">__INSIGHT_MEDIA__</div>
+  <h1 id="project-title">Mind2Act World</h1>
+  <p class="research-subtitle" lang="en">Evaluating Reasoning–Acting Coordination<br>in Robotic Manipulation</p>
+  <p class="research-lead">Reason through the task. Act in the world. Adapt to what actually happened. <span>想得清，也做得到。</span></p>
+  <div class="author-block" aria-label="作者与单位占位">
+    <p class="author-list"><span>Author One<sup>1*</sup></span><span>Author Two<sup>1*</sup></span><span>Author Three<sup>2</sup></span><span>Author Four<sup>1</sup></span><span>Corresponding Author<sup>1†</sup></span></p>
+    <p class="affiliations"><b><sup>1</sup> Institution / Laboratory</b><span><sup>2</sup> Collaborating Institution</span><small>* Equal contribution · † Corresponding author · Updated September 2026</small></p>
+  </div>
+  <div class="research-links" aria-label="项目资源">
+    <a class="paper-button" href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank">Paper ↗</a><a href="https://github.com/yu2hi13/physco-bench" target="_blank" rel="noreferrer">Code ↗</a><a href="#leaderboard">Leaderboard ↓</a><a href="#resources">Report ↓</a><a href="#resources">Email</a><a href="#resources">Community</a><a href="#resources">Share</a>
+  </div>
+  <div class="benchmark-facts" aria-label="Benchmark 规模"><div><b>15</b><span>Tasks</span></div><div><b>45</b><span>Task × Difficulty</span></div><div><b>3</b><span>Tracks</span></div><div><b>__VIDEO_COUNT__</b><span>Demos</span></div></div>
 </section>
 
-<section class="benchmark-preview full-bleed-dark" aria-labelledby="preview-title">
-  <div class="preview-heading"><div><p class="section-label">BENCHMARK PREVIEW</p><h2 id="preview-title">从任务定义到可核验结果。</h2></div><p>页面将统一展示任务演示、模型轨迹、最终状态与分项得分。当前结果区域使用占位结构，待统一协议完成后直接接入真实数据。</p></div>
-  <div class="preview-panels">
-    <article><span>01 · DEMONSTRATIONS</span><h3>任务与三档难度</h3><p>每项任务公开目标、难度变化、关键物理约束及对应演示。</p></article>
-    <article><span>02 · TRAJECTORIES</span><h3>成功与失败证据</h3><p>并列展示关键观察、执行过程和环境侧最终判定。</p></article>
-    <article><span>03 · RESULTS</span><h3>统一协议下的比较</h3><p>按系统类型、能力维度和任务难度报告结果与运行配置。</p></article>
+<section class="visual-showcase" aria-labelledby="showcase-title">
+  <div class="showcase-heading"><div><p class="section-label">SIMULATION BENCHMARK</p><h2 id="showcase-title">See the benchmark in motion.</h2></div><p>在三个能力入口之间切换。这里将替换为正式宣传视频、模型轨迹与结果片段。</p></div>
+  <div class="showcase-tabs" role="tablist" aria-label="演示视频类别">
+    <input type="radio" name="showcase" id="showcase-reason" checked><label for="showcase-reason">01 · Reasoning</label>
+    <input type="radio" name="showcase" id="showcase-action"><label for="showcase-action">02 · Acting</label>
+    <input type="radio" name="showcase" id="showcase-coordinate"><label for="showcase-coordinate">03 · Coordination</label>
+    <div class="showcase-panels">
+      <figure class="showcase-panel panel-reason"><video controls muted playsinline preload="metadata" poster="media/posters/E__E_easy.jpg"><source src="media/videos/E__E_easy.mp4" type="video/mp4"></video><figcaption><b>Task-Level Reasoning</b><span>E · Multi-batch duplicate recognition</span><a href="#case-E">Explore task →</a></figcaption></figure>
+      <figure class="showcase-panel panel-action"><video controls muted playsinline preload="metadata" poster="media/posters/FR1__picking__01.jpg"><source src="media/videos/FR1__picking__01.mp4" type="video/mp4"></video><figcaption><b>Constraint-Aware Execution</b><span>FR1 · Conveyor picking</span><a href="#case-FR1">Explore task →</a></figcaption></figure>
+      <figure class="showcase-panel panel-coordinate"><video controls muted playsinline preload="metadata" poster="media/posters/CP01__CP01_easy_adaptive_v2_20260920.jpg"><source src="media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4" type="video/mp4"></video><figcaption><b>Reasoning–Acting Coordination</b><span>CP01 · Conveyor meal assembly</span><a href="#case-CP01">Explore task →</a></figcaption></figure>
+    </div>
   </div>
-  <div class="result-placeholder" aria-label="未来评测结果表格样式示意">
-    <div class="placeholder-title"><div><b>Leaderboard preview</b><span>示意结构 · 真实结果待统一评测后填入</span></div><a href="#leaderboard">查看完整排行榜区域 →</a></div>
-    <div class="table-wrap"><table><thead><tr><th>Track</th><th>Model</th><th>Overall</th><th>Reasoning</th><th>Execution</th><th>Coordination</th><th>Status</th></tr></thead><tbody><tr><td>Coding Agent</td><td>Model A</td><td colspan="4"><span class="pending-bar"></span></td><td><span class="pending-pill">Pending</span></td></tr><tr><td>VLA / WAM</td><td>Model B</td><td colspan="4"><span class="pending-bar short"></span></td><td><span class="pending-pill">Pending</span></td></tr></tbody></table></div>
-  </div>
+  <div class="showcase-note"><span>VIDEO PLACEHOLDER</span><p>正式结果产出后，可在同一播放器结构中替换为 Overview、Success / Failure、Model Comparison 等视频。</p></div>
+</section>
+
+<section class="benchmark-preview compact-preview" aria-labelledby="preview-title">
+  <div class="preview-heading"><div><p class="section-label">AT A GLANCE</p><h2 id="preview-title">One benchmark, three questions.</h2></div></div>
+  <div class="preview-panels"><article><span>01 · MIND</span><h3>选对目标了吗？</h3></article><article><span>02 · ACT</span><h3>物理效果达标了吗？</h3></article><article><span>03 · ADAPT</span><h3>结果改变后续计划了吗？</h3></article></div>
 </section>
 
 <section class="section research-section" id="motivation">
