@@ -1,96 +1,30 @@
-<section class="research-opening" id="overview" aria-labelledby="project-title">
-  <div class="wordmark-stage" aria-label="项目艺术字占位">
-    <span class="wordmark-note">ARTWORK PLACEHOLDER · REPLACE WITH FINAL LOGO</span>
-    <div class="wordmark-art"><i>MIND</i><b>2</b><i>ACT</i><em>WORLD</em></div>
+<section class="rd-hero" id="overview" aria-labelledby="project-title">
+  <div class="rd-title"><p class="rd-kicker">A BENCHMARK FOR EMBODIED REASONING</p><div class="rd-wordmark"><span>MIND</span><b>2</b><span>ACT</span><em>WORLD</em></div><h1 id="project-title">Mind2Act World</h1><h2>Reason. Act. Adapt to what actually happened.</h2><p>Evaluating reasoning–acting coordination in robotic manipulation.</p></div>
+  <div class="rd-authors"><span>Author One<sup>1*</sup></span><span>Author Two<sup>1*</sup></span><span>Author Three<sup>2</sup></span><span>Author Four<sup>1</sup></span><span>Corresponding Author<sup>1†</sup></span></div>
+  <div class="rd-affiliations"><span><sup>1</sup> Institution / Laboratory</span><span><sup>2</sup> Collaborating Institution</span><small>* Equal contribution · † Corresponding author · 2026</small></div>
+  <div class="rd-links"><a class="primary" href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank">Paper</a><a href="https://github.com/yu2hi13/physco-bench" target="_blank" rel="noreferrer">Code</a><a href="#leaderboard">Leaderboard</a><a href="#resources">Dataset</a><a href="#community">Contact</a></div>
+  <div class="hero-carousel" role="region" aria-label="Featured benchmark films">
+    <input type="radio" name="hero-film" id="film-1" checked><input type="radio" name="hero-film" id="film-2"><input type="radio" name="hero-film" id="film-3">
+    <div class="hero-frames">
+      <figure class="hero-frame frame-1"><video controls muted playsinline preload="metadata" poster="media/posters/CP01__CP01_easy_adaptive_v2_20260920.jpg"><source src="media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4" type="video/mp4"></video><figcaption><b>Reasoning × Acting</b><span>CP01 · Conveyor meal assembly</span></figcaption></figure>
+      <figure class="hero-frame frame-2"><video controls muted playsinline preload="metadata" poster="media/posters/FR1__picking__01.jpg"><source src="media/videos/FR1__picking__01.mp4" type="video/mp4"></video><figcaption><b>Act under change</b><span>FR1 · Continuous conveyor picking</span></figcaption></figure>
+      <figure class="hero-frame frame-3"><video controls muted playsinline preload="metadata" poster="media/posters/E__E_easy.jpg"><source src="media/videos/E__E_easy.mp4" type="video/mp4"></video><figcaption><b>Remember and decide</b><span>E · Cross-batch duplicate recognition</span></figcaption></figure>
+    </div><div class="hero-switch"><label for="film-1">01</label><label for="film-2">02</label><label for="film-3">03</label></div>
   </div>
-  <h1 id="project-title">Mind2Act World</h1>
-  <p class="research-subtitle" lang="en">Evaluating Reasoning–Acting Coordination<br>in Robotic Manipulation</p>
-  <p class="research-lead">Reason through the task. Act in the world. Adapt to what actually happened. <span>想得清，也做得到。</span></p>
-  <div class="author-block" aria-label="作者与单位占位">
-    <p class="author-list"><span>Author One<sup>1*</sup></span><span>Author Two<sup>1*</sup></span><span>Author Three<sup>2</sup></span><span>Author Four<sup>1</sup></span><span>Corresponding Author<sup>1†</sup></span></p>
-    <p class="affiliations"><b><sup>1</sup> Institution / Laboratory</b><span><sup>2</sup> Collaborating Institution</span><small>* Equal contribution · † Corresponding author · Updated September 2026</small></p>
-  </div>
-  <div class="research-links" aria-label="项目资源">
-    <a class="paper-button" href="docs/PhysCo_Technical_Report_v0.1.pdf" target="_blank">Paper ↗</a><a href="https://github.com/yu2hi13/physco-bench" target="_blank" rel="noreferrer">Code ↗</a><a href="#leaderboard">Leaderboard ↓</a><a href="#resources">Report ↓</a><a href="#resources">Email</a><a href="#resources">Community</a><a href="#resources">Share</a>
-  </div>
-  <div class="benchmark-facts" aria-label="Benchmark 规模"><div><b>15</b><span>Tasks</span></div><div><b>45</b><span>Task × Difficulty</span></div><div><b>3</b><span>Tracks</span></div><div><b>__VIDEO_COUNT__</b><span>Demos</span></div></div>
+  <div class="rd-facts"><div><b>15</b><span>Tasks</span></div><div><b>45</b><span>Settings</span></div><div><b>3</b><span>Tracks</span></div><div><b>__VIDEO_COUNT__</b><span>Demos</span></div></div>
 </section>
 
-<section class="visual-showcase" aria-labelledby="showcase-title">
-  <div class="showcase-heading"><div><p class="section-label">SIMULATION BENCHMARK</p><h2 id="showcase-title">See the benchmark in motion.</h2></div><p>在三个能力入口之间切换。这里将替换为正式宣传视频、模型轨迹与结果片段。</p></div>
-  <div class="showcase-tabs" role="tablist" aria-label="演示视频类别">
-    <input type="radio" name="showcase" id="showcase-reason" checked><label for="showcase-reason">01 · Reasoning</label>
-    <input type="radio" name="showcase" id="showcase-action"><label for="showcase-action">02 · Acting</label>
-    <input type="radio" name="showcase" id="showcase-coordinate"><label for="showcase-coordinate">03 · Coordination</label>
-    <div class="showcase-panels">
-      <figure class="showcase-panel panel-reason"><video controls muted playsinline preload="metadata" poster="media/posters/E__E_easy.jpg"><source src="media/videos/E__E_easy.mp4" type="video/mp4"></video><figcaption><b>Task-Level Reasoning</b><span>E · Multi-batch duplicate recognition</span><a href="#case-E">Explore task →</a></figcaption></figure>
-      <figure class="showcase-panel panel-action"><video controls muted playsinline preload="metadata" poster="media/posters/FR1__picking__01.jpg"><source src="media/videos/FR1__picking__01.mp4" type="video/mp4"></video><figcaption><b>Constraint-Aware Execution</b><span>FR1 · Conveyor picking</span><a href="#case-FR1">Explore task →</a></figcaption></figure>
-      <figure class="showcase-panel panel-coordinate"><video controls muted playsinline preload="metadata" poster="media/posters/CP01__CP01_easy_adaptive_v2_20260920.jpg"><source src="media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4" type="video/mp4"></video><figcaption><b>Reasoning–Acting Coordination</b><span>CP01 · Conveyor meal assembly</span><a href="#case-CP01">Explore task →</a></figcaption></figure>
-    </div>
-  </div>
-  <div class="showcase-note"><span>VIDEO PLACEHOLDER</span><p>正式结果产出后，可在同一播放器结构中替换为 Overview、Success / Failure、Model Comparison 等视频。</p></div>
-</section>
+<section class="rd-module rd-overview" id="benchmark"><div class="rd-copy"><p class="rd-kicker">BENCHMARK OVERVIEW</p><h2>From intention to physical outcome.</h2><p>Mind2Act World evaluates whether a system can choose the right goal, execute it under physical constraints, and revise the next action from the observed result.</p><a href="#cases">Explore all tasks →</a></div><figure class="figure-placeholder"><div class="figure-canvas"><span>MIND</span><i>→</i><span>ACT</span><i>→</i><span>WORLD</span><i>↺</i></div><figcaption><b>Figure 1 placeholder</b><span>Replace with the final benchmark overview or system architecture.</span></figcaption></figure></section>
 
-<section class="benchmark-preview compact-preview" aria-labelledby="preview-title">
-  <div class="preview-heading"><div><p class="section-label">AT A GLANCE</p><h2 id="preview-title">One benchmark, three questions.</h2></div></div>
-  <div class="preview-panels"><article><span>01 · MIND</span><h3>选对目标了吗？</h3></article><article><span>02 · ACT</span><h3>物理效果达标了吗？</h3></article><article><span>03 · ADAPT</span><h3>结果改变后续计划了吗？</h3></article></div>
-</section>
+<section class="rd-module rd-benchmark" id="evaluation-hub"><div class="rd-heading"><div><p class="rd-kicker">SIMULATION BENCHMARK</p><h2>Structured tasks. Observable outcomes.</h2></div><p>Three evaluation tracks isolate reasoning, control, and their coordination while preserving complete task execution.</p></div><div class="filmstrip"><a href="#case-E"><img src="media/posters/E__E_easy.jpg" alt="Duplicate recognition task"><span><b>E</b> Remember</span></a><a href="#case-FR1"><img src="media/posters/FR1__picking__01.jpg" alt="Conveyor picking task"><span><b>FR1</b> React</span></a><a href="#case-CP01"><img src="media/posters/CP01__CP01_easy_adaptive_v2_20260920.jpg" alt="Meal assembly task"><span><b>CP01</b> Coordinate</span></a><a class="film-placeholder" href="#cases"><div>+12</div><span><b>ALL TASKS</b> Explore</span></a></div><div class="track-line"><article><b>01</b><h3>Task-Level Reasoning</h3><p>Select goals from history, rules, and current state.</p></article><article><b>02</b><h3>Constraint-Aware Execution</h3><p>Act within timing, geometry, and contact constraints.</p></article><article><b>03</b><h3>Reasoning–Acting Coordination</h3><p>Use physical outcomes to update the plan.</p></article></div></section>
 
-<section class="section research-section" id="motivation">
-  <p class="section-label">THE REASONING–ACTING GAP</p>
-  <h2>能规划、能操作，是否就能完成整个任务？</h2>
-  <p class="article-paragraph">面向真实任务的机器人操作模型与系统，需要同时具备两种能力：理解目标、利用历史并组织多阶段行动的推理能力，以及在时间、几何和接触约束下可靠完成操作的执行能力。分别具备这两种能力，是否足以保证完整任务成功，仍需要直接检验。</p>
-  <p class="article-paragraph">如果规划任务的执行过程被可靠的原子技能包办，就难以观察规划如何应对动作偏差；如果操作测试只要求完成一个短步骤，就难以观察执行结果怎样影响后续计划。两种评测各有价值，完整任务还需要检查它们之间的依赖。</p>
-  <div class="capability-pair"><article><p class="section-label">REASONING</p><h3>理解情境，组织行动。</h3><p>结合观察、历史与规则，选择目标、安排顺序、判断阶段前提，并在条件变化时修订计划。记忆是支持这些判断的一种能力，研究范围也包括空间推理、任务拆解和进度维护。</p><p class="capability-question">当前应该做什么，哪些前提必须成立？</p></article><article><p class="section-label">ACTING</p><h3>满足约束，实现物理效果。</h3><p>把目标转化为及时、精确、稳定的操作：在窗口内抓取移动物体，沿参考线维持接触，或将读数调到容差内。完成与否由实际效果决定。</p><p class="capability-question">这一步是否在时间与精度要求内真正完成？</p></article></div>
-  <blockquote class="research-question">从推理到执行的关键问题是：<strong>计划能否适应物理约束，<br>执行结果能否正确改变后续计划？</strong></blockquote>
-  <p class="article-paragraph">Mind2Act World 将这种双向依赖作为评测中心。推理决定当前操作的对象、目标、约束与时机；真实执行结果决定哪些目标仍待完成、哪些前提仍然成立，以及下一步是否可行。长程、记忆、精度和动态响应在同一流程中共同施加压力。</p>
-  <p class="research-note">Reasoning 与 Acting 是评测视角，不要求模型采用显式双层架构。现阶段提供任务定义、演示和诊断设计；是否存在额外的协同瓶颈，需要由实验建立。</p>
-</section>
+<section class="rd-module rd-real"><div class="rd-heading"><div><p class="rd-kicker">REAL-WORLD BENCHMARK</p><h2>Designed to leave simulation.</h2></div><p>Reserved for synchronized real-robot demonstrations and sim-to-real comparisons.</p></div><div class="real-strip"><div><span>REAL ROBOT FILM 01</span></div><div><span>REAL ROBOT FILM 02</span></div><div><span>SIM ↔ REAL COMPARISON</span></div></div></section>
 
-<section class="section research-section" id="insight" aria-labelledby="insight-title">
-  <div class="section-head"><div><p class="section-label">01 / THREE EVALUATION DIMENSIONS</p><h2 id="insight-title">Task-Level Reasoning · Constraint-Aware Execution<br>Reasoning–Acting Coordination</h2></div></div>
-  <p class="section-intro">三个评测维度分别对应高层推理、低层执行与两者的推理—执行协同。Mind2Act 是推理与执行协同的项目品牌；World 是评测任务集合，Harness 是配套模型方案，并非额外的“世界模型”能力主张。</p>
-  <article class="research-point" id="insight-goal"><div class="point-number">01<span>MIND</span></div><div class="point-body">
-    <p class="dimension-name" lang="en">Task-Level Reasoning</p><h3>任务级推理：从情境中确定目标与计划。</h3>
-    <p class="point-thesis">高层推理把指令、观察、历史和规则转化为当前可执行的目标。</p>
-    <p>它需要识别任务对象、建立关系、安排顺序并维护阶段前提。记忆提供必要的历史依据，规划决定如何组织行动；环境状态变化后，还需判断原计划是否继续成立。</p>
-    <div class="point-example"><strong>P · 订单配餐</strong><p>新增订单改变累计需求，实际投放改变已完成量。被测系统要据此选择当前食材与容器，并维护剩余需求，避免遗漏和重复。</p><a href="#case-P">查看任务与判据 →</a></div>
-    __POINT_DEMO_P__
-    <p class="point-test"><b>可检验证据</b>对象与目标选择、顺序及前置条件是否正确；需求和进度是否一致。接口允许时，用可靠执行辅助检查原生决策，披露观察权限与预算。</p>
-  </div></article>
-  <article class="research-point" id="insight-action"><div class="point-number">02<span>ACT</span></div><div class="point-body">
-    <p class="dimension-name" lang="en">Constraint-Aware Execution</p><h3>约束感知执行：在真实物理条件下实现目标。</h3>
-    <p class="point-thesis">目标正确之后，动作仍须满足时间、几何、接触与稳定性约束。</p>
-    <p>执行侧需要跟踪当前观测、选择操作时机并控制误差。这里的“约束感知”指行为能够适应可观察的物理条件，不要求模型输出显式约束表示，也不以控制命令结束代替实际完成。</p>
-    <div class="point-example"><strong>PR3 · 大头笔描线</strong><p>笔尖只有接触纸面才产生墨迹。三档保持路径长度与几何容差，增加转向要求，可检查轨迹偏离、断触与连续完成情况。</p><a href="#case-PR3">查看执行约束 →</a></div>
-    __POINT_DEMO_PR3__
-    <p class="point-test"><b>可检验证据</b>实际读数或轨迹残差、有效接触、释放稳定性与端到端响应时延。正确子目标辅助的对照只适用于可替换接口，结果包含工具和控制器的贡献。</p>
-  </div></article>
-  <article class="research-point" id="insight-feedback"><div class="point-number">03<span>COORDINATION</span></div><div class="point-body">
-    <p class="dimension-name" lang="en">Reasoning–Acting Coordination</p><h3>推理—执行协同：让计划与物理过程相互约束。</h3>
-    <p class="point-thesis">推理为执行确定目标与约束，物理结果为后续推理提供依据。</p>
-    <p>高层给出的计划约束执行，真实执行结果又反向改变剩余目标与阶段前提。独立子任务的简单串联难以检验这种依赖；需要明确执行后的哪一个状态改变了后续正确行为。</p>
-    <div class="point-example"><strong>CP02 · 旋转蛋糕装饰</strong><p>记忆给出马卡龙与蛋糕局部位置的绑定，旋转决定当前落点与时机；真实落位才推进装饰任务。Hard 阶段发出停止指令后，还必须确认转盘实际停稳才能盖罩。</p><a href="#case-CP02">查看阶段依赖 →</a></div>
-    __POINT_DEMO_CP02__
-    <div class="table-wrap"><table><caption>从物理结果到后续决策</caption><thead><tr><th>实际结果</th><th>它改变的下一步</th><th>检查点</th></tr></thead><tbody><tr><td>食品是否稳定入盘</td><td>订单剩余需求与食品选择</td><td>抓空是否被错误记为完成</td></tr><tr><td>装饰是否落位、转盘是否停稳</td><td>剩余装饰与盖罩前提</td><td>阶段推进是否依据实际状态</td></tr></tbody></table></div>
-    <p class="research-note">这里的 Coordination 指任务层面的双向依赖：执行必须满足计划中的约束，后续目标与计划必须反映实际效果。不要求模型具有独立的推理、执行或协调模块。</p>
-    <p class="point-test"><b>可检验证据</b>对齐目标、效果和后续行为，记录错误推进、重复操作与恢复成本。反馈干预需要可实施的对照，完整任务得分下降本身不能证明独立的协同瓶颈。</p>
-  </div></article>
-  <div class="feedback-study"><div><p class="section-label">ONE ACTION, TWO OUTCOMES</p><h3>一次抓取的结果，怎样改变下一步？</h3><p>以 CP01 配餐为例，同样的目标食品可能抓空，也可能稳定入盘。剩余需求应随真实结果更新。</p><p class="muted">机制示意；不是实际模型失败记录。</p></div><div><div class="effect-choice" role="group" aria-label="选择示例执行结果"><button data-effect="miss" aria-pressed="true">抓空</button><button data-effect="deposited" aria-pressed="false">稳定入盘</button></div><div id="effectResult" class="effect-result" role="status" aria-live="polite"><b>目标仍待收取</b><span>保持该订单的剩余需求，检查目标是否仍可抓取；未入盘不能记为完成。</span></div><a href="#case-CP01">查看任务定义 →</a></div></div>
-</section>
+<section class="rd-module rd-flow"><div class="rd-heading"><div><p class="rd-kicker">THE CLOSED LOOP</p><h2>Every outcome changes what comes next.</h2></div></div><div class="flow-ribbon"><article><b>01</b><h3>Reason</h3><p>Form the current goal.</p></article><i>→</i><article><b>02</b><h3>Act</h3><p>Execute in the scene.</p></article><i>→</i><article><b>03</b><h3>Observe</h3><p>Measure the real effect.</p></article><i>→</i><article><b>04</b><h3>Replan</h3><p>Update remaining work.</p></article></div></section>
 
-<section class="section research-section" id="design" aria-labelledby="design-title">
-  <div class="section-head"><div><p class="section-label">02 / BENCHMARK DESIGN</p><h2 id="design-title">两种能力，三组任务，<br>四个压力维度。</h2></div></div>
-  <p class="section-intro">任务从完整流程的依赖出发，分别突出推理、执行与协同要求。当前任务库保留 15 项定义和既有素材；各任务的实现与标定状态在详情中说明。</p>
-  <div class="design-columns"><article><p class="section-label">TASK-LEVEL REASONING · 5</p><h3>任务级推理</h3><p>E / P / S / F / M</p><p>身份、需求、空间关系、未知映射与路线顺序如何决定当前目标。</p><a href="#case-E">查看跨批识别 →</a></article><article><p class="section-label">CONSTRAINT-AWARE EXECUTION · 5</p><h3>约束感知执行</h3><p>FR1 / FR2 / PR1 / PR2 / PR3</p><p>动态取件、限时响应、读数调节和接触描线如何满足物理约束。</p><a href="#case-FR2">查看限时响应 →</a></article><article><p class="section-label">REASONING–ACTING COORDINATION · 5</p><h3>推理—执行协同</h3><p>CP01–CP05</p><p>真实执行结果如何约束剩余目标、操作顺序和阶段推进。</p><a href="#case-CP02">查看旋转蛋糕装饰 →</a></article></div>
-  <h3 class="subsection-title">分层难度：观察能力在哪里失效。</h3><p class="article-paragraph">对同一任务逐级增加历史负担、阶段依赖、精度或动态窗口压力，比较成功率、物理残差和恢复成本。可控难度加压是贯穿三个维度的评测方法，不作为第四种能力。CP02 当前档位同时改变数量、转速和动作链，单因素归因还需额外的控制变量切片。</p>
-  <h3 class="subsection-title">四个压力变量支撑三个评测维度。</h3>
-  <div class="table-wrap"><table><thead><tr><th>压力维度</th><th>具体检查什么</th><th>证据边界</th></tr></thead><tbody>
-    <tr><td>记忆与规则</td><td>历史身份、事件与规则是否参与当前目标选择</td><td>指令长、对象多，不自动构成记忆依赖</td></tr>
-    <tr><td>长程与规划</td><td>多阶段前提、剩余目标与偏差后的计划修订</td><td>重复抓放次数多，不等于规划依赖更复杂</td></tr>
-    <tr><td>精细执行</td><td>真实读数、轨迹、剂量、间隙与触发条件</td><td>需固定容差并标定；命令完成不等于效果达标</td></tr>
-    <tr><td>动态响应</td><td>环境变化、可用窗口、端到端时延与有效吞吐</td><td>需声明推理时钟；控制器步频不等于模型响应能力</td></tr>
-  </tbody></table></div>
-  <details class="notes"><summary>五项协同任务分别施加哪些压力？</summary>__COUPLING_DIMENSIONS__<p class="research-note">这些是任务设计标签，不是模型能力结论。未标注不等于不存在该能力要求；动态响应窗口、物理容差及双臂必要性按各任务说明核验。</p></details>
-  <p class="research-note">三组任务提供诊断入口，不是严格隔离的能力测量。模型架构、工具支持与训练条件须分别披露；单套件得分或跨套件差值不能直接作为模块能力的因果证据。</p>
-</section>
+<section class="rd-module rd-future"><div><p class="rd-kicker">WHAT COMES NEXT</p><h2>From controlled tasks to open worlds.</h2></div><div class="future-grid"><article><span>01</span><h3>More embodiments</h3></article><article><span>02</span><h3>Real-world transfer</h3></article><article><span>03</span><h3>Longer horizons</h3></article></div></section>
+
+<section class="rd-module rd-thanks" id="community"><p class="rd-kicker">ACKNOWLEDGEMENTS</p><h2>Built with an open research community.</h2><p>We thank our collaborators, infrastructure partners, and early reviewers.</p><div class="logo-row"><span>LAB / INSTITUTION</span><span>COLLABORATOR</span><span>COMPUTE PARTNER</span><span>COMMUNITY</span></div></section>
+
+<section class="research-section" id="motivation"></section><section class="research-section" id="insight"><div id="insight-goal"></div><div id="insight-action"></div><div id="insight-feedback"></div></section><section class="research-section" id="design"></section>
+
