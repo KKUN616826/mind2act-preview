@@ -32,7 +32,7 @@ def main():
     page = Page(); page.feed(content)
     subtitle = 'Evaluating Reasoning–Acting Coordination in Robotic Manipulation'
     assert subtitle in content and subtitle in (ROOT/'docs/PhysCo_Showcase.md').read_text()
-    assert '<h1 id="project-title">Mind2Act World</h1>' in content
+    assert '<h1 class="rd-wordmark" id="project-title">' in content and 'MIND' in content and 'ACT' in content
     for stale in ['肌肉记忆', 'MUSCLE MEMORY', 'Cognitive–Motor Coupling', 'Cognitive Core', 'Motor Core', 'Coupling Suite', '>PhysCo<']:
         assert stale not in content, 'Outdated public narrative: ' + stale
     assert json.loads(page.payload) == records, 'HTML data differs from JSON'
