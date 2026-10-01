@@ -309,7 +309,7 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 
 /* Final academic hero alignment: title-only overlay and an unscaled geometric step. */
 .slide-copy nav{display:none!important}
-.project-identity{width:min(1120px,calc(100% - 64px));margin:0 auto;padding:62px 0 28px}
-.project-identity h2.paper-title{max-width:970px;margin:0 auto;color:#161b24;text-align:center;font:720 clamp(30px,3.3vw,44px)/1.12 Arial,sans-serif;letter-spacing:-.035em;text-wrap:balance}
-.project-record{margin-top:0}.record-row:first-child{padding-top:4px;padding-bottom:16px}.record-row:first-child p{font-size:clamp(16px,1.65vw,20px);line-height:1.55}.record-row:first-child strong{font-weight:700;color:#191f2b}
+.project-identity{width:min(900px,calc(100% - 64px));margin:0 auto;padding:62px 0 28px}
+.project-identity h2.paper-title{max-width:none;margin:0;color:#161b24;text-align:left;font:600 clamp(24px,2.6vw,32px)/1.15 Arial,sans-serif;letter-spacing:-.018em;text-wrap:balance}
+.project-record{margin-top:0}.record-row:first-child{padding-top:4px;padding-bottom:16px}.record-row:first-child p{font-size:14px;line-height:1.7}.record-row:first-child strong{font-weight:500;color:#191f2b}
 @media(max-width:700px){.project-identity{width:calc(100% - 30px);padding:44px 0 22px}.paper-title br{display:none}.paper-title{font-size:clamp(28px,9vw,42px)}}
