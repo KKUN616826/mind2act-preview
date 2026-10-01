@@ -309,8 +309,8 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 
 /* Final academic hero alignment: title-only overlay and an unscaled geometric step. */
 .slide-copy nav{display:none!important}
-.project-identity{width:min(960px,calc(100% - 64px));margin:0 auto;padding:62px 0 28px}
-.project-identity h2.paper-title{max-width:none;margin:0;color:#161b24;text-align:left;font:600 clamp(23px,2.45vw,31px)/1.17 Arial,sans-serif;letter-spacing:-.018em}
+.project-identity{width:min(900px,calc(100% - 64px));margin:0 auto;padding:62px 0 28px}
+.project-identity h2.paper-title{max-width:none;margin:0;color:#161b24;text-align:left;font:600 clamp(22px,2.35vw,30px)/1.17 Arial,sans-serif;letter-spacing:-.018em}
 .paper-title span{display:block;white-space:nowrap}
 .project-record{margin-top:0}.record-row:first-child{padding-top:4px;padding-bottom:16px}.record-row:first-child p{font-size:14px;line-height:1.7}.record-row:first-child strong{font-weight:500;color:#191f2b}
 @media(max-width:700px){.project-identity{width:calc(100% - 30px);padding:44px 0 22px}.project-identity h2.paper-title{font-size:clamp(24px,7.8vw,34px)}.paper-title span{white-space:normal}}
@@ -326,3 +326,16 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 .hero-switch button:hover i{background:#aeb9df}.hero-switch button.active:hover i{background:#5874ee}
 @media(max-width:900px){.project-record{width:min(900px,calc(100% - 48px))}.intro-statement{width:min(900px,calc(100% - 48px))}.academic-section{padding-top:76px;padding-bottom:76px}}
 @media(max-width:700px){#overview,#benchmark,#tasks,#evaluation-hub,#top-ten,#news,#contributors,#resources-overview{scroll-margin-top:76px}.project-record,.intro-statement{width:calc(100% - 30px)}.record-row{gap:7px;padding:11px 0}.record-row>b{font-size:10px}.intro-statement{font-size:16px;line-height:1.68;margin-bottom:36px}.rd-facts b{font-size:29px}.rd-facts>div{padding:20px 12px}.academic-section{padding-top:60px;padding-bottom:60px}.section-copy h2{letter-spacing:-1px}}
+
+/* Three-review convergence pass. */
+.hero-carousel{min-height:auto;padding:104px 0 30px;justify-content:flex-start}
+.hero-slide{border-radius:28px}.hero-slide:not(.is-centered){opacity:.5}
+.hero-slide:after{background:radial-gradient(ellipse 58% 48% at 50% 51%,rgba(5,8,14,.28),transparent 76%),linear-gradient(180deg,rgba(8,12,20,.15),rgba(8,12,20,.06) 34%,rgba(8,12,20,.48))}
+.slide-copy .rd-wordmark,.slide-title{font-size:clamp(46px,6.35vw,88px)!important}.slide-copy>p{color:rgba(255,255,255,.94)}
+.hero-controlbar{margin-top:14px;min-width:304px}.hero-switch button i{height:4px;background:#cbd2e2}.hero-pause{width:40px;height:40px;display:grid;place-items:center;padding:0;border:1px solid #d5dbe8;border-radius:50%;background:#fff;color:#4c5870;font:700 12px/1 Arial,sans-serif;cursor:pointer}.hero-pause:hover{border-color:#aebcf7;background:#f1f4ff;color:#4765e8}.hero-pause:focus-visible{outline:3px solid rgba(71,101,232,.34);outline-offset:3px}
+.project-identity{padding:48px 0 24px}.paper-title span:nth-child(2){margin-left:210px}
+.record-row{padding:12px 0;border-bottom:1px solid #e8ebf1!important}.record-row:last-child{border-bottom:0!important}.record-row:first-child{padding-top:12px;padding-bottom:12px}
+.nav a[aria-current=page]{background:transparent;border-radius:0;box-shadow:inset 0 -2px #4765e8}
+.protocol-facts{display:grid;grid-template-columns:repeat(4,1fr);margin:34px 0;border:1px solid #e0e4ed;border-radius:10px;overflow:hidden;background:#fafbfe}.protocol-facts>div{padding:20px;text-align:center;border-right:1px solid #e0e4ed}.protocol-facts>div:last-child{border:0}.protocol-facts b{display:block;color:#17213a;font:700 22px/1 Arial,sans-serif}.protocol-facts span{display:block;margin-top:8px;color:#69748a;font:650 10px/1.35 Arial,sans-serif;text-transform:uppercase;letter-spacing:.055em}
+@media(max-width:1000px) and (min-width:701px){.paper-title span:nth-child(2){margin-left:clamp(120px,18vw,180px)}}
+@media(max-width:700px){.hero-carousel{padding:82px 0 24px}.hero-controlbar{min-width:278px}.paper-title span:nth-child(2){margin-left:0}.record-row{border-bottom:1px solid #e8ebf1!important}.protocol-facts{grid-template-columns:1fr 1fr}.protocol-facts>div:nth-child(2){border-right:0}.protocol-facts>div:nth-child(-n+2){border-bottom:1px solid #e0e4ed}}
