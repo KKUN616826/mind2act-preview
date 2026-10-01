@@ -306,3 +306,10 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 /* The task reel belongs to the page grid and keeps academic side margins. */
 #tasks{width:min(1180px,calc(100% - 64px))!important;max-width:1180px!important;margin-inline:auto!important;overflow:hidden}.task-marquee{border-radius:10px;overflow:hidden}
 @media(max-width:700px){.slide-copy{padding:26px 20px}.slide-copy nav{margin-bottom:16px}.slide-copy .rd-wordmark,.slide-title{font-size:clamp(42px,14vw,68px)!important}.slide-copy .rd-wordmark em,.slide-title em{display:block;margin:10px 0 0}.slide-copy>p{font-size:13px}.project-record{width:calc(100% - 30px)}#tasks{width:calc(100% - 30px)!important}}
+
+/* Final academic hero alignment: title-only overlay and an unscaled geometric step. */
+.slide-copy nav{display:none!important}
+.project-identity{width:min(1120px,calc(100% - 64px));margin:0 auto;padding:62px 0 28px}
+.project-identity h2.paper-title{max-width:970px;margin:0 auto;color:#161b24;text-align:center;font:720 clamp(30px,3.3vw,44px)/1.12 Arial,sans-serif;letter-spacing:-.035em;text-wrap:balance}
+.project-record{margin-top:0}.record-row:first-child{padding-top:4px;padding-bottom:16px}.record-row:first-child p{font-size:clamp(16px,1.65vw,20px);line-height:1.55}.record-row:first-child strong{font-weight:700;color:#191f2b}
+@media(max-width:700px){.project-identity{width:calc(100% - 30px);padding:44px 0 22px}.paper-title br{display:none}.paper-title{font-size:clamp(28px,9vw,42px)}}
