@@ -58,8 +58,11 @@ const heroDots=[...document.querySelectorAll('[data-hero-dot]')];
 let heroPosition=1,heroLogical=0,heroBusy=false,heroTimer;
 if(heroTrack){
   const originals=[...heroTrack.children];
-  heroTrack.prepend(originals[originals.length-1].cloneNode(true));
-  heroTrack.append(originals[0].cloneNode(true));
+  const lastClone=originals[originals.length-1].cloneNode(true);
+  const firstClone=originals[0].cloneNode(true);
+  [lastClone,firstClone].forEach(clone=>clone.querySelectorAll('[id]').forEach(node=>node.removeAttribute('id')));
+  heroTrack.prepend(lastClone);
+  heroTrack.append(firstClone);
   const heroSlides=[...heroTrack.children];
   function heroTranslate(animate=true){
     heroTrack.style.transition=animate?'transform .65s cubic-bezier(.16,1,.3,1)':'none';
