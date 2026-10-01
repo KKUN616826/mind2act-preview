@@ -293,6 +293,18 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 .project-identity{padding-top:76px}.project-identity .rd-wordmark{font-size:clamp(42px,6vw,72px)}
 @media(max-width:700px){.hero-carousel{padding-inline:20px}.hero-frames{width:100%;height:auto;min-height:0;aspect-ratio:3/4}.hero-peek{display:none}.hero-copy{width:82vw}.hero-copy strong{font-size:clamp(52px,16vw,82px)}}
 
+/* Hero hierarchy: title above, media second, controls aligned below. */
+.hero-carousel{display:flex;flex-direction:column;justify-content:flex-start;gap:0;min-height:100svh;padding-top:calc(76px + clamp(18px,3vh,30px));padding-bottom:clamp(22px,3vh,34px)}
+.hero-copy{position:static;order:-2;transform:none;width:min(920px,calc(100% - 48px));color:#151b27;text-shadow:none;margin:0 auto clamp(24px,3vh,34px)}
+.hero-copy p{color:#5874ee;margin-bottom:10px}.hero-copy strong{font-size:clamp(52px,7.4vw,104px);color:#151b27}.hero-copy strong span{color:#5874ee}.hero-copy strong em{font:700 .14em/1 Arial,sans-serif;letter-spacing:.2em;color:#717b8e;margin-left:.75em;vertical-align:middle}.hero-copy h2{font-size:clamp(18px,2vw,28px);color:#424c60;margin-top:18px}
+.hero-frames{order:-1;flex:1;width:min(calc(100% - 2 * clamp(72px,9vw,132px)),calc((100svh - 270px)*1.95));height:auto;min-height:410px;max-height:none}
+.hero-peek{top:auto;bottom:calc(clamp(22px,3vh,34px) + 54px);height:calc(100svh - 300px);min-height:390px}
+.hero-controlbar{position:static;order:1;width:100%;height:54px;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:16px}
+.hero-arrow{width:40px;height:40px;min-width:40px;display:grid;place-items:center;padding:0;font-size:17px;line-height:1;color:#4c5870}.hero-switch{height:40px;display:flex;align-items:center;gap:9px}.hero-switch label{width:42px;height:3px}
+/* JS reorders the 15 live tiles continuously, so no duplicate media or blank tail is needed. */
+.marquee-track{animation:none!important;transform:translate3d(0,0,0)}
+@media(max-width:700px){.hero-carousel{padding-top:92px}.hero-copy{margin-bottom:20px}.hero-copy strong em{display:block;margin:10px 0 0}.hero-frames{width:calc(100% - 40px);height:auto;min-height:0;aspect-ratio:3/4}}
+
 </style>
 </head>
 <body>
@@ -307,7 +319,7 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
       <figure class="hero-frame frame-2"><video class="hero-blur" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4" type="video/mp4"></video><video class="hero-main" autoplay loop muted playsinline preload="metadata" poster="media/posters/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.jpg"><source src="media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4" type="video/mp4"></video></figure>
       <figure class="hero-frame frame-3"><video class="hero-blur" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="media/videos/CP04__CP04_easy.mp4" type="video/mp4"></video><video class="hero-main" autoplay loop muted playsinline preload="metadata" poster="media/posters/CP04__CP04_easy.jpg"><source src="media/videos/CP04__CP04_easy.mp4" type="video/mp4"></video></figure>
     </div>
-    <div class="hero-copy" aria-hidden="true"><p>SIMULATION BENCHMARK</p><strong>MIND<span>2</span>ACT</strong><h2>Reason. Act. Verify. Continue.</h2><small>Evaluating complete robotic tasks through physical outcomes.</small></div>
+    <div class="hero-copy" aria-hidden="true"><p>SIMULATION BENCHMARK</p><strong>MIND<span>2</span>ACT <em>WORLD</em></strong><h2>A Simulation Benchmark for Reasoning–Acting Coordination</h2></div>
     <div class="hero-peek hero-peek-right" aria-hidden="true"></div>
     <div class="hero-controlbar"><button class="hero-arrow hero-prev" type="button" aria-label="Previous film">←</button><div class="hero-switch"><label for="film-1" aria-label="Show film 1"><i></i></label><label for="film-2" aria-label="Show film 2"><i></i></label><label for="film-3" aria-label="Show film 3"><i></i></label></div><button class="hero-arrow hero-next" type="button" aria-label="Next film">→</button></div>
   </div>
@@ -779,6 +791,28 @@ const heroRadios=[...document.querySelectorAll('.hero-carousel input[name="hero-
 function showHero(index){heroIndex=(index+heroRadios.length)%heroRadios.length;const carousel=document.querySelector('.hero-carousel');if(carousel)carousel.dataset.active=String(heroIndex+1);heroRadios[heroIndex].checked=true;document.querySelectorAll('.hero-frame').forEach((frame,i)=>frame.querySelectorAll('video').forEach(v=>{if(i===heroIndex)v.play().catch(()=>{});else v.pause();}));}
 function restartHero(){clearInterval(heroTimer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)heroTimer=setInterval(()=>showHero(heroIndex+1),6500);}
 document.querySelector('.hero-prev')?.addEventListener('click',()=>{showHero(heroIndex-1);restartHero();});document.querySelector('.hero-next')?.addEventListener('click',()=>{showHero(heroIndex+1);restartHero();});heroRadios.forEach((r,i)=>r.addEventListener('change',()=>{showHero(i);restartHero();}));showHero(0);restartHero();
+
+const marqueeTrack=document.querySelector('.marquee-track');
+if(marqueeTrack&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let marqueeOffset=0,marqueeLast=performance.now(),marqueePaused=false;
+  const marqueeGap=12,marqueeSpeed=42;
+  marqueeTrack.closest('.task-marquee')?.addEventListener('mouseenter',()=>marqueePaused=true);
+  marqueeTrack.closest('.task-marquee')?.addEventListener('mouseleave',()=>{marqueePaused=false;marqueeLast=performance.now();});
+  function advanceMarquee(now){
+    const elapsed=Math.min((now-marqueeLast)/1000,.05);marqueeLast=now;
+    if(!marqueePaused){
+      marqueeOffset+=marqueeSpeed*elapsed;
+      const first=marqueeTrack.firstElementChild;
+      if(first&&marqueeOffset>=first.getBoundingClientRect().width+marqueeGap){
+        marqueeOffset-=first.getBoundingClientRect().width+marqueeGap;
+        marqueeTrack.appendChild(first);
+      }
+      marqueeTrack.style.transform=`translate3d(${-marqueeOffset}px,0,0)`;
+    }
+    requestAnimationFrame(advanceMarquee);
+  }
+  requestAnimationFrame(advanceMarquee);
+}
 
 </script>
 </body></html>

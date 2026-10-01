@@ -58,6 +58,28 @@ function showHero(index){heroIndex=(index+heroRadios.length)%heroRadios.length;c
 function restartHero(){clearInterval(heroTimer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)heroTimer=setInterval(()=>showHero(heroIndex+1),6500);}
 document.querySelector('.hero-prev')?.addEventListener('click',()=>{showHero(heroIndex-1);restartHero();});document.querySelector('.hero-next')?.addEventListener('click',()=>{showHero(heroIndex+1);restartHero();});heroRadios.forEach((r,i)=>r.addEventListener('change',()=>{showHero(i);restartHero();}));showHero(0);restartHero();
 
+const marqueeTrack=document.querySelector('.marquee-track');
+if(marqueeTrack&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let marqueeOffset=0,marqueeLast=performance.now(),marqueePaused=false;
+  const marqueeGap=12,marqueeSpeed=42;
+  marqueeTrack.closest('.task-marquee')?.addEventListener('mouseenter',()=>marqueePaused=true);
+  marqueeTrack.closest('.task-marquee')?.addEventListener('mouseleave',()=>{marqueePaused=false;marqueeLast=performance.now();});
+  function advanceMarquee(now){
+    const elapsed=Math.min((now-marqueeLast)/1000,.05);marqueeLast=now;
+    if(!marqueePaused){
+      marqueeOffset+=marqueeSpeed*elapsed;
+      const first=marqueeTrack.firstElementChild;
+      if(first&&marqueeOffset>=first.getBoundingClientRect().width+marqueeGap){
+        marqueeOffset-=first.getBoundingClientRect().width+marqueeGap;
+        marqueeTrack.appendChild(first);
+      }
+      marqueeTrack.style.transform=`translate3d(${-marqueeOffset}px,0,0)`;
+    }
+    requestAnimationFrame(advanceMarquee);
+  }
+  requestAnimationFrame(advanceMarquee);
+}
+
 </script>
 </body></html>
 
