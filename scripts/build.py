@@ -8,6 +8,40 @@ from leaderboard import render as render_leaderboard
 
 ROOT = Path(__file__).resolve().parents[1]
 
+ENGLISH_TITLES = {
+    'E': 'Duplicate Item Identification',
+    'P': 'Order-Based Meal Assembly',
+    'S': 'Rotating Tray Layout Reconstruction',
+    'F': 'Unknown Button Mapping and Slider Navigation',
+    'M': 'Workpiece Tracking and Route Reproduction',
+    'FR1': 'Continuous Conveyor Picking',
+    'FR2': 'Light-Guided Button Response',
+    'PR1': 'Linear Resistor Adjustment',
+    'PR2': 'Rotary Voltage Regulator Setting',
+    'PR3': 'Marker Line Tracing',
+    'CP01': 'Conveyor Meal Assembly',
+    'CP02': 'Rotating Cake Decoration',
+    'CP03': 'Dynamic Rack Loading',
+    'CP04': 'Dual-Arm Cooking',
+    'CP05': 'Keyboard Sequence Reproduction',
+}
+
+def task_wall(records):
+    tiles = []
+    for case in records:
+        asset = next((item for item in case['media'] if item['kind'] == 'video'), None)
+        if not asset:
+            continue
+        tiles.append(
+            '<a class="task-tile" href="docs/cases/{id}.md"><video autoplay muted loop playsinline preload="metadata" poster="{poster}" '
+            'aria-label="{title}"><source src="{path}" type="video/mp4"></video>'
+            '<span><b>{id}</b>{title}</span></a>'.format(
+                id=e(case['id']), title=e(ENGLISH_TITLES[case['id']]),
+                poster=e(asset.get('poster', cover(case))), path=e(asset['path'])
+            )
+        )
+    return ''.join(tiles)
+
 def main():
     records = json.loads((ROOT / 'data/showcase-cases.json').read_text())
     assert len(records) == len({c['id'] for c in records}) == 15
@@ -59,7 +93,7 @@ def main():
             visual = f'<img src="{e(previews.get(cid) or cover(case))}" alt="{e(case["title"])}" loading="eager">'
         highlight_cards.append(f'<a href="#case-{cid}"><figure>{visual}<figcaption><b>{cid} · {e(title)}</b><span>{e(note)}</span></figcaption></figure></a>')
     media = ''.join(highlight_cards)
-    for key, value in {'INSIGHT_MEDIA': media, 'CASES': '\n'.join(card(c) for c in records), 'PUBLIC_DATA': payload, 'VIDEO_COUNT': str(videos), 'IMAGE_COUNT': str(images)}.items():
+    for key, value in {'INSIGHT_MEDIA': media, 'TASK_WALL': task_wall(records), 'CASES': '\n'.join(card(c) for c in records), 'PUBLIC_DATA': payload, 'VIDEO_COUNT': str(videos), 'IMAGE_COUNT': str(images)}.items():
         page = page.replace('__' + key + '__', value)
     assert not re.search(r'__[A-Z_]+__', page)
     (ROOT / 'index.html').write_text(page)
