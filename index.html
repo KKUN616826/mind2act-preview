@@ -274,6 +274,12 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 .task-marquee{padding-block:12px 20px}
 @keyframes task-scroll{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
 
+/* Full-bleed hero: no side panels, blur fields, or letterbox blocks. */
+.hero-carousel,.hero-frames,.hero-frame{background:#fff!important}
+.hero-frame{overflow:hidden!important}
+.hero-blur{display:none!important}
+.hero-main{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center center!important;transform:none!important;box-shadow:none!important}
+
 </style>
 </head>
 <body>
