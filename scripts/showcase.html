@@ -60,7 +60,11 @@ if(heroTrack){
   const originals=[...heroTrack.children];
   const lastClone=originals[originals.length-1].cloneNode(true);
   const firstClone=originals[0].cloneNode(true);
-  [lastClone,firstClone].forEach(clone=>clone.querySelectorAll('[id]').forEach(node=>node.removeAttribute('id')));
+  [lastClone,firstClone].forEach(clone=>{
+    clone.setAttribute('aria-hidden','true');
+    clone.querySelectorAll('[id]').forEach(node=>node.removeAttribute('id'));
+    clone.querySelectorAll('a,button,video').forEach(node=>node.setAttribute('tabindex','-1'));
+  });
   heroTrack.prepend(lastClone);
   heroTrack.append(firstClone);
   const heroSlides=[...heroTrack.children];
@@ -87,6 +91,14 @@ if(heroTrack){
 
 
 const marqueeTrack=document.querySelector('.marquee-track');
+const taskVideos=[...document.querySelectorAll('.task-marquee video')];
+if('IntersectionObserver' in window){
+  const taskVideoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    const video=entry.target;
+    if(entry.isIntersecting&&entry.intersectionRatio>.15)video.play().catch(()=>{});else video.pause();
+  }),{threshold:[0,.15,.5]});
+  taskVideos.forEach(video=>taskVideoObserver.observe(video));
+}else taskVideos.forEach(video=>video.play().catch(()=>{}));
 if(marqueeTrack&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
   let marqueeOffset=0,marqueeLast=performance.now(),marqueePaused=false;
   const marqueeGap=12,marqueeSpeed=42;

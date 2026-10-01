@@ -33,7 +33,7 @@ def task_wall(records):
         if not asset:
             continue
         tiles.append(
-            '<a class="task-tile" href="docs/cases/{id}.md"><video autoplay muted loop playsinline preload="metadata" poster="{poster}" '
+            '<a class="task-tile" href="docs/cases/{id}.md"><video muted loop playsinline preload="metadata" poster="{poster}" '
             'aria-label="{title}"><source src="{path}" type="video/mp4"></video>'
             '<span><b>{id}</b>{title}</span></a>'.format(
                 id=e(case['id']), title=e(ENGLISH_TITLES[case['id']]),
