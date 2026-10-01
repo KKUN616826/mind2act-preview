@@ -53,10 +53,34 @@ document.querySelectorAll('[data-effect]').forEach(button=>button.addEventListen
 document.getElementById('exportSelection').addEventListener('click',()=>{const ids=new Set(cards.filter(c=>!c.hidden).map(c=>c.dataset.id));const blob=new Blob([JSON.stringify({benchmark:'Mind2Act World',cases:records.filter(c=>ids.has(c.id))},null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Mind2Act_World_selected_cases.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 const printDetails=[...document.querySelectorAll('.case-card,.notes')];let printState=[];window.addEventListener('beforeprint',()=>{printState=printDetails.map(c=>c.open);printDetails.filter(c=>!c.closest('.case-card')?.hidden).forEach(c=>c.open=true);});window.addEventListener('afterprint',()=>printDetails.forEach((c,i)=>c.open=printState[i]??false));document.getElementById('printButton').addEventListener('click',()=>window.print());document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));cards.forEach(c=>c.addEventListener('toggle',()=>{if(!c.open)c.querySelectorAll('video').forEach(v=>v.pause());}));applyFilters();if(location.hash)openHash();
 
-const heroRadios=[...document.querySelectorAll('.hero-carousel input[name="hero-film"]')];let heroIndex=0,heroTimer;
-function showHero(index){heroIndex=(index+heroRadios.length)%heroRadios.length;const carousel=document.querySelector('.hero-carousel');if(carousel)carousel.dataset.active=String(heroIndex+1);heroRadios[heroIndex].checked=true;document.querySelectorAll('.hero-frame').forEach((frame,i)=>frame.querySelectorAll('video').forEach(v=>{if(i===heroIndex)v.play().catch(()=>{});else v.pause();}));}
-function restartHero(){clearInterval(heroTimer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)heroTimer=setInterval(()=>showHero(heroIndex+1),6500);}
-document.querySelector('.hero-prev')?.addEventListener('click',()=>{showHero(heroIndex-1);restartHero();});document.querySelector('.hero-next')?.addEventListener('click',()=>{showHero(heroIndex+1);restartHero();});heroRadios.forEach((r,i)=>r.addEventListener('change',()=>{showHero(i);restartHero();}));showHero(0);restartHero();
+const heroTrack=document.querySelector('.hero-track');
+const heroDots=[...document.querySelectorAll('[data-hero-dot]')];
+let heroPosition=1,heroLogical=0,heroBusy=false,heroTimer;
+if(heroTrack){
+  const originals=[...heroTrack.children];
+  heroTrack.prepend(originals[originals.length-1].cloneNode(true));
+  heroTrack.append(originals[0].cloneNode(true));
+  const heroSlides=[...heroTrack.children];
+  function heroTranslate(animate=true){
+    heroTrack.style.transition=animate?'transform .65s cubic-bezier(.16,1,.3,1)':'none';
+    const step=heroSlides[0].getBoundingClientRect().width+16;heroTrack.style.transform=`translate3d(${-heroPosition*step}px,0,0)`;
+    heroDots.forEach((dot,i)=>dot.classList.toggle('active',i===heroLogical));
+    heroSlides.forEach((slide,i)=>slide.classList.toggle('is-centered',i===heroPosition));
+    heroSlides.forEach((slide,i)=>slide.querySelectorAll('video').forEach(v=>{if(i===heroPosition)v.play().catch(()=>{});else v.pause();}));
+  }
+  function heroMove(delta){if(heroBusy)return;heroBusy=true;heroPosition+=delta;heroLogical=(heroLogical+delta+originals.length)%originals.length;heroTranslate(true);}
+  heroTrack.addEventListener('transitionend',()=>{
+    if(heroPosition===0)heroPosition=originals.length;
+    if(heroPosition===originals.length+1)heroPosition=1;
+    heroTranslate(false);heroBusy=false;
+  });
+  function restartHero(){clearInterval(heroTimer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)heroTimer=setInterval(()=>heroMove(1),6500);}
+  document.querySelector('.hero-prev')?.addEventListener('click',()=>{heroMove(-1);restartHero();});
+  document.querySelector('.hero-next')?.addEventListener('click',()=>{heroMove(1);restartHero();});
+  heroDots.forEach((dot,i)=>dot.addEventListener('click',()=>{if(i===heroLogical)return;const delta=i-heroLogical;heroPosition+=delta;heroLogical=i;heroTranslate(true);restartHero();}));
+  heroTranslate(false);window.addEventListener('resize',()=>heroTranslate(false));restartHero();
+}
+
 
 const marqueeTrack=document.querySelector('.marquee-track');
 if(marqueeTrack&&!matchMedia('(prefers-reduced-motion: reduce)').matches){

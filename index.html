@@ -305,6 +305,16 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 .marquee-track{animation:none!important;transform:translate3d(0,0,0)}
 @media(max-width:700px){.hero-carousel{padding-top:92px}.hero-copy{margin-bottom:20px}.hero-copy strong em{display:block;margin:10px 0 0}.hero-frames{width:calc(100% - 40px);height:auto;min-height:0;aspect-ratio:3/4}}
 
+/* Real three-slide track; adjacent cards are actual cloned videos, not decorative peeks. */
+.hero-carousel{--hero-peek:clamp(72px,9vw,132px);--hero-gap:16px;display:flex;flex-direction:column;align-items:stretch;min-height:100svh;padding:calc(76px + clamp(18px,3vh,30px)) 0 clamp(22px,3vh,34px);overflow:hidden}
+.hero-copy{order:0;flex:none;margin:0 auto clamp(24px,3vh,34px)}
+.hero-viewport{order:1;width:100%;overflow:hidden;flex:none}.hero-track{display:flex;gap:var(--hero-gap);width:max-content;padding-left:var(--hero-peek);will-change:transform}.hero-slide{position:relative;flex:0 0 calc(100vw - 2 * var(--hero-peek));width:calc(100vw - 2 * var(--hero-peek));height:calc((100vw - 2 * var(--hero-peek))/1.95);min-height:400px;max-height:650px;margin:0;overflow:hidden;border-radius:clamp(28px,2.6vw,38px);background:#111;transform:scale(.96);opacity:.68;transition:transform .65s cubic-bezier(.16,1,.3,1),opacity .45s ease;box-shadow:0 16px 42px rgba(16,24,40,.12)}.hero-slide.is-centered{transform:scale(1);opacity:1}.hero-slide video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center;background:transparent;filter:brightness(.94) saturate(.96) contrast(1.06);transform:scale(1.02)}
+.hero-controlbar{order:2;position:static;margin:12px auto 0;height:44px}.hero-switch button{width:42px;height:20px;padding:0;border:0;background:transparent;border-radius:0;display:flex;align-items:center}.hero-switch button i{display:block;width:100%;height:3px;background:#d9deea;border-radius:4px}.hero-switch button.active i{background:#5874ee}.hero-peek,.hero-frames{display:none!important}
+.project-identity{padding:40px 0 12px;border-bottom:0}.project-team{margin:0}
+@media(max-width:700px){.hero-carousel{--hero-peek:20px;padding-top:90px}.hero-slide{height:calc((100vw - 40px)*1.05);min-height:0;max-height:none;border-radius:24px}.hero-copy{width:calc(100% - 40px)}}
+.hero-copy .rd-wordmark{display:block!important;width:100%;font:750 clamp(52px,7.4vw,104px)/.9 Arial,sans-serif!important;letter-spacing:-.06em!important;color:#151b27!important;text-align:center}.hero-copy .rd-wordmark span{color:#5874ee}.hero-copy .rd-wordmark em{font:700 .14em/1 Arial,sans-serif!important;letter-spacing:.2em!important;color:#717b8e!important;margin-left:.75em;vertical-align:middle}
+@media(max-width:700px){.hero-copy .rd-wordmark em{display:block;margin:10px 0 0}}
+
 </style>
 </head>
 <body>
@@ -313,20 +323,18 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 <div class="article-layout wrap"><aside class="article-nav" aria-label="文章目录"><details open><summary>本文目录</summary><nav><a href="#motivation">为什么需要 Mind2Act World</a><a href="#insight">三个核心观点</a><a href="#insight-goal" class="sub">01 · 任务级推理</a><a href="#insight-action" class="sub">02 · 约束感知执行</a><a href="#insight-feedback" class="sub">03 · 推理—执行协同</a><a href="#design">任务怎样检验</a><a href="#evaluation">从失败走向诊断</a><a href="#mindact">Mind2Act Harness · 模型架构</a><a href="#leaderboard">排行榜 · 待评测</a><a href="#cases">15 项任务与演示</a><a href="#resources">资源与开放问题</a></nav></details></aside><main class="article-body">
 <section class="rd-hero" id="overview" aria-labelledby="project-title">
   <div class="hero-carousel" role="region" aria-label="Featured benchmark films">
-    <input type="radio" name="hero-film" id="film-1" checked><input type="radio" name="hero-film" id="film-2"><input type="radio" name="hero-film" id="film-3">
-    <div class="hero-peek hero-peek-left" aria-hidden="true"></div><div class="hero-frames">
-      <figure class="hero-frame frame-1"><video class="hero-blur" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="media/videos/CP03__CP03_Hard_7盘_三档20mms_原速.mp4" type="video/mp4"></video><video class="hero-main" autoplay loop muted playsinline preload="metadata" poster="media/posters/CP03__CP03_Hard_7盘_三档20mms_原速.jpg"><source src="media/videos/CP03__CP03_Hard_7盘_三档20mms_原速.mp4" type="video/mp4"></video></figure>
-      <figure class="hero-frame frame-2"><video class="hero-blur" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4" type="video/mp4"></video><video class="hero-main" autoplay loop muted playsinline preload="metadata" poster="media/posters/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.jpg"><source src="media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4" type="video/mp4"></video></figure>
-      <figure class="hero-frame frame-3"><video class="hero-blur" autoplay loop muted playsinline preload="metadata" aria-hidden="true"><source src="media/videos/CP04__CP04_easy.mp4" type="video/mp4"></video><video class="hero-main" autoplay loop muted playsinline preload="metadata" poster="media/posters/CP04__CP04_easy.jpg"><source src="media/videos/CP04__CP04_easy.mp4" type="video/mp4"></video></figure>
+    <div class="hero-copy"><p>SIMULATION BENCHMARK</p><h1 class="rd-wordmark" id="project-title">MIND<span>2</span>ACT <em>WORLD</em></h1><h2>A Simulation Benchmark for Reasoning–Acting Coordination</h2></div>
+    <div class="hero-viewport">
+      <div class="hero-track">
+        <figure class="hero-slide"><video autoplay loop muted playsinline preload="metadata" poster="media/posters/CP03__CP03_Hard_7盘_三档20mms_原速.jpg"><source src="media/videos/CP03__CP03_Hard_7盘_三档20mms_原速.mp4" type="video/mp4"></video></figure>
+        <figure class="hero-slide"><video autoplay loop muted playsinline preload="metadata" poster="media/posters/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.jpg"><source src="media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4" type="video/mp4"></video></figure>
+        <figure class="hero-slide"><video autoplay loop muted playsinline preload="metadata" poster="media/posters/CP04__CP04_easy.jpg"><source src="media/videos/CP04__CP04_easy.mp4" type="video/mp4"></video></figure>
+      </div>
     </div>
-    <div class="hero-copy" aria-hidden="true"><p>SIMULATION BENCHMARK</p><strong>MIND<span>2</span>ACT <em>WORLD</em></strong><h2>A Simulation Benchmark for Reasoning–Acting Coordination</h2></div>
-    <div class="hero-peek hero-peek-right" aria-hidden="true"></div>
-    <div class="hero-controlbar"><button class="hero-arrow hero-prev" type="button" aria-label="Previous film">←</button><div class="hero-switch"><label for="film-1" aria-label="Show film 1"><i></i></label><label for="film-2" aria-label="Show film 2"><i></i></label><label for="film-3" aria-label="Show film 3"><i></i></label></div><button class="hero-arrow hero-next" type="button" aria-label="Next film">→</button></div>
+    <div class="hero-controlbar"><button class="hero-arrow hero-prev" type="button" aria-label="Previous film">←</button><div class="hero-switch"><button type="button" data-hero-dot="0" aria-label="Show film 1"><i></i></button><button type="button" data-hero-dot="1" aria-label="Show film 2"><i></i></button><button type="button" data-hero-dot="2" aria-label="Show film 3"><i></i></button></div><button class="hero-arrow hero-next" type="button" aria-label="Next film">→</button></div>
   </div>
   <div class="project-identity">
     <p class="project-team">MIND2ACT RESEARCH COLLECTIVE PRESENTS</p>
-    <h1 class="rd-wordmark" id="project-title"><span>MIND</span><b>2</b><span>ACT</span><em>WORLD</em></h1>
-    <h2>A Simulation Benchmark for Reasoning–Acting Coordination</h2>
   </div>
   <div class="project-record" aria-label="Project information">
     <div class="record-row"><b>Authors</b><p><a href="#">Yuzhi Huang</a>, <a href="#">Junchao Lin</a>, <a href="#">Jiazhen Huang</a>, <a href="#">Ziyi Xiong</a>, <a href="#">Yuankun Lü</a></p></div>
@@ -356,6 +364,7 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 <section class="academic-section contributors" id="contributors"><div class="section-copy"><span>ACKNOWLEDGEMENTS</span><h2>We thank our contributors.</h2><p>We thank the contributors who helped shape the task designs, simulation assets, evaluation protocol, and project infrastructure.</p></div><div class="contributor-grid"><article><i>A1</i><b>[Contributor Name]</b><span>Benchmark design</span></article><article><i>A2</i><b>[Contributor Name]</b><span>Simulation environments</span></article><article><i>A3</i><b>[Contributor Name]</b><span>Evaluation protocol</span></article><article><i>A4</i><b>[Contributor Name]</b><span>Project infrastructure</span></article></div></section>
 <section class="academic-section compact-resources" id="resources-overview"><h2>Resources</h2><div class="resource-pills"><a href="docs/PhysCo_Technical_Report_v0.1.pdf">Technical Report</a><a href="docs/PhysCo_Cases.md">Task Specifications</a><a href="docs/PhysCo_Media.md">Media Index</a><a href="https://github.com/yu2hi13/physco-bench">Repository</a><a href="data/showcase-cases.json">Structured Data</a></div></section>
 <span id="motivation" hidden></span><span id="insight" hidden></span><span id="insight-goal" hidden></span><span id="insight-action" hidden></span><span id="insight-feedback" hidden></span><span id="design" hidden></span>
+
 
 
 
@@ -787,10 +796,34 @@ document.querySelectorAll('[data-effect]').forEach(button=>button.addEventListen
 document.getElementById('exportSelection').addEventListener('click',()=>{const ids=new Set(cards.filter(c=>!c.hidden).map(c=>c.dataset.id));const blob=new Blob([JSON.stringify({benchmark:'Mind2Act World',cases:records.filter(c=>ids.has(c.id))},null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Mind2Act_World_selected_cases.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 const printDetails=[...document.querySelectorAll('.case-card,.notes')];let printState=[];window.addEventListener('beforeprint',()=>{printState=printDetails.map(c=>c.open);printDetails.filter(c=>!c.closest('.case-card')?.hidden).forEach(c=>c.open=true);});window.addEventListener('afterprint',()=>printDetails.forEach((c,i)=>c.open=printState[i]??false));document.getElementById('printButton').addEventListener('click',()=>window.print());document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));cards.forEach(c=>c.addEventListener('toggle',()=>{if(!c.open)c.querySelectorAll('video').forEach(v=>v.pause());}));applyFilters();if(location.hash)openHash();
 
-const heroRadios=[...document.querySelectorAll('.hero-carousel input[name="hero-film"]')];let heroIndex=0,heroTimer;
-function showHero(index){heroIndex=(index+heroRadios.length)%heroRadios.length;const carousel=document.querySelector('.hero-carousel');if(carousel)carousel.dataset.active=String(heroIndex+1);heroRadios[heroIndex].checked=true;document.querySelectorAll('.hero-frame').forEach((frame,i)=>frame.querySelectorAll('video').forEach(v=>{if(i===heroIndex)v.play().catch(()=>{});else v.pause();}));}
-function restartHero(){clearInterval(heroTimer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)heroTimer=setInterval(()=>showHero(heroIndex+1),6500);}
-document.querySelector('.hero-prev')?.addEventListener('click',()=>{showHero(heroIndex-1);restartHero();});document.querySelector('.hero-next')?.addEventListener('click',()=>{showHero(heroIndex+1);restartHero();});heroRadios.forEach((r,i)=>r.addEventListener('change',()=>{showHero(i);restartHero();}));showHero(0);restartHero();
+const heroTrack=document.querySelector('.hero-track');
+const heroDots=[...document.querySelectorAll('[data-hero-dot]')];
+let heroPosition=1,heroLogical=0,heroBusy=false,heroTimer;
+if(heroTrack){
+  const originals=[...heroTrack.children];
+  heroTrack.prepend(originals[originals.length-1].cloneNode(true));
+  heroTrack.append(originals[0].cloneNode(true));
+  const heroSlides=[...heroTrack.children];
+  function heroTranslate(animate=true){
+    heroTrack.style.transition=animate?'transform .65s cubic-bezier(.16,1,.3,1)':'none';
+    const step=heroSlides[0].getBoundingClientRect().width+16;heroTrack.style.transform=`translate3d(${-heroPosition*step}px,0,0)`;
+    heroDots.forEach((dot,i)=>dot.classList.toggle('active',i===heroLogical));
+    heroSlides.forEach((slide,i)=>slide.classList.toggle('is-centered',i===heroPosition));
+    heroSlides.forEach((slide,i)=>slide.querySelectorAll('video').forEach(v=>{if(i===heroPosition)v.play().catch(()=>{});else v.pause();}));
+  }
+  function heroMove(delta){if(heroBusy)return;heroBusy=true;heroPosition+=delta;heroLogical=(heroLogical+delta+originals.length)%originals.length;heroTranslate(true);}
+  heroTrack.addEventListener('transitionend',()=>{
+    if(heroPosition===0)heroPosition=originals.length;
+    if(heroPosition===originals.length+1)heroPosition=1;
+    heroTranslate(false);heroBusy=false;
+  });
+  function restartHero(){clearInterval(heroTimer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)heroTimer=setInterval(()=>heroMove(1),6500);}
+  document.querySelector('.hero-prev')?.addEventListener('click',()=>{heroMove(-1);restartHero();});
+  document.querySelector('.hero-next')?.addEventListener('click',()=>{heroMove(1);restartHero();});
+  heroDots.forEach((dot,i)=>dot.addEventListener('click',()=>{if(i===heroLogical)return;const delta=i-heroLogical;heroPosition+=delta;heroLogical=i;heroTranslate(true);restartHero();}));
+  heroTranslate(false);window.addEventListener('resize',()=>heroTranslate(false));restartHero();
+}
+
 
 const marqueeTrack=document.querySelector('.marquee-track');
 if(marqueeTrack&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
