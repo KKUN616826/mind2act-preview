@@ -376,3 +376,210 @@ body{font-family:"Inter","Aptos","Segoe UI","PingFang SC","Microsoft YaHei",Aria
 @media(prefers-reduced-motion:reduce){.moon-chart #rail-flow path{animation:none!important}}
 
 .moon-chart #rail-flow path:last-child{stroke:#7d959e}
+
+/* Clear continuous rails and separate score axes. */
+.moon-chart #orbit-rails path{stroke:#718c9b;stroke-width:5;opacity:.65}
+.moon-chart #orbit-rails path:last-child{stroke:#344f61;opacity:.9}
+.moon-chart #rail-flow path:last-child{stroke:#567b91;stroke-width:2.4}
+.moon-chart .marker-leader{stroke:#c4deec;stroke-width:2;opacity:1}
+.moon-chart .mind-craft .marker-leader,.moon-chart .coupling-craft .marker-leader{stroke:#304f63;stroke-width:2;opacity:1}
+.moon-chart .coupling-tick{color:#294759}.moon-chart .coupling-tick text{opacity:1}
+.moon-chart .moon-body{animation:none}
+.moon-chart .world-labels text:last-child{font-size:25px;fill:#304854}
+
+.moon-chart .coupling-tick{color:#d3e1e8}.moon-chart .coupling-tick text{font-weight:600}
+
+/* Paired planetary horizons; restore delicate, legible side rails. */
+.moon-chart #orbit-rails path:first-child{stroke:#657e89;stroke-width:4;opacity:.7}
+.moon-chart #orbit-rails path:nth-child(2){stroke:#a8c2cf;stroke-width:4;opacity:.6}
+.moon-chart #rail-flow path:first-child{stroke:#536f7d;stroke-width:1.8}
+.moon-chart #rail-flow path:nth-child(2){stroke:#d1e5ef;stroke-width:1.8}
+.moon-chart .mind-craft .marker-leader{stroke:#3e5968;stroke-width:1.7;opacity:1}
+.moon-chart .world-labels text:first-child,.moon-chart .world-labels text:nth-child(2){font-size:23px}
+
+.moon-chart .world-labels text:first-child,.moon-chart .world-labels text:nth-child(2){font-size:21px;letter-spacing:-.4px}
+
+.lunar-track-headings{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;text-align:center;margin:8px 0 18px;color:#314956;font:600 clamp(15px,1.7vw,23px)/1.3 Arial,sans-serif;letter-spacing:-.4px}
+
+.lunar-world-titles text{font:600 25px Arial,sans-serif;letter-spacing:-.4px;fill:#314956}.lunar-world-titles text:last-child{fill:#dbe8f0}.lunar-world-titles text:nth-child(2){font-size:22px}
+
+.lunar-controls .model-select{display:grid;grid-template-columns:repeat(6,max-content);gap:6px 9px}.lunar-controls{align-items:center}.lunar-world-titles text:nth-child(2){font-size:25px}
+@media(max-width:800px){.lunar-controls .model-select{grid-template-columns:repeat(4,max-content);gap:5px}}
+@media(max-width:480px){.lunar-controls .model-select{grid-template-columns:repeat(3,max-content)}}
+
+/* Matte lunar material and quiet flight paths, without permanent axes. */
+.moon-chart .badge-halo{display:none}.moon-chart .badge-disc{fill:#f2f4f3;stroke:#bac8ce;stroke-width:1;filter:drop-shadow(0 2px 3px #172e3e20)}
+.moon-chart #orbit-rails path{stroke-width:2.5;opacity:.52}.moon-chart #orbit-rails path:last-child{stroke-width:2.8;opacity:.8}
+.moon-chart #rail-flow path{stroke-width:1.2;stroke-dasharray:2 32;opacity:.65}.moon-chart #rail-flow path:last-child{stroke-width:1.4}
+.moon-chart .marker-leader{stroke-width:1.2}.moon-chart .mind-craft .marker-leader,.moon-chart .coupling-craft .marker-leader{stroke-width:1.2}
+.lunar-panorama{box-shadow:0 18px 55px #172d3a0c}
+
+.moon-chart #orbit-rails path:last-child{stroke:#8baebf;opacity:.82}.moon-chart #rail-flow path:last-child{stroke:#b3d4df}.moon-chart .coupling-craft .marker-leader{stroke:#bdd2dc}
+
+/* Accepted floating star-cluster overview; scoped to the research section. */
+#research-overview .moon-chart{width:100%;height:auto;display:block;aspect-ratio:1400/1440}
+#research-overview .lunar-panorama{overflow:hidden;border-radius:18px;position:relative}
+#research-overview .node{cursor:pointer}
+#research-overview .node .disc{fill:#e9f0ed;stroke:#afc8d0;stroke-width:1}
+#research-overview .node .brand{color:#294351;fill:#294351}
+#research-overview .capsule{fill:#f3f8f9;stroke:#bddbe5;stroke-width:1.5;filter:drop-shadow(0 3px 8px #c3e7f030)}
+#research-overview .flame{fill:#c2e3ed;opacity:.38}
+#research-overview .node.is-muted{filter:opacity(.18)}
+#research-overview .node:focus{outline:none}
+#research-overview .node:hover .disc,#research-overview .node:focus .disc{stroke:#fff;stroke-width:3}
+#research-overview .node:hover .capsule,#research-overview .node:focus .capsule{stroke:#fff;stroke-width:3}
+#research-overview .lunar-world-titles{font:600 25px Arial;fill:#314956}
+#research-overview .lunar-world-titles text:last-child{fill:#e0ebf2}
+#research-overview .lunar-tooltip{z-index:5;pointer-events:none;background:#fffffff2;color:#294351;border:1px solid #d7e3e8;border-radius:10px;padding:14px 18px;display:grid;gap:5px;min-width:180px}
+#research-overview .lunar-tooltip[hidden]{display:none}
+#research-overview .lunar-tooltip b{font-size:16px}
+#research-overview .lunar-tooltip span{font-size:13px}
+@media(max-width:700px){#research-overview .lunar-world-titles{font-size:29px}#research-overview .lunar-panorama{border-radius:12px}}
+
+#research-overview .lunar-preview-label{text-align:center;font-size:14px;color:#536474;margin:-12px 0 24px;letter-spacing:.02em}
+
+/* Continuous world motion, independent from data-driven ranking coordinates. */
+#research-overview .float-body{animation:world-float var(--float-duration,6s) ease-in-out var(--float-delay,0s) infinite;transform-box:fill-box;transform-origin:center}
+#research-overview .node[data-track="coupling"] .float-body{animation-name:core-float}
+@keyframes world-float{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,-9px)}}
+@keyframes core-float{0%,100%{transform:translate(0,0)}50%{transform:translate(-2px,-11px)}}
+#research-overview .living-moon{animation:moon-drift 14s ease-in-out infinite;transform-origin:700px 185px}
+@keyframes moon-drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+#research-overview .light-dark-field{animation:world-light 12s ease-in-out infinite}
+@keyframes world-light{0%,100%{opacity:.72}50%{opacity:1}}
+#research-motivation .motivation-grid article:first-child{background:linear-gradient(145deg,#f6f3e8,#e3eeea);border-color:#d8e2db}
+#research-motivation .motivation-grid article:nth-child(2){background:linear-gradient(145deg,#243b58,#18243e);color:#eaf0f5;border-color:#344c65}
+#research-motivation .motivation-grid article:nth-child(2) p,#research-motivation .motivation-grid article:nth-child(2) .concept-name{color:#d1dee9}
+#research-motivation .motivation-grid article:last-child{background:linear-gradient(125deg,#e6ede4,#dbe7e8 45%,#c2d2df);border-color:#c8d8db}
+#research-motivation .concept-scene{background:#ffffff70;color:#29414f}
+#research-motivation .motivation-grid article:nth-child(2) .concept-scene{background:#ffffff12;color:#eaf2f7}
+#research-overview .moon-chart{min-width:0!important}
+@media(prefers-reduced-motion:reduce){#research-overview .float-body,#research-overview .living-moon,#research-overview .light-dark-field{animation:none}}
+
+/* v78 — visual review: mineral teal identity, clean footage, and a coherent research diagram. */
+:root{--research-ink:#172d37;--research-teal:#226d70;--research-rule:#d5e1de;--research-paper:#fafbf8}
+body{background:var(--research-paper);color:var(--research-ink)}
+.header{background:rgba(250,251,248,.96)!important;border-color:var(--research-rule)!important}
+.header .brand b{color:var(--research-teal)!important}
+.nav a[aria-current=page]{box-shadow:inset 0 -2px var(--research-teal)!important}
+.record-row a,.resource-pills a:hover,.section-copy>span,.featured-trio figcaption b,.suite-row b,.top-table b{color:var(--research-teal)!important}
+.academic-section{border-top-color:var(--research-rule)}
+.section-copy h2{color:var(--research-ink);font-weight:600;letter-spacing:-.035em}
+.hero-slide video{filter:none!important;transform:none!important}
+.hero-slide:after{background:linear-gradient(180deg,transparent 30%,rgba(5,15,23,.09) 68%,rgba(5,15,23,.2))!important}
+.slide-copy .rd-wordmark,.slide-title{text-shadow:0 2px 7px #07131d80!important}
+.slide-copy .rd-wordmark>span:first-of-type,.slide-title>span:first-of-type{color:#bfe5d8!important}
+.slide-copy>p{text-shadow:0 1px 5px #07131db0;color:#fff!important}
+.hero-switch button.active i,.hero-switch button.active:hover i{background:var(--research-teal)!important}
+.hero-controlbar .hero-arrow{color:#365c62!important}
+.hero-controlbar .hero-arrow:hover{background:#e5efea!important;color:#164f55!important}
+.hero-arrow:focus-visible,.hero-switch button:focus-visible,.nav a:focus-visible{outline-color:#76aaa7!important}
+#research-motivation .section-copy{margin-bottom:36px}
+#research-motivation .motivation-grid{gap:0;overflow:hidden;border:1px solid #ccdcd8;border-radius:14px;align-items:stretch}
+#research-motivation .motivation-grid article{padding:32px 30px 28px;border:0;border-radius:0;min-width:0;display:flex;flex-direction:column}
+#research-motivation .motivation-grid article:first-child{background:#eef2e9;color:#203c3d}
+#research-motivation .motivation-grid article:nth-child(2){background:#19354c;color:#eef6f7}
+#research-motivation .motivation-grid article:last-child{background:linear-gradient(120deg,#e4ece5,#d2e3e3);color:#1b3f49}
+#research-motivation .concept-name{font:600 15px/1.2 Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#28696a}
+#research-motivation .motivation-grid h3{font:600 25px/1.22 Arial,sans-serif;letter-spacing:-.035em;margin:18px 0 16px;min-height:62px;text-wrap:balance}
+#research-motivation .motivation-grid p{font:400 16px/1.65 Arial,sans-serif;max-width:none;color:#25474b;margin:0 0 28px}
+#research-motivation .motivation-grid article:nth-child(2) p,#research-motivation .motivation-grid article:nth-child(2) .concept-name{color:#e1edf1}
+#research-motivation .concept-scene{margin-top:auto;padding:18px 0 0;border-radius:0;background:none!important;border-top:1px solid #7faaa56b;gap:10px}
+#research-motivation .concept-scene span{font:500 13px Arial,sans-serif;color:inherit;opacity:.9}
+#research-motivation .concept-scene b{font:600 18px/1.4 Arial,sans-serif;color:inherit;letter-spacing:-.02em}
+#research-motivation .dependency-figure{margin-top:26px;border:0;border-radius:0;padding:28px 30px;background:#eff4f0;gap:24px}
+#research-motivation .dependency-figure b{font:600 18px/1.3 Arial,sans-serif;color:#1b3b44}
+#research-motivation .dependency-figure span{font:400 15px/1.6 Arial,sans-serif;color:#33555b}
+#research-motivation .dependency-figure i,#research-motivation .return-path{color:#226d70}
+#research-motivation .return-path{border-top-color:#a8c5bf;padding-top:20px}
+#research-motivation .research-question{font:500 20px/1.55 Arial,sans-serif;color:#1f444d;margin-top:26px}
+.protocol-facts,.rd-facts{background:#f1f5f0;border-color:#d5e1da}
+.footer{background:#18343e!important}
+@media(max-width:900px){#research-motivation .motivation-grid article{padding:26px 22px}#research-motivation .motivation-grid h3{font-size:22px}}
+@media(max-width:700px){#research-motivation .motivation-grid{grid-template-columns:1fr}#research-motivation .motivation-grid h3{min-height:0}#research-motivation .dependency-figure{padding:24px}#research-motivation .concept-scene{margin-top:8px}}
+/* Shared typography after the editorial pass; long academic terms keep equal row baselines. */
+#research-motivation>.research-question{max-width:900px;text-align:left;margin:0 auto 34px;font:400 18px/1.7 Arial,sans-serif;color:#28444b;text-wrap:pretty}
+#research-motivation .motivation-grid h3{min-height:92px}
+.news-grid article>span,.contributor-grid i{color:var(--research-teal)!important}
+.evaluation-loop{background:#193843!important}
+.evaluation-loop i{color:#b1dacf!important}
+@media(max-width:700px){#research-motivation .motivation-grid h3{min-height:0}#research-motivation>.research-question{font-size:17px;margin-bottom:28px}}
+
+#research-motivation .research-question{border-left-color:#43847f}
+
+@media(min-width:1100px){#research-motivation .motivation-grid h3{min-height:64px}}
+
+.preview-badge{display:inline-block;border:1px solid #bed1ca;background:#e9f0ec;color:#365d59;padding:7px 12px;border-radius:20px;font-size:13px;margin-bottom:16px}.score-preview-table{overflow-x:auto}.score-preview-table table{width:100%;border-collapse:collapse;min-width:640px;text-align:left}.score-preview-table th{padding:16px;background:#eaf0ec;color:#365d59}.score-preview-table td{padding:19px 16px;border-bottom:1px solid #dce4df;font-variant-numeric:tabular-nums}.score-preview-table a{color:#2b716b;text-decoration:none}.rollout-selectors{display:flex;align-items:end;gap:20px;margin-bottom:24px;flex-wrap:wrap}.rollout-selectors label{display:grid;gap:8px;font-size:14px}.rollout-selectors select{font:inherit;padding:10px 16px;border:1px solid #bdcfc6;border-radius:8px;background:#fff;min-width:160px}.rollout-selectors .preview-badge{margin:0}.rollout-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.rollout-preview-grid article{border:1px solid #d6e1db;border-radius:12px;overflow:hidden;background:#fff}.rollout-card-heading{display:flex;justify-content:space-between;align-items:center;padding:18px}.rollout-card-heading h3{margin:0;font-size:18px}.rollout-card-heading b{color:#356c64}.rollout-preview-grid video{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#192e39}.rollout-preview-grid p{padding:0 18px;color:#365d59;font-size:14px}@media(max-width:700px){.rollout-preview-grid{grid-template-columns:1fr}}
+
+/* Lunar-derived palette outside the accepted overview. */
+body{background:#f8faf7;color:#233b49}.academic-section{border-color:#d9e3dd}.section-copy h2,.paper-title{color:#233b49}.protocol-facts,.rd-facts{background:linear-gradient(115deg,#eef2e8,#e5efeb);border-color:#d3e0d8}.resource-pills a{background:#edf3ef;border-color:#ccddd5;color:#365c61}.news-grid article,.contributor-grid article{background:#f0f4ee;border-color:#d5e1d9}.project-details .project-record{margin:0 auto}.case-browser-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 22px;gap:18px}.case-browser-head h3{margin:0;font-size:22px}.case-browser-head span{font-size:14px;color:#365c61}.case-browser-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.case-browser-grid button{display:grid;gap:13px;text-align:left;background:#eef3ef;border:1px solid #ccddd6;border-radius:12px;padding:20px;cursor:pointer;color:#294552}.case-browser-grid button:hover{background:#e0eeea;border-color:#66958d}.case-browser-grid b{font-size:24px}.case-browser-grid span{font-size:12px;white-space:nowrap}.case-browser-grid strong{font-size:18px;color:#387b73}.rollout-detail-heading{display:flex;align-items:center;gap:24px;margin-bottom:20px}.rollout-detail-heading button{background:transparent;border:1px solid #b4ccc2;border-radius:24px;padding:10px 16px;cursor:pointer;color:#365c61}.rollout-preview-grid[hidden],.rollout-detail-heading[hidden],.case-browser[hidden]{display:none!important}@media(max-width:900px){.case-browser-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.case-browser-grid{grid-template-columns:repeat(2,1fr)}.case-browser-grid button{padding:15px}.case-browser-grid span{font-size:10px}}
+
+.case-browser-grid em{font-style:normal;font-size:14px;line-height:1.5;min-height:63px}.rollout-detail-heading h3{font-size:20px;line-height:1.5}
+
+/* v83 — silver paper, blue-grey typography; accepted lunar scene remains untouched. */
+:root{--bg:#f6f8fa;--paper:#fff;--ink:#263746;--green:#425f74;--blue:#425f74;--amber:#425f74;--muted:#536576;--line:#d8e1e8;--mint:#edf2f6;--sand:#f1f4f7;--research-ink:#263746;--research-teal:#425f74;--research-rule:#d8e1e8;--research-paper:#f6f8fa}
+body{background:#f6f8fa;color:#263746}
+.header{background:rgba(246,248,250,.96)!important;border-color:#d8e1e8!important}
+.brand,.header .brand{color:#263746}.header .brand b{color:#425f74!important}
+.nav a,.nav a[aria-current=page]{color:#344b5d}.nav a:hover{background:#eaf0f5;color:#263746}.nav .paper-link{background:#263746;color:#fff;border-color:#263746}
+.hero-carousel,.hero-controlbar{background:#f6f8fa;border-color:#d8e1e8}
+.slide-copy .rd-wordmark>span:first-of-type,.slide-title>span:first-of-type{color:#d4e4ef!important}
+.hero-controlbar .hero-arrow{color:#425f74!important}.hero-controlbar .hero-arrow:hover{background:#e6edf3!important;color:#263746!important}
+.hero-switch button.active i,.hero-switch button.active:hover i{background:#425f74!important}
+.hero-arrow:focus-visible,.hero-switch button:focus-visible,.nav a:focus-visible{outline-color:#849daf!important}
+.section-copy h2,.paper-title,.project-identity h2.paper-title,.section-head h2,.compact-resources h2,.case-browser-head h3,.rollout-detail-heading h3{color:#263746!important}
+.section-copy>span,.section-label,.dimension-name,.concept-name,.record-row a,.featured-trio figcaption b,.suite-row b,.top-table b,.news-grid article>span,.contributor-grid i{color:#425f74!important}
+.academic-section,.project-record,.record-row,.governance{border-color:#d8e1e8!important}
+.intro-statement,.record-row p,.section-copy p,.governance p{color:#344b5d}
+.protocol-facts,.rd-facts,.benchmark-facts{background:#edf2f6;border-color:#d8e1e8;box-shadow:none}
+.protocol-facts>div,.rd-facts>div,.benchmark-facts>div{border-color:#d8e1e8}.protocol-facts b,.rd-facts b,.benchmark-facts b{color:#2c4052}
+.suite-row{background:#fff;border-color:#d8e1e8}.suite-row article{border-color:#d8e1e8}.suite-row h3{color:#2c4052}
+.resource-pills a,.rd-links a{background:#edf2f6;border-color:#d0dde6;color:#425f74}.resource-pills a:hover,.rd-links a:hover{background:#e3ecf3;border-color:#849daf;color:#263746!important}
+.news-grid article,.contributor-grid article,.evidence-row article{background:#f0f4f7;border-color:#d8e1e8}.contributor-grid i{background:#e4edf3}
+.news-grid h3,.evidence-row h3,.contributor-grid b{color:#2c4052}
+.evaluation-loop{background:#253d52!important}.evaluation-loop i{color:#c7dce9!important}
+.footer{background:#253d52!important;color:#e0e9ef}.footer a{color:#e0e9ef}
+.preview-badge{background:#edf2f6;color:#425f74;border-color:#ccd9e2}
+.score-preview-table th{background:#eaf0f5;color:#344b5d}.score-preview-table td{border-color:#d8e1e8;color:#263746}.score-preview-table a{color:#425f74}.score-preview-table a:hover{color:#263746}
+.rollout-selectors select{background:#fff;color:#263746;border-color:#bccedb}.rollout-preview-grid article{border-color:#d8e1e8;background:#fff}.rollout-card-heading b,.rollout-preview-grid p{color:#425f74}
+.case-browser-head span{color:#425f74}.case-browser-grid button{background:#edf2f6;color:#2c4052;border-color:#ccd9e2}.case-browser-grid button:hover{background:#e1ebf3;border-color:#7d9aaf}.case-browser-grid strong{color:#425f74}
+.rollout-detail-heading button{border-color:#bccedb;color:#425f74}.rollout-detail-heading button:hover{background:#e6edf3}
+#research-motivation .motivation-grid{border-color:#ccd9e2}
+#research-motivation .motivation-grid article:first-child{background:#edf2f6;color:#2c4052}
+#research-motivation .motivation-grid article:nth-child(2){background:#253d52;color:#eef4f8}
+#research-motivation .motivation-grid article:last-child{background:linear-gradient(120deg,#edf2f6,#dce7ef);color:#2c4052}
+#research-motivation .concept-name{color:#425f74}#research-motivation .motivation-grid p{color:#344b5d}
+#research-motivation .motivation-grid article:nth-child(2) p,#research-motivation .motivation-grid article:nth-child(2) .concept-name{color:#e1ecf3}
+#research-motivation .concept-scene{border-top-color:#91a8b96b}
+#research-motivation .dependency-figure{background:#edf2f6}
+#research-motivation .dependency-figure b,#research-motivation .research-question{color:#2c4052}
+#research-motivation .dependency-figure span{color:#344b5d}
+#research-motivation .dependency-figure i,#research-motivation .return-path{color:#425f74}
+#research-motivation .return-path{border-top-color:#b2c5d3}
+#research-motivation .research-question{border-left-color:#6d8ba2}
+.filters button,.catalog-actions button,.lb-tracks button{background:#f0f4f7;border-color:#ccd9e2;color:#425f74}
+.filters button[aria-pressed=true],.lb-tracks [aria-pressed=true]{background:#425f74;border-color:#425f74;color:#fff}
+.catalog-actions button:hover{background:#e1ebf3;color:#263746}
+
+.rollout-detail-heading{gap:20px;flex-wrap:wrap}.rollout-detail-heading h3{min-width:0}.rollout-detail-heading button{flex-shrink:0}
+
+
+/* v85: stronger blue-grey heading contrast. */
+.academic-section h2,.section-copy h2,.paper-title,.project-identity h2.paper-title,.section-head h2,.compact-resources h2,.case-browser-head h3,.rollout-detail-heading h3{color:#182d40!important;opacity:1!important}
+.suite-row h3,.news-grid h3,.evidence-row h3,.contributor-grid b{color:#22394c!important}
+
+
+/* Final review: preserve contrast on the dark Act panel and prevent tablet title overflow. */
+#research-motivation .motivation-grid article:nth-child(2) .concept-name{color:#e1ecf3!important}
+@media(max-width:1000px){.paper-title span{white-space:normal!important}.paper-title{overflow-wrap:normal}}
+
+
+html{background:#f6f8fa}
+
+
+/* Round 1: equal card rows and readable mobile metadata. */
+.case-browser-grid button{grid-template-rows:auto 1fr auto auto}.case-browser-grid strong{align-self:end}
+.protocol-facts span{font-size:12px!important}
+@media(max-width:700px){.record-row{grid-template-columns:1fr!important;gap:10px!important}.project-record,.project-identity,.intro-statement{width:100%!important}.record-row p{overflow-wrap:anywhere}}
+
+@media(max-width:600px){.case-browser-grid span{font-size:11px!important}}
