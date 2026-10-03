@@ -67,7 +67,10 @@ def main():
         payload = payload.replace(char, escape)
     page = (ROOT / 'scripts/showcase.html').read_text()
     page = page.replace('__RESEARCH_INTRO__', (ROOT / 'scripts/research_intro.html').read_text())
-    lunar = json.dumps(json.loads((ROOT / 'data/lunar-preview.json').read_text()), separators=(',', ':')).replace('<', '\u003c')
+    lunar_data = json.loads((ROOT / 'data/lunar-preview.json').read_text())
+    for model in lunar_data['models']:
+        model['icon_svg'] = (ROOT / ('media/icons/' + model['icon'] + '.svg')).read_text()
+    lunar = json.dumps(lunar_data, separators=(',', ':')).replace('<', '\u003c')
     page = page.replace('__LUNAR_DATA__', lunar)
     page = page.replace('__LUNAR_JS__', (ROOT / 'scripts/lunar.js').read_text())
     page = page.replace('__RESEARCH_CSS__', (ROOT / 'scripts/research.css').read_text())
