@@ -1,0 +1,26 @@
+{
+  "mode": "illustrative",
+  "models": [
+    {
+      "id": "codex",
+      "name": "Codex",
+      "mind": 94,
+      "act": 88,
+      "coupling": 91
+    },
+    {
+      "id": "atlas",
+      "name": "Atlas",
+      "mind": 78,
+      "act": 48,
+      "coupling": 66
+    },
+    {
+      "id": "nova",
+      "name": "Nova",
+      "mind": 60,
+      "act": 72,
+      "coupling": 43
+    }
+  ]
+}
