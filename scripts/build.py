@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 from render_cases import card, case_md, cover, e
 from leaderboard import render as render_leaderboard
+from build_rollouts import build_rollouts
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -43,6 +44,7 @@ def task_wall(records):
     return ''.join(tiles)
 
 def main():
+    build_rollouts(ENGLISH_TITLES)
     records = json.loads((ROOT / 'data/showcase-cases.json').read_text())
     assert len(records) == len({c['id'] for c in records}) == 15
     videos = sum(a['kind'] == 'video' for c in records for a in c['media'])
