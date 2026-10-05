@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: file:; media-src 'self' file: blob:; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: file:; media-src 'self' file: blob:; font-src 'self' file:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="description" content="Mind2Act World — Evaluating Reasoning–Acting Coordination in Robotic Manipulation through 15 simulation tasks and environment-derived evaluation.">
 <meta name="theme-color" content="#174c3b">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2319655b'/%3E%3Cpath d='M13 43V21h8l11 13 11-13h8v22h-8V32L32 45 21 32v11z' fill='white'/%3E%3C/svg%3E">
@@ -134,7 +134,10 @@ const mainLinks=[...document.querySelectorAll('#siteNav a[href^="#"]')];
 function updateMainNavigation(){let active=mainLinks[0],nearest=-Infinity;for(const a of mainLinks){const section=document.querySelector(a.getAttribute('href'));const top=section?.getBoundingClientRect().top;if(top<=210&&top>nearest){nearest=top;active=a;}}mainLinks.forEach(a=>{if(a===active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
 window.addEventListener('scroll',updateMainNavigation,{passive:true});updateMainNavigation();
 </script>
-</body></html>
+<script>
+const scene=document.querySelector('.lunar-vision');let frame=0;function reveal(e){const r=scene.getBoundingClientRect();if(frame)cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{scene.style.setProperty('--x',(e.clientX-r.left)+'px');scene.style.setProperty('--y',(e.clientY-r.top)+'px');scene.style.setProperty('--radius',(innerWidth<600?76:100)+'px');scene.classList.add('revealing')})}scene.addEventListener('pointermove',reveal);scene.addEventListener('pointerdown',reveal);scene.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);scene.classList.remove('revealing')});scene.addEventListener('pointerup',e=>{if(e.pointerType==='touch')scene.classList.remove('revealing')});
+
+const lunarHeader=document.querySelector('.header');new IntersectionObserver(es=>lunarHeader.classList.toggle('compact',!es[0].isIntersecting),{rootMargin:'-112px 0px 0px 0px'}).observe(document.querySelector('.lunar-vision'));</script></body></html>
 
 
 

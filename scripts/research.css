@@ -764,3 +764,104 @@ html,body{background:#faf8ef;color:#192d43}
 .news-grid article,.contributor-grid article{background:#eef1e8;border-color:#d2d9ce}
 .research-abstract .research-emphasis{color:#315e73!important;font-weight:700}
 .research-abstract p{overflow-wrap:normal;word-break:normal}
+
+@scope (.lunar-vision) {
+
+*{box-sizing:border-box}body{margin:0;background:#e4efde;color:#182c40;font-family:Arial,'Microsoft YaHei',sans-serif}header{height:72px;padding:0 5%;display:flex;align-items:center;justify-content:space-between}header img{width:176px;height:auto;image-rendering:pixelated}header a{color:inherit;font-size:16px;text-decoration:none;padding:12px}a:focus-visible{outline:2px solid #182c40;outline-offset:4px}.lunar-vision{position:relative;width:calc(100% - 64px);max-width:1600px;margin:24px auto 48px;overflow:hidden;background:#182c40;--radius:100px}.layer{display:grid;grid-template-columns:30% 70%;align-items:center;min-height:440px;padding:56px 5%;background:#182c40;color:#e4efde}.moon-area{display:flex;align-items:center;justify-content:center;padding-right:40px}.moon{width:280px;max-width:100%;height:auto;image-rendering:pixelated}.words{padding:0 0 0 16px;min-width:0}blockquote{margin:0;font-family:Arial,'Microsoft YaHei',sans-serif;font-size:clamp(24px,3.25vw,52px);font-weight:600;line-height:1.25;letter-spacing:-.035em}blockquote span{display:block;white-space:nowrap}.credit{margin:20px 0 40px;font-size:14px;line-height:20px;color:#bdd9cc}.credit a{color:inherit;text-decoration:none}.vision{font-size:clamp(18px,1.6vw,24px);line-height:1.5;margin:0;font-weight:400;letter-spacing:-.015em}.vision span{display:block;white-space:nowrap}.vision strong{font-weight:400;color:#f0d57e}.bright{position:absolute;inset:0;background:#e4efde;color:#182c40;pointer-events:none;clip-path:circle(0px at var(--x,50%) var(--y,50%));visibility:hidden}.bright blockquote{font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif;letter-spacing:.015em;font-weight:600}.bright .credit{color:#182c40}.bright .vision strong{color:#182c40}.revealing .bright{visibility:visible;clip-path:circle(var(--radius) at var(--x) var(--y))}.ring{position:absolute;left:var(--x);top:var(--y);width:calc(var(--radius)*2);height:calc(var(--radius)*2);border:2px solid #bdd9cc;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;display:none}.revealing .ring{display:block}.lunar-vision.revealing{cursor:none}@media(min-width:1500px){.layer{min-height:520px}.moon{width:320px}}@media(max-width:900px){.lunar-vision{width:calc(100% - 32px);margin:16px auto}.layer{padding:40px 4%;min-height:352px;grid-template-columns:28% 72%}.moon-area{padding-right:16px}.words{padding-left:8px}blockquote{font-size:clamp(24px,3.2vw,32px)}.credit{margin:16px 0 28px}.vision{font-size:18px}}@media(max-width:600px){header{height:64px;padding:0 16px}header img{width:144px}header a{font-size:14px}.lunar-vision{width:calc(100% - 24px);--radius:76px}.layer{grid-template-columns:1fr;min-height:440px;padding:28px 24px;gap:24px;align-content:center}.moon-area{padding:0;justify-content:flex-start}.moon{width:136px}.words{padding:0}blockquote{font-size:21px;line-height:1.4;letter-spacing:-.045em}.credit{margin:16px 0 24px}.vision{font-size:16px;letter-spacing:-.025em}.vision span{white-space:normal}.bright blockquote{font-size:21px;letter-spacing:0}.lunar-vision.revealing{cursor:auto}}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+@font-face{font-family:LunarPixel;src:url('media/fonts/fusion/fusion-pixel-12px-proportional-zh_hans.otf.woff2') format('woff2');font-display:swap;font-weight:400}
+.layer{grid-template-columns:32% 68%;padding:48px 4%;min-height:416px}.moon-area{padding-right:40px}.words{width:100%;padding-left:24px;justify-self:end}blockquote,.bright blockquote{font-family:LunarPixel,monospace;font-size:36px;font-weight:400;line-height:1.5;letter-spacing:0}.credit{font-family:LunarPixel,monospace;font-size:12px;text-align:right;margin:12px 0 48px;line-height:24px}.vision{font-family:LunarPixel,monospace;font-size:12px;line-height:24px;letter-spacing:0;text-align:right}.vision span{white-space:nowrap}.vision strong{font-weight:400}@media(min-width:1500px){blockquote,.bright blockquote{font-size:48px}.vision{font-size:24px;line-height:36px}.layer{min-height:480px}}@media(max-width:1100px){blockquote,.bright blockquote{font-size:24px}.words{padding-left:16px}}@media(max-width:600px){.layer{grid-template-columns:1fr;padding:24px;min-height:416px}.words{padding:0}blockquote,.bright blockquote{font-size:24px;line-height:1.5}blockquote span{white-space:normal}.credit{margin:8px 0 24px}.vision{text-align:left}.vision span{white-space:normal}.moon-area{padding:0}}
+blockquote{text-align:right}.vision{font-size:16px}.credit{font-size:16px}@media(min-width:901px) and (max-width:1100px){blockquote,.bright blockquote{font-size:36px}}@media(max-width:900px){.vision,.credit{font-size:12px}}@media(max-width:600px){blockquote{text-align:left}.vision,.credit{font-size:16px}}
+}
+
+@font-face{font-family:LunarPixel;src:url('media/fonts/fusion/fusion-pixel-12px-proportional-zh_hans.otf.woff2') format('woff2');font-display:swap}
+body .header{position:sticky;background:#e4efde;backdrop-filter:none;border-bottom:2px solid #7193a2}
+body .header .header-inner{max-width:none;width:100%;padding:0 24px;height:112px;gap:24px;transition:height 180ms ease}
+body .header .official-nav-logo img{width:232px;max-height:80px;object-fit:contain}
+body .header .nav{flex:1;justify-content:space-between;max-width:none;width:auto}
+body .header .nav-left,body .header .nav-right{display:flex;gap:20px;align-items:center}
+body .header.compact .header-inner{height:64px}body .header.compact .official-nav-logo img{width:160px}
+body .rd-hero{padding:0;width:100%;max-width:none;margin:0}
+.lunar-vision{position:relative;width:100%;margin:0;overflow:hidden;background:#e4efde;--radius:112px}
+.lunar-vision .layer{background:transparent;color:#71818a;min-height:560px;padding:72px 5%}
+.lunar-vision .dark .moon{filter:grayscale(1);opacity:.65}.lunar-vision .bright{background:#e4efde;color:#182c40}.lunar-vision .bright .moon{filter:none;opacity:1}
+.lunar-vision .layer strong{color:inherit}
+.lunar-watermark{position:absolute;left:3%;bottom:-24px;font:144px/1 LunarPixel,monospace;color:#182c40;opacity:.05;pointer-events:none}
+body .project-identity{max-width:1040px;margin:auto;padding:80px 32px 40px}
+body .paper-title{font-family:Arial,sans-serif;text-align:center;font-size:32px;line-height:1.4;letter-spacing:-.02em;width:100%;margin:0}
+body .paper-title span{display:block;white-space:normal}body .paper-title .paper-project{font:48px/1.5 LunarPixel,monospace;margin-bottom:16px}
+@media(max-width:1100px){body .header .header-inner{height:88px;gap:16px}body .header .official-nav-logo img{width:176px}body .header .nav-left,body .header .nav-right{gap:12px}.lunar-vision .layer{min-height:480px;padding:48px 4%}}
+@media(max-width:760px){body .header .header-inner{height:72px;padding:0 16px}body .header .nav{top:72px;background:#e4efde}body .header.compact .nav{top:64px}.lunar-vision .layer{min-height:480px;padding:32px 24px}.lunar-watermark{font-size:72px}body .paper-title{font-size:24px}body .paper-title .paper-project{font-size:36px}}
+@media(prefers-reduced-motion:reduce){body .header .header-inner{transition:none}}
+body .header{left:0;right:0;transform:none;width:100%;height:auto;max-width:none;border-radius:0;padding:0;margin:0;box-shadow:none;background:#e4efde;top:0}
+body .header .official-nav-logo{flex:0 0 232px;width:232px;height:auto}body .header .official-nav-logo img{width:232px!important;height:auto!important}
+body .header.compact .official-nav-logo{flex-basis:160px;width:160px}body .header.compact .official-nav-logo img{width:160px!important}
+.lunar-vision .credit,.lunar-vision .credit a{color:inherit}.lunar-vision .layer{color:#62717b}.lunar-vision .bright{color:#182c40}
+@media(max-width:1100px){body .header .official-nav-logo{flex-basis:176px;width:176px}body .header .official-nav-logo img{width:176px!important}}
+@media(max-width:760px){body .header .official-nav-logo{flex-basis:144px;width:144px}body .header .official-nav-logo img{width:144px!important}}
+.lunar-vision.revealing .bright{visibility:visible!important;clip-path:circle(var(--radius) at var(--x) var(--y))!important;z-index:2!important}
+.lunar-vision.revealing .ring{display:block!important;z-index:3}.lunar-vision.revealing{cursor:none}
+.lunar-vision .bright{position:absolute!important;inset:0!important;background:#e4efde!important;color:#182c40!important}
+.lunar-vision .bright .moon{filter:none!important;opacity:1!important}
+body .paper-title{text-align:center!important;font-family:Arial,sans-serif!important;font-size:32px!important}body .paper-title .paper-project{font-family:LunarPixel,monospace!important;font-size:48px!important;font-weight:400!important;line-height:1.5!important}
+@media(max-width:760px){body .paper-title{font-size:24px!important}body .paper-title .paper-project{font-size:36px!important}}
+
+/* Lunar editorial palette: neutral ivory, visible lens and title hierarchy. */
+body .header,.lunar-vision,.lunar-vision .bright{background:#faf9f4!important}
+body .header .nav{background:#faf9f4}
+.lunar-vision .layer{color:#69747b}
+.lunar-vision .bright{color:#182c40!important}
+.lunar-vision>.lunar-watermark{opacity:1;color:#c4c7c5;z-index:1}
+.lunar-vision .lunar-watermark-reveal{opacity:1;color:#182c40;bottom:-24px;z-index:0}
+.lunar-vision .bright .moon-area,.lunar-vision .bright .words{position:relative;z-index:1}
+.lunar-vision .ring{border-color:#7193a2}
+body .paper-title .paper-project{font-size:72px!important;line-height:1.25!important;color:#182c40;margin-bottom:24px}
+body .paper-title{font-size:28px!important;line-height:1.5!important;color:#182c40}
+.paper-accent{font-style:normal;color:#315e73;background:#e3ece8;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+@media(max-width:760px){body .paper-title .paper-project{font-size:48px!important}body .paper-title{font-size:24px!important}}
+@media(max-width:420px){body .paper-title .paper-project{font-size:36px!important}body .paper-title{font-size:20px!important}}
+
+/* Two palette previews, with a continuous publication-title backing. */
+body .header,.lunar-vision,.lunar-vision .bright{background:#f1eee5!important}
+body .header .nav{background:#f1eee5}
+body .paper-title .paper-project{color:#315e73}
+body .paper-title .paper-subtitle{display:inline-block;background:#dde6e1;padding:12px 24px;color:#182c40;max-width:100%}
+body .paper-title .paper-subtitle>span{display:block;background:none}
+body.dark-hero .header,body.dark-hero .header .nav,body.dark-hero .lunar-vision{background:#182c40!important}
+body.dark-hero .header .nav a,body.dark-hero #menuToggle{color:#e4e6d2!important}
+body.dark-hero .lunar-vision .layer{color:#a5b3b9}
+body.dark-hero .lunar-vision>.lunar-watermark{color:#46586a}
+body.dark-hero .lunar-vision .bright{background:#182c40!important;color:#e4e6d2!important}
+body.dark-hero .lunar-vision .lunar-watermark-reveal{color:#e4e6d2}
+body.dark-hero .lunar-vision .bright .credit{color:#e4e6d2}
+@media(max-width:600px){body .paper-title .paper-subtitle{padding:12px}}
+
+/* Publication title: brand only; highlight follows the actual line length. */
+body .paper-title .paper-project{color:#182c40}
+body .paper-title .paper-brand{color:#315e73;font-weight:400}
+body .paper-title .paper-subtitle{display:block;background:none;padding:0}
+body .paper-title .paper-subtitle>span{display:table;width:auto;max-width:100%;margin:4px auto;background:#dde6e1;padding:0 .12em}
+
+body.dark-hero .lunar-vision .dark .moon{filter:none;opacity:1}
+body.dark-hero .lunar-vision .bright .vision strong{color:inherit}
+body.dark-hero .lunar-vision .layer{color:#d0d8d7}
+body.dark-hero .header .nav a{color:#e4e6d2!important;background:transparent}
+body.dark-hero .header .nav a:hover,body.dark-hero .header .nav a:focus-visible{color:#f0d57e!important;background:#243b50}
+body.dark-hero .header a:focus-visible{outline-color:#f0d57e!important}
+body.dark-hero .header{border-bottom-color:#7189a5}
+
+body.dark-hero .header .nav a.paper-link{background:#dde6e1;color:#182c40!important}
+body.dark-hero .header .nav a.paper-link:hover{background:#e4e6d2;color:#182c40!important}
+
+/* Dark stage, original light navigation and original moon logo. */
+body.dark-hero .header,body.dark-hero .header .nav{background:#f1eee5!important}
+body.dark-hero .header .nav a,body.dark-hero #menuToggle{color:#182c40!important}
+body.dark-hero .header .nav a:hover,body.dark-hero .header .nav a:focus-visible{color:#182c40!important;background:#dde6e1}
+body.dark-hero .header a:focus-visible{outline-color:#315e73!important}
+body.dark-hero .header .nav a.paper-link{background:#dde6e1;color:#182c40!important}
+body.dark-hero .lunar-vision .dark .moon{filter:none;opacity:1}
+body.dark-hero .lunar-vision .bright .moon{filter:sepia(.65) saturate(.65) brightness(1.18)!important;opacity:1!important}
+
+/* Each highlighted subtitle line shares the publication title's center. */
+body .project-identity .paper-title .paper-subtitle{display:flex!important;flex-direction:column;align-items:center;justify-content:center;width:100%!important;margin:0!important;padding:0!important;text-align:center!important;background:none!important}
+body .project-identity .paper-title .paper-subtitle>span{display:block!important;flex:0 0 auto;width:fit-content!important;max-width:100%;margin:4px auto!important;padding:0 .12em!important;text-align:center!important;transform:none!important;position:static!important}

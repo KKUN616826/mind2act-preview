@@ -35,3 +35,12 @@
 ## 配套模型网站
 
 [Mind2Act Harness 模型架构](mindaccord/index.html)：Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation。构建与状态边界见 [模型 README](mindaccord/README.md)。
+
+
+## Current website previews
+
+- Dark hero (current homepage): [index.html](index.html)
+- Ivory hero: [hero-ivory-preview.html](hero-ivory-preview.html)
+- Dark hero comparison: [hero-dark-preview.html](hero-dark-preview.html)
+
+Both versions use the updated research introduction. Scores remain unpublished placeholders.
