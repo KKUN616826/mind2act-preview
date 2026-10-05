@@ -1038,7 +1038,7 @@ body .rd-hero .mind-reference-hero{height:calc(100svh - 90px)!important;min-heig
 .mind-reference-hero .graphic-frame .current{left:calc(22% - 56px)!important}
 .mind-reference-hero .ref-note{font-size:clamp(13px,1.05vw,18px)!important}
 }
-</style><style id="site-qa-v34">body #research-motivation .motivation-grid article:nth-child(n) p,body #research-motivation .motivation-grid article:nth-child(n) .concept-scene b{color:#BDD9CC!important}body #research-motivation .dependency-figure b,body #research-motivation .dependency-figure i{color:#E4E6D2!important}</style><style id="acceptance-v35">body #contributors{text-align:center}body #overview{padding-bottom:32px!important}body #overview .rd-facts{margin-bottom:32px!important}</style></head>
+</style><style id="site-qa-v34">body #research-motivation .motivation-grid article:nth-child(n) p,body #research-motivation .motivation-grid article:nth-child(n) .concept-scene b{color:#BDD9CC!important}body #research-motivation .dependency-figure b,body #research-motivation .dependency-figure i{color:#E4E6D2!important}</style><style id="acceptance-v35">body #contributors{text-align:center}body #overview{padding-bottom:32px!important}body #overview .rd-facts{margin-bottom:32px!important}</style><link rel="preload" as="image" href="media/images/hero-mind-refined-v21.png"><link rel="preload" as="image" href="media/images/hero-act-refined.png"><link rel="preload" as="image" href="media/images/hero-coupling-refined.png"></head>
 <body class="dark-hero">
 <a class="skip" href="#tasks">Skip to task examples</a>
 <header class="header"><div class="wrap header-inner"><a class="brand official-nav-logo" href="#overview" aria-label="Mind2Act World home"><img src="media/images/mind2act-nav-world.svg?v=33" alt="Mind2Act World" width="1330" height="400"></a><button id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button><nav class="nav" id="siteNav" aria-label="Main navigation"><div class="nav-left"><a href="#overview" aria-current="page">Home</a><a href="#benchmark">Benchmark</a><a href="#tasks">Tasks</a><a href="#evaluation-hub">Evaluation</a><a href="#top-ten">Leaderboard</a><a href="#resources-overview">Resources</a></div><div class="nav-right"><a href="https://github.com/yu2hi13/physco-bench" target="_blank" rel="noreferrer">Code ↗</a><a class="paper-link" href="#contributors">Contributors</a></div></nav></div></header>
@@ -1738,9 +1738,8 @@ function initHeroCarousel() {
   const tabs=[...hero.querySelectorAll('.tabs button')], main=hero.querySelector('.main'), status=hero.querySelector('.status');
   const [prev,play,next]=hero.querySelectorAll('.ref-buttons button');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let index=0,playing=false,elapsed=0,last=performance.now();
-  function render(i,focus=false){
-    index=(i+slides.length)%slides.length; elapsed=0;
+  let index=0,playing=false,elapsed=0,last=performance.now(),renderToken=0; const sceneImages=slides.map(s=>{const im=new Image();im.src="media/images/"+s.art;return im;});
+  async function render(i,focus=false){ const target=(i+slides.length)%slides.length,token=++renderToken;const incoming=sceneImages[target];try{await incoming.decode();}catch(e){return;}if(token!==renderToken)return;index=target;elapsed=0;
     const s=slides[index]; hero.dataset.slide=s.key;
     hero.querySelector('.heading h1').textContent=s.title;
     hero.querySelector('.heading p').textContent=s.task;
