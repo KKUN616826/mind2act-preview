@@ -583,3 +583,184 @@ html{background:#f6f8fa}
 @media(max-width:700px){.record-row{grid-template-columns:1fr!important;gap:10px!important}.project-record,.project-identity,.intro-statement{width:100%!important}.record-row p{overflow-wrap:anywhere}}
 
 @media(max-width:600px){.case-browser-grid span{font-size:11px!important}}
+
+/* Official lunar brand, homepage preview. The research overview scene is unchanged. */
+:root{--bg:#faf8ef;--paper:#faf8ef;--ink:#192d43;--muted:#596b76;--line:#d9ddd5;--research-ink:#192d43;--research-paper:#faf8ef;--research-rule:#d9ddd5;--research-teal:#315e73}
+html,body{background:#faf8ef;color:#192d43}
+.header{background:#faf8ef!important;border-color:#d9ddd5!important;backdrop-filter:none!important;box-shadow:none!important;border-radius:0!important}
+.header .brand b{color:#315e73!important}.nav a{color:#192d43}.nav a:hover{background:#e5ece4}.nav a[aria-current=page]{border-bottom-color:#315e73}
+.official-logo-masthead{width:100%;height:clamp(190px,28vw,390px);overflow:hidden;margin-top:76px;background:#192d43;position:relative}
+.official-logo-masthead img{display:block;width:100%;height:auto;position:absolute;top:50%;transform:translateY(-33.15%)}
+.hero-carousel{background:#faf8ef!important;padding-top:32px!important}.hero-controlbar{background:#faf8ef!important}
+.hero-slide{border-radius:4px!important;box-shadow:none!important}.hero-slide .slide-copy{display:none!important}
+.slide-cta{backdrop-filter:none!important}
+.rd-facts,.protocol-facts{background:#f0f1e8!important;border-color:#d9ddd5!important}
+.academic-section{border-color:#d9ddd5!important}.academic-section h2,.paper-title{color:#192d43!important}
+#research-motivation .motivation-grid article:first-child{background:#f0f1e8;color:#192d43}
+#research-motivation .motivation-grid article:nth-child(2){background:#192d43;color:#faf8ef}
+#research-motivation .motivation-grid article:last-child{background:#e2ebe2;color:#192d43}
+#research-motivation .dependency-figure{background:#f0f1e8}
+.resource-pills a{background:transparent;border-color:#b9c8bf;color:#315e73;border-radius:2px}.news-grid article,.contributor-grid article{background:#f0f1e8;border-color:#d9ddd5;border-radius:2px}
+.footer{background:#192d43!important;color:#faf8ef}
+@media(max-width:700px){.official-logo-masthead{margin-top:65px;height:200px}.official-logo-masthead img{width:150%;max-width:none;left:-25%}.hero-carousel{padding-top:20px!important}}
+
+/* v92: official logo belongs in navigation; consistent cream/navy site surfaces. */
+.header .official-nav-logo{display:block!important;position:relative;width:220px;height:62px;flex:0 0 220px;overflow:hidden;line-height:normal;padding:0;background:#faf8ef}
+.header .official-nav-logo img{position:absolute;max-width:none;width:630px;height:auto;left:-201px;top:-266px;display:block}
+.hero-carousel{padding-top:100px!important}
+.section-copy h2,.academic-section h2,.compact-resources h2,.paper-title{color:#192d43!important}
+#research-motivation .motivation-grid article:first-child,#research-motivation .dependency-figure{background:#f2f0e5!important}
+#research-motivation .motivation-grid article:nth-child(2){background:#192d43!important;color:#faf8ef!important}
+#research-motivation .motivation-grid article:last-child{background:#dce9df!important}
+#research-motivation .motivation-grid p,#research-motivation .research-question{color:#192d43!important}
+#research-motivation .motivation-grid article:nth-child(2) p,#research-motivation .motivation-grid article:nth-child(2) .concept-name{color:#faf8ef!important}
+#research-motivation .concept-name{color:#315e73!important}
+.rd-facts,.protocol-facts,.suite-row,.featured-trio figure{background:#f2f0e5!important;border-color:#d6dbce!important}
+.rd-facts b,.protocol-facts b,.suite-row h3,.featured-trio figcaption{color:#192d43!important}
+.evaluation-loop{background:#192d43!important}.evaluation-loop i{color:#a9cdc0!important}
+.nav .paper-link{background:#192d43!important;color:#faf8ef!important}.nav a:hover{background:#dce9df!important;color:#192d43!important}
+.resource-pills a:hover{background:#dce9df!important}.intro-statement,.record-row p{color:#283e50!important}
+@media(max-width:700px){.header .official-nav-logo{width:178px;flex-basis:178px;height:50px}.header .official-nav-logo img{width:510px;left:-163px;top:-215px}.hero-carousel{padding-top:85px!important}}
+
+/* Logo uses its own tight viewport, with no offset or visible canvas. */
+.header .official-nav-logo{width:190px!important;height:54px!important;flex:0 0 190px!important;background:transparent!important;display:flex!important;align-items:center;overflow:hidden!important}
+.header .official-nav-logo img{position:static!important;display:block!important;width:100%!important;height:auto!important;max-width:100%!important;left:auto!important;top:auto!important;transform:none!important;mix-blend-mode:multiply}
+.header-inner{min-width:0;align-items:center!important}
+@media(max-width:700px){.header .official-nav-logo{width:155px!important;height:44px!important;flex-basis:155px!important}}
+
+/* Official brand combinations: compact navigation, film overlay and footer. */
+.hero-slide .slide-copy{display:flex!important;flex-direction:column;align-items:flex-start;justify-content:center;gap:18px;inset:0!important;padding:7%!important;pointer-events:none;background:linear-gradient(90deg,rgba(15,29,44,.58),transparent 80%)}
+.hero-brand{width:min(72%,640px);margin:0!important;line-height:1}
+.hero-brand img{display:block;width:100%;height:auto;mix-blend-mode:screen}
+.slide-copy .slide-cta{pointer-events:auto;font-size:14px;padding:10px 16px;border:1px solid #faf8ef80;color:#faf8ef;background:#192d43;border-radius:3px}
+.footer{background:#f2f0e5!important;color:#192d43!important;border-top:1px solid #d9ddd5}
+.footer-brand{display:inline-flex;vertical-align:middle;width:175px;margin-right:16px}
+.footer-brand img{width:100%;height:auto;mix-blend-mode:multiply}
+.footer a{color:#192d43!important}
+@media(max-width:700px){.hero-brand{width:85%}.hero-slide .slide-copy{padding:6%!important}.footer-inner{gap:18px}.footer-brand{width:150px}}
+
+/* Transparent brand assets and a single lunar page palette. */
+.header .official-nav-logo img,.footer-brand img{mix-blend-mode:normal!important}
+.hero-brand{width:min(60%,470px)!important}
+:root{--accent:#315e73;--line:#d9ddd5;--muted:#596b76}
+.section-label,.section-head h2,.section-copy h2,.academic-section h2{color:#192d43!important}
+.score-preview-table th{background:#f2f0e5!important;color:#192d43!important}
+.score-preview-table td{border-color:#d9ddd5!important;color:#192d43!important}
+.score-preview-table a,.record-row a,.resource-pills a{color:#315e73!important}
+.preview-badge{background:#e2ebe2!important;border-color:#cad8ce!important;color:#315e73!important}
+.filters button,.catalog-actions button{background:#f2f0e5!important;border-color:#d9ddd5!important;color:#315e73!important}
+.filters button[aria-pressed=true]{background:#315e73!important;color:#faf8ef!important}
+@media(max-width:700px){.hero-brand{width:75%!important}}
+
+/* Independent visual review: cream paper, navy type and pale cyan supporting surfaces.
+   Scope excludes #research-overview and every lunar chart/control selector. */
+.academic-section:not(#research-overview) .section-copy h2,
+.compact-resources h2{font-size:clamp(30px,3.8vw,48px);line-height:1.18;margin-top:0;margin-bottom:18px;overflow-wrap:break-word}
+.academic-section:not(#research-overview) .section-copy{margin-bottom:32px}
+.academic-section:not(#research-overview){padding-block:76px}
+#research-motivation .motivation-grid article:last-child{background:#dfeeed!important}
+#research-motivation .motivation-grid h3{line-height:1.3;text-wrap:balance}
+#research-motivation .motivation-grid article:nth-child(2) h3{color:#faf8ef!important}
+#research-motivation .concept-scene{min-height:92px}
+.protocol-facts{background:#edf2ed!important}
+.protocol-facts span{color:#49616c;line-height:1.5}
+.suite-row{background:#edf2ed!important}
+.suite-row article{min-width:0}
+.suite-row h3{line-height:1.3;overflow-wrap:break-word}
+.featured-trio figcaption{font-size:15px;line-height:1.5;min-height:78px}
+.news-grid article,.contributor-grid article{background:#e7efeb;border-color:#d0ded9}
+.news-grid h3,.contributor-grid b{line-height:1.5;overflow-wrap:break-word}
+.resource-pills{gap:12px}
+.resource-pills a{padding:10px 16px;line-height:1.5}
+.case-browser-grid button{background:#edf3ef;border-color:#cbdcd7;color:#192d43}
+.case-browser-grid button:hover{background:#dfeeed;border-color:#719b9f}
+.case-browser-grid strong,.case-browser-head span,.rollout-card-heading b,.rollout-preview-grid p{color:#315e73}
+.rollout-selectors select{color:#192d43;border-color:#b5ccc7}
+.rollout-preview-grid article{background:#faf8ef;border-color:#d2ddd5}
+.rollout-detail-heading button{color:#315e73;border-color:#b5ccc7}
+@media(max-width:900px){
+  .academic-section:not(#research-overview){padding-block:58px}
+  #research-motivation .motivation-grid article{padding:26px 22px}
+}
+@media(max-width:700px){
+  .project-identity{width:calc(100% - 32px)!important}
+  .project-identity .project-record{width:100%!important}
+  .intro-statement{width:calc(100% - 32px)!important;font-size:17px;line-height:1.7}
+  .academic-section:not(#research-overview){padding-block:44px}
+  .academic-section:not(#research-overview) .section-copy{margin-bottom:26px}
+  #research-motivation .concept-scene{min-height:0}
+  .protocol-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .protocol-facts>div{padding:18px 12px}
+  .protocol-facts>div:nth-child(2){border-right:0}
+  .protocol-facts>div:nth-child(-n+2){border-bottom:1px solid #d6dbce}
+  .featured-trio figcaption{min-height:0}
+  .rollout-selectors label{flex:1 1 140px;min-width:0}
+  .rollout-selectors select{width:100%;min-width:0}
+}
+
+/* Append after the current homepage styles. Scoped to navigation and controls;
+   the lunar leaderboard scene and its controls are deliberately untouched. */
+.header{height:64px}
+.header .header-inner{height:62px;padding-block:8px;padding-inline:22px;gap:20px}
+.header .official-nav-logo{width:160px!important;height:45px!important;flex:0 0 160px!important;justify-content:center;align-items:center!important}
+.header .official-nav-logo img{width:160px!important;height:auto!important;object-fit:contain}
+.header .nav{width:auto;min-width:0;flex:1;margin-left:0;gap:12px;align-items:center}
+.header .nav-left{align-items:center;gap:5px}
+.header .nav-right{align-items:center;gap:6px;margin-left:auto}
+.header .nav a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 10px;font-size:12px;line-height:1.35}
+.slide-copy .slide-cta{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:44px;padding:11px 19px;border:1px solid rgba(250,248,239,.75);border-radius:6px;background:#192d43;color:#faf8ef!important;font-size:14px;line-height:1.3;box-shadow:0 3px 12px #08142024}
+.slide-copy .slide-cta:hover{background:#faf8ef;color:#192d43!important;border-color:#faf8ef}
+.hero-controlbar .hero-arrow{width:40px!important;height:40px!important;min-width:40px!important;max-width:40px!important;flex-basis:40px!important;padding:10px!important;border:1px solid #d0d8d7!important;background:#faf8ef!important}
+.hero-controlbar .hero-switch button{min-height:40px;align-items:center;cursor:pointer}
+.backtop{min-width:78px;min-height:44px;padding:9px 15px;border:1px solid #c7d1d3;border-radius:8px;background:#faf8ef;color:#315e73;font-size:13px;line-height:1.4;box-shadow:0 3px 12px #192d4312;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom))}
+.backtop:hover{background:#e5ece4;border-color:#315e73}
+#menuToggle,#cases .catalog-actions button,#cases .filters button{min-height:40px;border-radius:6px;line-height:1.4}
+#cases .search input{min-height:44px;border:1px solid #ccd5d4;border-radius:6px;padding:10px 13px;line-height:1.4}
+.header a:focus-visible,#menuToggle:focus-visible,.slide-copy .slide-cta:focus-visible,.hero-controlbar button:focus-visible,.backtop:focus-visible,#cases .filters button:focus-visible,#cases .catalog-actions button:focus-visible,#cases .search input:focus-visible{outline:3px solid #315e73!important;outline-offset:3px!important}
+.slide-copy .slide-cta:focus-visible{outline-color:#faf8ef!important}
+.footer-inner{align-items:center;gap:24px}
+.footer-inner>div:last-child{display:none}
+.footer-brand{margin-right:10px}
+@media(min-width:901px) and (max-width:1100px){.header .header-inner{padding-inline:16px;gap:14px}.header .nav-left{gap:0}.header .nav a{padding-inline:7px;font-size:11px}}
+@media(max-width:900px){.header .header-inner{justify-content:space-between;padding-inline:16px;gap:12px}.header .official-nav-logo{width:145px!important;flex-basis:145px!important;height:42px!important}.header .official-nav-logo img{width:145px!important}#menuToggle{display:inline-flex;align-items:center;justify-content:center;min-width:64px;margin-left:auto}.header .nav.open{top:72px;gap:10px;margin:0;padding:14px}.header .nav-left,.header .nav-right{gap:4px;margin-left:0;flex-wrap:wrap}.header .nav a{min-height:44px;padding-inline:12px;font-size:13px}.footer-inner{justify-content:center;text-align:center}.backtop{right:16px;bottom:16px}}
+@media(prefers-reduced-motion:reduce){.header a,.slide-copy .slide-cta,.hero-controlbar button,.backtop{transition:none!important}}
+
+/* Approved research introduction: readable body text and separate release status. */
+.research-abstract{width:calc(100% - 64px);max-width:940px;margin:36px auto 0;text-align:left;color:#192d43;font:400 17px/1.75 Arial,sans-serif}
+.research-abstract p+p{margin-top:24px}
+.version-status{width:calc(100% - 64px);max-width:940px;margin:28px auto 0;padding:18px 0;border-top:1px solid #d9ddd5;color:#315e73;font:400 15px/1.65 Arial,sans-serif;text-align:left}
+.version-status strong{color:#192d43}
+@media(max-width:700px){.research-abstract,.version-status{width:calc(100% - 32px)}.research-abstract{font-size:16px;line-height:1.7;margin-top:28px}}
+
+/* Approved introduction must remain visible. */
+.research-abstract{display:block!important;visibility:visible!important;opacity:1!important;height:auto!important;max-height:none!important;overflow:visible!important}
+
+/* Research introduction: film, narrow reading column and wider overview figure. */
+.intro-film{max-width:1000px;width:calc(100% - 64px);margin:40px auto 44px}
+.intro-film video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#192d43;border:1px solid #d9ddd5;border-radius:3px}
+.intro-film figcaption{font:400 14px/1.5 Arial,sans-serif;color:#315e73;margin-top:10px;text-align:left}
+.research-abstract{max-width:760px!important;font-size:18px!important;line-height:1.8!important}
+.research-emphasis{color:#315e73;font-weight:700}
+.intro-overview{width:calc(100% + 160px);max-width:none;margin:36px -80px}
+.intro-overview img{display:block;width:100%;height:auto}
+.intro-overview figcaption{font:600 15px/1.5 Arial,sans-serif;text-align:center;margin-top:12px;color:#192d43}
+.version-status{max-width:760px!important}
+@media(max-width:1000px){.intro-overview{width:100%;margin:32px 0}}
+@media(max-width:700px){.intro-film{width:calc(100% - 32px);margin:28px auto}.research-abstract{font-size:16px!important;line-height:1.75!important}.intro-overview{overflow-x:auto}.intro-overview img{min-width:660px}.intro-overview figcaption{text-align:left}}
+
+.research-abstract .research-emphasis{color:#315e73!important}
+
+/* Compact project film and full benchmark ecosystem overview. */
+.intro-film{max-width:760px!important;margin:32px auto 38px!important}
+.intro-film video{border-radius:6px!important}
+.intro-overview{width:calc(100% + 240px);margin:40px -120px}
+@media(max-width:1100px){.intro-overview{width:100%;margin:32px 0}}
+
+/* Overview follows the same narrow reading column. */
+.research-abstract .intro-overview{width:100%!important;max-width:760px!important;margin:32px 0!important}
+
+/* Publication review: consistent non-hero typography and neutral surfaces. */
+.academic-section:not(#research-overview) .section-copy h2{color:#192d43;font-family:Arial,sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.news-grid article,.contributor-grid article{background:#eef1e8;border-color:#d2d9ce}
+.research-abstract .research-emphasis{color:#315e73!important;font-weight:700}
+.research-abstract p{overflow-wrap:normal;word-break:normal}
