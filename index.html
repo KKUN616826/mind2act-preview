@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: file:; media-src 'self' file: blob:; font-src 'self' file:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: file:; media-src 'self' file: blob:; font-src 'self' file:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="description" content="Mind2Act World — Evaluating Reasoning–Acting Coordination in Robotic Manipulation through 15 simulation tasks and environment-derived evaluation.">
 <meta name="theme-color" content="#102134">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2319655b'/%3E%3Cpath d='M13 43V21h8l11 13 11-13h8v22h-8V32L32 45 21 32v11z' fill='white'/%3E%3C/svg%3E">
@@ -1038,13 +1038,48 @@ body .rd-hero .mind-reference-hero{height:calc(100svh - 90px)!important;min-heig
 .mind-reference-hero .graphic-frame .current{left:calc(22% - 56px)!important}
 .mind-reference-hero .ref-note{font-size:clamp(13px,1.05vw,18px)!important}
 }
-</style><style id="site-qa-v34">body #research-motivation .motivation-grid article:nth-child(n) p,body #research-motivation .motivation-grid article:nth-child(n) .concept-scene b{color:#BDD9CC!important}body #research-motivation .dependency-figure b,body #research-motivation .dependency-figure i{color:#E4E6D2!important}</style><style id="acceptance-v35">body #contributors{text-align:center}body #overview{padding-bottom:32px!important}body #overview .rd-facts{margin-bottom:32px!important}</style><link rel="preload" as="image" href="media/images/hero-mind-matte-v52.png"><link rel="preload" as="image" href="media/images/hero-act-matte-v52.png"><link rel="preload" as="image" href="media/images/hero-coupling-matte-v52.png"></head>
+</style><style id="site-qa-v34">body #research-motivation .motivation-grid article:nth-child(n) p,body #research-motivation .motivation-grid article:nth-child(n) .concept-scene b{color:#BDD9CC!important}body #research-motivation .dependency-figure b,body #research-motivation .dependency-figure i{color:#E4E6D2!important}</style><style id="acceptance-v35">body #contributors{text-align:center}body #overview{padding-bottom:32px!important}body #overview .rd-facts{margin-bottom:32px!important}</style><link rel="stylesheet" href="scripts/hero-demo.css?v=piano-focus-2">
+<script src="scripts/hero-demo.js?v=piano-focus-2" defer></script>
+</head>
 <body class="dark-hero">
 <a class="skip" href="#tasks">Skip to task examples</a>
 <header class="header"><div class="wrap header-inner"><a class="brand official-nav-logo" href="#overview" aria-label="Mind2Act World home"><img src="media/images/mind2act-nav-world.svg?v=33" alt="Mind2Act World" width="1330" height="400"></a><button id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button><nav class="nav" id="siteNav" aria-label="Main navigation"><div class="nav-left"><a href="#overview" aria-current="page">Home</a><a href="#benchmark">Benchmark</a><a href="#tasks">Tasks</a><a href="#evaluation-hub">Evaluation</a><a href="#top-ten">Leaderboard</a><a href="#resources-overview">Resources</a></div><div class="nav-right"><a href="https://github.com/yu2hi13/physco-bench" target="_blank" rel="noreferrer">Code ↗</a><a class="paper-link" href="#contributors">Contributors</a></div></nav></div></header>
 <div class="article-layout wrap"><aside class="article-nav" aria-label="文章目录"><details open><summary>本文目录</summary><nav><a href="#motivation">为什么需要 Mind2Act World</a><a href="#insight">三个核心观点</a><a href="#insight-goal" class="sub">01 · 任务级推理</a><a href="#insight-action" class="sub">02 · 约束感知执行</a><a href="#insight-feedback" class="sub">03 · 推理—执行协同</a><a href="#design">任务怎样检验</a><a href="#evaluation">从失败走向诊断</a><a href="#mindact">Mind2Act Harness · 模型架构</a><a href="#leaderboard">排行榜 · 待评测</a><a href="#cases">15 项任务与演示</a><a href="#resources">资源与开放问题</a></nav></details></aside><main class="article-body">
 <section class="rd-hero" id="overview" aria-labelledby="project-title">
-<div class="hero mind-reference-hero"><aside class="left"><span class="moon-plus" aria-hidden="true"></span><span class="moon-dot dot-one" aria-hidden="true"></span><span class="moon-dot dot-two" aria-hidden="true"></span><img class="original-moon" src="media/images/mind-moon-upper.png" alt="Original Mind2Act moon"><div class="moon-merge" aria-hidden="true"><img class="moon-merge-upper" src="media/images/moon-upper-extracted.png?v=31" alt=""><img class="moon-merge-lower" src="media/images/moon-lower-extracted.png?v=31" alt=""><img class="moon-merge-signals" src="media/images/moon-signals-extracted.png?v=31" alt=""><img class="moon-merge-stars" src="media/images/moon-stars-extracted.png?v=31" alt=""></div><div class="mind-identity"><h2>MIND</h2><p>Task-Level Reasoning</p></div></aside><section class="main" id="hero-scene" role="tabpanel" aria-labelledby="hero-tab-mind"><div class="heading"><h1>Choose the right target.</h1><p>S · Rotating Tray Layout Reconstruction</p></div><div class="scene"><div class="graphic-frame"><span class="ref-note remembered">Remembered layout</span><span class="ref-note current">Current target</span><img class="mind-art" src="media/images/hero-mind-matte-v52.png" alt="Concept illustration: remembered colored layout, rotating target tray and industrial arm"></div></div><p class="caption">Keep hidden relationships as the world changes.</p><div class="controls"><div class="tabs" role="tablist" aria-label="Capability scenes"><button id="hero-tab-mind" role="tab" aria-selected="true" aria-controls="hero-scene">Mind</button><button id="hero-tab-act" role="tab" aria-selected="false" aria-controls="hero-scene" tabindex="-1">Act</button><button id="hero-tab-coupling" role="tab" aria-selected="false" aria-controls="hero-scene" tabindex="-1">Mind2Act</button></div><div class="ref-buttons"><button disabled aria-label="Previous slide — pending additional slides"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6 8 12 14 18"/></svg></button><button class="ref-pause" disabled aria-label="Static Mind preview — playback unavailable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6V18M15 6V18"/></svg></button><button disabled aria-label="Next slide — pending additional slides"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6 16 12 10 18"/></svg></button></div><div class="status">01 / 03<br>Concept case study</div></div></section><div class="watermark" aria-hidden="true">Mind2Act</div></div>
+<div class="demo-hero" data-phase="observe" aria-label="Electronic keyboard reproduction demonstration">
+  <video class="demo-video" id="hero-demo-video" muted loop playsinline preload="auto" poster="media/posters/CP05_hero_hard_1080p.jpg" aria-label="Robot observes and reproduces a keyboard sequence">
+    <source src="media/videos/CP05_hero_hard_1080p.mp4" type="video/mp4">
+  </video>
+  <div class="demo-shade" aria-hidden="true"></div>
+  <div class="demo-key-focus" data-active="false" aria-hidden="true"><span class="demo-key-halo"></span><span class="demo-key-ring"></span><span class="demo-key-ring-echo"></span><span class="demo-key-core"></span></div>
+  <aside class="demo-moon-panel">
+    <div class="demo-moon" role="img" aria-label="Mind2Act moon: illumination follows the demonstration">
+      <img class="demo-moon-upper" src="media/images/moon-upper-extracted.png" alt="">
+      <img class="demo-moon-lower" src="media/images/moon-lower-extracted.png" alt="">
+      <img class="demo-moon-signals" src="media/images/moon-signals-extracted.png" alt="">
+      <img class="demo-moon-stars" src="media/images/moon-stars-extracted.png" alt="">
+    </div>
+    <div class="demo-identity">
+      <h2 class="demo-brand">Mind<span>2</span>Act</h2>
+    </div>
+  </aside>
+  <section class="demo-copy">
+    <p class="demo-stage">MIND</p>
+    <h1 class="demo-title">Remember the key sequence.</h1>
+  </section>
+  <p class="demo-phase-status" role="status" aria-live="polite">Mind · Remember the key sequence.</p>
+  <div class="demo-controls" role="group" aria-label="Demo playback controls">
+    <div class="demo-chapters" aria-label="Demo chapters">
+      <button type="button" data-demo-chapter="observe" aria-current="true" disabled>Mind</button>
+      <button type="button" data-demo-chapter="reproduce" aria-current="false" disabled>Act</button>
+    </div>
+    <input class="demo-seek" id="demo-seek" type="range" min="0" max="19.25" step="0.1" value="0" aria-label="Demo playback position" disabled>
+    <button class="demo-play" type="button" aria-label="Play demo" aria-pressed="false" disabled>
+      <svg class="demo-play-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="demo-pause-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+    </button>
+  </div>
+</div>
   <div class="project-identity">
     <h2 class="paper-title" id="project-title"><span class="paper-project"><b class="paper-brand">Mind2Act</b> World:</span><span class="paper-subtitle"><span>Evaluating Reasoning–Acting Coordination</span><span>in Robotic Manipulation</span></span></h2>
   </div>
@@ -1641,9 +1676,12 @@ function updateMainNavigation(){let active=mainLinks[0],nearest=-Infinity;for(co
 window.addEventListener('scroll',updateMainNavigation,{passive:true});updateMainNavigation();
 </script>
 <script>
+if (document.querySelector('.lunar-vision')) {
 const scene=document.querySelector('.lunar-vision');let frame=0;function reveal(e){const r=scene.getBoundingClientRect();if(frame)cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{scene.style.setProperty('--x',(e.clientX-r.left)+'px');scene.style.setProperty('--y',(e.clientY-r.top)+'px');scene.style.setProperty('--radius',(innerWidth<600?76:100)+'px');scene.classList.add('revealing')})}scene.addEventListener('pointermove',reveal);scene.addEventListener('pointerdown',reveal);scene.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);scene.classList.remove('revealing')});scene.addEventListener('pointerup',e=>{if(e.pointerType==='touch')scene.classList.remove('revealing')});
 
-const lunarHeader=document.querySelector('.header');new IntersectionObserver(es=>lunarHeader.classList.toggle('compact',!es[0].isIntersecting),{rootMargin:'-112px 0px 0px 0px'}).observe(document.querySelector('.lunar-vision'));</script><style id="mind-final-spacing">
+const lunarHeader=document.querySelector('.header');new IntersectionObserver(es=>lunarHeader.classList.toggle('compact',!es[0].isIntersecting),{rootMargin:'-112px 0px 0px 0px'}).observe(document.querySelector('.lunar-vision'));
+}
+</script><style id="mind-final-spacing">
 body .rd-hero .mind-reference-hero{height:calc(100svh - 140px)!important;max-height:770px!important}
 .mind-reference-hero .watermark{font-size:64px!important;left:20px!important;width:32%;overflow:hidden!important;white-space:nowrap!important}
 .mind-reference-hero .controls{padding-left:64px!important;gap:12px!important}
@@ -1652,7 +1690,7 @@ body:not(.hero-past) #backTop{visibility:hidden!important;pointer-events:none!im
 @media(min-width:1300px){.mind-reference-hero .watermark{font-size:80px!important}.mind-reference-hero .controls{padding-left:72px!important}}
 @media(max-width:700px){body .rd-hero .mind-reference-hero{height:auto!important;max-height:none!important}.mind-reference-hero .controls{padding-left:0!important}}
 </style>
-<script>addEventListener('scroll',()=>document.body.classList.toggle('hero-past',document.querySelector('.mind-reference-hero').getBoundingClientRect().bottom<0),{passive:true});</script><style id="mind-wide-final">
+<script>addEventListener('scroll',()=>document.body.classList.toggle('hero-past',document.querySelector('.mind-reference-hero, .demo-hero').getBoundingClientRect().bottom<0),{passive:true});</script><style id="mind-wide-final">
 @media(min-width:1300px){
 .mind-reference-hero .graphic-frame,.mind-reference-hero .heading{width:min(100%,calc((100svh - 270px)*1.5))!important}
 .mind-reference-hero .watermark{font-size:clamp(100px,8.2vw,160px)!important;left:2%!important;width:34%!important;bottom:22px!important;overflow:visible!important}
