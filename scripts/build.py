@@ -6,6 +6,7 @@ from pathlib import Path
 from render_cases import card, case_md, cover, e
 from leaderboard import render as render_leaderboard
 from build_rollouts import build_rollouts
+from hero_demo import render as render_hero
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -69,6 +70,7 @@ def main():
         payload = payload.replace(char, escape)
     page = (ROOT / 'scripts/showcase.html').read_text()
     page = page.replace('__RESEARCH_INTRO__', (ROOT / 'scripts/research_intro.html').read_text())
+    page = page.replace('__HERO_DEMO__', render_hero())
     lunar_data = json.loads((ROOT / 'data/lunar-preview.json').read_text())
     for model in lunar_data['models']:
         model['icon_svg'] = (ROOT / ('media/icons/' + model['icon'] + '.svg')).read_text()

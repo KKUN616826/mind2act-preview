@@ -1,0 +1,65 @@
+<div class="demo-hero" data-phase="observe" aria-label="Keyboard sequence: remember, act, confirm">
+  <div class="demo-scene">
+    <video class="demo-video" id="hero-demo-video" muted loop playsinline preload="auto" poster="media/posters/CP05_hero_hard_1080p.jpg" aria-label="Robot observes and reproduces a keyboard sequence">
+      <source src="media/videos/CP05_hero_hard_1080p.mp4" type="video/mp4">
+    </video>
+    <div class="demo-shade" aria-hidden="true"></div>
+    <div class="demo-key-focus" data-active="false" aria-hidden="true"><span class="demo-key-halo"></span><span class="demo-key-ring"></span><span class="demo-key-core"></span></div>
+  </div>
+  <svg class="demo-connection" aria-hidden="true"><path class="demo-connection-line"/><circle class="demo-connection-origin" r="3"/><circle class="demo-connection-target" r="5"/></svg>
+  <img class="demo-capture" alt="" aria-hidden="true" hidden>
+  <aside class="demo-moon-panel">
+    <div class="demo-moon" role="img" aria-label="Mind2Act moon: illumination follows the demonstration">
+      <img class="demo-moon-upper" src="media/images/moon-upper-extracted.png" alt="">
+      <img class="demo-moon-lower" src="media/images/moon-lower-extracted.png" alt="">
+      <img class="demo-moon-signals" src="media/images/moon-signals-extracted.png" alt="">
+      <img class="demo-moon-stars" src="media/images/moon-stars-extracted.png" alt="">
+    </div>
+    <h2 class="demo-brand">Mind<span>2</span>Act</h2>
+  </aside>
+  <section class="demo-copy">
+    <p class="demo-stage">MIND <span class="demo-speed">2.25× source speed</span></p>
+    <h1 class="demo-title">Remember the order.</h1>
+  </section>
+  <div class="demo-workspace">
+    <section class="demo-memory" aria-label="Illustrative task memory">
+      <div class="demo-panel-heading"><h2>Remembered sequence</h2><span class="demo-count">0 / 12</span></div>
+      <div class="demo-memory-window" tabindex="0" role="region" aria-label="Sequence screenshots; scroll horizontally to review">
+        <ol class="demo-memory-strip">__HERO_CARDS__</ol>
+        <p class="demo-memory-empty">Watch a key light up.</p>
+      </div>
+      <div class="demo-memory-footer"><span class="demo-step">Watch · Remember</span><span class="demo-feedback">Waiting for the first key</span></div>
+    </section>
+    <section class="demo-motion" aria-label="Recorded left and right stick-tip heights" hidden>
+      <div class="demo-panel-heading"><h2>Stick-tip height</h2><span class="demo-recorded"><i></i>Recorded</span></div>
+      <svg class="demo-chart" viewBox="0 0 360 176" role="img" aria-labelledby="demo-chart-title demo-chart-description">
+        <title id="demo-chart-title">Left and right stick-tip height</title>
+        <desc id="demo-chart-description">Recorded simulation heights in world coordinates, in centimeters. Both plots use the same time and height scales. Dots mark confirmed key triggers, not curve minima.</desc>
+        <defs><clipPath id="demo-motion-reveal"><rect x="40" y="0" width="0" height="149"/></clipPath></defs>
+        <g class="demo-chart-grid"></g>
+        <g clip-path="url(#demo-motion-reveal)"><path class="demo-trace demo-trace-left"/><path class="demo-trace demo-trace-right"/></g>
+        <g class="demo-chart-events"></g>
+        <line class="demo-chart-cursor" x1="40" x2="40" y1="17" y2="143"/>
+        <circle class="demo-chart-head demo-trace-left" r="3.5"/>
+        <circle class="demo-chart-head demo-trace-right" r="3.5"/>
+        <text class="demo-axis-label" x="40" y="173">Source time · s</text>
+        <text class="demo-axis-label" x="346" y="173" text-anchor="end">World height · cm</text>
+      </svg>
+    </section>
+  </div>
+  <p class="demo-phase-status" role="status" aria-live="polite">Mind · Remember the order.</p>
+  <p class="demo-evidence">Simulation demonstration <span>·</span> Illustrative memory overlay</p>
+  <div class="demo-controls" role="group" aria-label="Demo playback controls">
+    <div class="demo-chapters" aria-label="Demo chapters">
+      <button type="button" data-demo-chapter="observe" aria-current="true" disabled>Mind</button>
+      <button type="button" data-demo-chapter="reproduce" aria-current="false" disabled>Act</button>
+    </div>
+    <input class="demo-seek" id="demo-seek" type="range" min="0" max="19.233333" step="0.01" value="0" aria-label="Demo playback position" disabled>
+    <button class="demo-play" type="button" aria-label="Play demo" aria-pressed="false" disabled>
+      <svg class="demo-play-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="demo-pause-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+    </button>
+  </div>
+  <noscript><p class="demo-no-script">Enable JavaScript for synchronized memory and motion. <a href="media/videos/CP05_hero_hard_1080p.mp4">Watch the demonstration</a>.</p></noscript>
+</div>
+<script id="heroDemoData" type="application/json">__HERO_DATA__</script>
