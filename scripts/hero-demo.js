@@ -7,7 +7,6 @@
   const find = selector => hero.querySelector(selector);
   const video = find('video'), scene = find('.demo-scene');
   const play = find('.demo-play');
-  const chapters = [...hero.querySelectorAll('[data-demo-chapter]')];
   const cards = [...hero.querySelectorAll('.demo-card')];
   const viewport = find('.demo-memory-window'), strip = find('.demo-memory-strip');
   const focus = find('.demo-key-focus'), connection = find('.demo-connection');
@@ -71,30 +70,78 @@
   function connect(state) {
     if (!geometry) return;
     const event = state.acting ? data.events[state.active] : data.events.find(item => state.time >= item.observe && state.time < item.observeEnd);
+    const intent = find('.demo-intent-link'), outcome = find('.demo-outcome-link');
+    intent.dataset.active = outcome.dataset.active = 'false';
     focus.dataset.active = String(Boolean(!state.acting && event));
-    connection.dataset.active = String(Boolean(state.acting && event));
-    if (!event) return;
-    const target = { x: geometry.x + event.target[0] * geometry.scale, y: geometry.y + event.target[1] * geometry.scale };
-    focus.style.left = target.x + 'px'; focus.style.top = target.y + 'px';
-    if (!state.acting) return;
-    const root = hero.getBoundingClientRect(), card = cards[state.active].getBoundingClientRect(), windowBox = viewport.getBoundingClientRect();
-    if (card.right <= windowBox.left || card.left >= windowBox.right) {
-      connection.dataset.active = 'false'; return;
+    connection.dataset.active = String(state.acting);
+    if (event) {
+      focus.style.left = (geometry.x + event.target[0] * geometry.scale) + 'px';
+      focus.style.top = (geometry.y + event.target[1] * geometry.scale) + 'px';
     }
-    const x1 = Math.max(windowBox.left + 8, Math.min(card.left + card.width / 2, windowBox.right - 8)) - root.left;
-    // Link the remembered note to the active arm's recorded position, in SVG coordinates.
-    const arm = event.arm === 'Left' ? 0 : 1;
+    if (!state.acting) return;
+    const root = hero.getBoundingClientRect(), windowBox = viewport.getBoundingClientRect();
     const chart = find('.demo-chart');
     const matrix = chart.getScreenCTM();
-    if (!matrix) { connection.dataset.active = 'false'; return; }
-    const point = new DOMPoint(xAt(state.time), yAt(heightsAt(state.time)[arm], arm)).matrixTransform(matrix);
-    const y1 = card.top - root.top - 6, x2 = point.x - root.left, y2 = point.y - root.top;
-    const bend = Math.min(y1, y2) - 30;
-    connection.style.color = getComputedStyle(hero).getPropertyValue(arm ? '--demo-right' : '--demo-left');
-    find('.demo-connection-line').setAttribute('d', 'M' + x1 + ',' + y1 + ' C' + x1 + ',' + bend + ' ' + x2 + ',' + bend + ' ' + x2 + ',' + y2);
-    const origin = find('.demo-connection-origin'), end = find('.demo-connection-target');
-    origin.setAttribute('cx', x1); origin.setAttribute('cy', y1);
-    end.setAttribute('cx', x2); end.setAttribute('cy', y2);
+    if (!matrix) return;
+    const stacked = matchMedia('(max-width: 760px)').matches;
+    const pointAt = (time, height, arm) => {
+      const point = new DOMPoint(xAt(time), yAt(height, arm)).matrixTransform(matrix);
+      return { x: point.x - root.left, y: point.y - root.top };
+    };
+    const cardAt = index => {
+      const box = cards[index].getBoundingClientRect();
+      if (box.right <= windowBox.left + 8 || box.left >= windowBox.right - 8) return null;
+      return { x: Math.max(windowBox.left + 12, Math.min(box.left + box.width / 2, windowBox.right - 12)) - root.left,
+        top: box.top - root.top, bottom: box.bottom - root.top };
+    };
+    const labelAt = (group, x, y) => {
+      const label = group.querySelector('text');
+      label.setAttribute('x', x); label.setAttribute('y', y);
+    };
+    if (event) {
+      const card = cardAt(state.active), arm = event.arm === 'Left' ? 0 : 1;
+      if (card) {
+        const point = pointAt(state.time, heightsAt(state.time)[arm], arm);
+        const startY = stacked ? card.bottom + 3 : card.top - 6;
+        const lane = stacked ? windowBox.bottom - root.top - 9 : Math.min(startY, point.y) - 30;
+        const right = root.width - 9;
+        const path = stacked
+          ? `M${card.x},${startY} V${lane} H${right - 8} Q${right},${lane} ${right},${lane + 8} V${point.y - 8} Q${right},${point.y} ${right - 8},${point.y} H${point.x}`
+          : `M${card.x},${startY} C${card.x},${lane} ${point.x},${lane} ${point.x},${point.y}`;
+        intent.dataset.active = 'true';
+        intent.style.color = getComputedStyle(hero).getPropertyValue(arm ? '--demo-right' : '--demo-left');
+        const line = find('.demo-connection-line');
+        line.setAttribute('d', path);
+        const origin = find('.demo-connection-origin'), end = find('.demo-connection-target');
+        origin.setAttribute('cx', card.x); origin.setAttribute('cy', startY);
+        end.setAttribute('cx', point.x); end.setAttribute('cy', point.y);
+        const midpoint = line.getPointAtLength(line.getTotalLength() * 0.45);
+        labelAt(intent, stacked ? (card.x + right) / 2 : midpoint.x, stacked ? lane - 6 : midpoint.y - 8);
+      }
+    }
+    // Actual environment events return to memory. The last receipt persists;
+    // only its travelling pulse lasts 0.45 media seconds, including after release.
+    const index = state.completed - 1, confirmed = data.events[index];
+    const card = confirmed && cardAt(index);
+    if (card) {
+      const arm = confirmed.arm === 'Left' ? 0 : 1;
+      const point = pointAt(confirmed.trigger, confirmed.triggerHeights[arm], arm);
+      const lane = card.bottom + 14;
+      const channel = stacked ? 9 : windowBox.right - root.left + 8;
+      const path = `M${point.x},${point.y} H${channel} V${lane} H${card.x} V${card.bottom + 3}`;
+      const line = find('.demo-outcome-line'), pulse = find('.demo-outcome-pulse');
+      outcome.dataset.active = 'true';
+      outcome.dataset.step = String(index + 1);
+      line.setAttribute('d', path);
+      labelAt(outcome, (card.x + channel) / 2, lane - 5);
+      const age = state.time - confirmed.trigger;
+      const moving = !reduced.matches && age >= 0 && age < 0.45;
+      pulse.style.display = moving ? '' : 'none';
+      if (moving) {
+        const position = line.getPointAtLength(line.getTotalLength() * age / 0.45);
+        pulse.setAttribute('cx', position.x); pulse.setAttribute('cy', position.y);
+      }
+    }
   }
 
   function heightsAt(time) {
@@ -150,10 +197,11 @@
       motion.hidden = !state.acting;
       const active = data.events[state.active];
       find('.demo-stage').firstChild.textContent = state.acting ? 'ACT ' : 'MIND ';
-      find('.demo-title').textContent = state.complete ? 'Sequence complete.' : state.acting ? 'From memory to movement.' : 'Remember the order.';
+      find('.demo-title').textContent = state.complete ? 'Sequence complete.' : state.acting ? 'Guided by intent. Updated by outcomes.' : 'Remember the order.';
       find('.demo-count').textContent = (state.acting ? state.completed : state.captured) + ' / ' + data.events.length;
-      find('.demo-step').textContent = state.acting ? state.complete ? 'Completed 12 / 12' : 'Step ' + (state.active + 1) + ' / 12 · ' + active.label : state.captured ? 'Remembered · ' + state.captured + ' / 12' : 'Watch · Remember';
-      find('.demo-feedback').textContent = state.complete ? 'Every key confirmed' : state.registered ? '✓ Registered · release' : state.acting ? (active.arm === 'Left' ? 'L' : 'R') + ' · Next target' : state.captured ? 'Keep the order. Keep repeats.' : 'Watch a key light up.';
+      find('.demo-memory-footer').hidden = !state.acting;
+      find('.demo-step').textContent = state.complete ? '12 / 12 confirmed' : state.acting ? 'Step ' + (state.active + 1) + ' / 12 · ' + (state.registered ? 'Waiting for release' : 'Target ' + noteName(active)) : 'Watch · Remember';
+      find('.demo-feedback').textContent = (state.completed ? '✓ Registered · ' : '') + (data.events.length - state.completed) + ' remaining';
       find('.demo-memory-empty').hidden = state.captured > 0;
       cards.forEach((card, index) => {
         card.hidden = index >= state.captured || (!state.acting && (index < memoryFirst || index > memoryLast));
@@ -169,8 +217,7 @@
         const card = cards[selected];
         viewport.scrollLeft = Math.max(0, card.offsetLeft - strip.offsetLeft - (viewport.clientWidth - card.offsetWidth) / 2);
       } else viewport.scrollLeft = 0;
-      chapters.forEach(label => label.setAttribute('aria-current', String((label.dataset.demoChapter === 'reproduce') === state.acting)));
-      find('.demo-phase-status').textContent = (state.acting ? 'Act' : 'Mind') + ' · ' + find('.demo-step').textContent + ' · ' + find('.demo-feedback').textContent;
+      find('.demo-phase-status').textContent = (state.acting ? 'Mind and Act' : 'Demonstration') + ' · ' + find('.demo-step').textContent + ' · ' + find('.demo-feedback').textContent;
       measure();
     }
     // Entry is media-timed too: pause, reverse seeks and loop resets stay exact.

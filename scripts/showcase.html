@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: file:; media-src 'self' file: blob:; font-src 'self' file:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="description" content="Mind2Act World — Evaluating Reasoning–Acting Coordination in Robotic Manipulation through 15 simulation tasks and environment-derived evaluation.">
 <meta name="theme-color" content="#102134">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2319655b'/%3E%3Cpath d='M13 43V21h8l11 13 11-13h8v22h-8V32L32 45 21 32v11z' fill='white'/%3E%3C/svg%3E">
+
 <title>Mind2Act World · Evaluating Reasoning–Acting Coordination in Robotic Manipulation</title>
 <style>
 :root{--bg:#f7f5ed;--paper:#fffef9;--ink:#203a30;--green:#174c3b;--muted:#69756b;--line:#d8dfd1;--mint:#e9efe3;--amber:#a0763d;--sand:#f3ead9;--serif:"Iowan Old Style","Palatino Linotype","Songti SC",serif;--sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--mono:"SFMono-Regular",Consolas,monospace}
@@ -17,7 +17,7 @@
 @media print{body{background:white;font-size:11px}.header,.hero-actions,.catalog-tools,.catalog-meta,.backtop,.skip,.case-footer,.effect-choice{display:none!important}.wrap{max-width:none;padding:0}.hero{padding:0 0 22px}.hero-grid{grid-template-columns:1fr 1fr;gap:24px}.hero h1{font-size:30px}.hero .english{font-size:13px}.hero .intro{font-size:11px}.hero-stats{margin-top:15px}.hero-stats b{font-size:25px}.featured img{max-height:140px}.featured figcaption{font-size:10px}.section{padding:25px 0}.section-head h2{font-size:25px}.insights{gap:16px}.insight p{font-size:11px}.loop-panel{break-inside:avoid}.suite-grid{grid-template-columns:repeat(3,1fr)}.suite{padding:15px}.case-grid{display:block}.case-card{break-before:page;margin-bottom:20px}.case-card[hidden]{display:none!important}.case-card[open]>summary{grid-template-columns:.6fr 1fr}.case-card[open] .card-intro{padding:18px}.case-card[open] .card-intro h3{font-size:23px}.case-card[open] .cover img{max-height:210px}.case-body{padding:17px}.media-grid{grid-template-columns:repeat(3,1fr)}.detail-label,.media-item,.success,.notes{break-inside:avoid}.media-item video{max-height:160px}.table-wrap{overflow:visible}.table-wrap table{min-width:0}.tracks,.resources{grid-template-columns:1fr 1fr}.resource,.track{break-inside:avoid}.footer{font-size:9px}.loop-panel,.success,.suite{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 __RESEARCH_CSS__
 </style>
-<link rel="icon" type="image/svg+xml" href="media/images/mind2act-icon.svg"><style>@scope (.mind-reference-hero){@font-face{font-family:Pixel;src:url('media/fonts/fusion/fusion-pixel-12px-proportional-zh_hans.otf.woff2')}*{box-sizing:border-box}body{margin:0;background:#16202F;color:#E4E6D2;font-family:Arial,sans-serif}header{background:#F1EEE5;color:#16202F;height:64px;display:flex;align-items:center;padding:8px 3%;gap:36px}header img{width:156px;height:auto;image-rendering:pixelated}nav{display:flex;gap:24px;flex:1}a{color:inherit;text-decoration:none;font-size:14px}nav a:first-child{border-bottom:4px solid #F0D57E;padding-bottom:8px}nav a:last-child{margin-left:auto}.hero{max-width:1360px;margin:auto;height:560px;display:grid;grid-template-columns:17% 83%;padding:24px 24px 0;position:relative}.left{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:70px}.left svg{width:192px;height:192px;flex:none}.left h2{font:32px Pixel,monospace;margin:16px 0 8px}.left p{font-size:14px;line-height:1.5;text-align:center;margin:0;max-width:180px}.main{display:grid;grid-template-rows:76px 1fr 28px 70px;min-width:0}.heading{text-align:center}h1{font-size:32px;margin:0 0 8px;line-height:1.2}.heading p{font-size:16px;letter-spacing:.03em;margin:0;color:#9FB2C8}.scene{position:relative;min-height:0}.scene svg{width:100%;height:100%;display:block}.label{position:absolute;font-size:14px;color:#E4E6D2}.label.a{left:18%;top:7%}.label.b{left:41%;bottom:9%}.label.c{right:11%;top:23%}.caption{text-align:center;font-size:16px;margin:0}.watermark{position:absolute;left:-16px;bottom:8px;font:72px Pixel,monospace;color:#263A4D;pointer-events:none}.controls{display:flex;align-items:center;gap:24px;padding-left:15%;position:relative}.tabs{display:flex;flex:1;gap:20px}.tabs span{font-size:14px;border-bottom:4px solid #7189A5;padding:8px 0;flex:1;color:#9FB2C8}.tabs span:first-child{color:#F0D57E;border-color:#F0D57E}.status{font-size:14px;text-align:right;line-height:1.6}.notes{display:none}a:focus-visible{outline:2px solid #F0D57E;outline-offset:4px}@media(max-width:1000px){.hero{grid-template-columns:22% 78%;height:600px}.left svg{width:144px;height:144px}.controls{padding-left:4%}.watermark{font-size:48px}.label{font-size:13px}}@media(max-width:600px){header{height:auto;flex-wrap:wrap;gap:16px;padding:12px 16px}nav{overflow:auto;white-space:nowrap;gap:18px}.hero{height:auto;display:block;padding:24px 16px}.left{flex-direction:row;justify-content:flex-start;gap:16px;padding:0 0 24px}.left svg{width:96px;height:96px}.left h2{font-size:24px}.left p{text-align:left;font-size:14px}.main{display:block}h1{font-size:24px}.heading{text-align:left}.heading p{font-size:14px}.scene{height:280px;margin-top:20px}.label{display:none}.notes{display:block;font-size:14px;line-height:1.7;color:#9FB2C8;padding-left:20px}.caption{font-size:16px;text-align:left}.controls{padding:24px 0}.tabs span:not(:first-child){display:none}.watermark{display:none}.status{font-size:12px}}
+<style>@scope (.mind-reference-hero){@font-face{font-family:Pixel;src:url('media/fonts/fusion/fusion-pixel-12px-proportional-zh_hans.otf.woff2')}*{box-sizing:border-box}body{margin:0;background:#16202F;color:#E4E6D2;font-family:Arial,sans-serif}header{background:#F1EEE5;color:#16202F;height:64px;display:flex;align-items:center;padding:8px 3%;gap:36px}header img{width:156px;height:auto;image-rendering:pixelated}nav{display:flex;gap:24px;flex:1}a{color:inherit;text-decoration:none;font-size:14px}nav a:first-child{border-bottom:4px solid #F0D57E;padding-bottom:8px}nav a:last-child{margin-left:auto}.hero{max-width:1360px;margin:auto;height:560px;display:grid;grid-template-columns:17% 83%;padding:24px 24px 0;position:relative}.left{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:70px}.left svg{width:192px;height:192px;flex:none}.left h2{font:32px Pixel,monospace;margin:16px 0 8px}.left p{font-size:14px;line-height:1.5;text-align:center;margin:0;max-width:180px}.main{display:grid;grid-template-rows:76px 1fr 28px 70px;min-width:0}.heading{text-align:center}h1{font-size:32px;margin:0 0 8px;line-height:1.2}.heading p{font-size:16px;letter-spacing:.03em;margin:0;color:#9FB2C8}.scene{position:relative;min-height:0}.scene svg{width:100%;height:100%;display:block}.label{position:absolute;font-size:14px;color:#E4E6D2}.label.a{left:18%;top:7%}.label.b{left:41%;bottom:9%}.label.c{right:11%;top:23%}.caption{text-align:center;font-size:16px;margin:0}.watermark{position:absolute;left:-16px;bottom:8px;font:72px Pixel,monospace;color:#263A4D;pointer-events:none}.controls{display:flex;align-items:center;gap:24px;padding-left:15%;position:relative}.tabs{display:flex;flex:1;gap:20px}.tabs span{font-size:14px;border-bottom:4px solid #7189A5;padding:8px 0;flex:1;color:#9FB2C8}.tabs span:first-child{color:#F0D57E;border-color:#F0D57E}.status{font-size:14px;text-align:right;line-height:1.6}.notes{display:none}a:focus-visible{outline:2px solid #F0D57E;outline-offset:4px}@media(max-width:1000px){.hero{grid-template-columns:22% 78%;height:600px}.left svg{width:144px;height:144px}.controls{padding-left:4%}.watermark{font-size:48px}.label{font-size:13px}}@media(max-width:600px){header{height:auto;flex-wrap:wrap;gap:16px;padding:12px 16px}nav{overflow:auto;white-space:nowrap;gap:18px}.hero{height:auto;display:block;padding:24px 16px}.left{flex-direction:row;justify-content:flex-start;gap:16px;padding:0 0 24px}.left svg{width:96px;height:96px}.left h2{font-size:24px}.left p{text-align:left;font-size:14px}.main{display:block}h1{font-size:24px}.heading{text-align:left}.heading p{font-size:14px}.scene{height:280px;margin-top:20px}.label{display:none}.notes{display:block;font-size:14px;line-height:1.7;color:#9FB2C8;padding-left:20px}.caption{font-size:16px;text-align:left}.controls{padding:24px 0}.tabs span:not(:first-child){display:none}.watermark{display:none}.status{font-size:12px}}
 .left .original-moon{width:192px;height:auto;image-rendering:pixelated}.hero{height:600px;grid-template-columns:27% 73%}.scene{display:flex;align-items:center;justify-content:center;overflow:hidden}.mind-art{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}.main{grid-template-rows:76px minmax(0,1fr) 32px 70px}.controls{padding-left:0}.heading{text-align:left}.watermark{font-size:64px}@media(max-width:1000px){.left .original-moon{width:192px}.hero{grid-template-columns:27% 73%}}@media(max-width:600px){.left .original-moon{width:96px}.hero{display:block;height:auto}.scene{height:280px}.main{display:block}.controls{padding:24px 0}}
 
 /* Mind production composition: title overlays empty sky, no separate title row. */
@@ -171,9 +171,41 @@ body .rd-hero .mind-reference-hero{height:calc(100svh - 90px)!important;min-heig
 .mind-reference-hero .graphic-frame .current{left:calc(22% - 56px)!important}
 .mind-reference-hero .ref-note{font-size:clamp(13px,1.05vw,18px)!important}
 }
-</style><style id="site-qa-v34">body #research-motivation .motivation-grid article:nth-child(n) p,body #research-motivation .motivation-grid article:nth-child(n) .concept-scene b{color:#BDD9CC!important}body #research-motivation .dependency-figure b,body #research-motivation .dependency-figure i{color:#E4E6D2!important}</style><style id="acceptance-v35">body #contributors{text-align:center}body #overview{padding-bottom:32px!important}body #overview .rd-facts{margin-bottom:32px!important}</style><link rel="stylesheet" href="scripts/hero-demo.css?v=memory-guides-arm-5">
-<script src="scripts/hero-demo-data.js?v=memory-guides-arm-5" defer></script>
-<script src="scripts/hero-demo.js?v=memory-guides-arm-5" defer></script>
+</style><style id="site-qa-v34">body #research-motivation .motivation-grid article:nth-child(n) p,body #research-motivation .motivation-grid article:nth-child(n) .concept-scene b{color:#BDD9CC!important}body #research-motivation .dependency-figure b,body #research-motivation .dependency-figure i{color:#E4E6D2!important}</style><style id="acceptance-v35">body #contributors{text-align:center}body #overview{padding-bottom:32px!important}body #overview .rd-facts{margin-bottom:32px!important}</style><link rel="stylesheet" href="scripts/hero-demo.css?v=coordination-feedback-6">
+<script src="scripts/hero-demo-data.js?v=coordination-feedback-6" defer></script>
+<script src="scripts/hero-demo.js?v=coordination-feedback-6" defer></script>
+<link rel="icon" type="image/png" sizes="128x128" href="media/images/mind2act-favicon-v2.png">
+<style id="task-demo-update">
+#tasks .difficulty-row{margin-top:24px}#tasks .difficulty-row>h3{font:700 18px/1.5 Arial,sans-serif;margin:0 0 8px;color:#1E2A3F}#tasks .task-marquee{overflow:hidden;scrollbar-width:none;border-radius:8px}#tasks .task-marquee::-webkit-scrollbar{display:none}#tasks .marquee-track{display:flex;gap:12px;width:max-content;animation:none!important;transform:none!important}#tasks .task-tile{flex:0 0 248px;width:248px;grid-template-rows:auto 64px}#tasks .task-tile video{width:248px;height:186px;aspect-ratio:4/3;object-fit:contain;background:#1E2A3F}#tasks .task-tile>span{font:600 13px/1.4 Arial,sans-serif}#tasks a:focus-visible,#benchmark a:focus-visible,.demo-motion-toggle:focus-visible{outline:2px solid #7189A5;outline-offset:4px}.demo-motion-toggle{padding:8px 16px;border:2px solid #7189A5;background:transparent;color:#1E2A3F;cursor:pointer}.task-suite{margin-top:32px;padding-top:24px;border-top:2px solid #7189A5}.task-suite>header{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:baseline}.task-suite h3{font:700 24px/1.3 Arial,sans-serif;margin:0}.task-suite p{font:400 15px/1.65 Arial,sans-serif;color:#1E2A3F}.task-explanations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.task-explanations article{padding-block:16px;border-bottom:2px solid #E4E6D2}.task-explanations h4{font:700 17px/1.4 Arial,sans-serif;margin:0}.task-explanations a{color:#1E2A3F;text-decoration:none}.task-explanations h4 b{color:#476578}.task-explanations summary{cursor:pointer;font:600 13px/1.5 Arial,sans-serif;color:#476578}.task-explanations details p{font-size:14px;line-height:1.8}@media(max-width:800px){.task-explanations{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.task-explanations{grid-template-columns:1fr}.task-suite>header{grid-template-columns:1fr;gap:0}}
+
+#tasks .difficulty-row{margin-top:8px}
+#tasks .difficulty-row:first-of-type{margin-top:0}
+#tasks .task-marquee{padding-block:0}
+#tasks .demo-scroll-controls{display:flex;justify-content:flex-end;padding-top:12px}
+#tasks .demo-motion-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:76px;min-height:36px;padding:6px 14px;border:1px solid #d9ddd9;border-radius:18px;background:#efeee7;color:#476578;font:600 12px/1.4 Arial,sans-serif;letter-spacing:.02em;box-shadow:none;transition:background-color 180ms ease,color 180ms ease,border-color 180ms ease}
+#tasks .demo-motion-toggle:hover{background:#e4e6df;color:#1E2A3F;border-color:#7189A5}
+#tasks .demo-motion-toggle:active{background:#d9ddd9}
+@media(prefers-reduced-motion:reduce){#tasks .demo-motion-toggle{transition:none}}
+
+#benchmark .task-explanations{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+#benchmark .task-explanations article{min-width:0;padding-top:12px}
+#benchmark .case-preview{display:block;margin-bottom:12px}
+#benchmark .case-preview video{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#1E2A3F;border-radius:6px}
+#benchmark .task-explanations h4{font-size:14px;line-height:1.4}
+#benchmark .task-explanations article>p{font-size:13px;line-height:1.6;margin:8px 0 12px}
+#benchmark .task-explanations summary{font-size:12px}
+#benchmark .task-explanations details p{font-size:12px;line-height:1.6}
+@media(max-width:800px){#benchmark .task-explanations{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:12px}#benchmark .task-explanations article{flex:0 0 208px;scroll-snap-align:start}}
+
+/* Align title, description, and disclosure rows within each task suite. */
+#benchmark .task-explanations{align-items:stretch}
+#benchmark .task-explanations article{display:grid;grid-template-rows:auto 4.2em 1fr auto;align-content:start}
+#benchmark .task-explanations h4{min-height:4.2em;margin:0;align-self:start}
+#benchmark .task-explanations article>p{margin:8px 0 16px;align-self:start}
+#benchmark .task-explanations details{align-self:end}
+#benchmark .task-explanations summary{min-height:36px;display:list-item}
+@media(max-width:800px){#benchmark .task-explanations article{align-self:stretch}}
+</style>
 </head>
 <body class="dark-hero">
 <a class="skip" href="#tasks">Skip to task examples</a>
@@ -250,47 +282,27 @@ if(heroTrack){
 }
 
 
-const marqueeTrack=document.querySelector('.marquee-track');
-const reduceMotion=motionPreference.matches;
-const taskVideos=[...document.querySelectorAll('.task-marquee video')];
-if('IntersectionObserver' in window){
-  const taskVideoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-    const video=entry.target;
-    if(!motionPreference.matches&&!document.hidden&&entry.isIntersecting&&entry.intersectionRatio>.15)video.play().catch(()=>{});else video.pause();
-  }),{threshold:[0,.15,.5]});
-  taskVideos.forEach(video=>taskVideoObserver.observe(video));
-}else if(!reduceMotion)taskVideos.forEach(video=>video.play().catch(()=>{}));
-function syncTaskVideoPlayback(){taskVideos.forEach(video=>{const rect=video.getBoundingClientRect();if(!motionPreference.matches&&!document.hidden&&rect.bottom>0&&rect.top<innerHeight&&rect.right>0&&rect.left<innerWidth)video.play().catch(()=>{});else video.pause();});}
-document.addEventListener('visibilitychange',syncTaskVideoPlayback);motionPreference.addEventListener('change',syncTaskVideoPlayback);syncTaskVideoPlayback();
-if(marqueeTrack){
-  let marqueeOffset=0,marqueeLast=performance.now(),marqueePaused=false;
-  const marqueeGap=12,marqueeSpeed=42;
-  marqueeTrack.closest('.task-marquee')?.addEventListener('mouseenter',()=>marqueePaused=true);
-  marqueeTrack.closest('.task-marquee')?.addEventListener('mouseleave',()=>{marqueePaused=false;marqueeLast=performance.now();});
-  marqueeTrack.closest('.task-marquee')?.addEventListener('focusin',()=>marqueePaused=true);
-  marqueeTrack.closest('.task-marquee')?.addEventListener('focusout',()=>requestAnimationFrame(()=>{marqueePaused=marqueeTrack.closest('.task-marquee').contains(document.activeElement);marqueeLast=performance.now();}));
-  function advanceMarquee(now){
-    const elapsed=Math.min((now-marqueeLast)/1000,.05);marqueeLast=now;
-    if(!marqueePaused&&!motionPreference.matches&&!document.hidden){
-      marqueeOffset+=marqueeSpeed*elapsed;
-      const first=marqueeTrack.firstElementChild;
-      if(first&&marqueeOffset>=first.getBoundingClientRect().width+marqueeGap){
-        marqueeOffset-=first.getBoundingClientRect().width+marqueeGap;
-        marqueeTrack.appendChild(first);
-      }
-      marqueeTrack.style.transform=`translate3d(${-marqueeOffset}px,0,0)`;
-    }
-    requestAnimationFrame(advanceMarquee);
-  }
-  requestAnimationFrame(advanceMarquee);
-}
+
+const benchmarkVideos=[...document.querySelectorAll('#benchmark .case-preview video')];
+const benchmarkVideoObserver=new IntersectionObserver(entries=>entries.forEach(({target:v,isIntersecting})=>{if(isIntersecting&&!document.hidden&&!motionPreference.matches){const source=v.querySelector('source');if(source.dataset.src){source.src=source.dataset.src;delete source.dataset.src;v.load();}v.play().catch(()=>{});}else v.pause();}),{threshold:.15});
+benchmarkVideos.forEach(v=>benchmarkVideoObserver.observe(v));
+document.addEventListener('visibilitychange',()=>{if(document.hidden)benchmarkVideos.forEach(v=>v.pause());else benchmarkVideos.forEach(v=>{benchmarkVideoObserver.unobserve(v);benchmarkVideoObserver.observe(v);});});
+motionPreference.addEventListener('change',()=>benchmarkVideos.forEach(v=>{benchmarkVideoObserver.unobserve(v);benchmarkVideoObserver.observe(v);}));
+const demoRows=[...document.querySelectorAll('#tasks .task-marquee')],demoVideos=[...document.querySelectorAll('#tasks video')];
+let demosPaused=motionPreference.matches;
+const demoToggle=document.querySelector('.demo-motion-toggle');
+function syncDemoToggle(){demoToggle.setAttribute('aria-pressed',String(demosPaused));demoToggle.setAttribute('aria-label',demosPaused?'Play automatic scrolling':'Pause automatic scrolling');demoToggle.textContent=demosPaused?'Play':'Pause';}
+function ensureDemo(v){const source=v.querySelector('source');if(source.dataset.src){source.src=source.dataset.src;delete source.dataset.src;v.load();}}
+function syncDemo(v){const r=v.getBoundingClientRect(),row=v.closest('.task-marquee').getBoundingClientRect();if(!document.hidden&&r.bottom>0&&r.top<innerHeight&&r.right>row.left&&r.left<row.right){ensureDemo(v);v.play().catch(()=>{});}else v.pause();}
+const demoObserver=new IntersectionObserver(entries=>entries.forEach(e=>syncDemo(e.target)),{threshold:[0,.15]});demoVideos.forEach(v=>demoObserver.observe(v));
+demoToggle.addEventListener('click',()=>{demosPaused=!demosPaused;syncDemoToggle();});
+motionPreference.addEventListener('change',()=>{demosPaused=motionPreference.matches;syncDemoToggle();});
+document.addEventListener('visibilitychange',()=>demoVideos.forEach(syncDemo));
+demoRows.forEach(row=>{const track=row.querySelector('.marquee-track');let offset=0,last=0;row.addEventListener('scroll',()=>row.querySelectorAll('video').forEach(syncDemo),{passive:true});
+function tick(now){const dt=last?Math.min(now-last,40):0;last=now;const r=row.getBoundingClientRect();if(!demosPaused&&!document.hidden&&!row.contains(document.activeElement)&&r.bottom>0&&r.top<innerHeight){offset+=dt*.035;const first=track.firstElementChild,step=first.getBoundingClientRect().width+12;if(offset>=step){offset-=step;track.appendChild(first);}row.scrollLeft=offset;}requestAnimationFrame(tick);}requestAnimationFrame(tick);});syncDemoToggle();
 
 </script>
-<script>__LUNAR_JS__
-const mainLinks=[...document.querySelectorAll('#siteNav a[href^="#"]')];
-function updateMainNavigation(){let active=mainLinks[0],nearest=-Infinity;for(const a of mainLinks){const section=document.querySelector(a.getAttribute('href'));const top=section?.getBoundingClientRect().top;if(top<=210&&top>nearest){nearest=top;active=a;}}mainLinks.forEach(a=>{if(a===active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
-window.addEventListener('scroll',updateMainNavigation,{passive:true});updateMainNavigation();
-</script>
+<script>__LUNAR_JS__</script>
 <script>
 if (document.querySelector('.lunar-vision')) {
 const scene=document.querySelector('.lunar-vision');let frame=0;function reveal(e){const r=scene.getBoundingClientRect();if(frame)cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{scene.style.setProperty('--x',(e.clientX-r.left)+'px');scene.style.setProperty('--y',(e.clientY-r.top)+'px');scene.style.setProperty('--radius',(innerWidth<600?76:100)+'px');scene.classList.add('revealing')})}scene.addEventListener('pointermove',reveal);scene.addEventListener('pointerdown',reveal);scene.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);scene.classList.remove('revealing')});scene.addEventListener('pointerup',e=>{if(e.pointerType==='touch')scene.classList.remove('revealing')});
@@ -656,7 +668,7 @@ body #research-motivation.facet-motivation .dynamic-copy{font:400 18px/1.7 Arial
 @media(max-width:700px){body #research-motivation.facet-motivation{padding:40px 16px!important}.facet-motivation .layout{grid-template-columns:1fr;gap:24px}.facet-motivation .stage{height:300px}.facet-motivation .tabs{justify-content:center}.facet-motivation .facet-heading{margin-bottom:24px!important}}
 @media(prefers-reduced-motion:reduce){.facet-motivation .cube{transition:none!important}}
 </style>
-<script>(()=>{const s=document.querySelector('.facet-motivation');if(!s)return;const t=s.querySelector('.tabs');const titles=['Memory and planning','Physical execution','Feedback and replanning'];const copy=['Retain task information, infer the required goal, and select the next operation.','Control contact, placement, and release so that an intended operation changes the physical scene.','Track what was actually completed and revise the remaining plan after a missed grasp or placement.'];function set(i){t.querySelectorAll('button').forEach((b,j)=>{b.setAttribute('aria-selected',j===i);b.tabIndex=j===i?0:-1});s.querySelector('.dynamic-title').textContent=titles[i];s.querySelector('.dynamic-copy').textContent=copy[i];s.querySelector('.cube').style.transform='rotateX(-10deg) rotateY('+(-i*120)+'deg)'}t.querySelectorAll('button').forEach((b,i)=>{b.addEventListener('click',()=>set(i));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(i+(e.key==='ArrowRight'?1:2))%3;set(n);t.children[n].focus()}})});set(0)})();</script><style id="motivation-space-v38">
+<script>(()=>{const s=document.querySelector('.facet-motivation');if(!s)return;const t=s.querySelector('.tabs');const titles=['Memory and planning','Physical execution','Closed-loop coordination'];const copy=['Retain task information, infer the required goal, and select the next operation.','Control contact, placement, and release so that an intended operation changes the physical scene.','Task intent guides physically valid actions; actual outcomes update remaining goals, action timing, and phase progression.'];function set(i){t.querySelectorAll('button').forEach((b,j)=>{b.setAttribute('aria-selected',j===i);b.tabIndex=j===i?0:-1});s.querySelector('.dynamic-title').textContent=titles[i];s.querySelector('.dynamic-copy').textContent=copy[i];const facts=[['Correct target selection from retained history and task prerequisites.','Choosing the wrong target despite a successful grasp.',['E','F','P','S','M']],['Environment-side contact, placement, release, and stability.','Choosing the right target but failing to complete the physical operation.',['FR1','FR2','PR1','PR2','PR3']],['Whether confirmed outcomes update remaining goals, action timing, and phase progression.','Advancing the plan after an action that did not physically complete.',['CP01','CP02','CP03','CP04','CP05']]][i];s.querySelector('.evidence-copy').textContent=facts[0];s.querySelector('.failure-copy').textContent=facts[1];s.querySelector('.dimension-tasks').replaceChildren(...facts[2].map(id=>{const a=document.createElement('a');a.href='tasks/'+id+'.html';a.textContent=id;return a;}));s.querySelector('.cube').style.transform='rotateX(-10deg) rotateY('+(-i*120)+'deg)'}t.querySelectorAll('button').forEach((b,i)=>{b.addEventListener('click',()=>set(i));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(i+(e.key==='ArrowRight'?1:2))%3;set(n);t.children[n].focus()}})});set(0)})();</script><style id="motivation-space-v38">
 body #research-motivation.facet-motivation{position:relative;isolation:isolate;overflow:hidden;background:#102134!important;width:100%!important;max-width:none!important;margin:48px 0!important;padding:56px max(40px,calc((100% - 1120px)/2)) 64px!important;color:#E4E6D2!important}
 body #research-motivation.facet-motivation .facet-heading,body #research-motivation.facet-motivation .dynamic-title,body #research-motivation.facet-motivation .dynamic-copy{color:#E4E6D2!important}
 .facet-motivation .face{border:0!important;color:#E4E6D2!important}.facet-motivation .face img{width:224px!important;height:230px!important;margin-bottom:16px!important}.facet-motivation .face{font-size:28px!important}
@@ -750,4 +762,35 @@ body #evaluation-hub.evaluation-orbit .orbit button:nth-of-type(2){left:400px!im
 body #evaluation-hub.evaluation-orbit .orbit button:nth-of-type(3){left:220px!important;top:280px!important;right:auto!important;bottom:auto!important}
 body #evaluation-hub.evaluation-orbit .orbit button:nth-of-type(4){left:40px!important;top:160px!important;right:auto!important;bottom:auto!important}
 @media(max-width:700px){body #evaluation-hub.evaluation-orbit .orbit button:nth-of-type(1){left:140px!important;top:32px!important}body #evaluation-hub.evaluation-orbit .orbit button:nth-of-type(2){left:252px!important;top:128px!important}body #evaluation-hub.evaluation-orbit .orbit button:nth-of-type(3){left:140px!important;top:224px!important}body #evaluation-hub.evaluation-orbit .orbit button:nth-of-type(4){left:28px!important;top:128px!important}}
+</style><style id="compact-density-preview">
+body #research-motivation.facet-motivation{padding:24px 32px!important;margin-block:28px!important;background:#E8ECEE!important}
+body #research-motivation.facet-motivation .facet-heading{margin:0 0 16px!important;text-align:center!important;font-size:28px!important}
+body #research-motivation.facet-motivation .layout{grid-template-columns:220px minmax(0,1fr);gap:32px;align-items:center;max-width:960px;margin-inline:auto}
+body #research-motivation.facet-motivation .stage{height:260px!important}
+body #research-motivation.facet-motivation .cube{width:220px;height:240px}
+body #research-motivation.facet-motivation .face img{width:180px!important;height:184px!important}
+body #research-motivation.facet-motivation .tabs{margin-bottom:12px;gap:24px}
+body #research-motivation.facet-motivation .tabs button{padding:6px 0;font-size:20px}
+body #research-motivation.facet-motivation .dynamic-title{font-size:22px!important;margin-bottom:8px!important}
+body #research-motivation.facet-motivation .dynamic-copy{font-size:15px!important;line-height:1.55!important;max-width:680px}
+.dimension-evidence{margin:16px 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}.dimension-evidence>div{border-top:2px solid #7189A5;padding-top:10px}.dimension-evidence dt{font:700 12px/1.5 Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em}.dimension-evidence dd{margin:4px 0 0;font:400 14px/1.5 Arial,sans-serif}.dimension-tasks{display:flex;gap:8px;flex-wrap:wrap}.dimension-tasks a{font:600 12px/1.5 Arial,sans-serif;padding:4px 10px;border:2px solid #7189A5;text-decoration:none}.dimension-tasks a:hover{background:#E4E6D2}.dimension-tasks a:focus-visible{outline:2px solid #1E2A3F;outline-offset:3px}
+#research-overview .moon-chart{display:block;width:100%;height:auto!important;aspect-ratio:1400/460;max-height:none!important}
+#research-overview .lunar-panorama{height:auto!important;min-height:0!important;aspect-ratio:auto!important;max-height:none!important}
+#research-overview .lunar-world-titles text{font-size:25px!important}
+#research-overview .section-copy{margin-bottom:8px}#research-overview .lunar-controls{margin-block:12px}#research-overview .lunar-preview-label{font-size:12px}
+@media(max-width:760px){body #research-motivation.facet-motivation{padding:24px 20px!important}body #research-motivation.facet-motivation .layout{grid-template-columns:160px minmax(0,1fr);gap:20px}body #research-motivation.facet-motivation .stage{height:230px!important}body #research-motivation.facet-motivation .cube{transform-origin:center;scale:.7}.dimension-evidence{grid-template-columns:1fr;gap:12px}#research-overview .moon-chart{min-width:760px}#research-overview .lunar-panorama{overflow-x:auto}}
+@media(max-width:520px){body #research-motivation.facet-motivation .layout{grid-template-columns:1fr}body #research-motivation.facet-motivation .stage{height:180px!important}body #research-motivation.facet-motivation .facet-heading{font-size:24px!important}}
+</style>
+<script>(()=>{const moon=document.querySelector('#research-overview .moon-body');moon.replaceChildren();const image=document.createElementNS('http://www.w3.org/2000/svg','image');for(const [k,v] of Object.entries({href:'media/images/moon-clean-v53.png',x:640,y:50,width:120,height:120}))image.setAttribute(k,v);moon.append(image);})();</script><style>.intro-film video{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}.intro-overview img{display:block;width:100%;height:auto!important;object-fit:contain!important}</style><style id="compact-lunar-desktop">
+body #research-overview.lunar-overview{padding-top:24px!important;padding-bottom:24px!important}
+body #research-overview .section-copy h2{font-size:clamp(26px,3vw,36px)!important;margin-bottom:6px!important}
+body #research-overview .lunar-preview-label{margin-bottom:12px!important}
+@media(min-width:801px){body #research-overview .model-select button,body #research-overview .lunar-replay{padding:7px 10px}}
+#research-overview .lunar-panorama{background:#1E2A3F!important}
+#research-overview .lunar-world-titles text{fill:#e4e6d2!important}
+#research-overview .lunar-world-titles text:first-child,#research-overview .lunar-world-titles text:nth-child(2){fill:#20364b!important}
+body #introduction.research-abstract,body .version-status{width:min(1040px,calc(100% - 48px))!important;max-width:1040px!important;margin-inline:auto!important}
+body #introduction .intro-overview{width:100%!important;max-width:960px!important;margin:32px auto!important}
+body #introduction .intro-overview figcaption{text-align:center!important}
+@media(max-width:700px){body #introduction.research-abstract,body .version-status{width:calc(100% - 28px)!important}body #introduction .intro-overview{overflow:visible}body #introduction .intro-overview img{min-width:0!important}}
 </style></body></html>

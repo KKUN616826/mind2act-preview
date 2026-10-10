@@ -218,3 +218,36 @@ body .rd-hero .demo-hero{background:#101c30}
  .demo-hero .demo-moon-panel .demo-chapters{order:2;margin:0 0 0 78px;padding:4px 0;flex-basis:calc(100% - 78px);justify-content:flex-start;align-self:auto}
  .demo-hero .demo-moon-panel .demo-chapters [data-demo-chapter]{font-size:20px}
 }
+
+/* Intent and environment outcomes remain visible together during execution. */
+.demo-hero .demo-moon-panel .demo-chapters{gap:14px}
+.demo-hero .demo-chapters span{font:600 24px/1.1 var(--demo-font);color:#f6f2df}
+.demo-hero .demo-chapters .demo-bidirectional{color:#d7c788;font-weight:400}
+.demo-hero[data-phase=reproduce] .demo-moon-upper{opacity:1;filter:url(#moon-clean-alpha) brightness(1.12) drop-shadow(0 0 10px #f0d57e33)}
+.demo-hero[data-phase=reproduce] .demo-moon-signals{opacity:.65}
+.demo-hero .demo-copy{bottom:330px}
+.demo-hero .demo-workspace{height:172px;bottom:110px}
+.demo-hero .demo-memory-footer{display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin:0 0 0 28px;min-height:34px;font-size:12px;line-height:1.4}
+.demo-hero .demo-chart-grid .demo-arm-label{font-size:12px}
+.demo-hero .demo-feedback{color:#b6d8c2;font-variant-numeric:tabular-nums}
+.demo-hero .demo-card[data-completed=true] .demo-card-status{display:inline;color:#34654a;font-size:14px}
+.demo-hero .demo-intent-link[data-active=false],.demo-hero .demo-outcome-link[data-active=false]{display:none}
+.demo-hero .demo-connection-target{display:none}
+.demo-hero .demo-link-label{fill:currentColor;font:500 10px var(--demo-font);text-anchor:middle;paint-order:stroke;stroke:#14233b;stroke-width:3px;stroke-linejoin:round}
+.demo-hero .demo-outcome-link{color:#a9cdb9}
+.demo-hero .demo-outcome-line{fill:none;stroke:currentColor;stroke-width:1.2;opacity:.65}
+.demo-hero .demo-outcome-pulse{fill:#d0efdb;opacity:1}
+@media(min-width:1600px){.demo-hero .demo-copy{bottom:350px}.demo-hero .demo-workspace{height:186px;bottom:120px}}
+@media(max-width:760px){
+ .demo-hero .demo-chapters span{font-size:20px}
+ .demo-hero .demo-copy{inset:auto}
+ .demo-hero .demo-workspace{inset:auto;height:auto;gap:26px}
+ .demo-hero .demo-memory{height:auto;width:100%}
+ .demo-hero .demo-motion{width:100%}
+ .demo-hero .demo-memory-footer{margin-left:28px;min-height:35px}
+ .demo-hero .demo-link-label{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ .demo-hero .demo-moon img,.demo-hero .demo-card{transition:none}
+ .demo-hero .demo-outcome-pulse{display:none}
+}

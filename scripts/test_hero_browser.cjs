@@ -8,6 +8,9 @@ const { chromium } = require('playwright');
 const data = require('../data/hero-demo.json');
 const { stateAt } = require('./hero-demo-data.js');
 const base = process.env.HERO_PREVIEW_URL || 'http://127.0.0.1:8765/';
+const memoryStart = data.events[3].observe - 0.12;
+const memoryEnd = data.events[7].observeEnd + 0.18;
+const displayedTime = time => time < memoryStart ? memoryStart : time >= memoryEnd && time < data.media.actStart ? data.media.actStart : time;
 
 async function open(browser, width, height, motion = 'reduce', fallback = false) {
   const page = await browser.newPage({ viewport: { width, height }, reducedMotion: motion });
@@ -29,7 +32,7 @@ async function open(browser, width, height, motion = 'reduce', fallback = false)
     };
   });
   // Other task videos are unrelated to this player and expensive to decode together.
-  await page.route('**/media/videos/**', route => route.request().url().includes('CP05_hero_hard_1080p') ? route.continue() : route.abort());
+  await page.route('**/*.mp4', route => route.request().url().includes('CP05_hero_hard_1080p') ? route.continue() : route.abort());
   if (fallback) await page.addInitScript(() => {
     delete HTMLVideoElement.prototype.requestVideoFrameCallback;
     delete HTMLVideoElement.prototype.cancelVideoFrameCallback;
@@ -43,16 +46,17 @@ async function open(browser, width, height, motion = 'reduce', fallback = false)
 }
 
 async function seek(page, time) {
-  await page.evaluate(time => new Promise(resolve => {
+  await page.evaluate(time => {
     const video = document.querySelector('.demo-video');
     video.pause();
-    video.addEventListener('seeked', resolve, { once: true });
     video.currentTime = time;
-  }), time);
+  }, time);
+  await page.waitForFunction(() => !document.querySelector('.demo-video').seeking);
 }
 
 async function inspect(page, time) {
   const actual = await page.evaluate(() => ({
+    time: document.querySelector('.demo-video').currentTime,
     captured: [...document.querySelectorAll('.demo-card')].filter(card => !card.hidden).length,
     completed: document.querySelectorAll('.demo-card[data-completed="true"]').length,
     active: [...document.querySelectorAll('.demo-card')].findIndex(card => card.dataset.active === 'true'),
@@ -60,12 +64,47 @@ async function inspect(page, time) {
     complete: document.querySelector('.demo-hero').dataset.complete === 'true',
     phase: document.querySelector('.demo-hero').dataset.phase,
     overflow: document.documentElement.scrollWidth > innerWidth,
+    receipt: document.querySelector('.demo-feedback').textContent,
+    step: document.querySelector('.demo-step').textContent,
+    outcome: document.querySelector('.demo-outcome-link').dataset.active === 'true',
+    outcomeStep: Number(document.querySelector('.demo-outcome-link').dataset.step),
+    checks: [...document.querySelectorAll('.demo-card[data-completed="true"] .demo-card-status')].filter(e => getComputedStyle(e).display !== 'none' && e.textContent === '✓').length,
+    pulse: getComputedStyle(document.querySelector('.demo-outcome-pulse')).display !== 'none',
+    reduced: matchMedia('(prefers-reduced-motion: reduce)').matches,
+    feedbackOnScreen: ['.demo-step', '.demo-feedback'].every(selector => {
+      const box = document.querySelector(selector).getBoundingClientRect();
+      return box.width > 0 && box.left >= 0 && box.right <= innerWidth;
+    }),
+    outcomeOriginError: (() => {
+      const outcome = document.querySelector('.demo-outcome-link');
+      if (outcome.dataset.active !== 'true') return null;
+      const dot = document.querySelectorAll('.demo-event-dot')[Number(outcome.dataset.step) - 1];
+      const event = new DOMPoint(Number(dot.getAttribute('cx')), Number(dot.getAttribute('cy'))).matrixTransform(dot.getScreenCTM());
+      const path = document.querySelector('.demo-outcome-line');
+      const start = path.getPointAtLength(0).matrixTransform(path.getScreenCTM());
+      return Math.hypot(start.x - event.x, start.y - event.y);
+    })(),
   }));
-  const expected = stateAt(data, time);
-  for (const key of ['captured', 'completed', 'active', 'complete']) assert.equal(actual[key], expected[key], key + ' at ' + time);
+  assert.ok(Math.abs(actual.time - displayedTime(time)) < 0.000003, 'Shortened demonstration seek at ' + time);
+  const expected = stateAt(data, actual.time);
+  const visible = expected.acting ? expected.captured : data.events.filter((event, index) => index >= 3 && index <= 7 && event.observe <= actual.time).length;
+  assert.equal(actual.captured, visible);
+  for (const key of ['completed', 'active', 'complete']) assert.equal(actual[key], expected[key], key + ' at ' + time);
   assert.equal(actual.dots, expected.completed);
   assert.equal(actual.phase, expected.acting ? 'reproduce' : 'observe');
   assert.equal(actual.overflow, false);
+  if (expected.acting) assert.equal(actual.feedbackOnScreen, true, 'Feedback text must fit the visible viewport');
+  assert.equal(actual.checks, expected.completed, 'Confirmed checks must be visible');
+  assert.equal(actual.outcome, expected.completed > 0, 'Environment outcome returns to memory');
+  if (expected.completed) {
+    assert.equal(actual.outcomeStep, expected.completed);
+    assert.ok(actual.outcomeOriginError < 1, 'Return arrow must start at the recorded trigger, not the moving cursor');
+    assert.match(actual.receipt, /Registered/);
+    assert.match(actual.receipt, new RegExp((12 - expected.completed) + ' remaining'));
+    const age = actual.time - data.events[expected.completed - 1].trigger;
+    assert.equal(actual.pulse, !actual.reduced && age < 0.45);
+  }
+  assert.equal(actual.step.includes('Waiting for release'), expected.registered);
 }
 
 (async () => {
@@ -85,15 +124,22 @@ async function inspect(page, time) {
       await seek(page, 12.08);
       const alignment = await page.evaluate(() => {
         const h = document.querySelector('.demo-hero').getBoundingClientRect();
-        const s = document.querySelector('.demo-scene').getBoundingClientRect();
+        const chart = document.querySelector('.demo-chart');
+        const s = chart.getBoundingClientRect();
         const t = document.querySelector('.demo-connection-target');
         const x = h.left + Number(t.getAttribute('cx')), y = h.top + Number(t.getAttribute('cy'));
         const card = document.querySelector('.demo-card[data-active="true"]').getBoundingClientRect();
         const windowBox = document.querySelector('.demo-memory-window').getBoundingClientRect();
-        return { targetInVideo: x >= s.left && x <= s.right && y >= s.top && y <= s.bottom,
+        const arm = JSON.parse(document.getElementById('heroDemoData').textContent).events[Number(document.querySelector('.demo-card[data-active="true"]').dataset.step) - 1].arm;
+        const head = document.querySelector(arm === 'Left' ? '.demo-chart-head.demo-trace-left' : '.demo-chart-head.demo-trace-right');
+        const point = new DOMPoint(Number(head.getAttribute('cx')), Number(head.getAttribute('cy'))).matrixTransform(chart.getScreenCTM());
+        return { targetInChart: x >= s.left && x <= s.right && y >= s.top && y <= s.bottom,
+          targetError: Math.hypot(x - point.x, y - point.y),
           cardVisible: card.left >= windowBox.left - 1 && card.right <= windowBox.right + 1 };
       });
-      assert.equal(alignment.targetInVideo, true); assert.equal(alignment.cardVisible, true);
+      assert.equal(alignment.targetInChart, true); assert.equal(alignment.cardVisible, true);
+      assert.ok(alignment.targetError < 1, 'Target arrow must track the executing arm');
+      await seek(page, data.events[2].trigger + 0.05); await inspect(page, data.events[2].trigger + 0.05);
       if (process.env.HERO_SCREENSHOTS) {
         fs.mkdirSync(process.env.HERO_SCREENSHOTS, { recursive: true });
         await page.screenshot({ path: path.join(process.env.HERO_SCREENSHOTS, name + '-act.png') });
@@ -110,15 +156,17 @@ async function inspect(page, time) {
         await seek(page, time); await inspect(page, time);
       }
     }
-    await page.locator('.demo-hero').getByRole('button', { name: 'Mind', exact: true }).click(); await inspect(page, 0);
-    await page.locator('.demo-hero').getByRole('button', { name: 'Act', exact: true }).click(); await inspect(page, 8);
-    await page.locator('.demo-seek').focus(); await page.keyboard.press('End');
-    await page.waitForFunction(() => document.querySelector('.demo-hero').dataset.complete === 'true');
-    await page.keyboard.press('Home'); await inspect(page, 0);
+    await seek(page, 8); await inspect(page, 8);
+    await page.locator('.demo-play').focus(); await page.keyboard.press('Space');
+    await page.waitForFunction(() => !document.querySelector('.demo-video').paused);
+    await page.keyboard.press('Space');
+    await page.waitForFunction(() => document.querySelector('.demo-video').paused);
+    await seek(page, data.media.duration - 0.05); await inspect(page, data.media.duration - 0.05);
+    await seek(page, 0); await inspect(page, 0);
     for (let i = 0; i < 2; i++) {
       await seek(page, data.media.duration - 0.1);
       await page.getByRole('button', { name: 'Play demo', exact: true }).click();
-      await page.waitForFunction(() => document.querySelector('.demo-video').currentTime < 0.5 && document.querySelectorAll('.demo-card[data-completed="true"]').length === 0);
+      await page.waitForFunction(start => document.querySelector('.demo-video').currentTime >= start && document.querySelector('.demo-video').currentTime < start + 0.5 && document.querySelectorAll('.demo-card[data-completed="true"]').length === 0, memoryStart);
       assert.equal(await page.locator('.demo-card[data-completed="true"]').count(), 0);
       await page.getByRole('button', { name: 'Pause demo', exact: true }).click();
     }
@@ -154,7 +202,15 @@ async function inspect(page, time) {
     await page.close();
     console.log('PASS: all event boundaries, keyboard controls, loops, frame synchronization, pause/visibility and error handling');
     const fallback = await open(browser, 1280, 900, 'no-preference', true);
-    await fallback.waitForFunction(() => document.querySelector('.demo-video').currentTime > 0.2);
+    await fallback.waitForFunction(start => document.querySelector('.demo-video').currentTime > start + 0.2, memoryStart);
+    for (const offset of [0.05, 0.2, 0.449, 0.451]) {
+      await seek(fallback, data.events[0].trigger + offset); await inspect(fallback, data.events[0].trigger + offset);
+    }
+    await seek(fallback, data.events[0].trigger + 0.05);
+    const pulsePosition = () => fallback.locator('.demo-outcome-pulse').evaluate(e => [e.getAttribute('cx'), e.getAttribute('cy')]);
+    const frozen = await pulsePosition();
+    await fallback.waitForTimeout(150);
+    assert.deepEqual(await pulsePosition(), frozen, 'Paused media freezes the feedback pulse');
     await seek(fallback, 16.5); await inspect(fallback, 16.5);
     assert.deepEqual(fallback.errors, []); await fallback.close();
     console.log('PASS: muted autoplay and requestAnimationFrame fallback');

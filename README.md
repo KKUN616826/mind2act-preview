@@ -74,3 +74,7 @@ node --test scripts/test_hero_demo.cjs
 浏览器回归使用独立安装的 Playwright，不作为网站依赖。启动预览后运行 `node scripts/test_hero_browser.cjs`；可通过 `NODE_PATH` 指定 QA 依赖目录、`CHROMIUM_EXECUTABLE` 指定浏览器、`HERO_PREVIEW_URL` 指定地址、`HERO_SCREENSHOTS` 指定截图目录。测试覆盖四种屏宽、72 个事件边界、键盘操作、循环、逐帧同步、暂停恢复、减少动态效果与媒体错误回退。
 
 首屏预览只播放第 4–8 次记忆示范，再跳转到完整动作段；全部 12 张截图仍随动作阶段恢复。卡片展示音名采用 C2–C6 的白键映射约定（C D E F G A B 循环），不是原始仿真的实测音高；原始 K 编号和证据数据保持不变。
+
+执行阶段同时展示 Mind ↔ Act：`Target` 箭头从当前记忆指向执行臂的实时曲线位置；`Registered` 返回箭头从真实触键事件点指回已确认卡片。返回光点只运行 0.45 秒视频时间，暂停、回退与循环均由同一视频时钟重算；减少动态效果时不显示光点。确认回执和 ✓ 持续保留，只有日志确认释放后才推进下一目标。剩余数量按已确认触键计算，0 remaining 与最终释放后的 `Sequence complete` 是不同状态。
+
+当前紧凑介绍图、月球模型图、任务分组与最新介绍视频已回填到构建源文件。修改 `scripts/lunar.js`、`scripts/research_intro.html` 或 `scripts/showcase.html` 后统一构建，避免只修改生成首页而在下次构建时丢失设计。
