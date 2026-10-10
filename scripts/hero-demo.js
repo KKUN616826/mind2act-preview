@@ -6,7 +6,7 @@
   const { stateAt, sourceTime } = window.Mind2ActDemo;
   const find = selector => hero.querySelector(selector);
   const video = find('video'), scene = find('.demo-scene');
-  const seek = find('.demo-seek'), play = find('.demo-play');
+  const play = find('.demo-play');
   const chapters = [...hero.querySelectorAll('[data-demo-chapter]')];
   const cards = [...hero.querySelectorAll('.demo-card')];
   const viewport = find('.demo-memory-window'), strip = find('.demo-memory-strip');
@@ -14,6 +14,11 @@
   const motion = find('.demo-motion');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const samples = data.motion.samples;
+  // Preview five central observations; the full 12-note action sequence stays intact.
+  const memoryFirst = 3, memoryLast = 7;
+  const memoryStart = data.events[memoryFirst].observe - 0.12;
+  const memoryEnd = data.events[memoryLast].observeEnd + 0.18;
+  const noteName = event => 'CDEFGAB'[event.keyId % 7] + (2 + Math.floor(event.keyId / 7));
   const plot = { left: 40, right: 346, top: [20, 93], height: 48 };
   const span = data.media.duration - data.media.actStart;
   const xAt = time => plot.left + (time - data.media.actStart) / span * (plot.right - plot.left);
@@ -31,7 +36,7 @@
       grid.append(svg('line', { x1: plot.left, x2: plot.right, y1: y, y2: y }));
       grid.append(svg('text', { x: 32, y: y + 3, 'text-anchor': 'end' }, String(height)));
     }
-    grid.append(svg('text', { x: 4, y: plot.top[arm] + 27, class: 'demo-arm-label demo-arm-' + arm }, arm ? 'R' : 'L'));
+    grid.append(svg('text', { x: 4, y: plot.top[arm] + 27, class: 'demo-arm-label demo-arm-' + arm }, arm ? 'Right' : 'Left'));
     const path = samples.map((sample, index) => (index ? 'L' : 'M') + xAt(sample[0]).toFixed(2) + ',' + yAt(sample[arm + 1], arm).toFixed(2)).join(' ');
     find(arm ? '.demo-trace-right' : '.demo-trace-left').setAttribute('d', path);
   }
@@ -41,7 +46,7 @@
   const eventDots = data.events.map(event => {
     const arm = event.arm === 'Left' ? 0 : 1;
     const dot = svg('circle', { cx: xAt(event.trigger), cy: yAt(event.triggerHeights[arm], arm), r: 3.4, class: 'demo-event-dot demo-arm-' + arm });
-    dot.append(svg('title', {}, event.label + ' registered · ' + event.sourceTrigger.toFixed(2) + ' s'));
+    dot.append(svg('title', {}, noteName(event) + ' registered · ' + event.sourceTrigger.toFixed(2) + ' s'));
     find('.demo-chart-events').append(dot);
     return dot;
   });
@@ -66,7 +71,7 @@
   function connect(state) {
     if (!geometry) return;
     const event = state.acting ? data.events[state.active] : data.events.find(item => state.time >= item.observe && state.time < item.observeEnd);
-    focus.dataset.active = String(Boolean(event));
+    focus.dataset.active = String(Boolean(!state.acting && event));
     connection.dataset.active = String(Boolean(state.acting && event));
     if (!event) return;
     const target = { x: geometry.x + event.target[0] * geometry.scale, y: geometry.y + event.target[1] * geometry.scale };
@@ -77,8 +82,15 @@
       connection.dataset.active = 'false'; return;
     }
     const x1 = Math.max(windowBox.left + 8, Math.min(card.left + card.width / 2, windowBox.right - 8)) - root.left;
-    const y1 = card.top - root.top - 3, x2 = target.x + geometry.sceneX, y2 = target.y + geometry.sceneY;
-    const bend = y1 - Math.max(24, (y1 - y2) * 0.45);
+    // Link the remembered note to the active arm's recorded position, in SVG coordinates.
+    const arm = event.arm === 'Left' ? 0 : 1;
+    const chart = find('.demo-chart');
+    const matrix = chart.getScreenCTM();
+    if (!matrix) { connection.dataset.active = 'false'; return; }
+    const point = new DOMPoint(xAt(state.time), yAt(heightsAt(state.time)[arm], arm)).matrixTransform(matrix);
+    const y1 = card.top - root.top - 6, x2 = point.x - root.left, y2 = point.y - root.top;
+    const bend = Math.min(y1, y2) - 30;
+    connection.style.color = getComputedStyle(hero).getPropertyValue(arm ? '--demo-right' : '--demo-left');
     find('.demo-connection-line').setAttribute('d', 'M' + x1 + ',' + y1 + ' C' + x1 + ',' + bend + ' ' + x2 + ',' + bend + ' ' + x2 + ',' + y2);
     const origin = find('.demo-connection-origin'), end = find('.demo-connection-target');
     origin.setAttribute('cx', x1); origin.setAttribute('cy', y1);
@@ -123,6 +135,11 @@
 
   function sync(time = video.currentTime, force = false) {
     if (failed) return;
+    if (time < memoryStart || (time >= memoryEnd && time < data.media.actStart)) {
+      const next = time < memoryStart ? memoryStart : data.media.actStart;
+      if (!video.seeking) video.currentTime = next;
+      time = next;
+    }
     const state = stateAt(data, time);
     const signature = [state.acting, state.captured, state.completed, state.released].join(':');
     if (signature !== lastSignature || force) {
@@ -139,20 +156,20 @@
       find('.demo-feedback').textContent = state.complete ? 'Every key confirmed' : state.registered ? '✓ Registered · release' : state.acting ? (active.arm === 'Left' ? 'L' : 'R') + ' · Next target' : state.captured ? 'Keep the order. Keep repeats.' : 'Watch a key light up.';
       find('.demo-memory-empty').hidden = state.captured > 0;
       cards.forEach((card, index) => {
-        card.hidden = index >= state.captured;
+        card.hidden = index >= state.captured || (!state.acting && (index < memoryFirst || index > memoryLast));
         card.dataset.completed = String(index < state.completed);
         card.dataset.active = String(index === state.active);
         card.dataset.capturing = String(!state.acting && index === state.captured - 1);
         card.setAttribute('aria-current', index === state.active ? 'step' : 'false');
         card.querySelector('.demo-card-status').textContent = index < state.completed ? '✓' : index === state.active ? 'NEXT' : String(index + 1).padStart(2, '0');
-        card.setAttribute('aria-label', 'Step ' + (index + 1) + ', ' + data.events[index].label + (index < state.completed ? ', confirmed' : index === state.active ? ', current target' : ''));
+        card.setAttribute('aria-label', 'Step ' + (index + 1) + ', ' + noteName(data.events[index]) + (index < state.completed ? ', confirmed' : index === state.active ? ', current target' : ''));
       });
       const selected = state.acting ? Math.min(state.released, cards.length - 1) : state.captured - 1;
       if (selected >= 0) {
         const card = cards[selected];
         viewport.scrollLeft = Math.max(0, card.offsetLeft - strip.offsetLeft - (viewport.clientWidth - card.offsetWidth) / 2);
       } else viewport.scrollLeft = 0;
-      chapters.forEach(button => button.setAttribute('aria-current', String((button.dataset.demoChapter === 'reproduce') === state.acting)));
+      chapters.forEach(label => label.setAttribute('aria-current', String((label.dataset.demoChapter === 'reproduce') === state.acting)));
       find('.demo-phase-status').textContent = (state.acting ? 'Act' : 'Mind') + ' · ' + find('.demo-step').textContent + ' · ' + find('.demo-feedback').textContent;
       measure();
     }
@@ -164,9 +181,6 @@
     connect(state);
     capture(state);
     updateChart(state);
-    seek.value = String(state.time);
-    seek.style.setProperty('--played', (100 * state.time / data.media.duration) + '%');
-    seek.setAttribute('aria-valuetext', format(state.time / video.playbackRate) + ' of ' + format(Math.ceil(data.media.duration / video.playbackRate)) + ', ' + (state.acting ? 'Act' : 'Mind'));
     find('.demo-speed').textContent = ((state.acting ? 4 : 3) * video.playbackRate).toFixed(2).replace(/\.?0+$/, '') + '× source speed';
     play.setAttribute('aria-label', video.paused ? 'Play demo' : 'Pause demo');
     play.setAttribute('aria-pressed', String(!video.paused));
@@ -193,18 +207,12 @@
     ready = true;
     video.defaultPlaybackRate = data.media.playbackRate;
     video.playbackRate = data.media.playbackRate;
-    seek.max = String(Math.min(data.media.duration, video.duration));
-    seek.disabled = play.disabled = false;
-    chapters.forEach(button => button.disabled = false);
+    video.currentTime = memoryStart;
+    play.disabled = false;
     sync(video.currentTime, true);
     resume();
   }
   play.addEventListener('click', () => { wantsPlay = video.paused; if (wantsPlay) resume(); else video.pause(); });
-  seek.addEventListener('input', () => { video.currentTime = Number(seek.value); sync(video.currentTime, true); });
-  chapters.forEach(button => button.addEventListener('click', () => {
-    video.currentTime = button.dataset.demoChapter === 'observe' ? 0 : data.media.actStart;
-    sync(video.currentTime, true);
-  }));
   video.addEventListener('loadedmetadata', initialize);
   video.addEventListener('seeking', () => { cancelFrame(); sync(video.currentTime, true); });
   video.addEventListener('seeked', () => { sync(video.currentTime, true); scheduleFrame(); });
@@ -214,8 +222,7 @@
   video.addEventListener('ratechange', () => sync());
   video.addEventListener('error', () => {
     failed = true; wantsPlay = false; cancelFrame();
-    seek.disabled = play.disabled = true;
-    chapters.forEach(button => button.disabled = true);
+    play.disabled = true;
     find('.demo-title').textContent = 'Demo unavailable.';
     find('.demo-feedback').textContent = 'Open the full demonstration in Tasks below.';
     find('.demo-phase-status').textContent = 'Demo unavailable. Open the full demonstration in Tasks below.';

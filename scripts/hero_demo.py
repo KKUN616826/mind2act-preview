@@ -11,7 +11,9 @@ def render():
     cards = []
     crop_x, _, crop_width, _ = data['keyboard']['snapshotCrop']
     for event in data['events']:
-        label = html.escape(event['label'])
+        # Display convention: the 29 white keys span C2–C6; not calibrated audio pitches.
+        note = 'CDEFGAB'[event['keyId'] % 7] + str(2 + event['keyId'] // 7)
+        label = html.escape(note)
         target_x = 100 * (event['target'][0] - crop_x) / crop_width
         cards.append(
             f'<li class="demo-card" data-step="{event["step"]}" hidden>'

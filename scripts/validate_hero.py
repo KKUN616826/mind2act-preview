@@ -48,7 +48,8 @@ def validate_hero(content=None):
     with (ROOT / data['media']['path']).open('rb') as video:
         assert hashlib.file_digest(video, 'sha256').hexdigest() == data['media']['sha256']
     assert 'Simulation demonstration' in content and 'Illustrative memory overlay' in content
-    assert 'Source time · s' in content and 'World height · cm' in content
+    assert 'Recorded simulation heights in world coordinates, in centimeters.' in content
+    assert 'class="demo-chart"' in content and 'class="demo-seek"' not in content
     print('PASS: 12 independent screenshots, recorded 30 Hz heights, 120 Hz triggers, release ordering and embedded hero data')
 
 

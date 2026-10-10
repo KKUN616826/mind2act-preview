@@ -16,22 +16,26 @@
       <img class="demo-moon-stars" src="media/images/moon-stars-extracted.png" alt="">
     </div>
     <h2 class="demo-brand">Mind<span>2</span>Act</h2>
+  <div class="demo-chapters" role="group" aria-label="Current demo phase">
+      <span data-demo-chapter="observe" aria-current="true">Mind</span>
+      <span data-demo-chapter="reproduce" aria-current="false">Act</span>
+    </div>
   </aside>
   <section class="demo-copy">
-    <p class="demo-stage">MIND <span class="demo-speed">2.25× source speed</span></p>
+    <p class="demo-stage" hidden>MIND <span class="demo-speed">2.25× source speed</span></p>
     <h1 class="demo-title">Remember the order.</h1>
   </section>
   <div class="demo-workspace">
     <section class="demo-memory" aria-label="Illustrative task memory">
-      <div class="demo-panel-heading"><h2>Remembered sequence</h2><span class="demo-count">0 / 12</span></div>
-      <div class="demo-memory-window" tabindex="0" role="region" aria-label="Sequence screenshots; scroll horizontally to review">
+      <div class="demo-panel-heading" hidden><h2>Remembered sequence</h2><span class="demo-count">0 / 12</span></div>
+      <div class="demo-memory-window" role="region" aria-label="Remembered screenshots; current step follows the demonstration">
         <ol class="demo-memory-strip">__HERO_CARDS__</ol>
-        <p class="demo-memory-empty">Watch a key light up.</p>
+        <p class="demo-memory-empty">Memory</p>
       </div>
-      <div class="demo-memory-footer"><span class="demo-step">Watch · Remember</span><span class="demo-feedback">Waiting for the first key</span></div>
+      <div class="demo-memory-footer" hidden><span class="demo-step">Watch · Remember</span><span class="demo-feedback">Waiting for the first key</span></div>
     </section>
     <section class="demo-motion" aria-label="Recorded left and right stick-tip heights" hidden>
-      <div class="demo-panel-heading"><h2>Stick-tip height</h2><span class="demo-recorded"><i></i>Recorded</span></div>
+      <div class="demo-panel-heading"><h2>Arm position · height</h2><span class="demo-recorded">cm</span></div>
       <svg class="demo-chart" viewBox="0 0 360 176" role="img" aria-labelledby="demo-chart-title demo-chart-description">
         <title id="demo-chart-title">Left and right stick-tip height</title>
         <desc id="demo-chart-description">Recorded simulation heights in world coordinates, in centimeters. Both plots use the same time and height scales. Dots mark confirmed key triggers, not curve minima.</desc>
@@ -42,19 +46,12 @@
         <line class="demo-chart-cursor" x1="40" x2="40" y1="17" y2="143"/>
         <circle class="demo-chart-head demo-trace-left" r="3.5"/>
         <circle class="demo-chart-head demo-trace-right" r="3.5"/>
-        <text class="demo-axis-label" x="40" y="173">Source time · s</text>
-        <text class="demo-axis-label" x="346" y="173" text-anchor="end">World height · cm</text>
       </svg>
     </section>
   </div>
   <p class="demo-phase-status" role="status" aria-live="polite">Mind · Remember the order.</p>
-  <p class="demo-evidence">Simulation demonstration <span>·</span> Illustrative memory overlay</p>
+  <p class="demo-evidence" hidden>Simulation demonstration <span>·</span> Illustrative memory overlay</p>
   <div class="demo-controls" role="group" aria-label="Demo playback controls">
-    <div class="demo-chapters" aria-label="Demo chapters">
-      <button type="button" data-demo-chapter="observe" aria-current="true" disabled>Mind</button>
-      <button type="button" data-demo-chapter="reproduce" aria-current="false" disabled>Act</button>
-    </div>
-    <input class="demo-seek" id="demo-seek" type="range" min="0" max="19.233333" step="0.01" value="0" aria-label="Demo playback position" disabled>
     <button class="demo-play" type="button" aria-label="Play demo" aria-pressed="false" disabled>
       <svg class="demo-play-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
       <svg class="demo-pause-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>

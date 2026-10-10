@@ -72,3 +72,5 @@ node --test scripts/test_hero_demo.cjs
 导出器只读取原始运行，使用 `trajectory.json`、`control_trace.json`、`integrated_result.json`、`collection/control.npz` 和原生 RGB 时钟核对视频时间，并记录源文件 SHA-256。可加 `--output /tmp/hero-export-check` 导出到独立目录核对复现结果。
 
 浏览器回归使用独立安装的 Playwright，不作为网站依赖。启动预览后运行 `node scripts/test_hero_browser.cjs`；可通过 `NODE_PATH` 指定 QA 依赖目录、`CHROMIUM_EXECUTABLE` 指定浏览器、`HERO_PREVIEW_URL` 指定地址、`HERO_SCREENSHOTS` 指定截图目录。测试覆盖四种屏宽、72 个事件边界、键盘操作、循环、逐帧同步、暂停恢复、减少动态效果与媒体错误回退。
+
+首屏预览只播放第 4–8 次记忆示范，再跳转到完整动作段；全部 12 张截图仍随动作阶段恢复。卡片展示音名采用 C2–C6 的白键映射约定（C D E F G A B 循环），不是原始仿真的实测音高；原始 K 编号和证据数据保持不变。
