@@ -1,0 +1,999 @@
+{
+  "created_at": "2026-10-10T14:24:33.696988+08:00",
+  "old_count": 45,
+  "new_count": 45,
+  "missing_paths": [],
+  "added_paths": [],
+  "videos": [
+    {
+      "path": "assets/videos/Act/FR1/easy.mp4",
+      "sha256": "a480f29277b3f17d98a7699f5e0d74ebcd48d01e23b0ec74a1a18ef5b3d63728",
+      "size_bytes": 1818039,
+      "duration": 22.967,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/FR1/easy.mp4",
+        "duration": 22.967,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Act/FR1/hard.mp4",
+      "sha256": "4d09a77316e87e752487ae964b515c73af31133b5cb978144d9ac6e0f1e124a3",
+      "size_bytes": 3780002,
+      "duration": 36.067,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/FR1/hard.mp4",
+        "duration": 36.067,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Act/FR1/medium.mp4",
+      "sha256": "6ac7565bd0668ac58bd2cdc43a3e8ba760c2792633bc3324d378b23578817704",
+      "size_bytes": 2727934,
+      "duration": 27.767,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/FR1/medium.mp4",
+        "duration": 27.767,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Act/FR2/easy.mp4",
+      "sha256": "073d2efc5dc62b9fe5adf4a58a92ee3c7c9ac2158c3b34f41fb9b4a15221fc20",
+      "size_bytes": 1388536,
+      "duration": 15.334,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/FR2/easy.mp4",
+        "duration": 15.334,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Act/FR2/hard.mp4",
+      "sha256": "3023e443d62963c7ef9c8ca31989ede880a792ca165580fab182477febb1ea12",
+      "size_bytes": 1376186,
+      "duration": 14.6,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/FR2/hard.mp4",
+        "duration": 14.6,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Act/FR2/medium.mp4",
+      "sha256": "74c745fbf2535c34396e4f896827c240f1b9178ee1fd91333a6655768853c542",
+      "size_bytes": 1572548,
+      "duration": 16.9,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/FR2/medium.mp4",
+        "duration": 16.9,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR1/PR1__PR1_Easy_control_20260919.mp4",
+      "sha256": "cf1fd396f0b1bca350491c9b1e7f23683bd168fa59a22d6c351920660405ee91",
+      "size_bytes": 806291,
+      "duration": 11.967,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR1/PR1__PR1_Easy_control_20260919.mp4",
+        "duration": 19.5,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -7.533,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4",
+      "sha256": "ec6d5c2f04ef75a204fd915d9c4f2b652759f050345737812decee6b1b615c93",
+      "size_bytes": 889520,
+      "duration": 12.267,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4",
+        "duration": 19.334,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -7.067,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR1/PR1__PR1_Medium_control_20260919.mp4",
+      "sha256": "c1608b8c5762a5cc74092b854074d72fd37798a692662ab6fb4c6aa9f7de13bd",
+      "size_bytes": 706038,
+      "duration": 10.4,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR1/PR1__PR1_Medium_control_20260919.mp4",
+        "duration": 19.334,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -8.934,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR2/PR2__PR2_Easy_control_20260919.mp4",
+      "sha256": "fb6b5eee261ab3075c87b62c3af67b2da660a7a6e0bf3bbc4268a7b28a0def49",
+      "size_bytes": 1568888,
+      "duration": 20.467,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR2/PR2__PR2_Easy_control_20260919.mp4",
+        "duration": 22.584,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -2.117,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR2/PR2__PR2_Hard_control_20260919.mp4",
+      "sha256": "931b38fa1b351ab6e9f0e5334cdd7b4d915b793b5e4d166d4d0e24bc8ecc774f",
+      "size_bytes": 1471672,
+      "duration": 19.367,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR2/PR2__PR2_Hard_control_20260919.mp4",
+        "duration": 22.584,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -3.217,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR2/PR2__PR2_Medium_control_20260919.mp4",
+      "sha256": "01f82f2ed6cd664617a850090c34c07597b519965308ca0a8ff21c40094f9190",
+      "size_bytes": 1567331,
+      "duration": 20.434,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR2/PR2__PR2_Medium_control_20260919.mp4",
+        "duration": 22.584,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -2.15,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+      "sha256": "35139d3800afb7d5150208413c52c3db5116e4f482074e29f51a23676fffa170",
+      "size_bytes": 2007820,
+      "duration": 24.534,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+        "duration": 36.667,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -12.133,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "sha256": "665dfa922284c867eb69cf1d7636f3008da3d4291df603d6dc07d3170130942e",
+      "size_bytes": 1988178,
+      "duration": 24.6,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+        "duration": 38.334,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -13.734,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4",
+      "sha256": "d78e0355e9be1830e7b4033d113927905fbdb10b25d87efdc78dd475ad4f4bf8",
+      "size_bytes": 1989792,
+      "duration": 24.667,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4",
+        "duration": 38.334,
+        "width": 1280,
+        "height": 960,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -13.667,
+        "scale_x": 0.5,
+        "scale_y": 0.5
+      }
+    },
+    {
+      "path": "assets/videos/Mind/E/E__E_easy.mp4",
+      "sha256": "0c5aa59f495ceb511c5c956f8f382a661711abb63ddee34e21c5577c8a7db7cc",
+      "size_bytes": 4283386,
+      "duration": 60.5,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/E/E__E_easy.mp4",
+        "duration": 73.75,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -13.25,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/E/E__E_hard.mp4",
+      "sha256": "991e6959550fa84bf5eb74586ac519f07df5cf773892b3197ca4c72879769973",
+      "size_bytes": 12484849,
+      "duration": 170.167,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/E/E__E_hard.mp4",
+        "duration": 178.917,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -8.75,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/E/E__E_medium.mp4",
+      "sha256": "59705e7cb15a7f7a47d476a47dbb42cad9ee936100f7130f0070372297139343",
+      "size_bytes": 8484371,
+      "duration": 120.0,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/E/E__E_medium.mp4",
+        "duration": 123.834,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -3.834,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/F/F__F_easy.mp4",
+      "sha256": "617853d26d0e11ea2180e4b2697e2a75929670d4808f98b786281f3615f4f219",
+      "size_bytes": 1257687,
+      "duration": 16.9,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/F/F__F_easy.mp4",
+        "duration": 28.417,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -11.517,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/F/F__F_hard.mp4",
+      "sha256": "4617b94bcbf9d688e79b2a84553b3b6b54cba44614d88c5a148820cef233a9a9",
+      "size_bytes": 2591044,
+      "duration": 33.134,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/F/F__F_hard.mp4",
+        "duration": 55.917,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -22.783,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/F/F__F_medium.mp4",
+      "sha256": "35964beb4697f819a4a622d15d65e6e75cd237712c0dce583ae4257f147b9cfd",
+      "size_bytes": 2132157,
+      "duration": 27.567,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/F/F__F_medium.mp4",
+        "duration": 44.667,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -17.1,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/M/M__M_easy_frontlabel.mp4",
+      "sha256": "72f8d269a3e06b5c88a5835753bdbdeee49e7aed4d4831be10c61a09869a04c1",
+      "size_bytes": 5457670,
+      "duration": 74.5,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/M/M__M_easy_frontlabel.mp4",
+        "duration": 82.167,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -7.667,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/M/M__M_hard_frontlabel.mp4",
+      "sha256": "2ab48df343a3a3b8be4772284426e7c677eb0615ff1133e840fc3770d42aa723",
+      "size_bytes": 7215869,
+      "duration": 99.634,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/M/M__M_hard_frontlabel.mp4",
+        "duration": 120.584,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -20.95,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/M/M__M_medium_frontlabel.mp4",
+      "sha256": "6efc7d3195a274e1bba32cab378ca65f4fe76e4b7d29774970d6dad1e88e1a77",
+      "size_bytes": 6541081,
+      "duration": 89.967,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/M/M__M_medium_frontlabel.mp4",
+        "duration": 122.167,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -32.2,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+      "sha256": "7a2509626c23a6eb47113541b30eb13e661509e674c609ec65c7ebcc1ba6d9a9",
+      "size_bytes": 6466335,
+      "duration": 76.3,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+        "duration": 75.917,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": 0.383,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/P/easy.mp4",
+      "sha256": "9210d4fe738e9e348abfad4a55b35b31d3e2e285d4386bd5455c94e6a0697fca",
+      "size_bytes": 3825697,
+      "duration": 46.367,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/P/easy.mp4",
+        "duration": 46.367,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Mind/P/medium.mp4",
+      "sha256": "ec2b62022c2cd28a32fd7d4da7931e8659618396c69f0091066d7d26a934a36e",
+      "size_bytes": 4729084,
+      "duration": 57.334,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/P/medium.mp4",
+        "duration": 57.334,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Mind/S/S__S_easy.mp4",
+      "sha256": "488dfc13a76cf4305ac506bbaddb210bb68ae362d3419fae5c88aead087cdc44",
+      "size_bytes": 5202270,
+      "duration": 64.8,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/S/S__S_easy.mp4",
+        "duration": 60.834,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": 3.966,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/S/S__S_hard.mp4",
+      "sha256": "13f0e09b5689eb28dc457f7efcdda3ca95a693490cb6b201d24c2d04ab52152c",
+      "size_bytes": 5881666,
+      "duration": 72.4,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/S/S__S_hard.mp4",
+        "duration": 66.167,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": 6.233,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind/S/S__S_medium.mp4",
+      "sha256": "64359c5bf47e4f58fc781f9b2f5528193385c50c4a664b5fb53baa47f40eeedf",
+      "size_bytes": 5790266,
+      "duration": 72.0,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind/S/S__S_medium.mp4",
+        "duration": 65.834,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": 6.166,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP01/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+      "sha256": "36f1db1c0d5c24719ea95f6de414a0c13f7721b9e7a18cd5606244b232155895",
+      "size_bytes": 4151437,
+      "duration": 57.4,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP01/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+        "duration": 67.667,
+        "width": 960,
+        "height": 720,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -10.267,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.6666666666666666
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP01/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+      "sha256": "2b4839035a84527778b99ba275a71f0122cf9ea7fc7354efb5debf29e8a4ffc8",
+      "size_bytes": 11567662,
+      "duration": 139.9,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP01/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+        "duration": 215.084,
+        "width": 960,
+        "height": 720,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -75.184,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.6666666666666666
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP01/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+      "sha256": "7c8fff06824fedb1fcdf93176c77832441a81babdf998c857b2a6cac239cd5f0",
+      "size_bytes": 8621715,
+      "duration": 107.8,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP01/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+        "duration": 164.917,
+        "width": 960,
+        "height": 720,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -57.117,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.6666666666666666
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "sha256": "ff9b7288f8dc5d1dc7f58b245956e4fd410ee1c0cee49c1858399e720b4d1b2a",
+      "size_bytes": 4161549,
+      "duration": 55.434,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "duration": 64.334,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -8.9,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "size_bytes": 8430947,
+      "duration": 100.434,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+        "duration": 128.0,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -27.566,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "sha256": "5b4e46444d8439ee5f76c8cd54fa7d000303ee7a360c9ce8c70d3bbbf17b25d8",
+      "size_bytes": 7451840,
+      "duration": 92.334,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+        "duration": 100.084,
+        "width": 1440,
+        "height": 1080,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": -7.75,
+        "scale_x": 0.4444444444444444,
+        "scale_y": 0.4444444444444444
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+      "sha256": "26d2be238691f9b04d9014a3efabca0dd188b805f7d19420a61d2b30e9f8761d",
+      "size_bytes": 10618474,
+      "duration": 84.634,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+        "duration": 65.75,
+        "width": 960,
+        "height": 760,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": 18.884,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.631578947368421
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+      "sha256": "b713c7d8721d09f17f23c88598ef07df0f3465c650b5475ac62b4647283e83d9",
+      "size_bytes": 29794808,
+      "duration": 188.034,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+        "duration": 168.084,
+        "width": 960,
+        "height": 760,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": 19.95,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.631578947368421
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+      "sha256": "74ddd0ddd3acca31074f1b4d9c348c47f442a4808da8aded33d91e83172c808c",
+      "size_bytes": 21979487,
+      "duration": 154.067,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+        "duration": 144.084,
+        "width": 960,
+        "height": 760,
+        "fps": "12/1"
+      },
+      "delta": {
+        "duration": 9.983,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.631578947368421
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4",
+      "sha256": "dbd88aba91f21ae2f334636ffa457ad92952b1f4ebc809978f004c45b421af3d",
+      "size_bytes": 9300965,
+      "duration": 111.567,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4",
+        "duration": 258.292,
+        "width": 1920,
+        "height": 1440,
+        "fps": "24/1"
+      },
+      "delta": {
+        "duration": -146.725,
+        "scale_x": 0.3333333333333333,
+        "scale_y": 0.3333333333333333
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP04/hard.mp4",
+      "sha256": "f80b70f8c5a717eca93e17a35d17d9a0cabef63c299b1a96bda46fe3ff54eb03",
+      "size_bytes": 13694266,
+      "duration": 162.267,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP04/hard.mp4",
+        "duration": 162.267,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP04/medium.mp4",
+      "sha256": "821d13fc6c06f92056b84d59faee6ab7e3d1ddf75828b947ae461d5ff7d60895",
+      "size_bytes": 10026561,
+      "duration": 123.834,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP04/medium.mp4",
+        "duration": 123.834,
+        "width": 640,
+        "height": 480,
+        "fps": "30/1"
+      },
+      "delta": {
+        "duration": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+      "sha256": "59c199e75715d4e3a7a976b24b2e16aaf47e6cd0fa4992ce246dc56280b76f44",
+      "size_bytes": 3327819,
+      "duration": 62.067,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+        "duration": 63.125,
+        "width": 960,
+        "height": 720,
+        "fps": "24/1"
+      },
+      "delta": {
+        "duration": -1.058,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.6666666666666666
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+      "sha256": "7ea71ab5dd89598c83144141ad3dfba1b6f4a59d733dc96a17fa693a0a7157c6",
+      "size_bytes": 5720731,
+      "duration": 119.967,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+        "duration": 128.834,
+        "width": 960,
+        "height": 720,
+        "fps": "24/1"
+      },
+      "delta": {
+        "duration": -8.867,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.6666666666666666
+      }
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+      "size_bytes": 3517552,
+      "duration": 72.667,
+      "width": 640,
+      "height": 480,
+      "fps": "30/1",
+      "codec": "h264",
+      "old": {
+        "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+        "duration": 96.834,
+        "width": 960,
+        "height": 720,
+        "fps": "24/1"
+      },
+      "delta": {
+        "duration": -24.167,
+        "scale_x": 0.6666666666666666,
+        "scale_y": 0.6666666666666666
+      }
+    }
+  ]
+}

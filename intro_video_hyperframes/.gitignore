@@ -1,0 +1,10 @@
+# Local environments and runtime caches
+.hyperframes/
+.waveform-cache/
+**/venv/
+**/separation-venv/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+node_modules/
+.DS_Store

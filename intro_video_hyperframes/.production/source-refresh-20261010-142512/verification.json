@@ -1,0 +1,42 @@
+{
+  "verified_at": "2026-10-10T15:19:45+08:00",
+  "source_count": 45,
+  "all_source_hashes_match": true,
+  "active_refreshed_assets": [
+    "assets/generated/source-refresh-20261010-142512/cases/act-detail.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/act-draw.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/act-wide.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/p-action1.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/p-action2.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/p-intro.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/p-order-green-crop.png",
+    "assets/generated/source-refresh-20261010-142512/cases/piano-demo.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/piano-memory-1.png",
+    "assets/generated/source-refresh-20261010-142512/cases/piano-memory-2.png",
+    "assets/generated/source-refresh-20261010-142512/cases/piano-memory-3.png",
+    "assets/generated/source-refresh-20261010-142512/cases/piano-play.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/piano-setup.mp4",
+    "assets/generated/source-refresh-20261010-142512/cases/pr3-target-crop.png",
+    "assets/generated/source-refresh-20261010-142512/montage/all-cases-mosaic.mp4",
+    "assets/generated/source-refresh-20261010-142512/montage/fast-montage.mp4",
+    "assets/generated/source-refresh-20261010-142512/montage/six-cases-mosaic.mp4"
+  ],
+  "stale_case_montage_references": 0,
+  "hyperframes_check": "pass: 0 errors, 0 warnings; 9 layout samples; 39/39 contrast checks",
+  "render_log": ".production/source-refresh-20261010-142512/render.log",
+  "decode_master": "pass",
+  "decode_web": "pass",
+  "visual_frames": [
+    ".production/source-refresh-20261010-142512/rendered/frame-13-5.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-15.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-17.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-21.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-26.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-28.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-3-2.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-32.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-37.png",
+    ".production/source-refresh-20261010-142512/rendered/frame-44-5.png"
+  ],
+  "max_keyframe_gap_seconds": 1.0
+}

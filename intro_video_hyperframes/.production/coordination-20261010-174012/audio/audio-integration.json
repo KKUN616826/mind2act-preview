@@ -1,0 +1,604 @@
+{
+  "created_at": "2026-10-10T17:40:12+08:00",
+  "version": "coordination-20261010-174012",
+  "provider": "kokoro-onnx",
+  "voice": [
+    {
+      "id": "intro",
+      "start": 0.28,
+      "max_duration": 4.55,
+      "speed": 1.03,
+      "text": "Mind to Act World. Reasoning and action, evaluated together.",
+      "cache_key": "1f4809b680dc746d2979bcf0dcf28444a80ce84e42373dcf3581326befe54f85",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Mind to Act World. Reasoning and action, evaluated together.",
+        "speed": 1.03
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-intro-1f4809b680dc746d-raw.wav",
+      "raw_duration": 4.309333333333333,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-intro.wav",
+      "trim_start": 0.03975,
+      "trim_end": 4.2407916666666665,
+      "atempo": 1.0,
+      "gain_db": 12.510000000000002,
+      "end": 4.477458333333334,
+      "final_duration": 4.1974583333333335,
+      "before_gain": {
+        "input_i": -29.1,
+        "input_tp": -12.65,
+        "input_lra": 0.3,
+        "input_thresh": -39.44
+      },
+      "measurement": {
+        "input_i": -17.12,
+        "input_tp": -4.56,
+        "input_lra": 0.2,
+        "input_thresh": -27.45
+      }
+    },
+    {
+      "id": "motivation",
+      "start": 5.75,
+      "max_duration": 5.55,
+      "speed": 1.03,
+      "text": "Can strong parts make a reliable whole?",
+      "cache_key": "f1efc655991dacd00215154133ee2cb67329350d9c8e9858bbc4a680c73669fc",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Can strong parts make a reliable whole?",
+        "speed": 1.03
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-motivation-f1efc655991dacd0-raw.wav",
+      "raw_duration": 2.3466666666666667,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-motivation.wav",
+      "trim_start": 0.0,
+      "trim_end": 2.294958333333333,
+      "atempo": 1.0,
+      "gain_db": 12.48,
+      "end": 8.035625,
+      "final_duration": 2.285625,
+      "before_gain": {
+        "input_i": -29.06,
+        "input_tp": -13.99,
+        "input_lra": 0.0,
+        "input_thresh": -39.06
+      },
+      "measurement": {
+        "input_i": -17.14,
+        "input_tp": -4.42,
+        "input_lra": 0.0,
+        "input_thresh": -27.14
+      }
+    },
+    {
+      "id": "mind",
+      "start": 12.22,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Mind tracks the task through observations and history.",
+      "cache_key": "598b750775593eec83f6f52712e5583f287a629eca999645ba1288933c95775b",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Mind tracks the task through observations and history.",
+        "speed": 1.02
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-mind-598b750775593eec-raw.wav",
+      "raw_duration": 3.4346666666666668,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-mind.wav",
+      "trim_start": 0.034875,
+      "trim_end": 3.2943333333333333,
+      "atempo": 1.0,
+      "gain_db": 12.54,
+      "end": 15.472791666666666,
+      "final_duration": 3.2527916666666665,
+      "before_gain": {
+        "input_i": -29.24,
+        "input_tp": -14.5,
+        "input_lra": 0.6,
+        "input_thresh": -39.24
+      },
+      "measurement": {
+        "input_i": -17.08,
+        "input_tp": -4.67,
+        "input_lra": 0.5,
+        "input_thresh": -27.08
+      }
+    },
+    {
+      "id": "act",
+      "start": 18.12,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Act must make the intended physical result happen.",
+      "cache_key": "03f1ca2f0e42427142536fed24c747ce10f41a40ff346bd9124833570c9b4a23",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Act must make the intended physical result happen.",
+        "speed": 1.02
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-act-03f1ca2f0e424271-raw.wav",
+      "raw_duration": 3.2213333333333334,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-act.wav",
+      "trim_start": 0.08483333333333333,
+      "trim_end": 3.176875,
+      "atempo": 1.0,
+      "gain_db": 12.91,
+      "end": 21.209,
+      "final_duration": 3.089,
+      "before_gain": {
+        "input_i": -29.47,
+        "input_tp": -13.03,
+        "input_lra": 0.3,
+        "input_thresh": -39.47
+      },
+      "measurement": {
+        "input_i": -17.13,
+        "input_tp": -4.77,
+        "input_lra": 0.2,
+        "input_thresh": -27.13
+      }
+    },
+    {
+      "id": "mind2act",
+      "start": 24.03,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Together, actual outcomes shape what comes next.",
+      "cache_key": "f948809b3b0eba3e18c1aa4a9a2485030f3207627e30c0a4fe9ec248333e29ec",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Together, actual outcomes shape what comes next.",
+        "speed": 1.02
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-mind2act-f948809b3b0eba3e-raw.wav",
+      "raw_duration": 2.8373333333333335,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-mind2act.wav",
+      "trim_start": 0.0,
+      "trim_end": 2.8361666666666667,
+      "atempo": 1.0,
+      "gain_db": 12.469999999999999,
+      "end": 26.857583333333334,
+      "final_duration": 2.827583333333333,
+      "before_gain": {
+        "input_i": -29.07,
+        "input_tp": -14.25,
+        "input_lra": 0.0,
+        "input_thresh": -39.07
+      },
+      "measurement": {
+        "input_i": -17.13,
+        "input_tp": -4.75,
+        "input_lra": 0.0,
+        "input_thresh": -27.13
+      }
+    },
+    {
+      "id": "coordination-loop",
+      "start": 30.04,
+      "max_duration": 10.0,
+      "speed": 1.03,
+      "text": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next.",
+      "cache_key": "296f38bfb7cb2a993cbc90f33ad71e16e00e9be03ac91cad215fcd3f80bbbc6f",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next.",
+        "speed": 1.03
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-coordination-loop-296f38bfb7cb2a99-raw.wav",
+      "raw_duration": 7.722666666666667,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-coordination-loop.wav",
+      "trim_start": 0.004375,
+      "trim_end": 7.714875,
+      "atempo": 1.0,
+      "gain_db": 13.260000000000002,
+      "end": 37.74366666666667,
+      "final_duration": 7.703666666666667,
+      "before_gain": {
+        "input_i": -29.57,
+        "input_tp": -11.98,
+        "input_lra": 0.3,
+        "input_thresh": -39.87
+      },
+      "measurement": {
+        "input_i": -17.06,
+        "input_tp": -4.49,
+        "input_lra": 0.5,
+        "input_thresh": -27.36
+      }
+    },
+    {
+      "id": "scale-easy",
+      "start": 48.8407,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Easy.",
+      "cache_key": "74b07d2eac07b8fcac9a19f1651add8894a7dc5997a816116c8a2b28ab34ff5c",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Easy.",
+        "speed": 1.0
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-scale-easy-74b07d2eac07b8fc-raw.wav",
+      "raw_duration": 0.8746666666666667,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-scale-easy.wav",
+      "trim_start": 0.029375,
+      "trim_end": 0.7548333333333334,
+      "atempo": 1.0,
+      "gain_db": 10.329999999999998,
+      "end": 49.56070833333333,
+      "final_duration": 0.72,
+      "before_gain": {
+        "input_i": -27.33,
+        "input_tp": -16.03,
+        "input_lra": 0.0,
+        "input_thresh": -37.33
+      },
+      "measurement": {
+        "input_i": -17.01,
+        "input_tp": -5.7,
+        "input_lra": 0.0,
+        "input_thresh": -27.01
+      }
+    },
+    {
+      "id": "scale-medium",
+      "start": 50.1907,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Medium.",
+      "cache_key": "3fe35d6dc64a83b5076c9560a2dc70e9947708a195b64d81326b6a1e6a13773f",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Medium.",
+        "speed": 1.0
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-scale-medium-3fe35d6dc64a83b5-raw.wav",
+      "raw_duration": 0.9386666666666666,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-scale-medium.wav",
+      "trim_start": 0.016125,
+      "trim_end": 0.8134583333333333,
+      "atempo": 1.0,
+      "gain_db": 10.52,
+      "end": 50.98341666666666,
+      "final_duration": 0.7927083333333333,
+      "before_gain": {
+        "input_i": -27.52,
+        "input_tp": -15.78,
+        "input_lra": 0.0,
+        "input_thresh": -37.52
+      },
+      "measurement": {
+        "input_i": -17.02,
+        "input_tp": -5.26,
+        "input_lra": 0.0,
+        "input_thresh": -27.02
+      }
+    },
+    {
+      "id": "scale-hard",
+      "start": 51.5507,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Hard.",
+      "cache_key": "fec18e6326c5c39ff4ac86257b5f15379bffcc548fbd3039ea41d94b27299c64",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Hard.",
+        "speed": 1.0
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-scale-hard-fec18e6326c5c39f-raw.wav",
+      "raw_duration": 0.8106666666666666,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-scale-hard.wav",
+      "trim_start": 0.028291666666666666,
+      "trim_end": 0.7218333333333333,
+      "atempo": 1.0,
+      "gain_db": 11.32,
+      "end": 52.24433333333333,
+      "final_duration": 0.693625,
+      "before_gain": {
+        "input_i": -28.16,
+        "input_tp": -15.5,
+        "input_lra": 0.0,
+        "input_thresh": -38.16
+      },
+      "measurement": {
+        "input_i": -17.06,
+        "input_tp": -4.99,
+        "input_lra": 0.0,
+        "input_thresh": -27.06
+      }
+    },
+    {
+      "id": "ending",
+      "start": 54.03,
+      "max_duration": 7.55,
+      "speed": 1.03,
+      "text": "Build the benchmark. Test your agents. Let's take the next giant leap together.",
+      "cache_key": "b10cefa68545e266c4b67fe74f75f317c85d50b74e144965ade852866e79ee92",
+      "cache_parameters": {
+        "provider": "kokoro-onnx",
+        "provider_version": "0.6.1",
+        "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+        "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+        "voice": "am_michael",
+        "language": "en-us",
+        "text": "Build the benchmark. Test your agents. Let's take the next giant leap together.",
+        "speed": 1.03
+      },
+      "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-ending-b10cefa68545e266-raw.wav",
+      "raw_duration": 4.949333333333334,
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/vo-ending.wav",
+      "trim_start": 0.010416666666666666,
+      "trim_end": 4.910125,
+      "atempo": 1.0,
+      "gain_db": 12.93,
+      "end": 58.92516666666667,
+      "final_duration": 4.895166666666666,
+      "before_gain": {
+        "input_i": -29.25,
+        "input_tp": -14.05,
+        "input_lra": 0.6,
+        "input_thresh": -39.48
+      },
+      "measurement": {
+        "input_i": -17.06,
+        "input_tp": -4.41,
+        "input_lra": 0.5,
+        "input_thresh": -27.29
+      }
+    }
+  ],
+  "language": "en-us",
+  "sample_rate": 48000,
+  "bpm": 81.0,
+  "music_source_offset": 11.9877,
+  "duration": 62.2222222222,
+  "scene_boundaries": [
+    0,
+    5.1851851852,
+    11.8518518519,
+    17.7777777778,
+    23.7037037037,
+    29.6296296296,
+    40.7407407407,
+    53.3333333333,
+    62.2222222222
+  ],
+  "statistics_music_only": [
+    40.7407407407,
+    48.6807
+  ],
+  "lines": [
+    {
+      "id": "intro",
+      "start": 0.28,
+      "max_duration": 4.55,
+      "speed": 1.03,
+      "text": "Mind to Act World. Reasoning and action, evaluated together."
+    },
+    {
+      "id": "motivation",
+      "start": 5.75,
+      "max_duration": 5.55,
+      "speed": 1.03,
+      "text": "Can strong parts make a reliable whole?"
+    },
+    {
+      "id": "mind",
+      "start": 12.22,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Mind tracks the task through observations and history."
+    },
+    {
+      "id": "act",
+      "start": 18.12,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Act must make the intended physical result happen."
+    },
+    {
+      "id": "mind2act",
+      "start": 24.03,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Together, actual outcomes shape what comes next."
+    },
+    {
+      "id": "coordination-loop",
+      "start": 30.04,
+      "max_duration": 10.0,
+      "speed": 1.03,
+      "text": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next."
+    },
+    {
+      "id": "scale-easy",
+      "start": 48.8407,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Easy."
+    },
+    {
+      "id": "scale-medium",
+      "start": 50.1907,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Medium."
+    },
+    {
+      "id": "scale-hard",
+      "start": 51.5507,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Hard."
+    },
+    {
+      "id": "ending",
+      "start": 54.03,
+      "max_duration": 7.55,
+      "speed": 1.03,
+      "text": "Build the benchmark. Test your agents. Let's take the next giant leap together."
+    }
+  ],
+  "audio_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/soundtrack-coordination-20261010-174012.wav",
+  "stems": {
+    "narration": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/narration-stem.wav",
+    "music": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/music-stem.wav",
+    "sfx": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/sfx-stem.wav"
+  },
+  "subtitles": {
+    "srt": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/narration.srt",
+    "vtt": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/narration.vtt"
+  },
+  "music_input": ".production/coordination-20261010-174012/audio/separated/htdemucs/music-source-cut/no_vocals.wav",
+  "music_source_sha256": "aec61a615dec222732622d8cd7964a6bc2a78d355c10f2d16aa7ff2ca9f3aeed",
+  "music_processing": {
+    "source_offset": 11.9877,
+    "source_end": 74.2099222222,
+    "vocal_separation": "Demucs 4.0.1 htdemucs vocals/no_vocals, BGM only",
+    "voice_processed_by_separator": false,
+    "asr_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/bgm-asr-report.json",
+    "manual_listening": false
+  },
+  "carve": {
+    "source": "narration bus only",
+    "bed_only": true,
+    "bands_hz": [
+      1000,
+      2500
+    ],
+    "max_cut_db": [
+      -2,
+      -4
+    ],
+    "duck_db": 6,
+    "anticipation_seconds": 0.16,
+    "release_seconds": 0.4
+  },
+  "sfx": [
+    [
+      "impact-bass-1",
+      1.481481,
+      -27
+    ],
+    [
+      "whoosh-short",
+      4.98,
+      -27
+    ],
+    [
+      "whoosh-short",
+      11.65,
+      -29
+    ],
+    [
+      "whoosh-short",
+      17.57,
+      -29
+    ],
+    [
+      "whoosh-short",
+      23.5,
+      -29
+    ],
+    [
+      "whoosh-cinematic",
+      29.35,
+      -29
+    ],
+    [
+      "whoosh-short",
+      40.5,
+      -29
+    ],
+    [
+      "impact-bass-1",
+      53.333333,
+      -27
+    ]
+  ],
+  "mastering": {
+    "target_lufs": -16,
+    "ceiling_dbtp": -1.5,
+    "premaster": {
+      "input_i": -16.04,
+      "input_tp": -2.7,
+      "input_lra": 5.4,
+      "input_thresh": -26.1
+    },
+    "static_gain_db": 0.03999999999999915,
+    "final": {
+      "input_i": -15.99,
+      "input_tp": -2.66,
+      "input_lra": 5.5,
+      "input_thresh": -26.05
+    }
+  },
+  "qa": {
+    "statistics_narration_peak": 0,
+    "difficulty_lufs_spread": 0.04999999999999716,
+    "difficulty_lufs": [
+      -17.01,
+      -17.02,
+      -17.06
+    ],
+    "authored_sample_count": 2986667,
+    "sample_rate": 48000,
+    "actual_duration": 62.222229166666665,
+    "manual_listening": false
+  },
+  "review_samples": [
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/review-bgm-only.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/review-closing.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/review-coordination-loop.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/review-difficulty-fullmix.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/review-difficulty-vo.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/coordination-20261010-174012/review-statistics-music-only.wav"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "check": "pass; see check.log",
+  "master_decode": "pass",
+  "web_decode": "pass",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261010-163109.mp4",
+      "bytes": 29932436,
+      "sha256": "44f4584d2fb282b5ac0b3ef6b17c8f3a7001b9ca591da33f3dff3016d9bac413",
+      "duration": 47.433333,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261010-163109.mp4",
+      "bytes": 19842684,
+      "sha256": "2ddc7b4e055c88c2e84c36791374c94278dacbc5209d6cefd67bc0862c7c404d",
+      "duration": 47.433333,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  }
+}

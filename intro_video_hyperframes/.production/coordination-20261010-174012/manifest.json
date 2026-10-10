@@ -1,0 +1,22 @@
+{
+  "id": "mind2act-coordination-20261010-174012",
+  "created_at": "2026-10-10T17:40:12+08:00",
+  "framework": "HyperFrames 0.8.143",
+  "previous_delivery": "before/renders/delivery.json",
+  "previous_master_sha256": "44f4584d2fb282b5ac0b3ef6b17c8f3a7001b9ca591da33f3dff3016d9bac413",
+  "authored_duration": 62.2222222222,
+  "bpm": 81,
+  "scenes": [
+    {"id":"intro","start":0,"duration":5.1851851852},
+    {"id":"motivation","start":5.1851851852,"duration":6.6666666667},
+    {"id":"mind","start":11.8518518519,"duration":5.9259259259},
+    {"id":"act","start":17.7777777778,"duration":5.9259259259},
+    {"id":"mind2act","start":23.7037037037,"duration":5.9259259259},
+    {"id":"coordination","start":29.6296296296,"duration":11.1111111111},
+    {"id":"scale","start":40.7407407407,"duration":12.5925925926},
+    {"id":"outro","start":53.3333333333,"duration":8.8888888889}
+  ],
+  "preserved_choices": ["original music", "blue-cup plating clips", "PR3 drawing clips", "CP05 Medium piano clips"],
+  "state_semantics": "Authored task-logic illustration, not model internal state or performance measurement.",
+  "history_preserved": true
+}

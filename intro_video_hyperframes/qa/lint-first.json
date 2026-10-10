@@ -1,0 +1,182 @@
+{
+  "ok": false,
+  "errorCount": 7,
+  "warningCount": 12,
+  "infoCount": 0,
+  "findings": [
+    {
+      "code": "gsap_timeline_set_initial_hide",
+      "severity": "warning",
+      "message": "Initial hidden state for \"#intro-six\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+      "selector": "#intro-six",
+      "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes.",
+      "snippet": "tl.set(\"#intro-six\", { opacity: 0 }, 0)",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/01-intro.html"
+    },
+    {
+      "code": "gsap_timeline_set_initial_hide",
+      "severity": "warning",
+      "message": "Initial hidden state for \"#intro-all\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+      "selector": "#intro-all",
+      "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes.",
+      "snippet": "tl.set(\"#intro-all\", { opacity: 0 }, 0)",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/01-intro.html"
+    },
+    {
+      "code": "gsap_timeline_set_initial_hide",
+      "severity": "warning",
+      "message": "Initial hidden state for \"#intro-shade\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+      "selector": "#intro-shade",
+      "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes.",
+      "snippet": "tl.set(\"#intro-shade\", { opacity: 0 }, 0)",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/01-intro.html"
+    },
+    {
+      "code": "invalid_parent_traversal_in_asset_path",
+      "severity": "error",
+      "message": "Found 10 asset path(s) traversing above the project root with \"../\" (../assets/ (10)). Renders rewrite this against each sub-composition's source path, but Studio preview and other live consumers resolve against the project root and 404.",
+      "fixHint": "Use plain root-relative paths (e.g. \"assets/...\", \"capture/...\", \"fonts/...\") — compositions are served with the project root as their base URL, so paths must be root-relative, not relative to the compositions/ directory.",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/01-intro.html"
+    },
+    {
+      "code": "duplicate_media_discovery_risk",
+      "severity": "warning",
+      "message": "Detected 2 matching img entries with the same source/start/duration.",
+      "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation.",
+      "snippet": "img src=../assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png data-start= data-duration=",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/02-motivation.html"
+    },
+    {
+      "code": "invalid_parent_traversal_in_asset_path",
+      "severity": "error",
+      "message": "Found 8 asset path(s) traversing above the project root with \"../\" (../assets/ (8)). Renders rewrite this against each sub-composition's source path, but Studio preview and other live consumers resolve against the project root and 404.",
+      "fixHint": "Use plain root-relative paths (e.g. \"assets/...\", \"capture/...\", \"fonts/...\") — compositions are served with the project root as their base URL, so paths must be root-relative, not relative to the compositions/ directory.",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/02-motivation.html"
+    },
+    {
+      "code": "nested_media_start_basis_ambiguous",
+      "severity": "warning",
+      "message": "<video id=\"mind-grasp\"> has data-start=\"1.700000\" inside a sub-composition. Nested media timing is local to its composition by default; a nonzero value can be confused with a legacy root-global timestamp.",
+      "elementId": "mind-grasp",
+      "fixHint": "Keep data-start=\"1.700000\" if it is composition-local. If this is a legacy root-global timestamp, add data-hf-media-start-basis=\"global\"; otherwise convert it to local time by subtracting the host start.",
+      "snippet": "<video id=\"mind-grasp\" class=\"clip fill\" src=\"../assets/generated/cases/p-action1.mp4\" data-start=\"1.700000\" data-duration=\"2.610000\" data-track-index=\"1\" muted playsinline >",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/03-mind.html",
+      "line": 13,
+      "column": 379
+    },
+    {
+      "code": "nested_media_start_basis_ambiguous",
+      "severity": "warning",
+      "message": "<video id=\"mind-place\"> has data-start=\"4.220000\" inside a sub-composition. Nested media timing is local to its composition by default; a nonzero value can be confused with a legacy root-global timestamp.",
+      "elementId": "mind-place",
+      "fixHint": "Keep data-start=\"4.220000\" if it is composition-local. If this is a legacy root-global timestamp, add data-hf-media-start-basis=\"global\"; otherwise convert it to local time by subtracting the host start.",
+      "snippet": "<video id=\"mind-place\" class=\"clip fill\" src=\"../assets/generated/cases/p-action2.mp4\" data-start=\"4.220000\" data-duration=\"1.705926\" data-track-index=\"1\" muted playsinline >",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/03-mind.html",
+      "line": 13,
+      "column": 561
+    },
+    {
+      "code": "invalid_parent_traversal_in_asset_path",
+      "severity": "error",
+      "message": "Found 11 asset path(s) traversing above the project root with \"../\" (../assets/ (11)). Renders rewrite this against each sub-composition's source path, but Studio preview and other live consumers resolve against the project root and 404.",
+      "fixHint": "Use plain root-relative paths (e.g. \"assets/...\", \"capture/...\", \"fonts/...\") — compositions are served with the project root as their base URL, so paths must be root-relative, not relative to the compositions/ directory.",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/03-mind.html"
+    },
+    {
+      "code": "nested_media_start_basis_ambiguous",
+      "severity": "warning",
+      "message": "<video id=\"act-drawing\"> has data-start=\"1.150000\" inside a sub-composition. Nested media timing is local to its composition by default; a nonzero value can be confused with a legacy root-global timestamp.",
+      "elementId": "act-drawing",
+      "fixHint": "Keep data-start=\"1.150000\" if it is composition-local. If this is a legacy root-global timestamp, add data-hf-media-start-basis=\"global\"; otherwise convert it to local time by subtracting the host start.",
+      "snippet": "<video id=\"act-drawing\" class=\"clip fill\" src=\"../assets/generated/cases/act-draw.mp4\" data-start=\"1.150000\" data-duration=\"4.775926\" data-track-index=\"1\" muted playsinline >",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/04-act.html",
+      "line": 13,
+      "column": 379
+    },
+    {
+      "code": "nested_media_start_basis_ambiguous",
+      "severity": "warning",
+      "message": "<video id=\"act-inset-video\"> has data-start=\"1.150000\" inside a sub-composition. Nested media timing is local to its composition by default; a nonzero value can be confused with a legacy root-global timestamp.",
+      "elementId": "act-inset-video",
+      "fixHint": "Keep data-start=\"1.150000\" if it is composition-local. If this is a legacy root-global timestamp, add data-hf-media-start-basis=\"global\"; otherwise convert it to local time by subtracting the host start.",
+      "snippet": "<video id=\"act-inset-video\" class=\"clip fill\" src=\"../assets/generated/cases/act-detail.mp4\" data-start=\"1.150000\" data-duration=\"4.775926\" data-track-index=\"1\" muted playsinline >",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/04-act.html",
+      "line": 15,
+      "column": 622
+    },
+    {
+      "code": "duplicate_media_discovery_risk",
+      "severity": "warning",
+      "message": "Detected 2 matching img entries with the same source/start/duration.",
+      "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation.",
+      "snippet": "img src=../assets/generated/cases/pr3-target-crop.png data-start= data-duration=",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/04-act.html"
+    },
+    {
+      "code": "invalid_parent_traversal_in_asset_path",
+      "severity": "error",
+      "message": "Found 12 asset path(s) traversing above the project root with \"../\" (../assets/ (12)). Renders rewrite this against each sub-composition's source path, but Studio preview and other live consumers resolve against the project root and 404.",
+      "fixHint": "Use plain root-relative paths (e.g. \"assets/...\", \"capture/...\", \"fonts/...\") — compositions are served with the project root as their base URL, so paths must be root-relative, not relative to the compositions/ directory.",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/04-act.html"
+    },
+    {
+      "code": "nested_media_start_basis_ambiguous",
+      "severity": "warning",
+      "message": "<video id=\"piano-observe\"> has data-start=\"1.481481\" inside a sub-composition. Nested media timing is local to its composition by default; a nonzero value can be confused with a legacy root-global timestamp.",
+      "elementId": "piano-observe",
+      "fixHint": "Keep data-start=\"1.481481\" if it is composition-local. If this is a legacy root-global timestamp, add data-hf-media-start-basis=\"global\"; otherwise convert it to local time by subtracting the host start.",
+      "snippet": "<video id=\"piano-observe\" class=\"clip fill\" src=\"../assets/generated/cases/piano-demo.mp4\" data-start=\"1.481481\" data-duration=\"1.480000\" data-track-index=\"1\" muted playsinline >",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/05-mind2act.html",
+      "line": 13,
+      "column": 393
+    },
+    {
+      "code": "nested_media_start_basis_ambiguous",
+      "severity": "warning",
+      "message": "<video id=\"piano-replay\"> has data-start=\"2.962963\" inside a sub-composition. Nested media timing is local to its composition by default; a nonzero value can be confused with a legacy root-global timestamp.",
+      "elementId": "piano-replay",
+      "fixHint": "Keep data-start=\"2.962963\" if it is composition-local. If this is a legacy root-global timestamp, add data-hf-media-start-basis=\"global\"; otherwise convert it to local time by subtracting the host start.",
+      "snippet": "<video id=\"piano-replay\" class=\"clip fill\" src=\"../assets/generated/cases/piano-play.mp4\" data-start=\"2.962963\" data-duration=\"2.962963\" data-track-index=\"1\" muted playsinline >",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/05-mind2act.html",
+      "line": 13,
+      "column": 579
+    },
+    {
+      "code": "invalid_parent_traversal_in_asset_path",
+      "severity": "error",
+      "message": "Found 10 asset path(s) traversing above the project root with \"../\" (../assets/ (10)). Renders rewrite this against each sub-composition's source path, but Studio preview and other live consumers resolve against the project root and 404.",
+      "fixHint": "Use plain root-relative paths (e.g. \"assets/...\", \"capture/...\", \"fonts/...\") — compositions are served with the project root as their base URL, so paths must be root-relative, not relative to the compositions/ directory.",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/05-mind2act.html"
+    },
+    {
+      "code": "nested_media_start_basis_ambiguous",
+      "severity": "warning",
+      "message": "<video id=\"scale-mosaic\"> has data-start=\"4.350000\" inside a sub-composition. Nested media timing is local to its composition by default; a nonzero value can be confused with a legacy root-global timestamp.",
+      "elementId": "scale-mosaic",
+      "fixHint": "Keep data-start=\"4.350000\" if it is composition-local. If this is a legacy root-global timestamp, add data-hf-media-start-basis=\"global\"; otherwise convert it to local time by subtracting the host start.",
+      "snippet": "<video id=\"scale-mosaic\" class=\"clip fill\" src=\"../assets/generated/montage/all-cases-mosaic.mp4\" data-start=\"4.350000\" data-duration=\"5.200000\" data-track-index=\"1\" muted playsinline >",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/06-scale.html",
+      "line": 17,
+      "column": 159
+    },
+    {
+      "code": "invalid_parent_traversal_in_asset_path",
+      "severity": "error",
+      "message": "Found 8 asset path(s) traversing above the project root with \"../\" (../assets/ (8)). Renders rewrite this against each sub-composition's source path, but Studio preview and other live consumers resolve against the project root and 404.",
+      "fixHint": "Use plain root-relative paths (e.g. \"assets/...\", \"capture/...\", \"fonts/...\") — compositions are served with the project root as their base URL, so paths must be root-relative, not relative to the compositions/ directory.",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/06-scale.html"
+    },
+    {
+      "code": "invalid_parent_traversal_in_asset_path",
+      "severity": "error",
+      "message": "Found 7 asset path(s) traversing above the project root with \"../\" (../assets/ (7)). Renders rewrite this against each sub-composition's source path, but Studio preview and other live consumers resolve against the project root and 404.",
+      "fixHint": "Use plain root-relative paths (e.g. \"assets/...\", \"capture/...\", \"fonts/...\") — compositions are served with the project root as their base URL, so paths must be root-relative, not relative to the compositions/ directory.",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/07-outro.html"
+    }
+  ],
+  "filesScanned": 8,
+  "_meta": {
+    "version": "0.8.143",
+    "updateAvailable": false
+  }
+}

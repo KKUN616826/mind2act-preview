@@ -1,0 +1,105 @@
+{
+  "entries": [
+    {
+      "id": "a6578968-8497-4487-95ef-63cc87a8ca3f",
+      "who": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1791613469062,
+      "endedAt": 1791613471062,
+      "files": [
+        "qa/timeline-before-refresh.json"
+      ],
+      "undone": false,
+      "pinned": false
+    },
+    {
+      "id": "60e2ed89-08c8-4123-a42a-77e75238f929",
+      "who": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1791613466387,
+      "endedAt": 1791613468389,
+      "files": [
+        "qa/timeline-before-refresh.json"
+      ],
+      "undone": false,
+      "pinned": false
+    },
+    {
+      "id": "e268c9c7-ab6b-42c5-bd54-7b9e6d4f708b",
+      "who": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1791612801685,
+      "endedAt": 1791612803693,
+      "files": [
+        "CASE_VIDEOS.md",
+        "case-videos.csv",
+        "manifest.json",
+        "qa/archive-replacement-validation.json"
+      ],
+      "undone": false,
+      "pinned": false
+    },
+    {
+      "id": "a5415b05-01aa-49ac-8845-f7aa04e43015",
+      "who": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1791612518636,
+      "endedAt": 1791612521871,
+      "files": [
+        "assets/videos/Act/PR1/PR1__PR1_Easy_control_20260919.mp4",
+        "assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4",
+        "assets/videos/Act/PR1/PR1__PR1_Medium_control_20260919.mp4",
+        "assets/videos/Act/PR2/PR2__PR2_Easy_control_20260919.mp4",
+        "assets/videos/Act/PR2/PR2__PR2_Hard_control_20260919.mp4",
+        "assets/videos/Act/PR2/PR2__PR2_Medium_control_20260919.mp4",
+        "assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+        "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+        "assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4",
+        "assets/videos/Mind/E/E__E_easy.mp4",
+        "assets/videos/Mind/E/E__E_hard.mp4",
+        "assets/videos/Mind/E/E__E_medium.mp4",
+        "assets/videos/Mind/F/F__F_easy.mp4",
+        "assets/videos/Mind/F/F__F_hard.mp4",
+        "assets/videos/Mind/F/F__F_medium.mp4",
+        "assets/videos/Mind/M/M__M_easy_frontlabel.mp4",
+        "assets/videos/Mind/M/M__M_hard_frontlabel.mp4",
+        "assets/videos/Mind/M/M__M_medium_frontlabel.mp4",
+        "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+        "assets/videos/Mind/S/S__S_easy.mp4",
+        "assets/videos/Mind/S/S__S_hard.mp4",
+        "assets/videos/Mind/S/S__S_medium.mp4",
+        "assets/videos/Mind2Act/CP01/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+        "assets/videos/Mind2Act/CP01/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+        "assets/videos/Mind2Act/CP01/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+        "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+        "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+        "assets/videos/Mind2Act/CP03/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+        "assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+        "assets/videos/Mind2Act/CP03/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+        "assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4",
+        "assets/videos/Mind2Act/CP05/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+        "assets/videos/Mind2Act/CP05/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+        "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4"
+      ],
+      "undone": false,
+      "pinned": false
+    }
+  ],
+  "_meta": {
+    "version": "0.8.143",
+    "updateAvailable": false
+  }
+}

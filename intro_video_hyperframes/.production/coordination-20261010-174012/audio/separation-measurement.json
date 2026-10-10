@@ -1,0 +1,44 @@
+[
+  {
+    "start": 0,
+    "end": 62.222222,
+    "vocals_rms_dbfs": -57.40760366896402,
+    "instrumental_rms_dbfs": -12.236728277283877,
+    "vocals_peak_dbfs": -24.19272599578063
+  },
+  {
+    "start": 0,
+    "end": 30,
+    "vocals_rms_dbfs": -70.79533563138513,
+    "instrumental_rms_dbfs": -12.482614415742066,
+    "vocals_peak_dbfs": -29.91001240548463
+  },
+  {
+    "start": 30,
+    "end": 40,
+    "vocals_rms_dbfs": -49.80698829965259,
+    "instrumental_rms_dbfs": -12.211760207221873,
+    "vocals_peak_dbfs": -24.19272599578063
+  },
+  {
+    "start": 40.7407,
+    "end": 48.6807,
+    "vocals_rms_dbfs": -61.75223185469163,
+    "instrumental_rms_dbfs": -11.935865129387143,
+    "vocals_peak_dbfs": -32.90249116365169
+  },
+  {
+    "start": 48.8407,
+    "end": 52.55,
+    "vocals_rms_dbfs": -72.9020712827944,
+    "instrumental_rms_dbfs": -11.949090567269518,
+    "vocals_peak_dbfs": -46.32775841374638
+  },
+  {
+    "start": 53.3333,
+    "end": 62.22222,
+    "vocals_rms_dbfs": -73.58481105532172,
+    "instrumental_rms_dbfs": -11.927752192152411,
+    "vocals_peak_dbfs": -47.120170446711214
+  }
+]

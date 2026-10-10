@@ -1,0 +1,1988 @@
+{
+  "audit_created_at": "2026-10-10T03:20:15.355151+00:00",
+  "scope": "Read-only local source-media audit; only this JSON metadata file written. No assets copied or project edits. Availability is relative to the authoritative supplied current showcase and inspected local workspace.",
+  "summary": {
+    "expected_tasks": 15,
+    "expected_task_difficulty_pairs": 45,
+    "current_showcase_declared_clips": 39,
+    "current_showcase_playable_clips": 39,
+    "current_showcase_distinct_sha256": 39,
+    "verified_labeled_pairs": 35,
+    "current_unassigned_difficulty_clips": 4,
+    "missing_or_unresolved_pairs": 10,
+    "explicitly_not_provided_pairs": 4,
+    "unresolved_difficulty_pairs": 6,
+    "historical_excluded_clips": 5,
+    "upstream_total_clips": 37,
+    "upstream_exact_current_copies": 32,
+    "project_representative_clips": 15,
+    "exactly_45_current_task_difficulty_videos_exist": false,
+    "alternate_experiment_clips": 6,
+    "alternate_experiment_difficulty_pairs": 2
+  },
+  "sources": {
+    "authoritative_manifest": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/source/showcase-cases.json",
+    "current_mirror_root": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview",
+    "current_docs": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/docs/PhysCo_Cases.md",
+    "historical_upstream_root": "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream",
+    "historical_upstream_docs": "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/docs/PhysCo_Cases.md",
+    "target_project_unchanged": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117",
+    "mirrored_manifest": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/data/showcase-cases.json"
+  },
+  "validation": {
+    "method": "ffprobe -v error -select_streams v:0 -count_packets -show_entries stream=codec_name,width,height,duration,nb_frames,nb_read_packets,pix_fmt:format=duration,format_name -of json",
+    "criteria": "Nonempty MP4, ffprobe success with no error output, positive duration/dimensions/video-packet count. SHA-256 detects exact file copies; full-frame decode not performed.",
+    "duplicate_current_sha256_groups": [],
+    "mirrored_manifest_semantically_identical_to_authoritative_manifest": true
+  },
+  "copy_guidance": "Copy each available entry exactly once using source_path and filename. All 39 entries are current. Keep difficulty=null for the 4 unlabeled FR1/FR2 clips. Do not copy historical_excluded as additional current pairs. CP04 Easy is a preview.",
+  "available": [
+    {
+      "task": "E",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "title": "多批次物料重复件识别",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/E__E_easy.mp4",
+      "filename": "E__E_easy.mp4",
+      "size_bytes": 8736424,
+      "duration": 73.75,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 885,
+      "sha256": "de92fbea360421811744a7a3a84afb11fd1dfee5900cedc0c66cc071643fe251",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/E__E_easy.mp4"
+      ]
+    },
+    {
+      "task": "E",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "title": "多批次物料重复件识别",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/E__E_medium.mp4",
+      "filename": "E__E_medium.mp4",
+      "size_bytes": 15410908,
+      "duration": 123.834,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1486,
+      "sha256": "dc5fbf37f59013fb4870ec11480b4cd286ac0059ae5a526a80d07de34a0c525f",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/E__E_medium.mp4"
+      ]
+    },
+    {
+      "task": "E",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "title": "多批次物料重复件识别",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/E__E_hard.mp4",
+      "filename": "E__E_hard.mp4",
+      "size_bytes": 12389037,
+      "duration": 178.917,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 2147,
+      "sha256": "c905bbbf71fe292932510ade4165341bdd78b2c83447bf12f852e5b5f55beadd",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/E__E_hard.mp4"
+      ]
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "title": "订单配餐",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/P__P_hard_general_012.mp4",
+      "filename": "P__P_hard_general_012.mp4",
+      "size_bytes": 13046088,
+      "duration": 75.917,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 911,
+      "sha256": "05a9f3e1c5d932db3374fb1e43f72ed5d302ab0ebe92081b1f4446c98cd76bd5",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/P__P_hard_general_012.mp4"
+      ]
+    },
+    {
+      "task": "S",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "title": "旋转托盘颜色布局复原",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/S__S_easy.mp4",
+      "filename": "S__S_easy.mp4",
+      "size_bytes": 8443567,
+      "duration": 60.834,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 730,
+      "sha256": "a0d4c572bd248580db7a5143af8f681d20b084d3f75f620a1a0ab274b9821ea1",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/S__S_easy.mp4"
+      ]
+    },
+    {
+      "task": "S",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "title": "旋转托盘颜色布局复原",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/S__S_medium.mp4",
+      "filename": "S__S_medium.mp4",
+      "size_bytes": 9046983,
+      "duration": 65.834,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 790,
+      "sha256": "73415f9f23813f225842895e018c9325399e094c09212a610cdda5b4dd530981",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/S__S_medium.mp4"
+      ]
+    },
+    {
+      "task": "S",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "title": "旋转托盘颜色布局复原",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/S__S_hard.mp4",
+      "filename": "S__S_hard.mp4",
+      "size_bytes": 9210041,
+      "duration": 66.167,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 794,
+      "sha256": "ab5f36461fd169f95e22460dc8d99284304bf6c4f3f05df5ca5437f4024d07f3",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/S__S_hard.mp4"
+      ]
+    },
+    {
+      "task": "F",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "title": "未知按钮映射与滑台导航",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/F__F_easy.mp4",
+      "filename": "F__F_easy.mp4",
+      "size_bytes": 4294352,
+      "duration": 28.417,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 341,
+      "sha256": "907149e480b0699cb597a6116c1a55afecd6af00ed7c58d13ac6e4c1ddb43915",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/F__F_easy.mp4"
+      ]
+    },
+    {
+      "task": "F",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "title": "未知按钮映射与滑台导航",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/F__F_medium.mp4",
+      "filename": "F__F_medium.mp4",
+      "size_bytes": 6529349,
+      "duration": 44.667,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 536,
+      "sha256": "e91a48b51ec76f09b61df4e8b2b92919278065557393f72e78f4ec2b9c5ddb90",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/F__F_medium.mp4"
+      ]
+    },
+    {
+      "task": "F",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "title": "未知按钮映射与滑台导航",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/F__F_hard.mp4",
+      "filename": "F__F_hard.mp4",
+      "size_bytes": 8114137,
+      "duration": 55.917,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 671,
+      "sha256": "754a4bfc3bd7ceb36ded881b4907fdeb484aeae71f724e0c7b51de41c5c6175b",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/F__F_hard.mp4"
+      ]
+    },
+    {
+      "task": "M",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "title": "工件流转追踪与路线复现",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/M__M_easy_frontlabel.mp4",
+      "filename": "M__M_easy_frontlabel.mp4",
+      "size_bytes": 10752470,
+      "duration": 82.167,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 986,
+      "sha256": "c51aae54b9499a2fe4fc97060081eb963da3b6c7cb77d7372080d2c0b21d828b",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/M__M_easy_frontlabel.mp4"
+      ]
+    },
+    {
+      "task": "M",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "title": "工件流转追踪与路线复现",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/M__M_medium_frontlabel.mp4",
+      "filename": "M__M_medium_frontlabel.mp4",
+      "size_bytes": 17093035,
+      "duration": 122.167,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1466,
+      "sha256": "4f2c8c9cfc780ebd5bee7278d03e41d8540270ef5452dac9b5b881112251c98d",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/M__M_medium_frontlabel.mp4"
+      ]
+    },
+    {
+      "task": "M",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "title": "工件流转追踪与路线复现",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/M__M_hard_frontlabel.mp4",
+      "filename": "M__M_hard_frontlabel.mp4",
+      "size_bytes": 15955794,
+      "duration": 120.584,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1447,
+      "sha256": "ecb1db4836d518a1866b02e3ec0811a9e863ac0a6c73d56b31f074c98b95d5be",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/M__M_hard_frontlabel.mp4"
+      ]
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": null,
+      "title": "快递输送线连续取件",
+      "label": "运控演示 1（档位未标注）",
+      "classification": "current_showcase",
+      "difficulty_assignment": "unassigned",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/FR1__picking__01.mp4",
+      "filename": "FR1__picking__01.mp4",
+      "size_bytes": 833312,
+      "duration": 26.5,
+      "width": 720,
+      "height": 540,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 159,
+      "sha256": "97cfcd4fcdaf7ccb36489e6a00ea388f039bb36cb419de4ff8c5942eed691da0",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/FR1__picking__01.mp4"
+      ],
+      "note": "Authoritative showcase does not assign a difficulty; do not relabel or replicate into Easy/Medium/Hard."
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": null,
+      "title": "快递输送线连续取件",
+      "label": "运控演示 2（档位未标注）",
+      "classification": "current_showcase",
+      "difficulty_assignment": "unassigned",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/FR1__picking__02.mp4",
+      "filename": "FR1__picking__02.mp4",
+      "size_bytes": 816572,
+      "duration": 24.334,
+      "width": 720,
+      "height": 540,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 146,
+      "sha256": "1278fc4524b039bb7410bca58cf72240c680d84b2a9e12d34d1c576f5ca848ba",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/FR1__picking__02.mp4"
+      ],
+      "note": "Authoritative showcase does not assign a difficulty; do not relabel or replicate into Easy/Medium/Hard."
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": null,
+      "title": "快递输送线连续取件",
+      "label": "运控演示 3（档位未标注）",
+      "classification": "current_showcase",
+      "difficulty_assignment": "unassigned",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/FR1__picking__03.mp4",
+      "filename": "FR1__picking__03.mp4",
+      "size_bytes": 1468951,
+      "duration": 38.667,
+      "width": 720,
+      "height": 540,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 232,
+      "sha256": "0873a3e88414b66397c2331048420d2c5443f4d0df7292f03a5e7fd30ddae1af",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/FR1__picking__03.mp4"
+      ],
+      "note": "Authoritative showcase does not assign a difficulty; do not relabel or replicate into Easy/Medium/Hard."
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": null,
+      "title": "亮灯按钮连续响应",
+      "label": "运控演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "unassigned",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/FR2__FR2.mp4",
+      "filename": "FR2__FR2.mp4",
+      "size_bytes": 3965296,
+      "duration": 31.334,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 376,
+      "sha256": "6a76fc76e4f354c2b357ba5986924609bb5feda1fdf9a879a395e91838e5c16a",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/FR2__FR2.mp4"
+      ],
+      "note": "Authoritative showcase does not assign a difficulty; do not relabel or replicate into Easy/Medium/Hard."
+    },
+    {
+      "task": "PR1",
+      "suite": "motor",
+      "difficulty": "easy",
+      "title": "滑动变阻器阻值调节",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR1__PR1_Easy_control_20260919.mp4",
+      "filename": "PR1__PR1_Easy_control_20260919.mp4",
+      "size_bytes": 1860695,
+      "duration": 19.5,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 234,
+      "sha256": "d9239fb2cf3ce7f14a2382402c4e1d6f66b1b5ad20ba556bf66d01d5638cb1fc",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR1__PR1_Easy_control_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR1",
+      "suite": "motor",
+      "difficulty": "medium",
+      "title": "滑动变阻器阻值调节",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR1__PR1_Medium_control_20260919.mp4",
+      "filename": "PR1__PR1_Medium_control_20260919.mp4",
+      "size_bytes": 1675275,
+      "duration": 19.334,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 232,
+      "sha256": "9a77b4930f2b5cf060e3616d03a64d7d8ee90de60c3759ece06f10cb8db03a66",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR1__PR1_Medium_control_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR1",
+      "suite": "motor",
+      "difficulty": "hard",
+      "title": "滑动变阻器阻值调节",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR1__PR1_Hard_control_20260919.mp4",
+      "filename": "PR1__PR1_Hard_control_20260919.mp4",
+      "size_bytes": 1638054,
+      "duration": 19.334,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 232,
+      "sha256": "f6a26fbedd9caa01b192047c26b7d804efc17c0d43b7b1c841667cf4d81d928c",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR1__PR1_Hard_control_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR2",
+      "suite": "motor",
+      "difficulty": "easy",
+      "title": "桌面调压器旋钮设定",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR2__PR2_Easy_control_20260919.mp4",
+      "filename": "PR2__PR2_Easy_control_20260919.mp4",
+      "size_bytes": 2134251,
+      "duration": 22.584,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 271,
+      "sha256": "f47279705c58f2dce2fdda065f60b67caa61fd4835ff6a7bfdd3008726e94a4e",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR2__PR2_Easy_control_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR2",
+      "suite": "motor",
+      "difficulty": "medium",
+      "title": "桌面调压器旋钮设定",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR2__PR2_Medium_control_20260919.mp4",
+      "filename": "PR2__PR2_Medium_control_20260919.mp4",
+      "size_bytes": 2065715,
+      "duration": 22.584,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 271,
+      "sha256": "2e0c2eda0b86fe1b62aeb8f14c1f03a251ddba867f1fbcf38e01ab3d11e7cdfa",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR2__PR2_Medium_control_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR2",
+      "suite": "motor",
+      "difficulty": "hard",
+      "title": "桌面调压器旋钮设定",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR2__PR2_Hard_control_20260919.mp4",
+      "filename": "PR2__PR2_Hard_control_20260919.mp4",
+      "size_bytes": 2052897,
+      "duration": 22.584,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 271,
+      "sha256": "e012d09d325f2d6b134f6853afd8895f70dcf522ce5f7ebe785a19fcb7bc6982",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR2__PR2_Hard_control_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR3",
+      "suite": "motor",
+      "difficulty": "easy",
+      "title": "大头笔描线",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR3__PR3_Easy_head_reference_20260919.mp4",
+      "filename": "PR3__PR3_Easy_head_reference_20260919.mp4",
+      "size_bytes": 3936053,
+      "duration": 36.667,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 440,
+      "sha256": "503bee6c6182270d758a47442c7492547d39d6917c8818466126d8febaf04862",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR3__PR3_Easy_head_reference_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR3",
+      "suite": "motor",
+      "difficulty": "medium",
+      "title": "大头笔描线",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR3__PR3_Medium_head_reference_20260919.mp4",
+      "filename": "PR3__PR3_Medium_head_reference_20260919.mp4",
+      "size_bytes": 3989657,
+      "duration": 38.334,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 460,
+      "sha256": "28267616407855507872a17eb037116e7f932485e350ec92f92139049972f66e",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR3__PR3_Medium_head_reference_20260919.mp4"
+      ]
+    },
+    {
+      "task": "PR3",
+      "suite": "motor",
+      "difficulty": "hard",
+      "title": "大头笔描线",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "filename": "PR3__PR3_Hard_head_reference_20260919.mp4",
+      "size_bytes": 3992557,
+      "duration": 38.334,
+      "width": 1280,
+      "height": 960,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 460,
+      "sha256": "f673fcb76e545d882c49a1bf5bbb22ed25935e7321f56330a124192706aa5f69",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/PR3__PR3_Hard_head_reference_20260919.mp4"
+      ]
+    },
+    {
+      "task": "CP01",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "title": "传送带配餐",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+      "filename": "CP01__CP01_easy_adaptive_v2_20260920.mp4",
+      "size_bytes": 3978611,
+      "duration": 67.667,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 812,
+      "sha256": "011656dfd0740060b689cd6404d49c6f37393fd41b826651a190eb59af5d6beb",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4"
+      ]
+    },
+    {
+      "task": "CP01",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "title": "传送带配餐",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+      "filename": "CP01__CP01_medium_adaptive_v2_20260920.mp4",
+      "size_bytes": 11087449,
+      "duration": 164.917,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1979,
+      "sha256": "21e8935754a32a07dbc6e4961570ef4f4239885d7375e07a3cce0bb366195187",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP01__CP01_medium_adaptive_v2_20260920.mp4"
+      ]
+    },
+    {
+      "task": "CP01",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "title": "传送带配餐",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+      "filename": "CP01__CP01_hard_adaptive_v2_20260920.mp4",
+      "size_bytes": 15639371,
+      "duration": 215.084,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 2581,
+      "sha256": "bcee731a3fef11af2c9597fd6eb1cd965b35bfe6d3ef89fee5ff03463b30fb91",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP01__CP01_hard_adaptive_v2_20260920.mp4"
+      ]
+    },
+    {
+      "task": "CP02",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "title": "旋转蛋糕装饰",
+      "label": "Easy 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "filename": "CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "size_bytes": 8036977,
+      "duration": 64.334,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 772,
+      "sha256": "817426d177809ac2be9c0f6e061dcb332cff8a159e2d5c82b23d303ac193e3f1",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4"
+      ]
+    },
+    {
+      "task": "CP02",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "title": "旋转蛋糕装饰",
+      "label": "Medium 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "filename": "CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "size_bytes": 14069442,
+      "duration": 100.084,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1201,
+      "sha256": "97fbe4fe0ac6feeeac5918f5751014238b60439224f4e98120bb40b9ace01bf6",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4"
+      ]
+    },
+    {
+      "task": "CP02",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "title": "旋转蛋糕装饰",
+      "label": "Hard 演示",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "filename": "CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "size_bytes": 18239147,
+      "duration": 128.0,
+      "width": 1440,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1536,
+      "sha256": "4b17341769548a48d60a5de8d2895de5c8824a8d4ed14b21d67f1cf5b2d8bf9b",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [
+        "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4"
+      ]
+    },
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "title": "动态槽架装盘",
+      "label": "Easy · 专家运控演示（仿真状态）",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+      "filename": "CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+      "size_bytes": 7307694,
+      "duration": 65.75,
+      "width": 960,
+      "height": 760,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 789,
+      "sha256": "14264f1f9cc360f618900b7292112c701f5a1f9022f29b2d39dd316b3f6ffdde",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": []
+    },
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "title": "动态槽架装盘",
+      "label": "Medium · 专家运控演示（仿真状态）",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+      "filename": "CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+      "size_bytes": 16946439,
+      "duration": 144.084,
+      "width": 960,
+      "height": 760,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1729,
+      "sha256": "f4d91c65c0ca5daa4b0f6440dd55c364e7964332437147034e1d5a7cdb437671",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": []
+    },
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "title": "动态槽架装盘",
+      "label": "Hard · 专家运控演示（仿真状态）",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+      "filename": "CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+      "size_bytes": 12555441,
+      "duration": 168.084,
+      "width": 960,
+      "height": 760,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 2017,
+      "sha256": "1ad47f57b56b1f23472b52212e8dc02dab6f2c13045114dbbb71a998484db7bd",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": []
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "title": "双臂配料与温控烹饪",
+      "label": "Easy · 场景/流程预览",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "scene_process_preview",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP04__CP04_easy.mp4",
+      "filename": "CP04__CP04_easy.mp4",
+      "size_bytes": 68719193,
+      "duration": 258.292,
+      "width": 1920,
+      "height": 1440,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 6199,
+      "sha256": "5ad7c709bc42ac713cd8c415429b34937ac14e929501a31d70c1a0c08906c769",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": [],
+      "note": "Current Easy scene/process preview; not evidence that all three difficulty levels were validated."
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "title": "电子琴复奏",
+      "label": "Easy · 中央单棒复奏",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+      "filename": "CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+      "size_bytes": 13399868,
+      "duration": 63.125,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1515,
+      "sha256": "c255981e651d9ab8c903ebca2e65827e2acdf06a3d8353074f6a7b9ad792abf5",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": []
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "title": "电子琴复奏",
+      "label": "Medium · 双臂揭罩流程",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "filename": "CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "size_bytes": 9534867,
+      "duration": 96.834,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 2324,
+      "sha256": "fcfca7e209fb76edebc812455965e710310106038f4164d427d0922b8f434ab1",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": []
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "title": "电子琴复奏",
+      "label": "Hard · 揭罩与音量调节流程",
+      "classification": "current_showcase",
+      "difficulty_assignment": "explicit_showcase_label",
+      "media_role": "demonstration",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+      "filename": "CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+      "size_bytes": 12282236,
+      "duration": 128.834,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 3092,
+      "sha256": "e498519c78ecfe8f1dad9171dfe40a0cfc86bc5b6277bbf031e8145d51e04811",
+      "playable": true,
+      "probe_error": null,
+      "same_content_upstream_copies": []
+    }
+  ],
+  "task_difficulty_grid": [
+    {
+      "task": "E",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/E__E_easy.mp4",
+      "filename": "E__E_easy.mp4"
+    },
+    {
+      "task": "E",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/E__E_medium.mp4",
+      "filename": "E__E_medium.mp4"
+    },
+    {
+      "task": "E",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/E__E_hard.mp4",
+      "filename": "E__E_hard.mp4"
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "reason_code": "not_provided",
+      "reason": "Current manifest and docs explicitly mark this showcase video pending. Separate 20260927 PhysCo-P experiment videos exist and are inventoried in alternate_experiment_media; they are not canonical showcase source demonstrations.",
+      "status": "missing_or_unresolved",
+      "alternate_experiment_sources": [
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-easy-20260927-111201/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-easy-20260927-003659/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-easy-20260927-013107/rgb_views.mp4"
+      ]
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "reason_code": "not_provided",
+      "reason": "Current manifest and docs explicitly mark this showcase video pending. Separate 20260927 PhysCo-P experiment videos exist and are inventoried in alternate_experiment_media; they are not canonical showcase source demonstrations.",
+      "status": "missing_or_unresolved",
+      "alternate_experiment_sources": [
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-medium-20260927-104850/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-medium-20260927-003929/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-medium-20260927-014158/rgb_views.mp4"
+      ]
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/P__P_hard_general_012.mp4",
+      "filename": "P__P_hard_general_012.mp4"
+    },
+    {
+      "task": "S",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/S__S_easy.mp4",
+      "filename": "S__S_easy.mp4"
+    },
+    {
+      "task": "S",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/S__S_medium.mp4",
+      "filename": "S__S_medium.mp4"
+    },
+    {
+      "task": "S",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/S__S_hard.mp4",
+      "filename": "S__S_hard.mp4"
+    },
+    {
+      "task": "F",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/F__F_easy.mp4",
+      "filename": "F__F_easy.mp4"
+    },
+    {
+      "task": "F",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/F__F_medium.mp4",
+      "filename": "F__F_medium.mp4"
+    },
+    {
+      "task": "F",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/F__F_hard.mp4",
+      "filename": "F__F_hard.mp4"
+    },
+    {
+      "task": "M",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/M__M_easy_frontlabel.mp4",
+      "filename": "M__M_easy_frontlabel.mp4"
+    },
+    {
+      "task": "M",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/M__M_medium_frontlabel.mp4",
+      "filename": "M__M_medium_frontlabel.mp4"
+    },
+    {
+      "task": "M",
+      "suite": "cognitive",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/M__M_hard_frontlabel.mp4",
+      "filename": "M__M_hard_frontlabel.mp4"
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "easy",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "medium",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "hard",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "easy",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "medium",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "hard",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "PR1",
+      "suite": "motor",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR1__PR1_Easy_control_20260919.mp4",
+      "filename": "PR1__PR1_Easy_control_20260919.mp4"
+    },
+    {
+      "task": "PR1",
+      "suite": "motor",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR1__PR1_Medium_control_20260919.mp4",
+      "filename": "PR1__PR1_Medium_control_20260919.mp4"
+    },
+    {
+      "task": "PR1",
+      "suite": "motor",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR1__PR1_Hard_control_20260919.mp4",
+      "filename": "PR1__PR1_Hard_control_20260919.mp4"
+    },
+    {
+      "task": "PR2",
+      "suite": "motor",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR2__PR2_Easy_control_20260919.mp4",
+      "filename": "PR2__PR2_Easy_control_20260919.mp4"
+    },
+    {
+      "task": "PR2",
+      "suite": "motor",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR2__PR2_Medium_control_20260919.mp4",
+      "filename": "PR2__PR2_Medium_control_20260919.mp4"
+    },
+    {
+      "task": "PR2",
+      "suite": "motor",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR2__PR2_Hard_control_20260919.mp4",
+      "filename": "PR2__PR2_Hard_control_20260919.mp4"
+    },
+    {
+      "task": "PR3",
+      "suite": "motor",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR3__PR3_Easy_head_reference_20260919.mp4",
+      "filename": "PR3__PR3_Easy_head_reference_20260919.mp4"
+    },
+    {
+      "task": "PR3",
+      "suite": "motor",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR3__PR3_Medium_head_reference_20260919.mp4",
+      "filename": "PR3__PR3_Medium_head_reference_20260919.mp4"
+    },
+    {
+      "task": "PR3",
+      "suite": "motor",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "filename": "PR3__PR3_Hard_head_reference_20260919.mp4"
+    },
+    {
+      "task": "CP01",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+      "filename": "CP01__CP01_easy_adaptive_v2_20260920.mp4"
+    },
+    {
+      "task": "CP01",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+      "filename": "CP01__CP01_medium_adaptive_v2_20260920.mp4"
+    },
+    {
+      "task": "CP01",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+      "filename": "CP01__CP01_hard_adaptive_v2_20260920.mp4"
+    },
+    {
+      "task": "CP02",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "filename": "CP02__CP02_easy_v6_完整示范与运控_20260920.mp4"
+    },
+    {
+      "task": "CP02",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "filename": "CP02__CP02_medium_v6_完整示范与运控_20260920.mp4"
+    },
+    {
+      "task": "CP02",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "filename": "CP02__CP02_hard_v6_完整示范与运控_20260920.mp4"
+    },
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+      "filename": "CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4"
+    },
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+      "filename": "CP03__CP03_Medium_5盘_二档16mms_原速.mp4"
+    },
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+      "filename": "CP03__CP03_Hard_7盘_三档20mms_原速.mp4"
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP04__CP04_easy.mp4",
+      "filename": "CP04__CP04_easy.mp4"
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "reason_code": "not_provided",
+      "reason": "Current cooking task has only an Easy scene/process preview; Medium/Hard videos are explicitly not provided. Historical CP04 picnic-basket definition is not this task.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "reason_code": "not_provided",
+      "reason": "Current cooking task has only an Easy scene/process preview; Medium/Hard videos are explicitly not provided. Historical CP04 picnic-basket definition is not this task.",
+      "status": "missing_or_unresolved"
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+      "filename": "CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4"
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "filename": "CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4"
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "status": "available",
+      "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+      "filename": "CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4"
+    }
+  ],
+  "missing": [
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "reason_code": "not_provided",
+      "reason": "Current manifest and docs explicitly mark this showcase video pending. Separate 20260927 PhysCo-P experiment videos exist and are inventoried in alternate_experiment_media; they are not canonical showcase source demonstrations.",
+      "alternate_experiment_sources": [
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-easy-20260927-111201/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-easy-20260927-003659/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-easy-20260927-013107/rgb_views.mp4"
+      ]
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "reason_code": "not_provided",
+      "reason": "Current manifest and docs explicitly mark this showcase video pending. Separate 20260927 PhysCo-P experiment videos exist and are inventoried in alternate_experiment_media; they are not canonical showcase source demonstrations.",
+      "alternate_experiment_sources": [
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-medium-20260927-104850/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-medium-20260927-003929/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-medium-20260927-014158/rgb_views.mp4"
+      ]
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "easy",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard."
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "medium",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard."
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "hard",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard."
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "easy",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs."
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "medium",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs."
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "hard",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs."
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "reason_code": "not_provided",
+      "reason": "Current cooking task has only an Easy scene/process preview; Medium/Hard videos are explicitly not provided. Historical CP04 picnic-basket definition is not this task."
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "reason_code": "not_provided",
+      "reason": "Current cooking task has only an Easy scene/process preview; Medium/Hard videos are explicitly not provided. Historical CP04 picnic-basket definition is not this task."
+    }
+  ],
+  "historical_excluded": [
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": null,
+      "classification": "historical_excluded",
+      "reason": "Historical laboratory pouring/stirring previews; current CP03 is dynamic plate-rack loading.",
+      "source_path": "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP03__CP03_CP09_pour_preliminary_20260920.mp4",
+      "filename": "CP03__CP03_CP09_pour_preliminary_20260920.mp4",
+      "size_bytes": 12180528,
+      "duration": 42.0,
+      "width": 1920,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 504,
+      "sha256": "26ba2d015b4577ddcf097913d6b44a7ba7a2f11ba0392a8262997efc679b50b4",
+      "playable": true,
+      "probe_error": null
+    },
+    {
+      "task": "CP03",
+      "suite": "coupling",
+      "difficulty": null,
+      "classification": "historical_excluded",
+      "reason": "Historical laboratory pouring/stirring previews; current CP03 is dynamic plate-rack loading.",
+      "source_path": "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP03__CP03_CP09_stir_preliminary_20260920.mp4",
+      "filename": "CP03__CP03_CP09_stir_preliminary_20260920.mp4",
+      "size_bytes": 16062588,
+      "duration": 42.667,
+      "width": 1920,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 512,
+      "sha256": "b60b424aa9a5e718ae9e24ac1f08eca88393bcc0184903b68629789b66b0bba8",
+      "playable": true,
+      "probe_error": null
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "easy",
+      "classification": "historical_excluded",
+      "reason": "Historical 20260920 piano workflow superseded by current 20260923 dust-cover/volume-control workflow.",
+      "source_path": "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP05__CP05_easy_完整流程_20260920.mp4",
+      "filename": "CP05__CP05_easy_完整流程_20260920.mp4",
+      "size_bytes": 4308597,
+      "duration": 64.0,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 768,
+      "sha256": "a18e37468f33ed3ffea12db13623ab003a631c30f41ef36ef76326429dcb080f",
+      "playable": true,
+      "probe_error": null
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "classification": "historical_excluded",
+      "reason": "Historical 20260920 piano workflow superseded by current 20260923 dust-cover/volume-control workflow.",
+      "source_path": "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP05__CP05_hard_完整流程_20260920.mp4",
+      "filename": "CP05__CP05_hard_完整流程_20260920.mp4",
+      "size_bytes": 10241538,
+      "duration": 145.917,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1751,
+      "sha256": "f603da37e64c651ff01861fe8fbe3bbc08d40998a26d930ac15906898fbaa3f7",
+      "playable": true,
+      "probe_error": null
+    },
+    {
+      "task": "CP05",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "classification": "historical_excluded",
+      "reason": "Historical 20260920 piano workflow superseded by current 20260923 dust-cover/volume-control workflow.",
+      "source_path": "/home/xzy/xzy_project/robostream++/third_party/physco-bench/upstream/media/videos/CP05__CP05_medium_完整流程_20260920.mp4",
+      "filename": "CP05__CP05_medium_完整流程_20260920.mp4",
+      "size_bytes": 8827463,
+      "duration": 129.917,
+      "width": 960,
+      "height": 720,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "video_packets": 1559,
+      "sha256": "9e59823cff394593b0c54404237750c85f1589752f20db5a865c78bee9354dbd",
+      "playable": true,
+      "probe_error": null
+    }
+  ],
+  "existing_project_representatives": [
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/CP01.mp4",
+      "sha256": "21e8935754a32a07dbc6e4961570ef4f4239885d7375e07a3cce0bb366195187",
+      "current_source_matches": [
+        {
+          "task": "CP01",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+          "filename": "CP01__CP01_medium_adaptive_v2_20260920.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/CP01.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/CP02.mp4",
+      "sha256": "97fbe4fe0ac6feeeac5918f5751014238b60439224f4e98120bb40b9ace01bf6",
+      "current_source_matches": [
+        {
+          "task": "CP02",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+          "filename": "CP02__CP02_medium_v6_完整示范与运控_20260920.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/CP02.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/CP03.mp4",
+      "sha256": "26ba2d015b4577ddcf097913d6b44a7ba7a2f11ba0392a8262997efc679b50b4",
+      "current_source_matches": [],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/CP03.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/CP04.mp4",
+      "sha256": "4ee46d138fd30c37f5dc47459f8925c737b6ef2eb6c6d5a2da5eda4ec04af29e",
+      "current_source_matches": [],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/CP04.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/CP05.mp4",
+      "sha256": "fcfca7e209fb76edebc812455965e710310106038f4164d427d0922b8f434ab1",
+      "current_source_matches": [
+        {
+          "task": "CP05",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+          "filename": "CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/CP05.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/E.mp4",
+      "sha256": "de92fbea360421811744a7a3a84afb11fd1dfee5900cedc0c66cc071643fe251",
+      "current_source_matches": [
+        {
+          "task": "E",
+          "difficulty": "easy",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/E__E_easy.mp4",
+          "filename": "E__E_easy.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/E.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/F.mp4",
+      "sha256": "e91a48b51ec76f09b61df4e8b2b92919278065557393f72e78f4ec2b9c5ddb90",
+      "current_source_matches": [
+        {
+          "task": "F",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/F__F_medium.mp4",
+          "filename": "F__F_medium.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/F.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/FR1.mp4",
+      "sha256": "1278fc4524b039bb7410bca58cf72240c680d84b2a9e12d34d1c576f5ca848ba",
+      "current_source_matches": [
+        {
+          "task": "FR1",
+          "difficulty": null,
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/FR1__picking__02.mp4",
+          "filename": "FR1__picking__02.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/FR1.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/FR2.mp4",
+      "sha256": "6a76fc76e4f354c2b357ba5986924609bb5feda1fdf9a879a395e91838e5c16a",
+      "current_source_matches": [
+        {
+          "task": "FR2",
+          "difficulty": null,
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/FR2__FR2.mp4",
+          "filename": "FR2__FR2.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/FR2.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/M.mp4",
+      "sha256": "4f2c8c9cfc780ebd5bee7278d03e41d8540270ef5452dac9b5b881112251c98d",
+      "current_source_matches": [
+        {
+          "task": "M",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/M__M_medium_frontlabel.mp4",
+          "filename": "M__M_medium_frontlabel.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/M.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/P.mp4",
+      "sha256": "05a9f3e1c5d932db3374fb1e43f72ed5d302ab0ebe92081b1f4446c98cd76bd5",
+      "current_source_matches": [
+        {
+          "task": "P",
+          "difficulty": "hard",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/P__P_hard_general_012.mp4",
+          "filename": "P__P_hard_general_012.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/P.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/PR1.mp4",
+      "sha256": "9a77b4930f2b5cf060e3616d03a64d7d8ee90de60c3759ece06f10cb8db03a66",
+      "current_source_matches": [
+        {
+          "task": "PR1",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR1__PR1_Medium_control_20260919.mp4",
+          "filename": "PR1__PR1_Medium_control_20260919.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/PR1.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/PR2.mp4",
+      "sha256": "2e0c2eda0b86fe1b62aeb8f14c1f03a251ddba867f1fbcf38e01ab3d11e7cdfa",
+      "current_source_matches": [
+        {
+          "task": "PR2",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR2__PR2_Medium_control_20260919.mp4",
+          "filename": "PR2__PR2_Medium_control_20260919.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/PR2.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/PR3.mp4",
+      "sha256": "28267616407855507872a17eb037116e7f932485e350ec92f92139049972f66e",
+      "current_source_matches": [
+        {
+          "task": "PR3",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/PR3__PR3_Medium_head_reference_20260919.mp4",
+          "filename": "PR3__PR3_Medium_head_reference_20260919.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/PR3.mp4",
+      "matches_original_representative_source": true
+    },
+    {
+      "project_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/videos/S.mp4",
+      "sha256": "73415f9f23813f225842895e018c9325399e094c09212a610cdda5b4dd530981",
+      "current_source_matches": [
+        {
+          "task": "S",
+          "difficulty": "medium",
+          "source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-20261006-185331/capture/mirror/kkun616826.github.io/mind2act-preview/media/videos/S__S_medium.mp4",
+          "filename": "S__S_medium.mp4"
+        }
+      ],
+      "original_representative_source_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-promo-codex-20261010-022331/assets/videos/S.mp4",
+      "matches_original_representative_source": true
+    }
+  ],
+  "alternate_search": {
+    "scope": "Workspace media filename/path inventory, including mp4/mov/webm/mkv; targeted missing tasks P Easy/Medium, FR1, FR2, CP04. Both media/videos trees and current/historical case documentation inspected. Did not inspect unrelated robotics rollout contents.",
+    "result": "No additional canonical showcase missing-pair source demos found. Found six 20260927 PhysCo-P experiment composites for Easy/Medium, plus viewer duplicates and per-camera exports; these are separately inventoried, not canonical substitutes. Other matching assets are representative copies or edited promo outputs."
+  },
+  "alternate_experiment_media": [
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "source_path": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-easy-20260927-111201/rgb_views.mp4",
+      "filename": "rgb_views.mp4",
+      "duration": 38.28,
+      "width": 1440,
+      "height": 720,
+      "size_bytes": 6849149,
+      "codec": "h264",
+      "video_packets": 957,
+      "sha256": "f06e7482ab26ab6d10772ff6f3f2a9e8e5afad398b2de486dc4aa108650dbf36",
+      "playable": true,
+      "classification": "historical_experiment_alternative_not_canonical_showcase",
+      "reason": "Recorded PhysCo-P experiment, not a source demo listed in the authoritative current showcase. Preserved separately; not used to fill showcase coverage or silently treated as current validated task-definition media.",
+      "metadata_source": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-easy-20260927-111201/result.json",
+      "run_id": "physco-ziyi-contract-p-easy-20260927-111201",
+      "run_created_at": "2026-09-27T11:12:01.289925+08:00",
+      "method": "RoboProbe · gpt-6-astra high · RGB and proprioception",
+      "reported_physical_task_success": false,
+      "source_case_set": "cognitive-core-20260919",
+      "viewer_copy_path": "/home/xzy/xzy_project/robostream++/viewer/public/results/physco-ziyi-contract-p-easy-20260927-111201/rgb_views.mp4"
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "source_path": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-medium-20260927-104850/rgb_views.mp4",
+      "filename": "rgb_views.mp4",
+      "duration": 45.32,
+      "width": 1440,
+      "height": 720,
+      "size_bytes": 8495256,
+      "codec": "h264",
+      "video_packets": 1133,
+      "sha256": "732863a13156bfa03af553bf4a5f950171cc3f13546ff931530db341ab886778",
+      "playable": true,
+      "classification": "historical_experiment_alternative_not_canonical_showcase",
+      "reason": "Recorded PhysCo-P experiment, not a source demo listed in the authoritative current showcase. Preserved separately; not used to fill showcase coverage or silently treated as current validated task-definition media.",
+      "metadata_source": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-medium-20260927-104850/result.json",
+      "run_id": "physco-ziyi-contract-p-medium-20260927-104850",
+      "run_created_at": "2026-09-27T10:48:50.740878+08:00",
+      "method": "RoboProbe · gpt-6-astra high · RGB and proprioception",
+      "reported_physical_task_success": false,
+      "source_case_set": "cognitive-core-20260919",
+      "viewer_copy_path": "/home/xzy/xzy_project/robostream++/viewer/public/results/physco-ziyi-contract-p-medium-20260927-104850/rgb_views.mp4"
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "source_path": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-easy-20260927-003659/rgb_views.mp4",
+      "filename": "rgb_views.mp4",
+      "duration": 76.08,
+      "width": 1440,
+      "height": 720,
+      "size_bytes": 12709012,
+      "codec": "h264",
+      "video_packets": 1902,
+      "sha256": "0b9622eafab852a89ef39840c0862cd3581da6977625cb4f7358ae03201195fe",
+      "playable": true,
+      "classification": "historical_experiment_alternative_not_canonical_showcase",
+      "reason": "Recorded PhysCo-P experiment, not a source demo listed in the authoritative current showcase. Preserved separately; not used to fill showcase coverage or silently treated as current validated task-definition media.",
+      "metadata_source": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-easy-20260927-003659/result.json",
+      "run_id": "physco-ziyi-ep-p-easy-20260927-003659",
+      "run_created_at": "2026-09-27T00:36:59.590832+08:00",
+      "method": "RoboProbe · gpt-6-astra high · RGB and proprioception",
+      "reported_physical_task_success": false,
+      "source_case_set": "cognitive-core-20260919",
+      "viewer_copy_path": "/home/xzy/xzy_project/robostream++/viewer/public/results/physco-ziyi-ep-p-easy-20260927-003659/rgb_views.mp4"
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "source_path": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-medium-20260927-003929/rgb_views.mp4",
+      "filename": "rgb_views.mp4",
+      "duration": 39.4,
+      "width": 1440,
+      "height": 720,
+      "size_bytes": 7966548,
+      "codec": "h264",
+      "video_packets": 985,
+      "sha256": "2e5de6bf58362acd236c11b317a29965799a2885b8de679dd2c98936cd1a241b",
+      "playable": true,
+      "classification": "historical_experiment_alternative_not_canonical_showcase",
+      "reason": "Recorded PhysCo-P experiment, not a source demo listed in the authoritative current showcase. Preserved separately; not used to fill showcase coverage or silently treated as current validated task-definition media.",
+      "metadata_source": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-medium-20260927-003929/result.json",
+      "run_id": "physco-ziyi-ep-p-medium-20260927-003929",
+      "run_created_at": "2026-09-27T00:39:29.849806+08:00",
+      "method": "RoboProbe · gpt-6-astra high · RGB and proprioception",
+      "reported_physical_task_success": true,
+      "source_case_set": "cognitive-core-20260919",
+      "viewer_copy_path": "/home/xzy/xzy_project/robostream++/viewer/public/results/physco-ziyi-ep-p-medium-20260927-003929/rgb_views.mp4"
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "source_path": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-easy-20260927-013107/rgb_views.mp4",
+      "filename": "rgb_views.mp4",
+      "duration": 35.48,
+      "width": 1440,
+      "height": 720,
+      "size_bytes": 6592245,
+      "codec": "h264",
+      "video_packets": 887,
+      "sha256": "5ad74e5d7f4bd2f31ed2300ca4d42bb8a2c5e0d5e38f76ae18b1c93158f59703",
+      "playable": true,
+      "classification": "historical_experiment_alternative_not_canonical_showcase",
+      "reason": "Recorded PhysCo-P experiment, not a source demo listed in the authoritative current showcase. Preserved separately; not used to fill showcase coverage or silently treated as current validated task-definition media.",
+      "metadata_source": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-easy-20260927-013107/result.json",
+      "run_id": "physco-ziyi-verified-p-easy-20260927-013107",
+      "run_created_at": "2026-09-27T01:31:07.741308+08:00",
+      "method": "RoboProbe · gpt-6-astra high · RGB and proprioception",
+      "reported_physical_task_success": true,
+      "source_case_set": "cognitive-core-20260919",
+      "viewer_copy_path": "/home/xzy/xzy_project/robostream++/viewer/public/results/physco-ziyi-verified-p-easy-20260927-013107/rgb_views.mp4"
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "source_path": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-medium-20260927-014158/rgb_views.mp4",
+      "filename": "rgb_views.mp4",
+      "duration": 50.4,
+      "width": 1440,
+      "height": 720,
+      "size_bytes": 10939825,
+      "codec": "h264",
+      "video_packets": 1260,
+      "sha256": "4885132d0991d484099d6f04ae95cc3a7750b5a9893813d2839e94f787c2bbe7",
+      "playable": true,
+      "classification": "historical_experiment_alternative_not_canonical_showcase",
+      "reason": "Recorded PhysCo-P experiment, not a source demo listed in the authoritative current showcase. Preserved separately; not used to fill showcase coverage or silently treated as current validated task-definition media.",
+      "metadata_source": "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-medium-20260927-014158/result.json",
+      "run_id": "physco-ziyi-verified-p-medium-20260927-014158",
+      "run_created_at": "2026-09-27T01:41:58.158527+08:00",
+      "method": "RoboProbe · gpt-6-astra high · RGB and proprioception",
+      "reported_physical_task_success": false,
+      "source_case_set": "cognitive-core-20260919",
+      "viewer_copy_path": "/home/xzy/xzy_project/robostream++/viewer/public/results/physco-ziyi-verified-p-medium-20260927-014158/rgb_views.mp4"
+    }
+  ],
+  "missing_pairs": [
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "easy",
+      "reason_code": "not_provided",
+      "reason": "Current manifest and docs explicitly mark this showcase video pending. Separate 20260927 PhysCo-P experiment videos exist and are inventoried in alternate_experiment_media; they are not canonical showcase source demonstrations.",
+      "alternate_experiment_sources": [
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-easy-20260927-111201/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-easy-20260927-003659/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-easy-20260927-013107/rgb_views.mp4"
+      ]
+    },
+    {
+      "task": "P",
+      "suite": "cognitive",
+      "difficulty": "medium",
+      "reason_code": "not_provided",
+      "reason": "Current manifest and docs explicitly mark this showcase video pending. Separate 20260927 PhysCo-P experiment videos exist and are inventoried in alternate_experiment_media; they are not canonical showcase source demonstrations.",
+      "alternate_experiment_sources": [
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-contract-p-medium-20260927-104850/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-ep-p-medium-20260927-003929/rgb_views.mp4",
+        "/home/xzy/xzy_project/robostream++/results/runs/physco-ziyi-verified-p-medium-20260927-014158/rgb_views.mp4"
+      ]
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "easy",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard."
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "medium",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard."
+    },
+    {
+      "task": "FR1",
+      "suite": "motor",
+      "difficulty": "hard",
+      "reason_code": "difficulty_unassigned",
+      "reason": "Three playable current demos exist (picking__01/02/03), but authoritative manifest and docs explicitly leave difficulty unspecified; sequence numbers cannot establish Easy/Medium/Hard."
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "easy",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs."
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "medium",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs."
+    },
+    {
+      "task": "FR2",
+      "suite": "motor",
+      "difficulty": "hard",
+      "reason_code": "difficulty_unassigned",
+      "reason": "One playable current generic FR2 demo exists, without any difficulty assignment. No separate Easy/Medium/Hard source videos found; cannot count one clip as three pairs."
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "medium",
+      "reason_code": "not_provided",
+      "reason": "Current cooking task has only an Easy scene/process preview; Medium/Hard videos are explicitly not provided. Historical CP04 picnic-basket definition is not this task."
+    },
+    {
+      "task": "CP04",
+      "suite": "coupling",
+      "difficulty": "hard",
+      "reason_code": "not_provided",
+      "reason": "Current cooking task has only an Easy scene/process preview; Medium/Hard videos are explicitly not provided. Historical CP04 picnic-basket definition is not this task."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+◆  Capturing 12 frames at [0.15s, 0.9s, 1.8s, 3.4s, 8.3s, 15.3s, 20.9s, 27.8s, 31.5s, 35.8s, 40.9s, 45.1s] from mind2act-hyperframes-blank-20261010-111117
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (NVIDIA Corporation)" renderer="ANGLE (NVIDIA Corporation, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition/PCIe/SSE2, OpenGL ES 3.2)")
+
+   Fonts: 4 loaded, 2 unused
+
+◇  12 snapshots saved to /home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/qa/first-look
+   qa/first-look/frame-00-at-0.15s.png
+   qa/first-look/frame-01-at-0.9s.png
+   qa/first-look/frame-02-at-1.8s.png
+   qa/first-look/frame-03-at-3.4s.png
+   qa/first-look/frame-04-at-8.3s.png
+   qa/first-look/frame-05-at-15.3s.png
+   qa/first-look/frame-06-at-20.9s.png
+   qa/first-look/frame-07-at-27.8s.png
+   qa/first-look/frame-08-at-31.5s.png
+   qa/first-look/frame-09-at-35.8s.png
+   qa/first-look/frame-10-at-40.9s.png
+   qa/first-look/frame-11-at-45.1s.png
+   contact-sheet-1..2.jpg (grid view for AI review)

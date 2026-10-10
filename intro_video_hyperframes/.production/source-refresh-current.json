@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-10T14:25:12.371606+08:00",
+  "tag": "20261010-142512",
+  "audit_dir": ".production/source-refresh-20261010-142512",
+  "assets_dir": "assets/generated/source-refresh-20261010-142512",
+  "before_hashes": {
+    "index.html": "789af1864e54c272a496770607a4efafdf76a2d19a4ef1fac539e8e71c1478bf",
+    "compositions/06-scale.html": "20001212f4a719fbdeb042b82f8024a21cf1656fbc9a71c442223dc11e0675ac",
+    "compositions/04-act.html": "b5bd310b4b8d28f2866db081abcd7783cb3d36b7bb2d34380ff4e08a364b5bcf",
+    "compositions/03-mind.html": "feed47fcfdebc81526c45cfbfaae95f4ed56898d0107f3478688af685a53e508",
+    "compositions/05-mind2act.html": "7f03b5e0a28f7bc237688976723b12204a9202f742b7583e7cc3bcb138596151",
+    "compositions/01-intro.html": "33ba06df9fbc6bfb6fc7d7e36d2e749734d3adad99d76ef3e9615c896f62cc94",
+    "compositions/02-motivation.html": "a6260644eb5743a120ca877c53c198751d8866d597976305ae0c613e22ab7e9d",
+    "compositions/07-outro.html": "7df59d3764641d23fb2a2400fc8a3d490d1129854a9313ff9edc3def6e348bee"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "model": "faster-whisper medium.en int8 CPU",
+  "expected_text_not_supplied_to_model": true,
+  "cues": [
+    {
+      "id": "intro",
+      "expected": "Mind to Act World. Reasoning and action, evaluated together.",
+      "transcript": "mind-to-act world, reasoning and action evaluated together.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.2,
+          "text": " mind-to-act world, reasoning and action evaluated together.",
+          "no_speech_prob": 0.005043558310717344
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "motivation",
+      "expected": "Can strong parts make a reliable whole?",
+      "transcript": "Can strong parts make a reliable whole?",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.24,
+          "text": " Can strong parts make a reliable whole?",
+          "no_speech_prob": 0.0007952034939080477
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "mind",
+      "expected": "Mind tracks the task through observations and history.",
+      "transcript": "MIND tracks the task through observations and history.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.2600000000000002,
+          "text": " MIND tracks the task through observations and history.",
+          "no_speech_prob": 0.0019131000153720379
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "act",
+      "expected": "Act must make the intended physical result happen.",
+      "transcript": "ACT must make the intended physical result happen.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.04,
+          "text": " ACT must make the intended physical result happen.",
+          "no_speech_prob": 0.005647873505949974
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "mind2act",
+      "expected": "Together, actual outcomes shape what comes next.",
+      "transcript": "Together, actual outcomes shape what comes next.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.96,
+          "text": " Together, actual outcomes shape what comes next.",
+          "no_speech_prob": 0.00035320722963660955
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "coordination-loop",
+      "expected": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next.",
+      "transcript": "Intent guides physically valid action. Actual outcomes update what remains when to act and which phase comes next.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.8000000000000003,
+          "text": " Intent guides physically valid action.",
+          "no_speech_prob": 0.0004526222764980048
+        },
+        {
+          "start": 2.8000000000000003,
+          "end": 7.68,
+          "text": " Actual outcomes update what remains when to act and which phase comes next.",
+          "no_speech_prob": 0.0004526222764980048
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "scale-easy",
+      "expected": "Easy.",
+      "transcript": "Easy!",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.72,
+          "text": " Easy!",
+          "no_speech_prob": 0.013883829116821289
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "scale-medium",
+      "expected": "Medium.",
+      "transcript": "Medium.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Medium.",
+          "no_speech_prob": 0.014097747392952442
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "scale-hard",
+      "expected": "Hard.",
+      "transcript": "Hard.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Hard.",
+          "no_speech_prob": 0.022817766293883324
+        }
+      ],
+      "exact_normalized_match": true
+    },
+    {
+      "id": "ending",
+      "expected": "Build the benchmark. Test your agents. Let's take the next giant leap together.",
+      "transcript": "Build the benchmark, test your agents, let's take the next giant leap together.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.88,
+          "text": " Build the benchmark, test your agents, let's take the next giant leap together.",
+          "no_speech_prob": 0.0003905961930286139
+        }
+      ],
+      "exact_normalized_match": true
+    }
+  ]
+}

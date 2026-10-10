@@ -1,0 +1,26 @@
+
+> check
+> bash scripts/hyperframes.sh check
+
+◆  Checking mind2act-hyperframes-blank-20261010-111117
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (NVIDIA Corporation)" renderer="ANGLE (NVIDIA Corporation, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition/PCIe/SSE2, OpenGL ES 3.2)")
+
+Lint
+  ◇ 0 errors, 0 warnings
+
+Runtime
+  ◇ 0 errors, 0 warnings
+
+Layout
+  ◇ 0 issues across 9 sample(s)
+
+Motion
+  ◇ 0 errors, 0 warnings
+
+Contrast
+  ◇ 39/39 text checks pass WCAG AA
+
+Snapshots
+  ◇ disabled
+
+◇  Check passed

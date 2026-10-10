@@ -1,0 +1,749 @@
+{
+  "generated_at": "2026-10-10T12:46:16+0800",
+  "raw_sources_modified": false,
+  "fps": 30,
+  "mosaic_all": {
+    "path": "assets/generated/montage/all-cases-mosaic.mp4",
+    "duration": 5.5,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "layout": [
+      8,
+      6
+    ],
+    "source_count": 45,
+    "slots": 48,
+    "slot_source_indices": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27,
+      30,
+      33,
+      36,
+      39,
+      42,
+      1,
+      4,
+      7,
+      10,
+      13,
+      16,
+      19,
+      22,
+      25,
+      28,
+      31,
+      34,
+      37,
+      40,
+      43,
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      24,
+      13,
+      43
+    ],
+    "cells": [
+      {
+        "source": "assets/videos/Act/FR1/easy.mp4",
+        "source_start": 9.1868,
+        "source_end": 14.6868,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-00-fr1.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/FR1/hard.mp4",
+        "source_start": 14.4268,
+        "source_end": 19.9268,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-01-fr1.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/FR1/medium.mp4",
+        "source_start": 11.1068,
+        "source_end": 16.6068,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-02-fr1.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/FR2/easy.mp4",
+        "source_start": 6.1336,
+        "source_end": 11.633600000000001,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-03-fr2.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/FR2/hard.mp4",
+        "source_start": 5.84,
+        "source_end": 11.34,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-04-fr2.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/FR2/medium.mp4",
+        "source_start": 6.76,
+        "source_end": 12.26,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-05-fr2.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR1/PR1__PR1_Easy_control_20260919.mp4",
+        "source_start": 7.800000000000001,
+        "source_end": 13.3,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-06-pr1.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4",
+        "source_start": 7.7336,
+        "source_end": 13.2336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-07-pr1.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR1/PR1__PR1_Medium_control_20260919.mp4",
+        "source_start": 7.7336,
+        "source_end": 13.2336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-08-pr1.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR2/PR2__PR2_Easy_control_20260919.mp4",
+        "source_start": 9.0336,
+        "source_end": 14.5336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-09-pr2.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR2/PR2__PR2_Hard_control_20260919.mp4",
+        "source_start": 9.0336,
+        "source_end": 14.5336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-10-pr2.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR2/PR2__PR2_Medium_control_20260919.mp4",
+        "source_start": 9.0336,
+        "source_end": 14.5336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-11-pr2.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+        "source_start": 23.0,
+        "source_end": 28.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-12-pr3.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+        "source_start": 23.0,
+        "source_end": 28.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-13-pr3.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4",
+        "source_start": 23.0,
+        "source_end": 28.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-14-pr3.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/E/E__E_easy.mp4",
+        "source_start": 29.5,
+        "source_end": 35.0,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-15-e.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/E/E__E_hard.mp4",
+        "source_start": 71.5668,
+        "source_end": 77.0668,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-16-e.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/E/E__E_medium.mp4",
+        "source_start": 49.53360000000001,
+        "source_end": 55.03360000000001,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-17-e.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/F/F__F_easy.mp4",
+        "source_start": 11.366800000000001,
+        "source_end": 16.8668,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-18-f.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/F/F__F_hard.mp4",
+        "source_start": 22.3668,
+        "source_end": 27.8668,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-19-f.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/F/F__F_medium.mp4",
+        "source_start": 17.8668,
+        "source_end": 23.3668,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-20-f.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/M/M__M_easy_frontlabel.mp4",
+        "source_start": 32.866800000000005,
+        "source_end": 38.366800000000005,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-21-m.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/M/M__M_hard_frontlabel.mp4",
+        "source_start": 48.2336,
+        "source_end": 53.7336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-22-m.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/M/M__M_medium_frontlabel.mp4",
+        "source_start": 48.866800000000005,
+        "source_end": 54.366800000000005,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-23-m.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+        "source_start": 17.0,
+        "source_end": 22.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-24-p.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/P/easy.mp4",
+        "source_start": 15.5,
+        "source_end": 21.0,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-25-p.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/P/medium.mp4",
+        "source_start": 15.5,
+        "source_end": 21.0,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-26-p.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/S/S__S_easy.mp4",
+        "source_start": 24.333600000000004,
+        "source_end": 29.833600000000004,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-27-s.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/S/S__S_hard.mp4",
+        "source_start": 26.466800000000003,
+        "source_end": 31.966800000000003,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-28-s.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind/S/S__S_medium.mp4",
+        "source_start": 26.333600000000004,
+        "source_end": 31.833600000000004,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-29-s.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP01/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+        "source_start": 27.0668,
+        "source_end": 32.5668,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-30-cp01.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP01/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+        "source_start": 86.0336,
+        "source_end": 91.5336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-31-cp01.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP01/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+        "source_start": 65.9668,
+        "source_end": 71.4668,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-32-cp01.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "source_start": 41.0,
+        "source_end": 46.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-33-cp02.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+        "source_start": 81.0,
+        "source_end": 86.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-34-cp02.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+        "source_start": 59.0,
+        "source_end": 64.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-35-cp02.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP03/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+        "source_start": 26.3,
+        "source_end": 31.8,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-36-cp03.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+        "source_start": 67.23360000000001,
+        "source_end": 72.73360000000001,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-37-cp03.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP03/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+        "source_start": 57.6336,
+        "source_end": 63.1336,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-38-cp03.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4",
+        "source_start": 103.3168,
+        "source_end": 108.8168,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-39-cp04.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP04/hard.mp4",
+        "source_start": 64.9068,
+        "source_end": 70.4068,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-40-cp04.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP04/medium.mp4",
+        "source_start": 49.53360000000001,
+        "source_end": 55.03360000000001,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-41-cp04.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+        "source_start": 34.0,
+        "source_end": 39.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-42-cp05.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+        "source_start": 96.0,
+        "source_end": 101.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-43-cp05.mp4",
+        "width": 240,
+        "height": 180
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+        "source_start": 70.0,
+        "source_end": 75.5,
+        "speed": 1,
+        "duration": 5.5,
+        "path": "assets/generated/montage/cell-44-cp05.mp4",
+        "width": 240,
+        "height": 180
+      }
+    ]
+  },
+  "mosaic_six": {
+    "path": "assets/generated/montage/six-cases-mosaic.mp4",
+    "duration": 1.5,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "cells": [
+      {
+        "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+        "source_start": 17.0,
+        "source_end": 18.5,
+        "speed": 1,
+        "duration": 1.5,
+        "path": "assets/generated/montage/six-p.mp4",
+        "width": 640,
+        "height": 540
+      },
+      {
+        "source": "assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+        "source_start": 23.0,
+        "source_end": 24.5,
+        "speed": 1,
+        "duration": 1.5,
+        "path": "assets/generated/montage/six-pr3.mp4",
+        "width": 640,
+        "height": 540
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+        "source_start": 70.0,
+        "source_end": 71.5,
+        "speed": 1,
+        "duration": 1.5,
+        "path": "assets/generated/montage/six-cp05.mp4",
+        "width": 640,
+        "height": 540
+      },
+      {
+        "source": "assets/videos/Mind/E/E__E_easy.mp4",
+        "source_start": 29.5,
+        "source_end": 31.0,
+        "speed": 1,
+        "duration": 1.5,
+        "path": "assets/generated/montage/six-e.mp4",
+        "width": 640,
+        "height": 540
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "source_start": 41.0,
+        "source_end": 42.5,
+        "speed": 1,
+        "duration": 1.5,
+        "path": "assets/generated/montage/six-cp02.mp4",
+        "width": 640,
+        "height": 540
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4",
+        "source_start": 103.3168,
+        "source_end": 104.8168,
+        "speed": 1,
+        "duration": 1.5,
+        "path": "assets/generated/montage/six-cp04.mp4",
+        "width": 640,
+        "height": 540
+      }
+    ]
+  },
+  "fast_reel": {
+    "path": "assets/generated/montage/fast-montage.mp4",
+    "duration": 4.466666666666667,
+    "resolution": [
+      1280,
+      720
+    ],
+    "task_order": [
+      "E",
+      "FR1",
+      "CP02",
+      "F",
+      "PR1",
+      "CP03",
+      "M",
+      "FR2",
+      "CP04",
+      "S",
+      "PR2",
+      "CP01"
+    ],
+    "frames_per_cut": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12,
+      12
+    ],
+    "cuts": [
+      {
+        "source": "assets/videos/Mind/E/E__E_easy.mp4",
+        "source_start": 29.5,
+        "source_end": 31.7,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-e.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Act/FR1/easy.mp4",
+        "source_start": 9.1868,
+        "source_end": 11.386800000000001,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-fr1.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "source_start": 41.0,
+        "source_end": 43.2,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-cp02.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Mind/F/F__F_hard.mp4",
+        "source_start": 22.3668,
+        "source_end": 24.5668,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-f.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Act/PR1/PR1__PR1_Easy_control_20260919.mp4",
+        "source_start": 7.800000000000001,
+        "source_end": 10.0,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-pr1.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+        "source_start": 67.23360000000001,
+        "source_end": 69.43360000000001,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-cp03.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Mind/M/M__M_easy_frontlabel.mp4",
+        "source_start": 32.866800000000005,
+        "source_end": 35.06680000000001,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-m.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Act/FR2/easy.mp4",
+        "source_start": 6.1336,
+        "source_end": 8.3336,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-fr2.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4",
+        "source_start": 103.3168,
+        "source_end": 105.5168,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-cp04.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Mind/S/S__S_easy.mp4",
+        "source_start": 24.333600000000004,
+        "source_end": 26.533600000000003,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-s.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Act/PR2/PR2__PR2_Easy_control_20260919.mp4",
+        "source_start": 9.0336,
+        "source_end": 11.2336,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-pr2.mp4",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "source": "assets/videos/Mind2Act/CP01/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+        "source_start": 27.0668,
+        "source_end": 29.2668,
+        "speed": 2,
+        "duration": 1.1,
+        "path": "assets/generated/montage/quick-cp01.mp4",
+        "width": 1280,
+        "height": 720
+      }
+    ]
+  }
+}

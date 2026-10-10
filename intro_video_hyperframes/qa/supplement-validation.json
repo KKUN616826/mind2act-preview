@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-10T11:40:21.158308+08:00",
+  "primary_count": 45,
+  "all_task_difficulty_pairs_present": true,
+  "reference_count": 4,
+  "logo_count": 3,
+  "all_copied_hashes_match": true,
+  "new_clips_full_decode": [
+    {
+      "path": "assets/videos/Mind/P/easy.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Mind/P/medium.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Act/FR1/easy.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Act/FR1/medium.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Act/FR1/hard.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Act/FR2/easy.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Act/FR2/medium.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Act/FR2/hard.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP04/medium.mp4",
+      "full_video_decode_passed": true
+    },
+    {
+      "path": "assets/videos/Mind2Act/CP04/hard.mp4",
+      "full_video_decode_passed": true
+    }
+  ],
+  "timeline_unchanged_blank": true
+}

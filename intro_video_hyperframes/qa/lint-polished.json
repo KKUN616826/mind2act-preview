@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "errorCount": 0,
+  "warningCount": 2,
+  "infoCount": 0,
+  "findings": [
+    {
+      "code": "duplicate_media_discovery_risk",
+      "severity": "warning",
+      "message": "Detected 2 matching img entries with the same source/start/duration.",
+      "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation.",
+      "snippet": "img src=assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png data-start= data-duration=",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/02-motivation.html"
+    },
+    {
+      "code": "duplicate_media_discovery_risk",
+      "severity": "warning",
+      "message": "Detected 2 matching img entries with the same source/start/duration.",
+      "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation.",
+      "snippet": "img src=assets/generated/cases/pr3-target-crop.png data-start= data-duration=",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/04-act.html"
+    }
+  ],
+  "filesScanned": 8,
+  "_meta": {
+    "version": "0.8.143",
+    "updateAvailable": false
+  }
+}

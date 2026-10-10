@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-10-10T15:19:45+08:00",
+  "id": "mind2act-world-promo-20261010-145614",
+  "master": "renders/mind2act-world-promo-1080p-20261010-145614.mp4",
+  "web": "renders/mind2act-world-promo-web-20261010-145614.mp4",
+  "framework": "HyperFrames 0.8.143",
+  "authored_duration": 47.4074074074,
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261010-145614.mp4",
+      "bytes": 31461011,
+      "sha256": "c9d462f07226dc585fee822d10f8f433f3b92146b073f4c1f7eeacee63846e11",
+      "duration": 47.433333,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261010-145614.mp4",
+      "bytes": 11161659,
+      "sha256": "3148772dfb301863b4425a5775d2bff336861049b7e071cc7a96f7d6d7ee2e33",
+      "duration": 47.433333,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "poster": "renders/mind2act-world-poster-20261010-145614.jpg",
+  "subtitles": [
+    "renders/mind2act-world-narration.srt",
+    "renders/mind2act-world-narration.vtt"
+  ],
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "source_refresh": {
+    "source_count": 45,
+    "run": ".production/source-refresh-20261010-142512",
+    "case_provenance": ".production/source-refresh-20261010-142512/case-media-provenance.json",
+    "montage_provenance": ".production/source-refresh-20261010-142512/montage-provenance.json",
+    "verification": ".production/source-refresh-20261010-142512/verification.json"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "bpm": 81,
+  "music_source_start": 11.9877
+}

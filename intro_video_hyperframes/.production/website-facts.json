@@ -1,0 +1,215 @@
+{
+  "source_url": "https://kkun616826.github.io/mind2act-preview/#resources-overview",
+  "retrieved_date_beijing": "2026-10-10",
+  "brand": {
+    "name": "Mind2Act World",
+    "tagline": "Evaluating Reasoning–Acting Coordination in Robotic Manipulation"
+  },
+  "scale": {
+    "tasks": 15,
+    "task_difficulty_configurations": 45,
+    "capability_suites": 3,
+    "tasks_per_suite": 5,
+    "demonstrations_website_count": 39,
+    "difficulty_levels": [
+      "Easy",
+      "Medium",
+      "Hard"
+    ],
+    "count_scope": "Current public preview. Local media collection may be newer; do not call 39 the local file count."
+  },
+  "status": {
+    "task_specifications": 15,
+    "configs": "Easy/Medium/Hard",
+    "demonstration_media": true,
+    "evaluation_protocol": true,
+    "model_results_published": false,
+    "leaderboard_results_published": false,
+    "note": "Model placeholders and XX% are not measured results."
+  },
+  "dimensions": [
+    {
+      "label": "Mind",
+      "subtitle": "Task-Level Reasoning",
+      "tasks": [
+        "E",
+        "P",
+        "S",
+        "F",
+        "M"
+      ],
+      "purpose": "Maintain task state, interpret instructions and observations, infer goals and prerequisites, and choose the sequence of operations."
+    },
+    {
+      "label": "Act",
+      "subtitle": "Constraint-Aware Execution",
+      "tasks": [
+        "FR1",
+        "FR2",
+        "PR1",
+        "PR2",
+        "PR3"
+      ],
+      "purpose": "Realize intended operations under timing, geometric, contact, and stability constraints."
+    },
+    {
+      "label": "Mind2Act",
+      "subtitle": "Reasoning–Acting Coordination",
+      "tasks": [
+        "CP01",
+        "CP02",
+        "CP03",
+        "CP04",
+        "CP05"
+      ],
+      "purpose": "Let task intent guide valid actions, and actual execution outcomes update remaining goals, action timing, and phase progression."
+    }
+  ],
+  "difficulty_axes": [
+    "Historical information load",
+    "Planning and phase dependencies",
+    "Precision and contact requirements",
+    "Dynamic response windows"
+  ],
+  "evaluation": {
+    "physics_hz": 120,
+    "observation_action_hz": 30,
+    "physics_ticks_per_action": 4,
+    "loop": [
+      "Reason",
+      "Act",
+      "Observe",
+      "Update"
+    ],
+    "systems": [
+      "VLA/WAM policies",
+      "Coding Agents",
+      "Hybrid systems"
+    ]
+  },
+  "featured_cases": {
+    "P": {
+      "name": "Order-Based Meal Assembly",
+      "mechanism": "Short-lived orders; occluded container contents; maintain cumulative demand separately from actual delivered quantities; new orders may arrive during execution.",
+      "easy": {
+        "containers": 2,
+        "total_deliveries": 4,
+        "new_orders": 0
+      },
+      "medium": {
+        "containers": 2,
+        "total_deliveries": 5,
+        "new_orders": 1
+      },
+      "hard": {
+        "containers": 3,
+        "total_deliveries": 7,
+        "new_orders": 2
+      },
+      "constraints": "No priority or mandatory switching rule."
+    },
+    "PR3": {
+      "name": "Marker Line Tracing",
+      "mechanism": "Continuous physical pen contact along a reference centerline. Ink derives from real contact; hovering makes no ink.",
+      "easy": {
+        "shape": "Straight line",
+        "half_waves": 0,
+        "min_curve_radius_mm": null
+      },
+      "medium": {
+        "shape": "S curve",
+        "half_waves": 2,
+        "min_curve_radius_mm_approx": 54
+      },
+      "hard": {
+        "shape": "Multi-bend curve",
+        "half_waves": 4,
+        "min_curve_radius_mm_approx": 25
+      },
+      "all_levels": {
+        "path_length_mm": 350,
+        "tip_diameter_mm": 5,
+        "reference_width_mm_approx": 2.5,
+        "centerline_tolerance_each_side_mm": 3
+      }
+    },
+    "CP05": {
+      "name": "Keyboard Sequence Reproduction",
+      "mechanism": "Remember key identity, order, and repeats; reproduce with effective strikes and releases; complete setup and tool return.",
+      "easy": {
+        "candidate_white_keys": 7,
+        "strikes": 8,
+        "tools": "One arm, one stick"
+      },
+      "medium": {
+        "candidate_white_keys": 14,
+        "strikes": 8,
+        "tools": "Two arms, two sticks",
+        "preparation": "Remove cloth with both arms"
+      },
+      "hard": {
+        "candidate_white_keys": 21,
+        "strikes": 12,
+        "tools": "Two arms, two sticks",
+        "preparation": "Remove cloth and set volume MIN to MAX"
+      },
+      "constraints": "Demonstration uses 2 seconds per event; reproduction is not scored on beat matching. Synchronous tool pickup and return do not mean simultaneous key strikes."
+    }
+  },
+  "palette": {
+    "navy": "#102134",
+    "deep_navy": "#0F1D30",
+    "steel": "#7189A5",
+    "light_steel": "#9FB2C8",
+    "moon_cream": "#E4E6D2",
+    "mint": "#BDD9CC",
+    "gold": "#F0D57E",
+    "paper": "#FAF9F4",
+    "light_chapter": "#E8ECEE"
+  },
+  "typography": {
+    "body_computed": "Inter, Aptos, Segoe UI, PingFang SC, Microsoft YaHei, Arial, sans-serif",
+    "pixel_accent_family": "LunarPixel",
+    "pixel_font_url": "https://kkun616826.github.io/mind2act-preview/media/fonts/fusion/fusion-pixel-12px-proportional-zh_hans.otf.woff2",
+    "guidance": "Use clean sans-serif display and editorial hierarchy for the film; reserve pixel typography/edges for the moon brand and small instrumentation."
+  },
+  "hero_demo": {
+    "treatment": "Full-bleed keyboard footage. Navy gradient at bottom, moon identity lower left, memory cards off the action area. A highlighted key snapshot flies into the memory rail; during reproduction cards progress on registered trigger/release.",
+    "headlines": [
+      "Remember the order.",
+      "From memory to movement.",
+      "Sequence complete."
+    ],
+    "source_run": "CP05-hard-hd-replay-20261009",
+    "source_episode": "CP05/hard/episode_0002",
+    "source_video_sha256": "1a57c056d4b1a3b0ae7ec818990c67640bf01f940ed3a023118bb6038338c036",
+    "matching_caution": "Website uses an October-09 replay. September-23 local videos have a different provenance; do not transplant timed note events without matching source.",
+    "source_segments": [
+      {
+        "from": 36.5,
+        "to": 60.5,
+        "speed": 3,
+        "purpose": "Observation"
+      },
+      {
+        "from": 60.5,
+        "to": 105.433332,
+        "speed": 4,
+        "purpose": "Reproduction"
+      }
+    ],
+    "data_file": "website-hero-demo-data.json",
+    "motion_chart": "Website includes recorded world-coordinate tool-tip heights. Use only as historical audit, not as new policy observations; do not invent such data for another video."
+  },
+  "suggested_safe_film_labels": [
+    "15 TASKS",
+    "3 CAPABILITY SUITES",
+    "45 CONFIGURATIONS",
+    "EASY → MEDIUM → HARD",
+    "MEMORY LOAD",
+    "PHASE DEPENDENCIES",
+    "CONTACT PRECISION",
+    "DYNAMIC WINDOWS",
+    "CALL FOR CONTRIBUTORS & EVALUATIONS"
+  ]
+}

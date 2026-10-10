@@ -1,0 +1,215 @@
+{
+  "generated_at": "2026-10-10T15:01:33+08:00",
+  "raw_sources_modified": false,
+  "source_audit": ".production/source-refresh-audit.json",
+  "source_count_verified": 45,
+  "clips": [
+    {
+      "name": "p-intro",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/p-intro.mp4",
+      "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+      "source_sha256": "7a2509626c23a6eb47113541b30eb13e661509e674c609ec65c7ebcc1ba6d9a9",
+      "source_start": 2.5,
+      "source_end": 4.35,
+      "output_duration": 1.85,
+      "playback_rate": 1.0,
+      "crop_filter": "crop=640:360:0:0,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    },
+    {
+      "name": "p-action1",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/p-action1.mp4",
+      "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+      "source_sha256": "7a2509626c23a6eb47113541b30eb13e661509e674c609ec65c7ebcc1ba6d9a9",
+      "source_start": 5.3,
+      "source_end": 11.1725,
+      "output_duration": 2.61,
+      "playback_rate": 2.25,
+      "crop_filter": "crop=640:360:0:0,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    },
+    {
+      "name": "p-action2",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/p-action2.mp4",
+      "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+      "source_sha256": "7a2509626c23a6eb47113541b30eb13e661509e674c609ec65c7ebcc1ba6d9a9",
+      "source_start": 39.5,
+      "source_end": 44.3844446,
+      "output_duration": 2.325926,
+      "playback_rate": 2.1,
+      "crop_filter": "crop=640:360:0:0,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    },
+    {
+      "name": "act-wide",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/act-wide.mp4",
+      "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "source_sha256": "665dfa922284c867eb69cf1d7636f3008da3d4291df603d6dc07d3170130942e",
+      "source_start": 0.2,
+      "source_end": 1.5,
+      "output_duration": 1.3,
+      "playback_rate": 1.0,
+      "crop_filter": "crop=640:360:0:20,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    },
+    {
+      "name": "act-draw",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/act-draw.mp4",
+      "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "source_sha256": "665dfa922284c867eb69cf1d7636f3008da3d4291df603d6dc07d3170130942e",
+      "source_start": 17.0,
+      "source_end": 22.395926,
+      "output_duration": 5.395926,
+      "playback_rate": 1.0,
+      "crop_filter": "crop=640:360:0:20,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    },
+    {
+      "name": "act-detail",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/act-detail.mp4",
+      "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "source_sha256": "665dfa922284c867eb69cf1d7636f3008da3d4291df603d6dc07d3170130942e",
+      "source_start": 17.0,
+      "source_end": 22.395926,
+      "output_duration": 5.395926,
+      "playback_rate": 1.0,
+      "crop_filter": "crop=240:135:205:70,scale=548:308:flags=lanczos",
+      "resolution": [
+        548,
+        308
+      ],
+      "fps": 30
+    },
+    {
+      "name": "piano-setup",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/piano-setup.mp4",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+      "source_start": 24.0,
+      "source_end": 29.994,
+      "output_duration": 1.48,
+      "playback_rate": 4.05,
+      "crop_filter": "crop=640:360:0:0,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    },
+    {
+      "name": "piano-demo",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/piano-demo.mp4",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+      "source_start": 30.0,
+      "source_end": 33.996,
+      "output_duration": 1.48,
+      "playback_rate": 2.7,
+      "crop_filter": "crop=640:360:0:0,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    },
+    {
+      "name": "piano-play",
+      "path": "assets/generated/source-refresh-20261010-142512/cases/piano-play.mp4",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+      "source_start": 44.0,
+      "source_end": 54.10395566,
+      "output_duration": 3.582963,
+      "playback_rate": 2.82,
+      "crop_filter": "crop=640:360:0:0,scale=1920:1080:flags=lanczos",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30
+    }
+  ],
+  "stills": {
+    "p-order-green-crop": {
+      "path": "assets/generated/source-refresh-20261010-142512/cases/p-order-green-crop.png",
+      "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+      "source_sha256": "7a2509626c23a6eb47113541b30eb13e661509e674c609ec65c7ebcc1ba6d9a9",
+      "source_time": 3.0,
+      "crop_filter": "crop=190:108:225:0",
+      "resolution": [
+        668,
+        373
+      ]
+    },
+    "pr3-target-crop": {
+      "path": "assets/generated/source-refresh-20261010-142512/cases/pr3-target-crop.png",
+      "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "source_sha256": "665dfa922284c867eb69cf1d7636f3008da3d4291df603d6dc07d3170130942e",
+      "source_time": 0.2,
+      "crop_filter": "crop=240:135:205:70",
+      "resolution": [
+        548,
+        308
+      ]
+    },
+    "piano-memory-1": {
+      "path": "assets/generated/source-refresh-20261010-142512/cases/piano-memory-1.png",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+      "source_time": 25.25,
+      "crop_filter": "crop=395:115:120:100",
+      "resolution": [
+        1060,
+        308
+      ]
+    },
+    "piano-memory-2": {
+      "path": "assets/generated/source-refresh-20261010-142512/cases/piano-memory-2.png",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+      "source_time": 27.5,
+      "crop_filter": "crop=395:115:120:100",
+      "resolution": [
+        1060,
+        308
+      ]
+    },
+    "piano-memory-3": {
+      "path": "assets/generated/source-refresh-20261010-142512/cases/piano-memory-3.png",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+      "source_time": 29.5,
+      "crop_filter": "crop=395:115:120:100",
+      "resolution": [
+        1060,
+        308
+      ]
+    }
+  },
+  "notes": [
+    "All featured crops use the refreshed 640x480 sources.",
+    "CP05 Medium contains no cover reveal; piano-setup is an uncovered keyboard establishing beat.",
+    "The P order card is captured at the matching green-cup order screen; the first and second action clips follow its two listed items.",
+    "Piano memory cards use three real blue-key observation frames before replay, without synthetic marks."
+  ]
+}

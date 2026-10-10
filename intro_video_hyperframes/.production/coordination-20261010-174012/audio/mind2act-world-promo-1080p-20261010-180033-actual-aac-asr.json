@@ -1,0 +1,88 @@
+{
+  "source": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261010-180033.mp4",
+  "model": "faster-whisper medium.en int8 CPU",
+  "manual_listening": false,
+  "intervals": [
+    {
+      "interval": "statistics",
+      "start": 45.0,
+      "end": 48.55,
+      "sample": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/mind2act-world-promo-1080p-20261010-180033-statistics-aac-sample.wav",
+      "segments": [
+        {
+          "start": 45.0,
+          "end": 46.14,
+          "text": " You",
+          "no_speech_prob": 0.9280474781990051,
+          "avg_logprob": -0.6801202297210693,
+          "words": [
+            {
+              "start": 45.0,
+              "end": 46.14,
+              "text": " You",
+              "probability": 0.10128850489854813
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "interval": "difficulty",
+      "start": 48.55,
+      "end": 52.55,
+      "sample": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/mind2act-world-promo-1080p-20261010-180033-difficulty-aac-sample.wav",
+      "segments": [
+        {
+          "start": 48.55,
+          "end": 52.07,
+          "text": " Easy, medium, hard.",
+          "no_speech_prob": 0.06119317561388016,
+          "avg_logprob": -0.5676753785875108,
+          "words": [
+            {
+              "start": 48.55,
+              "end": 49.41,
+              "text": " Easy,",
+              "probability": 0.9151049852371216
+            },
+            {
+              "start": 50.349999999999994,
+              "end": 50.69,
+              "text": " medium,",
+              "probability": 0.7835301756858826
+            },
+            {
+              "start": 51.73,
+              "end": 52.07,
+              "text": " hard.",
+              "probability": 0.9906864762306213
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "interval": "hard",
+      "start": 51.47,
+      "end": 52.32,
+      "sample": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/mind2act-world-promo-1080p-20261010-180033-hard-aac-sample.wav",
+      "segments": [
+        {
+          "start": 51.47,
+          "end": 51.97,
+          "text": " Hard.",
+          "no_speech_prob": 0.11950106173753738,
+          "avg_logprob": -0.6935806274414062,
+          "words": [
+            {
+              "start": 51.47,
+              "end": 51.97,
+              "text": " Hard.",
+              "probability": 0.4095621705055237
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

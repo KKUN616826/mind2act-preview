@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-10T16:37:13.818699+08:00",
+  "id": "mind2act-world-promo-20261010-163109",
+  "master": "renders/mind2act-world-promo-1080p-20261010-163109.mp4",
+  "web": "renders/mind2act-world-promo-web-20261010-163109.mp4",
+  "framework": "HyperFrames 0.8.143",
+  "authored_duration": 47.4074074074,
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261010-163109.mp4",
+      "bytes": 29932436,
+      "sha256": "44f4584d2fb282b5ac0b3ef6b17c8f3a7001b9ca591da33f3dff3016d9bac413",
+      "duration": 47.433333,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261010-163109.mp4",
+      "bytes": 19842684,
+      "sha256": "2ddc7b4e055c88c2e84c36791374c94278dacbc5209d6cefd67bc0862c7c404d",
+      "duration": 47.433333,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "poster": "renders/mind2act-world-poster-20261010-160400.jpg",
+  "subtitles": [
+    "renders/mind2act-world-narration.srt",
+    "renders/mind2act-world-narration.vtt"
+  ],
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "source_refresh": {
+    "source_count": 45,
+    "run": ".production/source-refresh-20261010-142512",
+    "case_provenance": ".production/source-refresh-20261010-142512/case-media-provenance.json",
+    "montage_provenance": ".production/source-refresh-20261010-142512/montage-provenance.json",
+    "verification": ".production/source-refresh-20261010-142512/verification.json"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "bpm": 81,
+  "music_source_start": 11.9877,
+  "clarity_restoration": {
+    "run": ".production/clarity-20261010-155258",
+    "created_at": "2026-10-10T15:52:58+08:00",
+    "source_resolution": "640x480",
+    "provenance": ".production/clarity-20261010-155258/provenance.json",
+    "verification": ".production/clarity-20261010-155258/verification.json",
+    "master_crf": 16,
+    "web_crf": 18,
+    "original_sources_unchanged": true,
+    "scope": "Act and Mind2Act featured cases, six-tile intro and rapid montage; meal-packing spotlight now restored to first-version footage"
+  },
+  "meal_packing_restore": {
+    "run": ".production/restore-p-first-20261010-163109",
+    "manifest": ".production/restore-p-first-20261010-163109/manifest.json",
+    "scope": "First-version meal-packing spotlight and matching order still; timeline unchanged"
+  }
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "name": "p-intro",
+    "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+    "source_start": 2.8,
+    "output_duration": 1.85,
+    "playback_rate": 1,
+    "filter": "crop=1440:810:0:0,scale=1920:1080"
+  },
+  {
+    "name": "p-action1",
+    "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+    "source_start": 15.3,
+    "output_duration": 3.2,
+    "playback_rate": 2.25,
+    "filter": "crop=1440:810:0:0,scale=1920:1080"
+  },
+  {
+    "name": "p-action2",
+    "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+    "source_start": 26,
+    "output_duration": 2.75,
+    "playback_rate": 2.1,
+    "filter": "crop=1440:810:0:0,scale=1920:1080"
+  },
+  {
+    "name": "act-wide",
+    "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+    "source_start": 0.2,
+    "output_duration": 1.4,
+    "playback_rate": 1,
+    "filter": "crop=1280:720:0:30,scale=1920:1080"
+  },
+  {
+    "name": "act-draw",
+    "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+    "source_start": 17,
+    "output_duration": 6,
+    "playback_rate": 3.5,
+    "filter": "crop=1280:720:0:30,scale=1920:1080"
+  },
+  {
+    "name": "act-detail",
+    "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+    "source_start": 17,
+    "output_duration": 6,
+    "playback_rate": 3.5,
+    "filter": "crop=520:260:380:240,scale=1040:520"
+  },
+  {
+    "name": "piano-cover",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_\u53cc\u81c2\u63ed\u7f69_8\u6b21\u590d\u594f_20260923.mp4",
+    "source_start": 16,
+    "output_duration": 1.48,
+    "playback_rate": 4.05,
+    "filter": "crop=960:540:0:70,scale=1920:1080"
+  },
+  {
+    "name": "piano-demo",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_\u53cc\u81c2\u63ed\u7f69_8\u6b21\u590d\u594f_20260923.mp4",
+    "source_start": 49.5,
+    "output_duration": 1.48,
+    "playback_rate": 3.378378,
+    "filter": "crop=960:540:0:70,scale=1920:1080",
+    "source_end": 54.5
+  },
+  {
+    "name": "piano-play",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_\u53cc\u81c2\u63ed\u7f69_8\u6b21\u590d\u594f_20260923.mp4",
+    "source_start": 69,
+    "output_duration": 3.72,
+    "playback_rate": 2.82,
+    "filter": "crop=960:540:0:70,scale=1920:1080"
+  }
+]

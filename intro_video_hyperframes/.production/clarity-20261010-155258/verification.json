@@ -1,0 +1,245 @@
+{
+  "created_at": "2026-10-10T15:52:58+08:00",
+  "source_hashes_match": true,
+  "original_sources_verified": 16,
+  "restored_excerpts": 27,
+  "active_restored_assets": [
+    "assets/generated/clarity-20261010-155258/cases/act-detail.mp4",
+    "assets/generated/clarity-20261010-155258/cases/act-draw.mp4",
+    "assets/generated/clarity-20261010-155258/cases/act-wide.mp4",
+    "assets/generated/clarity-20261010-155258/cases/p-action1.mp4",
+    "assets/generated/clarity-20261010-155258/cases/p-action2.mp4",
+    "assets/generated/clarity-20261010-155258/cases/p-intro.mp4",
+    "assets/generated/clarity-20261010-155258/cases/piano-demo.mp4",
+    "assets/generated/clarity-20261010-155258/cases/piano-play.mp4",
+    "assets/generated/clarity-20261010-155258/cases/piano-setup.mp4",
+    "assets/generated/clarity-20261010-155258/montage/fast-montage.mp4",
+    "assets/generated/clarity-20261010-155258/montage/six-cases-mosaic.mp4"
+  ],
+  "media": [
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/p-intro.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "1.866667",
+      "nb_frames": "56"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/p-action1.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "2.600000",
+      "nb_frames": "78"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/p-action2.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "2.333333",
+      "nb_frames": "70"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/act-wide.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "1.300000",
+      "nb_frames": "39"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/act-draw.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "5.400000",
+      "nb_frames": "162"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/act-detail.mp4",
+      "width": 548,
+      "height": 308,
+      "r_frame_rate": "30/1",
+      "duration": "5.400000",
+      "nb_frames": "162"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/piano-setup.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "1.466667",
+      "nb_frames": "44"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/piano-demo.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "1.466667",
+      "nb_frames": "44"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/cases/piano-play.mp4",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "duration": "3.566667",
+      "nb_frames": "107"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/six-p-00.mp4",
+      "width": 640,
+      "height": 540,
+      "r_frame_rate": "30/1",
+      "duration": "1.500000",
+      "nb_frames": "45"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/six-pr3-01.mp4",
+      "width": 640,
+      "height": 540,
+      "r_frame_rate": "30/1",
+      "duration": "1.500000",
+      "nb_frames": "45"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/six-cp05-02.mp4",
+      "width": 640,
+      "height": 540,
+      "r_frame_rate": "30/1",
+      "duration": "1.500000",
+      "nb_frames": "45"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/six-e-03.mp4",
+      "width": 640,
+      "height": 540,
+      "r_frame_rate": "30/1",
+      "duration": "1.500000",
+      "nb_frames": "45"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/six-cp02-04.mp4",
+      "width": 640,
+      "height": 540,
+      "r_frame_rate": "30/1",
+      "duration": "1.500000",
+      "nb_frames": "45"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/six-cp04-05.mp4",
+      "width": 640,
+      "height": 540,
+      "r_frame_rate": "30/1",
+      "duration": "1.500000",
+      "nb_frames": "45"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-e.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-fr1.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-cp02.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-f.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-pr1.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-cp03.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-m.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-fr2.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-cp04.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-s.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-pr2.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    },
+    {
+      "path": "assets/generated/clarity-20261010-155258/montage/quick-cp01.mp4",
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "1.100000",
+      "nb_frames": "33"
+    }
+  ],
+  "hyperframes_check": "0 errors, 0 warnings; 9 layout samples; 39/39 contrast checks",
+  "master_decode": "pass",
+  "web_decode": "pass",
+  "visual_samples": [
+    "qa/rendered-mind.png",
+    "qa/rendered-act.png",
+    "qa/rendered-piano.png"
+  ]
+}

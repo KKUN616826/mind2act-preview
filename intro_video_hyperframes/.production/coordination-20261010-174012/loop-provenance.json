@@ -1,0 +1,15 @@
+{
+  "asset": "assets/generated/coordination-20261010-174012/piano-feedback.mp4",
+  "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+  "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+  "source_start": 44,
+  "source_end": 55.733333,
+  "playback_rate": 1,
+  "filter": "crop=640:360:0:0,scale=1280:720:flags=lanczos,fps=30",
+  "observed_green_onsets": [48.3666667,50.9333333,53.5333333],
+  "first_return_start_local": 4.65,
+  "second_return_start_local": 7.1,
+  "third_return_start_local": 9.9,
+  "third_observed_green_window": [53.6,53.8],
+  "semantics": "Green key contact is visible evidence. Arrows and task-state text illustrate benchmark task logic; no reconstructed model state, note labels, sequence indexes, success rates or correction claims."
+}

@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-10-10T16:31:09+08:00",
+  "scope": "Meal-packing spotlight only; first-version excerpts and matching order still; timing and animation unchanged",
+  "scene_matches_archived_first_version": true,
+  "assets": [
+    {
+      "previous": "assets/generated/clarity-20261010-155258/cases/p-intro.mp4",
+      "restored": "assets/generated/cases/p-intro.mp4",
+      "sha256": "45f59fb94a19d9aab990c8cfa3174454150ac9e726931c5ec21e3eac7d59ade3"
+    },
+    {
+      "previous": "assets/generated/clarity-20261010-155258/cases/p-action1.mp4",
+      "restored": "assets/generated/cases/p-action1.mp4",
+      "sha256": "f4d8f2f943f8e06824ae0ded1ac3c68253f5809bb8153ec66d4c5edb6630259d"
+    },
+    {
+      "previous": "assets/generated/clarity-20261010-155258/cases/p-action2.mp4",
+      "restored": "assets/generated/cases/p-action2.mp4",
+      "sha256": "3cbfcc289ff99af5c30d903f8c827d45284b461019123c0a6c42487dd0c3ed12"
+    },
+    {
+      "previous": "assets/generated/source-refresh-20261010-142512/cases/p-order-green-crop.png",
+      "restored": "assets/generated/cases/p-order-blue-crop.png",
+      "sha256": "ad878a3705619a0572245b3110168d3ff6fb931edb80bc2d83795d464a29f118"
+    }
+  ]
+}

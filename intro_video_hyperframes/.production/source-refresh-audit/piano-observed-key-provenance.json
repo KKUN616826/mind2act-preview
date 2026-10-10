@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-10-10T14:43:39.283050+08:00",
+  "description": "Three genuine sequential blue-key highlights during the observation phase of the refreshed CP05 medium source; no synthetic marks and no arm-replay frames.",
+  "frames": [
+    {
+      "path": ".production/source-refresh-audit/piano-observed-key-1-25.25.png",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_time_seconds": 25.25,
+      "crop_xywh": [
+        120,
+        100,
+        395,
+        115
+      ],
+      "blue_pixel_count": 503,
+      "blue_centroid_x_in_crop": 114.66799204771372
+    },
+    {
+      "path": ".production/source-refresh-audit/piano-observed-key-2-27.5.png",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_time_seconds": 27.5,
+      "crop_xywh": [
+        120,
+        100,
+        395,
+        115
+      ],
+      "blue_pixel_count": 377,
+      "blue_centroid_x_in_crop": 230.76657824933687
+    },
+    {
+      "path": ".production/source-refresh-audit/piano-observed-key-3-29.5.png",
+      "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "source_time_seconds": 29.5,
+      "crop_xywh": [
+        120,
+        100,
+        395,
+        115
+      ],
+      "blue_pixel_count": 220,
+      "blue_centroid_x_in_crop": 243.37272727272727
+    }
+  ]
+}

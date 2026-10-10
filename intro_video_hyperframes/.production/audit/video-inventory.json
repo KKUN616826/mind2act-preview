@@ -1,0 +1,324 @@
+[
+  {
+    "path": "assets/videos/Act/FR1/easy.mp4",
+    "duration": 22.967,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Act/FR1/hard.mp4",
+    "duration": 36.067,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Act/FR1/medium.mp4",
+    "duration": 27.767,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Act/FR2/easy.mp4",
+    "duration": 15.334,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Act/FR2/hard.mp4",
+    "duration": 14.6,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Act/FR2/medium.mp4",
+    "duration": 16.9,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Act/PR1/PR1__PR1_Easy_control_20260919.mp4",
+    "duration": 19.5,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4",
+    "duration": 19.334,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR1/PR1__PR1_Medium_control_20260919.mp4",
+    "duration": 19.334,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR2/PR2__PR2_Easy_control_20260919.mp4",
+    "duration": 22.584,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR2/PR2__PR2_Hard_control_20260919.mp4",
+    "duration": 22.584,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR2/PR2__PR2_Medium_control_20260919.mp4",
+    "duration": 22.584,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+    "duration": 36.667,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+    "duration": 38.334,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4",
+    "duration": 38.334,
+    "width": 1280,
+    "height": 960,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/E/E__E_easy.mp4",
+    "duration": 73.75,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/E/E__E_hard.mp4",
+    "duration": 178.917,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/E/E__E_medium.mp4",
+    "duration": 123.834,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/F/F__F_easy.mp4",
+    "duration": 28.417,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/F/F__F_hard.mp4",
+    "duration": 55.917,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/F/F__F_medium.mp4",
+    "duration": 44.667,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/M/M__M_easy_frontlabel.mp4",
+    "duration": 82.167,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/M/M__M_hard_frontlabel.mp4",
+    "duration": 120.584,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/M/M__M_medium_frontlabel.mp4",
+    "duration": 122.167,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+    "duration": 75.917,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/P/easy.mp4",
+    "duration": 46.367,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Mind/P/medium.mp4",
+    "duration": 57.334,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Mind/S/S__S_easy.mp4",
+    "duration": 60.834,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/S/S__S_hard.mp4",
+    "duration": 66.167,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind/S/S__S_medium.mp4",
+    "duration": 65.834,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP01/CP01__CP01_easy_adaptive_v2_20260920.mp4",
+    "duration": 67.667,
+    "width": 960,
+    "height": 720,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP01/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+    "duration": 215.084,
+    "width": 960,
+    "height": 720,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP01/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+    "duration": 164.917,
+    "width": 960,
+    "height": 720,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+    "duration": 64.334,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+    "duration": 128.0,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+    "duration": 100.084,
+    "width": 1440,
+    "height": 1080,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4",
+    "duration": 65.75,
+    "width": 960,
+    "height": 760,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+    "duration": 168.084,
+    "width": 960,
+    "height": 760,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP03/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+    "duration": 144.084,
+    "width": 960,
+    "height": 760,
+    "fps": "12/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4",
+    "duration": 258.292,
+    "width": 1920,
+    "height": 1440,
+    "fps": "24/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP04/hard.mp4",
+    "duration": 162.267,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP04/medium.mp4",
+    "duration": 123.834,
+    "width": 640,
+    "height": 480,
+    "fps": "30/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4",
+    "duration": 63.125,
+    "width": 960,
+    "height": 720,
+    "fps": "24/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+    "duration": 128.834,
+    "width": 960,
+    "height": 720,
+    "fps": "24/1"
+  },
+  {
+    "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+    "duration": 96.834,
+    "width": 960,
+    "height": 720,
+    "fps": "24/1"
+  },
+  {
+    "path": "assets/reference-videos/mind_p_order_case_16s_204025_1080p.mp4",
+    "duration": 16.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1"
+  }
+]

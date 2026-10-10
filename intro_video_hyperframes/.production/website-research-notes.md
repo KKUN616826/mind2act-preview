@@ -1,0 +1,11 @@
+# Website research for the Mind2Act World film
+
+Verified public scale: **15 tasks**, **3 suites**, **5 tasks per suite**, **45 task–difficulty configurations**, and **39 public demonstrations**. The 39 count is the website collection, not necessarily the newer local footage count. Model results are unpublished. Use 15 / 3 / 45 prominently; do not animate fictitious success percentages or leaderboard rankings.
+
+The latest website styling is lunar navy (#102134), steel blue (#7189A5 and #9FB2C8), moon cream (#E4E6D2), mint (#BDD9CC), and warm gold (#F0D57E), on offwhite paper (#FAF9F4). The page contains many old CSS overrides: ignore earlier purple and teal designs. The current hero uses full-bleed robotics footage with a deep navy bottom gradient and pixel-moon brand elements. Computed body font is Inter/Aptos/Segoe UI; LunarPixel is an accent typeface. For a cinematic film, preserve the lunar palette and pixel logo while using confident, large sans-serif typography.
+
+Difficulty is task-specific: memory load; planning and phase dependencies; precision and contact; dynamic response windows. Easy / Medium / Hard do not imply every variable always changes. P requires 4 / 5 / 7 deliveries; PR3 uses straight / S / multi-bend traces at the same 350 mm path length; CP05 uses 7 / 14 / 21 candidate keys and 8 / 8 / 12 strikes. These are design settings, not achieved model scores.
+
+The website piano hero follows a strong storytelling sequence: highlighted observed key → image memory card → card rail → corresponding physical strike. Its headlines are “Remember the order.” and “From memory to movement.” The source is an October-09 replay with 12 explicitly timed note events. Local September-23 CP05 clips are distinct sources, so card identities and timed triggers must be audited against the actual chosen local video. The page's plot is recorded simulation tool-tip height, not an inferred motion graphic; do not fabricate a matched curve.
+
+Capture files: website-hero.png, website-piano-demo.png, and (when available) website-piano-action.png. Raw HTML, readable text, the two hero scripts, and embedded timing JSON are retained beside this note for provenance. No composition files were edited.

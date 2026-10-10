@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-10-10T17:40:12+08:00",
+  "version": "coordination-20261010-174012",
+  "provider": "kokoro-onnx",
+  "voice": "am_michael",
+  "language": "en-us",
+  "sample_rate": 48000,
+  "bpm": 81.0,
+  "music_source_offset": 11.9877,
+  "duration": 62.2222222222,
+  "scene_boundaries": [0, 5.1851851852, 11.8518518519, 17.7777777778, 23.7037037037, 29.6296296296, 40.7407407407, 53.3333333333, 62.2222222222],
+  "statistics_music_only": [40.7407407407, 48.6807],
+  "lines": [
+    {"id": "intro", "start": 0.28, "max_duration": 4.55, "speed": 1.03, "text": "Mind to Act World. Reasoning and action, evaluated together."},
+    {"id": "motivation", "start": 5.75, "max_duration": 5.55, "speed": 1.03, "text": "Can strong parts make a reliable whole?"},
+    {"id": "mind", "start": 12.22, "max_duration": 5.1, "speed": 1.02, "text": "Mind tracks the task through observations and history."},
+    {"id": "act", "start": 18.12, "max_duration": 5.1, "speed": 1.02, "text": "Act must make the intended physical result happen."},
+    {"id": "mind2act", "start": 24.03, "max_duration": 5.1, "speed": 1.02, "text": "Together, actual outcomes shape what comes next."},
+    {"id": "coordination-loop", "start": 30.04, "max_duration": 10.0, "speed": 1.03, "text": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next."},
+    {"id": "scale-easy", "start": 48.8407, "max_duration": 1.0, "speed": 1.0, "text": "Easy."},
+    {"id": "scale-medium", "start": 50.1907, "max_duration": 1.0, "speed": 1.0, "text": "Medium."},
+    {"id": "scale-hard", "start": 51.5507, "max_duration": 1.0, "speed": 1.0, "text": "Hard."},
+    {"id": "ending", "start": 54.03, "max_duration": 7.55, "speed": 1.03, "text": "Build the benchmark. Test your agents. Let's take the next giant leap together."}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "mind2act-world-promo-20261010-180033",
+  "created_at": "2026-10-10T18:00:33+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261010-180033.mp4",
+  "web": "renders/mind2act-world-promo-web-20261010-180033.mp4",
+  "poster": "renders/mind2act-world-poster-20261010-180033.jpg",
+  "authored_duration": 62.2222222222,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117"
+}

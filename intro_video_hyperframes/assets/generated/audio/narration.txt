@@ -1,0 +1,21 @@
+Introducing Mind2Act World. Reasoning and action, evaluated together.
+
+When robots fail, is it the decision, the execution, or how they work together?
+
+Mind tracks progress, understands rules, and decides what comes next.
+
+Act turns intent into precise motion, through geometry, contact, and timing.
+
+Mind2Act closes the loop. Execution reshapes the plan, step by step.
+
+Fifteen tasks.
+
+Forty-five configurations.
+
+Easy.
+
+Medium.
+
+Hard.
+
+Contribute new tasks. Evaluate agents. Mind2Act World.

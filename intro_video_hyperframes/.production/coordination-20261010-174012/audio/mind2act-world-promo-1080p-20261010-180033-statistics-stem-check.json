@@ -1,0 +1,18 @@
+{
+  "start": 45,
+  "end": 48.55,
+  "decoded_mp4_vs_bgm_stem_correlation": 0.9908484404386189,
+  "decoded_mp4_vs_bgm_stem_gain_error_db": -0.15144257549428752,
+  "decoded_minus_bgm_rms_dbfs": -37.53782018965998,
+  "narration_stem_peak": 0.0,
+  "sfx_stem_peak": 0.0,
+  "music_input": ".production/coordination-20261010-174012/audio/separated/htdemucs/music-source-cut/no_vocals.wav",
+  "music_processing": {
+    "source_offset": 11.9877,
+    "source_end": 74.2099222222,
+    "vocal_separation": "Demucs 4.0.1 htdemucs vocals/no_vocals, BGM only",
+    "voice_processed_by_separator": false,
+    "asr_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/bgm-asr-report.json",
+    "manual_listening": false
+  }
+}

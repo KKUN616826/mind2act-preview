@@ -1,0 +1,97 @@
+{
+  "provider": "kokoro-onnx",
+  "voice": "am_michael",
+  "sample_rate": 48000,
+  "bpm": 81.0,
+  "music_source_offset": 11.9877,
+  "duration": 47.4074074074,
+  "scene_boundaries": [
+    0,
+    5.1851851852,
+    11.8518518519,
+    17.7777777778,
+    23.7037037037,
+    29.6296296296,
+    42.2222222222,
+    47.4074074074
+  ],
+  "lines": [
+    {
+      "id": "intro",
+      "start": 0.28,
+      "max_duration": 4.6,
+      "speed": 1.03,
+      "text": "Introducing Mind to Act World. Reasoning and action, evaluated together."
+    },
+    {
+      "id": "motivation",
+      "start": 5.55,
+      "max_duration": 5.85,
+      "speed": 1.06,
+      "text": "When robots fail, is it the decision, the execution, or how they work together?"
+    },
+    {
+      "id": "mind",
+      "start": 12.18,
+      "max_duration": 5.2,
+      "speed": 1.03,
+      "text": "Mind tracks progress, understands rules, and decides what comes next."
+    },
+    {
+      "id": "act",
+      "start": 18.12,
+      "max_duration": 5.2,
+      "speed": 1.04,
+      "text": "Act turns intent into precise motion, through geometry, contact, and timing."
+    },
+    {
+      "id": "mind2act",
+      "start": 24.03,
+      "max_duration": 5.2,
+      "speed": 1.03,
+      "text": "Mind to Act closes the loop. Execution reshapes the plan, step by step."
+    },
+    {
+      "id": "scale-tasks",
+      "start": 34.13,
+      "max_duration": 1.05,
+      "speed": 1.0,
+      "text": "Fifteen tasks."
+    },
+    {
+      "id": "scale-configurations",
+      "start": 35.2,
+      "max_duration": 1.9,
+      "speed": 1.0,
+      "text": "Forty-five configurations."
+    },
+    {
+      "id": "scale-easy",
+      "start": 37.73,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Easy."
+    },
+    {
+      "id": "scale-medium",
+      "start": 39.08,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Medium."
+    },
+    {
+      "id": "scale-hard",
+      "start": 40.44,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Hard."
+    },
+    {
+      "id": "ending",
+      "start": 42.57,
+      "max_duration": 4.25,
+      "speed": 1.04,
+      "text": "Contribute new tasks. Evaluate agents. Mind to Act World."
+    }
+  ]
+}

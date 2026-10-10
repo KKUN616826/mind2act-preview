@@ -1,0 +1,11 @@
+{
+  "source": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/mind2act-world-promo-1080p-20261010-180033-statistics-aac-sample.wav",
+  "engine": "faster-whisper bundled Silero VAD",
+  "threshold": 0.5,
+  "interval": [
+    45.0,
+    48.55
+  ],
+  "detected_speech": [],
+  "manual_listening": false
+}

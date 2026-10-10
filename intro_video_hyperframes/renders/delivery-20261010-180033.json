@@ -1,0 +1,71 @@
+{
+  "id": "mind2act-world-promo-20261010-180033",
+  "created_at": "2026-10-10T18:00:33+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261010-180033.mp4",
+  "web": "renders/mind2act-world-promo-web-20261010-180033.mp4",
+  "poster": "renders/mind2act-world-poster-20261010-180033.jpg",
+  "authored_duration": 62.2222222222,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261010-180033.mp4",
+      "bytes": 72017021,
+      "sha256": "25cd85170dff27a3ee07abcae1673221b82a2570424039d9db7e21f20852edeb",
+      "duration": 62.233333,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261010-180033.mp4",
+      "bytes": 10528742,
+      "sha256": "eaf89d7440771fb5ee5ab3e090d0f5ffbdb254becf0a711cfd2312bd0f671c04",
+      "duration": 62.233333,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "subtitles": [
+    "renders/mind2act-world-narration-20261010-180033.srt",
+    "renders/mind2act-world-narration-20261010-180033.vtt"
+  ],
+  "checks": {
+    "composition": ".production/coordination-20261010-174012/check-final.json",
+    "audio": ".production/coordination-20261010-174012/audio/audio-integration.json",
+    "source_evidence": ".production/coordination-20261010-174012/loop-provenance.json",
+    "decode_master": "pass",
+    "decode_web": "pass",
+    "aac": ".production/coordination-20261010-174012/audio/mind2act-world-promo-1080p-20261010-180033-aac-audit.json",
+    "review": ".production/coordination-20261010-174012/QA.md",
+    "exported_frames": ".production/coordination-20261010-174012/rendered",
+    "historical_master_sha256": "44f4584d2fb282b5ac0b3ef6b17c8f3a7001b9ca591da33f3dff3016d9bac413"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+  "production_manifest": ".production/coordination-20261010-174012/manifest.json",
+  "local_preview": "renders/preview-20261010-180033.html",
+  "source_hashes": {
+    "index.html": "98d36aa576f118599104a906e2d48dcc5ca26dd5280796d74f76d89e7a0311de",
+    "compositions/01-intro.html": "8f98a6ce03eab96554ab9b6a5f27f3a2dd633b8a4e05607a8c6f9a441c7c9d23",
+    "compositions/02-motivation.html": "8b43fb47ec26a60cce3f8fbb2a1d37b701fdb8b5a3b77b8bab5955a1e4c94a4a",
+    "compositions/03-mind.html": "156d41d27d62197390de5c6bec9c6afb85ff0ee451795745e277cd8645861ac8",
+    "compositions/04-act.html": "a835d3aa139915749834cc81f92415275ab3be223c3fa063fa73dd21d9d62e52",
+    "compositions/05-mind2act.html": "39fa1d650372fa7182d93751635f565d3975589343e092f9aef799c0ba073c77",
+    "compositions/06-scale.html": "cc6ce58ccda05a94b6d6da67344dca0e8cb44ec444c32a0c1c354dc24c628ea4",
+    "compositions/07-outro.html": "40078fcc429ba0a461883060e0fbf9694d3821f17dcf4897a38c37372dafdad4",
+    "compositions/08-coordination.html": "54239a0463c765484db4ebba1f2a4d92444e13d512a0561fab983932fbd02d11"
+  },
+  "verified_at": "2026-10-10T10:09:39.757Z"
+}

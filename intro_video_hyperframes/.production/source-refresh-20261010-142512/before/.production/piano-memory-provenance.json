@@ -1,0 +1,41 @@
+[
+  {
+    "path": "assets/generated/cases/piano-memory-1.png",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+    "source_time_seconds": 49.9,
+    "crop_xywh": [
+      150,
+      245,
+      640,
+      175
+    ],
+    "blue_pixel_count": 994,
+    "blue_centroid_x_in_crop": 211.32696177062374
+  },
+  {
+    "path": "assets/generated/cases/piano-memory-2.png",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+    "source_time_seconds": 52.0,
+    "crop_xywh": [
+      150,
+      245,
+      640,
+      175
+    ],
+    "blue_pixel_count": 693,
+    "blue_centroid_x_in_crop": 405.87445887445887
+  },
+  {
+    "path": "assets/generated/cases/piano-memory-3.png",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+    "source_time_seconds": 54.0,
+    "crop_xywh": [
+      150,
+      245,
+      640,
+      175
+    ],
+    "blue_pixel_count": 953,
+    "blue_centroid_x_in_crop": 268.73137460650577
+  }
+]

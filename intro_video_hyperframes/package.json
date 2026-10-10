@@ -1,0 +1,11 @@
+{
+  "name": "mind2act-hyperframes-blank-20261010-111117",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bash scripts/hyperframes.sh preview",
+    "check": "bash scripts/hyperframes.sh check",
+    "render": "bash scripts/hyperframes.sh render",
+    "publish": "bash scripts/hyperframes.sh publish"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "scope": "Updated generated video and still-image references to the refreshed case source render set.",
+  "compositions": [
+    {
+      "composition": "compositions/01-intro.html",
+      "replacements": {
+        "assets/generated/cases/piano-play.mp4": "already updated",
+        "assets/generated/montage/six-cases-mosaic.mp4": "already updated",
+        "assets/generated/montage/all-cases-mosaic.mp4": "already updated"
+      }
+    },
+    {
+      "composition": "compositions/03-mind.html",
+      "replacements": {
+        "assets/generated/cases/p-intro.mp4": "already updated",
+        "assets/generated/cases/p-action1.mp4": "already updated",
+        "assets/generated/cases/p-action2.mp4": "already updated",
+        "assets/generated/cases/p-order-blue-crop.png": "already updated",
+        "assets/generated/source-refresh-20261010-142512/cases/p-order-current-crop.png": 1
+      }
+    },
+    {
+      "composition": "compositions/04-act.html",
+      "replacements": {
+        "assets/generated/cases/act-wide.mp4": "already updated",
+        "assets/generated/cases/act-draw.mp4": "already updated",
+        "assets/generated/cases/act-detail.mp4": "already updated",
+        "assets/generated/cases/pr3-target-crop.png": "already updated"
+      }
+    },
+    {
+      "composition": "compositions/05-mind2act.html",
+      "replacements": {
+        "id=\"piano-reveal\"": "already updated",
+        "assets/generated/cases/piano-cover.mp4": "already updated",
+        "assets/generated/cases/piano-demo.mp4": "already updated",
+        "assets/generated/cases/piano-play.mp4": "already updated",
+        "assets/generated/cases/piano-memory-1.png": "already updated",
+        "assets/generated/cases/piano-memory-2.png": "already updated",
+        "assets/generated/cases/piano-memory-3.png": "already updated",
+        "> Reveal</div>": "already updated"
+      }
+    },
+    {
+      "composition": "compositions/06-scale.html",
+      "replacements": {
+        "assets/generated/montage/fast-montage.mp4": "already updated",
+        "assets/generated/montage/all-cases-mosaic.mp4": "already updated"
+      }
+    }
+  ]
+}

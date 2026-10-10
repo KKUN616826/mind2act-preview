@@ -1,0 +1,84 @@
+[
+  {
+    "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/separated/htdemucs/music-source-cut/vocals.wav",
+    "engine": "faster-whisper 1.2.1 medium.en int8 CPU",
+    "language": "en",
+    "language_probability": 1,
+    "segments": [
+      {
+        "start": 27.68,
+        "end": 29.08,
+        "text": " .",
+        "avg_logprob": -0.7146568447351456,
+        "no_speech_prob": 0.9859499335289001,
+        "words": [
+          {
+            "start": 27.68,
+            "end": 29.08,
+            "text": " .",
+            "probability": 0.14736320078372955
+          }
+        ]
+      },
+      {
+        "start": 60.5,
+        "end": 61.9,
+        "text": " Thank you.",
+        "avg_logprob": -0.8364094297091166,
+        "no_speech_prob": 0.7922689914703369,
+        "words": [
+          {
+            "start": 60.5,
+            "end": 61.9,
+            "text": " Thank",
+            "probability": 0.012748204171657562
+          },
+          {
+            "start": 61.9,
+            "end": 61.9,
+            "text": " you.",
+            "probability": 0.9748010039329529
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/coordination-20261010-174012/audio/separated/htdemucs/music-source-cut/no_vocals.wav",
+    "engine": "faster-whisper 1.2.1 medium.en int8 CPU",
+    "language": "en",
+    "language_probability": 1,
+    "segments": [
+      {
+        "start": 58.58,
+        "end": 59.98,
+        "text": " Oh",
+        "avg_logprob": -0.9646200835704803,
+        "no_speech_prob": 0.9480352997779846,
+        "words": [
+          {
+            "start": 58.58,
+            "end": 59.98,
+            "text": " Oh",
+            "probability": 0.01429309044033289
+          }
+        ]
+      },
+      {
+        "start": 60.0,
+        "end": 61.68,
+        "text": " You",
+        "avg_logprob": -0.7007591128349304,
+        "no_speech_prob": 0.9591965079307556,
+        "words": [
+          {
+            "start": 60.0,
+            "end": 61.68,
+            "text": " You",
+            "probability": 0.13978326320648193
+          }
+        ]
+      }
+    ]
+  }
+]

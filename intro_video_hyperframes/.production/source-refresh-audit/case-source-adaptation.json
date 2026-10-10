@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-10-10T14:28:52+08:00",
+  "scope": "Read-only source review for the three featured case edits. Recommendations only; composition and media were not changed.",
+  "global": {
+    "matched_files": 45,
+    "added_paths": [],
+    "missing_paths": [],
+    "new_common_dimensions": "640x480",
+    "new_common_fps": "30/1",
+    "warning": "Prior fixed-pixel crop filters targeted the old 960/1280/1440-wide sources and cannot be reused. All three featured clips remain the same scene, but P and PR3 have changed shot timing; CP05 Medium has a materially different take with no cloth-cover sequence."
+  },
+  "cases": {
+    "mind_p": {
+      "path": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+      "old": {"duration": 75.917, "dimensions": "1440x1080", "fps": "12/1"},
+      "new": {"duration": 76.3, "dimensions": "640x480", "fps": "30/1"},
+      "scene": "Meal packing and order display match. The current order is readable at source 0.2s; it is not the same order content as the old blue-order still. Do not reuse the old blue-order still or claim a particular item-to-cup mapping without checking the legible screen content.",
+      "clips": [
+        {"name": "p-intro", "source_start": 3.0, "output_duration": 1.85, "playback_rate": 1.0, "observed": "Full table and order card: green cup, round waffle x1, square pastry x1."},
+        {"name": "p-action1", "source_start": 5.3, "output_duration": 3.2, "playback_rate": 2.25, "source_end": 12.5, "observed": "Robot picks the round waffle and places it into the green cup."},
+        {"name": "p-action2", "source_start": 39.5, "output_duration": 2.75, "playback_rate": 2.1, "source_end": 45.275, "observed": "Later pickup and delivery of a square pastry into the green cup; appears consistent with the second item shown in the 3s order card."}
+      ],
+      "filters": {
+        "full_frame_16_9": "crop=640:360:0:0,scale=1920:1080",
+        "order_card_xywh": [225, 0, 190, 108],
+        "order_card_note": "At source 3s this clearly shows a green cup, round waffle x1, and square pastry x1."
+      }
+    },
+    "act_pr3": {
+      "path": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "old": {"duration": 38.334, "dimensions": "1280x960", "fps": "12/1"},
+      "new": {"duration": 24.6, "dimensions": "640x480", "fps": "30/1"},
+      "scene": "Same target-curve drawing task. Original target is clean at 0.2s. Actual blue trace is visibly formed from about 17s through 23s; the prior 17–38.334s window ran beyond the new file.",
+      "clips": [
+        {"name": "act-wide", "source_start": 0.2, "output_duration": 1.4, "playback_rate": 1.0, "observed": "Clean target before the arm enters."},
+        {"name": "act-draw", "source_start": 17.0, "output_duration": 6.0, "playback_rate": 3.5, "source_end": 38.0, "observed": "At 3.5x playback this exceeds source duration; instead use source 17.0–23.0 and playback_rate 1.0, or preserve the 5.4s slot with source 17.0–22.4 at 1.0x."},
+        {"name": "act-detail", "source_start": 17.0, "output_duration": 6.0, "playback_rate": 3.5, "source_end": 38.0, "observed": "Same source-time limit as act-draw; trim/rate must be revised together with the existing 5.4s scene slot."}
+      ],
+      "filters": {
+        "full_frame_16_9": "crop=640:360:0:20,scale=1920:1080",
+        "paper_target_xywh": [205, 70, 240, 135],
+        "paper_actual_xywh": [205, 70, 240, 135],
+        "actual_trace_frame_source_time": 20.0,
+        "note": "Target image from 0.2s. At 20s the actual blue trace is clearly present. Use identical paper crop for a fair target/actual inset."
+      }
+    },
+    "mind2act_cp05": {
+      "path": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+      "old": {"duration": 96.834, "dimensions": "960x720", "fps": "24/1"},
+      "new": {"duration": 72.667, "dimensions": "640x480", "fps": "30/1"},
+      "scene": "Same piano task, but the refreshed take starts with the keyboard already uncovered; no cloth-cover or reveal action appears in sampled frames. The old 16s cover shot and 49.5/69s ranges do not describe this take. Blue-key observation is visible near 32s; coordinated two-arm replay is clear from about 42–55s.",
+      "clips": [
+        {"name": "piano-cover", "source_start": 24.0, "output_duration": 1.48, "playback_rate": 4.05, "source_end": 29.994, "observed": "Use as an uncovered-keyboard establishing/set-up beat; relabel Reveal to Set up / Read the instrument."},
+        {"name": "piano-demo", "source_start": 30.0, "output_duration": 1.48, "playback_rate": 2.7, "source_end": 33.996, "observed": "Blue key highlight around 32s; establishes observed note before replay."},
+        {"name": "piano-play", "source_start": 44.0, "output_duration": 3.72, "playback_rate": 2.82, "source_end": 54.4904, "observed": "Two-arm playback with repeated key contacts across the excerpt."}
+      ],
+      "filters": {
+        "full_frame_16_9": "crop=640:360:0:0,scale=1920:1080",
+        "memory_xywh": [120, 100, 395, 115],
+        "memory_frame_times": [25.25, 27.5, 29.5],
+        "memory_note": "Use .production/source-refresh-audit/piano-observed-key-1-25.25.png, piano-observed-key-2-27.5.png, and piano-observed-key-3-29.5.png. These are authentic source frames with blue highlight moving across three distinct keys; arm replay frames are not the observed sequence."
+      }
+    }
+  },
+  "crop_scale_reminder": "Source-derived crop coordinates are in pixels on the new 640x480 frames. To cover the full source at 16:9 without stretching, crop 640x360, then scale to 1920x1080."
+}
