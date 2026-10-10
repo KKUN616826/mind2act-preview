@@ -1,0 +1,36 @@
+{
+  "engine": "faster-whisper bundled Silero VAD default threshold 0.5",
+  "manual_listening": false,
+  "checks": [
+    {
+      "name": "full_bgm",
+      "path": ".production/categories-20261010-215252/audio/separated/htdemucs/music-source-cut/no_vocals.wav",
+      "interval": [
+        0,
+        74.0740740741
+      ],
+      "speech_intervals": [],
+      "detected": false
+    },
+    {
+      "name": "coverage_fullmix",
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/categories-20261010-215252/soundtrack-categories-20261010-215252.wav",
+      "interval": [
+        41.4814814815,
+        53.3333333333
+      ],
+      "speech_intervals": [],
+      "detected": false
+    },
+    {
+      "name": "numeric_payoff_fullmix",
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/categories-20261010-215252/soundtrack-categories-20261010-215252.wav",
+      "interval": [
+        62.6,
+        65.1851851852
+      ],
+      "speech_intervals": [],
+      "detected": false
+    }
+  ]
+}

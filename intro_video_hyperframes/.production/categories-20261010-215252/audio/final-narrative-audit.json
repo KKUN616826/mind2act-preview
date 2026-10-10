@@ -1,0 +1,107 @@
+{
+  "reviewed_at": "2026-10-10",
+  "source_manifest": "assets/source-metadata/training-demos-20261009/manifest.json",
+  "source_manifest_sha256": "e32c6b4bb0fb859a27c228f9d5cc89591bd05f0957f298a1ed66d9fca9d744e0",
+  "source_created_at": "2026-10-09T08:51:35.975719+00:00",
+  "source_catalog": "/root/share/physco/mind2act_bench/.management/catalog/4f6db14178f664e71790fb43db4e2b0c66a8ffbe6836cb9dc68daefd06869017",
+  "source_export": "/root/share/physco/mind2act_bench/exports/xpolicylab/.builds/cleanup-20260929T095332Z",
+  "source_selection_sha256": "5d483916fc29a8988a823f899609e179cc0a1450e81963e1f199c06f18dee227",
+  "category_mapping": {
+    "Mind": [
+      "E",
+      "F",
+      "P",
+      "S",
+      "M"
+    ],
+    "Act": [
+      "FR1",
+      "FR2",
+      "PR1",
+      "PR2",
+      "PR3"
+    ],
+    "Mind2Act": [
+      "CP01",
+      "CP02",
+      "CP03",
+      "CP04",
+      "CP05"
+    ]
+  },
+  "count_validation": {
+    "unique_task_count": 15,
+    "configuration_count": 45
+  },
+  "version_conflict_resolution": "Current upstream case docs redefine CP03/CP04 and add CP05 lid instructions. They are not authoritative for the user-selected frozen project assets. Pin project 2026-10-09 source manifest, source videos, source-refresh audit and local reference positioning.",
+  "f_source_visual_review": {
+    "contact_sheet": ".production/categories-20261010-215252/f-contact.jpg",
+    "easy": "linear track with two unmarked buttons",
+    "medium": "3×3 node grid with four unmarked buttons",
+    "hard": "4×4 node grid with four unmarked buttons",
+    "matches_pinned_instructions": true
+  },
+  "critical_pinned_instructions": [
+    {
+      "id": "F/easy/episode_0003",
+      "instruction": "Probe both unmarked buttons and remember how each moves the slider. After the slider resets and the goal appears, reach the visible goal using the fewest presses.",
+      "source_id": "F_easy_08e2e9c6ad9f191e"
+    },
+    {
+      "id": "F/medium/episode_0030",
+      "instruction": "Probe four identical unmarked buttons distinguished only by spatial position. Infer the unknown cardinal-direction mapping through visible movement. After reset, preserve the mapping and navigate to the visible goal on the 3 by 3 grid using a shortest route of 2–3 steps.",
+      "source_id": "F_medium_89af34cc20f700c4"
+    },
+    {
+      "id": "F/hard/episode_0022",
+      "instruction": "Probe four identical unmarked buttons distinguished only by spatial position. Infer the unknown cardinal-direction mapping through visible movement. After reset, preserve the mapping and navigate to the visible goal on the 4 by 4 grid using a shortest route. Both axes change; shortest distance is 4–6.",
+      "source_id": "F_hard_6433f03e5b77f765"
+    },
+    {
+      "id": "CP03/easy/episode_0024",
+      "instruction": "Load 3 upright plates into the moving empty slots without disturbing other plates. Press Start before loading.",
+      "source_id": "CP03_easy_91b1075cb469e65c"
+    },
+    {
+      "id": "CP03/medium/episode_0014",
+      "instruction": "Load 5 upright plates into the moving empty slots without disturbing other plates. Set gear 2, release the lever, then press Start before loading.",
+      "source_id": "CP03_medium_389c68a8fa23ff6a"
+    },
+    {
+      "id": "CP03/hard/episode_0028",
+      "instruction": "Load 7 upright plates into the moving empty slots without disturbing other plates. Set gear 3, release the lever, then press Start before loading.",
+      "source_id": "CP03_hard_6ea97fb0f36a1606"
+    },
+    {
+      "id": "CP04/easy/episode_0043",
+      "instruction": "Observe the complete recipe, remember its order, then cook it. Return each empty jar upright, place and release the pot lid, heat, keep warm, and turn off. Switch HEAT to KEEP WARM within 4 seconds after reaching80C (green80–90C); physical OFF freezes temperature.",
+      "source_id": "CP04-cp04-scale420-candidate-v2-easy-train-f4-r02"
+    },
+    {
+      "id": "CP04/medium/episode_0042",
+      "instruction": "Observe the complete recipe, remember its order, then cook it. Return each empty jar upright, place and release the pot lid, heat, keep warm, and turn off. Switch HEAT to KEEP WARM within 3 seconds after reaching80C (green80–87.5C); physical OFF freezes temperature.",
+      "source_id": "CP04-cp04-scale420-candidate-v2-medium-train-f4-r01"
+    },
+    {
+      "id": "CP04/hard/episode_0039",
+      "instruction": "Observe the complete recipe, remember its order, then cook it. Return each empty jar upright, place and release the pot lid, heat, keep warm, and turn off. Switch HEAT to KEEP WARM within 2 seconds after reaching80C (green80–85C); physical OFF freezes temperature.",
+      "source_id": "CP04-cp04-scale420-candidate-v2-hard-train-f3-r08"
+    },
+    {
+      "id": "CP05/easy/episode_0010",
+      "instruction": "Pick up the left mallet, tap Play, watch and remember the demonstrated key sequence, reproduce it with the mallet, then return the tool. No rhythm matching is required.",
+      "source_id": "CP05_easy_27c72424f927e14a"
+    },
+    {
+      "id": "CP05/medium/episode_0010",
+      "instruction": "Pick up both mallets, tap Play, watch and remember the demonstrated key sequence, reproduce it with the mallets, then return both tools. No rhythm matching is required.",
+      "source_id": "CP05_nocloth80_medium_3909e84504d03663"
+    },
+    {
+      "id": "CP05/hard/episode_0002",
+      "instruction": "Set the volume slider to MAX. Pick up both mallets, tap Play, watch and remember the demonstrated key sequence, reproduce it with the mallets, then return both tools. No rhythm matching is required.",
+      "source_id": "CP05_nocloth82_hard_1112de462ecb883f"
+    }
+  ],
+  "review_result": "No blocking narrative or accuracy issue in current HTML/docs. Separate category cases; conceptual coordination then peer taxonomy;15tasknames accurately grouped; no invented scores/recovery/modelstates; Fcounts grounded; exact45configurations."
+}

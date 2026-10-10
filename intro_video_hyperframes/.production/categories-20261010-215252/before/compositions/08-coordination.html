@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"></head><body><template>
+<style>
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400;src:url('assets/fonts/SpaceGrotesk-400.ttf') format('truetype')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;src:url('assets/fonts/SpaceGrotesk-600.ttf') format('truetype')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('assets/fonts/IBMPlexMono-400.ttf') format('truetype')}
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.coord-surface{position:absolute;inset:0;background:#090e13;color:#faf9f4;font-family:'Space Grotesk',sans-serif;letter-spacing:0}
+.coord-head{position:absolute;left:80px;top:68px;font-size:60px;line-height:1.15;font-weight:600;margin:0}
+.coord-mark{position:absolute;width:190px;height:190px;object-fit:contain;top:430px}
+.coord-name{position:absolute;top:622px;width:280px;text-align:center;font-size:44px;font-weight:600}
+.coord-intent{position:absolute;left:585px;top:290px;width:750px;text-align:center;color:#f0d57e;font-size:30px}
+.coord-film{position:absolute;left:450px;top:394px;width:1020px;height:574px;overflow:hidden;background:#152028}
+.coord-film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.coord-film-caption{position:absolute;left:20px;top:16px;font:18px 'IBM Plex Mono',monospace;color:#fff;background:#090e13df;padding:8px 12px}
+.coord-state{position:absolute;left:88px;top:701px;width:300px;font-size:26px;line-height:1.5;color:#c6d3df}
+.coord-state strong{display:block;color:#bdd9cc;font-size:29px;line-height:1.3;margin-bottom:10px}
+.coord-result{position:absolute;left:1540px;top:704px;width:295px;font-size:28px;line-height:1.3;color:#bdd9cc}
+.coord-result small{display:block;font:18px 'IBM Plex Mono',monospace;color:#c6d3df;margin-top:12px}
+.coord-paths{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}
+#coord-forward-pulse,#coord-return-pulse{opacity:0}
+.coord-mappings{position:absolute;left:80px;right:80px;top:1010px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;font-size:21px;color:#e4e6d2}
+.coord-mappings span{color:#bdd9cc;margin-right:10px}
+.coord-update{position:absolute;left:685px;top:958px;width:550px;text-align:center;font-size:25px;color:#bdd9cc;background:#090e13;padding:7px 0}
+</style>
+<div id="root" data-composition-id="coordination" data-width="1920" data-height="1080" data-duration="11.111111">
+<div id="coord-surface" class="coord-surface">
+<h2 id="coord-head" class="coord-head">Strong parts need a feedback loop.</h2>
+<!-- Authored task-logic illustration, not reconstructed model internal state. -->
+<div id="coord-film" class="coord-film"><video id="coord-piano" class="clip" src="assets/generated/coordination-20261010-174012/piano-feedback.mp4" data-start="0" data-duration="11.731111" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video><div class="coord-film-caption">CP05 / ACTUAL EXECUTION</div></div>
+<svg id="coord-paths" class="coord-paths" viewBox="0 0 1920 1080" aria-label="Intent guides action; actual results update task state and guide the next action">
+<defs><marker id="coord-arrow-gold" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#f0d57e" stroke-width="2"/></marker><marker id="coord-arrow-mint" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#bdd9cc" stroke-width="2"/></marker></defs>
+<path id="coord-forward" d="M285 419 C310 315 475 352 580 352 L1340 352 C1445 352 1610 315 1635 419" fill="none" stroke="#f0d57e" stroke-width="3" marker-end="url(#coord-arrow-gold)"/>
+<path id="coord-forward-pulse" d="M285 419 C310 315 475 352 580 352 L1340 352 C1445 352 1610 315 1635 419" pathLength="1" fill="none" stroke="#fff4c8" stroke-width="7" stroke-dasharray="0.05 1"/>
+<path id="coord-return" d="M1635 843 C1635 976 1495 980 1340 980 L580 980 C425 980 285 976 285 868" fill="none" stroke="#bdd9cc" stroke-width="3" marker-end="url(#coord-arrow-mint)"/>
+<path id="coord-return-pulse" d="M1635 843 C1635 976 1495 980 1340 980 L580 980 C425 980 285 976 285 868" pathLength="1" fill="none" stroke="#e2fff1" stroke-width="7" stroke-dasharray="0.055 1"/>
+</svg>
+<img id="coord-mind" class="coord-mark" style="left:190px" src="assets/logos/Mind2Act-三个Logo-高清透明版/01-Mind-1308x1203.png" alt="Mind">
+<img id="coord-act" class="coord-mark" style="left:1540px" src="assets/logos/Mind2Act-三个Logo-高清透明版/02-Act-1268x1241.png" alt="Act">
+<div id="coord-mind-name" class="coord-name" style="left:145px">Mind</div><div id="coord-act-name" class="coord-name" style="left:1495px">Act</div>
+<div id="coord-intent" class="coord-intent">Intent guides physically valid action</div>
+<div id="coord-next" class="coord-intent">Updated task state guides the next action</div>
+<div id="coord-state" class="coord-state"><strong>Update task state</strong><div>Remaining goals</div><div>Action timing</div><div>Phase progression</div></div>
+<div id="coord-result" class="coord-result">Actual key response<small>RESULT FIRST</small></div>
+<div id="coord-update" class="coord-update">Outcomes guide what comes next</div>
+<div id="coord-mappings" class="coord-mappings"><div><span>P</span> Delivered items → remaining demand</div><div><span>PR3</span> Actual trace → remaining path</div><div><span>CP05</span> Valid key response → sequence progression</div></div>
+</div></div>
+<script>(function(){const tl=gsap.timeline({paused:true});
+tl.fromTo('#coord-surface',{clipPath:'inset(0% 100% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},0);
+tl.fromTo('#coord-head',{opacity:0,y:45},{opacity:1,y:0,duration:.65,ease:'expo.out'},.18);
+tl.fromTo('#coord-film',{opacity:0,scale:1.07},{opacity:1,scale:1,duration:.7,ease:'power3.out'},.3);
+tl.fromTo(['#coord-mind','#coord-act','#coord-mind-name','#coord-act-name'],{opacity:0,y:35},{opacity:1,y:0,duration:.6,stagger:.08,ease:'power3.out'},.45);
+tl.fromTo(['#coord-forward','#coord-intent'],{opacity:0},{opacity:1,duration:.45},1.1);
+tl.set('#coord-forward-pulse',{strokeDashoffset:0,opacity:1},1.5);tl.to('#coord-forward-pulse',{strokeDashoffset:-1,duration:1.55,ease:'power2.inOut'},1.5);tl.set('#coord-forward-pulse',{opacity:0},3.05);
+tl.fromTo(['#coord-return','#coord-state','#coord-result','#coord-update'],{opacity:0},{opacity:1,duration:.35},4.5);
+tl.fromTo('#coord-result',{y:18},{y:0,duration:.4,ease:'power3.out'},4.5);
+tl.set('#coord-return-pulse',{strokeDashoffset:0,opacity:1},4.65);tl.to('#coord-return-pulse',{strokeDashoffset:-1,duration:1.15,ease:'power2.inOut'},4.65);tl.set('#coord-return-pulse',{opacity:0},5.8);
+tl.fromTo('#coord-state',{color:'#fff4c8'},{color:'#c6d3df',duration:.7},5.8);
+tl.to('#coord-intent',{opacity:0,duration:.18},5.8);tl.fromTo('#coord-next',{opacity:0,y:15},{opacity:1,y:0,duration:.4,ease:'power3.out'},5.95);
+tl.set('#coord-forward-pulse',{strokeDashoffset:0,opacity:1},5.95);tl.to('#coord-forward-pulse',{strokeDashoffset:-1,duration:.90,ease:'power2.inOut'},5.95);tl.set('#coord-forward-pulse',{opacity:0},6.85);
+tl.set('#coord-return-pulse',{strokeDashoffset:0,opacity:1},7.1);tl.to('#coord-return-pulse',{strokeDashoffset:-1,duration:1.1,ease:'power2.inOut'},7.1);tl.set('#coord-return-pulse',{opacity:0},8.2);
+tl.set('#coord-forward-pulse',{strokeDashoffset:0,opacity:1},8.3);tl.to('#coord-forward-pulse',{strokeDashoffset:-1,duration:1,ease:'power2.inOut'},8.3);tl.set('#coord-forward-pulse',{opacity:0},9.3);
+tl.set('#coord-return-pulse',{strokeDashoffset:0,opacity:1},9.9);tl.to('#coord-return-pulse',{strokeDashoffset:-1,duration:1,ease:'power2.inOut'},9.9);tl.set('#coord-return-pulse',{opacity:0},10.9);
+tl.fromTo('#coord-mappings',{opacity:0,y:20},{opacity:1,y:0,duration:.55,ease:'power3.out'},1.25);
+tl.to('#coord-film',{scale:1.015,duration:9.5,ease:'none'},1.1);
+window.__timelines['coordination']=tl;})();</script>
+</template></body></html>

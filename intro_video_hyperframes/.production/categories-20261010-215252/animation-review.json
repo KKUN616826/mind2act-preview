@@ -1,0 +1,107 @@
+{
+  "flags": {
+    "collision": 308,
+    "paced-slow": 9,
+    "offscreen": 4,
+    "degenerate": 1,
+    "paced-fast": 21,
+    "invisible": 18
+  },
+  "examples": [
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0,
+      "end": 0.55
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.37,
+      "end": 0.82
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.463,
+      "end": 1.013
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.463,
+      "end": 1.013
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.463,
+      "end": 0.963
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.463,
+      "end": 0.823
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.463,
+      "end": 1.863
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.463,
+      "end": 0.843
+    },
+    {
+      "target": 1,
+      "flag": "collision",
+      "start": 0.463,
+      "end": 0.863
+    }
+  ],
+  "dead_zones": [
+    {
+      "start": 39.5,
+      "end": 41,
+      "duration": 1.5,
+      "note": "No animation for 1.5s. Intentional hold or missing entrance?"
+    },
+    {
+      "start": 45.5,
+      "end": 46.5,
+      "duration": 1,
+      "note": "No animation for 1.0s. Intentional hold or missing entrance?"
+    },
+    {
+      "start": 49,
+      "end": 52,
+      "duration": 3,
+      "note": "No animation for 3.0s. Intentional hold or missing entrance?"
+    },
+    {
+      "start": 61.5,
+      "end": 62.5,
+      "duration": 1,
+      "note": "No animation for 1.0s. Intentional hold or missing entrance?"
+    },
+    {
+      "start": 70,
+      "end": 74.1,
+      "duration": 4.1,
+      "note": "No animation for 4.1s at end. Final hold or missing outro?"
+    }
+  ],
+  "interpretation": "Later sub-composition tween entries appear both local and nested in helper output; read global rendered/check snapshots for visibility. Holds at triangle39.5\u201341, taskwall49\u201352, Fcomparison61.5\u201362.5 and CTA70\u201374.1 are intentional. Real videos continue during footage holds.",
+  "flag_review": {
+    "collision": "All are layered containers or crossfading in-scene phases (background+title, exact logo takeover, F hero\u2192wall, large levels\u2192rows); final snapshots and runtime-layout check are the visibility authority.",
+    "offscreen": "Local-time duplicates for later mounted scenes, plus fullframe captionbar bottomedge intentionalentrance. Actualbar snapshots42.5/44/45.7 withinframe; correctedFfooter crop.",
+    "degenerate": "Outro-accent local-time duplicate sampled prior to hoststart; global70.5 originalwordmark accent settles.",
+    "invisible": "Intentional phase replacement: component marks\u2192fullmark, paths\u2192triangle, targetfocus\u2192inset, levelhero\u2192comparisonrows, no hidden finaltasktile.",
+    "paced-fast": "0.16\u20130.22s cue/switch/fade punctuation, not long copy-reading intervals.",
+    "paced-slow": "Footage push-ins last1\u20133s; realvideo continues."
+  }
+}

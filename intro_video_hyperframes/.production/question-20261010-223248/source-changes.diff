@@ -1,0 +1,39 @@
+--- before/compositions/02-motivation.html
+
++++ compositions/02-motivation.html
+
+@@ -19,7 +19,7 @@
+
+ #motivation-coordination p{color:#f0d57e}
+ </style>
+ <div id="motivation-root" data-composition-id="motivation" data-width="1920" data-height="1080" data-duration="6.666667"><div class="motivation-surface" id="motivation-surface"><div class="motivation-content">
+-<h1 class="motivation-question"><span class="motivation-line"><span id="motivation-question-first">Can strong parts make</span></span><span class="motivation-line"><span id="motivation-question-second">a reliable whole?</span></span></h1>
++<h1 class="motivation-question"><span class="motivation-line"><span id="motivation-question-first">Can reasoning and action</span></span><span class="motivation-line"><span id="motivation-question-second">work together?</span></span></h1>
+ <div class="motivation-categories">
+ <div class="motivation-category" id="motivation-reasoning"><img class="motivation-mark" src="assets/logos/Mind2Act-三个Logo-高清透明版/01-Mind-1308x1203.png" alt="Mind"><h2>Mind</h2><p>Remember. Reason. Decide.</p></div>
+ <div class="motivation-category" id="motivation-execution"><img class="motivation-mark" src="assets/logos/Mind2Act-三个Logo-高清透明版/02-Act-1268x1241.png" alt="Act"><h2>Act</h2><p>Execute with physical precision.</p></div>
+--- before/STORYBOARD.md
+
++++ STORYBOARD.md
+
+@@ -10,7 +10,7 @@
+
+ src: compositions/02-motivation.html
+ range: 5.185185–11.851852
+ motion: kinetic-beat-slam; waterfall-entry
+-Can strong parts make a reliable whole? Three independent category anchors: remember/reason/decide; physical execution; whole-task coordination. No pipeline diagram.
++Can reasoning and action work together? Three independent category anchors: remember/reason/decide; physical execution; whole-task coordination. No pipeline diagram.
+ ## Frame 3
+ status: animated
+ src: compositions/03-mind.html
+--- before/index.html
+
++++ index.html
+
+@@ -12,4 +12,4 @@
+
+ <div id="scene-scale" class="clip" data-composition-id="scale" data-composition-src="compositions/06-scale.html" data-start="41.481481" data-duration="12.471852" data-track-index="7" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:7"></div>
+ <div id="scene-difficulty" class="clip" data-composition-id="difficulty" data-composition-src="compositions/09-difficulty.html" data-start="53.333333" data-duration="12.471852" data-track-index="8" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:8"></div>
+ <div id="scene-outro" class="clip" data-composition-id="outro" data-composition-src="compositions/07-outro.html" data-start="65.185185" data-duration="8.888889" data-track-index="9" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:9"></div>
+-<audio id="soundtrack" class="clip" src="assets/generated/audio/categories-20261010-215252/soundtrack-categories-20261010-215252.wav" data-start="0" data-duration="74.074074" data-track-index="20" data-volume="1"></audio></div><script>const tl=gsap.timeline({paused:true});tl.to({progress:0},{progress:1,duration:74.0740740741,ease:'none'},0);window.__timelines['main']=tl;</script></body></html>
++<audio id="soundtrack" class="clip" src="assets/generated/audio/question-20261010-223248/soundtrack-question-20261010-223248.wav" data-start="0" data-duration="74.074074" data-track-index="20" data-volume="1"></audio></div><script>const tl=gsap.timeline({paused:true});tl.to({progress:0},{progress:1,duration:74.0740740741,ease:'none'},0);window.__timelines['main']=tl;</script></body></html>

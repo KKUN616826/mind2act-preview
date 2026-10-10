@@ -1,0 +1,20 @@
+{
+  "model": "faster-whisper medium.en int8 CPU",
+  "expected_text_not_supplied_to_model": true,
+  "cues": [
+    {
+      "id": "mind2act",
+      "expected": "Mind to Act links sequence memory with valid key presses.",
+      "transcript": "Mind-to-Act links sequence memory with valid key presses.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.8000000000000003,
+          "text": " Mind-to-Act links sequence memory with valid key presses.",
+          "no_speech_prob": 0.002287056064233184
+        }
+      ],
+      "exact_normalized_match": true
+    }
+  ]
+}

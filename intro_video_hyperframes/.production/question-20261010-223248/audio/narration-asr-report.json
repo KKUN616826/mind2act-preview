@@ -1,0 +1,20 @@
+{
+  "model": "faster-whisper medium.en int8 CPU",
+  "expected_text_not_supplied_to_model": true,
+  "cues": [
+    {
+      "id": "motivation",
+      "expected": "Can reasoning and action work together?",
+      "transcript": "Can reasoning and action work together?",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.3000000000000003,
+          "text": " Can reasoning and action work together?",
+          "no_speech_prob": 0.0009342229459434748
+        }
+      ],
+      "exact_normalized_match": true
+    }
+  ]
+}

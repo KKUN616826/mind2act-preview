@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "master": "renders/mind2act-world-promo-1080p-20261010-221251.mp4",
+  "reviewers": [
+    "root",
+    "logo_synthesis",
+    "breadth_difficulty"
+  ],
+  "evidence": [
+    "rendered/summary-motion.jpg",
+    "rendered/breadth-motion.jpg",
+    "rendered/difficulty-motion.jpg",
+    "export-review-logo.md",
+    "export-review-breadth.md",
+    "export-review-breadth-metrics.json"
+  ],
+  "findings": {
+    "logo": "Exactoriginal independentparts+3dots \u2192complete mark; threecategories holdcomparably",
+    "category_wall": "15tasks grouped5/5/5; eachactualvideo advances",
+    "F_levels": "Correct3levels; underlyingvideosadvance at1x; fullgrid/buttons visible",
+    "titles": "Readable distinctcasecopy, exactwordmark no colon",
+    "insets": "Actcomparison andCP05EXCERPT retained; resultcue followsrealgreen",
+    "closing": "Wordmark/actions/URL held",
+    "blocking_defects": []
+  },
+  "scope": "Actual decodedMP4 stills, temporalcontact sheets andvideoregionframe-differences, plusfullfiledecode. Not continuous human audiovisual playback."
+}

@@ -1,0 +1,130 @@
+{
+  "video": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261010-223844.mp4",
+  "decoded_audio": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/question-20261010-223248/audio/mind2act-world-promo-1080p-20261010-223844-decoded-aac.wav",
+  "master": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/soundtrack-question-20261010-223248.wav",
+  "master_vs_aac_correlation": 0.996717778581902,
+  "wav_duration": 74.07408333333333,
+  "decoded_aac_duration": 74.09066666666666,
+  "loudness_lufs": -16.1,
+  "true_peak_dbtp": -2.39,
+  "cue_checks": [
+    {
+      "id": "intro",
+      "start": 0.28,
+      "end": 4.477458333333334,
+      "master_vs_aac_correlation": 0.9989189447218987,
+      "gain_error_db": -0.06021798177014222,
+      "expected_vo_lufs": -17.12,
+      "passed": true
+    },
+    {
+      "id": "motivation",
+      "start": 5.75,
+      "end": 8.061166666666667,
+      "master_vs_aac_correlation": 0.9991890636036592,
+      "gain_error_db": -0.04134341846445341,
+      "expected_vo_lufs": -17.05,
+      "passed": true
+    },
+    {
+      "id": "mind",
+      "start": 12.22,
+      "end": 15.472791666666666,
+      "master_vs_aac_correlation": 0.9991222728944601,
+      "gain_error_db": -0.05426563552847089,
+      "expected_vo_lufs": -17.08,
+      "passed": true
+    },
+    {
+      "id": "act",
+      "start": 18.12,
+      "end": 21.209,
+      "master_vs_aac_correlation": 0.9990556418674779,
+      "gain_error_db": -0.06173003523060781,
+      "expected_vo_lufs": -17.13,
+      "passed": true
+    },
+    {
+      "id": "mind2act",
+      "start": 24.03,
+      "end": 27.83975,
+      "master_vs_aac_correlation": 0.9983304962774706,
+      "gain_error_db": -0.08286024414490048,
+      "expected_vo_lufs": -17.07,
+      "passed": true
+    },
+    {
+      "id": "coordination-loop",
+      "start": 30.04,
+      "end": 37.74366666666667,
+      "master_vs_aac_correlation": 0.9978656039910541,
+      "gain_error_db": -0.07523303527940699,
+      "expected_vo_lufs": -17.06,
+      "passed": true
+    },
+    {
+      "id": "scale-easy",
+      "start": 53.6833333333,
+      "end": 54.403333333333336,
+      "master_vs_aac_correlation": 0.9979359872784228,
+      "gain_error_db": -0.08159235833140625,
+      "expected_vo_lufs": -17.01,
+      "passed": true
+    },
+    {
+      "id": "scale-medium",
+      "start": 55.7833333333,
+      "end": 56.57604166666667,
+      "master_vs_aac_correlation": 0.9979582560939693,
+      "gain_error_db": -0.07941259890932688,
+      "expected_vo_lufs": -17.02,
+      "passed": true
+    },
+    {
+      "id": "scale-hard",
+      "start": 57.883333333299994,
+      "end": 58.57695833333333,
+      "master_vs_aac_correlation": 0.9974645985600713,
+      "gain_error_db": -0.08567950400986299,
+      "expected_vo_lufs": -17.06,
+      "passed": true
+    },
+    {
+      "id": "ending",
+      "start": 65.8818518519,
+      "end": 70.77702083333334,
+      "master_vs_aac_correlation": 0.9973873449241323,
+      "gain_error_db": -0.07253827007908903,
+      "expected_vo_lufs": -17.06,
+      "passed": true
+    }
+  ],
+  "statistics_narration_peak": 0.0,
+  "difficulty_lufs_spread": 0.04999999999999716,
+  "music_only_interval_narration_peaks": [
+    {
+      "interval": [
+        41.4814814815,
+        53.3333333333
+      ],
+      "peak": 0.0
+    },
+    {
+      "interval": [
+        62.6,
+        65.1851851852
+      ],
+      "peak": 0.0
+    }
+  ],
+  "manual_listening": false,
+  "bgm_listening_sample": [
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/review-bgm-only.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/review-closing.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/review-coordination-loop.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/review-difficulty-fullmix.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/review-difficulty-vo.wav",
+    "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/review-statistics-music-only.wav"
+  ],
+  "passed": true
+}

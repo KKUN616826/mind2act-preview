@@ -1,0 +1,102 @@
+{
+  "video": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261010-221251.mp4",
+  "model": "faster-whisper medium.en int8 CPU",
+  "vad_model": "bundled Silero threshold0.5",
+  "vad_checks": [
+    {
+      "name": "coverage",
+      "interval": [
+        41.4814814815,
+        53.3333333333
+      ],
+      "speech_intervals": []
+    },
+    {
+      "name": "numeric_payoff",
+      "interval": [
+        62.6,
+        65.1851851852
+      ],
+      "speech_intervals": []
+    }
+  ],
+  "difficulty_cues": [
+    {
+      "id": "scale-easy",
+      "intended": "Easy.",
+      "transcript": "Easy.",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 53.6033333333,
+      "sample_end": 54.483333333333334,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.54,
+          "text": " Easy.",
+          "no_speech_prob": 0.03923378512263298,
+          "words": [
+            {
+              "text": " Easy.",
+              "start": 0.0,
+              "end": 0.54,
+              "probability": 0.7903456687927246
+            }
+          ]
+        }
+      ],
+      "match": true
+    },
+    {
+      "id": "scale-medium",
+      "intended": "Medium.",
+      "transcript": "Medium",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 55.7033333333,
+      "sample_end": 56.65604166666667,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.52,
+          "text": " Medium",
+          "no_speech_prob": 0.09275361895561218,
+          "words": [
+            {
+              "text": " Medium",
+              "start": 0.0,
+              "end": 0.52,
+              "probability": 0.5754107236862183
+            }
+          ]
+        }
+      ],
+      "match": true
+    },
+    {
+      "id": "scale-hard",
+      "intended": "Hard.",
+      "transcript": "Hard.",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 57.803333333299996,
+      "sample_end": 58.65695833333333,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Hard.",
+          "no_speech_prob": 0.12398940324783325,
+          "words": [
+            {
+              "text": " Hard.",
+              "start": 0.0,
+              "end": 0.5,
+              "probability": 0.4848063886165619
+            }
+          ]
+        }
+      ],
+      "match": true
+    }
+  ],
+  "manual_listening": false,
+  "pass": true
+}

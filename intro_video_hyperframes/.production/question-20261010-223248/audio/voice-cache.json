@@ -1,0 +1,205 @@
+[
+  {
+    "id": "intro",
+    "start": 0.28,
+    "max_duration": 4.55,
+    "speed": 1.03,
+    "text": "Mind to Act World. Reasoning and action, evaluated together.",
+    "caption": "Mind2Act World. Reasoning and action, evaluated together.",
+    "cache_key": "1f4809b680dc746d2979bcf0dcf28444a80ce84e42373dcf3581326befe54f85",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Mind to Act World. Reasoning and action, evaluated together.",
+      "speed": 1.03
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-intro-1f4809b680dc746d-raw.wav",
+    "raw_duration": 4.309333333333333
+  },
+  {
+    "id": "motivation",
+    "start": 5.75,
+    "max_duration": 5.55,
+    "speed": 1.03,
+    "text": "Can reasoning and action work together?",
+    "caption": "Can reasoning and action work together?",
+    "cache_key": "b20343c7228ec023abf4e798b90d177c6586255c5339b5d7bbce9aa20eaa0a2f",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Can reasoning and action work together?",
+      "speed": 1.03
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-motivation-b20343c7228ec023-raw.wav",
+    "raw_duration": 2.5813333333333333
+  },
+  {
+    "id": "mind",
+    "start": 12.22,
+    "max_duration": 5.1,
+    "speed": 1.02,
+    "text": "Mind tracks the task through observations and history.",
+    "cache_key": "598b750775593eec83f6f52712e5583f287a629eca999645ba1288933c95775b",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Mind tracks the task through observations and history.",
+      "speed": 1.02
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-mind-598b750775593eec-raw.wav",
+    "raw_duration": 3.4346666666666668
+  },
+  {
+    "id": "act",
+    "start": 18.12,
+    "max_duration": 5.1,
+    "speed": 1.02,
+    "text": "Act must make the intended physical result happen.",
+    "cache_key": "03f1ca2f0e42427142536fed24c747ce10f41a40ff346bd9124833570c9b4a23",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Act must make the intended physical result happen.",
+      "speed": 1.02
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-act-03f1ca2f0e424271-raw.wav",
+    "raw_duration": 3.2213333333333334
+  },
+  {
+    "id": "mind2act",
+    "start": 24.03,
+    "max_duration": 5.1,
+    "speed": 1.02,
+    "text": "Mind to Act links sequence memory with valid key presses.",
+    "caption": "Mind2Act links sequence memory with valid key presses.",
+    "cache_key": "c9488ef5242add085d22b7a81451f07f997a7dbb814cb83751211228d3310d62",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Mind to Act links sequence memory with valid key presses.",
+      "speed": 1.02
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-mind2act-c9488ef5242add08-raw.wav",
+    "raw_duration": 3.8826666666666667
+  },
+  {
+    "id": "coordination-loop",
+    "start": 30.04,
+    "max_duration": 10.0,
+    "speed": 1.03,
+    "text": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next.",
+    "cache_key": "296f38bfb7cb2a993cbc90f33ad71e16e00e9be03ac91cad215fcd3f80bbbc6f",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next.",
+      "speed": 1.03
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-coordination-loop-296f38bfb7cb2a99-raw.wav",
+    "raw_duration": 7.722666666666667
+  },
+  {
+    "id": "scale-easy",
+    "start": 53.6833333333,
+    "max_duration": 1.0,
+    "speed": 1.0,
+    "text": "Easy.",
+    "cache_key": "74b07d2eac07b8fcac9a19f1651add8894a7dc5997a816116c8a2b28ab34ff5c",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Easy.",
+      "speed": 1.0
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-scale-easy-74b07d2eac07b8fc-raw.wav",
+    "raw_duration": 0.8746666666666667
+  },
+  {
+    "id": "scale-medium",
+    "start": 55.7833333333,
+    "max_duration": 1.0,
+    "speed": 1.0,
+    "text": "Medium.",
+    "cache_key": "3fe35d6dc64a83b5076c9560a2dc70e9947708a195b64d81326b6a1e6a13773f",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Medium.",
+      "speed": 1.0
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-scale-medium-3fe35d6dc64a83b5-raw.wav",
+    "raw_duration": 0.9386666666666666
+  },
+  {
+    "id": "scale-hard",
+    "start": 57.883333333299994,
+    "max_duration": 1.0,
+    "speed": 1.0,
+    "text": "Hard.",
+    "cache_key": "fec18e6326c5c39ff4ac86257b5f15379bffcc548fbd3039ea41d94b27299c64",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Hard.",
+      "speed": 1.0
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-scale-hard-fec18e6326c5c39f-raw.wav",
+    "raw_duration": 0.8106666666666666
+  },
+  {
+    "id": "ending",
+    "start": 65.8818518519,
+    "max_duration": 7.55,
+    "speed": 1.03,
+    "text": "Build the benchmark. Test your agents. Let's take the next giant leap together.",
+    "cache_key": "b10cefa68545e266c4b67fe74f75f317c85d50b74e144965ade852866e79ee92",
+    "cache_parameters": {
+      "provider": "kokoro-onnx",
+      "provider_version": "0.6.1",
+      "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "voice": "am_michael",
+      "language": "en-us",
+      "text": "Build the benchmark. Test your agents. Let's take the next giant leap together.",
+      "speed": 1.03
+    },
+    "raw_path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/audio/question-20261010-223248/vo-ending-b10cefa68545e266-raw.wav",
+    "raw_duration": 4.949333333333334
+  }
+]

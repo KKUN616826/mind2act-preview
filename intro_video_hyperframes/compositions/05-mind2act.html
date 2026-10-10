@@ -20,6 +20,7 @@
 .piano-dot{width:15px;height:15px;border-radius:50%;background:currentColor;flex-shrink:0}
 .piano-phase-word{display:block}
 .piano-phase-note{display:block;font-size:20px;line-height:1.35;color:inherit}
+.piano-response-label{display:grid}.piano-response-label span{grid-area:1/1}
 .piano-memory{position:absolute;left:64px;bottom:64px;width:930px;height:184px;padding:20px;background:#090e13ed;border:2px solid #9fb2c8}
 .piano-memory-label{font:400 24px/1.25 'IBM Plex Mono',monospace;color:#f0d57e}
 .piano-memory-images{display:flex;gap:12px;margin-top:16px}
@@ -36,12 +37,12 @@
     <div class="piano-shade"></div>
     <div class="piano-heading" id="mind2act-heading">
       <div class="piano-kicker"><img class="piano-mark" src="assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png" alt="Complete Mind2Act mark"><span>Mind2Act / CP05 · Piano replay · Excerpt</span></div>
-      <h2 class="piano-title">Actual outcomes shape the next action.</h2>
+      <h2 class="piano-title">Remember the sequence. Make each press count.</h2>
     </div>
     <div class="piano-evidence" id="piano-evidence">
       <div class="piano-panel-title">SEQUENCE REPLAY</div>
       <div class="piano-phase piano-observe" id="piano-phase-observe"><span class="piano-dot" id="piano-observe-dot"></span><span><span class="piano-phase-word">Observe</span><span class="piano-phase-note">Blue demonstration</span></span></div>
-      <div class="piano-phase" id="piano-phase-replay"><span class="piano-dot" id="piano-replay-dot"></span><span><span class="piano-phase-word">Replay</span><span class="piano-phase-note">Green key response</span></span></div>
+      <div class="piano-phase" id="piano-phase-replay"><span class="piano-dot" id="piano-replay-dot"></span><span><span class="piano-phase-word">Replay</span><span class="piano-phase-note piano-response-label"><span id="piano-execute-note">Execute the sequence</span><span id="piano-response-note">Key response observed</span></span></span></div>
     </div>
     <div class="piano-memory" id="piano-memory">
       <div class="piano-memory-label">OBSERVED SEQUENCE · EXCERPT</div>
@@ -68,6 +69,10 @@ tl.to('#piano-phase-observe',{borderColor:'#7189a5',color:'#9fb2c8',duration:.18
 tl.to('#piano-observe-dot',{opacity:.3,duration:.18},2.98);
 tl.to('#piano-phase-replay',{borderColor:'#f0d57e',color:'#f0d57e',duration:.18},2.98);
 tl.to('#mind2act-camera',{scale:1.145,x:0,y:18,duration:1.08,ease:'sine.inOut'},2.98);
+// First source green response: (48.366667 - 44) / 2.82 + 2.962963 = 4.511427.
+// This describes an observed response, not model state or full task success.
+tl.fromTo('#piano-response-note',{opacity:0},{opacity:1,duration:.16,ease:'power2.out'},4.55);
+tl.to('#piano-execute-note',{opacity:0,duration:.14,ease:'power2.out'},4.55);
 tl.to('#mind2act-camera',{scale:1.18,x:0,y:20,duration:1.55,ease:'sine.out'},4.1);
 window.__timelines['mind2act']=tl;
 })();</script>

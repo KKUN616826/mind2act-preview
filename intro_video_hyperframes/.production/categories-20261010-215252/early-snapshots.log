@@ -1,0 +1,12 @@
+◆  Capturing 5 frames at [3.5s, 8.5s, 14s, 20.5s, 28.5s] from mind2act-hyperframes-blank-20261010-111117
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (NVIDIA Corporation)" renderer="ANGLE (NVIDIA Corporation, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition/PCIe/SSE2, OpenGL ES 3.2)")
+
+   Fonts: 5 loaded, 1 unused
+
+◇  5 snapshots saved to /home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/categories-20261010-215252/early-snapshots
+   .production/categories-20261010-215252/early-snapshots/frame-00-at-3.5s.png
+   .production/categories-20261010-215252/early-snapshots/frame-01-at-8.5s.png
+   .production/categories-20261010-215252/early-snapshots/frame-02-at-14s.png
+   .production/categories-20261010-215252/early-snapshots/frame-03-at-20.5s.png
+   .production/categories-20261010-215252/early-snapshots/frame-04-at-28.5s.png
+   contact-sheet.jpg (grid view for AI review)

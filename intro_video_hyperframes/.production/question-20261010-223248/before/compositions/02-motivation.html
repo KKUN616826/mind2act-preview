@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"></head><body><template>
+<style>
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;src:url('assets/fonts/SpaceGrotesk-500.ttf') format('truetype')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;src:url('assets/fonts/SpaceGrotesk-600.ttf') format('truetype')}
+#motivation-root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+#motivation-root *{box-sizing:border-box;letter-spacing:0}
+.motivation-surface{position:absolute;inset:0;overflow:hidden;background:#090e13;color:#faf9f3;font-family:'Space Grotesk',sans-serif}
+.motivation-content{width:100%;height:100%;padding:104px 112px 90px;display:flex;flex-direction:column;gap:72px}
+.motivation-question{font-size:104px;line-height:1.06;font-weight:600;margin:0;max-width:1640px}
+.motivation-line{display:block;overflow:hidden;padding-bottom:8px}
+.motivation-line span{display:block}
+#motivation-question-second{color:#f0d57e}
+.motivation-categories{display:grid;grid-template-columns:repeat(3,1fr);gap:80px;align-items:start;flex:1}
+.motivation-category{display:flex;flex-direction:column;gap:22px;align-items:flex-start;padding-top:32px;border-top:2px solid #7189a5}
+.motivation-mark{width:148px;height:148px;object-fit:contain}
+.motivation-category h2{font-size:60px;line-height:1;margin:0;font-weight:500}
+.motivation-category p{font-size:31px;line-height:1.3;margin:0;color:#bdd9cc;max-width:450px}
+#motivation-coordination{border-color:#f0d57e}
+#motivation-coordination p{color:#f0d57e}
+</style>
+<div id="motivation-root" data-composition-id="motivation" data-width="1920" data-height="1080" data-duration="6.666667"><div class="motivation-surface" id="motivation-surface"><div class="motivation-content">
+<h1 class="motivation-question"><span class="motivation-line"><span id="motivation-question-first">Can strong parts make</span></span><span class="motivation-line"><span id="motivation-question-second">a reliable whole?</span></span></h1>
+<div class="motivation-categories">
+<div class="motivation-category" id="motivation-reasoning"><img class="motivation-mark" src="assets/logos/Mind2Act-三个Logo-高清透明版/01-Mind-1308x1203.png" alt="Mind"><h2>Mind</h2><p>Remember. Reason. Decide.</p></div>
+<div class="motivation-category" id="motivation-execution"><img class="motivation-mark" src="assets/logos/Mind2Act-三个Logo-高清透明版/02-Act-1268x1241.png" alt="Act"><h2>Act</h2><p>Execute with physical precision.</p></div>
+<div class="motivation-category" id="motivation-coordination"><img class="motivation-mark" src="assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png" alt="Mind2Act"><h2>Mind2Act</h2><p>Coordinate the whole task.</p></div>
+</div></div></div></div>
+<script>(function(){const tl=gsap.timeline({paused:true});
+tl.fromTo('#motivation-surface',{clipPath:'inset(0% 0% 100% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.5,ease:'power3.inOut'},0);
+tl.fromTo('#motivation-question-first',{y:130},{y:0,duration:.56,ease:'expo.out'},.2);
+tl.fromTo('#motivation-question-second',{y:130},{y:0,duration:.6,ease:'power4.out'},.42);
+tl.fromTo('#motivation-reasoning',{opacity:0,y:58},{opacity:1,y:0,duration:.65,ease:'power3.out'},1.05);
+tl.fromTo('#motivation-execution',{opacity:0,y:58},{opacity:1,y:0,duration:.65,ease:'power3.out'},1.42);
+tl.fromTo('#motivation-coordination',{opacity:0,scale:.94,y:32},{opacity:1,scale:1,y:0,duration:.74,ease:'expo.out'},1.79);
+window.__timelines['motivation']=tl;})();</script>
+</template></body></html>

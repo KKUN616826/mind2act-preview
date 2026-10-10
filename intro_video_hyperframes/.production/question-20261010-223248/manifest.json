@@ -1,0 +1,98 @@
+{
+  "version": "question-20261010-223248",
+  "created_at": "2026-10-10T22:32:48.636405+08:00",
+  "status": "complete",
+  "title": "Can reasoning and action work together?",
+  "prior_delivery": {
+    "id": "mind2act-world-promo-20261010-221251",
+    "created_at": "2026-10-10T22:12:51+08:00",
+    "master": "renders/mind2act-world-promo-1080p-20261010-221251.mp4",
+    "web": "renders/mind2act-world-promo-web-20261010-221251.mp4",
+    "poster": "renders/mind2act-world-poster-20261010-221251.jpg",
+    "authored_duration": 74.0740740741,
+    "framework": "HyperFrames 0.8.143",
+    "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+    "files": {
+      "master": {
+        "path": "renders/mind2act-world-promo-1080p-20261010-221251.mp4",
+        "bytes": 85456605,
+        "sha256": "8ea3b7ca838692a605603f4939c0f51e19f43a0688a327fd2d6f1810e45a855e",
+        "duration": 74.1,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pixel_format": "yuv420p",
+        "fps": "30/1",
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000",
+        "audio_channels": 2
+      },
+      "web": {
+        "path": "renders/mind2act-world-promo-web-20261010-221251.mp4",
+        "bytes": 11992919,
+        "sha256": "4bd52c34c0d2fc56eb863b333079e8039b52d0983566890ada3e8983b54a9c94",
+        "duration": 74.1,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pixel_format": "yuv420p",
+        "fps": "30/1",
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000",
+        "audio_channels": 2
+      }
+    },
+    "subtitles": [
+      "renders/mind2act-world-narration-20261010-221251.srt",
+      "renders/mind2act-world-narration-20261010-221251.vtt"
+    ],
+    "checks": {
+      "composition": ".production/categories-20261010-215252/check-final.json",
+      "audio": ".production/categories-20261010-215252/audio/audio-integration.json",
+      "source_evidence": ".production/categories-20261010-215252/breadth-difficulty-provenance.json",
+      "decode_master": "pass",
+      "decode_web": "pass",
+      "aac": ".production/categories-20261010-215252/audio/mind2act-world-promo-1080p-20261010-221251-aac-audit.json",
+      "web_aac_identical": true,
+      "aac_hashes": {
+        "master": "d25bfdd3de1368b0e1191136289d4df448f3d72eed40a881a7dd3c737f3bc25a",
+        "web": "d25bfdd3de1368b0e1191136289d4df448f3d72eed40a881a7dd3c737f3bc25a"
+      },
+      "review": ".production/categories-20261010-215252/QA.md",
+      "exported_frames": ".production/categories-20261010-215252/rendered",
+      "exported_visual": ".production/categories-20261010-215252/exported-visual-review.json",
+      "narrative": ".production/categories-20261010-215252/audio/final-narrative-audit.json",
+      "animation": ".production/categories-20261010-215252/animation-review.json"
+    },
+    "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+    "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+    "production_manifest": ".production/categories-20261010-215252/manifest.json",
+    "local_preview": "renders/preview-20261010-221251.html",
+    "contact_sheet": "renders/mind2act-world-contact-20261010-221251.jpg",
+    "source_hashes": {
+      "index.html": "d59384e2bf20f4f3056eafa2ccdeee6517ee5d70607a4ef27fec6dc280d27aa0",
+      "compositions/01-intro.html": "93266b20a69eb0d2881c5e0920328a3b103ad2ae5dcaabaf5276e1d695d1761b",
+      "compositions/02-motivation.html": "94c1fd8106cb1d2095d62b47c2c19034ff3b6cd5b7af377473f98f676d6008ea",
+      "compositions/03-mind.html": "20f7c5d455e14a1804c8913cd9304689f754ceecef1593fd96467a69559c83e6",
+      "compositions/04-act.html": "d7e70e7c48330a3acf198186b6aa3c617d9c29f3588ecd30685857bc21108e27",
+      "compositions/05-mind2act.html": "648c1674ea1d5a3ed304497a61e194834e8db2e3552cbbe1596e75677219fb67",
+      "compositions/06-scale.html": "d67c0ab5abb39e55749658dff3eed62a687890173f25f1b34af8e03f344dad38",
+      "compositions/07-outro.html": "0d35f1a78bd0f4a17220307baadb1c00c56ca76160a69d1592e8544a9be89640",
+      "compositions/08-coordination.html": "3f84186344731576397bb02acc663e08c39bebda973e8736255429c144f02b5c",
+      "compositions/09-difficulty.html": "c060881838aa53f29dda7f003f3580bf9099c382686c817a4794dcc76b9c6fc2"
+    },
+    "verified_at": "2026-10-10T14:19:24.938Z",
+    "narrative": "Question and three distinct categories \u2192 representative Mind/Act/Mind2Act cases \u2192 bidirectional coordination, exact logo synthesis and equal three-logo triangle \u219215 real task videos in3 categories \u2192F Easy/Medium/Hard video comparison \u219245task-difficulty configurations \u2192collective moonshot invitation.",
+    "audio_verification": "Independent music/VO stems, statistics VO zero, loudness/correlation/ASR/VAD on final audio. No manual listening certification."
+  },
+  "checks_pending": [],
+  "changes": [
+    "Opening question text",
+    "Matching motivation VO and SRT/VTT",
+    "Root soundtrack reference"
+  ],
+  "delivery": "renders/mind2act-world-promo-1080p-20261010-223844.mp4",
+  "web": "renders/mind2act-world-promo-web-20261010-223844.mp4",
+  "verified_at": "2026-10-10T14:42:54.644533+00:00",
+  "history_id": "371a6abe"
+}

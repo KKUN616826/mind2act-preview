@@ -1,0 +1,15 @@
+┌  hyperframes preview
+
+  Project   mind2act-hyperframes-blank-20261010-111117
+  Studio    http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117
+  Server    http://localhost:3052
+  Desktop   Keep editing by chatting with Framey in the HyperFrames desktop app → https://hyperframes.dev/studio/download?os=linux
+
+  Reusing the background server already running for this project.
+  Changes reload automatically in the studio.
+
+  Stop with: hyperframes preview "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117" --stop
+
+
+  Lint: 0 error(s), 1 warning(s) — see the Lint badge in Studio, or run `hyperframes lint` for full output.
+

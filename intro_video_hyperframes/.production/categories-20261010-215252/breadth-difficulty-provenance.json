@@ -1,0 +1,193 @@
+[
+  {
+    "task": "E",
+    "source": "assets/videos/Mind/E/E__E_medium.mp4",
+    "source_sha256": "59705e7cb15a7f7a47d476a47dbb42cad9ee936100f7130f0070372297139343",
+    "start": 43,
+    "end": 51,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/e-wall.mp4"
+  },
+  {
+    "task": "F",
+    "source": "assets/videos/Mind/F/F__F_medium.mp4",
+    "source_sha256": "35964beb4697f819a4a622d15d65e6e75cd237712c0dce583ae4257f147b9cfd",
+    "start": 1,
+    "end": 9,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/f-wall.mp4"
+  },
+  {
+    "task": "P",
+    "source": [
+      "assets/generated/cases/p-intro.mp4",
+      "assets/generated/cases/p-action1.mp4",
+      "assets/generated/cases/p-action2.mp4"
+    ],
+    "source_sha256": [
+      "45f59fb94a19d9aab990c8cfa3174454150ac9e726931c5ec21e3eac7d59ade3",
+      "f4d8f2f943f8e06824ae0ded1ac3c68253f5809bb8153ec66d4c5edb6630259d",
+      "3cbfcc289ff99af5c30d903f8c827d45284b461019123c0a6c42487dd0c3ed12"
+    ],
+    "note": "Selected historical blue-cup excerpts preserved at their prior edited speeds; concatenate, no repeats, no event labels.",
+    "output": "assets/generated/categories-20261010-215252/p-wall.mp4"
+  },
+  {
+    "task": "S",
+    "source": "assets/videos/Mind/S/S__S_medium.mp4",
+    "source_sha256": "64359c5bf47e4f58fc781f9b2f5528193385c50c4a664b5fb53baa47f40eeedf",
+    "start": 38,
+    "end": 46,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/s-wall.mp4"
+  },
+  {
+    "task": "M",
+    "source": "assets/videos/Mind/M/M__M_medium_frontlabel.mp4",
+    "source_sha256": "6efc7d3195a274e1bba32cab378ca65f4fe76e4b7d29774970d6dad1e88e1a77",
+    "start": 51,
+    "end": 59,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/m-wall.mp4"
+  },
+  {
+    "task": "FR1",
+    "source": "assets/videos/Act/FR1/medium.mp4",
+    "source_sha256": "6ac7565bd0668ac58bd2cdc43a3e8ba760c2792633bc3324d378b23578817704",
+    "start": 13,
+    "end": 21,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/fr1-wall.mp4"
+  },
+  {
+    "task": "FR2",
+    "source": "assets/videos/Act/FR2/medium.mp4",
+    "source_sha256": "74c745fbf2535c34396e4f896827c240f1b9178ee1fd91333a6655768853c542",
+    "start": 7,
+    "end": 15,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/fr2-wall.mp4"
+  },
+  {
+    "task": "PR1",
+    "source": "assets/videos/Act/PR1/PR1__PR1_Medium_control_20260919.mp4",
+    "source_sha256": "c1608b8c5762a5cc74092b854074d72fd37798a692662ab6fb4c6aa9f7de13bd",
+    "start": 1,
+    "end": 9,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/pr1-wall.mp4"
+  },
+  {
+    "task": "PR2",
+    "source": "assets/videos/Act/PR2/PR2__PR2_Medium_control_20260919.mp4",
+    "source_sha256": "01f82f2ed6cd664617a850090c34c07597b519965308ca0a8ff21c40094f9190",
+    "start": 9,
+    "end": 17,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/pr2-wall.mp4"
+  },
+  {
+    "task": "PR3",
+    "source": "assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4",
+    "source_sha256": "d78e0355e9be1830e7b4033d113927905fbdb10b25d87efdc78dd475ad4f4bf8",
+    "start": 12,
+    "end": 20,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/pr3-wall.mp4"
+  },
+  {
+    "task": "CP01",
+    "source": "assets/videos/Mind2Act/CP01/CP01__CP01_medium_adaptive_v2_20260920.mp4",
+    "source_sha256": "7c8fff06824fedb1fcdf93176c77832441a81babdf998c857b2a6cac239cd5f0",
+    "start": 58,
+    "end": 66,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/cp01-wall.mp4"
+  },
+  {
+    "task": "CP02",
+    "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+    "source_sha256": "5b4e46444d8439ee5f76c8cd54fa7d000303ee7a360c9ce8c70d3bbbf17b25d8",
+    "start": 49,
+    "end": 57,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/cp02-wall.mp4"
+  },
+  {
+    "task": "CP03",
+    "source": "assets/videos/Mind2Act/CP03/CP03__CP03_Medium_5盘_二档16mms_原速.mp4",
+    "source_sha256": "74ddd0ddd3acca31074f1b4d9c348c47f442a4808da8aded33d91e83172c808c",
+    "start": 84,
+    "end": 92,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/cp03-wall.mp4"
+  },
+  {
+    "task": "CP04",
+    "source": "assets/videos/Mind2Act/CP04/medium.mp4",
+    "source_sha256": "821d13fc6c06f92056b84d59faee6ab7e3d1ddf75828b947ae461d5ff7d60895",
+    "start": 65,
+    "end": 73,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/cp04-wall.mp4"
+  },
+  {
+    "task": "CP05",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4",
+    "source_sha256": "79edf926914d8cff010b2d5ce7d813442dfbe8f4a5c4a2e3e0415ca269780971",
+    "start": 44,
+    "end": 52,
+    "speed": 1,
+    "crop": "Full source width, first334rows: main camera; wrist strips excluded.",
+    "output": "assets/generated/categories-20261010-215252/cp05-wall.mp4"
+  },
+  {
+    "task": "F",
+    "level": "easy",
+    "source": "assets/videos/Mind/F/F__F_easy.mp4",
+    "source_sha256": "617853d26d0e11ea2180e4b2697e2a75929670d4808f98b786281f3615f4f219",
+    "start": 0.5,
+    "end": 10.5,
+    "speed": 1,
+    "crop": "640x334 at0,0; entire platform and button array preserved; wrist strips excluded.",
+    "phase": "Initial exploration of the fixed unknown button mapping, samephase across3levels; no navigation/progress outcomes authored.",
+    "output": "assets/generated/categories-20261010-215252/f-easy-probe.mp4"
+  },
+  {
+    "task": "F",
+    "level": "medium",
+    "source": "assets/videos/Mind/F/F__F_medium.mp4",
+    "source_sha256": "35964beb4697f819a4a622d15d65e6e75cd237712c0dce583ae4257f147b9cfd",
+    "start": 0.5,
+    "end": 10.5,
+    "speed": 1,
+    "crop": "640x334 at0,0; entire platform and button array preserved; wrist strips excluded.",
+    "phase": "Initial exploration of the fixed unknown button mapping, samephase across3levels; no navigation/progress outcomes authored.",
+    "output": "assets/generated/categories-20261010-215252/f-medium-probe.mp4"
+  },
+  {
+    "task": "F",
+    "level": "hard",
+    "source": "assets/videos/Mind/F/F__F_hard.mp4",
+    "source_sha256": "4617b94bcbf9d688e79b2a84553b3b6b54cba44614d88c5a148820cef233a9a9",
+    "start": 0.5,
+    "end": 10.5,
+    "speed": 1,
+    "crop": "640x334 at0,0; entire platform and button array preserved; wrist strips excluded.",
+    "phase": "Initial exploration of the fixed unknown button mapping, samephase across3levels; no navigation/progress outcomes authored.",
+    "output": "assets/generated/categories-20261010-215252/f-hard-probe.mp4"
+  }
+]

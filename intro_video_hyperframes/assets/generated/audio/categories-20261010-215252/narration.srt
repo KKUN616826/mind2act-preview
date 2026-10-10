@@ -1,0 +1,39 @@
+1
+00:00:00,280 --> 00:00:04,477
+Mind2Act World. Reasoning and action, evaluated together.
+
+2
+00:00:05,750 --> 00:00:08,036
+Can strong parts make a reliable whole?
+
+3
+00:00:12,220 --> 00:00:15,473
+Mind tracks the task through observations and history.
+
+4
+00:00:18,120 --> 00:00:21,209
+Act must make the intended physical result happen.
+
+5
+00:00:24,030 --> 00:00:27,840
+Mind2Act links sequence memory with valid key presses.
+
+6
+00:00:30,040 --> 00:00:37,744
+Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next.
+
+7
+00:00:53,683 --> 00:00:54,403
+Easy.
+
+8
+00:00:55,783 --> 00:00:56,576
+Medium.
+
+9
+00:00:57,883 --> 00:00:58,577
+Hard.
+
+10
+00:01:05,882 --> 00:01:10,777
+Build the benchmark. Test your agents. Let's take the next giant leap together.

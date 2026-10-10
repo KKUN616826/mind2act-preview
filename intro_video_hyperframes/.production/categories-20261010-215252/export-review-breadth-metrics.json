@@ -1,0 +1,546 @@
+{
+  "master": "renders/mind2act-world-promo-1080p-20261010-221251.mp4",
+  "sha256": "8ea3b7ca838692a605603f4939c0f51e19f43a0688a327fd2d6f1810e45a855e",
+  "method": "Actual decoded MP4 RGB crop differences; only video image ROI, excluding text/borders/label animations. Mean 0..255. Nonzero difference alone does not prove semantic motion; contact sheets also visually inspected.",
+  "wall": {
+    "E": {
+      "roi": [
+        76,
+        316,
+        308,
+        434
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 10.7787,
+          "fraction_pixels_diff_gt8": 0.12661,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 5.4127,
+          "fraction_pixels_diff_gt8": 0.06517,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 1.4809,
+          "fraction_pixels_diff_gt8": 0.00559,
+          "identical": false
+        }
+      ]
+    },
+    "F": {
+      "roi": [
+        76,
+        453,
+        308,
+        571
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 25.8827,
+          "fraction_pixels_diff_gt8": 0.19839,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 32.7961,
+          "fraction_pixels_diff_gt8": 0.32017,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 21.2309,
+          "fraction_pixels_diff_gt8": 0.27904,
+          "identical": false
+        }
+      ]
+    },
+    "P": {
+      "roi": [
+        76,
+        590,
+        308,
+        708
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 25.3345,
+          "fraction_pixels_diff_gt8": 0.3014,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 11.8355,
+          "fraction_pixels_diff_gt8": 0.16405,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 27.3374,
+          "fraction_pixels_diff_gt8": 0.39896,
+          "identical": false
+        }
+      ]
+    },
+    "S": {
+      "roi": [
+        76,
+        727,
+        308,
+        845
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 26.5689,
+          "fraction_pixels_diff_gt8": 0.28375,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 28.5188,
+          "fraction_pixels_diff_gt8": 0.25004,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 13.6713,
+          "fraction_pixels_diff_gt8": 0.08672,
+          "identical": false
+        }
+      ]
+    },
+    "M": {
+      "roi": [
+        76,
+        864,
+        308,
+        982
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 10.6602,
+          "fraction_pixels_diff_gt8": 0.11386,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 5.8848,
+          "fraction_pixels_diff_gt8": 0.08478,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 6.7393,
+          "fraction_pixels_diff_gt8": 0.09307,
+          "identical": false
+        }
+      ]
+    },
+    "FR1": {
+      "roi": [
+        684,
+        316,
+        916,
+        434
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 30.5543,
+          "fraction_pixels_diff_gt8": 0.34552,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 24.7543,
+          "fraction_pixels_diff_gt8": 0.27809,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 27.8555,
+          "fraction_pixels_diff_gt8": 0.29168,
+          "identical": false
+        }
+      ]
+    },
+    "FR2": {
+      "roi": [
+        684,
+        453,
+        916,
+        571
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 3.1376,
+          "fraction_pixels_diff_gt8": 0.03697,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 20.8921,
+          "fraction_pixels_diff_gt8": 0.21073,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 13.4806,
+          "fraction_pixels_diff_gt8": 0.18301,
+          "identical": false
+        }
+      ]
+    },
+    "PR1": {
+      "roi": [
+        684,
+        590,
+        916,
+        708
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 26.1672,
+          "fraction_pixels_diff_gt8": 0.20942,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 14.3665,
+          "fraction_pixels_diff_gt8": 0.14966,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 5.4221,
+          "fraction_pixels_diff_gt8": 0.05845,
+          "identical": false
+        }
+      ]
+    },
+    "PR2": {
+      "roi": [
+        684,
+        727,
+        916,
+        845
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 9.1903,
+          "fraction_pixels_diff_gt8": 0.1063,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 14.7559,
+          "fraction_pixels_diff_gt8": 0.1658,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 26.16,
+          "fraction_pixels_diff_gt8": 0.33686,
+          "identical": false
+        }
+      ]
+    },
+    "PR3": {
+      "roi": [
+        684,
+        864,
+        916,
+        982
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 9.0267,
+          "fraction_pixels_diff_gt8": 0.10107,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 10.8941,
+          "fraction_pixels_diff_gt8": 0.13618,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 16.0413,
+          "fraction_pixels_diff_gt8": 0.17154,
+          "identical": false
+        }
+      ]
+    },
+    "CP01": {
+      "roi": [
+        1292,
+        316,
+        1524,
+        434
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 9.8375,
+          "fraction_pixels_diff_gt8": 0.10476,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 16.8886,
+          "fraction_pixels_diff_gt8": 0.14421,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 21.2852,
+          "fraction_pixels_diff_gt8": 0.18962,
+          "identical": false
+        }
+      ]
+    },
+    "CP02": {
+      "roi": [
+        1292,
+        453,
+        1524,
+        571
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 4.2163,
+          "fraction_pixels_diff_gt8": 0.04906,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 4.3065,
+          "fraction_pixels_diff_gt8": 0.04979,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 5.474,
+          "fraction_pixels_diff_gt8": 0.07079,
+          "identical": false
+        }
+      ]
+    },
+    "CP03": {
+      "roi": [
+        1292,
+        590,
+        1524,
+        708
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 12.3559,
+          "fraction_pixels_diff_gt8": 0.23192,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 12.3581,
+          "fraction_pixels_diff_gt8": 0.23382,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 12.4088,
+          "fraction_pixels_diff_gt8": 0.22936,
+          "identical": false
+        }
+      ]
+    },
+    "CP04": {
+      "roi": [
+        1292,
+        727,
+        1524,
+        845
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 6.49,
+          "fraction_pixels_diff_gt8": 0.07247,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 4.1678,
+          "fraction_pixels_diff_gt8": 0.03667,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 2.219,
+          "fraction_pixels_diff_gt8": 0.01132,
+          "identical": false
+        }
+      ]
+    },
+    "CP05": {
+      "roi": [
+        1292,
+        864,
+        1524,
+        982
+      ],
+      "comparisons": [
+        {
+          "from": 49,
+          "to": 50,
+          "mean_abs_difference": 16.6661,
+          "fraction_pixels_diff_gt8": 0.16799,
+          "identical": false
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "mean_abs_difference": 11.4691,
+          "fraction_pixels_diff_gt8": 0.11766,
+          "identical": false
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "mean_abs_difference": 14.2613,
+          "fraction_pixels_diff_gt8": 0.1784,
+          "identical": false
+        }
+      ]
+    }
+  },
+  "difficulty": {
+    "Easy": {
+      "roi": [
+        619,
+        259,
+        1041,
+        475
+      ],
+      "comparisons": [
+        {
+          "from": 60.7,
+          "to": 61.3,
+          "mean_abs_difference": 20.7012,
+          "fraction_pixels_diff_gt8": 0.24676,
+          "identical": false
+        },
+        {
+          "from": 61.3,
+          "to": 62.2,
+          "mean_abs_difference": 18.9653,
+          "fraction_pixels_diff_gt8": 0.19214,
+          "identical": false
+        }
+      ]
+    },
+    "Medium": {
+      "roi": [
+        619,
+        498,
+        1041,
+        714
+      ],
+      "comparisons": [
+        {
+          "from": 60.7,
+          "to": 61.3,
+          "mean_abs_difference": 26.1646,
+          "fraction_pixels_diff_gt8": 0.26444,
+          "identical": false
+        },
+        {
+          "from": 61.3,
+          "to": 62.2,
+          "mean_abs_difference": 24.0427,
+          "fraction_pixels_diff_gt8": 0.30439,
+          "identical": false
+        }
+      ]
+    },
+    "Hard": {
+      "roi": [
+        619,
+        737,
+        1041,
+        953
+      ],
+      "comparisons": [
+        {
+          "from": 60.7,
+          "to": 61.3,
+          "mean_abs_difference": 25.2111,
+          "fraction_pixels_diff_gt8": 0.17268,
+          "identical": false
+        },
+        {
+          "from": 61.3,
+          "to": 62.2,
+          "mean_abs_difference": 12.2103,
+          "fraction_pixels_diff_gt8": 0.07791,
+          "identical": false
+        }
+      ]
+    }
+  }
+}

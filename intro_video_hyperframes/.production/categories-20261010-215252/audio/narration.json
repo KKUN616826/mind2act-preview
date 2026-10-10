@@ -1,0 +1,163 @@
+{
+  "created_at": "2026-10-10T21:52:52+08:00",
+  "version": "categories-20261010-215252",
+  "provider": "kokoro-onnx",
+  "voice": "am_michael",
+  "language": "en-us",
+  "sample_rate": 48000,
+  "bpm": 81.0,
+  "music_source_offset": 11.9877,
+  "duration": 74.0740740741,
+  "scene_boundaries": [
+    0,
+    5.1851851852,
+    11.8518518519,
+    17.7777777778,
+    23.7037037037,
+    29.6296296296,
+    41.4814814815,
+    53.3333333333,
+    65.1851851852,
+    74.0740740741
+  ],
+  "statistics_music_only": [
+    41.4814814815,
+    53.3333333333
+  ],
+  "lines": [
+    {
+      "id": "intro",
+      "start": 0.28,
+      "max_duration": 4.55,
+      "speed": 1.03,
+      "text": "Mind to Act World. Reasoning and action, evaluated together.",
+      "caption": "Mind2Act World. Reasoning and action, evaluated together."
+    },
+    {
+      "id": "motivation",
+      "start": 5.75,
+      "max_duration": 5.55,
+      "speed": 1.03,
+      "text": "Can strong parts make a reliable whole?"
+    },
+    {
+      "id": "mind",
+      "start": 12.22,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Mind tracks the task through observations and history."
+    },
+    {
+      "id": "act",
+      "start": 18.12,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Act must make the intended physical result happen."
+    },
+    {
+      "id": "mind2act",
+      "start": 24.03,
+      "max_duration": 5.1,
+      "speed": 1.02,
+      "text": "Mind to Act links sequence memory with valid key presses.",
+      "caption": "Mind2Act links sequence memory with valid key presses."
+    },
+    {
+      "id": "coordination-loop",
+      "start": 30.04,
+      "max_duration": 10.0,
+      "speed": 1.03,
+      "text": "Intent guides physically valid action. Actual outcomes update what remains, when to act, and which phase comes next."
+    },
+    {
+      "id": "scale-easy",
+      "start": 53.6833333333,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Easy."
+    },
+    {
+      "id": "scale-medium",
+      "start": 55.7833333333,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Medium."
+    },
+    {
+      "id": "scale-hard",
+      "start": 57.883333333299994,
+      "max_duration": 1.0,
+      "speed": 1.0,
+      "text": "Hard."
+    },
+    {
+      "id": "ending",
+      "start": 65.8818518519,
+      "max_duration": 7.55,
+      "speed": 1.03,
+      "text": "Build the benchmark. Test your agents. Let's take the next giant leap together."
+    }
+  ],
+  "music_only_intervals": [
+    [
+      41.4814814815,
+      53.3333333333
+    ],
+    [
+      62.6,
+      65.1851851852
+    ]
+  ],
+  "sfx_placements": [
+    [
+      "impact-bass-1",
+      1.481481,
+      -27
+    ],
+    [
+      "whoosh-short",
+      4.98,
+      -27
+    ],
+    [
+      "whoosh-short",
+      11.65,
+      -29
+    ],
+    [
+      "whoosh-short",
+      17.57,
+      -29
+    ],
+    [
+      "whoosh-short",
+      23.5,
+      -29
+    ],
+    [
+      "whoosh-cinematic",
+      29.35,
+      -29
+    ],
+    [
+      "whoosh-short",
+      41.27,
+      -29
+    ],
+    [
+      "whoosh-short",
+      53.1,
+      -29
+    ],
+    [
+      "impact-bass-1",
+      62.633333,
+      -27
+    ],
+    [
+      "impact-bass-1",
+      65.185185,
+      -27
+    ]
+  ]
+}

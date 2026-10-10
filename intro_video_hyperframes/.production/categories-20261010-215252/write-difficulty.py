@@ -1,0 +1,37 @@
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2]
+p='assets/generated/categories-20261010-215252/'
+css="""@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400;src:url('assets/fonts/SpaceGrotesk-400.ttf') format('truetype')}@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;src:url('assets/fonts/SpaceGrotesk-600.ttf') format('truetype')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('assets/fonts/IBMPlexMono-400.ttf') format('truetype')}
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}.difficulty-surface{position:absolute;inset:0;background:#090e13;color:#faf9f4;overflow:hidden;font-family:'Space Grotesk',sans-serif}.difficulty-abs{position:absolute}.difficulty-kicker{left:76px;top:58px;font:23px 'IBM Plex Mono',monospace;color:#bdd9cc}.difficulty-title{left:72px;top:111px;font-size:68px;line-height:1.04;font-weight:600;letter-spacing:-1.5px}.difficulty-word{position:absolute;left:74px;top:359px;width:590px;height:190px;font-size:158px;font-weight:600;line-height:1;letter-spacing:-6px;transform-origin:0 0}.difficulty-hero-desc{position:absolute;left:81px;top:570px;font-size:33px;line-height:1.3;color:#c6d3df;width:510px}.difficulty-film{position:absolute;left:690px;top:275px;width:1160px;height:605.375px;overflow:hidden;border-radius:7px;transform-origin:0 0}.difficulty-film video{width:100%;height:100%;object-fit:contain}.difficulty-row{position:absolute;left:74px;width:1772px;height:226px;border-top:1px solid #314550;background:#111c25}.difficulty-row-note{position:absolute;left:1190px;width:565px;font-size:43px;line-height:1.15;font-weight:600}.difficulty-row-sub{font-size:25px;font-weight:400;color:#c6d3df;line-height:1.3;margin-top:15px}.difficulty-stat{position:absolute;inset:0;background:#090e13}.difficulty-formula{position:absolute;left:80px;top:140px;font-size:76px;line-height:1.1;font-weight:600;letter-spacing:-2px}.difficulty-45{position:absolute;left:90px;top:365px;font-size:405px;line-height:1;font-weight:600;letter-spacing:-20px;color:#f0d57e}.difficulty-config{position:absolute;left:795px;top:465px;font-size:78px;line-height:1.08;letter-spacing:-2px;font-weight:600;width:970px}"""
+html=['<!doctype html><html lang="en"><head><meta charset="UTF-8"></head><body><template><style>'+css+'</style>','<div id="root" data-composition-id="difficulty" data-width="1920" data-height="1080" data-duration="12.471852"><div id="difficulty-surface" class="difficulty-surface">','<div id="difficulty-kicker" class="difficulty-abs difficulty-kicker">MIND / F · THREE LEVELS</div><div id="difficulty-title" class="difficulty-abs difficulty-title">Learn the button rules.</div>']
+for i,lv in enumerate(['easy','medium','hard']):
+ html.append(f'<div id="difficulty-row-{lv}" class="difficulty-row" style="top:{254+i*239}px"></div>')
+for i,(lv,word,color,desc,sub) in enumerate([('easy','Easy','#e4e6d2','1D track','2 button rules to learn'),('medium','Medium','#bdd9cc','3 × 3 grid','4 button rules to learn'),('hard','Hard','#f0d57e','4 × 4 grid','4 button rules to learn')]):
+ start=[0,2.22,4.32][i];dur=9.85-start
+ html.append(f'<div id="difficulty-word-{lv}" class="difficulty-word" style="color:{color}">{word}</div><div id="difficulty-desc-{lv}" class="difficulty-hero-desc">{desc}<div style="margin-top:9px">{sub}</div></div><div id="difficulty-film-{lv}" class="difficulty-film"><video id="difficulty-video-{lv}" class="clip" src="{p}f-{lv}-probe.mp4" data-start="{start}" data-duration="{dur}" data-track-index="{i+1}" data-hf-media-start-basis="local" muted playsinline></video></div><div id="difficulty-note-{lv}" class="difficulty-row-note" style="top:{314+i*239}px">{desc}<div class="difficulty-row-sub">{sub}</div></div>')
+html.append('<div id="difficulty-stat" class="difficulty-stat"><div id="difficulty-formula" class="difficulty-formula">15 Tasks × 3 Levels</div><div id="difficulty-45" class="difficulty-45">45</div><div id="difficulty-config" class="difficulty-config">Task-difficulty configurations</div></div></div></div>')
+js="""(function(){const tl=gsap.timeline({paused:true});
+tl.fromTo('#difficulty-surface',{clipPath:'inset(0% 100% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},0);
+tl.fromTo('#difficulty-kicker',{opacity:0,x:-25},{opacity:1,x:0,duration:.45,ease:'power2.out'},.12);
+tl.fromTo('#difficulty-title',{opacity:0,y:35},{opacity:1,y:0,duration:.55,ease:'expo.out'},.2);
+const levels=['easy','medium','hard'];const starts=[.12,2.22,4.32];
+levels.forEach((lv,i)=>{const at=starts[i];
+ tl.fromTo('#difficulty-word-'+lv,{opacity:0,y:100},{opacity:1,y:0,duration:.4,ease:'expo.out'},at);
+ tl.fromTo('#difficulty-desc-'+lv,{opacity:0,y:20},{opacity:1,y:0,duration:.4,ease:'power2.out'},at+.17);
+ tl.fromTo('#difficulty-film-'+lv,{opacity:0,clipPath:'inset(0% 0% 0% 100%)'},{opacity:1,clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},at);
+ if(i<2){const next=starts[i+1];tl.to('#difficulty-word-'+lv,{opacity:0,y:-55,duration:.22,ease:'power2.in'},next);tl.to('#difficulty-desc-'+lv,{opacity:0,duration:.18},next);tl.to('#difficulty-film-'+lv,{opacity:0,duration:.28},next+.12);}
+});
+// All three videos retain their source clocks when they settle into comparison rows.
+levels.forEach((lv,i)=>{const y=254+i*239;const at=6.34+i*.06;
+ tl.fromTo('#difficulty-row-'+lv,{opacity:0,x:95},{opacity:1,x:0,duration:.58,ease:'power3.out'},at);
+ tl.to('#difficulty-word-'+lv,{opacity:1,x:20,y:y+79-359,scale:.42,duration:.68,ease:'power3.inOut'},at);
+ tl.to('#difficulty-film-'+lv,{opacity:1,x:-76,y:y-275,scale:.37332,duration:.68,ease:'power3.inOut'},at);
+ tl.to('#difficulty-desc-'+lv,{opacity:0,duration:.2},at);
+ tl.fromTo('#difficulty-note-'+lv,{opacity:0,x:45},{opacity:1,x:0,duration:.55,ease:'power2.out'},at+.34);
+});
+tl.fromTo('#difficulty-stat',{clipPath:'inset(100% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},9.43);
+tl.fromTo('#difficulty-formula',{opacity:0,y:55},{opacity:1,y:0,duration:.55,ease:'power3.out'},9.59);
+tl.fromTo('#difficulty-45',{opacity:0,y:170,scale:.92},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out'},9.83);
+tl.fromTo('#difficulty-config',{opacity:0,x:80},{opacity:1,x:0,duration:.6,ease:'power2.out'},10.06);
+window.__timelines['difficulty']=tl;})();"""
+html.append('<script>'+js+'</script></template></body></html>');(ROOT/'compositions/09-difficulty.html').write_text('\n'.join(html))

@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "errorCount": 0,
+  "warningCount": 1,
+  "infoCount": 0,
+  "findings": [
+    {
+      "code": "duplicate_media_discovery_risk",
+      "severity": "warning",
+      "message": "Detected 2 matching img entries with the same source/start/duration.",
+      "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation.",
+      "snippet": "img src=assets/generated/source-refresh-20261010-142512/cases/pr3-target-crop.png data-start= data-duration=",
+      "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/04-act.html"
+    }
+  ],
+  "filesScanned": 9,
+  "_meta": {
+    "version": "0.8.143",
+    "updateAvailable": false
+  }
+}

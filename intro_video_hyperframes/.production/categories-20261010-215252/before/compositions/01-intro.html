@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"></head><body><template>
+<style>
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;src:url('assets/fonts/SpaceGrotesk-500.ttf') format('truetype')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('assets/fonts/IBMPlexMono-400.ttf') format('truetype')}
+#intro-root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+#intro-root *{box-sizing:border-box;letter-spacing:0}
+.intro-surface{position:absolute;inset:0;overflow:hidden;background:#090e13;color:#faf9f3;font-family:'Space Grotesk',sans-serif}
+.intro-abs{position:absolute}.intro-fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#intro-six,#intro-all,#intro-shade{opacity:0}
+.intro-symbol{position:absolute;object-fit:contain;transform-origin:center center}
+#intro-mind{left:350px;top:187px;width:370px;height:340.3px}
+#intro-act{left:1200px;top:187px;width:370px;height:362.1px}
+#intro-logo{left:765px;top:126px;width:390px;height:390px}
+#intro-connector{left:852px;top:327px;width:216px;height:144px}
+.intro-dot{position:absolute;width:22px;height:22px;background:#f0d57e;border:1px solid #f8e2a0}
+#intro-dot-a{left:44px;top:97px}#intro-dot-b{left:92px;top:49px}#intro-dot-c{left:140px;top:1px}
+#intro-eyebrow{left:0;top:536px;width:100%;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:22px;color:#bdd9cc}
+#intro-brand{left:0;right:0;top:594px;height:228px;background:#faf9f3;display:flex;align-items:center;justify-content:center;overflow:hidden}
+/* The source wordmark includes a trailing colon at source x=980..989. Keep the
+   original bitmap and show the centered source window x=140..974 only. */
+#intro-wordmark-window{position:relative;width:1000.8px;height:228px;overflow:hidden;flex:0 0 auto}
+#intro-wordmark{position:absolute;left:-168px;top:0;width:1389.6px;height:228px;max-width:none;object-fit:fill}
+#intro-tagline{left:190px;top:869px;width:1540px;font-size:34px;text-align:center;color:#e4e6d2;line-height:1.4}
+#intro-edge{left:65px;bottom:39px;font-family:'IBM Plex Mono',monospace;font-size:18px;color:#9fb2c8}
+#intro-accent{left:0;right:0;top:589px;height:5px;background:#f0d57e;transform-origin:left center}
+</style>
+<div id="intro-root" data-composition-id="intro" data-width="1920" data-height="1080" data-duration="5.185185">
+<div class="intro-surface" id="intro-surface">
+<div class="intro-abs" style="inset:0" id="intro-one"><video id="intro-source" class="clip intro-fill" src="assets/generated/clarity-20261010-155258/cases/piano-play.mp4" data-start="0" data-duration="1.5" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-abs" style="inset:0" id="intro-six"><video id="intro-sixvid" class="clip intro-fill" src="assets/generated/clarity-20261010-155258/montage/six-cases-mosaic.mp4" data-start="0" data-duration="1.5" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-abs" style="inset:0" id="intro-all"><video id="intro-allvid" class="clip intro-fill" src="assets/generated/source-refresh-20261010-142512/montage/all-cases-mosaic.mp4" data-start="0" data-duration="5.185185" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div id="intro-shade" class="intro-abs" style="inset:0;background:#090e13"></div>
+<img id="intro-mind" class="intro-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/01-Mind-1308x1203.png" alt="Mind">
+<img id="intro-act" class="intro-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/02-Act-1268x1241.png" alt="Act">
+<div id="intro-connector" class="intro-abs" aria-hidden="true"><div class="intro-dot" id="intro-dot-a"></div><div class="intro-dot" id="intro-dot-b"></div><div class="intro-dot" id="intro-dot-c"></div></div>
+<img id="intro-logo" class="intro-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png" alt="Mind2Act">
+<div class="intro-abs" id="intro-eyebrow">A NEW WORLD OF EMBODIED INTELLIGENCE</div>
+<div class="intro-abs" id="intro-accent"></div>
+<div class="intro-abs" id="intro-brand"><div id="intro-wordmark-window"><img id="intro-wordmark" src="assets/logos/min2act_world.png" alt="Mind2Act World"></div></div>
+<div class="intro-abs" id="intro-tagline">Evaluating reasoning–acting coordination in robotic manipulation.</div>
+<div class="intro-abs" id="intro-edge">MIND / ACT / MIND2ACT</div>
+</div></div>
+<script>(function(){const tl=gsap.timeline({paused:true});
+tl.fromTo('#intro-one',{scale:1.08},{scale:1,duration:.55,ease:'power2.out'},0);
+tl.fromTo('#intro-six',{opacity:0,scale:1.8},{opacity:1,scale:1,duration:.45,ease:'expo.out'},.37);
+tl.fromTo('#intro-all',{opacity:0,scale:2.5},{opacity:1,scale:1.015,duration:.82,ease:'power3.inOut'},1.02);
+tl.to('#intro-shade',{opacity:.88,duration:.74,ease:'power2.out'},1.10);
+tl.fromTo('#intro-mind',{opacity:0,x:-260,y:-35,rotation:-18,scale:1.18},{opacity:1,x:0,y:0,rotation:0,scale:1,duration:.65,ease:'expo.out'},1.02);
+tl.fromTo('#intro-act',{opacity:0,x:260,y:35,rotation:18,scale:1.18},{opacity:1,x:0,y:0,rotation:0,scale:1,duration:.65,ease:'expo.out'},1.12);
+['#intro-dot-a','#intro-dot-b','#intro-dot-c'].forEach((id,i)=>tl.fromTo(id,{opacity:0,scale:.3,y:32},{opacity:1,scale:1,y:0,duration:.25,ease:'back.out(1.8)'},1.50+i*.11));
+tl.to('#intro-mind',{x:390,y:-71,scale:1.103,duration:.61,ease:'power3.inOut'},1.90);
+tl.to('#intro-act',{x:-400,y:-22,scale:1,duration:.61,ease:'power3.inOut'},1.90);
+tl.to('#intro-dot-a',{x:22,y:-64,duration:.61,ease:'power3.inOut'},1.90);
+tl.to('#intro-dot-b',{x:8,y:-43,duration:.61,ease:'power3.inOut'},1.90);
+tl.to('#intro-dot-c',{x:-8,y:-25,duration:.61,ease:'power3.inOut'},1.90);
+tl.to(['#intro-mind','#intro-act','#intro-connector'],{opacity:0,duration:.21,ease:'sine.inOut'},2.40);
+tl.fromTo('#intro-logo',{opacity:0,scale:1.025},{opacity:1,scale:1,duration:.24,ease:'power2.out'},2.40);
+tl.fromTo('#intro-eyebrow',{opacity:0,y:20},{opacity:1,y:0,duration:.43,ease:'power3.out'},1.82);
+tl.fromTo('#intro-brand',{opacity:0,scaleX:.02},{opacity:1,scaleX:1,duration:.54,ease:'expo.inOut'},2.15);
+tl.fromTo('#intro-wordmark',{opacity:0,y:42},{opacity:1,y:0,duration:.50,ease:'expo.out'},2.43);
+tl.fromTo('#intro-accent',{scaleX:0},{scaleX:1,duration:.62,ease:'power3.inOut'},2.12);
+tl.fromTo('#intro-tagline',{opacity:0,y:22},{opacity:1,y:0,duration:.58,ease:'power2.out'},2.77);
+tl.fromTo('#intro-edge',{opacity:0,x:-20},{opacity:1,x:0,duration:.45,ease:'power3.out'},3.02);
+window.__timelines['intro']=tl;})();</script>
+</template></body></html>

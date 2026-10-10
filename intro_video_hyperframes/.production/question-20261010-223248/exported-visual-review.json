@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "master": "renders/mind2act-world-promo-1080p-20261010-223844.mp4",
+  "reviewed_files": [
+    "rendered/frame-8-5.jpg",
+    "rendered/contact-sheet.jpg"
+  ],
+  "findings": [
+    "Exact new question appears in two lines without clipping",
+    "White first line and gold second line match existing styling",
+    "Three-category definitions remain legible",
+    "No other composition changed; previous detailed review retained"
+  ],
+  "scope": "Changed scene frame inspection plus composition/runtime/contrast checks; not a claim of manual full-video listening."
+}

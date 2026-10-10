@@ -1,0 +1,52 @@
+[
+  {
+    "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/categories-20261010-215252/audio/separated/htdemucs/music-source-cut/no_vocals.wav",
+    "engine": "faster-whisper 1.2.1 medium.en int8 CPU",
+    "language": "en",
+    "language_probability": 1,
+    "segments": [
+      {
+        "start": 58.58,
+        "end": 59.98,
+        "text": " Oh",
+        "avg_logprob": -0.9603222012519836,
+        "no_speech_prob": 0.9501245617866516,
+        "words": [
+          {
+            "start": 58.58,
+            "end": 59.98,
+            "text": " Oh",
+            "probability": 0.014028046280145645
+          }
+        ]
+      },
+      {
+        "start": 72.64,
+        "end": 74.04,
+        "text": " Thanks for watching!",
+        "avg_logprob": -0.7920251573835101,
+        "no_speech_prob": 0.8004510998725891,
+        "words": [
+          {
+            "start": 72.64,
+            "end": 74.04,
+            "text": " Thanks",
+            "probability": 0.00680494075641036
+          },
+          {
+            "start": 74.04,
+            "end": 74.04,
+            "text": " for",
+            "probability": 0.8135905861854553
+          },
+          {
+            "start": 74.04,
+            "end": 74.04,
+            "text": " watching!",
+            "probability": 0.9254658818244934
+          }
+        ]
+      }
+    ]
+  }
+]

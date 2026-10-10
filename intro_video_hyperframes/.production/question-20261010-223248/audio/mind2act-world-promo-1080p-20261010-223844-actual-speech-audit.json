@@ -1,0 +1,82 @@
+{
+  "video": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261010-223844.mp4",
+  "model": "faster-whisper medium.en int8 CPU",
+  "vad_model": "bundled Silero threshold0.5",
+  "vad_checks": [
+    {
+      "name": "coverage",
+      "interval": [
+        41.4814814815,
+        53.3333333333
+      ],
+      "speech_intervals": []
+    },
+    {
+      "name": "numeric_payoff",
+      "interval": [
+        62.6,
+        65.1851851852
+      ],
+      "speech_intervals": []
+    }
+  ],
+  "question_cue": [
+    {
+      "id": "motivation",
+      "intended": "Can reasoning and action work together?",
+      "transcript": "Can reasoning and action work together?",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 5.67,
+      "sample_end": 8.141166666666667,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.22,
+          "text": " Can reasoning and action work together?",
+          "no_speech_prob": 0.0018028193153440952,
+          "words": [
+            {
+              "text": " Can",
+              "start": 0.0,
+              "end": 0.28,
+              "probability": 0.7675873041152954
+            },
+            {
+              "text": " reasoning",
+              "start": 0.28,
+              "end": 0.78,
+              "probability": 0.8910374641418457
+            },
+            {
+              "text": " and",
+              "start": 0.78,
+              "end": 1.16,
+              "probability": 0.9944573640823364
+            },
+            {
+              "text": " action",
+              "start": 1.16,
+              "end": 1.54,
+              "probability": 0.9972381591796875
+            },
+            {
+              "text": " work",
+              "start": 1.54,
+              "end": 1.82,
+              "probability": 0.9991694688796997
+            },
+            {
+              "text": " together?",
+              "start": 1.82,
+              "end": 2.22,
+              "probability": 0.999516487121582
+            }
+          ]
+        }
+      ],
+      "match": true
+    }
+  ],
+  "manual_listening": false,
+  "pass": true
+}
