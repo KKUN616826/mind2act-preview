@@ -6,7 +6,6 @@
 #root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
 .coord-surface{position:absolute;inset:0;background:#090e13;color:#faf9f4;font-family:'Space Grotesk',sans-serif;letter-spacing:0}
 .coord-head{position:absolute;left:80px;top:68px;font-size:60px;line-height:1.15;font-weight:600;margin:0}
-.coord-kicker{position:absolute;left:82px;top:154px;font:22px 'IBM Plex Mono',monospace;color:#bdd9cc}
 .coord-mark{position:absolute;width:190px;height:190px;object-fit:contain;top:430px}
 .coord-name{position:absolute;top:622px;width:280px;text-align:center;font-size:44px;font-weight:600}
 .coord-intent{position:absolute;left:585px;top:290px;width:750px;text-align:center;color:#f0d57e;font-size:30px}
@@ -21,14 +20,12 @@
 #coord-forward-pulse,#coord-return-pulse{opacity:0}
 .coord-mappings{position:absolute;left:80px;right:80px;top:1010px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;font-size:21px;color:#e4e6d2}
 .coord-mappings span{color:#bdd9cc;margin-right:10px}
-.coord-note{position:absolute;right:80px;top:168px;font:17px 'IBM Plex Mono',monospace;color:#9fb2c8}
 .coord-update{position:absolute;left:685px;top:958px;width:550px;text-align:center;font-size:25px;color:#bdd9cc;background:#090e13;padding:7px 0}
 </style>
 <div id="root" data-composition-id="coordination" data-width="1920" data-height="1080" data-duration="11.111111">
 <div id="coord-surface" class="coord-surface">
 <h2 id="coord-head" class="coord-head">Strong parts need a feedback loop.</h2>
-<div id="coord-kicker" class="coord-kicker">COORDINATION THROUGH THE COMPLETE TASK</div>
-<div class="coord-note">TASK LOGIC ILLUSTRATION / NOT MODEL INTERNAL STATE</div>
+<!-- Authored task-logic illustration, not reconstructed model internal state. -->
 <div id="coord-film" class="coord-film"><video id="coord-piano" class="clip" src="assets/generated/coordination-20261010-174012/piano-feedback.mp4" data-start="0" data-duration="11.731111" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video><div class="coord-film-caption">CP05 / ACTUAL EXECUTION</div></div>
 <svg id="coord-paths" class="coord-paths" viewBox="0 0 1920 1080" aria-label="Intent guides action; actual results update task state and guide the next action">
 <defs><marker id="coord-arrow-gold" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#f0d57e" stroke-width="2"/></marker><marker id="coord-arrow-mint" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#bdd9cc" stroke-width="2"/></marker></defs>
@@ -50,7 +47,6 @@
 <script>(function(){const tl=gsap.timeline({paused:true});
 tl.fromTo('#coord-surface',{clipPath:'inset(0% 100% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},0);
 tl.fromTo('#coord-head',{opacity:0,y:45},{opacity:1,y:0,duration:.65,ease:'expo.out'},.18);
-tl.fromTo('#coord-kicker',{opacity:0},{opacity:1,duration:.45},.6);
 tl.fromTo('#coord-film',{opacity:0,scale:1.07},{opacity:1,scale:1,duration:.7,ease:'power3.out'},.3);
 tl.fromTo(['#coord-mind','#coord-act','#coord-mind-name','#coord-act-name'],{opacity:0,y:35},{opacity:1,y:0,duration:.6,stagger:.08,ease:'power3.out'},.45);
 tl.fromTo(['#coord-forward','#coord-intent'],{opacity:0},{opacity:1,duration:.45},1.1);

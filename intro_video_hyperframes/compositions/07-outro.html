@@ -9,7 +9,10 @@
 #outro-flight{left:0;top:0;width:1920px;height:560px;overflow:visible}
 #outro-logo{left:780px;top:19px;width:360px;height:360px;object-fit:contain;transform-origin:center center}
 #outro-brand{left:0;right:0;top:399px;height:190px;background:#faf9f3;display:flex;align-items:center;justify-content:center;overflow:hidden}
-#outro-wordmark{width:1158px;height:190px;object-fit:contain}
+/* The source wordmark includes a trailing colon at source x=980..989. Keep the
+   original bitmap and show the centered source window x=140..974 only. */
+#outro-wordmark-window{position:relative;width:834px;height:190px;overflow:hidden;flex:0 0 auto}
+#outro-wordmark{position:absolute;left:-140px;top:0;width:1158px;height:190px;max-width:none;object-fit:fill}
 #outro-accent{left:0;right:0;top:394px;height:5px;background:#f0d57e;transform-origin:left center}
 #outro-call{left:110px;top:642px;width:1700px;text-align:center;font-size:58px;line-height:1.15;font-weight:500}
 #outro-together{left:110px;top:718px;width:1700px;text-align:center;font-size:86px;line-height:1.12;color:#f0d57e;font-weight:500}
@@ -20,7 +23,7 @@
 <svg class="outro-abs" id="outro-flight" viewBox="0 0 1920 560" aria-hidden="true"><path id="outro-flight-path" d="M120 540 C430 530 730 340 960 199" fill="none" stroke="#f0d57e" stroke-width="2" stroke-opacity=".55"/></svg>
 <img id="outro-logo" class="outro-abs" src="assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png" alt="Mind2Act">
 <div class="outro-abs" id="outro-accent"></div>
-<div class="outro-abs" id="outro-brand"><img id="outro-wordmark" src="assets/logos/min2act_world.png" alt="Mind2Act World"></div>
+<div class="outro-abs" id="outro-brand"><div id="outro-wordmark-window"><img id="outro-wordmark" src="assets/logos/min2act_world.png" alt="Mind2Act World"></div></div>
 <div class="outro-abs" id="outro-call">Let's take the next giant leap,</div>
 <div class="outro-abs" id="outro-together">together.</div>
 <div class="outro-abs" id="outro-actions">Contribute tasks. Evaluate your agents.</div>

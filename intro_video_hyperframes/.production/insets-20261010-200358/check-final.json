@@ -1,0 +1,252 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "duplicate_media_discovery_risk",
+        "severity": "warning",
+        "message": "Detected 2 matching img entries with the same source/start/duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/compositions/04-act.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation."
+      }
+    ],
+    "filesScanned": 9
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 3,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 3.457,
+        "selector": "#intro-all",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -14.4,
+          "top": -8.1,
+          "right": 1934.4,
+          "bottom": 1088.1,
+          "width": 1948.8,
+          "height": 1096.2
+        },
+        "containerSelector": "#intro-surface",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 14.4,
+          "right": 14.4,
+          "top": 8.1,
+          "bottom": 8.1
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/01-intro.html",
+        "bbox": {
+          "x": -14.4,
+          "y": -8.1,
+          "width": 1948.8,
+          "height": 1096.2
+        },
+        "firstSeen": 3.457,
+        "lastSeen": 3.457,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.457
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 3.457,
+        "selector": "#intro-wordmark",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 291.59,
+          "top": 594,
+          "right": 1681.19,
+          "bottom": 822,
+          "width": 1389.59,
+          "height": 228
+        },
+        "containerSelector": "#intro-wordmark-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 459.59,
+          "top": 594,
+          "right": 1460.39,
+          "bottom": 822,
+          "width": 1000.8,
+          "height": 228
+        },
+        "overflow": {
+          "left": 168,
+          "right": 220.8
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/01-intro.html",
+        "bbox": {
+          "x": 291.59,
+          "y": 594,
+          "width": 1389.59,
+          "height": 228
+        },
+        "firstSeen": 3.457,
+        "lastSeen": 3.457,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.457
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 58.765,
+        "selector": "#outro-wordmark",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 403,
+          "top": 399,
+          "right": 1561,
+          "bottom": 589,
+          "width": 1158,
+          "height": 190
+        },
+        "containerSelector": "#outro-wordmark-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 543,
+          "top": 399,
+          "right": 1377,
+          "bottom": 589,
+          "width": 834,
+          "height": 190
+        },
+        "overflow": {
+          "left": 140,
+          "right": 184
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/07-outro.html",
+        "bbox": {
+          "x": 403,
+          "y": 399,
+          "width": 1158,
+          "height": 190
+        },
+        "firstSeen": 58.765,
+        "lastSeen": 58.765,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          58.765
+        ]
+      }
+    ],
+    "duration": 62.222222,
+    "samples": [
+      3.457,
+      10.37,
+      17.284,
+      24.198,
+      31.111,
+      38.025,
+      44.938,
+      51.852,
+      58.765
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 3,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      3.457,
+      17.284,
+      31.111,
+      44.938,
+      58.765
+    ],
+    "checked": 23,
+    "passed": 23
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      "snapshots/frame-00-at-3.5s.png",
+      "snapshots/frame-01-at-17.3s.png",
+      "snapshots/frame-02-at-31.1s.png",
+      "snapshots/frame-03-at-44.9s.png",
+      "snapshots/frame-04-at-58.8s.png"
+    ],
+    "times": [
+      3.457,
+      17.284,
+      31.111,
+      44.938,
+      58.765
+    ],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.8.143",
+    "updateAvailable": false
+  }
+}

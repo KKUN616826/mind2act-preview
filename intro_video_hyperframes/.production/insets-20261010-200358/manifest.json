@@ -1,0 +1,16 @@
+{
+  "stamp": "20261010-200358",
+  "production": ".production/insets-20261010-200358",
+  "created_at": "2026-10-10T20:03:58+08:00",
+  "previous_delivery": "before/renders/delivery.json",
+  "duration": 62.2222222222,
+  "requested_edits": [
+    "Remove the two user-circled overhead captions from the coordination scene",
+    "Restore Act target/actual trace comparison and Mind2Act observed-sequence excerpt insets",
+    "Retain right-side floating guidance with shorter text",
+    "Remove the trailing colon from the displayed pixel wordmark at opening and closing"
+  ],
+  "preserved": ["original brand PNGs", "existing soundtrack", "case footage", "blue-cup plating", "62.222222-second timeline", "all historical deliveries"],
+  "source_reference": ".production/coordination-20261010-174012/before/compositions",
+  "source_interpretation": "Task-logic diagram and illustrative observed excerpts; no new model-state, correction or performance claims"
+}

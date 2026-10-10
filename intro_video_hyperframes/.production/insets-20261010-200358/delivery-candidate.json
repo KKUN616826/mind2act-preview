@@ -1,0 +1,54 @@
+{
+  "id": "mind2act-world-promo-20261010-201142",
+  "created_at": "2026-10-10T20:11:42+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261010-201142.mp4",
+  "web": "renders/mind2act-world-promo-web-20261010-201142.mp4",
+  "poster": "renders/mind2act-world-poster-20261010-201142.jpg",
+  "authored_duration": 62.2222222222,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261010-201142.mp4",
+      "bytes": 72249824,
+      "sha256": "67116913f29cd4bde78988d6d49b2ab39a82923874439e23c9b1aca3e14b8d93",
+      "duration": 62.233333,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261010-201142.mp4",
+      "bytes": 10582420,
+      "sha256": "5b997081de79a3d62d02963a0fc651217cbc2f4a05f652479c9779d820134326",
+      "duration": 62.233333,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "subtitles": [
+    "renders/mind2act-world-narration-20261010-201142.srt",
+    "renders/mind2act-world-narration-20261010-201142.vtt"
+  ],
+  "checks": {
+    "composition": ".production/insets-20261010-200358/check-final.json",
+    "audio": ".production/coordination-20261010-174012/audio/audio-integration.json",
+    "source_evidence": ".production/coordination-20261010-174012/loop-provenance.json",
+    "decode_master": "pass",
+    "decode_web": "pass"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+  "production_manifest": ".production/insets-20261010-200358/manifest.json"
+}

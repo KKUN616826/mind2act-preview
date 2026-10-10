@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"></head><body><template>
+<style>
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;src:url('assets/fonts/SpaceGrotesk-500.ttf') format('truetype')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('assets/fonts/IBMPlexMono-400.ttf') format('truetype')}
+#motivation-root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+#motivation-root *{box-sizing:border-box;letter-spacing:0}
+.motivation-surface{position:absolute;inset:0;overflow:hidden;background:#090e13;color:#faf9f3;font-family:'Space Grotesk',sans-serif}
+.motivation-abs{position:absolute}.motivation-mono{font-family:'IBM Plex Mono',monospace;font-weight:400}
+#motivation-head{left:88px;top:75px;width:1744px}
+#motivation-kicker{font-size:22px;color:#bdd9cc}
+#motivation-question{font-size:78px;line-height:1.12;margin-top:25px;font-weight:500}
+#motivation-question span{display:block}
+#motivation-question-second{color:#f0d57e}
+.motivation-symbol{position:absolute;object-fit:contain;transform-origin:center center}
+#motivation-mind-symbol{left:220px;top:358px;width:370px;height:340.3px}
+#motivation-act-symbol{left:1330px;top:358px;width:370px;height:362.1px}
+#motivation-logo{left:750px;top:330px;width:420px;height:420px}
+.motivation-label{position:absolute;top:741px;width:460px;text-align:center}
+.motivation-label strong{display:block;font-size:58px;line-height:1.12;font-weight:500}
+.motivation-label small{display:block;font-size:25px;margin-top:12px;color:#a8bacb}
+#motivation-mind{left:175px}#motivation-act{left:1285px}
+#motivation-flow{position:absolute;left:615px;top:390px;width:690px;height:300px}
+#motivation-flow svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+#motivation-intent{position:absolute;left:0;top:0;width:690px;text-align:center;font-size:28px;color:#bdd9cc}
+#motivation-results{position:absolute;left:0;top:244px;width:690px;text-align:center;font-size:28px;color:#f0d57e}
+#motivation-connector{left:885px;top:517px;width:150px;height:105px}
+.motivation-dot{position:absolute;width:23px;height:23px;background:#f0d57e;border:1px solid #f8e2a0}
+#motivation-dot-a{left:13px;top:77px}#motivation-dot-b{left:58px;top:39px}#motivation-dot-c{left:103px;top:1px}
+#motivation-coord{left:180px;top:881px;width:1560px;text-align:center;font-size:42px;color:#f0d57e;line-height:1.2}
+#motivation-note{left:0;right:0;bottom:53px;text-align:center;font-size:18px;color:#9fb2c8}
+</style>
+<div id="motivation-root" data-composition-id="motivation" data-width="1920" data-height="1080" data-duration="6.666667"><div class="motivation-surface" id="motivation-surface">
+<div class="motivation-abs" id="motivation-head"><div class="motivation-mono" id="motivation-kicker">THE QUESTION BEHIND THE BENCHMARK</div><div id="motivation-question"><span id="motivation-question-first">Can strong parts make</span><span id="motivation-question-second">a reliable whole?</span></div></div>
+<img id="motivation-mind-symbol" class="motivation-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/01-Mind-1308x1203.png" alt="Mind">
+<img id="motivation-act-symbol" class="motivation-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/02-Act-1268x1241.png" alt="Act">
+<div id="motivation-flow">
+<svg viewBox="0 0 690 300" aria-hidden="true"><defs><marker id="motivation-arrow-forward" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#bdd9cc" stroke-width="1.5"/></marker><marker id="motivation-arrow-return" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#f0d57e" stroke-width="1.5"/></marker></defs><path id="motivation-intent-path" d="M15 90 C200 36 490 36 675 90" fill="none" stroke="#bdd9cc" stroke-width="3" marker-end="url(#motivation-arrow-forward)"/><path id="motivation-result-path" d="M675 205 C490 260 200 260 15 205" fill="none" stroke="#f0d57e" stroke-width="3" marker-end="url(#motivation-arrow-return)"/></svg>
+<div id="motivation-intent">Intent guides action</div><div id="motivation-results">Results update the task</div>
+</div>
+<div id="motivation-connector" class="motivation-abs" aria-hidden="true"><div class="motivation-dot" id="motivation-dot-a"></div><div class="motivation-dot" id="motivation-dot-b"></div><div class="motivation-dot" id="motivation-dot-c"></div></div>
+<img id="motivation-logo" class="motivation-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png" alt="Mind2Act">
+<div class="motivation-label" id="motivation-mind"><strong>Mind</strong><small>Task reasoning</small></div>
+<div class="motivation-label" id="motivation-act"><strong>Act</strong><small>Physical execution</small></div>
+<div class="motivation-abs" id="motivation-coord">Coordination across the whole task.</div>
+<div class="motivation-abs motivation-mono" id="motivation-note">BENCHMARK PERSPECTIVES</div>
+</div></div>
+<script>(function(){const tl=gsap.timeline({paused:true});
+tl.fromTo('#motivation-surface',{clipPath:'circle(0% at 50% 30%)'},{clipPath:'circle(100% at 50% 30%)',duration:.6,ease:'power3.inOut'},0);
+tl.fromTo('#motivation-kicker',{opacity:0,y:18},{opacity:1,y:0,duration:.4,ease:'power3.out'},.15);
+tl.fromTo('#motivation-question-first',{opacity:0,x:-50},{opacity:1,x:0,duration:.55,ease:'expo.out'},.27);
+tl.fromTo('#motivation-question-second',{opacity:0,y:35},{opacity:1,y:0,duration:.60,ease:'expo.out'},.46);
+tl.fromTo('#motivation-mind-symbol',{opacity:0,x:330,y:-28,scale:.9,rotation:-7},{opacity:1,x:0,y:0,scale:1,rotation:0,duration:.85,ease:'power3.inOut'},.65);
+tl.fromTo('#motivation-act-symbol',{opacity:0,x:-330,y:28,scale:.9,rotation:7},{opacity:1,x:0,y:0,scale:1,rotation:0,duration:.85,ease:'power3.inOut'},.65);
+tl.fromTo('#motivation-mind',{opacity:0,y:24},{opacity:1,y:0,duration:.55,ease:'power3.out'},1.05);
+tl.fromTo('#motivation-act',{opacity:0,y:24},{opacity:1,y:0,duration:.55,ease:'power3.out'},1.22);
+['#motivation-dot-a','#motivation-dot-b','#motivation-dot-c'].forEach((id,i)=>tl.fromTo(id,{opacity:0,scale:.3},{opacity:1,scale:1,duration:.24,ease:'back.out(1.8)'},1.45+i*.10));
+['#motivation-intent-path','#motivation-result-path'].forEach((id,i)=>{const p=document.querySelector(id);const len=p.getTotalLength();tl.fromTo(id,{strokeDasharray:len,strokeDashoffset:len,opacity:0},{strokeDashoffset:0,opacity:1,duration:.70,ease:'power2.inOut'},1.77+i*.76);});
+tl.fromTo('#motivation-intent',{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:'power2.out'},1.83);
+tl.fromTo('#motivation-results',{opacity:0,y:-16},{opacity:1,y:0,duration:.45,ease:'power2.out'},2.62);
+tl.fromTo('#motivation-coord',{opacity:0,y:26},{opacity:1,y:0,duration:.62,ease:'expo.out'},3.51);
+tl.fromTo('#motivation-note',{opacity:0},{opacity:1,duration:.45,ease:'sine.out'},1.65);
+tl.to('#motivation-flow',{opacity:0,duration:.35,ease:'power2.in'},4.90);
+tl.to('#motivation-mind-symbol',{x:517,y:-26,scale:1.189,duration:.71,ease:'power3.inOut'},4.99);
+tl.to('#motivation-act-symbol',{x:-526,y:23,scale:1.079,duration:.71,ease:'power3.inOut'},4.99);
+tl.to('#motivation-dot-a',{x:17,y:-11,duration:.71,ease:'power3.inOut'},4.99);
+tl.to('#motivation-dot-b',{x:9,y:-1,duration:.71,ease:'power3.inOut'},4.99);
+tl.to('#motivation-dot-c',{x:-2,y:5,duration:.71,ease:'power3.inOut'},4.99);
+tl.to(['#motivation-mind-symbol','#motivation-act-symbol','#motivation-connector'],{opacity:0,duration:.20,ease:'sine.inOut'},5.55);
+tl.fromTo('#motivation-logo',{opacity:0,scale:1.025},{opacity:1,scale:1,duration:.23,ease:'power2.out'},5.55);
+window.__timelines['motivation']=tl;})();</script>
+</template></body></html>

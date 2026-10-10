@@ -16,7 +16,10 @@
 #intro-dot-a{left:44px;top:97px}#intro-dot-b{left:92px;top:49px}#intro-dot-c{left:140px;top:1px}
 #intro-eyebrow{left:0;top:536px;width:100%;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:22px;color:#bdd9cc}
 #intro-brand{left:0;right:0;top:594px;height:228px;background:#faf9f3;display:flex;align-items:center;justify-content:center;overflow:hidden}
-#intro-wordmark{width:1389.6px;height:228px;object-fit:contain}
+/* The source wordmark includes a trailing colon at source x=980..989. Keep the
+   original bitmap and show the centered source window x=140..974 only. */
+#intro-wordmark-window{position:relative;width:1000.8px;height:228px;overflow:hidden;flex:0 0 auto}
+#intro-wordmark{position:absolute;left:-168px;top:0;width:1389.6px;height:228px;max-width:none;object-fit:fill}
 #intro-tagline{left:190px;top:869px;width:1540px;font-size:34px;text-align:center;color:#e4e6d2;line-height:1.4}
 #intro-edge{left:65px;bottom:39px;font-family:'IBM Plex Mono',monospace;font-size:18px;color:#9fb2c8}
 #intro-accent{left:0;right:0;top:589px;height:5px;background:#f0d57e;transform-origin:left center}
@@ -33,7 +36,7 @@
 <img id="intro-logo" class="intro-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/03-Mind2Act-1254x1254.png" alt="Mind2Act">
 <div class="intro-abs" id="intro-eyebrow">A NEW WORLD OF EMBODIED INTELLIGENCE</div>
 <div class="intro-abs" id="intro-accent"></div>
-<div class="intro-abs" id="intro-brand"><img id="intro-wordmark" src="assets/logos/min2act_world.png" alt="Mind2Act World"></div>
+<div class="intro-abs" id="intro-brand"><div id="intro-wordmark-window"><img id="intro-wordmark" src="assets/logos/min2act_world.png" alt="Mind2Act World"></div></div>
 <div class="intro-abs" id="intro-tagline">Evaluating reasoning–acting coordination in robotic manipulation.</div>
 <div class="intro-abs" id="intro-edge">MIND / ACT / MIND2ACT</div>
 </div></div>

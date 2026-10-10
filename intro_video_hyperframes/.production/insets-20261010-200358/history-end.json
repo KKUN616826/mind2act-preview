@@ -1,0 +1,32 @@
+{
+  "entry": {
+    "id": "d4b37f17-9da0-4f0c-a227-847340c47da3",
+    "who": {
+      "kind": "agent",
+      "name": "codex"
+    },
+    "label": "Restore case insets and refine titles and loop labels",
+    "startedAt": 1791633841936,
+    "endedAt": 1791634270706.6501,
+    "files": [
+      "compositions/01-intro.html",
+      "compositions/04-act.html",
+      "compositions/05-mind2act.html",
+      "compositions/07-outro.html",
+      "compositions/08-coordination.html",
+      "DESIGN.md",
+      "snapshots/frame-00-at-3.5s.png",
+      "snapshots/frame-02-at-31.1s.png",
+      "snapshots/frame-04-at-58.8s.png"
+    ],
+    "undone": false,
+    "pinned": false
+  },
+  "parts": [
+    "d4b37f17-9da0-4f0c-a227-847340c47da3"
+  ],
+  "_meta": {
+    "version": "0.8.143",
+    "updateAvailable": false
+  }
+}
