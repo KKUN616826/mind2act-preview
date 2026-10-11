@@ -1,0 +1,95 @@
+{
+  "before_66_60_sample_identical": true,
+  "first_difference_seconds": 66.781875,
+  "old_samples": 3598756,
+  "new_samples": 3598756,
+  "sample_rate": 48000,
+  "outro_interval": [
+    66.0851851852,
+    74.9740740741
+  ],
+  "soundtrack_sha256": {
+    "old": "774a1b523a28504d9d12f503f72bf1ff8dcbc29cc68954aa981afdffc36fd4da",
+    "new": "2b65ba206a487feca110f2458597878323b0f54103f88f427edaf4f0fe90e447"
+  },
+  "other_voice_cues": [
+    {
+      "id": "intro",
+      "old_sha256": "065cc3b9cb327055e8d81758829cdc66039e8748e45c9b1332e4d522bf6dde25",
+      "new_sha256": "065cc3b9cb327055e8d81758829cdc66039e8748e45c9b1332e4d522bf6dde25",
+      "unchanged": true
+    },
+    {
+      "id": "motivation",
+      "old_sha256": "cbd4c6b7d8cb277571c3b4d5529f596a92c685d0416e3393b95bcf961842a7a0",
+      "new_sha256": "cbd4c6b7d8cb277571c3b4d5529f596a92c685d0416e3393b95bcf961842a7a0",
+      "unchanged": true
+    },
+    {
+      "id": "mind",
+      "old_sha256": "93394be46e244ff8a96728f229ce12198ab1dce2dacdf274fb6b3b2aec76da0c",
+      "new_sha256": "93394be46e244ff8a96728f229ce12198ab1dce2dacdf274fb6b3b2aec76da0c",
+      "unchanged": true
+    },
+    {
+      "id": "act",
+      "old_sha256": "4a10e4037affd87cd5bb2e52da52c824fe03c7ac1e613cc4ebcffc5751126bbd",
+      "new_sha256": "4a10e4037affd87cd5bb2e52da52c824fe03c7ac1e613cc4ebcffc5751126bbd",
+      "unchanged": true
+    },
+    {
+      "id": "mind2act",
+      "old_sha256": "b0185c872204ccc44147addd5db661adf4f85be90e664416570bf5ae3bd06cd7",
+      "new_sha256": "b0185c872204ccc44147addd5db661adf4f85be90e664416570bf5ae3bd06cd7",
+      "unchanged": true
+    },
+    {
+      "id": "coordination-loop",
+      "old_sha256": "f2026ac4e0b85d6420a05c7751a0fb06f9234797ec4e451799210a04f3258b17",
+      "new_sha256": "f2026ac4e0b85d6420a05c7751a0fb06f9234797ec4e451799210a04f3258b17",
+      "unchanged": true
+    },
+    {
+      "id": "scale-easy",
+      "old_sha256": "8d973a3b584edaf49f1835e71b332e293b5ddec918f413f85e83969c2e9a6f97",
+      "new_sha256": "8d973a3b584edaf49f1835e71b332e293b5ddec918f413f85e83969c2e9a6f97",
+      "unchanged": true
+    },
+    {
+      "id": "scale-medium",
+      "old_sha256": "de67de07546a45ed37d916a8be0c0e3acaaef8f19f90f8acfce96f904882e70a",
+      "new_sha256": "de67de07546a45ed37d916a8be0c0e3acaaef8f19f90f8acfce96f904882e70a",
+      "unchanged": true
+    },
+    {
+      "id": "scale-hard",
+      "old_sha256": "9073bbb11f1078c13133c407651940235d20a34b60755272da1f37002ebaba9e",
+      "new_sha256": "9073bbb11f1078c13133c407651940235d20a34b60755272da1f37002ebaba9e",
+      "unchanged": true
+    },
+    {
+      "id": "difficulty-explanation",
+      "old_sha256": "b6d30ee93ac04dffb389f7dbda474b08f52186ffae1642e695c14968a9545f25",
+      "new_sha256": "b6d30ee93ac04dffb389f7dbda474b08f52186ffae1642e695c14968a9545f25",
+      "unchanged": true
+    }
+  ],
+  "stem_differences": {
+    "music": {
+      "first_seconds": 71.67704166666667,
+      "last_seconds": 73.79164583333333,
+      "all_before_outro_identical": true
+    },
+    "narration": {
+      "first_seconds": 66.781875,
+      "last_seconds": 73.39166666666667,
+      "all_before_outro_identical": true
+    },
+    "sfx": {
+      "first_seconds": null,
+      "last_seconds": null,
+      "all_before_outro_identical": true
+    }
+  },
+  "passed": true
+}

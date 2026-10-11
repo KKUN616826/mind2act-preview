@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "reviewer": "new_hd_assets",
+  "reviewed_at": "2026-10-11T17:54:16.533381+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+  "evidence_source": "Actual encoded master frames extracted with FFmpeg by review_render.py",
+  "reviewed_times": [
+    9,
+    20.5,
+    33.1,
+    39.2,
+    42.25,
+    43.9,
+    45.25,
+    47.8,
+    60.4,
+    64.7,
+    70,
+    73.5
+  ],
+  "motion_evidence": "rendered/montage-sheet.jpg",
+  "checks": {
+    "fullscreen_order": "M / Mind \u2192 FR1 / Act \u2192 CP04 / Mind2Act",
+    "hd_framing": "All three preserve full source 16:9 aspect, all camera edges retained; no horizontal cropping or visible stretch.",
+    "motion": "Native action advances in all three clips; CP04 continuous footage shrinks into its CP04 card.",
+    "category_captions": [
+      "Choose the next action.",
+      "Execute actions reliably.",
+      "Coordinate the whole task."
+    ],
+    "caption_structure": "Parallel imperative sentences, one line, consistent baseline and size; no case-specific explanation in fullscreen captions.",
+    "earlier_text": "9s parallel category lines remain aligned; 20.5s Act three lines remain single-line and legible.",
+    "coordination": "33.1s bidirectional diagram intact; 39.2s three peer categories intact.",
+    "difficulty_comparison": "Three rows and levels intact; cakes 4/6/6 and left-edge source coverage preserved. CP02 movement-specific review is recorded separately by cp02_difficulty_revision.",
+    "outro": "70s and 73.5s clearly show Contribute tasks. Evaluate embodied AI systems.; no agent-only restriction; original wordmark and website remain legible."
+  },
+  "findings": [],
+  "media_registration": {
+    "M": ".media/video/video_002.mp4",
+    "FR1": ".media/video/video_003.mp4",
+    "CP04": ".media/video/video_004.mp4"
+  },
+  "limits": "This report verifies visual output only; audio verified separately."
+}

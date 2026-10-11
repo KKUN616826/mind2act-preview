@@ -1,0 +1,18 @@
+{
+  "reviewed_at": "2026-10-11T17:45:31.812060+08:00",
+  "reviewer": "new_hd_assets",
+  "status": "passed_source_and_hyperframes_snapshot_review",
+  "full_original_16_9_frame": true,
+  "derived_video_full_decode": "3/3 passed",
+  "source_provenance": "assets/generated/montage-hd-20261011-170017/edit-provenance.json",
+  "source_contact_sheet": "assets/generated/montage-hd-20261011-170017/inspection/derived-early-mid-late.jpg",
+  "hyperframes_preview": ".production/hd-difficulty-invite-20261011-171026/montage-preview/contact-sheet.jpg",
+  "reviewed_times": [
+    42.25,
+    43.9,
+    45.25,
+    47.8
+  ],
+  "findings": [],
+  "pending": "Actual delivery export frame review after root render."
+}

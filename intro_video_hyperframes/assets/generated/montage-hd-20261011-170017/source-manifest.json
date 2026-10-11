@@ -1,0 +1,28 @@
+{
+  "source_zip": "/home/xzy/xzy_project/robostream++/mind2act_video/video materio/M-FR1-CP04-Hard-1080p.zip",
+  "source_zip_sha256": "41b2da197e7c566f9715be35bfc17fb129ebc209fb50a230be21f7cb02364280",
+  "extracted_at": "2026-10-11T17:00:18.260774+08:00",
+  "files": [
+    {
+      "source_zip_entry": "M-Hard-1080p.mp4",
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/M-Hard-1080p.mp4",
+      "bytes": 66658444,
+      "sha256": "d998f690f2aebc459c578d1b07b084d27e6c8ae630082f7cb46f515f84c7ea5b",
+      "crc": "0xff15cbc9"
+    },
+    {
+      "source_zip_entry": "FR1-Hard-1080p.mp4",
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/FR1-Hard-1080p.mp4",
+      "bytes": 29211725,
+      "sha256": "00359793b1bb6edc02db4cfa8e76f0caa43d91aa77386b07611900132485f0c9",
+      "crc": "0x7b376569"
+    },
+    {
+      "source_zip_entry": "CP04-Hard-1080p.mp4",
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/CP04-Hard-1080p.mp4",
+      "bytes": 105804728,
+      "sha256": "14db8440391c3c3016553b652daad427d339983e8cd6aac131b1e34689d932ed",
+      "crc": "0xf09b14e9"
+    }
+  ]
+}

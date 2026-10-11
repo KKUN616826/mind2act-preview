@@ -1,0 +1,54 @@
+{
+  "id": "mind2act-world-promo-20261011-174810",
+  "created_at": "2026-10-11T17:48:10+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-174810.mp4",
+  "poster": "renders/mind2act-world-poster-20261011-174810.jpg",
+  "authored_duration": 74.9740740741,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+      "bytes": 90490377,
+      "sha256": "0c1be13eac538d23ab840639086cb45f706b3f5ae3a1f6c4ba0f3b00adbb5419",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261011-174810.mp4",
+      "bytes": 12175084,
+      "sha256": "73b5caea8aa1fe9a61d2ceb747bb2d14585d3f2a3ea263a689e715dfee01d7f0",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "subtitles": [
+    "renders/mind2act-world-narration-20261011-174810.srt",
+    "renders/mind2act-world-narration-20261011-174810.vtt"
+  ],
+  "checks": {
+    "composition": ".production/hd-difficulty-invite-20261011-171026/check-final.json",
+    "audio": ".production/hd-difficulty-invite-20261011-171026/audio-integration.json",
+    "source_evidence": ".production/hd-difficulty-invite-20261011-171026/media-provenance.json",
+    "decode_master": "pass",
+    "decode_web": "pass"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+  "production_manifest": ".production/hd-difficulty-invite-20261011-171026/manifest.json"
+}

@@ -1,0 +1,9 @@
+{
+  "supplied_hd_archive": "assets/generated/montage-hd-20261011-170017/source-manifest.json",
+  "montage_trims": "assets/generated/montage-hd-20261011-170017/edit-provenance.json",
+  "cp02_source_camera": ".production/cp02-fullview-20261011-112139/media-provenance.json",
+  "cp02_action_assets": "assets/generated/cp02-actions-20261011-171026",
+  "montage_display": "Native 16:9 contained in a 922 px picture height above a 158 px title bar; full frame visible, no crop. CP04 shared wrapper scales to a 240 \u00d7 126 card with pillarboxing to preserve 16:9.",
+  "cp02_action_provenance": "assets/generated/cp02-actions-20261011-171026/media-provenance.json",
+  "cp02_visual_review": ".production/hd-difficulty-invite-20261011-171026/cp02-visual-review.json"
+}

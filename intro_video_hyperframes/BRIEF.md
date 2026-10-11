@@ -32,3 +32,5 @@ Mind E/F/P/S/M; Act FR1/FR2/PR1/PR2/PR3; Mind2Act CP01/CP02/CP03/CP04/CP05. Fift
 Editable project;1080p H.264/AAC master and webcopy; poster/contactsheet; EnglishSRT/VTT; original history retained; actual exported frames and AAC reviewed.
 
 CP02 framing revision: preserve complete cake, base and lid using the entire640×334main-camera view with no horizontal cropping and contain fitting. Hero title: Remember. Recreate. Short labels: 4 pieces / 6 pieces / 6 pieces + cover. Hard picture moves into the bottom-right CP02 grid cell. Audio, duration and other scenes remain unchanged.
+
+Approved 2026-10-11 revision: native 1080p M/FR1/CP04 fullscreen sources from the supplied archive; parallel category-characteristic captions; CP02 difficulty hero with real piece-placement, button/lid and cover operations; inclusive embodied AI systems CTA and matching voiceover.

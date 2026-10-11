@@ -1,17 +1,17 @@
 {
-  "id": "mind2act-world-promo-20261011-122335",
-  "created_at": "2026-10-11T12:23:35+08:00",
-  "master": "renders/mind2act-world-promo-1080p-20261011-122335.mp4",
-  "web": "renders/mind2act-world-promo-web-20261011-122335.mp4",
-  "poster": "renders/mind2act-world-poster-20261011-122335.jpg",
+  "id": "mind2act-world-promo-20261011-174810",
+  "created_at": "2026-10-11T17:48:10+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-174810.mp4",
+  "poster": "renders/mind2act-world-poster-20261011-174810.jpg",
   "authored_duration": 74.9740740741,
   "framework": "HyperFrames 0.8.143",
   "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
   "files": {
     "master": {
-      "path": "renders/mind2act-world-promo-1080p-20261011-122335.mp4",
-      "bytes": 84299457,
-      "sha256": "f102bd07d2572992b21d16bd34c7ba1a0a9b744adb5c1c6ba3bee7f78fdb259f",
+      "path": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+      "bytes": 90490377,
+      "sha256": "0c1be13eac538d23ab840639086cb45f706b3f5ae3a1f6c4ba0f3b00adbb5419",
       "duration": 75,
       "video_codec": "h264",
       "width": 1920,
@@ -23,9 +23,9 @@
       "audio_channels": 2
     },
     "web": {
-      "path": "renders/mind2act-world-promo-web-20261011-122335.mp4",
-      "bytes": 12133486,
-      "sha256": "dce4114632d5b68fd1c169ef76394d5e3ab6df76e8374312115e46ce27a264c1",
+      "path": "renders/mind2act-world-promo-web-20261011-174810.mp4",
+      "bytes": 12175084,
+      "sha256": "73b5caea8aa1fe9a61d2ceb747bb2d14585d3f2a3ea263a689e715dfee01d7f0",
       "duration": 75,
       "video_codec": "h264",
       "width": 1920,
@@ -38,41 +38,54 @@
     }
   },
   "subtitles": [
-    "renders/mind2act-world-narration-20261011-122335.srt",
-    "renders/mind2act-world-narration-20261011-122335.vtt"
+    "renders/mind2act-world-narration-20261011-174810.srt",
+    "renders/mind2act-world-narration-20261011-174810.vtt"
   ],
   "checks": {
-    "composition": ".production/parallel-copy-20261011-121901/check-final.json",
-    "audio": ".production/difficulty-grid-20261011-090243/audio/audio-integration.json",
-    "source_evidence": ".production/cp02-fullview-20261011-112139/media-provenance.json",
+    "composition": ".production/hd-difficulty-invite-20261011-171026/check-final.json",
+    "audio": ".production/hd-difficulty-invite-20261011-171026/audio-integration.json",
+    "source_evidence": ".production/hd-difficulty-invite-20261011-171026/media-provenance.json",
     "decode_master": "pass",
     "decode_web": "pass",
-    "exported_visual": ".production/parallel-copy-20261011-121901/exported-visual-review.json",
-    "audio_preservation": ".production/parallel-copy-20261011-121901/audio-preservation.json",
-    "review": ".production/parallel-copy-20261011-121901/QA.md",
-    "unchanged_motion_verified": true,
+    "exported_visual": ".production/hd-difficulty-invite-20261011-171026/exported-visual-review.json",
+    "exported_audio": ".production/hd-difficulty-invite-20261011-171026/exported-audio-review.json",
+    "animation_review": ".production/hd-difficulty-invite-20261011-171026/animation-review.json",
+    "review": ".production/hd-difficulty-invite-20261011-171026/QA.md",
+    "master_web_aac_identical": [
+      {
+        "kind": "master",
+        "sha256": "1c33b895d7ae87c2895fbea144ccb92dd04d6fd27aa2b6e448d4791d1f037008"
+      },
+      {
+        "kind": "web",
+        "sha256": "1c33b895d7ae87c2895fbea144ccb92dd04d6fd27aa2b6e448d4791d1f037008"
+      }
+    ],
     "unchanged_other_compositions_verified": true,
-    "previous_delivery": "renders/delivery-20261011-115335.json"
+    "previous_delivery": "renders/delivery-20261011-122335.json"
   },
   "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
   "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
-  "production_manifest": ".production/parallel-copy-20261011-121901/manifest.json",
-  "local_preview": "renders/preview-20261011-122335.html",
-  "category_preview": "renders/mind2act-world-categories-20261011-122335.jpg",
+  "production_manifest": ".production/hd-difficulty-invite-20261011-171026/manifest.json",
+  "local_preview": "renders/preview-20261011-174810.html",
+  "contact_sheet": "renders/mind2act-world-contact-20261011-174810.jpg",
+  "difficulty_preview": "renders/mind2act-world-difficulty-20261011-174810.jpg",
+  "montage_preview": "renders/mind2act-world-montage-20261011-174810.jpg",
+  "difficulty_excerpt": "renders/mind2act-world-difficulty-review-20261011-174810.mp4",
   "source_hashes": {
-    "index.html": "d92f08c460b782734df3debfa04f316ebc4d1e672b6d471c6ee6fc8fa751272f",
+    "index.html": "cb568ca39815cfbf57299a6b165d4c78cc2e64078a82c56b1616a8d31c5adba6",
     "compositions/01-intro.html": "93266b20a69eb0d2881c5e0920328a3b103ad2ae5dcaabaf5276e1d695d1761b",
     "compositions/02-motivation.html": "c2d70082bc61176532fb5defd9e3ff76a0f94eda3a9b685dba530199828cf5e0",
     "compositions/03-mind.html": "20f7c5d455e14a1804c8913cd9304689f754ceecef1593fd96467a69559c83e6",
     "compositions/04-act.html": "cf65aa86ec636e5dfae6e384704d56e2e2a26053d95bdb8f01be496538c2f367",
     "compositions/05-mind2act.html": "5a0e31812dc4f4d47bb771c480a94f612a684ecd165dba8ebbf1605245ed1965",
-    "compositions/06-scale.html": "362f531f04878aa1f591de0c7330cf9b48ec048cabe772bfeac2862057a96500",
-    "compositions/07-outro.html": "0d35f1a78bd0f4a17220307baadb1c00c56ca76160a69d1592e8544a9be89640",
+    "compositions/06-scale.html": "391bf6909655954159fb2738b08cc04b7a72280f2665cea646630499066ce4ad",
+    "compositions/07-outro.html": "d9c1210dfdb26d0ebfffc7b846f7a454d2f5e42727a7610f06edafed35972d7f",
     "compositions/08-coordination.html": "ed746cefeeb01008276a70a8d8d683c94fcf1d3736bcd3b5e53d1b1b9957387c",
-    "compositions/09-difficulty.html": "4a5f22458426e2bf1b917fdf90f8f2e0b373e753225c31feb8f068fba9c06e2c"
+    "compositions/09-difficulty.html": "5da1def880ce56e0b8737c96302983fc2697c263cc89ab40fa4d6a476bfa9dde"
   },
-  "revision": "Use parallel action-oriented sentences for Mind, Act and Mind2Act: Choose the next action. / Execute actions reliably. / Coordinate the whole task. Text substitutions only; all styling, motion, timing, footage and audio retained.",
-  "narrative": "Question and three categories -> P / PR3 / CP05 representative cases -> two-way coordination and three-logo triangle -> M / FR1 / CP04 fullscreen montage -> 15 tasks in three categories -> CP02 Easy / Medium / Hard -> three-task difficulty comparison -> 45 configurations -> moonshot invitation.",
-  "audio_verification": "AAC packet content and packet timing are identical to the preceding verified export.",
-  "verified_at": "2026-10-11T04:28:37.155796+00:00"
+  "revision": "Replace fullscreen M/FR1/CP04 montage with supplied native 1080p hard-task sources and parallel category captions. Show CP02 Easy placement, Medium button/opening and Hard cover actions with brief count/action cues. Broaden ending text and narration to embodied AI systems.",
+  "narrative": "Question and three categories -> P / PR3 / CP05 representative cases -> two-way coordination and three-logo triangle -> M / FR1 / CP04 fullscreen montage -> 15 tasks in three categories -> CP02 Easy placement / Medium press and open / Hard cover -> three-task difficulty comparison -> 45 configurations -> inclusive embodied AI moonshot invitation.",
+  "audio_verification": "Only the ending speech cue was regenerated. Earlier narration and music preservation checked against prior soundtrack; new encoded ending speech and captions reviewed.",
+  "verified_at": "2026-10-11T09:55:38.776625+00:00"
 }

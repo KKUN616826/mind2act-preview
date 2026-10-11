@@ -1,0 +1,49 @@
+{
+  "video": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+  "created_at": "2026-10-11T17:52:08+08:00",
+  "audio_integration": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/audio-integration.json",
+  "aac_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/mind2act-world-promo-1080p-20261011-174810-aac-audit.json",
+  "speech_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/mind2act-world-promo-1080p-20261011-174810-actual-speech-audit.json",
+  "source_preservation_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/preservation.json",
+  "loudness_lufs": -15.87,
+  "true_peak_dbtp": -2.67,
+  "master_vs_aac_correlation": 0.9971339523217919,
+  "all_cue_levels_match": true,
+  "source_unchanged_before_ending": true,
+  "standalone_ending_asr_match": true,
+  "exported_cues": [
+    {
+      "id": "scale-easy",
+      "intended": "Easy.",
+      "transcript": "Easy.",
+      "match": true
+    },
+    {
+      "id": "scale-medium",
+      "intended": "Medium.",
+      "transcript": "medium.",
+      "match": true
+    },
+    {
+      "id": "scale-hard",
+      "intended": "Hard.",
+      "transcript": "Hard.",
+      "match": true
+    },
+    {
+      "id": "difficulty-explanation",
+      "intended": "More rules. Tighter turns. More to remember\u2014and do.",
+      "transcript": "More rules, tighter turns, more to remember and do.",
+      "match": true
+    },
+    {
+      "id": "ending",
+      "intended": "Build the benchmark. Evaluate embodied AI systems. Let's take the next giant leap together.",
+      "transcript": "Build the benchmark. Evaluate embodied AI systems. Let's take the next giant leap together.",
+      "match": true
+    }
+  ],
+  "music_only_intervals_have_no_detected_speech": true,
+  "manual_listening": false,
+  "passed": true
+}

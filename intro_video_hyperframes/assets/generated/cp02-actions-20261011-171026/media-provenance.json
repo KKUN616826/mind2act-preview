@@ -1,0 +1,140 @@
+{
+  "created_at": "2026-10-11T17:14:29.779987+08:00",
+  "purpose": "CP02 Easy/Medium/Hard actual hero actions",
+  "assets": [
+    {
+      "name": "easy-place",
+      "level": "easy",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "ff9b7288f8dc5d1dc7f58b245956e4fd410ee1c0cee49c1858399e720b4d1b2a",
+      "source_start": 12.8,
+      "source_end": 15.600000000000001,
+      "output": "assets/generated/cp02-actions-20261011-171026/easy-place.mp4",
+      "output_sha256": "c555329e79ac5d79ef198f7734beb321ddceb3b2aba324b32a9f67c9d218d430",
+      "source_phase": "one observed piece placement",
+      "speed": 2,
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "processing": "Native main camera only, full source width; x2 Lanczos upscale; speed x2 by timestamp resampling; 0.4s freeze of last observed source frame under outgoing wipe; no audio, color grading, or synthesized image content.",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 668,
+            "r_frame_rate": "30/1",
+            "duration": "1.800000",
+            "nb_frames": "54"
+          }
+        ]
+      },
+      "editorial_final_frame_hold_seconds": 0.4
+    },
+    {
+      "name": "medium-press",
+      "level": "medium",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "5b4e46444d8439ee5f76c8cd54fa7d000303ee7a360c9ce8c70d3bbbf17b25d8",
+      "source_start": 4.25,
+      "source_end": 5.35,
+      "output": "assets/generated/cp02-actions-20261011-171026/medium-press.mp4",
+      "output_sha256": "6cc2b71d292a5bb8f24b396095a2daa1f75cb8677779779df30af4e1edbcff47",
+      "source_phase": "right gripper contacts the physical red button",
+      "speed": 2,
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "processing": "Native main camera only, full source width; x2 Lanczos upscale; speed x2 by timestamp resampling; no audio, color grading, or synthesized frames",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 668,
+            "r_frame_rate": "30/1",
+            "duration": "0.566667",
+            "nb_frames": "17"
+          }
+        ]
+      }
+    },
+    {
+      "name": "medium-open",
+      "level": "medium",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "5b4e46444d8439ee5f76c8cd54fa7d000303ee7a360c9ce8c70d3bbbf17b25d8",
+      "source_start": 7.5,
+      "source_end": 9.3,
+      "output": "assets/generated/cp02-actions-20261011-171026/medium-open.mp4",
+      "output_sha256": "93bfc5e2b505434beaee77a7385913f4692035500c4c1a72a5628fb6d4ab3b0c",
+      "source_phase": "left gripper opens ingredient-tray lid",
+      "speed": 2,
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "processing": "Native main camera only, full source width; x2 Lanczos upscale; speed x2 by timestamp resampling; 0.4s freeze of last observed source frame under outgoing wipe; no audio, color grading, or synthesized image content.",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 668,
+            "r_frame_rate": "30/1",
+            "duration": "1.300000",
+            "nb_frames": "39"
+          }
+        ]
+      },
+      "editorial_final_frame_hold_seconds": 0.4
+    },
+    {
+      "name": "hard-cover",
+      "level": "hard",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "source_start": 93.3,
+      "source_end": 98.3,
+      "output": "assets/generated/cp02-actions-20261011-171026/hard-cover.mp4",
+      "output_sha256": "03f58731ebb63976b84e8036929ae356870895e8e206149d54c39c6088b7a1ba",
+      "source_phase": "final white cover travels over cake then lowers/lands",
+      "speed": 2,
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "processing": "Native main camera only, full source width; x2 Lanczos upscale; speed x2 by timestamp resampling; no audio, color grading, or synthesized frames",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 668,
+            "r_frame_rate": "30/1",
+            "duration": "2.500000",
+            "nb_frames": "75"
+          }
+        ]
+      }
+    }
+  ]
+}

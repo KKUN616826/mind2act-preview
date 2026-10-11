@@ -1,0 +1,104 @@
+{
+  "status": "verified",
+  "files": [
+    {
+      "source": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/M-Hard-1080p.mp4",
+      "source_sha256": "d998f690f2aebc459c578d1b07b084d27e6c8ae630082f7cb46f515f84c7ea5b",
+      "derived": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/m-hero-1080p.mp4",
+      "sha256": "e8be915f99483ae4ed6ee246b478bcefdabee11f1aeb920fe80ce9adb9c1b0be",
+      "source_start_seconds": 27.8,
+      "source_end_seconds": 29.6,
+      "duration_seconds": 1.8,
+      "action_observed": "Gripper approaches and grasps visible blue block.",
+      "playback_rate": 1,
+      "crop": null,
+      "full_original_frame": true,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "30/1",
+            "nb_frames": "54"
+          }
+        ],
+        "format": {
+          "duration": "1.800000",
+          "size": "811502"
+        }
+      },
+      "full_decode": "passed"
+    },
+    {
+      "source": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/FR1-Hard-1080p.mp4",
+      "source_sha256": "00359793b1bb6edc02db4cfa8e76f0caa43d91aa77386b07611900132485f0c9",
+      "derived": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/fr1-hero-1080p.mp4",
+      "sha256": "afcd38cb988772fa541849476d621adc279867fa8e55b4601e65074f916d12d2",
+      "source_start_seconds": 6.3,
+      "source_end_seconds": 8.2,
+      "duration_seconds": 1.9,
+      "action_observed": "Gripper transfers a parcel from conveyor toward receiving tray.",
+      "playback_rate": 1,
+      "crop": null,
+      "full_original_frame": true,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "30/1",
+            "nb_frames": "57"
+          }
+        ],
+        "format": {
+          "duration": "1.900000",
+          "size": "963949"
+        }
+      },
+      "full_decode": "passed"
+    },
+    {
+      "source": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/CP04-Hard-1080p.mp4",
+      "source_sha256": "14db8440391c3c3016553b652daad427d339983e8cd6aac131b1e34689d932ed",
+      "derived": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/assets/generated/montage-hd-20261011-170017/cp04-hero-1080p.mp4",
+      "sha256": "427d0f4b64dc31b4bfcce71aeeef446d1510b36fd07c550a1463a3abe8f14564",
+      "source_start_seconds": 112,
+      "source_end_seconds": 122,
+      "duration_seconds": 10,
+      "action_observed": "Blue ingredient container tilts over pot, then moves back toward ingredient tray.",
+      "playback_rate": 1,
+      "crop": null,
+      "full_original_frame": true,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "30/1",
+            "nb_frames": "300"
+          }
+        ],
+        "format": {
+          "duration": "10.000000",
+          "size": "5302951"
+        }
+      },
+      "full_decode": "passed"
+    }
+  ]
+}

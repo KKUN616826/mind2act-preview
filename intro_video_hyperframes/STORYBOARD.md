@@ -40,13 +40,13 @@ status: animated
 src: compositions/06-scale.html
 range: 41.481481–53.333333
 motion: multi-phase-camera; waterfall-entry
-Fullscreen M / Mind → FR1 / Act → CP04 / Mind2Act. CP04 continuously shrinks into its own card in the three-group wall containing all 15 actual tasks. CP02 is highlighted at the end to bridge into its difficulty examples. No voiceover.
+Fullscreen native-HD M / Mind → FR1 / Act → CP04 / Mind2Act, with category characteristics rather than case descriptions. CP04 continuously shrinks into its own card in the three-group wall containing all 15 actual tasks. CP02 is highlighted at the end to bridge into its difficulty examples. No voiceover.
 ## Frame 8
 status: animated
 src: compositions/09-difficulty.html
 range: 53.333333–66.085185
 motion: kinetic-beat-slam; multi-phase-camera
-Preserve original Easy/Medium/Hard word and voice sequence through local6.34. Then three stable task rows share Easy/Medium/Hard columns: Mind/F navigation, Act/PR3 enlarged real reference lines, Mind2Act/CP02 reference cakes4/6/6 with Hard actual cover placement. Short VO: More rules. Tighter turns. More to remember—and do. No performance claim. Atlocal10.33 retain 15Tasks×3Levels→45 payoff; no VO over numeric hold.
+Preserve original Easy/Medium/Hard word and voice sequence through local6.34. Hero footage pairs reference counts with real Easy placement, Medium press/open and Hard cover actions. Then three stable task rows share Easy/Medium/Hard columns: Mind/F navigation, Act/PR3 enlarged real reference lines, Mind2Act/CP02 reference cakes4/6/6 with Hard actual cover placement. Short VO: More rules. Tighter turns. More to remember—and do. No performance claim. Atlocal10.33 retain 15Tasks×3Levels→45 payoff; no VO over numeric hold.
 ## Frame 9
 status: animated
 src: compositions/07-outro.html

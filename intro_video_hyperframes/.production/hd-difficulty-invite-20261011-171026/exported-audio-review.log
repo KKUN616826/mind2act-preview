@@ -1,0 +1,62 @@
+{
+  "video": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+  "master_vs_aac_correlation": 0.9971339523217919,
+  "loudness_lufs": -15.87,
+  "true_peak_dbtp": -2.67,
+  "passed": true
+}
+{"vad": [{"name": "coverage", "interval": [41.4814814815, 53.3333333333], "speech_intervals": []}, {"name": "numeric_payoff", "interval": [63.8333333333, 66.0851851852], "speech_intervals": []}]}
+{"id": "scale-easy", "intended": "Easy.", "transcript": "Easy.", "expected_text_supplied_to_model": false, "sample_start": 53.6033333333, "sample_end": 54.483333333333334, "segments": [{"start": 0.0, "end": 0.54, "text": " Easy.", "no_speech_prob": 0.0444098562002182, "words": [{"text": " Easy.", "start": 0.0, "end": 0.54, "probability": 0.794007420539856}]}], "match": true}
+{"id": "scale-medium", "intended": "Medium.", "transcript": "medium.", "expected_text_supplied_to_model": false, "sample_start": 55.7033333333, "sample_end": 56.65604166666667, "segments": [{"start": 0.0, "end": 0.54, "text": " medium.", "no_speech_prob": 0.09231092780828476, "words": [{"text": " medium.", "start": 0.0, "end": 0.54, "probability": 0.23749452829360962}]}], "match": true}
+{"id": "scale-hard", "intended": "Hard.", "transcript": "Hard.", "expected_text_supplied_to_model": false, "sample_start": 57.803333333299996, "sample_end": 58.65695833333333, "segments": [{"start": 0.0, "end": 0.5, "text": " Hard.", "no_speech_prob": 0.08416137099266052, "words": [{"text": " Hard.", "start": 0.0, "end": 0.5, "probability": 0.48587754368782043}]}], "match": true}
+{"id": "difficulty-explanation", "intended": "More rules. Tighter turns. More to remember\u2014and do.", "transcript": "More rules, tighter turns, more to remember and do.", "expected_text_supplied_to_model": false, "sample_start": 59.9533333333, "sample_end": 63.341791666666666, "segments": [{"start": 0.0, "end": 3.14, "text": " More rules, tighter turns, more to remember and do.", "no_speech_prob": 0.002271012868732214, "words": [{"text": " More", "start": 0.0, "end": 0.32, "probability": 0.8779596090316772}, {"text": " rules,", "start": 0.32, "end": 0.8, "probability": 0.9852826595306396}, {"text": " tighter", "start": 1.04, "end": 1.22, "probability": 0.9959218502044678}, {"text": " turns,", "start": 1.22, "end": 1.68, "probability": 0.9526559114456177}, {"text": " more", "start": 1.98, "end": 2.06, "probability": 0.9796780347824097}, {"text": " to", "start": 2.06, "end": 2.26, "probability": 0.9981958270072937}, {"text": " remember", "start": 2.26, "end": 2.62, "probability": 0.998076319694519}, {"text": " and", "start": 2.62, "end": 2.94, "probability": 0.9791374206542969}, {"text": " do.", "start": 2.94, "end": 3.14, "probability": 0.9969770908355713}]}], "match": true}
+{"id": "ending", "intended": "Build the benchmark. Evaluate embodied AI systems. Let's take the next giant leap together.", "transcript": "Build the benchmark. Evaluate embodied AI systems. Let's take the next giant leap together.", "expected_text_supplied_to_model": false, "sample_start": 66.7018518519, "sample_end": 73.4716875, "segments": [{"start": 0.0, "end": 6.56, "text": " Build the benchmark. Evaluate embodied AI systems. Let's take the next giant leap together.", "no_speech_prob": 0.00045785674592480063, "words": [{"text": " Build", "start": 0.0, "end": 0.34, "probability": 0.701932966709137}, {"text": " the", "start": 0.34, "end": 0.52, "probability": 0.9826556444168091}, {"text": " benchmark.", "start": 0.52, "end": 1.06, "probability": 0.9470046758651733}, {"text": " Evaluate", "start": 1.56, "end": 2.24, "probability": 0.9915931522846222}, {"text": " embodied", "start": 2.24, "end": 2.84, "probability": 0.9887211918830872}, {"text": " AI", "start": 2.84, "end": 3.34, "probability": 0.9718410968780518}, {"text": " systems.", "start": 3.34, "end": 4.0, "probability": 0.977209746837616}, {"text": " Let's", "start": 4.54, "end": 4.8, "probability": 0.9939588010311127}, {"text": " take", "start": 4.8, "end": 4.98, "probability": 0.9988299012184143}, {"text": " the", "start": 4.98, "end": 5.22, "probability": 0.9939753413200378}, {"text": " next", "start": 5.22, "end": 5.46, "probability": 0.9968763589859009}, {"text": " giant", "start": 5.46, "end": 5.88, "probability": 0.9875710010528564}, {"text": " leap", "start": 5.88, "end": 6.14, "probability": 0.9977769255638123}, {"text": " together.", "start": 6.14, "end": 6.56, "probability": 0.9981974959373474}]}], "match": true}
+{
+  "video": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+  "created_at": "2026-10-11T17:52:08+08:00",
+  "audio_integration": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/audio-integration.json",
+  "aac_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/mind2act-world-promo-1080p-20261011-174810-aac-audit.json",
+  "speech_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/mind2act-world-promo-1080p-20261011-174810-actual-speech-audit.json",
+  "source_preservation_report": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/cta-embodied-ai-20261011-170825/audio/preservation.json",
+  "loudness_lufs": -15.87,
+  "true_peak_dbtp": -2.67,
+  "master_vs_aac_correlation": 0.9971339523217919,
+  "all_cue_levels_match": true,
+  "source_unchanged_before_ending": true,
+  "standalone_ending_asr_match": true,
+  "exported_cues": [
+    {
+      "id": "scale-easy",
+      "intended": "Easy.",
+      "transcript": "Easy.",
+      "match": true
+    },
+    {
+      "id": "scale-medium",
+      "intended": "Medium.",
+      "transcript": "medium.",
+      "match": true
+    },
+    {
+      "id": "scale-hard",
+      "intended": "Hard.",
+      "transcript": "Hard.",
+      "match": true
+    },
+    {
+      "id": "difficulty-explanation",
+      "intended": "More rules. Tighter turns. More to remember\u2014and do.",
+      "transcript": "More rules, tighter turns, more to remember and do.",
+      "match": true
+    },
+    {
+      "id": "ending",
+      "intended": "Build the benchmark. Evaluate embodied AI systems. Let's take the next giant leap together.",
+      "transcript": "Build the benchmark. Evaluate embodied AI systems. Let's take the next giant leap together.",
+      "match": true
+    }
+  ],
+  "music_only_intervals_have_no_detected_speech": true,
+  "manual_listening": false,
+  "passed": true
+}

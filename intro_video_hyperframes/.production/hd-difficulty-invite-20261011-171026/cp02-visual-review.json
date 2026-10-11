@@ -1,0 +1,153 @@
+{
+  "status": "passed_actual_encoded_review",
+  "composition": "compositions/09-difficulty.html",
+  "composition_sha256": "5da1def880ce56e0b8737c96302983fc2697c263cc89ab40fa4d6a476bfa9dde",
+  "media_provenance": "assets/generated/cp02-actions-20261011-171026/media-provenance.json",
+  "unchanged": "Root duration; Easy/Medium/Hard title and VO cadence;3x3 comparison,4/6/6 reference counts, original1x grid-cover excerpt and45 payoff.",
+  "hero_cues": {
+    "Easy": [
+      "4 pieces to remember",
+      "Pick & place"
+    ],
+    "Medium": [
+      "6 pieces to remember",
+      "Press & open"
+    ],
+    "Hard": [
+      "6 pieces to remember",
+      "Cover to finish"
+    ]
+  },
+  "action_source_ranges": {
+    "Easy": [
+      12.8,
+      15.6
+    ],
+    "Medium_button": [
+      4.25,
+      5.35
+    ],
+    "Medium_tray_lid": [
+      7.5,
+      9.3
+    ],
+    "Hard_cover": [
+      93.3,
+      98.3
+    ]
+  },
+  "action_speed": 2,
+  "editorial_holds": {
+    "Easy": 0.4,
+    "Medium_tray_lid": 0.4
+  },
+  "framing": "Every asset preserves full source width x0..639, main camera y0..333, native aspect ratio and contain fit. No color treatment, fabricated progress, or success claim.",
+  "evidence": [
+    "cp02-snapshots/contact-sheet.jpg",
+    "cp02-transition-holds/contact-sheet.jpg"
+  ],
+  "lint": "Pass,0errors; existing intentional duplicate still warnings unchanged.",
+  "actual_encoded_review": {
+    "passed": true,
+    "status": "passed_decoded_final_master_review",
+    "master": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+    "master_sha256": "0c1be13eac538d23ab840639086cb45f706b3f5ae3a1f6c4ba0f3b00adbb5419",
+    "reviewed_at": "2026-10-11T17:54:47.704340+08:00",
+    "review_method": "FFmpeg decoded actual H.264 master; reviewed chronological5fps Easy/Medium strips,3.333fps Hard strip,10fps transition strips,5fps CP04 handoff and1920x1080 comparison stills.",
+    "cp02_actions": [
+      {
+        "id": "easy",
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "source_range_seconds": [
+          12.8,
+          15.6
+        ],
+        "action_speed": 2,
+        "end_hold_seconds": 0.4,
+        "master_action_interval_seconds": [
+          54.153333,
+          55.553333
+        ],
+        "review_strip": "rendered/easy-action-sheet.jpg",
+        "observed": "Actual held piece descends, contacts the cake, is released, and the gripper retreats; before this excerpt the four-piece reference is legible. Final placed-piece state persists under the outgoing wipe."
+      },
+      {
+        "id": "medium_button",
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+        "source_range_seconds": [
+          4.25,
+          5.35
+        ],
+        "action_speed": 2,
+        "end_hold_seconds": 0,
+        "master_action_interval_seconds": [
+          56.183333,
+          56.75
+        ],
+        "review_strip": "rendered/medium-action-sheet.jpg",
+        "observed": "Right gripper moves to and contacts the physical red button after the six-piece reference. The short cut remains clear in the final movie."
+      },
+      {
+        "id": "medium_open",
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+        "source_range_seconds": [
+          7.5,
+          9.3
+        ],
+        "action_speed": 2,
+        "end_hold_seconds": 0.4,
+        "master_action_interval_seconds": [
+          56.75,
+          57.65
+        ],
+        "review_strip": "rendered/medium-action-sheet.jpg",
+        "observed": "After the button excerpt, left gripper raises the ingredient-tray lid and reveals six pieces. Source chronology press-before-open is preserved. This is the rectangular ingredient-tray lid, not the final cake cover."
+      },
+      {
+        "id": "hard_cover",
+        "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+        "source_range_seconds": [
+          93.3,
+          98.3
+        ],
+        "action_speed": 2,
+        "end_hold_seconds": 0,
+        "master_action_interval_seconds": [
+          57.653333,
+          60.153333
+        ],
+        "review_strip": "rendered/hard-action-sheet.jpg",
+        "observed": "White cake cover visibly travels over the decorated cake and lowers onto it before the hero-to-grid handoff. Complete source-width tray, cake, lid and button region are retained."
+      }
+    ],
+    "cp02_level_wipes": {
+      "passed": true,
+      "evidence": [
+        "rendered/easy-medium-wipe-sheet.jpg",
+        "rendered/medium-hard-wipe-sheet.jpg"
+      ],
+      "observed": "Easy retains its actual placed piece and Medium retains its opened tray through the outgoing wipes. No initial-reference flash, black gap or distorted fit. Level words briefly overlap only during the retained rapid transition and settle cleanly."
+    },
+    "cp02_grid": {
+      "passed": true,
+      "evidence": [
+        "rendered/frame-60-4.jpg",
+        "rendered/frame-62-9.jpg"
+      ],
+      "observed": "Three-task3x3 comparison remains clear and aligned with4/6/6 cake examples; later Hard grid cell shows original real cover placement. Counts remain reference counts, not fabricated completed-status markers. Full-width CP02 framing is retained."
+    },
+    "cp04_handoff": {
+      "passed": true,
+      "evidence": [
+        "rendered/cp04-handoff-sheet.jpg"
+      ],
+      "range_seconds": [
+        46.5,
+        48.1
+      ],
+      "observed": "Continuous CP04 source remains visible while smoothly contracting into the fourth Mind2Act card; natural aspect ratio and exact240x126 destination are maintained, with no duplicate card image. Other14 tasks reveal into the3-column wall."
+    },
+    "unresolved_findings": []
+  },
+  "passed": true
+}
