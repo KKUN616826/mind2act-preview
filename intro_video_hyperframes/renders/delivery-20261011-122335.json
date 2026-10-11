@@ -1,0 +1,78 @@
+{
+  "id": "mind2act-world-promo-20261011-122335",
+  "created_at": "2026-10-11T12:23:35+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261011-122335.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-122335.mp4",
+  "poster": "renders/mind2act-world-poster-20261011-122335.jpg",
+  "authored_duration": 74.9740740741,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261011-122335.mp4",
+      "bytes": 84299457,
+      "sha256": "f102bd07d2572992b21d16bd34c7ba1a0a9b744adb5c1c6ba3bee7f78fdb259f",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261011-122335.mp4",
+      "bytes": 12133486,
+      "sha256": "dce4114632d5b68fd1c169ef76394d5e3ab6df76e8374312115e46ce27a264c1",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "subtitles": [
+    "renders/mind2act-world-narration-20261011-122335.srt",
+    "renders/mind2act-world-narration-20261011-122335.vtt"
+  ],
+  "checks": {
+    "composition": ".production/parallel-copy-20261011-121901/check-final.json",
+    "audio": ".production/difficulty-grid-20261011-090243/audio/audio-integration.json",
+    "source_evidence": ".production/cp02-fullview-20261011-112139/media-provenance.json",
+    "decode_master": "pass",
+    "decode_web": "pass",
+    "exported_visual": ".production/parallel-copy-20261011-121901/exported-visual-review.json",
+    "audio_preservation": ".production/parallel-copy-20261011-121901/audio-preservation.json",
+    "review": ".production/parallel-copy-20261011-121901/QA.md",
+    "unchanged_motion_verified": true,
+    "unchanged_other_compositions_verified": true,
+    "previous_delivery": "renders/delivery-20261011-115335.json"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+  "production_manifest": ".production/parallel-copy-20261011-121901/manifest.json",
+  "local_preview": "renders/preview-20261011-122335.html",
+  "category_preview": "renders/mind2act-world-categories-20261011-122335.jpg",
+  "source_hashes": {
+    "index.html": "d92f08c460b782734df3debfa04f316ebc4d1e672b6d471c6ee6fc8fa751272f",
+    "compositions/01-intro.html": "93266b20a69eb0d2881c5e0920328a3b103ad2ae5dcaabaf5276e1d695d1761b",
+    "compositions/02-motivation.html": "c2d70082bc61176532fb5defd9e3ff76a0f94eda3a9b685dba530199828cf5e0",
+    "compositions/03-mind.html": "20f7c5d455e14a1804c8913cd9304689f754ceecef1593fd96467a69559c83e6",
+    "compositions/04-act.html": "cf65aa86ec636e5dfae6e384704d56e2e2a26053d95bdb8f01be496538c2f367",
+    "compositions/05-mind2act.html": "5a0e31812dc4f4d47bb771c480a94f612a684ecd165dba8ebbf1605245ed1965",
+    "compositions/06-scale.html": "362f531f04878aa1f591de0c7330cf9b48ec048cabe772bfeac2862057a96500",
+    "compositions/07-outro.html": "0d35f1a78bd0f4a17220307baadb1c00c56ca76160a69d1592e8544a9be89640",
+    "compositions/08-coordination.html": "ed746cefeeb01008276a70a8d8d683c94fcf1d3736bcd3b5e53d1b1b9957387c",
+    "compositions/09-difficulty.html": "4a5f22458426e2bf1b917fdf90f8f2e0b373e753225c31feb8f068fba9c06e2c"
+  },
+  "revision": "Use parallel action-oriented sentences for Mind, Act and Mind2Act: Choose the next action. / Execute actions reliably. / Coordinate the whole task. Text substitutions only; all styling, motion, timing, footage and audio retained.",
+  "narrative": "Question and three categories -> P / PR3 / CP05 representative cases -> two-way coordination and three-logo triangle -> M / FR1 / CP04 fullscreen montage -> 15 tasks in three categories -> CP02 Easy / Medium / Hard -> three-task difficulty comparison -> 45 configurations -> moonshot invitation.",
+  "audio_verification": "AAC packet content and packet timing are identical to the preceding verified export.",
+  "verified_at": "2026-10-11T04:28:37.155796+00:00"
+}

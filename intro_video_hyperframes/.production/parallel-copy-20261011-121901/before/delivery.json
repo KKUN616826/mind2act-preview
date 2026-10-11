@@ -1,0 +1,82 @@
+{
+  "id": "mind2act-world-promo-20261011-115335",
+  "created_at": "2026-10-11T11:53:35+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261011-115335.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-115335.mp4",
+  "poster": "renders/mind2act-world-poster-20261011-115335.jpg",
+  "authored_duration": 74.9740740741,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261011-115335.mp4",
+      "bytes": 84982204,
+      "sha256": "202af9a7db535aac702fc52e952d1dfe76ff0a73c00d91cda1749018b6d10b04",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261011-115335.mp4",
+      "bytes": 12148216,
+      "sha256": "40ee346dc1ce8ea9fd9090ff2ea294de6b4d146951fa78f05ed3c88fd2e9c485",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "subtitles": [
+    "renders/mind2act-world-narration-20261011-115335.srt",
+    "renders/mind2act-world-narration-20261011-115335.vtt"
+  ],
+  "checks": {
+    "composition": ".production/clarity-montage-20261011-114333/check-final.json",
+    "audio": ".production/difficulty-grid-20261011-090243/audio/audio-integration.json",
+    "source_evidence": ".production/cp02-fullview-20261011-112139/media-provenance.json",
+    "decode_master": "pass",
+    "decode_web": "pass",
+    "audio_preservation": ".production/clarity-montage-20261011-114333/audio-preservation.json",
+    "exported_visual": ".production/clarity-montage-20261011-114333/exported-visual-review.json",
+    "animation_review": ".production/clarity-montage-20261011-114333/animation-review.json",
+    "montage_review": ".production/clarity-montage-20261011-114333/montage-review.json",
+    "review": ".production/clarity-montage-20261011-114333/QA.md",
+    "unchanged_difficulty_verified": true,
+    "unchanged_timing_verified": true,
+    "previous_delivery": "renders/delivery-20261011-112801.json"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+  "production_manifest": ".production/clarity-montage-20261011-114333/manifest.json",
+  "local_preview": "renders/preview-20261011-115335.html",
+  "contact_sheet": "renders/mind2act-world-contact-20261011-115335.jpg",
+  "difficulty_preview": "renders/mind2act-world-difficulty-20261011-115335.jpg",
+  "category_preview": "renders/mind2act-world-categories-20261011-115335.jpg",
+  "source_hashes": {
+    "index.html": "d92f08c460b782734df3debfa04f316ebc4d1e672b6d471c6ee6fc8fa751272f",
+    "compositions/01-intro.html": "93266b20a69eb0d2881c5e0920328a3b103ad2ae5dcaabaf5276e1d695d1761b",
+    "compositions/02-motivation.html": "f97819ea67dcfb2d38dd742e501305c3588f13c9e3e4ef48b319e12de888a014",
+    "compositions/03-mind.html": "20f7c5d455e14a1804c8913cd9304689f754ceecef1593fd96467a69559c83e6",
+    "compositions/04-act.html": "cf65aa86ec636e5dfae6e384704d56e2e2a26053d95bdb8f01be496538c2f367",
+    "compositions/05-mind2act.html": "5a0e31812dc4f4d47bb771c480a94f612a684ecd165dba8ebbf1605245ed1965",
+    "compositions/06-scale.html": "362f531f04878aa1f591de0c7330cf9b48ec048cabe772bfeac2862057a96500",
+    "compositions/07-outro.html": "0d35f1a78bd0f4a17220307baadb1c00c56ca76160a69d1592e8544a9be89640",
+    "compositions/08-coordination.html": "ed746cefeeb01008276a70a8d8d683c94fcf1d3736bcd3b5e53d1b1b9957387c",
+    "compositions/09-difficulty.html": "4a5f22458426e2bf1b917fdf90f8f2e0b373e753225c31feb8f068fba9c06e2c"
+  },
+  "verified_at": "2026-10-11T04:00:18.119810+00:00",
+  "revision": "Correct continuous fractional SVG highlight motion in both directions, unify category description baselines, compact Act and piano panel text, order fullscreen montage M / Mind -> FR1 / Act -> CP04 / Mind2Act with continuous CP04 landing in taxonomy wall and CP02 bridge into latest difficulty section.",
+  "narrative": "Question and three categories -> P / PR3 / CP05 representative cases -> two-way coordination and three-logo triangle -> M / FR1 / CP04 fullscreen montage -> 15 tasks in three categories -> CP02 Easy / Medium / Hard -> three-task difficulty comparison -> 45 configurations -> moonshot invitation.",
+  "audio_verification": "Master and web AAC packets and timing match the prior verified 112801 export. Existing voiceover, Hard, music and subtitle timing are preserved."
+}

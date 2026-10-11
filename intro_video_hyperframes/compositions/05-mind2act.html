@@ -19,7 +19,7 @@
 .piano-observe{color:#f0d57e;border-color:#f0d57e}
 .piano-dot{width:15px;height:15px;border-radius:50%;background:currentColor;flex-shrink:0}
 .piano-phase-word{display:block}
-.piano-phase-note{display:block;font-size:20px;line-height:1.35;color:inherit}
+.piano-phase-note{display:block;font-size:20px;line-height:1.35;color:inherit;white-space:nowrap}
 .piano-response-label{display:grid}.piano-response-label span{grid-area:1/1}
 .piano-memory{position:absolute;left:64px;bottom:64px;width:930px;height:184px;padding:20px;background:#090e13ed;border:2px solid #9fb2c8}
 .piano-memory-label{font:400 24px/1.25 'IBM Plex Mono',monospace;color:#f0d57e}
@@ -42,7 +42,7 @@
     <div class="piano-evidence" id="piano-evidence">
       <div class="piano-panel-title">SEQUENCE REPLAY</div>
       <div class="piano-phase piano-observe" id="piano-phase-observe"><span class="piano-dot" id="piano-observe-dot"></span><span><span class="piano-phase-word">Observe</span><span class="piano-phase-note">Blue demonstration</span></span></div>
-      <div class="piano-phase" id="piano-phase-replay"><span class="piano-dot" id="piano-replay-dot"></span><span><span class="piano-phase-word">Replay</span><span class="piano-phase-note piano-response-label"><span id="piano-execute-note">Execute the sequence</span><span id="piano-response-note">Key response observed</span></span></span></div>
+      <div class="piano-phase" id="piano-phase-replay"><span class="piano-dot" id="piano-replay-dot"></span><span><span class="piano-phase-word">Replay</span><span class="piano-phase-note piano-response-label"><span id="piano-execute-note">Play the sequence</span><span id="piano-response-note">Key response</span></span></span></div>
     </div>
     <div class="piano-memory" id="piano-memory">
       <div class="piano-memory-label">OBSERVED SEQUENCE · EXCERPT</div>

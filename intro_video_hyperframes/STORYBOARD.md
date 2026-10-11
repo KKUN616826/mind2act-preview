@@ -1,4 +1,4 @@
-# Mind2Act World / 74.074074 seconds
+# Mind2Act World / 74.974074 seconds
 ## Frame 1
 status: animated
 src: compositions/01-intro.html
@@ -40,16 +40,18 @@ status: animated
 src: compositions/06-scale.html
 range: 41.481481–53.333333
 motion: multi-phase-camera; waterfall-entry
-Further real task excerpts fill screen, then shrink to three-group wall containing all15 actual tasks. No voiceover.
+Fullscreen M / Mind → FR1 / Act → CP04 / Mind2Act. CP04 continuously shrinks into its own card in the three-group wall containing all 15 actual tasks. CP02 is highlighted at the end to bridge into its difficulty examples. No voiceover.
 ## Frame 8
 status: animated
 src: compositions/09-difficulty.html
-range: 53.333333–65.185185
+range: 53.333333–66.085185
 motion: kinetic-beat-slam; multi-phase-camera
-F feedback rule memory: Easy/Medium/Hard large words paired with correct source videos. Three horizontal rows for comparison. Fifteen tasks x threelevels ->45task-difficulty configurations. No narration over final numeric payoff.
+Preserve original Easy/Medium/Hard word and voice sequence through local6.34. Then three stable task rows share Easy/Medium/Hard columns: Mind/F navigation, Act/PR3 enlarged real reference lines, Mind2Act/CP02 reference cakes4/6/6 with Hard actual cover placement. Short VO: More rules. Tighter turns. More to remember—and do. No performance claim. Atlocal10.33 retain 15Tasks×3Levels→45 payoff; no VO over numeric hold.
 ## Frame 9
 status: animated
 src: compositions/07-outro.html
-range: 65.185185–74.074074
+range: 66.085185–74.974074
 motion: svg-path-draw; waterfall-entry
 Moonward mark, exact title, collective leap invitation, contribute/evaluate actions and URL held.
+
+CP02 framing revision: preserve complete cake, base and lid using the entire640×334main-camera view with no horizontal cropping and contain fitting. Hero title: Remember. Recreate. Short labels: 4 pieces / 6 pieces / 6 pieces + cover. Hard picture moves into the bottom-right CP02 grid cell. Audio, duration and other scenes remain unchanged.

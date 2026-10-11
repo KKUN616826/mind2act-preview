@@ -1,0 +1,220 @@
+[
+  {
+    "file": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/difficulty-grid-20261011-090243/audio/separated/htdemucs/music-source-cut/no_vocals.wav",
+    "engine": "faster-whisper 1.2.1 medium.en int8 CPU",
+    "language": "en",
+    "language_probability": 1,
+    "segments": [
+      {
+        "start": 57.24,
+        "end": 57.3,
+        "text": " This is the first time I've done this in my entire life.",
+        "avg_logprob": -0.6642710758793738,
+        "no_speech_prob": 0.9462110996246338,
+        "words": [
+          {
+            "start": 57.24,
+            "end": 57.28,
+            "text": " This",
+            "probability": 0.011438170447945595
+          },
+          {
+            "start": 57.28,
+            "end": 57.3,
+            "text": " is",
+            "probability": 0.701080322265625
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " the",
+            "probability": 0.24253596365451813
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " first",
+            "probability": 0.0863678827881813
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " time",
+            "probability": 0.27129849791526794
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " I've",
+            "probability": 0.5663590431213379
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " done",
+            "probability": 0.10689915716648102
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " this",
+            "probability": 0.37952885031700134
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " in",
+            "probability": 0.1112976148724556
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " my",
+            "probability": 0.2632368505001068
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " entire",
+            "probability": 0.19357606768608093
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " life.",
+            "probability": 0.8620129227638245
+          }
+        ]
+      },
+      {
+        "start": 57.3,
+        "end": 57.32,
+        "text": " I've done this in my entire life.",
+        "avg_logprob": -0.6642710758793738,
+        "no_speech_prob": 0.9462110996246338,
+        "words": [
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " I've",
+            "probability": 0.2507321909070015
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " done",
+            "probability": 0.12337366491556168
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " this",
+            "probability": 0.36620762944221497
+          },
+          {
+            "start": 57.3,
+            "end": 57.3,
+            "text": " in",
+            "probability": 0.13876235485076904
+          },
+          {
+            "start": 57.3,
+            "end": 57.32,
+            "text": " my",
+            "probability": 0.6295928955078125
+          },
+          {
+            "start": 57.32,
+            "end": 57.32,
+            "text": " entire",
+            "probability": 0.5263569355010986
+          },
+          {
+            "start": 57.32,
+            "end": 57.32,
+            "text": " life.",
+            "probability": 0.9118947982788086
+          }
+        ]
+      },
+      {
+        "start": 57.34,
+        "end": 59.84,
+        "text": " I've done this in my entire life.",
+        "avg_logprob": -0.6642710758793738,
+        "no_speech_prob": 0.9462110996246338,
+        "words": [
+          {
+            "start": 57.34,
+            "end": 57.34,
+            "text": " I've",
+            "probability": 0.7785876989364624
+          },
+          {
+            "start": 57.34,
+            "end": 57.34,
+            "text": " done",
+            "probability": 0.9855653643608093
+          },
+          {
+            "start": 57.34,
+            "end": 59.84,
+            "text": " this",
+            "probability": 0.9895069003105164
+          },
+          {
+            "start": 59.84,
+            "end": 59.84,
+            "text": " in",
+            "probability": 0.900163471698761
+          },
+          {
+            "start": 59.84,
+            "end": 59.84,
+            "text": " my",
+            "probability": 0.9950311183929443
+          },
+          {
+            "start": 59.84,
+            "end": 59.84,
+            "text": " entire",
+            "probability": 0.9697645902633667
+          },
+          {
+            "start": 59.84,
+            "end": 59.84,
+            "text": " life.",
+            "probability": 0.9857287406921387
+          }
+        ]
+      },
+      {
+        "start": 73.53999999999999,
+        "end": 74.94,
+        "text": " Thanks for watching!",
+        "avg_logprob": -0.8097444943019322,
+        "no_speech_prob": 0.8208673596382141,
+        "words": [
+          {
+            "start": 73.53999999999999,
+            "end": 74.94,
+            "text": " Thanks",
+            "probability": 0.008465191349387169
+          },
+          {
+            "start": 74.94,
+            "end": 74.94,
+            "text": " for",
+            "probability": 0.8141871690750122
+          },
+          {
+            "start": 74.94,
+            "end": 74.94,
+            "text": " watching!",
+            "probability": 0.9306793808937073
+          }
+        ]
+      }
+    ]
+  }
+]

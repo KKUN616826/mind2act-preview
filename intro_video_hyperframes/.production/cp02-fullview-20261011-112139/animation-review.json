@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Media source paths only; no CSS, timing, motion or audio change.",
+  "prior_motion_review": ".production/cp02-hero-20261011-105527/animation-review.json",
+  "composition_difference_verified": "Exact path substitution only",
+  "native_aspect": "640:334",
+  "display": "existing object-fit:contain",
+  "actual_encoded_motion_review": "Root inspected encoded hero54.3s, grid60.4s: source left edge restored and no further horizontal crop. Motion timing unchanged."
+}

@@ -1,0 +1,761 @@
+{
+  "status": "passed_actual_encoded_motion_review",
+  "scope": "Animation-map heuristics and current HyperFrames screenshots. Final encoded visual review is performed separately by root.",
+  "map": "animation-map/animation-map.json",
+  "totals": {
+    "duration": 74.974074,
+    "totalTweens": 543,
+    "mappedTweens": 509,
+    "skippedMicroTweens": 34
+  },
+  "flag_counts": {
+    "collision": 315,
+    "paced-slow": 9,
+    "offscreen": 4,
+    "degenerate": 1,
+    "paced-fast": 35,
+    "invisible": 25
+  },
+  "tool_limitations": {
+    "enumeration": "animation-map.mjs walks getChildren(true,true,true) recursively and separately walks every registered timeline, without object-identity deduplication. The map therefore includes local and global versions of the same tween and extra +0.671 s copies.",
+    "concrete_duplicate_examples": [
+      {
+        "map_index": 71,
+        "selector": "#coord-forward-pulse",
+        "start": 2.131,
+        "end": 3.131,
+        "props": [
+          "attr"
+        ]
+      },
+      {
+        "map_index": 300,
+        "selector": "#coord-forward-pulse",
+        "start": 31.09,
+        "end": 32.09,
+        "props": [
+          "attr"
+        ]
+      },
+      {
+        "map_index": 304,
+        "selector": "#coord-forward-pulse",
+        "start": 31.761,
+        "end": 32.761,
+        "props": [
+          "attr"
+        ]
+      },
+      {
+        "map_index": 128,
+        "selector": "#coord-return-pulse",
+        "start": 3.521,
+        "end": 4.571,
+        "props": [
+          "attr"
+        ]
+      },
+      {
+        "map_index": 306,
+        "selector": "#coord-return-pulse",
+        "start": 32.48,
+        "end": 33.53,
+        "props": [
+          "attr"
+        ]
+      },
+      {
+        "map_index": 308,
+        "selector": "#coord-return-pulse",
+        "start": 33.151,
+        "end": 34.201,
+        "props": [
+          "attr"
+        ]
+      },
+      {
+        "map_index": 158,
+        "selector": "#scale-cp04-hero",
+        "start": 5.791,
+        "end": 6.821,
+        "props": [
+          "x",
+          "y",
+          "scale",
+          "transformOrigin"
+        ]
+      },
+      {
+        "map_index": 356,
+        "selector": "#scale-cp04-hero",
+        "start": 46.601,
+        "end": 47.631,
+        "props": [
+          "x",
+          "y",
+          "scale",
+          "transformOrigin"
+        ]
+      },
+      {
+        "map_index": 367,
+        "selector": "#scale-cp04-hero",
+        "start": 47.272,
+        "end": 48.302,
+        "props": [
+          "x",
+          "y",
+          "scale",
+          "transformOrigin"
+        ]
+      },
+      {
+        "map_index": 41,
+        "selector": "#outro-accent",
+        "start": 1.331,
+        "end": 1.941,
+        "props": [
+          "scaleX"
+        ]
+      },
+      {
+        "map_index": 490,
+        "selector": "#outro-accent",
+        "start": 66.745,
+        "end": 67.355,
+        "props": [
+          "scaleX"
+        ]
+      },
+      {
+        "map_index": 496,
+        "selector": "#outro-accent",
+        "start": 67.416,
+        "end": 68.026,
+        "props": [
+          "scaleX"
+        ]
+      }
+    ],
+    "collision": "Only time-proximate bounding-box overlap (>30% of one box) is tested; ancestry, masking, alpha coverage and intentional compositing are not excluded.",
+    "visibility": "Bounding boxes from timelines sampled outside their owning scene can be zero/inactive, and late duplicate samples can be fully faded.",
+    "pacing": "Thresholds flag duration below 0.2 s or above 2 s regardless of role. They are stylistic review prompts, not runtime failures."
+  },
+  "flag_groups": {
+    "collision": [
+      {
+        "family": "act",
+        "count": 19,
+        "indices": [
+          7,
+          20,
+          25,
+          27,
+          57,
+          66,
+          102,
+          123,
+          239,
+          240,
+          241,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          251,
+          252
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Real action camera and target focus/inset overlays are layered to show the tracing task. Three physical-execution lines stay inside their floating card."
+      },
+      {
+        "family": "coord",
+        "count": 51,
+        "indices": [
+          9,
+          22,
+          28,
+          35,
+          45,
+          52,
+          67,
+          71,
+          125,
+          128,
+          145,
+          150,
+          151,
+          154,
+          156,
+          166,
+          171,
+          210,
+          213,
+          214,
+          217,
+          287,
+          288,
+          289,
+          290,
+          300,
+          301,
+          304,
+          306,
+          307,
+          308,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          324,
+          325,
+          330,
+          331,
+          332,
+          333,
+          337,
+          338
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Arrows and labels coexist with original symbols. Conceptual combination intentionally overlaps separate symbols and dots with the complete exact brand asset during a brief crossfade. Pulse bounding boxes cover the whole SVG arc although only an 11% segment is painted; root/nested duplicate entries inflate collision flags."
+      },
+      {
+        "family": "difficulty",
+        "count": 81,
+        "indices": [
+          11,
+          14,
+          15,
+          16,
+          26,
+          29,
+          110,
+          111,
+          112,
+          113,
+          114,
+          116,
+          141,
+          142,
+          143,
+          144,
+          146,
+          147,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          200,
+          201,
+          202,
+          203,
+          204,
+          206,
+          207,
+          215,
+          216,
+          219,
+          224,
+          226,
+          403,
+          406,
+          409,
+          412,
+          415,
+          416,
+          417,
+          418,
+          419,
+          421,
+          423,
+          424,
+          425,
+          427,
+          428,
+          429,
+          430,
+          431,
+          433,
+          435,
+          436,
+          437,
+          440,
+          441,
+          442,
+          443,
+          444,
+          446,
+          447,
+          451,
+          452,
+          453,
+          454,
+          459,
+          460,
+          463,
+          467,
+          468,
+          469,
+          470,
+          481,
+          482,
+          483
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Easy/Medium/Hard text and CP02 still/cover pairs use intentional replacements. Hard hero shrinks into its reserved grid slot. Grid card/label/frame overlaps and 45-stat payoff replacement are intentional."
+      },
+      {
+        "family": "intro",
+        "count": 62,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          30,
+          31,
+          32,
+          33,
+          36,
+          46,
+          47,
+          48,
+          49,
+          50,
+          53,
+          55,
+          56,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          69,
+          72,
+          74,
+          75,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          89,
+          90,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          105,
+          106,
+          107,
+          108,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          126,
+          127,
+          135,
+          136
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Full-screen footage mosaics deliberately overlap in a staged reveal; separate Mind/Act assets and dots converge before the exact complete logo replaces them. Title band and its clipped bitmap are intentional parent/child overlaps."
+      },
+      {
+        "family": "memory",
+        "count": 1,
+        "indices": [
+          267
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Memory inset frame/content is an intentional overlay on the actual task footage."
+      },
+      {
+        "family": "mind",
+        "count": 13,
+        "indices": [
+          5,
+          6,
+          19,
+          91,
+          140,
+          227,
+          228,
+          230,
+          231,
+          232,
+          235,
+          236,
+          238
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Footage camera, lower title band, memory inset and its labels are intentionally layered; camera zoom is a slow background motion."
+      },
+      {
+        "family": "mind2act",
+        "count": 8,
+        "indices": [
+          8,
+          13,
+          21,
+          133,
+          139,
+          261,
+          275,
+          280
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Piano camera and related task/sequence overlays form the retained case layout."
+      },
+      {
+        "family": "motivation",
+        "count": 16,
+        "indices": [
+          4,
+          24,
+          34,
+          54,
+          68,
+          88,
+          148,
+          152,
+          155,
+          160,
+          164,
+          182,
+          188,
+          189,
+          205,
+          209
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "A full-screen surface contains the three aligned category groups, names and descriptions. Parent/child bounding boxes and repeated enumeration are not text collisions."
+      },
+      {
+        "family": "outro",
+        "count": 19,
+        "indices": [
+          12,
+          18,
+          23,
+          42,
+          51,
+          73,
+          77,
+          109,
+          129,
+          488,
+          489,
+          490,
+          491,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Flight path, logo, expanding wordmark band, accent and CTA are intentional layers with readable final hold."
+      },
+      {
+        "family": "piano",
+        "count": 11,
+        "indices": [
+          130,
+          131,
+          132,
+          260,
+          268,
+          272,
+          273,
+          274,
+          277,
+          278,
+          279
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Sequence excerpt, notes and phase indicators deliberately overlap their inset container. Short fades separate annotation states."
+      },
+      {
+        "family": "scale",
+        "count": 34,
+        "indices": [
+          10,
+          17,
+          70,
+          134,
+          137,
+          157,
+          158,
+          159,
+          172,
+          174,
+          175,
+          179,
+          180,
+          181,
+          183,
+          184,
+          185,
+          186,
+          187,
+          225,
+          355,
+          356,
+          357,
+          359,
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367,
+          368,
+          383
+        ],
+        "classification": "intentional_layering_or_duplicate_enumeration",
+        "rationale": "Fullscreen case surfaces and bottom title bars overlap deliberately. CP04 is one continuous video shrinking into its CP04 card while the three-column task wall appears; its thumbnail area is intentionally reserved, avoiding duplicate media."
+      }
+    ],
+    "invisible": [
+      {
+        "indices": [
+          92,
+          93,
+          97,
+          98,
+          117,
+          119
+        ],
+        "rationale": "Intro assets are sampled on duplicate +0.671 s entries after the intentional complete-logo crossfade. Correct original entries at 1.90–2.61 s show the convergence/replacement."
+      },
+      {
+        "indices": [
+          250,
+          315,
+          324,
+          333,
+          366,
+          421,
+          422,
+          425,
+          433,
+          434,
+          437,
+          455,
+          459,
+          460,
+          462,
+          463,
+          501
+        ],
+        "rationale": "Duplicate entries are sampled 0.671 s after the actual tween. Fade-outs have already completed or the true hero handoff has already ended. Example: return pulse actual 32.48–33.53 s is duplicated at 33.151–34.201 s; the map does not represent a second playback."
+      },
+      {
+        "indices": [
+          443,
+          444
+        ],
+        "rationale": "The collective difficulty handoff fades all three descriptions; Easy and Medium were intentionally already hidden by the preceding level changes. These zero-change members do not affect the active Hard description or playback."
+      }
+    ],
+    "offscreen": [
+      {
+        "indices": [
+          17,
+          79
+        ],
+        "rationale": "Scale hero title bar/type sampled at erroneous local-time entries while scale is inactive. The same elements are fully visible in the actual 42.25/43.90 s frames."
+      },
+      {
+        "indices": [
+          41
+        ],
+        "rationale": "Outro accent is sampled at 1.331–1.941 s although outro starts 66.085185 s. Its initial scaleX=0 produces a zero-width inactive box. Correct actual 66.745–67.355 s entry and ending screenshot show the full accent."
+      },
+      {
+        "indices": [
+          344
+        ],
+        "rationale": "Intentional 0.45 s entrance from below the frame: bar moves upward by 160 px and settles at y=922 with height=158, exactly ending at 1080. No persistent cropping."
+      }
+    ],
+    "degenerate": [
+      {
+        "indices": [
+          41
+        ],
+        "rationale": "Same inactive local-time outro accent sample described above, not a zero-width final accent."
+      }
+    ],
+    "paced-slow": [
+      {
+        "indices": [
+          13,
+          91,
+          123,
+          235,
+          236,
+          254,
+          256,
+          258,
+          262
+        ],
+        "rationale": "All nine entries are repeats of the three real-footage camera moves: Mind 2.15 s, Act 3.10 s and Mind2Act 2.65 s. Slow reframing preserves a readable view of physical execution; no narrative hold problem."
+      }
+    ],
+    "paced-fast": [
+      {
+        "indices": [
+          57,
+          111,
+          131,
+          142,
+          149,
+          166,
+          167,
+          190,
+          202,
+          203,
+          204,
+          206,
+          221,
+          247,
+          250,
+          273,
+          278,
+          282,
+          284,
+          320,
+          321,
+          324,
+          325,
+          416,
+          422,
+          428,
+          434,
+          439,
+          451,
+          452,
+          453,
+          455,
+          467,
+          468,
+          469
+        ],
+        "rationale": "All 35 entries animate opacity (alone or with a small auxiliary motion) over 0.15–0.19 s. They are focus/annotation fades, adjacent level swaps, grid label reveals and the exact-logo crossfade, not the total reading time. Stable states persist after each entrance. No high-velocity subject motion is required by these flags."
+      }
+    ]
+  },
+  "dead_zone_review": [
+    {
+      "start": 10,
+      "end": 11,
+      "classification": "intentional_reading_hold",
+      "rationale": "Three-category insight text remains stable for reading before first case."
+    },
+    {
+      "start": 39.5,
+      "end": 41,
+      "classification": "intentional_reading_hold",
+      "rationale": "Completed three-logo taxonomy holds before breadth montage."
+    },
+    {
+      "start": 45.5,
+      "end": 46.5,
+      "classification": "live_video_not_GSAP_motion",
+      "rationale": "CP04 real recipe execution is full-screen and playing before its shared-video shrink."
+    },
+    {
+      "start": 49,
+      "end": 52,
+      "classification": "live_video_plus_taxonomy_reading_hold",
+      "rationale": "Fifteen task thumbnail videos continue, while fixed category names provide a readable overview."
+    },
+    {
+      "start": 71,
+      "end": 75,
+      "classification": "intentional_final_hold",
+      "rationale": "Logo, CTA and URL remain onscreen long enough to read; user explicitly requested this hold."
+    }
+  ],
+  "changed_scene_visual_review": {
+    "08-coordination": {
+      "result": "pass_in_HyperFrames_snapshots",
+      "evidence": [
+        "arrow-after/contact-sheet-1.jpg",
+        "arrow-after/contact-sheet-2.jpg",
+        "arrow-dom-after.json"
+      ],
+      "observed": "Forward bright segment traverses Mind→Act, then lower segment traverses Act→Mind continuously. Fractional offset samples are preserved and the segment does not repeat at its origin."
+    },
+    "06-scale": {
+      "result": "pass_in_HyperFrames_snapshots",
+      "evidence": [
+        "montage-after/contact-sheet.jpg",
+        "montage-review.json"
+      ],
+      "observed": "42.25 s M/Mind, 43.90 s FR1/Act, 45.25 s CP04/Mind2Act. At 47.80 s the shared CP04 video occupies its fourth-row Mind2Act thumbnail and all 15 task cards are present. At 52.70 s CP02 outline points to the following difficulty hero."
+    }
+  },
+  "unresolved_animation_findings": [],
+  "final_render_gate": "Passed decoded final master motion review for Act→Mind arrow and CP04 shared-video handoff.",
+  "passed": true,
+  "actual_encoded_review": {
+    "master": "renders/mind2act-world-promo-1080p-20261011-115335.mp4",
+    "master_sha256": "202af9a7db535aac702fc52e952d1dfe76ff0a73c00d91cda1749018b6d10b04",
+    "passed": true,
+    "review_method": "Decoded final H.264 MP4 using FFmpeg, sampled at 8 fps, reviewed chronological 4×3 motion contact sheets.",
+    "return_arrow": {
+      "range_s": [
+        32.4,
+        33.9
+      ],
+      "sample_fps": 8,
+      "evidence": "encoded-return-arrow-sheet.jpg",
+      "passed": true,
+      "observed": "One bright segment continuously travels from the Act end at right along the lower arc toward Mind at left, reaches the return arrowhead, and disappears. No stationary pulse, reversal, discontinuous jump, or wrap back to the Act origin is visible. Mind briefly responds near arrival and settles."
+    },
+    "cp04_handoff": {
+      "range_s": [
+        46.5,
+        48.0
+      ],
+      "sample_fps": 8,
+      "evidence": "encoded-cp04-handoff-sheet.jpg",
+      "passed": true,
+      "observed": "The CP04 recipe video remains the same visible subject while shrinking continuously into the fourth card of the Mind2Act column. Its card arrives with the video; no duplicate thumbnail or jump to F occurs. The other 14 task cards reveal in place, and the final three-column wall is aligned."
+    },
+    "unresolved_findings": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "label": "previous",
+      "file": "renders/mind2act-world-promo-1080p-20261011-115335.mp4",
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "timing_sha256": "311dcd88cb6e1e04ea7ab56df78263fd55d720b08edab38796af8a3eabb1c2d2"
+    },
+    {
+      "label": "master",
+      "file": "renders/mind2act-world-promo-1080p-20261011-122335.mp4",
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "timing_sha256": "311dcd88cb6e1e04ea7ab56df78263fd55d720b08edab38796af8a3eabb1c2d2"
+    },
+    {
+      "label": "web",
+      "file": "renders/mind2act-world-promo-web-20261011-122335.mp4",
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "timing_sha256": "311dcd88cb6e1e04ea7ab56df78263fd55d720b08edab38796af8a3eabb1c2d2"
+    }
+  ],
+  "previous_audit": ".production/clarity-montage-20261011-114333/audio-preservation.json",
+  "manual_listening": false
+}

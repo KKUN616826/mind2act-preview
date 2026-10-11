@@ -1,0 +1,54 @@
+{
+  "id": "mind2act-world-promo-20261011-110436",
+  "created_at": "2026-10-11T11:04:36+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261011-110436.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-110436.mp4",
+  "poster": "renders/mind2act-world-poster-20261011-110436.jpg",
+  "authored_duration": 74.9740740741,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261011-110436.mp4",
+      "bytes": 84719580,
+      "sha256": "16733966e3439e1fa88c517911ef4997bc341fedc365f6c484bef36f7c0d0290",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261011-110436.mp4",
+      "bytes": 12086111,
+      "sha256": "a4967689b88962e8a5b08acd092fa3bdcc0e94172b8cbe30049a30b1440d7df3",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "subtitles": [
+    "renders/mind2act-world-narration-20261011-110436.srt",
+    "renders/mind2act-world-narration-20261011-110436.vtt"
+  ],
+  "checks": {
+    "composition": ".production/cp02-hero-20261011-105527/check-final.json",
+    "audio": ".production/difficulty-grid-20261011-090243/audio/audio-integration.json",
+    "source_evidence": ".production/cp02-hero-20261011-105527/media-provenance.json",
+    "decode_master": "pass",
+    "decode_web": "pass"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+  "production_manifest": ".production/cp02-hero-20261011-105527/manifest.json"
+}

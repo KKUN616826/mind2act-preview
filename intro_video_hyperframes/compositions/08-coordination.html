@@ -43,9 +43,9 @@
 <svg id="coord-paths" class="coord-paths" viewBox="0 0 1920 1080" aria-label="Mind guides Act; physical outcomes update the task">
 <defs><marker id="coord-arrow-gold" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#f0d57e" stroke-width="2"/></marker><marker id="coord-arrow-mint" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#bdd9cc" stroke-width="2"/></marker></defs>
 <path id="coord-forward" class="coord-guide" d="M610 547 C800 404 1310 414 1500 548" pathLength="1" stroke="#f0d57e" marker-end="url(#coord-arrow-gold)"/>
-<path id="coord-forward-pulse" class="coord-pulse" d="M610 547 C800 404 1310 414 1500 548" pathLength="1" stroke="#fff3be" stroke-dasharray=".11 1"/>
+<path id="coord-forward-pulse" class="coord-pulse" d="M610 547 C800 404 1310 414 1500 548" pathLength="1" stroke="#fff3be" stroke-dasharray=".11 2" stroke-dashoffset=".11"/>
 <path id="coord-return" class="coord-guide" d="M1310 685 C1165 839 715 847 510 720" pathLength="1" stroke="#bdd9cc" marker-end="url(#coord-arrow-mint)"/>
-<path id="coord-return-pulse" class="coord-pulse" d="M1310 685 C1165 839 715 847 510 720" pathLength="1" stroke="#e6fff2" stroke-dasharray=".11 1"/>
+<path id="coord-return-pulse" class="coord-pulse" d="M1310 685 C1165 839 715 847 510 720" pathLength="1" stroke="#e6fff2" stroke-dasharray=".11 2" stroke-dashoffset=".11"/>
 </svg>
 <div id="coord-intent" class="coord-direction">Intent guides action</div>
 <div id="coord-outcomes" class="coord-direction">Outcomes update the task</div>
@@ -75,13 +75,16 @@ tl.fromTo(['#coord-mind-initial','#coord-act-initial'],{opacity:0,y:20},{opacity
 tl.fromTo(['#coord-forward','#coord-return'],{opacity:0},{opacity:.32,duration:.4},.86);
 tl.fromTo(['#coord-intent','#coord-outcomes'],{opacity:0,y:12},{opacity:1,y:0,duration:.4,ease:'power2.out'},1.03);
 tl.to('#coord-forward',{opacity:1,duration:.24},1.30);
-tl.fromTo('#coord-forward-pulse',{strokeDashoffset:.11,opacity:0},{strokeDashoffset:0,opacity:1,duration:.10,ease:'none'},1.35);
-tl.to('#coord-forward-pulse',{strokeDashoffset:-1,duration:1.0,ease:'none'},1.46);
+// Attribute interpolation keeps normalized offsets fractional. CSSPlugin rounds
+// pixel values, which would snap this pathLength=1 motion directly from 0 to -1.
+// The two-path-length gap prevents a repeated dash from wrapping to the origin.
+tl.fromTo('#coord-forward-pulse',{attr:{'stroke-dashoffset':.11},opacity:0},{attr:{'stroke-dashoffset':0},opacity:1,duration:.10,ease:'none'},1.35);
+tl.to('#coord-forward-pulse',{attr:{'stroke-dashoffset':-1},duration:1.0,ease:'none'},1.46);
 tl.to('#coord-forward-pulse',{opacity:0,duration:.13},2.45);
 tl.fromTo('#coord-act',{scale:1},{scale:1.028,duration:.13,yoyo:true,repeat:1,ease:'power2.out',immediateRender:false},2.43);
 tl.to('#coord-return',{opacity:1,duration:.24},2.65);
-tl.fromTo('#coord-return-pulse',{strokeDashoffset:.11,opacity:0},{strokeDashoffset:0,opacity:1,duration:.10,ease:'none'},2.75);
-tl.to('#coord-return-pulse',{strokeDashoffset:-1,duration:1.05,ease:'none'},2.85);
+tl.fromTo('#coord-return-pulse',{attr:{'stroke-dashoffset':.11},opacity:0},{attr:{'stroke-dashoffset':0},opacity:1,duration:.10,ease:'none'},2.75);
+tl.to('#coord-return-pulse',{attr:{'stroke-dashoffset':-1},duration:1.05,ease:'none'},2.85);
 tl.to('#coord-return-pulse',{opacity:0,duration:.13},3.9);
 tl.fromTo('#coord-mind',{scale:1},{scale:1.028,duration:.13,yoyo:true,repeat:1,ease:'power2.out',immediateRender:false},3.85);
 // Original Mind and Act marks move together with the third, connector component.

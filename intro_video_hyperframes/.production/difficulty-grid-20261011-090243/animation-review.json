@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "evidence": "animation-map/animation-map.json and snapshots-v3",
+  "flags": {
+    "collision": 301,
+    "paced-slow": 9,
+    "offscreen": 4,
+    "degenerate": 1,
+    "paced-fast": 35,
+    "invisible": 21
+  },
+  "review": [
+    "Tool enumerates root and nested timeline views, including offset duplicate entries; validate actual scene timing against browser snapshots and source-local timings.",
+    "Difficulty collision flags are parent row rectangles and their children, temporary hero film shrinking over the entering comparison, and the intentional statistics wipe. Text overlap found in v1/v2 was corrected in v3.",
+    "Difficulty invisible flags describe already-hidden Easy/Medium descriptions and post-handoff hero film; visible headers and static media remain present.",
+    "Sub-0.2-second title/label fades and row border emphasis are deliberate within the approved 0.4-second handoff and 3.6-second comparison; content persists after entrance.",
+    "No offscreen or degenerate flags in the modified difficulty composition. Other composition sources are SHA-verified unchanged.",
+    "Dead zones belong to existing video showcase and the final CTA/logo hold; media playback and intended reading time continue.",
+    "Other-scene offscreen flags are intended full-bleed reveal bars; outro accent degeneracy is its initial zero-width reveal. Slow camera tweens are existing deliberate push-ins, not new holds."
+  ],
+  "changed_composition": "compositions/09-difficulty.html",
+  "actual_encoded_motion_review": "Passed by root and independent visual reviewer; see exported-visual-review.json, rendered/handoff-sheet.jpg and rendered/cover-sheet.jpg."
+}

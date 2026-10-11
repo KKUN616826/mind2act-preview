@@ -1,0 +1,92 @@
+{
+  "status": "implemented_and_snapshot_reviewed",
+  "owned_composition": "compositions/06-scale.html",
+  "sha256": "362f531f04878aa1f591de0c7330cf9b48ec048cabe772bfeac2862057a96500",
+  "timing_preserved": true,
+  "audio_untouched": true,
+  "fullscreen_order": [
+    "Mind / M",
+    "Act / FR1",
+    "Mind2Act / CP04"
+  ],
+  "continuous_subject": {
+    "id": "scale-cp04-hero",
+    "start_local": 3,
+    "full_screen_until": 5.12,
+    "landing_local": 6.15,
+    "landing_card": "CP04",
+    "final_rectangle": [
+      1288,
+      723,
+      240,
+      125.25
+    ],
+    "card_choreography": "CP04 card enters early enough to settle with the shared video at 6.15 s"
+  },
+  "task_wall": {
+    "count": 15,
+    "cards": [
+      "E",
+      "F",
+      "P",
+      "S",
+      "M",
+      "FR1",
+      "FR2",
+      "PR1",
+      "PR2",
+      "PR3",
+      "CP01",
+      "CP02",
+      "CP03",
+      "CP04",
+      "CP05"
+    ],
+    "F_video_restored": true,
+    "CP04_duplicate_video_removed": true,
+    "late_outline": "CP02, next difficulty hero"
+  },
+  "source_provenance": [
+    {
+      "task": "M",
+      "derived": "assets/generated/categories-20261010-215252/m-wall.mp4",
+      "original": "assets/videos/Mind/M/M__M_medium_frontlabel.mp4",
+      "source_range_s": [
+        51,
+        59
+      ]
+    },
+    {
+      "task": "FR1",
+      "derived": "assets/generated/categories-20261010-215252/fr1-wall.mp4",
+      "original": "assets/videos/Act/FR1/medium.mp4",
+      "source_range_s": [
+        13,
+        21
+      ]
+    },
+    {
+      "task": "CP04",
+      "derived": "assets/generated/montage-20261011-114333/cp04-hero.mp4",
+      "original": "assets/videos/Mind2Act/CP04/medium.mp4",
+      "source_range_s": [
+        65,
+        75
+      ],
+      "source_sha256": "821d13fc6c06f92056b84d59faee6ab7e3d1ddf75828b947ae461d5ff7d60895",
+      "derived_sha256": "e3408528125518e4dc1d8e93fc6d51175a4a5842de86a040ef3b31890a87f113",
+      "crop": "640x334 x0 y0, whole main-camera width; only lower wrist-camera panel omitted",
+      "speed": 1,
+      "reason_for_new_asset": "Existing 8 s wall segment is shorter than the continuous 9.471852 s hero; extend same original interval to prevent a frozen tail."
+    }
+  ],
+  "verified_snapshots": [
+    42.25,
+    43.9,
+    45.25,
+    47.8,
+    52.7
+  ],
+  "evidence": "montage-after/contact-sheet.jpg",
+  "check_scope": "Source clip contact sheet and HyperFrames snapshots reviewed; root performs integration check and final render."
+}

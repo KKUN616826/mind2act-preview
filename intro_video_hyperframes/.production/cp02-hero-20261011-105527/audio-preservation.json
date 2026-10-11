@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-11T11:07:18.035727+08:00",
+  "method": "Extract copied AAC packets to ADTS and compare SHA256; independently compare AAC packet PTS/DTS/duration/size/flags/side-data and stream properties.",
+  "files": [
+    {
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-092248.mp4",
+      "adts_bytes": 1913808,
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "packet_count": 3516,
+      "packet_timing_sha256": "8fb6f9c79d2019e50fc43caacef52088621c6441d51f45445b33cb632f1307f3",
+      "stream": {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "time_base": "1/48000",
+        "start_time": "0.000000",
+        "duration": "74.986000",
+        "nb_frames": "3516"
+      }
+    },
+    {
+      "path": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-110436.mp4",
+      "adts_bytes": 1913808,
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "packet_count": 3516,
+      "packet_timing_sha256": "8fb6f9c79d2019e50fc43caacef52088621c6441d51f45445b33cb632f1307f3",
+      "stream": {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "time_base": "1/48000",
+        "start_time": "0.000000",
+        "duration": "74.986000",
+        "nb_frames": "3516"
+      }
+    }
+  ],
+  "aac_packetstream_byte_identical": true,
+  "packet_timing_identical": true,
+  "stream_properties_identical": true,
+  "prior_verified_audits": {
+    "aac": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/difficulty-grid-20261011-090243/audio/mind2act-world-promo-1080p-20261011-092248-aac-audit.json",
+    "aac_passed": true,
+    "asr_vad": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/difficulty-grid-20261011-090243/audio/mind2act-world-promo-1080p-20261011-092248-actual-speech-audit.json",
+    "asr_vad_passed": true
+  },
+  "reused_prior_checks": [
+    "11-cue WAV/AAC correlation and gain",
+    "Integrated loudness and true peak",
+    "Easy / Medium / Hard unprompted ASR",
+    "New difficulty sentence unprompted ASR",
+    "Coverage and numeric-payoff VAD"
+  ],
+  "manual_listening": false,
+  "passed": true
+}

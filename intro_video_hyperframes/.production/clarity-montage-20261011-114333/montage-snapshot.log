@@ -1,0 +1,15 @@
+◆  Capturing 5 frames at [42.25s, 43.9s, 45.25s, 47.8s, 52.7s] from mind2act-hyperframes-blank-20261010-111117
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (NVIDIA Corporation)" renderer="ANGLE (NVIDIA Corporation, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition/PCIe/SSE2, OpenGL ES 3.2)")
+
+   Fonts: 4 loaded, 2 unused
+   Note: added an end-of-timeline frame at 72.72s. Short beats between your --at times may still be skipped — pass them explicitly.
+
+◇  6 snapshots saved to /home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/clarity-montage-20261011-114333/montage-after
+   .production/clarity-montage-20261011-114333/montage-after/frame-00-at-42.25s.png
+   .production/clarity-montage-20261011-114333/montage-after/frame-01-at-43.9s.png
+   .production/clarity-montage-20261011-114333/montage-after/frame-02-at-45.25s.png
+   .production/clarity-montage-20261011-114333/montage-after/frame-03-at-47.8s.png
+   .production/clarity-montage-20261011-114333/montage-after/frame-04-at-52.7s.png
+   .production/clarity-montage-20261011-114333/montage-after/frame-05-at-72.725s.png
+   contact-sheet.jpg (grid view for AI review)
+   --describe: GEMINI_API_KEY not set, skipping

@@ -1,0 +1,159 @@
+{
+  "created_at": "2026-10-11T11:23:17.209515+08:00",
+  "revision": "cp02-fullview-20261011-112139",
+  "purpose": "Retain every source main-camera column, including full available left tray, in hero and comparison grid.",
+  "source_boundary_caveat": "Source camera itself cuts off some tray at the extreme x=0 border. This revision preserves every available source column and does not invent pixels beyond the source field of view.",
+  "display_guidance": "object-fit:contain, centered; no further crop, stretch, zoom or translate. Native main-camera aspect preserved.",
+  "assets": [
+    {
+      "task": "CP02",
+      "level": "easy",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "ff9b7288f8dc5d1dc7f58b245956e4fd410ee1c0cee49c1858399e720b4d1b2a",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "source_phase": "Initial stationary memorization sample before execution",
+      "visible_pieces": 4,
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "native_crop_aspect_ratio": "320:167",
+      "output": "assets/generated/cp02-fullview-20261011-112139/cp02-easy.png",
+      "output_dimensions": [
+        1280,
+        668
+      ],
+      "output_sha256": "76e4b0fbec5303c2c3763b6c363d6fedb5c30574a5fb5cf32c0158e73a5bfbfb",
+      "processing": "Entire main camera at source x0..639 y0..333, then 2x Lanczos resize. No horizontal crop; no color change, retouching or added content. Lower wrist camera excluded."
+    },
+    {
+      "task": "CP02",
+      "level": "medium",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "5b4e46444d8439ee5f76c8cd54fa7d000303ee7a360c9ce8c70d3bbbf17b25d8",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "source_phase": "Initial stationary memorization sample before execution",
+      "visible_pieces": 6,
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "native_crop_aspect_ratio": "320:167",
+      "output": "assets/generated/cp02-fullview-20261011-112139/cp02-medium.png",
+      "output_dimensions": [
+        1280,
+        668
+      ],
+      "output_sha256": "671e59cf701a2e65fe23ab5cd2457e46297f0b6d44027d0ff3d265f166308d9b",
+      "processing": "Entire main camera at source x0..639 y0..333, then 2x Lanczos resize. No horizontal crop; no color change, retouching or added content. Lower wrist camera excluded."
+    },
+    {
+      "task": "CP02",
+      "level": "hard",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "source_phase": "Initial stationary memorization sample before execution",
+      "visible_pieces": 6,
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "native_crop_aspect_ratio": "320:167",
+      "output": "assets/generated/cp02-fullview-20261011-112139/cp02-hard.png",
+      "output_dimensions": [
+        1280,
+        668
+      ],
+      "output_sha256": "04dcfb46e40157ef2c0eff5320f1b2b4afb23294a921ba4c1e04733e1a765a85",
+      "processing": "Entire main camera at source x0..639 y0..333, then 2x Lanczos resize. No horizontal crop; no color change, retouching or added content. Lower wrist camera excluded."
+    },
+    {
+      "task": "CP02",
+      "level": "hard",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "source_start": 95.7,
+      "source_end": 97.9,
+      "duration": 2.2,
+      "speed": 1,
+      "source_phase": "Actual final cover lowering and placement",
+      "crop_xywh": [
+        0,
+        0,
+        640,
+        334
+      ],
+      "native_crop_aspect_ratio": "320:167",
+      "output": "assets/generated/cp02-fullview-20261011-112139/cp02-hard-cover.mp4",
+      "output_dimensions": [
+        1280,
+        668
+      ],
+      "output_sha256": "0d6efb3cfc38cd0f8b41ce5c2939d34b2b8d444475ece54bca1e97cd4254c15c",
+      "landing_source_time_approx": 96.7,
+      "landing_clip_time_approx": 1.0,
+      "processing": "Contiguous 1x source footage; entire main camera x0..639 y0..333, then 2x Lanczos resize. No horizontal crop, no audio, no color change, no added content or artificial hold."
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "checks": [
+      {
+        "output": "assets/generated/cp02-fullview-20261011-112139/cp02-easy.png",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "png",
+          "width": 1280,
+          "height": 668,
+          "pix_fmt": "rgb24",
+          "r_frame_rate": "25/1"
+        }
+      },
+      {
+        "output": "assets/generated/cp02-fullview-20261011-112139/cp02-medium.png",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "png",
+          "width": 1280,
+          "height": 668,
+          "pix_fmt": "rgb24",
+          "r_frame_rate": "25/1"
+        }
+      },
+      {
+        "output": "assets/generated/cp02-fullview-20261011-112139/cp02-hard.png",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "png",
+          "width": 1280,
+          "height": 668,
+          "pix_fmt": "rgb24",
+          "r_frame_rate": "25/1"
+        }
+      },
+      {
+        "output": "assets/generated/cp02-fullview-20261011-112139/cp02-hard-cover.mp4",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 668,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1",
+          "duration": "2.200000",
+          "nb_frames": "66"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": "cp02-fullview-20261011-112139",
+  "created_at": "2026-10-11T11:21:39.938752+08:00",
+  "status": "complete",
+  "history_id": "67d19058",
+  "change": "Restore complete source main-camera width; no horizontal crop in any CP02 hero/grid media.",
+  "delivery": "renders/mind2act-world-promo-1080p-20261011-112801.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-112801.mp4",
+  "verified_at": "2026-10-11T03:33:17.685821+00:00"
+}

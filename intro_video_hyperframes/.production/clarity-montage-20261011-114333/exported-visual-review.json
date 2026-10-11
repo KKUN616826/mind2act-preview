@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "reviewer": "independent typography_audit agent",
+  "master": "renders/mind2act-world-promo-1080p-20261011-115335.mp4",
+  "master_sha256": "202af9a7db535aac702fc52e952d1dfe76ff0a73c00d91cda1749018b6d10b04",
+  "method": "Extracted actual encoded 115335 master frames with review_render.py; visually inspected 1920x1080 and 960x540 text frames, encoded 5 fps return-arrow strip, encoded montage strip, and complete difficulty/closing samples.",
+  "checks": [
+    {
+      "request": "~10s category copy organization",
+      "passed": true,
+      "evidence": "rendered/frame-10.jpg; rendered/window-frame-10.jpg",
+      "finding": "All three descriptors fit one line and share a common baseline. Category headings, rules and descriptors align within equal columns; no clipping."
+    },
+    {
+      "request": "~20s Act panel text",
+      "passed": true,
+      "evidence": "rendered/frame-20-5.jpg; rendered/window-frame-20-5.jpg",
+      "finding": "Path accuracy, Continuous contact and Actual trace share the same smaller font and left edge. Each stays on one line; the target/executed-trace insets remain intact."
+    },
+    {
+      "request": "consistent supporting text",
+      "passed": true,
+      "evidence": "rendered/frame-26.jpg; rendered/frame-28-6.jpg; rendered/window-frame-28-6.jpg",
+      "finding": "Piano Observe/Replay hierarchy is clear. Key response appears on one line after green key response is visible. EXCERPT image panel remains intact."
+    },
+    {
+      "request": "~33s Act to Mind pulse",
+      "passed": true,
+      "evidence": "rendered/return-arrow-sheet.jpg; rendered/frame-32-85.jpg; rendered/frame-33-45.jpg",
+      "finding": "One highlight travels continuously along the lower curve from right Act toward left Mind, reaches the arrow tip and disappears without restarting at the source. No detached stroke or reversed pulse observed."
+    },
+    {
+      "request": "fullscreen M \u2192 FR1 \u2192 CP04",
+      "passed": true,
+      "evidence": "rendered/montage-sheet.jpg; rendered/frame-42-25.jpg; rendered/frame-43-9.jpg; rendered/frame-45-25.jpg; rendered/frame-47-8.jpg",
+      "finding": "Order is Mind/Integrated memory, Act/Moving targets, Mind2Act/Recipe execution. CP04 shrinks into its own correct taxonomy card; the wall has all fifteen cards in the three correct groups."
+    },
+    {
+      "request": "new difficulty section in full film",
+      "passed": true,
+      "evidence": "rendered/frame-52-7.jpg; rendered/frame-54-3.jpg; rendered/frame-56-5.jpg; rendered/frame-58-8.jpg; rendered/frame-60-4.jpg; rendered/frame-62-9.jpg; rendered/frame-64-7.jpg",
+      "finding": "CP02 wall card highlight leads into the existing CP02 Easy/Medium/Hard presentation. 4/6/6 cake samples, real cover placement, F/PR3/CP02 comparison and 45 statistic are present. Cake, base, lid and left tray use retained full-source-width framing without new cropping."
+    },
+    {
+      "request": "brand/summary/outro consistency",
+      "passed": true,
+      "evidence": "rendered/frame-3-5.jpg; rendered/frame-39-2.jpg; rendered/frame-73-8.jpg",
+      "finding": "Wordmark has no colon; three category logo labels/captions are aligned; closing invitation/actions/URL fit and remain readable."
+    }
+  ],
+  "issues": [],
+  "scope_note": "Visual review of actual encoded frames and temporal contact strips. Audio preservation and full decode checks are separate root-owned gates."
+}

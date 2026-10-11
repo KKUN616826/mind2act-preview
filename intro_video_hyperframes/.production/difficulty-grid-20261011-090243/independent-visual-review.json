@@ -1,0 +1,58 @@
+{
+  "review_scope": "Independent review of snapshots-v1, snapshots-v2 and snapshots-v3 transition/stable/end frames, current composition source, previous composition diff, and generated asset provenance. Final encoded video/audio still require export review.",
+  "status": "passed_snapshot_review",
+  "checks": {
+    "hero_preserved": "Source diff retains original Easy/Medium/Hard clips, typography, entrance timing and first 6.34s animations.",
+    "grid_readability": "At 1920x1080 and contact-sheet scale, stable 3x3 comparison remains understandable; category labels, short captions, three levels and cake counts legible.",
+    "pr3": "Straight, S-shaped and multi-turn reference paths visible and unobstructed; source crops identical across levels.",
+    "cake": "Easy image visibly has 4 pieces; Medium and Hard visibly have 6. No success badge or model-state claim.",
+    "cover": "Real cover film visible by 63.2s snapshot; source provenance 95.7–97.4s, 1x. Updated source starts it at local 9.05 and reaches landing near local 10.05 before stats at 10.33.",
+    "row_emphasis": "Current source uses local 6.70, 7.66, 8.60 aligned with supplied VO phrase timings; stable row positions maintained.",
+    "statistics": "Original 15 Tasks × 3 Levels / 45 preserved with new timing."
+  },
+  "findings": [
+    {
+      "severity": "minor_visible_transition_artifact",
+      "time_global": 59.8,
+      "evidence": "snapshots-v1/frame-01-at-59.8s.png",
+      "description": "Old and new titles overlap. Easy and Medium regain opacity while still at former full-size hero position, stacking with Hard and row label during handoff.",
+      "recommendation": "Only move existing Hard hero to final column header; place Easy/Medium at final header positions while hidden, then fade. Sequence old heading fade before new heading reveal. Preserve current settled layout.",
+      "resolution": "Resolved in snapshots-v3; historical finding retained for audit."
+    }
+  ],
+  "revisions": [
+    {
+      "version": "snapshots-v2",
+      "reviewed_frames": [
+        "59.68",
+        "59.8",
+        "59.95",
+        "60.08",
+        "60.4",
+        "72.725"
+      ],
+      "resolved": [
+        "Outgoing/incoming title overlap",
+        "Easy/Medium reappearance at old hero size"
+      ],
+      "remaining": "Hard moving to its column header briefly crosses Rules & routes at 59.8s. Root is delaying row-label entrance until local6.56–6.74; final transition sample pending.",
+      "other_findings": []
+    },
+    {
+      "version": "snapshots-v3",
+      "reviewed_frames": [
+        "59.8",
+        "59.95",
+        "60.08",
+        "72.725"
+      ],
+      "resolved": [
+        "Hard no longer crosses incoming row labels",
+        "Old description no longer collides with incoming Act caption"
+      ],
+      "remaining": null,
+      "other_findings": []
+    }
+  ],
+  "passed": true
+}

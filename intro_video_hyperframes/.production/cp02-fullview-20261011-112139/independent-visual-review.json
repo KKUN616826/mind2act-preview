@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-10-11T11:24:22.998593+08:00",
+  "passed_source_review": true,
+  "passed": true,
+  "status": "passed_source_and_snapshot_review",
+  "scope": "Compared source-full-frame.png with derived fullview contact and provenance.",
+  "evidence": [
+    "source-full-frame.png",
+    "cp02-fullview-contact.jpg",
+    "media-provenance.json"
+  ],
+  "observations": [
+    "All derived assets use x0 y0 width640 height334, preserving every source main-camera column. Only lower wrist-camera strip is excluded.",
+    "Left tray and its handle are preserved to the source left boundary; new extracts remove the previous x128 still and x32 cover horizontal trims.",
+    "Entire visible cake base and lid remain within main-camera frame in inspected stills and cover0/1/2second samples.",
+    "Source main camera itself truncates part of tray at extreme x0 for Medium/Hard reference images; no claim of showing beyond original field of view."
+  ],
+  "pending": [
+    "Final encoded delivery review of left edge."
+  ],
+  "unresolved_source_findings": [],
+  "snapshot_review": {
+    "passed": true,
+    "evidence": "snapshots/contact-sheet.jpg",
+    "times_seconds": [
+      54.3,
+      56.5,
+      58.5,
+      60.4,
+      63.2
+    ],
+    "observations": [
+      "Full available source left edge and tray/handle are restored in hero references, hero cover, grid references and grid cover.",
+      "Cake bases and lids remain within source framing; counts4/6/6 remain readable.",
+      "No added crop introduced by composition contain fitting."
+    ]
+  }
+}

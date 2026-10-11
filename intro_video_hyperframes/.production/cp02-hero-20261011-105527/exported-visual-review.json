@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-11T11:10:01.017508+08:00",
+  "passed": true,
+  "master": "renders/mind2act-world-promo-1080p-20261011-110436.mp4",
+  "scope": "Independent inspection of actual MP4 decoded frames and temporal sheets; web encode inspected at960x540. Audio and continuous full-length playback are outside this visual review.",
+  "evidence": [
+    {
+      "files": [
+        "rendered/frame-54-3.jpg",
+        "rendered/frame-56-5.jpg"
+      ],
+      "passed": true,
+      "observation": "Easy4pieces and Medium6pieces reference examples remain clear under original large-word typography. Entire cake/plinth stays inside picture boundary."
+    },
+    {
+      "files": [
+        "rendered/frame-57-9.jpg",
+        "rendered/frame-58-5.jpg",
+        "rendered/frame-59-2.jpg"
+      ],
+      "passed": true,
+      "observation": "Hard begins with6referencepieces plus separate cover, then real cover lowering/landing. Fullcakebase and lidrim stay in view. Robot contact occlusion is physical, not framing truncation."
+    },
+    {
+      "files": [
+        "rendered/handoff-sheet.jpg"
+      ],
+      "passed": true,
+      "observation": "Hard hero film shrinks into bottom-right CP02 gridcell. Row label timing prevents text overlap. Final comparison resets cleanly to aligned reference examples."
+    },
+    {
+      "files": [
+        "rendered/cover-sheet.jpg"
+      ],
+      "passed": true,
+      "observation": "Later CP02 row emphasis and cover replay retains complete base/lid through landing before stats."
+    },
+    {
+      "files": [
+        "rendered/comparison-web-960.jpg"
+      ],
+      "passed": true,
+      "observation": "At960x540 category captions and4/6/6labels are legible; all three cakebases and separate Hardlid visible. Fullframe fitting preserves margins. F andPR3 rows remain understandable."
+    }
+  ],
+  "unresolved_findings": [],
+  "note": "Evidence uses actual encoded frames, not keyframes --shot diagnostic outputs."
+}

@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-10-11T11:04:27.166745+08:00",
+  "passed": true,
+  "scope": "Independent review of two browser snapshot contact sheets and full-resolution handoff/cover/grid frames; generated asset framing contact and provenance also inspected. Final encoded video still requires review.",
+  "checks": [
+    {
+      "name": "Easy and Medium reference examples",
+      "passed": true,
+      "evidence": [
+        "snapshots/frame-00-at-54.3s.png",
+        "snapshots/frame-01-at-56.5s.png"
+      ],
+      "observation": "Original large Easy/Medium typography and framing rhythm retained with 4-piece and 6-piece CP02 reference examples. Complete cake and plinth visible."
+    },
+    {
+      "name": "Hard requirement then execution",
+      "passed": true,
+      "evidence": [
+        "snapshots/frame-02-at-57.9s.png",
+        "snapshots/frame-03-at-58.5s.png",
+        "snapshots/frame-04-at-59.2s.png"
+      ],
+      "observation": "Hard begins with six-piece reference cake plus separate cover, then cuts to real cover lowering and reaches visible placement before handoff. No success or fabricated completion count."
+    },
+    {
+      "name": "Title and captions",
+      "passed": true,
+      "observation": "Mind2Act / CP02 category matches media; Remember. Recreate. describes task; captions 4 pieces, 6 pieces, 6 pieces + cover accurately describe visible differences."
+    },
+    {
+      "name": "Full framing",
+      "passed": true,
+      "evidence": [
+        "snapshots/frame-04-at-59.2s.png",
+        "snapshots/frame-08-at-60.4s.png",
+        "snapshots/frame-09-at-63.2s.png"
+      ],
+      "observation": "Contain fitting retains complete reference cake bases, separate lid and entire cover rim/base during action. Intentional lateral padding does not obscure objects."
+    },
+    {
+      "name": "Hero to grid handoff",
+      "passed": true,
+      "evidence": [
+        "snapshots/frame-05-at-59.8s.png",
+        "snapshots/frame-06-at-59.95s.png",
+        "snapshots/frame-07-at-60.08s.png"
+      ],
+      "observation": "Active Hard cover footage moves to bottom-right CP02 cell; text labels enter after its path clears. No title/label pileup. Final grid resets to reference comparison, then later replays cover as added-step example."
+    },
+    {
+      "name": "Stable grid and outro",
+      "passed": true,
+      "evidence": [
+        "snapshots/frame-08-at-60.4s.png",
+        "snapshots/frame-09-at-63.2s.png",
+        "snapshots/frame-10-at-72.725s.png"
+      ],
+      "observation": "F and PR3 rows unchanged and clear. CP02 counts 4/6/6 readable with larger context retained. Outro intact."
+    }
+  ],
+  "unresolved_findings": []
+}

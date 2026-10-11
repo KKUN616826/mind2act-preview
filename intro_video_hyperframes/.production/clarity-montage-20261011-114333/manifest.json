@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-11T11:43:33.675531+08:00",
+  "revision": "clarity-montage-20261011-114333",
+  "status": "complete",
+  "original_delivery": "mind2act-world-promo-20261011-112801",
+  "sources_before": {
+    "index.html": "d92f08c460b782734df3debfa04f316ebc4d1e672b6d471c6ee6fc8fa751272f",
+    "compositions/01-intro.html": "93266b20a69eb0d2881c5e0920328a3b103ad2ae5dcaabaf5276e1d695d1761b",
+    "compositions/02-motivation.html": "a9ca8a1e68039ae1bcb4ecaa384282fad6b40420eacf25338d456b8e4507ac7b",
+    "compositions/03-mind.html": "20f7c5d455e14a1804c8913cd9304689f754ceecef1593fd96467a69559c83e6",
+    "compositions/04-act.html": "d7e70e7c48330a3acf198186b6aa3c617d9c29f3588ecd30685857bc21108e27",
+    "compositions/05-mind2act.html": "648c1674ea1d5a3ed304497a61e194834e8db2e3552cbbe1596e75677219fb67",
+    "compositions/06-scale.html": "d67c0ab5abb39e55749658dff3eed62a687890173f25f1b34af8e03f344dad38",
+    "compositions/07-outro.html": "0d35f1a78bd0f4a17220307baadb1c00c56ca76160a69d1592e8544a9be89640",
+    "compositions/08-coordination.html": "3f84186344731576397bb02acc663e08c39bebda973e8736255429c144f02b5c",
+    "compositions/09-difficulty.html": "4a5f22458426e2bf1b917fdf90f8f2e0b373e753225c31feb8f068fba9c06e2c"
+  },
+  "delivery": "renders/mind2act-world-promo-1080p-20261011-115335.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-115335.mp4",
+  "verified_at": "2026-10-11T04:00:18.119810+00:00",
+  "history_id": "d05a762b"
+}

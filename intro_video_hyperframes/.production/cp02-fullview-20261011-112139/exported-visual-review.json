@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-11T11:32:48.549182+08:00",
+  "passed": true,
+  "master": "renders/mind2act-world-promo-1080p-20261011-112801.mp4",
+  "scope": "Focused independent review of actual encoded hero/reference/action and grid frames for full available source width; motion and timing unchanged.",
+  "evidence": [
+    "rendered/frame-54-3.jpg",
+    "rendered/frame-56-5.jpg",
+    "rendered/frame-58-5.jpg",
+    "rendered/comparison-web-960.jpg",
+    "rendered/frame-63-2.jpg"
+  ],
+  "observations": [
+    "Full available left source boundary appears in Easy/Medium reference heroes and Hard cover hero; left tray/handle restored compared with previous crop.",
+    "Grid reference cells and Hard cover cell preserve the same full available source width with contain fitting.",
+    "Cake base and lid retain full available source framing;4/6/6labels readable at960x540."
+  ],
+  "source_boundary_caveat": "Source camera itself cuts off part of tray at extreme x0 in some frames. Export preserves every available source column; does not restore content outside original field of view.",
+  "unresolved_findings": [],
+  "review_method": "Visual inspection of decoded frames, not full-length continuous playback or audio listening."
+}

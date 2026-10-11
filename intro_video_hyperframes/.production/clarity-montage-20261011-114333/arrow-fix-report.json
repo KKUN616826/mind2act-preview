@@ -1,0 +1,31 @@
+{
+  "file": "compositions/08-coordination.html",
+  "sha256": "ed746cefeeb01008276a70a8d8d683c94fcf1d3736bcd3b5e53d1b1b9957387c",
+  "cause": "GSAP CSSPlugin auto-rounded strokeDashoffset to integer CSS pixels while SVG pathLength was 1. The highlighted dash stayed at the origin and then disappeared instead of traversing.",
+  "fix": [
+    "Animate normalized stroke-dashoffset through SVG attr values, retaining fractional interpolation.",
+    "Use dasharray .11 2 to prevent a repeated dash wrapping back to its origin at the endpoint.",
+    "Apply the same fix to Mind→Act and Act→Mind."
+  ],
+  "preserved": [
+    "All timeline start times, durations, opacity timing and logo response timing",
+    "All text, geometry, paths, audio and composition duration"
+  ],
+  "evidence": {
+    "before": "arrow-before/contact-sheet.jpg",
+    "after": [
+      "arrow-after/contact-sheet-1.jpg",
+      "arrow-after/contact-sheet-2.jpg"
+    ],
+    "dom": [
+      "arrow-dom-before.json",
+      "arrow-dom-after.json"
+    ]
+  },
+  "visual_review": {
+    "forward": "Global 31.30→31.60→31.95 s: highlight moves left to right toward Act.",
+    "return": "Global 32.60→32.85→33.10→33.30 s: highlight moves from Act through the lower arc toward Mind; 33.53 s endpoint then 33.80 s clean hold.",
+    "jump_or_wrap": "None observed in sampled actual HyperFrames frames."
+  },
+  "full_export_verification": "Root will verify these same timestamps in final encoded movie."
+}

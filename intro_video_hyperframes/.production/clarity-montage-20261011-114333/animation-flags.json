@@ -1,0 +1,2066 @@
+[
+  {
+    "at": "/tweens/0",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/1",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/2",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/3",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/4",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/5",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/6",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/7",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/8",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/9",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/10",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/11",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/12",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/13",
+    "flags": [
+      "paced-slow",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/14",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/15",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/16",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/17",
+    "flags": [
+      "offscreen",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/18",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/19",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/20",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/21",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/22",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/23",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/24",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/25",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/26",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/27",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/28",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/29",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/30",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/31",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/32",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/33",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/34",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/35",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/36",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/41",
+    "flags": [
+      "degenerate",
+      "offscreen"
+    ]
+  },
+  {
+    "at": "/tweens/42",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/45",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/46",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/47",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/48",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/49",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/50",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/51",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/52",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/53",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/54",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/55",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/56",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/57",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/58",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/59",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/60",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/61",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/62",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/63",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/64",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/65",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/66",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/67",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/68",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/69",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/70",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/71",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/72",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/73",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/74",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/75",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/77",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/79",
+    "flags": [
+      "offscreen"
+    ]
+  },
+  {
+    "at": "/tweens/81",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/82",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/83",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/84",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/85",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/86",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/87",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/88",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/89",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/90",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/91",
+    "flags": [
+      "paced-slow",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/92",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/93",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/94",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/95",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/96",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/97",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/98",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/99",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/100",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/101",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/102",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/105",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/106",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/107",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/108",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/109",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/110",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/111",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/112",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/113",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/114",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/116",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/117",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/118",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/119",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/120",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/121",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/122",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/123",
+    "flags": [
+      "paced-slow",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/125",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/126",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/127",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/128",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/129",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/130",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/131",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/132",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/133",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/134",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/135",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/136",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/137",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/139",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/140",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/141",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/142",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/143",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/144",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/145",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/146",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/147",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/148",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/149",
+    "flags": [
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/150",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/151",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/152",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/154",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/155",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/156",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/157",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/158",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/159",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/160",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/164",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/166",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/167",
+    "flags": [
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/171",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/172",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/174",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/175",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/179",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/180",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/181",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/182",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/183",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/184",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/185",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/186",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/187",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/188",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/189",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/190",
+    "flags": [
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/191",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/192",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/193",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/194",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/195",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/196",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/197",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/198",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/200",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/201",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/202",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/203",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/204",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/205",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/206",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/207",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/209",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/210",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/213",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/214",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/215",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/216",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/217",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/219",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/221",
+    "flags": [
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/224",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/225",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/226",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/227",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/228",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/230",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/231",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/232",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/235",
+    "flags": [
+      "paced-slow",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/236",
+    "flags": [
+      "paced-slow",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/238",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/239",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/240",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/241",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/243",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/244",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/245",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/246",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/247",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/248",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/250",
+    "flags": [
+      "invisible",
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/251",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/252",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/254",
+    "flags": [
+      "paced-slow"
+    ]
+  },
+  {
+    "at": "/tweens/256",
+    "flags": [
+      "paced-slow"
+    ]
+  },
+  {
+    "at": "/tweens/258",
+    "flags": [
+      "paced-slow"
+    ]
+  },
+  {
+    "at": "/tweens/260",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/261",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/262",
+    "flags": [
+      "paced-slow"
+    ]
+  },
+  {
+    "at": "/tweens/267",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/268",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/272",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/273",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/274",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/275",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/277",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/278",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/279",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/280",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/282",
+    "flags": [
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/284",
+    "flags": [
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/287",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/288",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/289",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/290",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/300",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/301",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/304",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/306",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/307",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/308",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/310",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/311",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/312",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/313",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/314",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/315",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/316",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/317",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/318",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/319",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/320",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/321",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/324",
+    "flags": [
+      "invisible",
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/325",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/330",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/331",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/332",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/333",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/337",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/338",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/344",
+    "flags": [
+      "offscreen"
+    ]
+  },
+  {
+    "at": "/tweens/355",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/356",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/357",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/359",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/360",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/361",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/362",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/363",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/364",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/365",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/366",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/367",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/368",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/383",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/403",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/406",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/409",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/412",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/415",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/416",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/417",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/418",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/419",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/421",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/422",
+    "flags": [
+      "invisible",
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/423",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/424",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/425",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/427",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/428",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/429",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/430",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/431",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/433",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/434",
+    "flags": [
+      "invisible",
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/435",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/436",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/437",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/439",
+    "flags": [
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/440",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/441",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/442",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/443",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/444",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/446",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/447",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/451",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/452",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/453",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/454",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/455",
+    "flags": [
+      "invisible",
+      "paced-fast"
+    ]
+  },
+  {
+    "at": "/tweens/459",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/460",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/462",
+    "flags": [
+      "invisible"
+    ]
+  },
+  {
+    "at": "/tweens/463",
+    "flags": [
+      "invisible",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/467",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/468",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/469",
+    "flags": [
+      "paced-fast",
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/470",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/481",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/482",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/483",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/488",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/489",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/490",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/491",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/493",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/494",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/495",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/496",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/497",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/498",
+    "flags": [
+      "collision"
+    ]
+  },
+  {
+    "at": "/tweens/501",
+    "flags": [
+      "invisible"
+    ]
+  }
+]

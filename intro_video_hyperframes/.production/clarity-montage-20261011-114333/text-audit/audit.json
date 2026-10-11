@@ -1,0 +1,51 @@
+{
+  "source": "renders/mind2act-world-promo-1080p-20261011-112801.mp4",
+  "review_method": "Read all 9 composition HTML files, extracted and visually inspected real exported frames at 960x540 playback scale.",
+  "sample_times": [
+    3.5,
+    8.5,
+    14,
+    20.5,
+    26.5,
+    28.5,
+    32,
+    33.3,
+    39.5,
+    48.5,
+    54.5,
+    60.5,
+    64.5,
+    72.5
+  ],
+  "findings": [
+    {
+      "scene": "02-motivation",
+      "status": "confirmed; root owns fix",
+      "issue": "Category descriptions have inconsistent line counts and apparent alignment because Act copy wraps after physical while peer columns are one line.",
+      "recommendation": "Use equal-size, equal-baseline concise one-line descriptions in three aligned columns."
+    },
+    {
+      "scene": "04-act",
+      "status": "confirmed; root owns fix",
+      "issue": "Continuous contact breaks into two lines while Path accuracy and Actual trace are one line.",
+      "recommendation": "Reduce the three item text sizes consistently enough that all three phrases stay on one line; retain independent panel title size."
+    },
+    {
+      "scene": "05-mind2act",
+      "selector": ".piano-phase-note; #piano-execute-note; #piano-response-note",
+      "status": "minor improvement recommended",
+      "issue": "Execute the sequence and Key response observed wrap into two small lines, unlike Blue demonstration. The small mono notes become dense at 960px playback.",
+      "recommendation": "Keep Observe/Replay headings and evidence timings. Shorten notes to Replay sequence and Key response; do not add success/completion claims."
+    }
+  ],
+  "passed": [
+    "Intro/outro bitmap wordmarks align and omit the colon.",
+    "Mind and Mind2Act case main titles fit a single line within safe margins.",
+    "15-task wall uses consistently aligned category headings, fixed card geometry, and no overflowing names; some intended names use two lines.",
+    "Coordination final triangle has aligned Mind/Act category/caption baselines.",
+    "Difficulty comparison headings, cells, and row labels align; CP02 text uses an intentional two-line phrase, no clipping.",
+    "Statistics numeral and explanation form a clear two-part hierarchy.",
+    "Outro invitation, actions, and URL are centered with no clipping."
+  ],
+  "limitations": "Static typography review cannot by itself verify all motion. Arrow tracing and montage sequencing delegated separately. Final exported revision must be reviewed independently."
+}

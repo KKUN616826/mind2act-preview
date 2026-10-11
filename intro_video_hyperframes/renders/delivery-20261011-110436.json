@@ -1,0 +1,86 @@
+{
+  "id": "mind2act-world-promo-20261011-110436",
+  "created_at": "2026-10-11T11:04:36+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261011-110436.mp4",
+  "web": "renders/mind2act-world-promo-web-20261011-110436.mp4",
+  "poster": "renders/mind2act-world-poster-20261011-110436.jpg",
+  "authored_duration": 74.9740740741,
+  "framework": "HyperFrames 0.8.143",
+  "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
+  "files": {
+    "master": {
+      "path": "renders/mind2act-world-promo-1080p-20261011-110436.mp4",
+      "bytes": 84719580,
+      "sha256": "16733966e3439e1fa88c517911ef4997bc341fedc365f6c484bef36f7c0d0290",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    },
+    "web": {
+      "path": "renders/mind2act-world-promo-web-20261011-110436.mp4",
+      "bytes": 12086111,
+      "sha256": "a4967689b88962e8a5b08acd092fa3bdcc0e94172b8cbe30049a30b1440d7df3",
+      "duration": 75,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "audio_sample_rate": "48000",
+      "audio_channels": 2
+    }
+  },
+  "subtitles": [
+    "renders/mind2act-world-narration-20261011-110436.srt",
+    "renders/mind2act-world-narration-20261011-110436.vtt"
+  ],
+  "checks": {
+    "composition": ".production/cp02-hero-20261011-105527/check-final.json",
+    "audio": ".production/difficulty-grid-20261011-090243/audio/audio-integration.json",
+    "source_evidence": ".production/cp02-hero-20261011-105527/media-provenance.json",
+    "decode_master": "pass",
+    "decode_web": "pass",
+    "audio_preservation": ".production/cp02-hero-20261011-105527/audio-preservation.json",
+    "web_and_previous_aac_identical": true,
+    "aac_hashes": {
+      "master": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "web": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "previous": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937"
+    },
+    "review": ".production/cp02-hero-20261011-105527/QA.md",
+    "exported_visual": ".production/cp02-hero-20261011-105527/exported-visual-review.json",
+    "animation_review": ".production/cp02-hero-20261011-105527/animation-review.json",
+    "unchanged_compositions_verified": true,
+    "previous_delivery": "renders/delivery-20261011-092248.json"
+  },
+  "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
+  "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
+  "production_manifest": ".production/cp02-hero-20261011-105527/manifest.json",
+  "local_preview": "renders/preview-20261011-110436.html",
+  "contact_sheet": "renders/mind2act-world-contact-20261011-110436.jpg",
+  "difficulty_preview": "renders/mind2act-world-difficulty-20261011-110436.jpg",
+  "difficulty_excerpt": "renders/mind2act-world-difficulty-review-20261011-110436.mp4",
+  "source_hashes": {
+    "index.html": "d92f08c460b782734df3debfa04f316ebc4d1e672b6d471c6ee6fc8fa751272f",
+    "compositions/01-intro.html": "93266b20a69eb0d2881c5e0920328a3b103ad2ae5dcaabaf5276e1d695d1761b",
+    "compositions/02-motivation.html": "a9ca8a1e68039ae1bcb4ecaa384282fad6b40420eacf25338d456b8e4507ac7b",
+    "compositions/03-mind.html": "20f7c5d455e14a1804c8913cd9304689f754ceecef1593fd96467a69559c83e6",
+    "compositions/04-act.html": "d7e70e7c48330a3acf198186b6aa3c617d9c29f3588ecd30685857bc21108e27",
+    "compositions/05-mind2act.html": "648c1674ea1d5a3ed304497a61e194834e8db2e3552cbbe1596e75677219fb67",
+    "compositions/06-scale.html": "d67c0ab5abb39e55749658dff3eed62a687890173f25f1b34af8e03f344dad38",
+    "compositions/07-outro.html": "0d35f1a78bd0f4a17220307baadb1c00c56ca76160a69d1592e8544a9be89640",
+    "compositions/08-coordination.html": "3f84186344731576397bb02acc663e08c39bebda973e8736255429c144f02b5c",
+    "compositions/09-difficulty.html": "278231667af2e4354e41511551e35f96b9a30be2246aee2051149c93b0865115"
+  },
+  "verified_at": "2026-10-11T03:11:24.207494+00:00",
+  "revision": "Replace difficulty hero F footage with CP02 reference cakes 4/6/6 and real Hard cover placement; retain Easy/Medium/Hard type and voice. Recrop all cake references and lid footage to contain full cake/base/lid at natural aspect ratio. Hero cake shrinks into bottom-right CP02 comparison cell. Timing and soundtrack unchanged.",
+  "narrative": "Question and three distinct categories \u2192 representative Mind/Act/Mind2Act cases \u2192 bidirectional coordination and three-logo triangle \u2192 15 real task videos in 3 categories \u2192 CP02 Easy/Medium/Hard \u2192 three tasks across three levels \u2192 45 task-difficulty configurations \u2192 collective moonshot invitation.",
+  "audio_verification": "New master and compact MP4 AAC packet streams are byte-identical to the previously verified 092248 master. Prior full narration, Hard, loudness, ASR and VAD evidence applies without a new listening claim."
+}

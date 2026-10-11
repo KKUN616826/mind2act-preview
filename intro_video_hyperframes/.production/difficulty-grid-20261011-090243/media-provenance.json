@@ -1,0 +1,382 @@
+{
+  "created_at": "2026-10-11T09:08:51.347551+08:00",
+  "authored_display_cell_size": [
+    448,
+    220
+  ],
+  "sources_unchanged": true,
+  "assets": [
+    {
+      "task": "F",
+      "level": "easy",
+      "source": "assets/videos/Mind/F/F__F_easy.mp4",
+      "source_sha256": "617853d26d0e11ea2180e4b2697e2a75929670d4808f98b786281f3615f4f219",
+      "source_start": 12.4,
+      "source_end": 16.8,
+      "duration": 4.4,
+      "speed": 1,
+      "crop_xywh": [
+        96,
+        110,
+        448,
+        220
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/f-easy-navigation.mp4",
+      "output_sha256": "802b8ca6008b72aa4c3a053361dfdda2e956b42de491bc79235d66e94cb89cbf",
+      "note": "Actual navigation with visible target; no authored progress; 1x contiguous footage.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics."
+    },
+    {
+      "task": "PR3",
+      "level": "easy",
+      "source": "assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+      "source_sha256": "35139d3800afb7d5150208413c52c3db5116e4f482074e29f51a23676fffa170",
+      "source_start": 0.6,
+      "source_end": 0.6,
+      "duration": null,
+      "speed": 1,
+      "crop_xywh": [
+        208,
+        132,
+        224,
+        110
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/pr3-easy.png",
+      "output_sha256": "21edcf41d8d14642d0baa2edef71bf2d819531fa34979abe9a029253b0c8c878",
+      "note": "Clean reference paper before drawing, identical native-pixel crop and scale for all levels.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics."
+    },
+    {
+      "task": "CP02",
+      "level": "easy",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "ff9b7288f8dc5d1dc7f58b245956e4fd410ee1c0cee49c1858399e720b4d1b2a",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "duration": null,
+      "speed": 1,
+      "crop_xywh": [
+        120,
+        134,
+        320,
+        157
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/cp02-easy.png",
+      "output_sha256": "dd1f6818fb5115b58ccfde67c35225b20c14d48ed778ed086752cc8eea8baa59",
+      "note": "Initial stationary memorization example, not completion or performance result.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics.",
+      "visible_memorization_piece_count": 4
+    },
+    {
+      "task": "F",
+      "level": "medium",
+      "source": "assets/videos/Mind/F/F__F_medium.mp4",
+      "source_sha256": "35964beb4697f819a4a622d15d65e6e75cd237712c0dce583ae4257f147b9cfd",
+      "source_start": 21.0,
+      "source_end": 25.4,
+      "duration": 4.4,
+      "speed": 1,
+      "crop_xywh": [
+        96,
+        110,
+        448,
+        220
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/f-medium-navigation.mp4",
+      "output_sha256": "44136fb430ae0fb38f8127f002d2bfd9575aaf85f779db5576a916d8d1a20d52",
+      "note": "Actual navigation with visible target; no authored progress; 1x contiguous footage.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics."
+    },
+    {
+      "task": "PR3",
+      "level": "medium",
+      "source": "assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4",
+      "source_sha256": "d78e0355e9be1830e7b4033d113927905fbdb10b25d87efdc78dd475ad4f4bf8",
+      "source_start": 0.6,
+      "source_end": 0.6,
+      "duration": null,
+      "speed": 1,
+      "crop_xywh": [
+        208,
+        132,
+        224,
+        110
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/pr3-medium.png",
+      "output_sha256": "351e31fb305ec7432ad7e6b5d7bed899ff9e0a67ee31554391a47f86599485ca",
+      "note": "Clean reference paper before drawing, identical native-pixel crop and scale for all levels.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics."
+    },
+    {
+      "task": "CP02",
+      "level": "medium",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "5b4e46444d8439ee5f76c8cd54fa7d000303ee7a360c9ce8c70d3bbbf17b25d8",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "duration": null,
+      "speed": 1,
+      "crop_xywh": [
+        120,
+        134,
+        320,
+        157
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/cp02-medium.png",
+      "output_sha256": "5a68978021e94e6e8c0c6b5d2d93021808bf045a27c6e8d05d20e9fdab34a9da",
+      "note": "Initial stationary memorization example, not completion or performance result.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics.",
+      "visible_memorization_piece_count": 6
+    },
+    {
+      "task": "F",
+      "level": "hard",
+      "source": "assets/videos/Mind/F/F__F_hard.mp4",
+      "source_sha256": "4617b94bcbf9d688e79b2a84553b3b6b54cba44614d88c5a148820cef233a9a9",
+      "source_start": 21.0,
+      "source_end": 25.4,
+      "duration": 4.4,
+      "speed": 1,
+      "crop_xywh": [
+        96,
+        110,
+        448,
+        220
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/f-hard-navigation.mp4",
+      "output_sha256": "4e0a79d1681457f71423897c9a962494d65820255351400b9b524c17d7a23bc6",
+      "note": "Actual navigation with visible target; no authored progress; 1x contiguous footage.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics."
+    },
+    {
+      "task": "PR3",
+      "level": "hard",
+      "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+      "source_sha256": "665dfa922284c867eb69cf1d7636f3008da3d4291df603d6dc07d3170130942e",
+      "source_start": 0.6,
+      "source_end": 0.6,
+      "duration": null,
+      "speed": 1,
+      "crop_xywh": [
+        208,
+        132,
+        224,
+        110
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/pr3-hard.png",
+      "output_sha256": "ffe32f8989fc99e39d5b1ab539265ec7b5158817202901b7dec3e02e574753ab",
+      "note": "Clean reference paper before drawing, identical native-pixel crop and scale for all levels.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics."
+    },
+    {
+      "task": "CP02",
+      "level": "hard",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "duration": null,
+      "speed": 1,
+      "crop_xywh": [
+        120,
+        134,
+        320,
+        157
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/cp02-hard.png",
+      "output_sha256": "3343a9ef3e1107e134f148c9db29a411204b65d8de1ea7bdb5cf87955406b45d",
+      "note": "Initial stationary memorization example, not completion or performance result.",
+      "processing": "Deterministic crop and Lanczos resize only. No color correction, retouching, artificial motion, inpainting, interpolation or progress graphics.",
+      "visible_memorization_piece_count": 6
+    },
+    {
+      "task": "CP02",
+      "level": "hard",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "source_start": 95.7,
+      "source_end": 97.4,
+      "duration": 1.7,
+      "speed": 1,
+      "crop_xywh": [
+        56,
+        80,
+        448,
+        220
+      ],
+      "output_size": [
+        896,
+        440
+      ],
+      "output": "assets/generated/difficulty-grid-20261011-090243/cp02-hard-cover.mp4",
+      "output_sha256": "83f196de02110ccb378eb17ef02a544d7fc73462e6f75349c81f3c7b2eece714",
+      "note": "True final cover lowering and placement. Broader crop than initial cake still to retain lid and landing. Landing visibly near source96.7s (~1.0s local). No success label or synthetic completion.",
+      "processing": "Deterministic crop and Lanczos resize only; no audio."
+    }
+  ],
+  "review": {
+    "reference_frames": "PR3 source0.6s and CP02 source0.7s compared at exact same phase for each level.",
+    "navigation": "Easy12.4–16.8s, Medium21.0–25.4s, Hard21.0–25.4s with source target visible.",
+    "cover": "95.7–97.4s actual lowering and placement.",
+    "color": "Unchanged source colors; scaling only."
+  },
+  "verification": {
+    "passed": true,
+    "assets": [
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/f-easy-navigation.mp4",
+        "probe": {
+          "codec_name": "h264",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "4.400000",
+          "nb_frames": "132"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/pr3-easy.png",
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "rgb24",
+          "avg_frame_rate": "25/1"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/cp02-easy.png",
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "rgb24",
+          "avg_frame_rate": "25/1"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/f-medium-navigation.mp4",
+        "probe": {
+          "codec_name": "h264",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "4.400000",
+          "nb_frames": "132"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/pr3-medium.png",
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "rgb24",
+          "avg_frame_rate": "25/1"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/cp02-medium.png",
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "rgb24",
+          "avg_frame_rate": "25/1"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/f-hard-navigation.mp4",
+        "probe": {
+          "codec_name": "h264",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "4.400000",
+          "nb_frames": "132"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/pr3-hard.png",
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "rgb24",
+          "avg_frame_rate": "25/1"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/cp02-hard.png",
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "rgb24",
+          "avg_frame_rate": "25/1"
+        },
+        "source_unchanged": true
+      },
+      {
+        "output": "assets/generated/difficulty-grid-20261011-090243/cp02-hard-cover.mp4",
+        "probe": {
+          "codec_name": "h264",
+          "width": 896,
+          "height": 440,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "1.700000",
+          "nb_frames": "51"
+        },
+        "source_unchanged": true
+      }
+    ]
+  }
+}

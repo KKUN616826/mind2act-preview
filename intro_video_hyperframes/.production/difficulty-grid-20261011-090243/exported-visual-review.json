@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-11T09:28:07.743077+08:00",
+  "passed": true,
+  "master": "renders/mind2act-world-promo-1080p-20261011-092248.mp4",
+  "review_method": "Independent visual inspection of frames and temporal contact sheets decoded from actual exported MP4; comparison additionally inspected from web encode at 960x540. Not full-length human playback or listening.",
+  "evidence": [
+    {
+      "file": "rendered/handoff-sheet.jpg",
+      "source_interval_seconds": [
+        59.55,
+        60.55
+      ],
+      "sampling_fps": 8,
+      "result": "Hero Hard moves into column header; no title or label pileup; outgoing title precedes incoming title; grid settles cleanly."
+    },
+    {
+      "file": "rendered/comparison-web-960.jpg",
+      "time_seconds": 60.4,
+      "result": "At 960x540 all three difficulty columns, category labels and short captions legible. F layouts, PR3 line shapes and cake counts are visually distinguishable."
+    },
+    {
+      "file": "rendered/frame-60-4.jpg",
+      "time_seconds": 60.4,
+      "result": "Three by three layout correctly groups Mind/F, Act/PR3 and Mind2Act/CP02; lines are unobstructed; cake counts visibly 4/6/6."
+    },
+    {
+      "file": "rendered/cover-sheet.jpg",
+      "source_interval_seconds": [
+        62.33,
+        63.93
+      ],
+      "sampling_fps": 5,
+      "result": "Hard cake cell transitions from six-piece memory example into real cover lowering/placement. Downward motion and cover reaching cake are visible before stats transition."
+    },
+    {
+      "file": "rendered/frame-56-5.jpg",
+      "time_seconds": 56.5,
+      "result": "Original large Medium hero presentation intact."
+    },
+    {
+      "file": "rendered/frame-58-8.jpg",
+      "time_seconds": 58.8,
+      "result": "Original large Hard hero presentation intact."
+    },
+    {
+      "file": "rendered/frame-64-7.jpg",
+      "time_seconds": 64.7,
+      "result": "Original 15 Tasks x 3 Levels / 45 configuration payoff clear and correctly formatted."
+    },
+    {
+      "file": "rendered/contact-sheet.jpg",
+      "result": "Sampled surrounding intro, case, category and outro content remains visually intact."
+    }
+  ],
+  "unresolved_findings": [],
+  "limitations": [
+    "F robot naturally occludes parts of board while pressing during later grid frames, after initial clear target/layout view; no synthetic board or progress added.",
+    "Audio is outside this visual review and is audited separately."
+  ]
+}

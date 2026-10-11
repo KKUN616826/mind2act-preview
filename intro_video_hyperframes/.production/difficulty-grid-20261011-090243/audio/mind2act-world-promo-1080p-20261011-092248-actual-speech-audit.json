@@ -1,0 +1,175 @@
+{
+  "video": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-092248.mp4",
+  "model": "faster-whisper medium.en int8 CPU",
+  "vad_model": "bundled Silero threshold0.5",
+  "vad_checks": [
+    {
+      "name": "coverage",
+      "interval": [
+        41.4814814815,
+        53.3333333333
+      ],
+      "speech_intervals": []
+    },
+    {
+      "name": "numeric_payoff",
+      "interval": [
+        63.8333333333,
+        66.0851851852
+      ],
+      "speech_intervals": []
+    }
+  ],
+  "difficulty_cues": [
+    {
+      "id": "scale-easy",
+      "intended": "Easy.",
+      "transcript": "Easy.",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 53.6033333333,
+      "sample_end": 54.483333333333334,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.54,
+          "text": " Easy.",
+          "no_speech_prob": 0.0444098562002182,
+          "words": [
+            {
+              "text": " Easy.",
+              "start": 0.0,
+              "end": 0.54,
+              "probability": 0.794007420539856
+            }
+          ]
+        }
+      ],
+      "match": true
+    },
+    {
+      "id": "scale-medium",
+      "intended": "Medium.",
+      "transcript": "medium.",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 55.7033333333,
+      "sample_end": 56.65604166666667,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.54,
+          "text": " medium.",
+          "no_speech_prob": 0.09231092780828476,
+          "words": [
+            {
+              "text": " medium.",
+              "start": 0.0,
+              "end": 0.54,
+              "probability": 0.23749452829360962
+            }
+          ]
+        }
+      ],
+      "match": true
+    },
+    {
+      "id": "scale-hard",
+      "intended": "Hard.",
+      "transcript": "Hard.",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 57.803333333299996,
+      "sample_end": 58.65695833333333,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Hard.",
+          "no_speech_prob": 0.08416137099266052,
+          "words": [
+            {
+              "text": " Hard.",
+              "start": 0.0,
+              "end": 0.5,
+              "probability": 0.48587754368782043
+            }
+          ]
+        }
+      ],
+      "match": true
+    },
+    {
+      "id": "difficulty-explanation",
+      "intended": "More rules. Tighter turns. More to remember\u2014and do.",
+      "transcript": "More rules, tighter turns, more to remember and do.",
+      "expected_text_supplied_to_model": false,
+      "sample_start": 59.9533333333,
+      "sample_end": 63.341791666666666,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.14,
+          "text": " More rules, tighter turns, more to remember and do.",
+          "no_speech_prob": 0.002271012868732214,
+          "words": [
+            {
+              "text": " More",
+              "start": 0.0,
+              "end": 0.32,
+              "probability": 0.8779596090316772
+            },
+            {
+              "text": " rules,",
+              "start": 0.32,
+              "end": 0.8,
+              "probability": 0.9852826595306396
+            },
+            {
+              "text": " tighter",
+              "start": 1.04,
+              "end": 1.22,
+              "probability": 0.9959218502044678
+            },
+            {
+              "text": " turns,",
+              "start": 1.22,
+              "end": 1.68,
+              "probability": 0.9526559114456177
+            },
+            {
+              "text": " more",
+              "start": 1.98,
+              "end": 2.06,
+              "probability": 0.9796780347824097
+            },
+            {
+              "text": " to",
+              "start": 2.06,
+              "end": 2.26,
+              "probability": 0.9981958270072937
+            },
+            {
+              "text": " remember",
+              "start": 2.26,
+              "end": 2.62,
+              "probability": 0.998076319694519
+            },
+            {
+              "text": " and",
+              "start": 2.62,
+              "end": 2.94,
+              "probability": 0.9791374206542969
+            },
+            {
+              "text": " do.",
+              "start": 2.94,
+              "end": 3.14,
+              "probability": 0.9969770908355713
+            }
+          ]
+        }
+      ],
+      "match": true
+    }
+  ],
+  "manual_listening": false,
+  "pass": true
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "reviewer": "independent typography_audit agent",
+  "filepath": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-122335.mp4",
+  "master": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/renders/mind2act-world-promo-1080p-20261011-122335.mp4",
+  "sha256": "f102bd07d2572992b21d16bd34c7ba1a0a9b744adb5c1c6ba3bee7f78fdb259f",
+  "frame": "/home/xzy/xzy_project/robostream++/outputs/mind2act-hyperframes-blank-20261010-111117/.production/parallel-copy-20261011-121901/rendered/frame-9.jpg",
+  "frame_sha256": "9b210606c3f417763d6ceb80ec04c3dc7ed4dad0a49496197f7f44d2e7ac5d45",
+  "timestamp_seconds": 9,
+  "method": "Extracted 9-second frame from final encoded 122335 master and visually inspected at 1920x1080 and 960x540. Narrow revision review, two copy substitutions only.",
+  "findings": [
+    "Mind reads Choose the next action.; Act reads Execute actions reliably.; Mind2Act reads Coordinate the whole task.",
+    "All three descriptions use the same verb-led short-sentence form and terminal periods.",
+    "All three descriptions remain on one line with a common baseline and consistent left alignment within equal category columns.",
+    "Copy is legible at ordinary 960px playback size; no truncation, overlapping text, or unintended wrapping.",
+    "The concise category distinctions remain consistent with the positioning reference: choosing actions, reliable execution, and whole-task coordination."
+  ],
+  "issues": [],
+  "scope_note": "Audio preservation, duration, unchanged scenes, and decode integrity are validated separately by root."
+}

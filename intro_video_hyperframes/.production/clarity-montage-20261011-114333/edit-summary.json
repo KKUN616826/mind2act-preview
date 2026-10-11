@@ -1,0 +1,30 @@
+{
+  "changed_compositions": [
+    "02-motivation",
+    "04-act",
+    "05-mind2act",
+    "06-scale",
+    "08-coordination"
+  ],
+  "text": {
+    "category_descriptions": [
+      "Remember. Reason. Decide.",
+      "Act with physical precision.",
+      "Coordinate the whole task."
+    ],
+    "category_style": "29 px single-line descriptions, shared baseline and left alignment",
+    "act_panel_style": "24 px, shared left alignment, single-line rows",
+    "piano_notes": [
+      "Blue demonstration",
+      "Play the sequence",
+      "Key response"
+    ]
+  },
+  "montage": [
+    "M",
+    "FR1",
+    "CP04"
+  ],
+  "difficulty": "09 is byte-identical to approved latest full-width CP02 version",
+  "timing": "Unchanged root timeline and audio"
+}

@@ -1,0 +1,147 @@
+--- before/index.html
++++ index.html
+@@ -3,13 +3,13 @@
+ @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;src:url('assets/fonts/SpaceGrotesk-600.ttf') format('truetype')}
+ @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;src:url('assets/fonts/SpaceGrotesk-700.ttf') format('truetype')}
+ @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('assets/fonts/IBMPlexMono-400.ttf') format('truetype')}
+-@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url('assets/fonts/IBMPlexMono-500.ttf') format('truetype')} *{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;background:#090e13;overflow:hidden}#root{position:relative;width:100%;height:100%;overflow:hidden}</style></head><body><div id="root" data-composition-id="main" data-width="1920" data-height="1080" data-duration="74.074074" data-fps="30"><div id="scene-intro" class="clip" data-composition-id="intro" data-composition-src="compositions/01-intro.html" data-start="0.000000" data-duration="5.805185" data-track-index="1" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:1"></div>
++@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url('assets/fonts/IBMPlexMono-500.ttf') format('truetype')} *{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;background:#090e13;overflow:hidden}#root{position:relative;width:100%;height:100%;overflow:hidden}</style></head><body><div id="root" data-composition-id="main" data-width="1920" data-height="1080" data-duration="74.974074" data-fps="30"><div id="scene-intro" class="clip" data-composition-id="intro" data-composition-src="compositions/01-intro.html" data-start="0.000000" data-duration="5.805185" data-track-index="1" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:1"></div>
+ <div id="scene-motivation" class="clip" data-composition-id="motivation" data-composition-src="compositions/02-motivation.html" data-start="5.185185" data-duration="7.286667" data-track-index="2" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:2"></div>
+ <div id="scene-mind" class="clip" data-composition-id="mind" data-composition-src="compositions/03-mind.html" data-start="11.851852" data-duration="6.545926" data-track-index="3" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:3"></div>
+ <div id="scene-act" class="clip" data-composition-id="act" data-composition-src="compositions/04-act.html" data-start="17.777778" data-duration="6.545926" data-track-index="4" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:4"></div>
+ <div id="scene-mind2act" class="clip" data-composition-id="mind2act" data-composition-src="compositions/05-mind2act.html" data-start="23.703704" data-duration="6.545926" data-track-index="5" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:5"></div>
+ <div id="scene-coordination" class="clip" data-composition-id="coordination" data-composition-src="compositions/08-coordination.html" data-start="29.629630" data-duration="12.471852" data-track-index="6" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:6"></div>
+ <div id="scene-scale" class="clip" data-composition-id="scale" data-composition-src="compositions/06-scale.html" data-start="41.481481" data-duration="12.471852" data-track-index="7" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:7"></div>
+-<div id="scene-difficulty" class="clip" data-composition-id="difficulty" data-composition-src="compositions/09-difficulty.html" data-start="53.333333" data-duration="12.471852" data-track-index="8" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:8"></div>
+-<div id="scene-outro" class="clip" data-composition-id="outro" data-composition-src="compositions/07-outro.html" data-start="65.185185" data-duration="8.888889" data-track-index="9" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:9"></div>
+-<audio id="soundtrack" class="clip" src="assets/generated/audio/question-20261010-223248/soundtrack-question-20261010-223248.wav" data-start="0" data-duration="74.074074" data-track-index="20" data-volume="1"></audio></div><script>const tl=gsap.timeline({paused:true});tl.to({progress:0},{progress:1,duration:74.0740740741,ease:'none'},0);window.__timelines['main']=tl;</script></body></html>
++<div id="scene-difficulty" class="clip" data-composition-id="difficulty" data-composition-src="compositions/09-difficulty.html" data-start="53.333333" data-duration="13.371852" data-track-index="8" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:8"></div>
++<div id="scene-outro" class="clip" data-composition-id="outro" data-composition-src="compositions/07-outro.html" data-start="66.085185" data-duration="8.888889" data-track-index="9" data-width="1920" data-height="1080" style="position:absolute;inset:0;z-index:9"></div>
++<audio id="soundtrack" class="clip" src="assets/generated/audio/difficulty-grid-20261011-090243/soundtrack-difficulty-grid-20261011-090243.wav" data-start="0" data-duration="74.974074" data-track-index="20" data-volume="1"></audio></div><script>const tl=gsap.timeline({paused:true});tl.to({progress:0},{progress:1,duration:74.9740740741,ease:'none'},0);window.__timelines['main']=tl;</script></body></html>
+--- before/compositions/09-difficulty.html
++++ compositions/09-difficulty.html
+@@ -1,13 +1,22 @@
+ <!doctype html><html lang="en"><head><meta charset="UTF-8"></head><body><template><style>@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400;src:url('assets/fonts/SpaceGrotesk-400.ttf') format('truetype')}@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;src:url('assets/fonts/SpaceGrotesk-600.ttf') format('truetype')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('assets/fonts/IBMPlexMono-400.ttf') format('truetype')}
+-#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}.difficulty-surface{position:absolute;inset:0;background:#090e13;color:#faf9f4;overflow:hidden;font-family:'Space Grotesk',sans-serif}.difficulty-abs{position:absolute}.difficulty-kicker{left:76px;top:58px;font:23px 'IBM Plex Mono',monospace;color:#bdd9cc}.difficulty-title{left:72px;top:111px;font-size:68px;line-height:1.04;font-weight:600;letter-spacing:-1.5px}.difficulty-word{position:absolute;left:74px;top:359px;width:590px;height:190px;font-size:158px;font-weight:600;line-height:1;letter-spacing:-6px;transform-origin:0 0}.difficulty-hero-desc{position:absolute;left:81px;top:570px;font-size:33px;line-height:1.3;color:#c6d3df;width:510px}.difficulty-film{position:absolute;left:690px;top:275px;width:1160px;height:605.375px;overflow:hidden;border-radius:7px;transform-origin:0 0}.difficulty-film video{width:100%;height:100%;object-fit:contain}.difficulty-row{position:absolute;left:74px;width:1772px;height:226px;border-top:1px solid #314550;background:#111c25}.difficulty-row-note{position:absolute;left:1190px;width:565px;font-size:43px;line-height:1.15;font-weight:600}.difficulty-row-sub{font-size:25px;font-weight:400;color:#c6d3df;line-height:1.3;margin-top:15px}.difficulty-stat{position:absolute;inset:0;background:#090e13}.difficulty-formula{position:absolute;left:80px;top:140px;font-size:76px;line-height:1.1;font-weight:600;letter-spacing:-2px}.difficulty-45{position:absolute;left:90px;top:365px;font-size:405px;line-height:1;font-weight:600;letter-spacing:-20px;color:#f0d57e}.difficulty-config{position:absolute;left:795px;top:465px;font-size:78px;line-height:1.08;letter-spacing:-2px;font-weight:600;width:970px}</style>
+-<div id="root" data-composition-id="difficulty" data-width="1920" data-height="1080" data-duration="12.471852"><div id="difficulty-surface" class="difficulty-surface">
++#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}.difficulty-surface{position:absolute;inset:0;background:#090e13;color:#faf9f4;overflow:hidden;font-family:'Space Grotesk',sans-serif}.difficulty-abs{position:absolute}.difficulty-kicker{left:76px;top:58px;font:23px 'IBM Plex Mono',monospace;color:#bdd9cc}.difficulty-title{left:72px;top:111px;font-size:68px;line-height:1.04;font-weight:600;letter-spacing:-1.5px}.difficulty-word{position:absolute;left:74px;top:359px;width:590px;height:190px;font-size:158px;font-weight:600;line-height:1;letter-spacing:-6px;transform-origin:0 0}.difficulty-hero-desc{position:absolute;left:81px;top:570px;font-size:33px;line-height:1.3;color:#c6d3df;width:510px}.difficulty-film{position:absolute;left:690px;top:275px;width:1160px;height:605.375px;overflow:hidden;border-radius:7px;transform-origin:0 0}.difficulty-film video{width:100%;height:100%;object-fit:contain}.difficulty-row{position:absolute;left:74px;width:1772px;height:226px;border-top:1px solid #314550;background:#111c25}.difficulty-row-note{position:absolute;left:1190px;width:565px;font-size:43px;line-height:1.15;font-weight:600}.difficulty-row-sub{font-size:25px;font-weight:400;color:#c6d3df;line-height:1.3;margin-top:15px}.difficulty-stat{position:absolute;inset:0;background:#090e13}.difficulty-formula{position:absolute;left:80px;top:140px;font-size:76px;line-height:1.1;font-weight:600;letter-spacing:-2px}.difficulty-45{position:absolute;left:90px;top:365px;font-size:405px;line-height:1;font-weight:600;letter-spacing:-20px;color:#f0d57e}.difficulty-config{position:absolute;left:795px;top:465px;font-size:78px;line-height:1.08;letter-spacing:-2px;font-weight:600;width:970px}
++.difficulty-grid{position:absolute;inset:0;pointer-events:none}
++.difficulty-grid-title{position:absolute;left:72px;top:65px;font-size:64px;line-height:1.08;font-weight:600;letter-spacing:-1.5px}
++.difficulty-grid-row{position:absolute;left:60px;width:1800px;height:220px;background:#111c25;border:2px solid #30424e;border-radius:6px;box-sizing:border-box;overflow:hidden}
++.difficulty-grid-label{position:absolute;left:22px;top:0;width:350px;height:216px;display:flex;flex-direction:column;justify-content:center;gap:16px}
++.difficulty-grid-category{font-size:26px;line-height:1.1;font-weight:400;color:#c6d3df}
++.difficulty-grid-caption{font-size:42px;line-height:1.12;font-weight:600;color:#faf9f4;max-width:342px}
++.difficulty-grid-cell{position:absolute;top:-2px;width:448px;height:220px;overflow:hidden;background:#101820}
++.difficulty-grid-cell img,.difficulty-grid-cell video{display:block;width:100%;height:100%;object-fit:cover}
++.difficulty-cake-count{position:absolute;left:12px;top:12px;min-width:49px;height:49px;display:flex;align-items:center;justify-content:center;background:#090e13;color:#faf9f4;font-size:34px;font-weight:600;line-height:1;border-radius:4px;padding:0 9px}
++.difficulty-cover-film{position:absolute;inset:0;background:#101820}
++</style>
++<div id="root" data-composition-id="difficulty" data-width="1920" data-height="1080" data-duration="13.371852"><div id="difficulty-surface" class="difficulty-surface">
+ <div id="difficulty-kicker" class="difficulty-abs difficulty-kicker">MIND / F · THREE LEVELS</div><div id="difficulty-title" class="difficulty-abs difficulty-title">Learn the button rules.</div>
+-<div id="difficulty-row-easy" class="difficulty-row" style="top:254px"></div>
+-<div id="difficulty-row-medium" class="difficulty-row" style="top:493px"></div>
+-<div id="difficulty-row-hard" class="difficulty-row" style="top:732px"></div>
+-<div id="difficulty-word-easy" class="difficulty-word" style="color:#e4e6d2">Easy</div><div id="difficulty-desc-easy" class="difficulty-hero-desc">1D track<div style="margin-top:9px">2 button rules to learn</div></div><div id="difficulty-film-easy" class="difficulty-film"><video id="difficulty-video-easy" class="clip" src="assets/generated/categories-20261010-215252/f-easy-probe.mp4" data-start="0" data-duration="9.85" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div><div id="difficulty-note-easy" class="difficulty-row-note" style="top:314px">1D track<div class="difficulty-row-sub">2 button rules to learn</div></div>
+-<div id="difficulty-word-medium" class="difficulty-word" style="color:#bdd9cc">Medium</div><div id="difficulty-desc-medium" class="difficulty-hero-desc">3 × 3 grid<div style="margin-top:9px">4 button rules to learn</div></div><div id="difficulty-film-medium" class="difficulty-film"><video id="difficulty-video-medium" class="clip" src="assets/generated/categories-20261010-215252/f-medium-probe.mp4" data-start="2.22" data-duration="7.629999999999999" data-track-index="2" data-hf-media-start-basis="local" muted playsinline></video></div><div id="difficulty-note-medium" class="difficulty-row-note" style="top:553px">3 × 3 grid<div class="difficulty-row-sub">4 button rules to learn</div></div>
+-<div id="difficulty-word-hard" class="difficulty-word" style="color:#f0d57e">Hard</div><div id="difficulty-desc-hard" class="difficulty-hero-desc">4 × 4 grid<div style="margin-top:9px">4 button rules to learn</div></div><div id="difficulty-film-hard" class="difficulty-film"><video id="difficulty-video-hard" class="clip" src="assets/generated/categories-20261010-215252/f-hard-probe.mp4" data-start="4.32" data-duration="5.529999999999999" data-track-index="3" data-hf-media-start-basis="local" muted playsinline></video></div><div id="difficulty-note-hard" class="difficulty-row-note" style="top:792px">4 × 4 grid<div class="difficulty-row-sub">4 button rules to learn</div></div>
++<div id="difficulty-grid" class="difficulty-grid"><div id="difficulty-grid-title" class="difficulty-grid-title">Three levels. Rising demands.</div><div id="difficulty-grid-f" class="difficulty-grid-row" style="top:280px"><div class="difficulty-grid-label"><div class="difficulty-grid-category" style="color:#bdd9cc">Mind</div><div class="difficulty-grid-caption">Rules &amp; routes</div></div><div id="difficulty-cell-f-easy" class="difficulty-grid-cell" style="left:394px"><video id="difficulty-nav-easy" class="clip" src="assets/generated/difficulty-grid-20261011-090243/f-easy-navigation.mp4" data-start="6.40" data-duration="4.33" data-track-index="4" data-hf-media-start-basis="local" muted playsinline></video></div><div id="difficulty-cell-f-medium" class="difficulty-grid-cell" style="left:866px"><video id="difficulty-nav-medium" class="clip" src="assets/generated/difficulty-grid-20261011-090243/f-medium-navigation.mp4" data-start="6.40" data-duration="4.33" data-track-index="5" data-hf-media-start-basis="local" muted playsinline></video></div><div id="difficulty-cell-f-hard" class="difficulty-grid-cell" style="left:1338px"><video id="difficulty-nav-hard" class="clip" src="assets/generated/difficulty-grid-20261011-090243/f-hard-navigation.mp4" data-start="6.40" data-duration="4.33" data-track-index="6" data-hf-media-start-basis="local" muted playsinline></video></div></div><div id="difficulty-grid-pr3" class="difficulty-grid-row" style="top:516px"><div class="difficulty-grid-label"><div class="difficulty-grid-category" style="color:#aac4d9">Act</div><div class="difficulty-grid-caption">Tighter turns</div></div><div id="difficulty-cell-pr3-easy" class="difficulty-grid-cell" style="left:394px"><img id="difficulty-image-pr3-easy" src="assets/generated/difficulty-grid-20261011-090243/pr3-easy.png" alt="Act easy reference path"></div><div id="difficulty-cell-pr3-medium" class="difficulty-grid-cell" style="left:866px"><img id="difficulty-image-pr3-medium" src="assets/generated/difficulty-grid-20261011-090243/pr3-medium.png" alt="Act medium reference path"></div><div id="difficulty-cell-pr3-hard" class="difficulty-grid-cell" style="left:1338px"><img id="difficulty-image-pr3-hard" src="assets/generated/difficulty-grid-20261011-090243/pr3-hard.png" alt="Act hard reference path"></div></div><div id="difficulty-grid-cp02" class="difficulty-grid-row" style="top:752px"><div class="difficulty-grid-label"><div class="difficulty-grid-category" style="color:#f0d57e">Mind2Act</div><div class="difficulty-grid-caption">More pieces &amp; steps</div></div><div id="difficulty-cell-cp02-easy" class="difficulty-grid-cell" style="left:394px"><img id="difficulty-image-cp02-easy" src="assets/generated/difficulty-grid-20261011-090243/cp02-easy.png" alt="Mind2Act easy reference cake to remember"><div id="difficulty-cake-count-easy" class="difficulty-cake-count">4</div></div><div id="difficulty-cell-cp02-medium" class="difficulty-grid-cell" style="left:866px"><img id="difficulty-image-cp02-medium" src="assets/generated/difficulty-grid-20261011-090243/cp02-medium.png" alt="Mind2Act medium reference cake to remember"><div id="difficulty-cake-count-medium" class="difficulty-cake-count">6</div></div><div id="difficulty-cell-cp02-hard" class="difficulty-grid-cell" style="left:1338px"><img id="difficulty-image-cp02-hard" src="assets/generated/difficulty-grid-20261011-090243/cp02-hard.png" alt="Mind2Act hard reference cake to remember"><div id="difficulty-cover-film" class="difficulty-cover-film"><video id="difficulty-cover-video" class="clip" src="assets/generated/difficulty-grid-20261011-090243/cp02-hard-cover.mp4" data-start="9.05" data-duration="1.68" data-track-index="8" data-hf-media-start-basis="local" muted playsinline></video></div><div id="difficulty-cake-count-hard" class="difficulty-cake-count">6</div></div></div></div>
++<div id="difficulty-word-easy" class="difficulty-word" style="color:#e4e6d2">Easy</div><div id="difficulty-desc-easy" class="difficulty-hero-desc">1D track<div style="margin-top:9px">2 button rules to learn</div></div><div id="difficulty-film-easy" class="difficulty-film"><video id="difficulty-video-easy" class="clip" src="assets/generated/categories-20261010-215252/f-easy-probe.mp4" data-start="0" data-duration="9.85" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div>
++<div id="difficulty-word-medium" class="difficulty-word" style="color:#bdd9cc">Medium</div><div id="difficulty-desc-medium" class="difficulty-hero-desc">3 × 3 grid<div style="margin-top:9px">4 button rules to learn</div></div><div id="difficulty-film-medium" class="difficulty-film"><video id="difficulty-video-medium" class="clip" src="assets/generated/categories-20261010-215252/f-medium-probe.mp4" data-start="2.22" data-duration="7.629999999999999" data-track-index="2" data-hf-media-start-basis="local" muted playsinline></video></div>
++<div id="difficulty-word-hard" class="difficulty-word" style="color:#f0d57e">Hard</div><div id="difficulty-desc-hard" class="difficulty-hero-desc">4 × 4 grid<div style="margin-top:9px">4 button rules to learn</div></div><div id="difficulty-film-hard" class="difficulty-film"><video id="difficulty-video-hard" class="clip" src="assets/generated/categories-20261010-215252/f-hard-probe.mp4" data-start="4.32" data-duration="5.529999999999999" data-track-index="3" data-hf-media-start-basis="local" muted playsinline></video></div>
+ <div id="difficulty-stat" class="difficulty-stat"><div id="difficulty-formula" class="difficulty-formula">15 Tasks × 3 Levels</div><div id="difficulty-45" class="difficulty-45">45</div><div id="difficulty-config" class="difficulty-config">Task-difficulty configurations</div></div></div></div>
+ <script>(function(){const tl=gsap.timeline({paused:true});
+ tl.fromTo('#difficulty-surface',{clipPath:'inset(0% 100% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},0);
+@@ -20,16 +29,36 @@
+  tl.fromTo('#difficulty-film-'+lv,{opacity:0,clipPath:'inset(0% 0% 0% 100%)'},{opacity:1,clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},at);
+  if(i<2){const next=starts[i+1];tl.to('#difficulty-word-'+lv,{opacity:0,y:-55,duration:.22,ease:'power2.in'},next);tl.to('#difficulty-desc-'+lv,{opacity:0,duration:.18},next);tl.to('#difficulty-film-'+lv,{opacity:0,duration:.28},next+.12);}
+ });
+-// All three videos retain their source clocks when they settle into comparison rows.
+-levels.forEach((lv,i)=>{const y=254+i*239;const at=6.34+i*.06;
+- tl.fromTo('#difficulty-row-'+lv,{opacity:0,x:95},{opacity:1,x:0,duration:.58,ease:'power3.out'},at);
+- tl.to('#difficulty-word-'+lv,{opacity:1,x:20,y:y+79-359,scale:.42,duration:.68,ease:'power3.inOut'},at);
+- tl.to('#difficulty-film-'+lv,{opacity:1,x:-76,y:y-275,scale:.37332,duration:.68,ease:'power3.inOut'},at);
+- tl.to('#difficulty-desc-'+lv,{opacity:0,duration:.2},at);
+- tl.fromTo('#difficulty-note-'+lv,{opacity:0,x:45},{opacity:1,x:0,duration:.55,ease:'power2.out'},at+.34);
++
++// Preserve the large-word sequence until this handoff, then keep a stable 3x3 comparison.
++tl.to(['#difficulty-kicker','#difficulty-title'],{opacity:0,duration:.16,ease:'power2.inOut'},6.34);
++tl.fromTo('#difficulty-grid-title',{opacity:0,y:22},{opacity:1,y:0,duration:.24,ease:'power3.out'},6.50);
++['f','pr3','cp02'].forEach((row)=>{
++ tl.fromTo('#difficulty-grid-'+row,{opacity:0,y:22},{opacity:1,y:0,duration:.38,ease:'power3.out'},6.34);
++ tl.fromTo('#difficulty-grid-'+row+' .difficulty-grid-label',{opacity:0},{opacity:1,duration:.18,ease:'power2.out'},6.56);
+ });
+-tl.fromTo('#difficulty-stat',{clipPath:'inset(100% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},9.43);
+-tl.fromTo('#difficulty-formula',{opacity:0,y:55},{opacity:1,y:0,duration:.55,ease:'power3.out'},9.59);
+-tl.fromTo('#difficulty-45',{opacity:0,y:170,scale:.92},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out'},9.83);
+-tl.fromTo('#difficulty-config',{opacity:0,x:80},{opacity:1,x:0,duration:.6,ease:'power2.out'},10.06);
+-window.__timelines['difficulty']=tl;})();</script></template></body></html>+levels.forEach((lv,i)=>{
++ const x=456+i*472;
++ if(lv==='hard'){
++  tl.to('#difficulty-word-'+lv,{opacity:1,x:x+20-74,y:187-359,scale:.30,duration:.4,ease:'power3.inOut'},6.34);
++  tl.to('#difficulty-film-'+lv,{opacity:1,x:x-690,y:280-275,scale:448/1160,duration:.4,ease:'power3.inOut'},6.34);
++  tl.to('#difficulty-film-'+lv,{opacity:0,duration:.15,ease:'power2.out'},6.62);
++ }else{
++  tl.set('#difficulty-word-'+lv,{opacity:0,x:x+20-74,y:187-359,scale:.30},6.34);
++  tl.to('#difficulty-word-'+lv,{opacity:1,duration:.20,ease:'power2.out'},6.54);
++ }
++ tl.to('#difficulty-desc-'+lv,{opacity:0,duration:.20},6.34);
++});
++// Speech-aligned emphasis: rules, turns, then memory and the extra physical step.
++tl.to('#difficulty-grid-f',{borderColor:'#bdd9cc',backgroundColor:'#1b2b33',duration:.18},6.70);
++tl.to('#difficulty-grid-f',{borderColor:'#30424e',backgroundColor:'#111c25',duration:.2},7.66);
++tl.to('#difficulty-grid-pr3',{borderColor:'#aac4d9',backgroundColor:'#1b2b33',duration:.18},7.66);
++tl.to('#difficulty-grid-pr3',{borderColor:'#30424e',backgroundColor:'#111c25',duration:.2},8.60);
++tl.to('#difficulty-grid-cp02',{borderColor:'#f0d57e',backgroundColor:'#242b2c',duration:.18},8.60);
++tl.fromTo('#difficulty-cover-film',{opacity:0},{opacity:1,duration:.15,ease:'power2.out'},9.05);
++// 45 retains its existing entrance and hold, shifted by 0.90 seconds.
++tl.fromTo('#difficulty-stat',{clipPath:'inset(100% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.4,ease:'power3.inOut'},10.33);
++tl.fromTo('#difficulty-formula',{opacity:0,y:55},{opacity:1,y:0,duration:.55,ease:'power3.out'},10.49);
++tl.fromTo('#difficulty-45',{opacity:0,y:170,scale:.92},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out'},10.73);
++tl.fromTo('#difficulty-config',{opacity:0,x:80},{opacity:1,x:0,duration:.6,ease:'power2.out'},10.96);
++window.__timelines['difficulty']=tl;})();</script></template></body></html>
+--- before/BRIEF.md
++++ BRIEF.md
+@@ -13,7 +13,7 @@
+ User-authorized redesign and export in the existing project. Preserve historical films, supplied original logo assets, original music identity, and selected blue-cup meal packing, line tracing and CP05 piano sources. English visuals and narration. User has explicitly authorized modifications and final export; no repeated approval gate.
+ 
+ ## Narrative
+-Opening brand -> question and three category definitions -> three representative category cases -> conceptual two-way coordination, independent marks with three dots combining into complete logo, then all three marks standing together -> full-screen further task excerpts -> fifteen-task classification wall -> F Easy/Medium/Hard typography and three real video strips -> 15 tasks x 3 levels = 45 task-difficulty configurations -> collective moonshot CTA.
++Opening brand -> question and three category definitions -> three representative category cases -> conceptual two-way coordination, independent marks with three dots combining into complete logo, then all three marks standing together -> full-screen further task excerpts -> fifteen-task classification wall -> preserved F Easy/Medium/Hard typography, then three task rows (F navigation, PR3 reference paths, CP02 reference cakes and cover placement) sharing three difficulty columns -> 15 tasks x 3 levels = 45 task-difficulty configurations -> collective moonshot CTA.
+ 
+ Mind is observation/history-driven task decision; Act is physically valid execution; Mind2Act combines requirements over complete tasks. Do not label all three categories one shared loop. Demos illustrate benchmark requirements, not proven model performance. Summary is an authored conceptual explanation, not inferred model states.
+ 
+--- before/DESIGN.md
++++ DESIGN.md
+@@ -3,7 +3,7 @@
+ 
+ Brand palette: stage#090E13,navy#102134,steel#7189A5/#9FB2C8,moon#E4E6D2,mint#BDD9CC,gold#F0D57E,offwhite#FAF9F4. Preserve supplied logo pixels. Space Grotesk statements, IBM Plex Mono compact labels. Opening/closing use original min2act_world.png on matching light band, exact color/glyphs, colon excluded by displaywindow.
+ 
+-Hierarchy: one visual premise per beat. Question in large type over three category anchors. Case footage dominant; keep Act target/trace and CP05 EXCERPT detail windows. Summary begins two original symbols and bilateral paths, assembles with three dots into exact full mark, pulls back to all three marks in triangular balance. No piano footage in summary. Coverage uses full-screen task samples that shrink into a three-group fifteen-task wall. F uses oversized Easy/Medium/Hard synced to actual video; three horizontal comparison rows; large45configuration payoff. No dense P/CP05 numerical table.
++Hierarchy: one visual premise per beat. Question in large type over three category anchors. Case footage dominant; keep Act target/trace and CP05 EXCERPT detail windows. Summary begins two original symbols and bilateral paths, assembles with three dots into exact full mark, pulls back to all three marks in triangular balance. No piano footage in summary. Coverage uses full-screen task samples that shrink into a three-group fifteen-task wall. F uses oversized Easy/Medium/Hard synced to actual video; a stable3×3comparison (F buttons, PR3reference paths, CP02reference cakes) with Easy/Medium/Hard as columns; concise category labels and speech-aligned row emphasis; large45configuration payoff. All comparison crops use natural source colors; preserve4/6/6cake counts and show actualHardcoverplacement. No dense P/CP05 numerical table.
+ 
+ Motion: kinetic-beat-slam, waterfall-entry, multi-phase-camera, svg-path-draw. Short entrances, clear holds, transform/mask-based transitions, no distracting decoration over contact regions. Preserve natural simulation colors; no cosmetic grading is needed. Source footage carries evidence, generated overlay denotes benchmark explanation only.
+ 
+--- before/STORYBOARD.md
++++ STORYBOARD.md
+@@ -1,4 +1,4 @@
+-# Mind2Act World / 74.074074 seconds
++# Mind2Act World / 74.974074 seconds
+ ## Frame 1
+ status: animated
+ src: compositions/01-intro.html
+@@ -44,12 +44,12 @@
+ ## Frame 8
+ status: animated
+ src: compositions/09-difficulty.html
+-range: 53.333333–65.185185
++range: 53.333333–66.085185
+ motion: kinetic-beat-slam; multi-phase-camera
+-F feedback rule memory: Easy/Medium/Hard large words paired with correct source videos. Three horizontal rows for comparison. Fifteen tasks x threelevels ->45task-difficulty configurations. No narration over final numeric payoff.
++Preserve original Easy/Medium/Hard word and voice sequence through local6.34. Then three stable task rows share Easy/Medium/Hard columns: Mind/F navigation, Act/PR3 enlarged real reference lines, Mind2Act/CP02 reference cakes4/6/6 with Hard actual cover placement. Short VO: More rules. Tighter turns. More to remember—and do. No performance claim. Atlocal10.33 retain 15Tasks×3Levels→45 payoff; no VO over numeric hold.
+ ## Frame 9
+ status: animated
+ src: compositions/07-outro.html
+-range: 65.185185–74.074074
++range: 66.085185–74.974074
+ motion: svg-path-draw; waterfall-entry
+ Moonward mark, exact title, collective leap invitation, contribute/evaluate actions and URL held.

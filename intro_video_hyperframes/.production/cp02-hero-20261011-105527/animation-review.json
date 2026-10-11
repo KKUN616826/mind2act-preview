@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "evidence": "animation-map/animation-map.json and snapshots/contact-sheet-1.jpg, contact-sheet-2.jpg",
+  "flag_counts": {
+    "collision": 312,
+    "paced-slow": 9,
+    "offscreen": 4,
+    "degenerate": 1,
+    "paced-fast": 35,
+    "invisible": 25
+  },
+  "review": [
+    "Existing large-word timing, title reveal, row emphasis and final statistics timing retained.",
+    "Hard image wrapper now scales uniformly to the bottom-right CP02 cell. Native 16:9 media are contained, with no geometric distortion or cover cropping.",
+    "The reference-to-later-cover dissolve lasts0.12s; the true landing occurs before the picture shrinks. The explicit six-pieces-plus-cover caption remains readable.",
+    "The tool enumerates root and nested timelines with offset duplicate entries. Cross-check actual scene times against snapshots and authored local timings.",
+    "Parent-child collision flags cover intentional row backgrounds, the moving media wrapper and statistics wipe. Existing offscreen reveal-bars and zero-scale accent flags remain unchanged.",
+    "Invisible flags concern already-faded previous hero elements; short fades preserve the accepted beat. No new persistent text overlap appears in actual snapshots."
+  ],
+  "actual_encoded_motion_review": "Passed by root and independent visual reviewer: complete cake/base/lid in hero and grid, real cover lowering, clean bottom-right handoff. See exported-visual-review.json and rendered temporal sheets.",
+  "keyframes_diagnostic": {
+    "command": "hyperframes keyframes . --selector #difficulty-film-hard --shot hard-handoff.png --samples4 --layoutstrip --from59.67 --to60.08",
+    "result": "Completed but reported no keyframes and painted a later statistics surface underneath the selector boxes. It is not accepted as painted-frame proof. The scene uses ordinary GSAP fromTo/to tweens; actual snapshots and decoded export strips are authoritative for picture timing."
+  }
+}

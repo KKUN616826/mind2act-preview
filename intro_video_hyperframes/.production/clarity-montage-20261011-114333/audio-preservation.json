@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "name": "previous",
+      "path": "renders/mind2act-world-promo-1080p-20261011-112801.mp4",
+      "adts_bytes": 1913808,
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "packet_timing_sha256": "311dcd88cb6e1e04ea7ab56df78263fd55d720b08edab38796af8a3eabb1c2d2"
+    },
+    {
+      "name": "master",
+      "path": "renders/mind2act-world-promo-1080p-20261011-115335.mp4",
+      "adts_bytes": 1913808,
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "packet_timing_sha256": "311dcd88cb6e1e04ea7ab56df78263fd55d720b08edab38796af8a3eabb1c2d2"
+    },
+    {
+      "name": "web",
+      "path": "renders/mind2act-world-promo-web-20261011-115335.mp4",
+      "adts_bytes": 1913808,
+      "adts_sha256": "e8b64f02dde40f5e512b51273685950326721446b4e61efc9ff177df6be98937",
+      "packet_timing_sha256": "311dcd88cb6e1e04ea7ab56df78263fd55d720b08edab38796af8a3eabb1c2d2"
+    }
+  ],
+  "method": "AAC packetstream and packet timing hashes match previous verified export exactly.",
+  "prior_audit": ".production/cp02-fullview-20261011-112139/audio-preservation.json",
+  "manual_listening": false
+}

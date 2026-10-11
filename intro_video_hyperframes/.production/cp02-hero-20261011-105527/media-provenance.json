@@ -1,0 +1,162 @@
+{
+  "created_at": "2026-10-11T10:58:12.215526+08:00",
+  "revision": "cp02-hero-20261011-105527",
+  "purpose": "PreservecompletecakeandlidinCP02heroandcomparisongrid",
+  "display_guidance": "Useobject-fit:containwithcenteredpadding;donotcover-croporstretchthese16:9assets. Stillsalignedcropandscaleforeasy/medium/hard. Coverwiderframingintentionaltoretainraisedlid.",
+  "assets": [
+    {
+      "task": "CP02",
+      "level": "easy",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "ff9b7288f8dc5d1dc7f58b245956e4fd410ee1c0cee49c1858399e720b4d1b2a",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "source_phase": "initial stationary memorization sample before any execution",
+      "visible_pieces": 4,
+      "crop_xywh": [
+        128,
+        66,
+        448,
+        252
+      ],
+      "native_crop_aspect_ratio": "16:9",
+      "output": "assets/generated/cp02-hero-20261011-105527/cp02-easy.png",
+      "output_dimensions": [
+        896,
+        504
+      ],
+      "output_sha256": "58b89299d2597e2dc6070f24b131ca7cb1fced7e97786407b3587f7a3a4e0732",
+      "processing": "Crop and2xLanczosresize only; no color change, retouch, generative edits, completion label or altered geometry.",
+      "framing_note": "Entirecakeandplinth retained; nativey318 lowercropedge gives~20pxbelowbase; Hardrestinglidrightedge<=555retainedwith21pxrightmargin."
+    },
+    {
+      "task": "CP02",
+      "level": "medium",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "5b4e46444d8439ee5f76c8cd54fa7d000303ee7a360c9ce8c70d3bbbf17b25d8",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "source_phase": "initial stationary memorization sample before any execution",
+      "visible_pieces": 6,
+      "crop_xywh": [
+        128,
+        66,
+        448,
+        252
+      ],
+      "native_crop_aspect_ratio": "16:9",
+      "output": "assets/generated/cp02-hero-20261011-105527/cp02-medium.png",
+      "output_dimensions": [
+        896,
+        504
+      ],
+      "output_sha256": "cf3a6309e08e70be5e5193ea5fcf73184ecfadf96d5fec6d35bae306afb02827",
+      "processing": "Crop and2xLanczosresize only; no color change, retouch, generative edits, completion label or altered geometry.",
+      "framing_note": "Entirecakeandplinth retained; nativey318 lowercropedge gives~20pxbelowbase; Hardrestinglidrightedge<=555retainedwith21pxrightmargin."
+    },
+    {
+      "task": "CP02",
+      "level": "hard",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "source_start": 0.7,
+      "source_end": 0.7,
+      "source_phase": "initial stationary memorization sample before any execution",
+      "visible_pieces": 6,
+      "crop_xywh": [
+        128,
+        66,
+        448,
+        252
+      ],
+      "native_crop_aspect_ratio": "16:9",
+      "output": "assets/generated/cp02-hero-20261011-105527/cp02-hard.png",
+      "output_dimensions": [
+        896,
+        504
+      ],
+      "output_sha256": "9367f101114bc13da1609409d374d003a7f292586dc81cd7226f5c219ed59487",
+      "processing": "Crop and2xLanczosresize only; no color change, retouch, generative edits, completion label or altered geometry.",
+      "framing_note": "Entirecakeandplinth retained; nativey318 lowercropedge gives~20pxbelowbase; Hardrestinglidrightedge<=555retainedwith21pxrightmargin."
+    },
+    {
+      "task": "CP02",
+      "level": "hard",
+      "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+      "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+      "source_start": 95.7,
+      "source_end": 97.9,
+      "duration": 2.2,
+      "speed": 1,
+      "source_phase": "Actualfinalcoverloweringandplacement",
+      "crop_xywh": [
+        32,
+        0,
+        576,
+        324
+      ],
+      "native_crop_aspect_ratio": "16:9",
+      "output": "assets/generated/cp02-hero-20261011-105527/cp02-hard-cover.mp4",
+      "output_dimensions": [
+        1152,
+        648
+      ],
+      "output_sha256": "fe4b90ffc5a2955697937dd2a2c20fd94ee2ce5b23b661b16350be9b9ae133be",
+      "landing_source_time_approx": 96.7,
+      "landing_clip_time_approx": 1.0,
+      "processing": "Contiguous original1x footage, crop/2xLanczosresize only; no audio, no colorchange, no artificial hold.",
+      "framing_note": "Widerthanmemorizationstillto retain fullraisedlid, visiblegrippercontact, fullcakeandplinth throughlanding; wriststrip beginsy334andisexcluded."
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "checks": [
+      {
+        "output": "assets/generated/cp02-hero-20261011-105527/cp02-easy.png",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 504,
+          "pix_fmt": "rgb24",
+          "r_frame_rate": "25/1"
+        }
+      },
+      {
+        "output": "assets/generated/cp02-hero-20261011-105527/cp02-medium.png",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 504,
+          "pix_fmt": "rgb24",
+          "r_frame_rate": "25/1"
+        }
+      },
+      {
+        "output": "assets/generated/cp02-hero-20261011-105527/cp02-hard.png",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "png",
+          "width": 896,
+          "height": 504,
+          "pix_fmt": "rgb24",
+          "r_frame_rate": "25/1"
+        }
+      },
+      {
+        "output": "assets/generated/cp02-hero-20261011-105527/cp02-hard-cover.mp4",
+        "source_unchanged": true,
+        "probe": {
+          "codec_name": "h264",
+          "width": 1152,
+          "height": 648,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1",
+          "duration": "2.200000",
+          "nb_frames": "66"
+        }
+      }
+    ]
+  }
+}
