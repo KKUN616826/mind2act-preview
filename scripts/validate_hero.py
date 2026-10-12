@@ -48,7 +48,7 @@ def validate_hero(content=None):
     with (ROOT / data['media']['path']).open('rb') as video:
         assert hashlib.file_digest(video, 'sha256').hexdigest() == data['media']['sha256']
     presentation, detail = data['presentation'], data['actDetail']
-    assert data['version'] == 2
+    assert data['version'] == 3
     assert presentation['fps'] == 30 and presentation['playbackRate'] == 0.75
     assert abs(presentation['duration'] - 569 / 30) < 1e-6
     assert presentation['path'] in content
@@ -83,6 +83,17 @@ def validate_hero(content=None):
     assert 0 <= cx < cx + cw <= 1920 and 0 <= cy < cy + ch <= 1080
     for actual, expected in zip(detail['target'], [ox + (events[0]['target'][0] - cx) * ow / cw, oy + (events[0]['target'][1] - cy) * oh / ch]):
         assert abs(actual - expected) < 0.001
+    assert detail['crop'] == detail['outputRectangle'] == [0, 0, 1920, 1080]
+    assert detail['target'] == events[0]['target']
+    hx, hy, hw, hh = detail['highlightRegion']
+    assert 0 <= hx < hx + hw <= 1920 and 0 <= hy < hy + hh <= 1080
+    assert hx < detail['target'][0] < hx + hw and hy < detail['target'][1] < hy + hh
+    transition = presentation['transition']
+    assert transition['boundary'] == segments[2]['start']
+    assert transition['fadeOut'] == transition['fadeIn'] == 0.2
+    assert segments[1]['start'] + detail['release'] < transition['boundary'] - transition['fadeOut']
+    assert events[0]['trigger'] - 8 > transition['fadeIn']
+    assert 'Single-action focus · Right arm' in content
     assert 'GT target · controller reference' in content
     print('PASS: three-scene edit, isolated contact/release, controller targets and post-step measurements')
     assert 'Simulation demonstration' in content and 'Illustrative memory overlay' in content

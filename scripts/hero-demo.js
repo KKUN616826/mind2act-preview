@@ -53,6 +53,14 @@
   let ready = false, failed = false, inView = true, wantsPlay = !reduced.matches;
   let frameId = null, lastSignature = '', geometry = null, lastTime = 0;
   const detail = data.actDetail;
+  const spotlight = find('.demo-act-spotlight');
+  const [regionX, regionY, regionWidth, regionHeight] = detail.highlightRegion;
+  const hole = find('.demo-act-focus-hole');
+  for (const [name, value] of Object.entries({ x: regionX, y: regionY, width: regionWidth, height: regionHeight })) hole.setAttribute(name, value);
+  const right = regionX + regionWidth - 3, bottom = regionY + regionHeight, left = regionX + 3, corner = 32;
+  find('.demo-act-focus-corners').setAttribute('d',
+    `M${left},${regionY + corner} V${regionY} H${left + corner} M${right - corner},${regionY} H${right} V${regionY + corner} ` +
+    `M${left},${bottom - corner} V${bottom} H${left + corner} M${right - corner},${bottom} H${right} V${bottom - corner}`);
   const actX = t => 40 + Math.max(0, Math.min(4.5, t)) / 4.5 * 426;
   const actY = z => 120 - (z - data.motion.range[0]) / (data.motion.range[1] - data.motion.range[0]) * 104;
   const actGrid = find('.demo-act-grid');
@@ -99,6 +107,7 @@
       sceneX: box.left - root.left, sceneY: box.top - root.top };
     connection.setAttribute('viewBox', '0 0 ' + root.width + ' ' + root.height);
     focus.style.setProperty('--focus-size', Math.max(18, 70 * scale) + 'px');
+    Object.assign(spotlight.style, { left: geometry.x + 'px', top: geometry.y + 'px', width: sourceWidth * scale + 'px', height: sourceHeight * scale + 'px' });
   }
 
   function connect(state) {
@@ -217,6 +226,8 @@
   function sync(time = video.currentTime, force = false) {
     if (failed) return;
     const state = presentationAt(data, time);
+    // A single media clock governs the dip, including paused seeks and loops.
+    hero.style.setProperty('--scene-opacity', reduced.matches ? 1 : state.sceneOpacity);
     const signature = [state.phase, state.captured, state.completed, state.released].join(':');
     if (signature !== lastSignature || force) {
       lastSignature = signature;
@@ -227,11 +238,12 @@
       find('.demo-workspace').hidden = state.phase === 'focus';
       find('.demo-act-workspace').hidden = state.phase !== 'focus';
       find('.demo-act-target').hidden = state.phase !== 'focus';
+      spotlight.toggleAttribute('hidden', state.phase !== 'focus');
       find('.demo-act-caption').hidden = state.phase !== 'focus';
       sceneButtons.forEach(button => button.setAttribute('aria-current', String(button.dataset.demoPhase === state.phase)));
       const active = data.events[state.active];
       find('.demo-stage').firstChild.textContent = state.acting ? 'ACT ' : 'MIND ';
-      find('.demo-title').textContent = state.phase === 'focus' ? 'Act · Precise contact' : state.complete ? 'Sequence complete.' : state.acting ? 'Guided by intent. Updated by outcomes.' : 'Remember the order.';
+      find('.demo-title').textContent = state.phase === 'focus' ? 'Follow the trajectory. Make precise contact.' : state.complete ? 'Sequence complete.' : state.acting ? 'Guided by intent. Updated by outcomes.' : 'Remember the order.';
       find('.demo-count').textContent = (state.acting ? state.completed : state.captured) + ' / ' + data.events.length;
       find('.demo-memory-footer').hidden = !state.acting;
       find('.demo-step').textContent = state.complete ? '12 / 12 confirmed' : state.acting ? 'Step ' + (state.active + 1) + ' / 12 · ' + (state.registered ? 'Waiting for release' : 'Target ' + noteName(active)) : 'Watch · Remember';
@@ -309,6 +321,7 @@
   video.addEventListener('ratechange', () => sync());
   video.addEventListener('error', () => {
     failed = true; wantsPlay = false; cancelFrame();
+    hero.style.setProperty('--scene-opacity', 1);
     play.disabled = true;
     sceneButtons.forEach(button => button.disabled = true);
     find('.demo-title').textContent = 'Demo unavailable.';

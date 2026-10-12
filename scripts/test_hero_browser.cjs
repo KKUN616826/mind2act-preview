@@ -35,7 +35,7 @@ async function open(browser, width, height, motion = 'reduce', fallback = false)
     };
   });
   // Other task videos are unrelated to this player and expensive to decode together.
-  await page.route('**/*.mp4', route => route.request().url().includes('CP05_hero_three_scenes') ? route.continue() : route.abort());
+  await page.route('**/*.mp4', route => route.request().url().includes(data.presentation.path.split('/').at(-1)) ? route.continue() : route.abort());
   if (fallback) await page.addInitScript(() => {
     delete HTMLVideoElement.prototype.requestVideoFrameCallback;
     delete HTMLVideoElement.prototype.cancelVideoFrameCallback;
@@ -48,14 +48,16 @@ async function open(browser, width, height, motion = 'reduce', fallback = false)
   return page;
 }
 
-async function seek(page, time) {
+async function seekPresentation(page, time) {
   await page.evaluate(time => {
     const video = document.querySelector('.demo-video');
     video.pause();
     video.currentTime = time;
-  }, displayedTime(time));
+  }, time);
   await page.waitForFunction(() => !document.querySelector('.demo-video').seeking);
 }
+
+async function seek(page, time) { return seekPresentation(page, displayedTime(time)); }
 
 async function inspect(page, time) {
   const actual = await page.evaluate(() => ({
@@ -164,6 +166,14 @@ async function inspect(page, time) {
         });
         assert.equal(contact.visible, true, 'Contact outline must stay in the video');
         assert.equal(contact.clear, true, 'Title must not cover the contact outline');
+        assert.equal(await page.locator('.demo-act-spotlight').isVisible(), true);
+        const mappingError = await page.evaluate(target => {
+          const svg = document.querySelector('.demo-act-spotlight');
+          const point = new DOMPoint(...target).matrixTransform(svg.getScreenCTM());
+          const outline = document.querySelector('.demo-act-target').getBoundingClientRect();
+          return Math.hypot(point.x - (outline.left + outline.width / 2), point.y - (outline.top + outline.height / 2));
+        }, data.events[0].target);
+        assert.ok(mappingError < 1, 'Highlight must map directly from the original frame');
         assert.equal(await page.locator('.demo-card[data-completed="true"]').count(), 0);
         assert.equal(await page.locator('.demo-act-event').isVisible(), local >= data.actDetail.trigger);
         const row = data.actDetail.samples[Math.round(local * data.actDetail.sampleHz)];
@@ -172,9 +182,19 @@ async function inspect(page, time) {
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
       }
       if (process.env.HERO_SCREENSHOTS) await page.screenshot({ path: path.join(process.env.HERO_SCREENSHOTS, name + '-focus.png') });
+      const geometry = () => page.locator('.demo-scene').evaluate(scene => {
+        const r = scene.getBoundingClientRect(), root = scene.closest('.demo-hero').getBoundingClientRect(), video = getComputedStyle(scene.querySelector('video'));
+        return [r.x - root.x, r.y - root.y, r.width, r.height, video.objectFit, video.objectPosition];
+      });
+      const actGeometry = await geometry();
+      if (width <= 760) assert.ok(Math.abs(actGeometry[2] / actGeometry[3] - 16 / 9) < 0.001);
       await page.locator('[data-demo-phase="reproduce"]').click();
       await page.waitForFunction(() => !document.querySelector('.demo-video').seeking);
       await inspect(page, 8);
+      assert.deepEqual(await geometry(), actGeometry, 'Act and Mind2Act must use identical camera geometry');
+      assert.equal(await page.locator('.demo-act-spotlight').isVisible(), false);
+      await seekPresentation(page, coupling.start + 0.1);
+      assert.equal(await page.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), '1', 'Reduced motion removes the dip');
       assert.deepEqual(page.errors, []);
       await page.close();
       console.log('PASS: responsive layout, seeks and target mapping:', name);
@@ -241,6 +261,35 @@ async function inspect(page, time) {
     await fallback.waitForTimeout(150);
     assert.deepEqual(await pulsePosition(), frozen, 'Paused media freezes the feedback pulse');
     await seek(fallback, 16.5); await inspect(fallback, 16.5);
+    for (const offset of [-0.3, -0.2, -0.1, -0.01, 0, 0.01, 0.1, 0.2, 0.3, -0.1]) {
+      await seekPresentation(fallback, coupling.start + offset);
+      const actual = await fallback.evaluate(() => ({
+        time: document.querySelector('.demo-video').currentTime,
+        opacity: Number(getComputedStyle(document.querySelector('.demo-scene')).opacity),
+        information: Number(getComputedStyle(document.querySelector('.demo-copy')).opacity),
+        brand: getComputedStyle(document.querySelector('.demo-moon-panel')).opacity,
+        controls: getComputedStyle(document.querySelector('.demo-controls')).opacity,
+        completed: document.querySelectorAll('.demo-card[data-completed="true"]').length,
+      }));
+      assert.ok(Math.abs(actual.opacity - presentationAt(data, actual.time).sceneOpacity) < 0.00001);
+      assert.equal(actual.information, actual.opacity);
+      assert.equal(actual.brand, '1'); assert.equal(actual.controls, '1'); assert.equal(actual.completed, 0);
+    }
+    const pausedDip = await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity);
+    await fallback.waitForTimeout(160);
+    assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), pausedDip);
+    await fallback.getByRole('button', { name: 'Play demo', exact: true }).click();
+    await fallback.waitForFunction(end => document.querySelector('.demo-video').currentTime > end, coupling.start + 0.3);
+    await fallback.getByRole('button', { name: 'Pause demo', exact: true }).click();
+    assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), '1');
+    await seekPresentation(fallback, coupling.start - 0.1);
+    await fallback.emulateMedia({reducedMotion: 'reduce'});
+    await fallback.waitForFunction(() => getComputedStyle(document.querySelector('.demo-scene')).opacity === '1');
+    await fallback.emulateMedia({reducedMotion: 'no-preference'});
+    await fallback.waitForFunction(() => Number(getComputedStyle(document.querySelector('.demo-scene')).opacity) < 0.6);
+    await seekPresentation(fallback, 0);
+    assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), '1');
+    console.log('PASS: media-timed dip, paused and reverse seeks, resume, loop reset and live reduced-motion changes');
     assert.deepEqual(fallback.errors, []); await fallback.close();
     console.log('PASS: muted autoplay and requestAnimationFrame fallback');
   } finally {

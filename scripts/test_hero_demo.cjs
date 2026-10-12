@@ -90,3 +90,21 @@ test('seeks and loops reconstruct scene state, with microsecond edit-boundary pr
   assert.ok(Math.abs(data.presentation.duration / data.presentation.playbackRate - 25.289) < 0.001);
   assert.equal(focus.end - focus.start, 4.5);
 });
+
+test('the short dip hides the source-time jump without masking a contact event', () => {
+  const boundary = coupling.start;
+  for (const [offset, opacity] of [[-0.3, 1], [-0.2, 1], [-0.1, 0.5], [0, 0], [0.1, 0.5], [0.2, 1], [0.3, 1]]) {
+    const state = presentationAt(data, boundary + offset);
+    assert.ok(Math.abs(state.sceneOpacity - opacity) < 1e-9);
+    assert.equal(state.completed, 0);
+    if (offset < 0) assert.equal(state.focusReleased, true);
+  }
+  for (const time of [focus.start + data.actDetail.trigger, focus.start + data.actDetail.release,
+    ...data.events.flatMap(event => [coupling.start + event.trigger - 8, coupling.start + event.release - 8])]) {
+    assert.equal(presentationAt(data, time).sceneOpacity, 1, 'Contact and release stay fully visible');
+  }
+  const paused = presentationAt(data, boundary - 0.1);
+  for (const time of [boundary, boundary + 0.1, 18, 0]) presentationAt(data, time);
+  assert.deepEqual(presentationAt(data, boundary - 0.1), paused);
+  assert.equal(presentationAt(data, 0).sceneOpacity, 1);
+});

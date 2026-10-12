@@ -14,15 +14,14 @@ def export_presentation(run, output, data, trajectory, clock, digest):
         dict(phase='focus', start=97 / fps, end=232 / fps, sourceStart=62.5, sourceEnd=67.0, speed=1),
         dict(phase='reproduce', start=232 / fps, end=569 / fps, sourceStart=60.5, sourceEnd=105.433333, speed=4, legacyStart=8),
     ]
-    crop = [1000, 60, 920, 780]
-    path = 'media/videos/CP05_hero_three_scenes.mp4'
+    crop = [0, 0, 1920, 1080]
+    path = 'media/videos/CP05_hero_fullframe_act.mp4'
     video = output / path
     video.parent.mkdir(parents=True, exist_ok=True)
     filters = (
         '[0:v]split=3[m][a][c];'
         '[m]trim=start=42.4:end=52.1,setpts=(PTS-STARTPTS)/3,fps=30,trim=end_frame=97,setsar=1[mind];'
-        '[a]trim=start=62.5:end=67,setpts=PTS-STARTPTS,crop=920:780:1000:60,'
-        'scale=1274:1080,pad=1920:1080:323:0:color=0x101c30,fps=30,trim=end_frame=135,setsar=1[act];'
+        '[a]trim=start=62.5:end=67,setpts=PTS-STARTPTS,fps=30,trim=end_frame=135,setsar=1[act];'
         '[c]trim=start=60.5:end=105.433333,setpts=(PTS-STARTPTS)/4,fps=30,trim=end_frame=337,setsar=1[coupling];'
         '[mind][act][coupling]concat=n=3:v=1:a=0[out]'
     )
@@ -33,7 +32,8 @@ def export_presentation(run, output, data, trajectory, clock, digest):
     probe = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', str(video)]))
     assert int(probe['streams'][0]['nb_frames']) == 569
     data['presentation'] = dict(path=path, sha256=digest(video), duration=569 / fps, fps=fps,
-                                width=1920, height=1080, playbackRate=0.75, segments=segments)
+                                width=1920, height=1080, playbackRate=0.75, segments=segments,
+                                transition=dict(boundary=segments[2]['start'], fadeOut=0.2, fadeIn=0.2))
 
     steps = clock['source_step']
     times = clock['world_time'] - data['clock']['worldTimeOrigin']
@@ -60,9 +60,8 @@ def export_presentation(run, output, data, trajectory, clock, digest):
     hit = data['events'][0]
     data['actDetail'] = dict(
         arm='Right', keyId=hit['keyId'], label=hit['label'], sourceStart=62.5, sourceEnd=67.0,
-        crop=crop, outputRectangle=[323, 0, 1274, 1080],
-        target=[round(323 + (hit['target'][0] - crop[0]) * 1274 / crop[2], 3),
-                round((hit['target'][1] - crop[1]) * 1080 / crop[3], 3)],
+        crop=crop, outputRectangle=crop,
+        target=hit['target'], highlightRegion=[1000, 60, 920, 780],
         trigger=round(hit['sourceTrigger'] - 62.5, 6), release=round(hit['sourceRelease'] - 62.5, 6),
         reference='GT target · controller reference', actual='Recorded post-step simulation state',
         alignment='Target issued before tick k; actual joints sampled after tick k. Tool height interpolated from recorded 30 Hz poses; no time shift.',
@@ -71,4 +70,4 @@ def export_presentation(run, output, data, trajectory, clock, digest):
         samples=samples,
     )
     data['provenance']['files']['feedback82.json'] = digest(run / 'replay/feedback82.json')
-    data['version'] = 2
+    data['version'] = 3

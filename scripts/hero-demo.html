@@ -3,6 +3,17 @@
     <video class="demo-video" id="hero-demo-video" muted loop playsinline preload="auto" poster="media/posters/CP05_hero_hard_1080p.jpg" aria-label="Robot observes and reproduces a keyboard sequence">
       <source src="__HERO_VIDEO__" type="video/mp4">
     </video>
+    <svg class="demo-act-spotlight" viewBox="0 0 1920 1080" aria-hidden="true" hidden>
+      <defs>
+        <filter id="act-focus-soften" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="16"/></filter>
+        <mask id="act-focus-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080">
+          <rect width="1920" height="1080" fill="white"/>
+          <rect class="demo-act-focus-hole" rx="24" fill="black" filter="url(#act-focus-soften)"/>
+        </mask>
+      </defs>
+      <rect width="1920" height="1080" fill="#101c30" opacity=".3" mask="url(#act-focus-mask)"/>
+      <path class="demo-act-focus-corners"/>
+    </svg>
     <div class="demo-shade" aria-hidden="true"></div>
     <div class="demo-key-focus" data-active="false" aria-hidden="true"><span class="demo-key-halo"></span><span class="demo-key-ring"></span><span class="demo-key-core"></span></div>
     <div class="demo-act-target" hidden aria-hidden="true"><span>Target K26</span><i></i></div>
@@ -31,7 +42,7 @@
   <section class="demo-copy">
     <p class="demo-stage" hidden>MIND <span class="demo-speed">2.25× source speed</span></p>
     <h1 class="demo-title">Remember the order.</h1>
-    <p class="demo-act-caption" hidden>Single-action close-up · Right arm</p>
+    <p class="demo-act-caption" hidden>Single-action focus · Right arm</p>
   </section>
   <div class="demo-workspace">
     <section class="demo-memory" aria-label="Illustrative task memory">
