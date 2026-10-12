@@ -81,7 +81,7 @@ node --test scripts/test_hero_demo.cjs
 
 Act 聚焦的导出在 `scripts/export_hero_presentation.py` 中维护，主导出器自动调用。Act 段使用 1920×1080 原始完整画面；`actDetail.crop` 与 `outputRectangle` 都为 `[0, 0, 1920, 1080]`，`target` 直接使用原图坐标。`highlightRegion: [1000, 60, 920, 780]` 用于前端 SVG 聚焦层：区域内保持原亮度，外围叠加约 30% 深蓝遮罩，边缘柔化并加短角标。该区域包含右臂腕部、夹爪、棒尖和 K26。桌面三段采用相同视频缩放，手机始终保持完整 16:9 画面。独立聚焦中的确认和释放不消耗后续 12 键序列。
 
-`presentation.transition` 记录 Act → Mind2Act 边界及前后各 0.2 秒的淡出／淡入；`presentationAt` 返回由媒体时间计算的 `sceneOpacity`（smoothstep），用于视频、高亮、标题及阶段图表，品牌、月亮和控件保持可见。转场约 0.53 秒实际播放时间，不增加片段、不改变时钟映射，位于 Act 释放之后、闭环首次触键之前。暂停、回退、跳转及循环直接重算透明度；减少动态效果时禁用淡变，保留静态聚焦层。
+`presentation.transition` 记录 Mind → Act 和 Act → Mind2Act 两个边界及前后各 0.2 秒的淡出／淡入；`presentationAt` 返回由媒体时间计算的 `sceneOpacity`（smoothstep），用于视频、高亮、标题及阶段图表，品牌、月亮和控件保持可见。转场约 0.53 秒实际播放时间，不增加片段、不改变时钟映射，两个转场分别位于独立 Act 触键之前，以及 Act 释放之后、闭环首次触键之前。暂停、回退、跳转及循环直接重算透明度；减少动态效果时禁用淡变，保留静态聚焦层。
 
 Act 的 GT 指真实下发的控制器参考目标，不是通过完整验收的专家轨迹。目标棒尖高度取 `feedback82.json` 的 `target`；实测高度取 `trajectory.json` 的 30 Hz 工具位置并线性插值到 120 Hz；六个关节目标／实测值分别取 `control.npz` 同一控制步的 `action` 与 `joint_position_after`，弧度转为度。目标在控制步前下发，关节实测在该步后采样；不使用 `feedback82.measured_tip` 的步前观测替代步后观测，也不平移曲线制造贴合。完整参考曲线预先显示，实测曲线、关节读数和事件点由播放器时间重算。
 

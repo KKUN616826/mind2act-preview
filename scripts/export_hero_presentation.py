@@ -33,7 +33,7 @@ def export_presentation(run, output, data, trajectory, clock, digest):
     assert int(probe['streams'][0]['nb_frames']) == 569
     data['presentation'] = dict(path=path, sha256=digest(video), duration=569 / fps, fps=fps,
                                 width=1920, height=1080, playbackRate=0.75, segments=segments,
-                                transition=dict(boundary=segments[2]['start'], fadeOut=0.2, fadeIn=0.2))
+                                transition=dict(boundaries=[segment['start'] for segment in segments[1:]], fadeOut=0.2, fadeIn=0.2))
 
     steps = clock['source_step']
     times = clock['world_time'] - data['clock']['worldTimeOrigin']

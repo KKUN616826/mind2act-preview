@@ -89,9 +89,10 @@ def validate_hero(content=None):
     assert 0 <= hx < hx + hw <= 1920 and 0 <= hy < hy + hh <= 1080
     assert hx < detail['target'][0] < hx + hw and hy < detail['target'][1] < hy + hh
     transition = presentation['transition']
-    assert transition['boundary'] == segments[2]['start']
+    assert transition['boundaries'] == [segment['start'] for segment in segments[1:]]
     assert transition['fadeOut'] == transition['fadeIn'] == 0.2
-    assert segments[1]['start'] + detail['release'] < transition['boundary'] - transition['fadeOut']
+    assert segments[1]['start'] + detail['release'] < transition['boundaries'][1] - transition['fadeOut']
+    assert detail['trigger'] > transition['fadeIn']
     assert events[0]['trigger'] - 8 > transition['fadeIn']
     assert 'Single-action focus · Right arm' in content
     assert 'GT target · controller reference' in content

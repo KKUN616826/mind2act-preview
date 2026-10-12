@@ -108,3 +108,13 @@ test('the short dip hides the source-time jump without masking a contact event',
   assert.deepEqual(presentationAt(data, boundary - 0.1), paused);
   assert.equal(presentationAt(data, 0).sceneOpacity, 1);
 });
+
+test('Mind to Act uses the same dip and preserves independent-action progress', () => {
+  for (const [offset, opacity] of [[-0.2, 1], [-0.1, 0.5], [0, 0], [0.1, 0.5], [0.2, 1]]) {
+    const state = presentationAt(data, focus.start + offset);
+    assert.ok(Math.abs(state.sceneOpacity - opacity) < 1e-9);
+    assert.equal(state.phase, offset < 0 ? 'observe' : 'focus');
+    assert.equal(state.completed, 0);
+    assert.equal(state.focusConfirmed, false);
+  }
+});

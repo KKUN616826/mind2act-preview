@@ -24,9 +24,11 @@
     const legacy = segment.phase === 'focus' ? data.media.actStart - 0.000001 : segment.legacyStart + elapsed;
     const state = stateAt(data, legacy);
     const transition = data.presentation.transition;
-    const distance = t - transition.boundary;
-    const progress = Math.min(1, Math.abs(distance) / (distance < 0 ? transition.fadeOut : transition.fadeIn));
-    const sceneOpacity = progress * progress * (3 - 2 * progress);
+    const sceneOpacity = Math.min(...transition.boundaries.map(boundary => {
+      const distance = t - boundary;
+      const progress = Math.min(1, Math.abs(distance) / (distance < 0 ? transition.fadeOut : transition.fadeIn));
+      return progress * progress * (3 - 2 * progress);
+    }));
     return { ...state, phase: segment.phase, presentationTime: t, localTime: elapsed,
       sceneOpacity,
       sourceTime: segment.sourceStart + elapsed * segment.speed,

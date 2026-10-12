@@ -212,7 +212,7 @@
     const progress = age * age * (3 - 2 * age);
     if (ghost.getAttribute('src') !== event.snapshot) ghost.src = event.snapshot;
     ['left', 'top', 'width', 'height'].forEach((property, i) => ghost.style[property] = (from[i] + (to[i] - from[i]) * progress) + 'px');
-    ghost.style.opacity = String(Math.min(1, (1 - age) * 8));
+    ghost.style.opacity = String(Math.min(1, (1 - age) * 8) * state.sceneOpacity);
   }
 
   function updateChart(state) {

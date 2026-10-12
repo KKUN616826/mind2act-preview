@@ -261,34 +261,36 @@ async function inspect(page, time) {
     await fallback.waitForTimeout(150);
     assert.deepEqual(await pulsePosition(), frozen, 'Paused media freezes the feedback pulse');
     await seek(fallback, 16.5); await inspect(fallback, 16.5);
-    for (const offset of [-0.3, -0.2, -0.1, -0.01, 0, 0.01, 0.1, 0.2, 0.3, -0.1]) {
-      await seekPresentation(fallback, coupling.start + offset);
-      const actual = await fallback.evaluate(() => ({
-        time: document.querySelector('.demo-video').currentTime,
-        opacity: Number(getComputedStyle(document.querySelector('.demo-scene')).opacity),
-        information: Number(getComputedStyle(document.querySelector('.demo-copy')).opacity),
-        brand: getComputedStyle(document.querySelector('.demo-moon-panel')).opacity,
-        controls: getComputedStyle(document.querySelector('.demo-controls')).opacity,
-        completed: document.querySelectorAll('.demo-card[data-completed="true"]').length,
-      }));
-      assert.ok(Math.abs(actual.opacity - presentationAt(data, actual.time).sceneOpacity) < 0.00001);
-      assert.equal(actual.information, actual.opacity);
-      assert.equal(actual.brand, '1'); assert.equal(actual.controls, '1'); assert.equal(actual.completed, 0);
+    for (const boundary of data.presentation.transition.boundaries) {
+      for (const offset of [-0.3, -0.2, -0.1, -0.01, 0, 0.01, 0.1, 0.2, 0.3, -0.1]) {
+        await seekPresentation(fallback, boundary + offset);
+        const actual = await fallback.evaluate(() => ({
+          time: document.querySelector('.demo-video').currentTime,
+          opacity: Number(getComputedStyle(document.querySelector('.demo-scene')).opacity),
+          information: Number(getComputedStyle(document.querySelector('.demo-copy')).opacity),
+          brand: getComputedStyle(document.querySelector('.demo-moon-panel')).opacity,
+          controls: getComputedStyle(document.querySelector('.demo-controls')).opacity,
+          completed: document.querySelectorAll('.demo-card[data-completed="true"]').length,
+        }));
+        assert.ok(Math.abs(actual.opacity - presentationAt(data, actual.time).sceneOpacity) < 0.00001);
+        assert.equal(actual.information, actual.opacity);
+        assert.equal(actual.brand, '1'); assert.equal(actual.controls, '1'); assert.equal(actual.completed, 0);
+      }
+      const pausedDip = await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity);
+      await fallback.waitForTimeout(160);
+      assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), pausedDip);
+      await fallback.getByRole('button', { name: 'Play demo', exact: true }).click();
+      await fallback.waitForFunction(end => document.querySelector('.demo-video').currentTime > end, boundary + 0.3);
+      await fallback.getByRole('button', { name: 'Pause demo', exact: true }).click();
+      assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), '1');
+      await seekPresentation(fallback, boundary - 0.1);
+      await fallback.emulateMedia({reducedMotion: 'reduce'});
+      await fallback.waitForFunction(() => getComputedStyle(document.querySelector('.demo-scene')).opacity === '1');
+      await fallback.emulateMedia({reducedMotion: 'no-preference'});
+      await fallback.waitForFunction(() => Number(getComputedStyle(document.querySelector('.demo-scene')).opacity) < 0.6);
+      await seekPresentation(fallback, 0);
+      assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), '1');
     }
-    const pausedDip = await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity);
-    await fallback.waitForTimeout(160);
-    assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), pausedDip);
-    await fallback.getByRole('button', { name: 'Play demo', exact: true }).click();
-    await fallback.waitForFunction(end => document.querySelector('.demo-video').currentTime > end, coupling.start + 0.3);
-    await fallback.getByRole('button', { name: 'Pause demo', exact: true }).click();
-    assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), '1');
-    await seekPresentation(fallback, coupling.start - 0.1);
-    await fallback.emulateMedia({reducedMotion: 'reduce'});
-    await fallback.waitForFunction(() => getComputedStyle(document.querySelector('.demo-scene')).opacity === '1');
-    await fallback.emulateMedia({reducedMotion: 'no-preference'});
-    await fallback.waitForFunction(() => Number(getComputedStyle(document.querySelector('.demo-scene')).opacity) < 0.6);
-    await seekPresentation(fallback, 0);
-    assert.equal(await fallback.locator('.demo-scene').evaluate(e => getComputedStyle(e).opacity), '1');
     console.log('PASS: media-timed dip, paused and reverse seeks, resume, loop reset and live reduced-motion changes');
     assert.deepEqual(fallback.errors, []); await fallback.close();
     console.log('PASS: muted autoplay and requestAnimationFrame fallback');
