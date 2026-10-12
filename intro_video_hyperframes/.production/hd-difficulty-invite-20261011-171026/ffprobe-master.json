@@ -34,7 +34,7 @@
       "start_time": "0.000000",
       "duration_ts": 1152000,
       "duration": "75.000000",
-      "bit_rate": "9443708",
+      "bit_rate": "9362354",
       "bits_per_raw_sample": "8",
       "nb_frames": "2250",
       "extradata_size": 53,
@@ -125,7 +125,7 @@
     }
   ],
   "format": {
-    "filename": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
+    "filename": "renders/mind2act-world-promo-1080p-20261012-091339.mp4",
     "nb_streams": 2,
     "nb_programs": 0,
     "nb_stream_groups": 0,
@@ -133,8 +133,8 @@
     "format_long_name": "QuickTime / MOV",
     "start_time": "0.000000",
     "duration": "75.000000",
-    "size": "90490377",
-    "bit_rate": "9652306",
+    "size": "89727688",
+    "bit_rate": "9570953",
     "probe_score": 100,
     "tags": {
       "minor_version": "512",

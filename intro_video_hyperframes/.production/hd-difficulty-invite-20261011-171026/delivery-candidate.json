@@ -1,17 +1,17 @@
 {
-  "id": "mind2act-world-promo-20261011-174810",
-  "created_at": "2026-10-11T17:48:10+08:00",
-  "master": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
-  "web": "renders/mind2act-world-promo-web-20261011-174810.mp4",
-  "poster": "renders/mind2act-world-poster-20261011-174810.jpg",
+  "id": "mind2act-world-promo-20261012-091339",
+  "created_at": "2026-10-12T09:13:39+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261012-091339.mp4",
+  "web": "renders/mind2act-world-promo-web-20261012-091339.mp4",
+  "poster": "renders/mind2act-world-poster-20261012-091339.jpg",
   "authored_duration": 74.9740740741,
   "framework": "HyperFrames 0.8.143",
   "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
   "files": {
     "master": {
-      "path": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
-      "bytes": 90490377,
-      "sha256": "0c1be13eac538d23ab840639086cb45f706b3f5ae3a1f6c4ba0f3b00adbb5419",
+      "path": "renders/mind2act-world-promo-1080p-20261012-091339.mp4",
+      "bytes": 89727688,
+      "sha256": "ecc92524942afa7e145191c4f96215ac8b9482ac4d9210894c5d7e9cd488706b",
       "duration": 75,
       "video_codec": "h264",
       "width": 1920,
@@ -23,9 +23,9 @@
       "audio_channels": 2
     },
     "web": {
-      "path": "renders/mind2act-world-promo-web-20261011-174810.mp4",
-      "bytes": 12175084,
-      "sha256": "73b5caea8aa1fe9a61d2ceb747bb2d14585d3f2a3ea263a689e715dfee01d7f0",
+      "path": "renders/mind2act-world-promo-web-20261012-091339.mp4",
+      "bytes": 12158514,
+      "sha256": "b1421ac1be099a025616df8c57f0eec50c9a5d1b97948fdb819256de628f6b53",
       "duration": 75,
       "video_codec": "h264",
       "width": 1920,
@@ -38,8 +38,8 @@
     }
   },
   "subtitles": [
-    "renders/mind2act-world-narration-20261011-174810.srt",
-    "renders/mind2act-world-narration-20261011-174810.vtt"
+    "renders/mind2act-world-narration-20261012-091339.srt",
+    "renders/mind2act-world-narration-20261012-091339.vtt"
   ],
   "checks": {
     "composition": ".production/hd-difficulty-invite-20261011-171026/check-final.json",

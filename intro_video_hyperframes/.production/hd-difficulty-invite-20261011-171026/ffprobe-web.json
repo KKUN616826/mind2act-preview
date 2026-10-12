@@ -34,7 +34,7 @@
       "start_time": "0.000000",
       "duration_ts": 1152000,
       "duration": "75.000000",
-      "bit_rate": "1088296",
+      "bit_rate": "1086534",
       "bits_per_raw_sample": "8",
       "nb_frames": "2250",
       "extradata_size": 51,
@@ -125,7 +125,7 @@
     }
   ],
   "format": {
-    "filename": "renders/mind2act-world-promo-web-20261011-174810.mp4",
+    "filename": "renders/mind2act-world-promo-web-20261012-091339.mp4",
     "nb_streams": 2,
     "nb_programs": 0,
     "nb_stream_groups": 0,
@@ -133,8 +133,8 @@
     "format_long_name": "QuickTime / MOV",
     "start_time": "0.000000",
     "duration": "75.000000",
-    "size": "12175084",
-    "bit_rate": "1298675",
+    "size": "12158514",
+    "bit_rate": "1296908",
     "probe_score": 100,
     "tags": {
       "major_brand": "isom",
