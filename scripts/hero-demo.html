@@ -1,10 +1,11 @@
 <div class="demo-hero" data-phase="observe" aria-label="Keyboard sequence: remember, act, confirm">
   <div class="demo-scene">
     <video class="demo-video" id="hero-demo-video" muted loop playsinline preload="auto" poster="media/posters/CP05_hero_hard_1080p.jpg" aria-label="Robot observes and reproduces a keyboard sequence">
-      <source src="media/videos/CP05_hero_hard_1080p.mp4" type="video/mp4">
+      <source src="__HERO_VIDEO__" type="video/mp4">
     </video>
     <div class="demo-shade" aria-hidden="true"></div>
     <div class="demo-key-focus" data-active="false" aria-hidden="true"><span class="demo-key-halo"></span><span class="demo-key-ring"></span><span class="demo-key-core"></span></div>
+    <div class="demo-act-target" hidden aria-hidden="true"><span>Target K26</span><i></i></div>
   </div>
   <svg class="demo-connection" aria-hidden="true">
     <defs>
@@ -30,6 +31,7 @@
   <section class="demo-copy">
     <p class="demo-stage" hidden>MIND <span class="demo-speed">2.25× source speed</span></p>
     <h1 class="demo-title">Remember the order.</h1>
+    <p class="demo-act-caption" hidden>Single-action close-up · Right arm</p>
   </section>
   <div class="demo-workspace">
     <section class="demo-memory" aria-label="Illustrative task memory">
@@ -55,9 +57,25 @@
       </svg>
     </section>
   </div>
+  <section class="demo-act-workspace" aria-label="Isolated right-arm action and recorded joints" hidden>
+    <div class="demo-act-plot">
+      <div class="demo-panel-heading"><h2>Stick-tip height · cm</h2><span class="demo-act-status">Approach</span></div>
+      <div class="demo-act-legend"><span>GT target · controller reference</span><span>Actual</span></div>
+      <svg class="demo-act-chart" viewBox="0 0 480 156" role="img" aria-labelledby="act-chart-title">
+        <title id="act-chart-title">Controller target and recorded right stick-tip height</title>
+        <defs><clipPath id="act-reveal"><rect x="40" y="0" width="0" height="126"/></clipPath></defs>
+        <g class="demo-act-grid"></g><path class="demo-act-reference"/>
+        <path class="demo-act-actual" clip-path="url(#act-reveal)"/>
+        <line class="demo-act-cursor" y1="12" y2="126"/>
+        <circle class="demo-act-event" r="4"/>
+      </svg>
+    </div>
+    <div class="demo-joints"><div class="demo-panel-heading"><h2>Joint angles · °</h2><span>Target / Actual</span></div><dl></dl></div>
+  </section>
   <p class="demo-phase-status" role="status" aria-live="polite">Mind · Remember the order.</p>
   <p class="demo-evidence" hidden>Simulation demonstration <span>·</span> Illustrative memory overlay</p>
   <div class="demo-controls" role="group" aria-label="Demo playback controls">
+    <nav class="demo-scene-nav" aria-label="Capability demonstrations"><button type="button" data-demo-phase="observe" aria-current="true" disabled>Mind</button><button type="button" data-demo-phase="focus" aria-current="false" disabled>Act</button><button type="button" data-demo-phase="reproduce" aria-current="false" disabled>Mind2Act</button></nav>
     <button class="demo-play" type="button" aria-label="Play demo" aria-pressed="false" disabled>
       <svg class="demo-play-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
       <svg class="demo-pause-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>

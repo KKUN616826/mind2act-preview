@@ -6,11 +6,14 @@ const path = require('node:path');
 const fs = require('node:fs');
 const { chromium } = require('playwright');
 const data = require('../data/hero-demo.json');
-const { stateAt } = require('./hero-demo-data.js');
+const { presentationAt } = require('./hero-demo-data.js');
 const base = process.env.HERO_PREVIEW_URL || 'http://127.0.0.1:8765/';
-const memoryStart = data.events[3].observe - 0.12;
-const memoryEnd = data.events[7].observeEnd + 0.18;
-const displayedTime = time => time < memoryStart ? memoryStart : time >= memoryEnd && time < data.media.actStart ? data.media.actStart : time;
+const [mind, focus, coupling] = data.presentation.segments;
+// Existing evidence boundaries use the original edit clock; translate once into
+// the presentation clock so the same event assertions cover the new edit.
+const displayedTime = time => time < 8
+  ? Math.max(0, Math.min(mind.end - 0.00001, time - mind.legacyStart))
+  : coupling.start + time - 8;
 
 async function open(browser, width, height, motion = 'reduce', fallback = false) {
   const page = await browser.newPage({ viewport: { width, height }, reducedMotion: motion });
@@ -32,7 +35,7 @@ async function open(browser, width, height, motion = 'reduce', fallback = false)
     };
   });
   // Other task videos are unrelated to this player and expensive to decode together.
-  await page.route('**/*.mp4', route => route.request().url().includes('CP05_hero_hard_1080p') ? route.continue() : route.abort());
+  await page.route('**/*.mp4', route => route.request().url().includes('CP05_hero_three_scenes') ? route.continue() : route.abort());
   if (fallback) await page.addInitScript(() => {
     delete HTMLVideoElement.prototype.requestVideoFrameCallback;
     delete HTMLVideoElement.prototype.cancelVideoFrameCallback;
@@ -40,7 +43,7 @@ async function open(browser, width, height, motion = 'reduce', fallback = false)
   await page.goto(base, { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => {
     const video = document.querySelector('.demo-video');
-    return video.readyState >= 2 && video.seekable.length && video.seekable.end(0) > 19 && !document.querySelector('.demo-play').disabled;
+    return video.readyState >= 2 && video.seekable.length && video.seekable.end(0) > 18.9 && !document.querySelector('.demo-play').disabled;
   });
   return page;
 }
@@ -50,7 +53,7 @@ async function seek(page, time) {
     const video = document.querySelector('.demo-video');
     video.pause();
     video.currentTime = time;
-  }, time);
+  }, displayedTime(time));
   await page.waitForFunction(() => !document.querySelector('.demo-video').seeking);
 }
 
@@ -86,12 +89,12 @@ async function inspect(page, time) {
     })(),
   }));
   assert.ok(Math.abs(actual.time - displayedTime(time)) < 0.000003, 'Shortened demonstration seek at ' + time);
-  const expected = stateAt(data, actual.time);
-  const visible = expected.acting ? expected.captured : data.events.filter((event, index) => index >= 3 && index <= 7 && event.observe <= actual.time).length;
+  const expected = presentationAt(data, actual.time);
+  const visible = expected.acting ? expected.captured : data.events.filter((event, index) => index >= 3 && index <= 7 && event.observe <= expected.time).length;
   assert.equal(actual.captured, visible);
   for (const key of ['completed', 'active', 'complete']) assert.equal(actual[key], expected[key], key + ' at ' + time);
   assert.equal(actual.dots, expected.completed);
-  assert.equal(actual.phase, expected.acting ? 'reproduce' : 'observe');
+  assert.equal(actual.phase, expected.phase);
   assert.equal(actual.overflow, false);
   if (expected.acting) assert.equal(actual.feedbackOnScreen, true, 'Feedback text must fit the visible viewport');
   assert.equal(actual.checks, expected.completed, 'Confirmed checks must be visible');
@@ -101,7 +104,7 @@ async function inspect(page, time) {
     assert.ok(actual.outcomeOriginError < 1, 'Return arrow must start at the recorded trigger, not the moving cursor');
     assert.match(actual.receipt, /Registered/);
     assert.match(actual.receipt, new RegExp((12 - expected.completed) + ' remaining'));
-    const age = actual.time - data.events[expected.completed - 1].trigger;
+    const age = expected.time - data.events[expected.completed - 1].trigger;
     assert.equal(actual.pulse, !actual.reduced && age < 0.45);
   }
   assert.equal(actual.step.includes('Waiting for release'), expected.registered);
@@ -115,7 +118,7 @@ async function inspect(page, time) {
   }
   const browser = await chromium.launch(options);
   try {
-    for (const [name, width, height] of [['desktop', 1440, 1000], ['tablet', 820, 1100], ['mobile', 390, 1100], ['narrow', 320, 900]]) {
+    for (const [name, width, height] of [['wide', 1920, 1080], ['desktop', 1440, 900], ['short', 1440, 768], ['wide-short', 1920, 700], ['tablet', 820, 1100], ['mobile', 390, 1100], ['narrow', 320, 900]]) {
       const page = await open(browser, width, height);
       assert.equal(await page.locator('.demo-video').evaluate(v => v.paused), true, 'Reduced motion disables autoplay');
       for (const time of [8, 12.08, 3, 18.8, 0, 7.5, 8.4]) {
@@ -146,6 +149,32 @@ async function inspect(page, time) {
         await seek(page, 3);
         await page.screenshot({ path: path.join(process.env.HERO_SCREENSHOTS, name + '-mind.png') });
       }
+      for (const local of [0, data.actDetail.trigger - 0.0001, data.actDetail.trigger + 0.0001, data.actDetail.release + 0.0001, 1]) {
+        await page.evaluate(time => { const v = document.querySelector('.demo-video'); v.pause(); v.currentTime = time; }, focus.start + local);
+        await page.waitForFunction(() => !document.querySelector('.demo-video').seeking);
+        assert.equal(await page.locator('.demo-hero').getAttribute('data-phase'), 'focus');
+        assert.equal(await page.locator('.demo-workspace').isVisible(), false);
+        assert.equal(await page.locator('.demo-act-workspace').isVisible(), true);
+        const contact = await page.evaluate(() => {
+          const key = document.querySelector('.demo-act-target').getBoundingClientRect();
+          const title = document.querySelector('.demo-copy').getBoundingClientRect();
+          const scene = document.querySelector('.demo-scene').getBoundingClientRect();
+          return {visible: key.left >= scene.left && key.right <= scene.right && key.top >= scene.top && key.bottom <= scene.bottom,
+            clear: key.bottom <= title.top || key.top >= title.bottom || key.right <= title.left || key.left >= title.right};
+        });
+        assert.equal(contact.visible, true, 'Contact outline must stay in the video');
+        assert.equal(contact.clear, true, 'Title must not cover the contact outline');
+        assert.equal(await page.locator('.demo-card[data-completed="true"]').count(), 0);
+        assert.equal(await page.locator('.demo-act-event').isVisible(), local >= data.actDetail.trigger);
+        const row = data.actDetail.samples[Math.round(local * data.actDetail.sampleHz)];
+        assert.equal(await page.locator('.demo-joints dd').first().textContent(), row[3].toFixed(1) + ' / ' + row[9].toFixed(1));
+        assert.ok(Math.abs(Number(await page.locator('#act-reveal rect').getAttribute('width')) - local / 4.5 * 426) < 0.001);
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+      }
+      if (process.env.HERO_SCREENSHOTS) await page.screenshot({ path: path.join(process.env.HERO_SCREENSHOTS, name + '-focus.png') });
+      await page.locator('[data-demo-phase="reproduce"]').click();
+      await page.waitForFunction(() => !document.querySelector('.demo-video').seeking);
+      await inspect(page, 8);
       assert.deepEqual(page.errors, []);
       await page.close();
       console.log('PASS: responsive layout, seeks and target mapping:', name);
@@ -166,7 +195,7 @@ async function inspect(page, time) {
     for (let i = 0; i < 2; i++) {
       await seek(page, data.media.duration - 0.1);
       await page.getByRole('button', { name: 'Play demo', exact: true }).click();
-      await page.waitForFunction(start => document.querySelector('.demo-video').currentTime >= start && document.querySelector('.demo-video').currentTime < start + 0.5 && document.querySelectorAll('.demo-card[data-completed="true"]').length === 0, memoryStart);
+      await page.waitForFunction(start => document.querySelector('.demo-video').currentTime >= start && document.querySelector('.demo-video').currentTime < start + 0.5 && document.querySelectorAll('.demo-card[data-completed="true"]').length === 0, 0);
       assert.equal(await page.locator('.demo-card[data-completed="true"]').count(), 0);
       await page.getByRole('button', { name: 'Pause demo', exact: true }).click();
     }
@@ -177,8 +206,8 @@ async function inspect(page, time) {
     await page.getByRole('button', { name: 'Pause demo', exact: true }).click();
     const frames = await page.evaluate(() => window.heroFrameAudit);
     const confirmed = frames.find(frame => frame.completed === 1);
-    assert.ok(confirmed && confirmed.time >= data.events[0].trigger - 1e-6);
-    assert.ok(confirmed.time - data.events[0].trigger <= 1 / 30 + 1e-6, JSON.stringify(frames));
+    assert.ok(confirmed && confirmed.time >= displayedTime(data.events[0].trigger) - 1e-6);
+    assert.ok(confirmed.time - displayedTime(data.events[0].trigger) <= 1 / 30 + 1e-6, JSON.stringify(frames));
     const pausedTime = await page.locator('.demo-video').evaluate(v => v.currentTime);
     await page.waitForTimeout(200);
     assert.equal(await page.locator('.demo-video').evaluate(v => v.currentTime), pausedTime);
@@ -202,7 +231,7 @@ async function inspect(page, time) {
     await page.close();
     console.log('PASS: all event boundaries, keyboard controls, loops, frame synchronization, pause/visibility and error handling');
     const fallback = await open(browser, 1280, 900, 'no-preference', true);
-    await fallback.waitForFunction(start => document.querySelector('.demo-video').currentTime > start + 0.2, memoryStart);
+    await fallback.waitForFunction(start => document.querySelector('.demo-video').currentTime > start + 0.2, 0);
     for (const offset of [0.05, 0.2, 0.449, 0.451]) {
       await seek(fallback, data.events[0].trigger + offset); await inspect(fallback, data.events[0].trigger + offset);
     }

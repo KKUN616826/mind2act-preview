@@ -27,4 +27,4 @@ def render():
     for char, escaped in [('<', '\\u003c'), ('>', '\\u003e'), ('&', '\\u0026')]:
         payload = payload.replace(char, escaped)
     template = (ROOT / 'scripts/hero-demo.html').read_text()
-    return template.replace('__HERO_CARDS__', '\n'.join(cards)).replace('__HERO_DATA__', payload)
+    return template.replace('__HERO_CARDS__', '\n'.join(cards)).replace('__HERO_DATA__', payload).replace('__HERO_VIDEO__', data['presentation']['path'])

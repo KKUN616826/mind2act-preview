@@ -3,7 +3,7 @@
   const payload = document.getElementById('heroDemoData');
   if (!hero || !payload || !window.Mind2ActDemo) return;
   const data = JSON.parse(payload.textContent);
-  const { stateAt, sourceTime } = window.Mind2ActDemo;
+  const { presentationAt, sourceTime } = window.Mind2ActDemo;
   const find = selector => hero.querySelector(selector);
   const video = find('video'), scene = find('.demo-scene');
   const play = find('.demo-play');
@@ -15,8 +15,7 @@
   const samples = data.motion.samples;
   // Preview five central observations; the full 12-note action sequence stays intact.
   const memoryFirst = 3, memoryLast = 7;
-  const memoryStart = data.events[memoryFirst].observe - 0.12;
-  const memoryEnd = data.events[memoryLast].observeEnd + 0.18;
+  const sceneButtons = [...hero.querySelectorAll('[data-demo-phase]')];
   const noteName = event => 'CDEFGAB'[event.keyId % 7] + (2 + Math.floor(event.keyId / 7));
   const plot = { left: 40, right: 346, top: [20, 93], height: 48 };
   const span = data.media.duration - data.media.actStart;
@@ -53,6 +52,41 @@
   const heads = [...hero.querySelectorAll('.demo-chart-head')];
   let ready = false, failed = false, inView = true, wantsPlay = !reduced.matches;
   let frameId = null, lastSignature = '', geometry = null, lastTime = 0;
+  const detail = data.actDetail;
+  const actX = t => 40 + Math.max(0, Math.min(4.5, t)) / 4.5 * 426;
+  const actY = z => 120 - (z - data.motion.range[0]) / (data.motion.range[1] - data.motion.range[0]) * 104;
+  const actGrid = find('.demo-act-grid');
+  for (const z of [84, 90, 96]) {
+    actGrid.append(svg('line', { x1: 40, x2: 466, y1: actY(z), y2: actY(z) }));
+    actGrid.append(svg('text', { x: 30, y: actY(z) + 4, 'text-anchor': 'end' }, z));
+  }
+  for (const t of [0, 1.5, 3, 4.5]) actGrid.append(svg('text', { x: actX(t), y: 146, 'text-anchor': t === 4.5 ? 'end' : 'start' }, t + ' s'));
+  for (const [selector, column] of [['.demo-act-reference', 1], ['.demo-act-actual', 2]]) {
+    find(selector).setAttribute('d', detail.samples.map((row, i) => (i ? 'L' : 'M') + actX(row[0]).toFixed(2) + ',' + actY(row[column]).toFixed(2)).join(' '));
+  }
+  const jointReadouts = Array.from({ length: 6 }, (_, i) => {
+    const row = document.createElement('div');
+    const title = document.createElement('dt'); title.textContent = 'J' + (i + 1);
+    const value = document.createElement('dd'); row.append(title, value); find('.demo-joints dl').append(row);
+    return value;
+  });
+  function updateAct(state) {
+    if (state.phase !== 'focus') return;
+    const time = state.localTime, x = actX(time);
+    // Nearest post-step sample, not a wall-clock counter or a simulated trace.
+    const row = detail.samples[Math.max(0, Math.min(detail.samples.length - 1, Math.round(time * detail.sampleHz)))];
+    find('#act-reveal rect').setAttribute('width', x - 40);
+    const cursor = find('.demo-act-cursor'); cursor.setAttribute('x1', x); cursor.setAttribute('x2', x);
+    const dot = find('.demo-act-event');
+    dot.style.display = state.focusConfirmed ? '' : 'none';
+    dot.setAttribute('cx', actX(detail.trigger)); dot.setAttribute('cy', actY(data.events[0].triggerHeights[1]));
+    find('.demo-act-status').textContent = state.focusReleased ? 'Released' : state.focusConfirmed ? 'Registered · waiting for release' : 'Follow the target';
+    jointReadouts.forEach((node, i) => node.textContent = row[3 + i].toFixed(1) + ' / ' + row[9 + i].toFixed(1));
+    const target = find('.demo-act-target');
+    target.style.left = (geometry.x + detail.target[0] * geometry.scale) + 'px';
+    target.style.top = (geometry.y + detail.target[1] * geometry.scale) + 'px';
+    target.dataset.confirmed = String(state.focusConfirmed);
+  }
   const format = seconds => String(Math.floor(seconds / 60)).padStart(2, '0') + ':' + String(Math.floor(seconds % 60)).padStart(2, '0');
 
   function measure() {
@@ -159,7 +193,7 @@
     const ghost = find('.demo-capture');
     const index = state.captured - 1, event = data.events[index];
     const age = event ? (state.time - event.observe) / 0.32 : -1;
-    ghost.hidden = reduced.matches || state.acting || age < 0 || age >= 1;
+    ghost.hidden = reduced.matches || state.phase !== 'observe' || age < 0 || age >= 1;
     if (ghost.hidden || !geometry) return;
     const root = hero.getBoundingClientRect();
     const card = cards[index].querySelector('img').getBoundingClientRect();
@@ -182,22 +216,22 @@
 
   function sync(time = video.currentTime, force = false) {
     if (failed) return;
-    if (time < memoryStart || (time >= memoryEnd && time < data.media.actStart)) {
-      const next = time < memoryStart ? memoryStart : data.media.actStart;
-      if (!video.seeking) video.currentTime = next;
-      time = next;
-    }
-    const state = stateAt(data, time);
-    const signature = [state.acting, state.captured, state.completed, state.released].join(':');
+    const state = presentationAt(data, time);
+    const signature = [state.phase, state.captured, state.completed, state.released].join(':');
     if (signature !== lastSignature || force) {
       lastSignature = signature;
-      hero.dataset.phase = state.acting ? 'reproduce' : 'observe';
+      hero.dataset.phase = state.phase;
       hero.dataset.registered = String(state.registered);
       hero.dataset.complete = String(state.complete);
       motion.hidden = !state.acting;
+      find('.demo-workspace').hidden = state.phase === 'focus';
+      find('.demo-act-workspace').hidden = state.phase !== 'focus';
+      find('.demo-act-target').hidden = state.phase !== 'focus';
+      find('.demo-act-caption').hidden = state.phase !== 'focus';
+      sceneButtons.forEach(button => button.setAttribute('aria-current', String(button.dataset.demoPhase === state.phase)));
       const active = data.events[state.active];
       find('.demo-stage').firstChild.textContent = state.acting ? 'ACT ' : 'MIND ';
-      find('.demo-title').textContent = state.complete ? 'Sequence complete.' : state.acting ? 'Guided by intent. Updated by outcomes.' : 'Remember the order.';
+      find('.demo-title').textContent = state.phase === 'focus' ? 'Act · Precise contact' : state.complete ? 'Sequence complete.' : state.acting ? 'Guided by intent. Updated by outcomes.' : 'Remember the order.';
       find('.demo-count').textContent = (state.acting ? state.completed : state.captured) + ' / ' + data.events.length;
       find('.demo-memory-footer').hidden = !state.acting;
       find('.demo-step').textContent = state.complete ? '12 / 12 confirmed' : state.acting ? 'Step ' + (state.active + 1) + ' / 12 · ' + (state.registered ? 'Waiting for release' : 'Target ' + noteName(active)) : 'Watch · Remember';
@@ -217,7 +251,7 @@
         const card = cards[selected];
         viewport.scrollLeft = Math.max(0, card.offsetLeft - strip.offsetLeft - (viewport.clientWidth - card.offsetWidth) / 2);
       } else viewport.scrollLeft = 0;
-      find('.demo-phase-status').textContent = (state.acting ? 'Mind and Act' : 'Demonstration') + ' · ' + find('.demo-step').textContent + ' · ' + find('.demo-feedback').textContent;
+      find('.demo-phase-status').textContent = state.phase === 'focus' ? 'Act. Isolated right-arm action; sequence progress is unchanged.' : (state.acting ? 'Mind and Act' : 'Demonstration') + ' · ' + find('.demo-step').textContent + ' · ' + find('.demo-feedback').textContent;
       measure();
     }
     // Entry is media-timed too: pause, reverse seeks and loop resets stay exact.
@@ -228,10 +262,11 @@
     connect(state);
     capture(state);
     updateChart(state);
-    find('.demo-speed').textContent = ((state.acting ? 4 : 3) * video.playbackRate).toFixed(2).replace(/\.?0+$/, '') + '× source speed';
+    updateAct(state);
+    find('.demo-speed').textContent = (state.sourceSpeed * video.playbackRate).toFixed(2).replace(/\.?0+$/, '') + '× source speed';
     play.setAttribute('aria-label', video.paused ? 'Play demo' : 'Pause demo');
     play.setAttribute('aria-pressed', String(!video.paused));
-    lastTime = state.time;
+    lastTime = state.presentationTime;
   }
   function cancelFrame() {
     if (frameId !== null) {
@@ -254,12 +289,17 @@
     ready = true;
     video.defaultPlaybackRate = data.media.playbackRate;
     video.playbackRate = data.media.playbackRate;
-    video.currentTime = memoryStart;
+    video.currentTime = 0;
     play.disabled = false;
+    sceneButtons.forEach(button => button.disabled = false);
     sync(video.currentTime, true);
     resume();
   }
   play.addEventListener('click', () => { wantsPlay = video.paused; if (wantsPlay) resume(); else video.pause(); });
+  sceneButtons.forEach(button => button.addEventListener('click', () => {
+    video.currentTime = data.presentation.segments.find(segment => segment.phase === button.dataset.demoPhase).start;
+    sync(video.currentTime, true);
+  }));
   video.addEventListener('loadedmetadata', initialize);
   video.addEventListener('seeking', () => { cancelFrame(); sync(video.currentTime, true); });
   video.addEventListener('seeked', () => { sync(video.currentTime, true); scheduleFrame(); });
@@ -270,6 +310,7 @@
   video.addEventListener('error', () => {
     failed = true; wantsPlay = false; cancelFrame();
     play.disabled = true;
+    sceneButtons.forEach(button => button.disabled = true);
     find('.demo-title').textContent = 'Demo unavailable.';
     find('.demo-feedback').textContent = 'Open the full demonstration in Tasks below.';
     find('.demo-phase-status').textContent = 'Demo unavailable. Open the full demonstration in Tasks below.';
@@ -280,7 +321,7 @@
     inView = entry.isIntersecting; if (!inView) video.pause(); else resume();
   }).observe(hero);
   reduced.addEventListener('change', () => { if (reduced.matches) { wantsPlay = false; video.pause(); } sync(); });
-  viewport.addEventListener('scroll', () => connect(stateAt(data, lastTime)), { passive: true });
+  viewport.addEventListener('scroll', () => connect(presentationAt(data, lastTime)), { passive: true });
   if ('ResizeObserver' in window) new ResizeObserver(() => { measure(); sync(video.currentTime, true); }).observe(hero);
   else window.addEventListener('resize', () => { measure(); sync(video.currentTime, true); });
   if (video.readyState >= 1) initialize(); else { measure(); sync(0, true); }

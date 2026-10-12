@@ -16,7 +16,20 @@
     const segment = data.media.segments.find(s => time < s.editEnd) || data.media.segments.at(-1);
     return segment.sourceStart + (time - segment.editStart) * segment.speed;
   }
-  const api = { stateAt, sourceTime };
+  function presentationAt(data, time) {
+    const t = Math.max(0, Math.min(data.presentation.duration, time));
+    const segment = data.presentation.segments.find(s => t < s.end - 0.000001) || data.presentation.segments.at(-1);
+    // Media seeks are quantized to microseconds; snap only edit boundaries.
+    const elapsed = Math.max(0, t - segment.start);
+    const legacy = segment.phase === 'focus' ? data.media.actStart - 0.000001 : segment.legacyStart + elapsed;
+    const state = stateAt(data, legacy);
+    return { ...state, phase: segment.phase, presentationTime: t, localTime: elapsed,
+      sourceTime: segment.sourceStart + elapsed * segment.speed,
+      sourceSpeed: segment.speed,
+      focusConfirmed: segment.phase === 'focus' && elapsed >= data.actDetail.trigger,
+      focusReleased: segment.phase === 'focus' && elapsed >= data.actDetail.release };
+  }
+  const api = { stateAt, sourceTime, presentationAt };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.Mind2ActDemo = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

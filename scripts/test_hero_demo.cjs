@@ -49,3 +49,44 @@ test('different playback rates do not change source time or confirmation semanti
     assert.ok(Math.abs(sourceTime(data, event.trigger) - event.sourceTrigger) < 0.000003);
   }
 });
+
+const { presentationAt } = require('./hero-demo-data.js');
+const [mind, focus, coupling] = data.presentation.segments;
+test('isolated Act shows contact and release without consuming the full sequence', () => {
+  for (const local of [0, 1, data.actDetail.trigger, data.actDetail.release, 4.49]) {
+    const state = presentationAt(data, focus.start + local);
+    assert.equal(state.phase, 'focus');
+    assert.equal(state.completed, 0);
+    assert.equal(state.active, -1);
+    assert.equal(state.focusConfirmed, local >= data.actDetail.trigger);
+    assert.equal(state.focusReleased, local >= data.actDetail.release);
+  }
+  const state = presentationAt(data, coupling.start);
+  assert.equal(state.phase, 'reproduce');
+  assert.equal(state.captured, 12);
+  assert.equal(state.completed, 0);
+  assert.equal(state.active, 0);
+  assert.equal(state.sourceTime, 60.5);
+});
+test('all 12 trigger and release boundaries survive the new edit clock', () => {
+  for (const [i, event] of data.events.entries()) {
+    const trigger = coupling.start + event.trigger - 8;
+    const release = coupling.start + event.release - 8;
+    assert.equal(presentationAt(data, trigger - 0.0001).completed, i);
+    assert.equal(presentationAt(data, trigger + 0.0001).completed, i + 1);
+    assert.equal(presentationAt(data, release - 0.0001).active, i);
+    assert.equal(presentationAt(data, release + 0.0001).active, i === 11 ? -1 : i + 1);
+  }
+});
+test('seeks and loops reconstruct scene state, with microsecond edit-boundary precision', () => {
+  for (const segment of data.presentation.segments) {
+    const state = presentationAt(data, segment.start);
+    presentationAt(data, data.presentation.duration);
+    assert.deepEqual(presentationAt(data, segment.start), state);
+    assert.equal(presentationAt(data, Math.floor(segment.start * 1e6) / 1e6).phase, segment.phase);
+  }
+  assert.equal(presentationAt(data, 0).completed, 0);
+  assert.equal(presentationAt(data, data.presentation.duration).complete, true);
+  assert.ok(Math.abs(data.presentation.duration / data.presentation.playbackRate - 25.289) < 0.001);
+  assert.equal(focus.end - focus.start, 4.5);
+});

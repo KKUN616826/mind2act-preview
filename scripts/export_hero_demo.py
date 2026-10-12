@@ -135,6 +135,8 @@ def main():
                     columns=['editTime', 'Left', 'Right'], sampleHz=30, triggerHeightInterpolation='linear between recorded tool poses',
                     range=[math.floor(min(heights)), math.ceil(max(heights))], samples=samples),
     )
+    from export_hero_presentation import export_presentation
+    export_presentation(run, output, data, trajectory, clock, digest)
     (output / 'data').mkdir(parents=True, exist_ok=True)
     (output / 'data/hero-demo.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n')
     print(f'Exported {len(events)} event screenshots and {len(samples)} real motion samples.')

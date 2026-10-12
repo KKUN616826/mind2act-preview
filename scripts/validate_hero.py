@@ -47,6 +47,44 @@ def validate_hero(content=None):
             assert abs(sample[0] - samples[index - 1][0] - 1 / 120) < 2e-6
     with (ROOT / data['media']['path']).open('rb') as video:
         assert hashlib.file_digest(video, 'sha256').hexdigest() == data['media']['sha256']
+    presentation, detail = data['presentation'], data['actDetail']
+    assert data['version'] == 2
+    assert presentation['fps'] == 30 and presentation['playbackRate'] == 0.75
+    assert abs(presentation['duration'] - 569 / 30) < 1e-6
+    assert presentation['path'] in content
+    with (ROOT / presentation['path']).open('rb') as video:
+        assert hashlib.file_digest(video, 'sha256').hexdigest() == presentation['sha256']
+    segments = presentation['segments']
+    assert [s['phase'] for s in segments] == ['observe', 'focus', 'reproduce']
+    for i, segment in enumerate(segments):
+        assert abs(segment['start'] * 30 - round(segment['start'] * 30)) < 1e-6
+        assert abs((segment['end'] - segment['start']) * segment['speed'] -
+                   (segment['sourceEnd'] - segment['sourceStart'])) < 1e-6
+        if i:
+            assert segment['start'] == segments[i - 1]['end']
+    assert detail['arm'] == events[0]['arm'] == 'Right'
+    assert detail['keyId'] == events[0]['keyId'] == 25
+    assert 0 < detail['trigger'] < detail['release'] < 4.5
+    assert abs(detail['sourceStart'] + detail['trigger'] - events[0]['sourceTrigger']) < 1e-6
+    assert abs(detail['sourceStart'] + detail['release'] - events[0]['sourceRelease']) < 1e-6
+    assert events[1]['sourceTrigger'] > detail['sourceEnd']
+    assert detail['sampleHz'] == 120 and detail['measuredTipHz'] == 30
+    assert detail['heightUnit'] == 'cm' and detail['jointUnit'] == 'deg'
+    assert len(detail['samples']) == 541 and len(detail['columns']) == 15
+    assert 'feedback82.json' in data['provenance']['files']
+    for i, sample in enumerate(detail['samples']):
+        assert len(sample) == 15 and all(math.isfinite(value) for value in sample)
+        assert all(motion['range'][0] <= z <= motion['range'][1] for z in sample[1:3])
+        if i:
+            assert abs(sample[0] - detail['samples'][i - 1][0] - 1 / 120) < 2e-6
+    assert any(abs(row[1] - row[2]) > 0.01 for row in detail['samples']), 'Reference must not replace observations'
+    cx, cy, cw, ch = detail['crop']
+    ox, oy, ow, oh = detail['outputRectangle']
+    assert 0 <= cx < cx + cw <= 1920 and 0 <= cy < cy + ch <= 1080
+    for actual, expected in zip(detail['target'], [ox + (events[0]['target'][0] - cx) * ow / cw, oy + (events[0]['target'][1] - cy) * oh / ch]):
+        assert abs(actual - expected) < 0.001
+    assert 'GT target · controller reference' in content
+    print('PASS: three-scene edit, isolated contact/release, controller targets and post-step measurements')
     assert 'Simulation demonstration' in content and 'Illustrative memory overlay' in content
     assert 'Recorded simulation heights in world coordinates, in centimeters.' in content
     assert 'class="demo-chart"' in content and 'class="demo-seek"' not in content

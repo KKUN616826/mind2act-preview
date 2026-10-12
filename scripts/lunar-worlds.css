@@ -1,0 +1,10 @@
+.stage nav button{display:flex;align-items:center;gap:7px}
+.stage nav button img{display:block;object-fit:contain;image-rendering:pixelated}
+.stage[data-world=mind]{background:#c3d5d7}
+.stage[data-world=act]{background:#102134}
+.stage[data-world=coupling]{background:linear-gradient(90deg,#e5ecd9,#172640)}
+html[data-embedded-fit=true] main{height:var(--lunar-panel-height);margin:0;padding:16px 0 8px;display:flex;flex-direction:column}
+html[data-embedded-fit=true] header,html[data-embedded-fit=true] .legend{flex:none}
+html[data-embedded-fit=true] .stage{flex:1;min-height:0}
+html[data-embedded-fit=true] .stage>svg{position:absolute;inset:0;width:100%;height:100%;min-width:0}
+@media(max-width:700px){.stage nav button{gap:4px;padding:7px 6px}.stage nav button img{width:18px;height:18px}}
