@@ -1,0 +1,49 @@
+1
+00:00:00,280 --> 00:00:04,886
+Introducing Mind2Act World.
+Reasoning and action, evaluated together.
+
+2
+00:00:05,550 --> 00:00:10,436
+When robots fail, is it the decision,
+the execution, or how they work together?
+
+3
+00:00:12,180 --> 00:00:16,544
+Mind tracks progress, understands rules,
+and decides what comes next.
+
+4
+00:00:18,120 --> 00:00:23,320
+Act turns intent into precise motion,
+through geometry, contact, and timing.
+
+5
+00:00:24,030 --> 00:00:28,979
+Mind2Act closes the loop.
+Execution reshapes the plan, step by step.
+
+6
+00:00:34,130 --> 00:00:35,191
+Fifteen tasks.
+
+7
+00:00:35,200 --> 00:00:37,115
+Forty-five configurations.
+
+8
+00:00:37,730 --> 00:00:38,450
+Easy.
+
+9
+00:00:39,080 --> 00:00:39,873
+Medium.
+
+10
+00:00:40,440 --> 00:00:41,134
+Hard.
+
+11
+00:00:42,570 --> 00:00:46,638
+Contribute new tasks. Evaluate agents.
+Mind2Act World.

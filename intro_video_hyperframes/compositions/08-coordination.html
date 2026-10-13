@@ -12,15 +12,17 @@
 #coord-triad-title .coord-heading-sub{font-size:54px;line-height:1.28;margin-top:12px;color:#faf9f4}
 .coord-symbol{position:absolute;object-fit:contain;transform-origin:0 0}
 #coord-mind{left:200px;top:400px;width:490px;height:450.65px}
-#coord-act{left:1230px;top:371px;width:490px;height:479.57px}
+#coord-act{left:1280px;top:371px;width:490px;height:479.57px}
 #coord-whole{left:670px;top:326px;width:580px;height:580px;opacity:0}
 .coord-label{position:absolute;text-align:center;font-size:48px;font-weight:600;line-height:1.12}
 #coord-mind-initial{left:185px;top:840px;width:490px}
-#coord-act-initial{left:1240px;top:840px;width:490px}
+#coord-act-initial{left:1290px;top:840px;width:490px}
 .coord-paths{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}
-.coord-guide{fill:none;stroke-width:3.4}
-.coord-pulse{fill:none;stroke-width:8;stroke-linecap:round;opacity:0}
-.coord-direction{position:absolute;left:620px;width:680px;text-align:center;font-size:35px;line-height:1.18}
+.coord-guide{fill:none;stroke-width:3;stroke-linecap:round;opacity:.2}
+.coord-lit{fill:none;stroke-width:3.6;stroke-linecap:round}
+.coord-trail{fill:none;stroke-linecap:round}
+.coord-chevron{fill:none;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round}
+.coord-direction{position:absolute;left:660px;width:680px;text-align:center;font-size:35px;line-height:1.18}
 #coord-intent{top:365px;color:#f0d57e}
 #coord-outcomes{top:855px;color:#bdd9cc}
 #coord-connector{position:absolute;inset:0;pointer-events:none}
@@ -41,11 +43,8 @@
 <h2 id="coord-loop-title" class="coord-heading"><span id="coord-title-first">Mind and Act,</span><span id="coord-title-second" class="coord-heading-sub">in a Continuous Loop</span></h2>
 <h2 id="coord-triad-title" class="coord-heading"><span>Three Dimensions</span><span class="coord-heading-sub">of Embodied Intelligence</span></h2>
 <svg id="coord-paths" class="coord-paths" viewBox="0 0 1920 1080" aria-label="Mind guides Act; physical outcomes update the task">
-<defs><marker id="coord-arrow-gold" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#f0d57e" stroke-width="2"/></marker><marker id="coord-arrow-mint" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M2 1 L10 6 L2 11" fill="none" stroke="#bdd9cc" stroke-width="2"/></marker></defs>
-<path id="coord-forward" class="coord-guide" d="M610 547 C800 404 1310 414 1500 548" pathLength="1" stroke="#f0d57e" marker-end="url(#coord-arrow-gold)"/>
-<path id="coord-forward-pulse" class="coord-pulse" d="M610 547 C800 404 1310 414 1500 548" pathLength="1" stroke="#fff3be" stroke-dasharray=".11 2" stroke-dashoffset=".11"/>
-<path id="coord-return" class="coord-guide" d="M1310 685 C1165 839 715 847 510 720" pathLength="1" stroke="#bdd9cc" marker-end="url(#coord-arrow-mint)"/>
-<path id="coord-return-pulse" class="coord-pulse" d="M1310 685 C1165 839 715 847 510 720" pathLength="1" stroke="#e6fff2" stroke-dasharray=".11 2" stroke-dashoffset=".11"/>
+<!-- The two arcs are exact mirrors about y=630 and x=1000 (the visual center between the
+     two marks), sharing endpoint columns; their labels sit on the same axis. --><path id="coord-forward" class="coord-guide" d="M632 600 C840 440 1160 440 1368 600" stroke="#f0d57e"/><path id="coord-forward-lit" class="coord-lit" d="M632 600 C840 440 1160 440 1368 600" stroke="#f0d57e"/><path id="coord-forward-trail0" class="coord-trail" d="M632 600 C840 440 1160 440 1368 600" stroke="#fff6cf" stroke-width="5" opacity="0.35"/><path id="coord-forward-trail1" class="coord-trail" d="M632 600 C840 440 1160 440 1368 600" stroke="#fff6cf" stroke-width="6.5" opacity="0.6"/><path id="coord-forward-trail2" class="coord-trail" d="M632 600 C840 440 1160 440 1368 600" stroke="#fff6cf" stroke-width="8" opacity="0.95"/><g id="coord-forward-head" class="coord-head"><circle r="20" fill="#f0d57e" opacity=".22"/><circle r="7.5" fill="#fff6cf"/></g><path id="coord-forward-chevron" class="coord-chevron" d="M-15 -10 L0 0 L-15 10" stroke="#f0d57e"/><path id="coord-return" class="coord-guide" d="M1368 660 C1160 820 840 820 632 660" stroke="#bdd9cc"/><path id="coord-return-lit" class="coord-lit" d="M1368 660 C1160 820 840 820 632 660" stroke="#bdd9cc"/><path id="coord-return-trail0" class="coord-trail" d="M1368 660 C1160 820 840 820 632 660" stroke="#effff7" stroke-width="5" opacity="0.35"/><path id="coord-return-trail1" class="coord-trail" d="M1368 660 C1160 820 840 820 632 660" stroke="#effff7" stroke-width="6.5" opacity="0.6"/><path id="coord-return-trail2" class="coord-trail" d="M1368 660 C1160 820 840 820 632 660" stroke="#effff7" stroke-width="8" opacity="0.95"/><g id="coord-return-head" class="coord-head"><circle r="20" fill="#bdd9cc" opacity=".22"/><circle r="7.5" fill="#effff7"/></g><path id="coord-return-chevron" class="coord-chevron" d="M-15 -10 L0 0 L-15 10" stroke="#bdd9cc"/>
 </svg>
 <div id="coord-intent" class="coord-direction">Intent guides action</div>
 <div id="coord-outcomes" class="coord-direction">Outcomes update the task</div>
@@ -70,27 +69,53 @@ tl.fromTo('#coord-title-second',{opacity:0,y:56},{opacity:1,y:0,duration:.6,ease
 tl.fromTo('#coord-mind',{opacity:0,x:-90,y:24,scale:.92},{opacity:1,x:0,y:0,scale:1,duration:.68,ease:'power3.out'},.42);
 tl.fromTo('#coord-act',{opacity:0,x:90,y:24,scale:.92},{opacity:1,x:0,y:0,scale:1,duration:.68,ease:'power3.out'},.50);
 tl.fromTo(['#coord-mind-initial','#coord-act-initial'],{opacity:0,y:20},{opacity:1,y:0,duration:.45,ease:'power3.out'},.7);
-// Both directions are present before either travels, so the relationship never reads
-// as an isolated "think, then act" pipeline. The second pulse is the return journey.
-tl.fromTo(['#coord-forward','#coord-return'],{opacity:0},{opacity:.32,duration:.4},.86);
-tl.fromTo(['#coord-intent','#coord-outcomes'],{opacity:0,y:12},{opacity:1,y:0,duration:.4,ease:'power2.out'},1.03);
-tl.to('#coord-forward',{opacity:1,duration:.24},1.30);
-// Attribute interpolation keeps normalized offsets fractional. CSSPlugin rounds
-// pixel values, which would snap this pathLength=1 motion directly from 0 to -1.
-// The two-path-length gap prevents a repeated dash from wrapping to the origin.
-tl.fromTo('#coord-forward-pulse',{attr:{'stroke-dashoffset':.11},opacity:0},{attr:{'stroke-dashoffset':0},opacity:1,duration:.10,ease:'none'},1.35);
-tl.to('#coord-forward-pulse',{attr:{'stroke-dashoffset':-1},duration:1.0,ease:'none'},1.46);
-tl.to('#coord-forward-pulse',{opacity:0,duration:.13},2.45);
-tl.fromTo('#coord-act',{scale:1},{scale:1.028,duration:.13,yoyo:true,repeat:1,ease:'power2.out',immediateRender:false},2.43);
-tl.to('#coord-return',{opacity:1,duration:.24},2.65);
-tl.fromTo('#coord-return-pulse',{attr:{'stroke-dashoffset':.11},opacity:0},{attr:{'stroke-dashoffset':0},opacity:1,duration:.10,ease:'none'},2.75);
-tl.to('#coord-return-pulse',{attr:{'stroke-dashoffset':-1},duration:1.05,ease:'none'},2.85);
-tl.to('#coord-return-pulse',{opacity:0,duration:.13},3.9);
-tl.fromTo('#coord-mind',{scale:1},{scale:1.028,duration:.13,yoyo:true,repeat:1,ease:'power2.out',immediateRender:false},3.85);
+// The loop is one seekable state: both tracks draw on together (the relationship exists
+// before anything travels), then a comet carries intent Mind -> Act, lighting its arc;
+// Act takes the hit and the comet returns Act -> Mind as the outcome. A third, faster lap
+// is already under way when the diagram clears, so the loop reads as continuous.
+const NS=['forward','return'].map(n=>{const p=document.getElementById('coord-'+n),L=p.getTotalLength();
+  const e=p.getPointAtLength(L),e2=p.getPointAtLength(L-3);
+  return{p,L,end:e,ang:Math.atan2(e.y-e2.y,e.x-e2.x)*180/Math.PI,
+    lit:document.getElementById('coord-'+n+'-lit'),head:document.getElementById('coord-'+n+'-head'),
+    chev:document.getElementById('coord-'+n+'-chevron'),trail:[0,1,2].map(i=>document.getElementById('coord-'+n+'-trail'+i))};});
+const p2io=u=>u<.5?2*u*u:1-2*(1-u)*(1-u),p2o=u=>1-(1-u)*(1-u),clamp=u=>Math.min(1,Math.max(0,u));
+const backOut=u=>{const c=1.6;return 1+(c+1)*Math.pow(u-1,3)+c*Math.pow(u-1,2);};   // one overshoot
+// [lane, depart, arrive]; the 3rd leg is the next forward lap, cut off by the 4.43s clear.
+const LEGS=[[0,1.30,2.40],[1,2.62,3.72],[0,3.86,4.80]];
+const TRACK_T0=.86,TRACK_DUR=.46,TRAILS=[150,85,38];
+function setDash(el,len,L,offset){el.setAttribute('stroke-dasharray',`${Math.max(0,len)} ${L+400}`);el.setAttribute('stroke-dashoffset',-offset);}
+function applyLoop(t){
+  const draw=p2io(clamp((t-TRACK_T0)/TRACK_DUR));
+  NS.forEach((n,k)=>{
+    setDash(n.p,n.L*draw,n.L,0);
+    // Most recent leg on this lane decides its lit / head / chevron state.
+    let leg=null;LEGS.forEach(g=>{if(g[0]===k&&t>=g[1])leg=g;});
+    const firstArrive=LEGS.find(g=>g[0]===k)[2];
+    let litLen=0,litOp=1,headD=-1,headS=0;
+    if(leg){const u=clamp((t-leg[1])/(leg[2]-leg[1])),e=p2io(u);headD=n.L*e;
+      headS=Math.min(p2o(clamp((t-leg[1])/.14)),1-p2o(clamp((t-leg[2]+.04)/.16)));
+      litLen=leg===LEGS[2]||t<firstArrive?headD:n.L;
+      if(t>=firstArrive&&leg!==LEGS[2])litOp=.55+.45*(1-p2o(clamp((t-firstArrive)/.5)));}
+    if(t>=firstArrive&&leg===LEGS[2]){litLen=n.L;}            // lap 3 rides on an already-lit arc
+    setDash(n.lit,litLen,n.L,0);n.lit.setAttribute('opacity',litOp.toFixed(3));
+    n.trail.forEach((tr,i)=>{const len=Math.min(TRAILS[i],Math.max(0,headD))*(headS>0?1:0);setDash(tr,len,n.L,Math.max(0,headD-len));});
+    if(headD>=0&&headS>0){const pt=n.p.getPointAtLength(Math.min(n.L,headD));n.head.setAttribute('transform',`translate(${pt.x.toFixed(2)} ${pt.y.toFixed(2)}) scale(${headS.toFixed(3)})`);n.head.setAttribute('opacity','1');}
+    else n.head.setAttribute('opacity','0');
+    const cu=clamp((t-firstArrive+.06)/.3),cs=t<firstArrive-.06?0:backOut(cu);
+    n.chev.setAttribute('transform',`translate(${n.end.x.toFixed(2)} ${n.end.y.toFixed(2)}) rotate(${n.ang.toFixed(2)}) scale(${Math.max(0,cs).toFixed(3)})`);
+  });}
+const loopClock={t:0};
+applyLoop(0);
+tl.to(loopClock,{t:4.7,duration:4.7,ease:'none',onUpdate:()=>applyLoop(loopClock.t)},0);
+// Each mark takes the arrival: a quick 4% swell about its own center, then settles.
+// (.coord-symbol scales from 0 0, so x/y compensate to keep the center fixed.)
+[['#coord-act',2.40,479.57],['#coord-mind',3.72,450.65]].forEach(([id,at,h])=>{
+  tl.to(id,{scale:1.04,x:-9.8,y:-h*.02,duration:.12,ease:'power2.out'},at);
+  tl.to(id,{scale:1,x:0,y:0,duration:.3,ease:'power2.inOut'},at+.12);});
 // Original Mind and Act marks move together with the third, connector component.
 tl.to(['#coord-paths','#coord-intent','#coord-outcomes','#coord-mind-initial','#coord-act-initial'],{opacity:0,duration:.26,ease:'power2.in'},4.43);
 tl.to('#coord-mind',{x:404.5,y:-114.9,scale:1.239,duration:1.0,ease:'power3.inOut'},4.63);
-tl.to('#coord-act',{x:-508,y:13,scale:1.123,duration:1.0,ease:'power3.inOut'},4.63);
+tl.to('#coord-act',{x:-558,y:13,scale:1.123,duration:1.0,ease:'power3.inOut'},4.63);
 ['#coord-dot-a','#coord-dot-b','#coord-dot-c'].forEach((id,i)=>tl.fromTo(id,{opacity:0,scale:.25,y:38},{opacity:1,scale:1,y:0,duration:.4,ease:'back.out(1.35)'},4.77+i*.11));
 tl.to(['#coord-mind','#coord-act','#coord-connector'],{opacity:0,duration:.19,ease:'sine.inOut'},5.58);
 tl.to('#coord-whole',{opacity:1,duration:.19,ease:'sine.inOut'},5.58);
@@ -102,7 +127,7 @@ tl.to('#coord-whole',{x:128,y:280,scale:.55862069,duration:1.13,ease:'power3.inO
 tl.to('#coord-whole-name',{scale:1,duration:1.13,ease:'power3.inOut'},7.12);
 tl.fromTo('#coord-triad-title',{opacity:0,y:34},{opacity:1,y:0,duration:.67,ease:'expo.out'},7.22);
 tl.fromTo('#coord-mind',{opacity:0,x:404.5,y:-114.9,scale:1.239},{opacity:1,x:147,y:-100,scale:.86734694,duration:1.0,ease:'power3.out',immediateRender:false},7.35);
-tl.fromTo('#coord-act',{opacity:0,x:-508,y:13,scale:1.123},{opacity:1,x:-83,y:-85,scale:.81632653,duration:1.0,ease:'power3.out',immediateRender:false},7.43);
+tl.fromTo('#coord-act',{opacity:0,x:-558,y:13,scale:1.123},{opacity:1,x:-133,y:-85,scale:.81632653,duration:1.0,ease:'power3.out',immediateRender:false},7.43);
 tl.fromTo(['#coord-mind-final','#coord-act-final'],{opacity:0,y:24},{opacity:1,y:0,duration:.48,stagger:.08,ease:'power3.out'},8.15);
 tl.fromTo('#coord-whole-caption',{opacity:0,y:18},{opacity:1,y:0,duration:.48,ease:'power3.out'},8.45);
 window.__timelines['coordination']=tl;

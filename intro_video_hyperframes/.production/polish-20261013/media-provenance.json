@@ -1,0 +1,269 @@
+[
+  {
+    "use": "task wall",
+    "task": "E",
+    "level": "Hard",
+    "source": "assets/videos/Mind/E/E__E_hard.mp4",
+    "source_sha256": "991e6959550fa84bf5eb74586ac519f07df5cf773892b3197ca4c72879769973",
+    "start": 68.07,
+    "end": 76.07,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-e-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "F",
+    "level": "Hard",
+    "source": "assets/videos/Mind/F/F__F_hard.mp4",
+    "source_sha256": "4617b94bcbf9d688e79b2a84553b3b6b54cba44614d88c5a148820cef233a9a9",
+    "start": 13.25,
+    "end": 21.25,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-f-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "P",
+    "level": "Hard",
+    "source": "assets/videos/Mind/P/P__P_hard_general_012.mp4",
+    "source_sha256": "7a2509626c23a6eb47113541b30eb13e661509e674c609ec65c7ebcc1ba6d9a9",
+    "start": 17.09,
+    "end": 25.09,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-p-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "S",
+    "level": "Hard",
+    "source": "assets/videos/Mind/S/S__S_hard.mp4",
+    "source_sha256": "13f0e09b5689eb28dc457f7efcdda3ca95a693490cb6b201d24c2d04ab52152c",
+    "start": 28.96,
+    "end": 36.96,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-s-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "M",
+    "level": "Hard",
+    "source": "assets/videos/Mind/M/M__M_hard_frontlabel.mp4",
+    "source_sha256": "2ab48df343a3a3b8be4772284426e7c677eb0615ff1133e840fc3770d42aa723",
+    "start": 39.85,
+    "end": 47.85,
+    "speed": 1,
+    "crop": "640x334 at 0,60",
+    "output": "assets/generated/polish-20261013/wall-m-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "FR1",
+    "level": "Hard",
+    "source": "assets/videos/Act/FR1/hard.mp4",
+    "source_sha256": "4d09a77316e87e752487ae964b515c73af31133b5cb978144d9ac6e0f1e124a3",
+    "start": 14.43,
+    "end": 22.43,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-fr1-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "FR2",
+    "level": "Hard",
+    "source": "assets/videos/Act/FR2/hard.mp4",
+    "source_sha256": "3023e443d62963c7ef9c8ca31989ede880a792ca165580fab182477febb1ea12",
+    "start": 5.84,
+    "end": 13.84,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-fr2-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "PR1",
+    "level": "Hard",
+    "source": "assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4",
+    "source_sha256": "ec6d5c2f04ef75a204fd915d9c4f2b652759f050345737812decee6b1b615c93",
+    "start": 4.2,
+    "end": 12.2,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-pr1-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "PR2",
+    "level": "Hard",
+    "source": "assets/videos/Act/PR2/PR2__PR2_Hard_control_20260919.mp4",
+    "source_sha256": "931b38fa1b351ab6e9f0e5334cdd7b4d915b793b5e4d166d4d0e24bc8ecc774f",
+    "start": 7.75,
+    "end": 15.75,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-pr2-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "PR3",
+    "level": "Hard",
+    "source": "assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4",
+    "source_sha256": "665dfa922284c867eb69cf1d7636f3008da3d4291df603d6dc07d3170130942e",
+    "start": 14.76,
+    "end": 22.759999999999998,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-pr3-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "CP01",
+    "level": "Hard",
+    "source": "assets/videos/Mind2Act/CP01/CP01__CP01_hard_adaptive_v2_20260920.mp4",
+    "source_sha256": "2b4839035a84527778b99ba275a71f0122cf9ea7fc7354efb5debf29e8a4ffc8",
+    "start": 55.96,
+    "end": 63.96,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-cp01-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "CP02",
+    "level": "Hard",
+    "source": "assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4",
+    "source_sha256": "4c83d8492f141b34df0b7df98cd234956d560ddfbec8cd8fc5ed9d64058eac62",
+    "start": 63.56,
+    "end": 71.56,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-cp02-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "CP03",
+    "level": "Hard",
+    "source": "assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4",
+    "source_sha256": "b713c7d8721d09f17f23c88598ef07df0f3465c650b5475ac62b4647283e83d9",
+    "start": 75.21,
+    "end": 83.21,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-cp03-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "CP04",
+    "level": "Hard",
+    "source": "assets/videos/Mind2Act/CP04/hard.mp4",
+    "source_sha256": "f80b70f8c5a717eca93e17a35d17d9a0cabef63c299b1a96bda46fe3ff54eb03",
+    "start": 64.91,
+    "end": 72.91,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-cp04-hard.mp4"
+  },
+  {
+    "use": "task wall",
+    "task": "CP05",
+    "level": "Hard",
+    "source": "assets/videos/Mind2Act/CP05/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4",
+    "source_sha256": "7ea71ab5dd89598c83144141ad3dfba1b6f4a59d733dc96a17fa693a0a7157c6",
+    "start": 89.39,
+    "end": 97.39,
+    "speed": 1,
+    "crop": "640x334 at 0,0",
+    "output": "assets/generated/polish-20261013/wall-cp05-hard.mp4"
+  },
+  {
+    "use": "intro pull-back plate",
+    "layout": "3x3, 640x360 cells; centre = piano-play",
+    "cells": [
+      {
+        "cell": 0,
+        "source": "Mind/P/P__P_hard_general_012.mp4",
+        "start": 17.09
+      },
+      {
+        "cell": 1,
+        "source": "Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4",
+        "start": 15.39
+      },
+      {
+        "cell": 2,
+        "source": "Mind/E/E__E_easy.mp4",
+        "start": 24.2
+      },
+      {
+        "cell": 3,
+        "source": "Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4",
+        "start": 35.33
+      },
+      {
+        "cell": 4,
+        "source": "assets/generated/clarity-20261010-155258/cases/piano-play.mp4",
+        "start": 0
+      },
+      {
+        "cell": 5,
+        "source": "Mind2Act/CP04/CP04__CP04_easy.mp4",
+        "start": 44.63
+      },
+      {
+        "cell": 6,
+        "source": "Act/FR1/easy.mp4",
+        "start": 9.19
+      },
+      {
+        "cell": 7,
+        "source": "Mind/S/S__S_easy.mp4",
+        "start": 25.92
+      },
+      {
+        "cell": 8,
+        "source": "Act/PR2/PR2__PR2_Easy_control_20260919.mp4",
+        "start": 8.19
+      }
+    ],
+    "duration": 2.4,
+    "output": "assets/generated/polish-20261013/intro-zoom-plate-3x3.mp4"
+  },
+  {
+    "use": "scale hero",
+    "task": "M",
+    "level": "Hard",
+    "source": "assets/generated/montage-hd-20261011-170017/M-Hard-1080p.mp4",
+    "source_sha256": "d998f690f2aebc459c578d1b07b084d27e6c8ae630082f7cb46f515f84c7ea5b",
+    "segments": [
+      [
+        2.0,
+        3.7
+      ],
+      [
+        6.2,
+        7.5
+      ]
+    ],
+    "speed": 1.4,
+    "crop": null,
+    "action_observed": "Six cups lower over the items, then one adjacent pair swaps positions. Static hold between segments omitted.",
+    "output": "assets/generated/polish-20261013/m-cover-swap-hero-1080p.mp4"
+  },
+  {
+    "use": "scale hero",
+    "task": "PR1",
+    "level": "Hard",
+    "source": "assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4",
+    "source_sha256": "ec6d5c2f04ef75a204fd915d9c4f2b652759f050345737812decee6b1b615c93",
+    "start": 6.0,
+    "end": 9.8,
+    "speed": 2.2,
+    "crop": "640x360 at 0,0, Lanczos upscale to 1920x1080 (source is 640x480)",
+    "action_observed": "Gripper holds the slider and drags it along the scale.",
+    "output": "assets/generated/polish-20261013/pr1-slide-hero-1080p.mp4"
+  }
+]

@@ -2,18 +2,24 @@
 set -euo pipefail
 PROJECT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 cd "$PROJECT_DIR"
-NODE_DIR="${HOME}/.nvm/versions/node/v22.23.3/bin"
-FFMPEG_DIR="${HOME}/miniconda3/envs/xvla-stable/bin"
-PLUGIN_CLI="${HOME}/.claude/plugins/cache/hyperframes/hyperframes/0.8.143/skills/hyperframes/scripts/plugin-cli.mjs"
-BROWSER_PATH="${HOME}/.cache/puppeteer/chrome-headless-shell/linux-148.0.7778.97/chrome-headless-shell-linux64/chrome-headless-shell"
-if [ -x "$NODE_DIR/node" ]; then export PATH="$NODE_DIR:$PATH"; fi
+FFMPEG_DIR="${FFMPEG_DIR:-/opt/homebrew/bin}"
+# 已安装的 HyperFrames 插件 CLI：优先取缓存中版本号最高的，回退到 marketplace 克隆
+PLUGIN_CLI=""
+for candidate in \
+  $(ls -1d "${HOME}/.claude/plugins/cache/hyperframes/hyperframes"/*/skills/hyperframes/scripts/plugin-cli.mjs 2>/dev/null | sort -V -r) \
+  "${HOME}/.claude/plugins/marketplaces/hyperframes/skills/hyperframes/scripts/plugin-cli.mjs"; do
+  if [ -f "$candidate" ]; then
+    PLUGIN_CLI="$candidate"
+    break
+  fi
+done
 if [ -x "$FFMPEG_DIR/ffmpeg" ]; then
   export PATH="$FFMPEG_DIR:$PATH"
   export HYPERFRAMES_FFMPEG_PATH="$FFMPEG_DIR/ffmpeg"
   export HYPERFRAMES_FFPROBE_PATH="$FFMPEG_DIR/ffprobe"
 fi
-if [ -x "$BROWSER_PATH" ]; then export HYPERFRAMES_BROWSER_PATH="${HYPERFRAMES_BROWSER_PATH:-$BROWSER_PATH}"; fi
-if [ -f "$PLUGIN_CLI" ]; then
+if [ -n "$PLUGIN_CLI" ]; then
   exec node "$PLUGIN_CLI" "$@"
 fi
-exec npx --yes hyperframes@0.8.143 "$@"
+# 回退版本与已安装插件保持一致
+exec npx --yes hyperframes@0.8.149 "$@"

@@ -13,7 +13,7 @@
 .mind-kicker{display:flex;align-items:center;gap:16px;font:400 25px/1.3 'IBM Plex Mono',monospace;color:#bdd9cc}
 .mind-mark{width:40px;height:40px;object-fit:contain}
 .mind-title{margin:18px 0 0;font-size:64px;font-weight:600;line-height:1.15}
-.mind-order{position:absolute;left:64px;bottom:64px;width:450px;padding:16px;background:#090e13ee;border:2px solid #bdd9cc;transform-origin:left bottom}
+.mind-order{position:absolute;left:64px;bottom:64px;width:450px;padding:16px;background:#090e13ee;border:2px solid #bdd9cc;transform-origin:0 0}
 .mind-order-caption{font:400 24px/1.3 'IBM Plex Mono',monospace;color:#e4e6d2;margin-bottom:14px}
 .mind-order img{display:block;width:414px;height:230px;object-fit:cover}
 </style>
@@ -24,14 +24,14 @@
       <video id="mind-grasp" class="clip mind-fill" src="assets/generated/cases/p-action1.mp4" data-start="1.7" data-duration="2.61" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video>
       <video id="mind-place" class="clip mind-fill" src="assets/generated/cases/p-action2.mp4" data-start="4.22" data-duration="2.325926" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video>
     </div>
+    <div class="mind-order" id="mind-order">
+      <div class="mind-order-caption">The order to remember</div>
+      <img src="assets/generated/cases/p-order-blue-crop.png" alt="Original order shown in this blue-cup meal-packing excerpt">
+    </div>
     <div class="mind-shade"></div>
     <div class="mind-heading" id="mind-heading">
       <div class="mind-kicker"><img class="mind-mark" src="assets/logos/Mind2Act-三个Logo-高清透明版/01-Mind-1308x1203.png" alt="Mind"><span>Mind / P · Meal packing</span></div>
       <h2 class="mind-title">Remember the order. Choose what comes next.</h2>
-    </div>
-    <div class="mind-order" id="mind-order">
-      <div class="mind-order-caption">The order to remember</div>
-      <img src="assets/generated/cases/p-order-blue-crop.png" alt="Original order shown in this blue-cup meal-packing excerpt">
     </div>
   </div>
 </div>
@@ -39,10 +39,31 @@
 const tl=gsap.timeline({paused:true});
 tl.fromTo('#mind-surface',{clipPath:'inset(0% 0% 100% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:.36,ease:'power3.inOut'},0);
 tl.fromTo('#mind-heading',{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:'power3.out'},.16);
-tl.fromTo('#mind-order',{opacity:0,y:36,scale:.94},{opacity:1,y:0,scale:1,duration:.55,ease:'power2.out'},.6);
 tl.fromTo('#mind-camera',{scale:1.025,x:0,y:0},{scale:1,x:0,y:0,duration:1.4,ease:'sine.out'},0);
 tl.to('#mind-camera',{scale:1.055,x:0,y:10,duration:2.15,ease:'sine.inOut'},1.82);
 tl.to('#mind-camera',{scale:1.085,x:-6,y:15,duration:1.45,ease:'sine.out'},4.22);
+// Shared move vocabulary (identical in 03/04): anticipation .12s power2.out counter-move,
+// travel power3.inOut along an arc, settle .14s power2.out back from a 1.5% overshoot.
+const E={p2o:u=>1-(1-u)*(1-u),p3io:u=>u<.5?4*u*u*u:1-Math.pow(-2*u+2,3)/2};
+function movePhase(t,m){const ant=.12,settle=.14,back=m.back==null?.03:m.back,over=.015,t1=m.t0+ant,t2=t1+m.travel;
+if(t<=m.t0)return{k:0,b:0,u:0};
+if(t<t1)return{k:-back*E.p2o((t-m.t0)/ant),b:0,u:0};
+if(t<t2){const u=E.p3io((t-t1)/m.travel);return{k:-back+(1+over+back)*u,b:Math.sin(Math.PI*u),u};}
+if(t<t2+settle)return{k:1+over*(1-E.p2o((t-t2)/settle)),b:0,u:1};
+return{k:1,b:0,u:1};}
+// The order crop peels off the monitor the moment the screen clears (footage 1.167s) and
+// arcs down to its card. Start pose: crop image exactly over the monitor screen as the camera
+// frames it at 1.05s (footage rect 686,6 548x308; camera scale 1.0019 about 960,486).
+const ORDER={t0:1.05,travel:.60},OK=549/414,OX=685.5-64-18*OK,OY=5.1-704.8-63.2*OK,OARC=90;
+const OBX=-(-OY),OBY=-(OX),OBN=Math.hypot(OBX,OBY);
+const orderEl=document.getElementById('mind-order'),orderCap=orderEl.querySelector('.mind-order-caption');
+const omove={t:0};
+function applyOrder(){const t=omove.t,m=movePhase(t,ORDER),r=1-m.k,bow=OARC*m.b/OBN,chrome=t<=ORDER.t0?0:Math.min(1,m.u*1.4);
+gsap.set(orderEl,{opacity:t<ORDER.t0?0:1,x:OX*r-OBX*bow,y:OY*r-OBY*bow,scale:1+(OK-1)*r+.04*m.b,
+  backgroundColor:`rgba(9,14,19,${(.933*chrome).toFixed(3)})`,borderColor:`rgba(189,217,204,${chrome.toFixed(3)})`});
+gsap.set(orderCap,{opacity:Math.max(0,Math.min(1,(m.u-.45)/.4))});}
+applyOrder();
+tl.to(omove,{t:5.925926,duration:5.925926,ease:'none',onUpdate:applyOrder},0);
 window.__timelines['mind']=tl;
 })();</script>
 </template></body></html>

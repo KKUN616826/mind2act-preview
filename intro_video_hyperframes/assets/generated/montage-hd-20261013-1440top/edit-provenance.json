@@ -1,0 +1,58 @@
+{
+  "status": "verified",
+  "note": "Hero cuts re-derived from new 1920x1440 (4:3, higher camera) re-renders. Crop keeps the TOP 1080 rows (crop=1920:1080:0:0) per art direction; bottom 360 rows (robot base / table front edge) dropped. Time segments match the previous 1080p hero cuts 1:1.",
+  "files": [
+    {
+      "source": "M-Hard-1920x1440.mp4",
+      "derived": "m-hero-1080p.mp4",
+      "source_start_seconds": 3.85,
+      "source_end_seconds": 7.45,
+      "duration_seconds": 1.8,
+      "playback_rate": 2,
+      "crop": "1920:1080:0:0",
+      "action_observed": "Cups cover down, then E/F swap once (cup-moving segment, same time range as the previous fullscreen Mind hero, new higher camera)."
+    },
+    {
+      "source": "CP04-Hard-1920x1440.mp4",
+      "derived": "cp04-hero-1080p.mp4",
+      "source_start_seconds": 112.0,
+      "duration_seconds": 10.0,
+      "crop": "1920:1080:0:0",
+      "action_observed": "Wide station view: ingredient tray, stove, recipe screen, serving tray (matches previous Mind2Act hero)."
+    },
+    {
+      "source": "M-Hard-1920x1440.mp4",
+      "derived": "../../categories-20261010-215252/m-wall.mp4 (replaced)",
+      "source_start_seconds": 60.0,
+      "duration_seconds": 8.0,
+      "crop": "1920:1002:0:0 then scale 640x334",
+      "action_observed": "Same segment family as the previous m-wall (arm swaps blue cube near buttons), new higher camera so the taxonomy card viewpoint matches the fullscreen carousel."
+    },
+    {
+      "source": "M-Hard-1920x1440.mp4",
+      "derived": "m-hero-1920x922.mp4",
+      "source_start_seconds": 3.85,
+      "source_end_seconds": 7.45,
+      "duration_seconds": 1.8,
+      "playback_rate": 2,
+      "crop": "1920:922:0:79 (top band; rows 79-1001)",
+      "action_observed": "Cups cover down + E/F swap. Same visible framing as the previously approved version, re-cut from the new camera at the hero box native 1920x922 so cover-crop is a no-op."
+    },
+    {
+      "source": "CP04-Hard-1920x1440.mp4",
+      "derived": "cp04-hero-1920x922.mp4",
+      "source_start_seconds": 112.0,
+      "duration_seconds": 10.0,
+      "crop": "1920:922:0:71 (rows 71-993; bottom lands on the table front edge at ~row 1000, no floor/robot base)",
+      "action_observed": "Wide station view from the new higher camera; recipe screen fully in frame."
+    },
+    {
+      "source": "montage-hd-20261013-134026/pr1-hero-1080p.mp4",
+      "derived": "pr1-hero-1920x922.mp4",
+      "source_start_seconds": 0.0,
+      "duration_seconds": 1.9,
+      "crop": "1740:836:90:36 then scale 1920x922 (cuts grey beyond table on BOTH sides: far edge row 35, near edge row 872)",
+      "action_observed": "PR1 slider push (resistance control). Slight 1.10x zoom to remove the beyond-table gap top and bottom."
+    }
+  ]
+}

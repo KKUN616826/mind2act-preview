@@ -6,7 +6,14 @@
 #intro-root *{box-sizing:border-box;letter-spacing:0}
 .intro-surface{position:absolute;inset:0;overflow:hidden;background:#090e13;color:#faf9f3;font-family:'Space Grotesk',sans-serif}
 .intro-abs{position:absolute}.intro-fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-#intro-six,#intro-all,#intro-shade{opacity:0}
+#intro-shade{opacity:0}
+/* One 8x6 world of 640x480 cells (native source size); the camera scales it as a single layer.
+   Cell gap matches the old mosaic: 2px at 240x180 = 8/3px at 640x480. */
+#intro-world{position:absolute;left:0;top:0;width:5760px;height:2400px;transform-origin:0 0}
+/* 9x5 wall, one cell per case; the piano sits in the center cell (row 2, col 4). */
+.intro-row{position:absolute;left:0;width:5760px;height:480px}
+.intro-cell{position:absolute;top:0;width:640px;height:480px;background:#060911;overflow:hidden}
+.intro-cellvid{position:absolute;left:0;top:0;width:637.333px;height:477.333px;object-fit:cover}
 .intro-symbol{position:absolute;object-fit:contain;transform-origin:center center}
 #intro-mind{left:350px;top:187px;width:370px;height:340.3px}
 #intro-act{left:1200px;top:187px;width:370px;height:362.1px}
@@ -21,14 +28,69 @@
 #intro-wordmark-window{position:relative;width:1000.8px;height:228px;overflow:hidden;flex:0 0 auto}
 #intro-wordmark{position:absolute;left:-168px;top:0;width:1389.6px;height:228px;max-width:none;object-fit:fill}
 #intro-tagline{left:190px;top:869px;width:1540px;font-size:34px;text-align:center;color:#e4e6d2;line-height:1.4}
+.intro-tagline-line{display:block}
 #intro-edge{left:65px;bottom:39px;font-family:'IBM Plex Mono',monospace;font-size:18px;color:#9fb2c8}
 #intro-accent{left:0;right:0;top:589px;height:5px;background:#f0d57e;transform-origin:left center}
 </style>
 <div id="intro-root" data-composition-id="intro" data-width="1920" data-height="1080" data-duration="5.185185">
 <div class="intro-surface" id="intro-surface">
-<div class="intro-abs" style="inset:0" id="intro-one"><video id="intro-source" class="clip intro-fill" src="assets/generated/clarity-20261010-155258/cases/piano-play.mp4" data-start="0" data-duration="1.5" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div>
-<div class="intro-abs" style="inset:0" id="intro-six"><video id="intro-sixvid" class="clip intro-fill" src="assets/generated/clarity-20261010-155258/montage/six-cases-mosaic.mp4" data-start="0" data-duration="1.5" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div>
-<div class="intro-abs" style="inset:0" id="intro-all" data-layout-allow-overflow><video id="intro-allvid" class="clip intro-fill" src="assets/generated/source-refresh-20261010-142512/montage/all-cases-mosaic.mp4" data-start="0" data-duration="5.185185" data-track-index="1" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div id="intro-world" data-layout-allow-overflow>
+<div class="intro-row" id="intro-row-0" style="top:0px">
+<div class="intro-cell" style="left:0px"><video id="intro-cell-00" class="clip intro-cellvid" src="assets/videos/Act/FR1/easy.mp4" data-start="0" data-duration="5.185185" data-media-start="9.187" data-track-index="2" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:640px"><video id="intro-cell-01" class="clip intro-cellvid" src="assets/videos/Act/FR2/easy.mp4" data-start="0" data-duration="5.185185" data-media-start="6.134" data-track-index="3" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1280px"><video id="intro-cell-02" class="clip intro-cellvid" src="assets/videos/Act/PR2/PR2__PR2_Easy_control_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="8.187" data-track-index="4" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1920px"><video id="intro-cell-03" class="clip intro-cellvid" src="assets/videos/Act/PR3/PR3__PR3_Easy_head_reference_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="15.389" data-track-index="5" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:2560px"><video id="intro-cell-04" class="clip intro-cellvid" src="assets/videos/Mind/E/E__E_easy.mp4" data-start="0" data-duration="5.185185" data-media-start="24.200" data-track-index="6" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3200px"><video id="intro-cell-05" class="clip intro-cellvid" src="assets/videos/Mind/F/F__F_easy.mp4" data-start="0" data-duration="5.185185" data-media-start="6.760" data-track-index="7" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3840px"><video id="intro-cell-06" class="clip intro-cellvid" src="assets/videos/Mind/M/M__M_easy_frontlabel.mp4" data-start="0" data-duration="5.185185" data-media-start="29.800" data-track-index="8" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:4480px"><video id="intro-cell-07" class="clip intro-cellvid" src="assets/videos/Mind/S/S__S_easy.mp4" data-start="0" data-duration="5.185185" data-media-start="25.920" data-track-index="9" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:5120px"><video id="intro-cell-08" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP02/CP02__CP02_easy_v6_完整示范与运控_20260920.mp4" data-start="0" data-duration="5.185185" data-media-start="35.328" data-track-index="10" data-hf-media-start-basis="local" muted playsinline></video></div>
+</div>
+<div class="intro-row" id="intro-row-1" style="top:480px">
+<div class="intro-cell" style="left:0px"><video id="intro-cell-10" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP04/CP04__CP04_easy.mp4" data-start="0" data-duration="5.185185" data-media-start="44.627" data-track-index="11" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:640px"><video id="intro-cell-11" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP05/CP05__CP05_Easy_中央单棒_8次复奏_20260923.mp4" data-start="0" data-duration="5.185185" data-media-start="33.430" data-track-index="12" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1280px"><video id="intro-cell-12" class="clip intro-cellvid" src="assets/videos/Act/FR1/hard.mp4" data-start="0" data-duration="5.185185" data-media-start="14.427" data-track-index="13" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1920px"><video id="intro-cell-13" class="clip intro-cellvid" src="assets/videos/Act/FR1/medium.mp4" data-start="0" data-duration="5.185185" data-media-start="11.107" data-track-index="14" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:2560px"><video id="intro-cell-14" class="clip intro-cellvid" src="assets/videos/Mind/E/E__E_medium.mp4" data-start="0" data-duration="5.185185" data-media-start="48.000" data-track-index="15" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3200px"><video id="intro-cell-15" class="clip intro-cellvid" src="assets/videos/Mind/F/F__F_medium.mp4" data-start="0" data-duration="5.185185" data-media-start="11.027" data-track-index="16" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3840px"><video id="intro-cell-16" class="clip intro-cellvid" src="assets/videos/Act/FR2/hard.mp4" data-start="0" data-duration="5.185185" data-media-start="5.840" data-track-index="17" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:4480px"><video id="intro-cell-17" class="clip intro-cellvid" src="assets/videos/Act/PR1/PR1__PR1_Hard_control_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="4.907" data-track-index="18" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:5120px"><video id="intro-cell-18" class="clip intro-cellvid" src="assets/videos/Act/PR2/PR2__PR2_Hard_control_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="7.747" data-track-index="19" data-hf-media-start-basis="local" muted playsinline></video></div>
+</div>
+<div class="intro-row" id="intro-row-2" style="top:960px">
+<div class="intro-cell" style="left:0px"><video id="intro-cell-20" class="clip intro-cellvid" src="assets/videos/Mind/E/E__E_hard.mp4" data-start="0" data-duration="5.185185" data-media-start="68.067" data-track-index="20" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:640px"><video id="intro-cell-21" class="clip intro-cellvid" src="assets/videos/Mind/F/F__F_hard.mp4" data-start="0" data-duration="5.185185" data-media-start="13.254" data-track-index="21" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1280px"><video id="intro-cell-22" class="clip intro-cellvid" src="assets/videos/Mind/M/M__M_hard_frontlabel.mp4" data-start="0" data-duration="5.185185" data-media-start="39.854" data-track-index="22" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1920px"><video id="intro-cell-23" class="clip intro-cellvid" src="assets/videos/Mind/P/P__P_hard_general_012.mp4" data-start="0" data-duration="5.185185" data-media-start="17.086" data-track-index="23" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:2560px"><video id="intro-cell-24" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP05/CP05__CP05_Hard_揭罩与音量调节_12次复奏_20260923.mp4" data-start="0" data-duration="5.185185" data-media-start="89.393" data-track-index="24" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3200px"><video id="intro-cell-25" class="clip intro-cellvid" src="assets/videos/Act/PR3/PR3__PR3_Hard_head_reference_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="14.760" data-track-index="25" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3840px"><video id="intro-cell-26" class="clip intro-cellvid" src="assets/videos/Mind/P/easy.mp4" data-start="0" data-duration="5.185185" data-media-start="15.500" data-track-index="26" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:4480px"><video id="intro-cell-27" class="clip intro-cellvid" src="assets/videos/Mind/S/S__S_hard.mp4" data-start="0" data-duration="5.185185" data-media-start="28.960" data-track-index="27" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:5120px"><video id="intro-cell-28" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP01/CP01__CP01_hard_adaptive_v2_20260920.mp4" data-start="0" data-duration="5.185185" data-media-start="55.960" data-track-index="28" data-hf-media-start-basis="local" muted playsinline></video></div>
+</div>
+<div class="intro-row" id="intro-row-3" style="top:1440px">
+<div class="intro-cell" style="left:0px"><video id="intro-cell-30" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP02/CP02__CP02_hard_v6_完整示范与运控_20260920.mp4" data-start="0" data-duration="5.185185" data-media-start="63.556" data-track-index="29" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:640px"><video id="intro-cell-31" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP03/CP03__CP03_Hard_7盘_三档20mms_原速.mp4" data-start="0" data-duration="5.185185" data-media-start="75.214" data-track-index="30" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1280px"><video id="intro-cell-32" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP04/hard.mp4" data-start="0" data-duration="5.185185" data-media-start="64.907" data-track-index="31" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1920px"><video id="intro-cell-33" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP03/CP03__CP03_Easy_3盘_12mms_连续空槽_原速.mp4" data-start="0" data-duration="5.185185" data-media-start="33.854" data-track-index="32" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:2560px"><video id="intro-cell-34" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP01/CP01__CP01_easy_adaptive_v2_20260920.mp4" data-start="0" data-duration="5.185185" data-media-start="22.960" data-track-index="33" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3200px"><video id="intro-cell-35" class="clip intro-cellvid" src="assets/videos/Act/PR1/PR1__PR1_Easy_control_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="4.787" data-track-index="34" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3840px"><video id="intro-cell-36" class="clip intro-cellvid" src="assets/videos/Act/FR2/medium.mp4" data-start="0" data-duration="5.185185" data-media-start="6.760" data-track-index="35" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:4480px"><video id="intro-cell-37" class="clip intro-cellvid" src="assets/videos/Act/PR1/PR1__PR1_Medium_control_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="4.160" data-track-index="36" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:5120px"><video id="intro-cell-38" class="clip intro-cellvid" src="assets/videos/Act/PR2/PR2__PR2_Medium_control_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="8.174" data-track-index="37" data-hf-media-start-basis="local" muted playsinline></video></div>
+</div>
+<div class="intro-row" id="intro-row-4" style="top:1920px">
+<div class="intro-cell" style="left:0px"><video id="intro-cell-40" class="clip intro-cellvid" src="assets/videos/Act/PR3/PR3__PR3_Medium_head_reference_20260919.mp4" data-start="0" data-duration="5.185185" data-media-start="14.800" data-track-index="38" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:640px"><video id="intro-cell-41" class="clip intro-cellvid" src="assets/videos/Mind/M/M__M_medium_frontlabel.mp4" data-start="0" data-duration="5.185185" data-media-start="35.987" data-track-index="39" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1280px"><video id="intro-cell-42" class="clip intro-cellvid" src="assets/videos/Mind/P/medium.mp4" data-start="0" data-duration="5.185185" data-media-start="15.500" data-track-index="40" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:1920px"><video id="intro-cell-43" class="clip intro-cellvid" src="assets/videos/Mind/S/S__S_medium.mp4" data-start="0" data-duration="5.185185" data-media-start="28.800" data-track-index="41" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:2560px"><video id="intro-cell-44" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP01/CP01__CP01_medium_adaptive_v2_20260920.mp4" data-start="0" data-duration="5.185185" data-media-start="43.120" data-track-index="42" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3200px"><video id="intro-cell-45" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP02/CP02__CP02_medium_v6_完整示范与运控_20260920.mp4" data-start="0" data-duration="5.185185" data-media-start="54.431" data-track-index="43" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:3840px"><video id="intro-cell-46" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP03/CP03__CP03_Medium_5盘_二档16mms_原速.mp4" data-start="0" data-duration="5.185185" data-media-start="61.627" data-track-index="44" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:4480px"><video id="intro-cell-47" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP04/medium.mp4" data-start="0" data-duration="5.185185" data-media-start="49.534" data-track-index="45" data-hf-media-start-basis="local" muted playsinline></video></div>
+<div class="intro-cell" style="left:5120px"><video id="intro-cell-48" class="clip intro-cellvid" src="assets/videos/Mind2Act/CP05/CP05__CP05_Medium_双臂揭罩_8次复奏_20260923.mp4" data-start="0" data-duration="5.185185" data-media-start="52.530" data-track-index="46" data-hf-media-start-basis="local" muted playsinline></video></div>
+</div>
+</div>
 <div id="intro-shade" class="intro-abs" style="inset:0;background:#090e13"></div>
 <img id="intro-mind" class="intro-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/01-Mind-1308x1203.png" alt="Mind">
 <img id="intro-act" class="intro-symbol" src="assets/logos/Mind2Act-三个Logo-高清透明版/02-Act-1268x1241.png" alt="Act">
@@ -37,13 +99,36 @@
 <div class="intro-abs" id="intro-eyebrow">A NEW WORLD OF EMBODIED INTELLIGENCE</div>
 <div class="intro-abs" id="intro-accent"></div>
 <div class="intro-abs" id="intro-brand"><div id="intro-wordmark-window" data-layout-allow-overflow><img id="intro-wordmark" src="assets/logos/min2act_world.png" alt="Mind2Act World"></div></div>
-<div class="intro-abs" id="intro-tagline">A benchmark for reasoning, execution, and coordination.</div>
+<div class="intro-abs" id="intro-tagline"><span class="intro-tagline-line">Benchmarking Robot Mind, Physical Act,</span><span class="intro-tagline-line">and Mind-Act Coordination in Robotic Manipulation.</span></div>
 <div class="intro-abs" id="intro-edge">MIND / ACT / MIND2ACT</div>
 </div></div>
 <script>(function(){const tl=gsap.timeline({paused:true});
-tl.fromTo('#intro-one',{scale:1.08},{scale:1,duration:.55,ease:'power2.out'},0);
-tl.fromTo('#intro-six',{opacity:0,scale:1.8},{opacity:1,scale:1,duration:.45,ease:'expo.out'},.37);
-tl.fromTo('#intro-all',{opacity:0,scale:2.5},{opacity:1,scale:1.015,duration:.82,ease:'power3.inOut'},1.02);
+// Camera: hold on the piano, then a two-stage pull-back with a held pause at the 3x3
+// view, so the zoom reads in beats at 81 BPM (beat = 0.7407s):
+//   0.00-0.37  hold on the single case (half beat)
+//   0.37-1.11  pull back to the 3x3 view  (lands on beat 1.5)
+//   1.11-1.48  hold — the rows start their drift under it (half-beat rest)
+//   1.48-2.22  pull back to the whole wall (lands exactly on beat 3)
+// Each leg eases in-out; scale moves in log space, so speed is even within a leg.
+const G=8/3,CW=640-G,CH=480-G,CX=2560+CW/2,CY=960+CH/2;
+const S_PIANO=1920/CW,S_MID=1,S_WALL=.452,T0=.37,T1=1.11,T2=1.48,T3=2.22;
+function ez(u){return u<.5?2*u*u:1-2*(1-u)*(1-u);}
+function cameraAt(t){const l0=Math.log(S_PIANO),l1=Math.log(S_MID),l2=Math.log(S_WALL);let ls=l0;
+  if(t>=T3)ls=l2;
+  else if(t>=T2)ls=l1+(l2-l1)*ez((t-T2)/(T3-T2));
+  else if(t>=T1)ls=l1;
+  else if(t>=T0)ls=l0+(l1-l0)*ez((t-T0)/(T1-T0));
+  return{ls,cx:CX,cy:CY};}
+// Carousel: rows start gliding at 1.25s and ease in, so motion hands off from the zoom.
+const D0=1.25,D1=5.185185,DRIFT=544;
+function drift(t){const k=Math.min(1,Math.max(0,(t-D0)/(D1-D0)));return DRIFT*(1-Math.cos(k*Math.PI/2));}
+const rows=[0,1,2,3,4].map(r=>document.getElementById('intro-row-'+r));
+const cam={t:0};
+function applyCamera(){const c=cameraAt(cam.t),s=Math.exp(c.ls),cx=c.cx,cy=c.cy;
+gsap.set('#intro-world',{x:960-cx*s,y:540-cy*s,scale:s,transformOrigin:'0 0'});
+const d=drift(cam.t);rows.forEach((row,r)=>gsap.set(row,{x:r%2?d:-d}));}
+applyCamera();
+tl.to(cam,{t:5.185185,duration:5.185185,ease:'none',onUpdate:applyCamera},0);
 tl.to('#intro-shade',{opacity:.88,duration:.74,ease:'power2.out'},1.10);
 tl.fromTo('#intro-mind',{opacity:0,x:-260,y:-35,rotation:-18,scale:1.18},{opacity:1,x:0,y:0,rotation:0,scale:1,duration:.65,ease:'expo.out'},1.02);
 tl.fromTo('#intro-act',{opacity:0,x:260,y:35,rotation:18,scale:1.18},{opacity:1,x:0,y:0,rotation:0,scale:1,duration:.65,ease:'expo.out'},1.12);

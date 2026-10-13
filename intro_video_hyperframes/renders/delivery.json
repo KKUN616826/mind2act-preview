@@ -1,18 +1,18 @@
 {
-  "id": "mind2act-world-promo-20261012-091339",
-  "created_at": "2026-10-12T09:13:39+08:00",
-  "master": "renders/mind2act-world-promo-1080p-20261012-091339.mp4",
-  "web": "renders/mind2act-world-promo-web-20261012-091339.mp4",
-  "poster": "renders/mind2act-world-poster-20261012-091339.jpg",
+  "id": "mind2act-world-promo-20261013-2036",
+  "created_at": "2026-10-13T20:40:49+08:00",
+  "master": "renders/mind2act-world-promo-1080p-20261013-2036.mp4",
+  "web": "renders/mind2act-world-promo-web-20261013-2036.mp4",
+  "poster": "renders/mind2act-world-poster-20261013-2036.jpg",
   "authored_duration": 74.9740740741,
-  "framework": "HyperFrames 0.8.143",
+  "framework": "HyperFrames 0.8.149",
   "preview_url": "http://localhost:3052/#project/mind2act-hyperframes-blank-20261010-111117",
   "files": {
     "master": {
-      "path": "renders/mind2act-world-promo-1080p-20261012-091339.mp4",
-      "bytes": 89727688,
-      "sha256": "ecc92524942afa7e145191c4f96215ac8b9482ac4d9210894c5d7e9cd488706b",
-      "duration": 75,
+      "path": "renders/mind2act-world-promo-1080p-20261013-2036.mp4",
+      "bytes": 43934554,
+      "sha256": "0fd06c6d79a93303f27e611ab0a7b6b6a8bc821ae7ad40bf1dfd2e8209e67809",
+      "duration": 75.0,
       "video_codec": "h264",
       "width": 1920,
       "height": 1080,
@@ -23,10 +23,10 @@
       "audio_channels": 2
     },
     "web": {
-      "path": "renders/mind2act-world-promo-web-20261012-091339.mp4",
-      "bytes": 12158514,
-      "sha256": "b1421ac1be099a025616df8c57f0eec50c9a5d1b97948fdb819256de628f6b53",
-      "duration": 75,
+      "path": "renders/mind2act-world-promo-web-20261013-2036.mp4",
+      "bytes": 7498659,
+      "sha256": "608a2f33855c93b181e365deba191ae1a90b3180db52fea3e80cbe10102903e6",
+      "duration": 75.0,
       "video_codec": "h264",
       "width": 1920,
       "height": 1080,
@@ -50,7 +50,8 @@
     "url_removal": ".production/hd-difficulty-invite-20261011-171026/check-url-removal.json",
     "ending_frame_review": ".production/hd-difficulty-invite-20261011-171026/url-removal-end.jpg",
     "audio_preserved_against": "renders/mind2act-world-promo-1080p-20261011-174810.mp4",
-    "aac_stream_sha256": "1c33b895d7ae87c2895fbea144ccb92dd04d6fd27aa2b6e448d4791d1f037008"
+    "aac_stream_sha256": "1c33b895d7ae87c2895fbea144ccb92dd04d6fd27aa2b6e448d4791d1f037008",
+    "note": "Re-rendered 2026-10-13: new higher-camera hero cuts (M / PR1 / CP04) with unified tabletop framing; staged beat-aligned intro pull-back; poster moved to the 3.5s case-wall frame. Prior check artifacts under .production/ refer to the 20261012 delivery."
   },
   "music_source": "assets/audio/The Midnight - The Equaliser (Not Alone).mp3",
   "music_treatment": "BGM-only Demucs instrumental stem; newly generated narration mixed separately.",
