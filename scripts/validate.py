@@ -17,7 +17,7 @@ class Page(HTMLParser):
         self.in_data = False
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
-        self.links += [a[k] for k in ('src', 'href', 'poster') if k in a]
+        self.links += [a[k] for k in ('src', 'href', 'poster', 'data-src') if k in a]
         if 'id' in a: self.ids.append(a['id'])
         if tag == 'script': self.in_data = a.get('id')
     def handle_endtag(self, tag):
@@ -85,6 +85,22 @@ def main():
     assert 'Contract-Guided Coordination of Cognitive and Reactive Agents for Robotic Manipulation' in content
     assert 'href="mindaccord/index.html"' in content
     print('PASS: approved subtitle, Mind2Act World branding and three named dimensions')
+    previews = json.loads((ROOT / 'data/task-previews.json').read_text())['previews']
+    assert len(previews) == len({item['source'] for item in previews}) == 30
+    for item in previews:
+        for key in ('source', 'preview', 'poster'):
+            asset = ROOT / item[key]
+            assert asset.is_file(), item[key]
+            assert hashlib.sha256(asset.read_bytes()).hexdigest() == item[key + 'Sha256'], item[key]
+        assert item['previewBytes'] <= item['sourceBytes']
+        assert f'data-src="{item["preview"]}"' in content
+        assert f'poster="{item["poster"]}"' in content
+        assert item['video']['width'] == 640 and item['video']['height'] == 480
+        assert item['video']['r_frame_rate'] == '30/1'
+        assert item['usesOriginal'] or item['ssim'] >= .98
+    assert (ROOT / 'media/fonts/space-grotesk/SpaceGrotesk-Variable.woff2').read_bytes().startswith(b'wOF2')
+    assert (ROOT / 'media/fonts/space-grotesk/OFL.txt').is_file()
+    print('PASS: 30 homepage previews, posters, source hashes and local licensed font')
     from validate_hero import validate_hero
     validate_hero(content)
 

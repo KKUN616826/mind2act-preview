@@ -13,6 +13,8 @@ const { chromium } = require('playwright');
     await page.goto(process.env.HERO_PREVIEW_URL || 'http://127.0.0.1:8765/', {waitUntil: 'domcontentloaded'});
     const frame = page.frameLocator('.lunar-worlds-frame');
     await frame.locator('.node').first().waitFor();
+    const tableHeaders = await page.locator('#top-ten th').allTextContents();
+    assert.ok(tableHeaders.includes('Generalization') && tableHeaders.includes('Memory'));
     for (const [width, height] of [[1440,900], [1920,1080], [1440,768], [1920,700], [820,1100], [390,900], [320,900], [1440,900]]) {
       await page.setViewportSize({width,height});
       await page.locator('.lunar-worlds-frame').scrollIntoViewIfNeeded();
@@ -36,17 +38,19 @@ const { chromium } = require('playwright');
         assert.ok(Math.abs(layout.ratio - 1) < 0.001, 'Keep SVG icons undistorted');
         assert.equal(layout.nodesInStage, true);
       } else assert.equal(layout.natural, true);
-      for (const [key, image, background, column] of [
-        ['mind', 'mind-moon-upper.png', 'url(#day)', 1],
-        ['act', 'act-moon-lower.png', 'url(#sky)', 2],
-        ['coupling', 'lunar-ranking-moon.png', 'url(#daynight)', 3],
+      for (const [key, image, background] of [
+        ['mind', 'mind-moon-upper.png', 'url(#day)'],
+        ['act', 'act-moon-lower.png', 'url(#sky)'],
+        ['coupling', 'lunar-ranking-moon.png', 'url(#daynight)'],
       ]) {
         await frame.locator(`button[data-world="${key}"]`).click();
         assert.equal(await frame.locator(`button[data-world="${key}"]`).getAttribute('aria-selected'), 'true');
         assert.equal(await frame.locator('#scene > image').getAttribute('href'), 'media/images/' + image);
         assert.equal(await frame.locator('#scene > rect').getAttribute('fill'), background);
         assert.equal(await frame.locator(`button[data-world="${key}"] img`).evaluate(img => img.complete && img.naturalWidth > 0), true);
-        await page.waitForFunction(col => document.querySelector('#top-ten th.selected-dimension')?.cellIndex === col, column);
+        // The latest comprehensive table keeps all capability columns visible.
+        assert.equal(await page.locator('#top-ten th.selected-dimension').count(), 0);
+        assert.deepEqual(await page.locator('#top-ten th').allTextContents(), tableHeaders);
         await frame.locator('.node').first().focus();
         assert.match(await frame.locator('.tooltip').textContent(), /illustrative/);
         if (process.env.HERO_SCREENSHOTS && [390,1440,1920].includes(width)) {
@@ -67,7 +71,7 @@ const { chromium } = require('playwright');
     await page.locator('#model-search').fill('');
     assert.ok(await page.locator('#top-ten tbody tr:visible').count() > 1);
     assert.ok(await page.locator('#top-ten a[href^="rollouts/"]').count() > 0);
-    assert.match(await page.locator('.leader-status').textContent(), /pending publication/);
+    assert.match(await page.locator('.leader-status').textContent(), /pending validation.*unreported result/);
     await page.locator('.full-leader-link a').click();
     await page.waitForURL('**/leaderboard.html');
     assert.ok(await page.locator('table tbody tr').count() > 0);

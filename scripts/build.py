@@ -7,6 +7,7 @@ from render_cases import card, case_md, cover, e
 from leaderboard import render as render_leaderboard
 from build_rollouts import build_rollouts
 from hero_demo import render as render_hero
+from task_previews import apply_previews
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -71,6 +72,7 @@ def main():
     page = (ROOT / 'scripts/showcase.html').read_text()
     page = page.replace('__RESEARCH_INTRO__', (ROOT / 'scripts/research_intro.html').read_text())
     page = page.replace('__HERO_DEMO__', render_hero())
+    page = page.replace('__PROJECT_POLISH_CSS__', (ROOT / 'scripts/project-polish.css').read_text())
     lunar_data = json.loads((ROOT / 'data/lunar-preview.json').read_text())
     for model in lunar_data['models']:
         model['icon_svg'] = (ROOT / ('media/icons/' + model['icon'] + '.svg')).read_text()
@@ -106,7 +108,8 @@ def main():
     for key, value in {'INSIGHT_MEDIA': media, 'TASK_WALL': task_wall(records), 'CASES': '\n'.join(card(c) for c in records), 'PUBLIC_DATA': payload, 'VIDEO_COUNT': str(videos), 'IMAGE_COUNT': str(images)}.items():
         page = page.replace('__' + key + '__', value)
     assert not re.search(r'__[A-Z_]+__', page)
-    (ROOT / 'index.html').write_text(page)
+    page = apply_previews(page)
+    (ROOT / 'index.html').write_text(page, newline='\n')
     print(f'Built {len(records)} cases, {videos} videos, {images} images.')
 
 if __name__ == '__main__':
