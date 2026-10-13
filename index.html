@@ -1237,7 +1237,7 @@ body .rd-hero .mind-reference-hero{height:calc(100svh - 90px)!important;min-heig
 
 
 <span id="model-rollouts"></span>
-<section class="academic-section" id="news"><div class="section-copy"><h2>News</h2></div><p class="news-label">Layout preview · sample update copy; dates and announcements to be confirmed.</p><ol class="news-list"><li><time datetime="2026-10-13">Oct 13<span>2026</span></time><p>Explore task demonstrations with a redesigned viewing page, clearer instructions, and Easy / Medium / Hard switching.</p></li><li><time datetime="2026-10-12">Oct 12<span>2026</span></time><p>Browse 15 robotic manipulation tasks across the Mind, Act, and Mind2Act suites.</p></li><li><time datetime="2026-10-11">Oct 11<span>2026</span></time><p>Preview the three leaderboard views and the evaluation dimensions for comparing reasoning and physical execution.</p></li></ol><a href="news.html">All updates →</a></section>
+<section class="academic-section" id="news"><div class="section-copy"><h2>News</h2></div><ol class="news-list"><li><time datetime="2026-10-13">Oct 13<span>2026</span></time><p>Explore task demonstrations with a redesigned viewing page, clearer instructions, and Easy / Medium / Hard switching.</p></li><li><time datetime="2026-10-12">Oct 12<span>2026</span></time><p>Browse 15 robotic manipulation tasks across the Mind, Act, and Mind2Act suites.</p></li><li><time datetime="2026-10-11">Oct 11<span>2026</span></time><p>Preview the three leaderboard views and the evaluation dimensions for comparing reasoning and physical execution.</p></li></ol><a href="news.html">All updates →</a></section>
 <section class="academic-section contributors" id="contributors"><div class="section-copy"><h2>Contributors</h2></div><div class="preview-badge">To be announced</div></section>
 <section class="academic-section compact-resources" id="resources-overview"><h2>Resources</h2><div class="resource-pills"><a href="docs/PhysCo_Technical_Report_v0.1.pdf">Technical Report</a><a href="docs/PhysCo_Cases.md">Task Specifications</a><a href="docs/PhysCo_Media.md">Media Index</a><a href="https://github.com/yu2hi13/physco-bench">Repository</a><a href="data/showcase-cases.json">Structured Data</a></div></section>
 <span id="motivation" hidden></span><span id="insight" hidden></span><span id="insight-goal" hidden></span><span id="insight-action" hidden></span><span id="insight-feedback" hidden></span><span id="design" hidden></span>
@@ -2332,4 +2332,12 @@ body .version-status strong { font-weight: 700 !important; }
   :root { --project-content-width: calc(100% - 28px); }
   body .version-status { padding: 16px !important; }
 }
+</style>
+<style id="news-alignment-final">
+body main #news.academic-section{box-sizing:border-box!important;width:var(--project-content-width,min(1200px,calc(100% - 48px)))!important;max-width:1200px!important;margin:36px auto!important;padding:24px 0!important}
+body #news .section-copy{width:100%!important;max-width:none!important;margin:0 0 20px!important;padding:0!important;text-align:left!important}
+body #news .section-copy h2{margin:0!important;padding:0!important;text-align:left!important}
+body #news .news-list{margin:0 0 16px!important;padding:0!important;border:0!important;border-radius:0!important;background:none!important;max-height:none!important;overflow:visible!important}
+body #news .news-list li{padding:22px 0!important;grid-template-columns:110px minmax(0,1fr);gap:26px;border-bottom:1px solid #d9e1de}
+@media(max-width:600px){body #news .news-list li{grid-template-columns:70px minmax(0,1fr);gap:16px}}
 </style>
