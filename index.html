@@ -2341,3 +2341,25 @@ body #news .news-list{margin:0 0 16px!important;padding:0!important;border:0!imp
 body #news .news-list p{font-size:18px!important;line-height:1.65!important;margin:0!important}body #news .news-list li{padding:22px 0!important;grid-template-columns:110px minmax(0,1fr);gap:26px;border-bottom:1px solid #d9e1de}
 @media(max-width:600px){body #news .news-list li{grid-template-columns:70px minmax(0,1fr);gap:16px}}
 </style>
+<style id="restore-original-reading-width">
+body #introduction.research-abstract,
+body .version-status,
+body #research-motivation.facet-motivation,
+body #research-overview,
+body main #top-ten.academic-section,
+body main #news.academic-section {
+  width: min(1040px, calc(100% - 48px)) !important;
+  max-width: 1040px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+@media (max-width:700px) {
+  body #introduction.research-abstract,
+  body .version-status,
+  body #research-motivation.facet-motivation,
+  body #research-overview,
+  body main #top-ten.academic-section,
+  body main #news.academic-section { width: calc(100% - 28px) !important; }
+}
+</style>
