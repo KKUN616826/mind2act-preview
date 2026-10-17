@@ -10,3 +10,7 @@ html[data-embedded-fit=true] .stage>svg{position:absolute;inset:0;width:100%;hei
 @media(max-width:700px){.stage nav button{gap:4px;padding:7px 6px}.stage nav button img{width:18px;height:18px}}
 
 .stage nav button span{white-space:nowrap}.stage nav{background:#f5f7f0ed!important}.stage nav button{font:500 15px Arial,sans-serif!important;padding:9px 12px!important}.stage nav button img{display:none!important}.stage .node .icon{color:#25485b;fill:currentColor}.stage .node:focus circle,.stage .node:hover circle{stroke:#e9cc86;stroke-width:3}@media(max-width:700px){.stage nav{left:10px!important;top:10px!important;gap:0!important}.stage nav button{font-size:12px!important;padding:8px!important}}
+
+.stage .node .icon{color:#dbe8e9;fill:currentColor}.stage .float-badge>circle:nth-child(2){fill-opacity:.82;stroke-opacity:.8}
+
+.stage .node .float-badge>circle:nth-child(2){fill:#112f44!important;fill-opacity:.86;stroke:#8faebb!important;stroke-width:1.5}.stage .node .float-badge>circle:first-child{fill:#9bcad7!important;opacity:.08}
