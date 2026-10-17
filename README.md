@@ -86,3 +86,13 @@ Act 聚焦的导出在 `scripts/export_hero_presentation.py` 中维护，主导�
 Act 的 GT 指真实下发的控制器参考目标，不是通过完整验收的专家轨迹。目标棒尖高度取 `feedback82.json` 的 `target`；实测高度取 `trajectory.json` 的 30 Hz 工具位置并线性插值到 120 Hz；六个关节目标／实测值分别取 `control.npz` 同一控制步的 `action` 与 `joint_position_after`，弧度转为度。目标在控制步前下发，关节实测在该步后采样；不使用 `feedback82.measured_tip` 的步前观测替代步后观测，也不平移曲线制造贴合。完整参考曲线预先显示，实测曲线、关节读数和事件点由播放器时间重算。
 
 三榜图的渲染与自适应样式维护于 `scripts/lunar-worlds.js`、`scripts/lunar-worlds.css`；`scripts/lunar-embed.js` 根据桌面可视高度减去导航栏和 32px 留白设置面板高度，移动端沿用自然内容高度。Mind 对应浅色阳面、Act 对应深色阴面、Mind2Act 保留双色渐变；分类键和 `mind2act-world` 消息协议保持不变。
+
+### 正式项目封面与精简介绍（2026-10-17）
+
+首页沿用最新版 920px 版心及 Sora 标题。机构、标题、作者、贡献说明及资源入口组成居中的正式项目封面。五位作者的共同第一作者标记与 Yuzhi Huang 的 Project Lead 标记按已确认的技术报告同步；不包含占位作者、占位机构或多校占位 logo。预览日期与未开放的报告、社区邀请保持明确标注。
+
+`scripts/academic-cover.css` 独立维护封面与介绍排版；`scripts/research_intro.html` 维护署名和经过确认的 212 词介绍。正文采用本地 Source Serif 4（Regular / Semibold WOFF2，附 OFL 许可证；来源 https://github.com/adobe-fonts/source-serif/tree/release）。清华 SIGS 标识从原首页内嵌图像提取为静态 PNG；社区 SVG 来源与许可证见 `media/icons/community/README.md`。
+
+当前首页只展示 15 个 Medium 视频预览，完整 benchmark 说明已迁移到独立页面。导出器仍维护全部 30 个 Easy / Medium 预览资源，构建按模板中实际使用的预览绑定。已回填最新首页的 Feishu、News、独立 benchmark 入口、920px 样式及地月排行榜引用。正常构建只生成缺失的 rollout 页面，保留已单独更新的页面；只有显式调用 `build_rollouts(..., overwrite=True)` 才会覆盖它们。
+
+`test_project_browser.cjs` 覆盖 320、390、820、1440、1920px 下的版心、标题、作者标记、社区图标、按需视频加载、分享及字体加载失败回退。字体和图标均本地提供，不依赖外部 CDN。

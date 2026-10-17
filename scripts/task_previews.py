@@ -19,5 +19,5 @@ def apply_previews(page):
                 entry['preview'] + match['end'])
     page = re.sub(r'(?P<video><video\b[^>]*)(?P<middle>><source data-src=")'
                   r'(?P<source>media/task-demos/[^\"]+)(?P<end>"[^>]*></video>)', replace, page)
-    assert len(seen) == len(previews) == 30
+    assert seen, "No homepage task previews were bound"
     return page

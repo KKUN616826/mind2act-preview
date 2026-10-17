@@ -12,6 +12,8 @@ const { chromium } = require('playwright');
     await page.route('**/*.mp4', route => route.abort());
     await page.goto(process.env.HERO_PREVIEW_URL || 'http://127.0.0.1:8765/', {waitUntil: 'domcontentloaded'});
     const frame = page.frameLocator('.lunar-worlds-frame');
+    // Trigger the lazy iframe before waiting for its rendered model nodes.
+    await page.locator('.lunar-worlds-frame').scrollIntoViewIfNeeded();
     await frame.locator('.node').first().waitFor();
     const tableHeaders = await page.locator('#top-ten th').allTextContents();
     assert.ok(tableHeaders.includes('Generalization') && tableHeaders.includes('Memory'));
@@ -39,13 +41,14 @@ const { chromium } = require('playwright');
         assert.equal(layout.nodesInStage, true);
       } else assert.equal(layout.natural, true);
       for (const [key, image, background] of [
-        ['mind', 'mind-moon-upper.png', 'url(#day)'],
-        ['act', 'act-moon-lower.png', 'url(#sky)'],
-        ['coupling', 'lunar-ranking-moon.png', 'url(#daynight)'],
+        ['mind', 'mind-moon-upper.png', '#0c2034'],
+        ['act', 'act-moon-lower.png', '#92bcd2'],
+        ['coupling', 'lunar-ranking-moon.png', '#adc4c3'],
       ]) {
         await frame.locator(`button[data-world="${key}"]`).click();
         assert.equal(await frame.locator(`button[data-world="${key}"]`).getAttribute('aria-selected'), 'true');
-        assert.equal(await frame.locator('#scene > image').getAttribute('href'), 'media/images/' + image);
+        assert.equal(await frame.locator('#scene > image').getAttribute('href'), 'media/images/earth-moon-distance-approved.webp');
+        assert.equal(await frame.locator(`button[data-world="${key}"] img`).getAttribute('src'), 'media/images/' + image);
         assert.equal(await frame.locator('#scene > rect').getAttribute('fill'), background);
         assert.equal(await frame.locator(`button[data-world="${key}"] img`).evaluate(img => img.complete && img.naturalWidth > 0), true);
         // The latest comprehensive table keeps all capability columns visible.

@@ -72,6 +72,7 @@ def main():
     page = (ROOT / 'scripts/showcase.html').read_text()
     page = page.replace('__RESEARCH_INTRO__', (ROOT / 'scripts/research_intro.html').read_text())
     page = page.replace('__HERO_DEMO__', render_hero())
+    page = page.replace('__ACADEMIC_COVER_CSS__', (ROOT / 'scripts/academic-cover.css').read_text())
     page = page.replace('__PROJECT_POLISH_CSS__', (ROOT / 'scripts/project-polish.css').read_text())
     lunar_data = json.loads((ROOT / 'data/lunar-preview.json').read_text())
     for model in lunar_data['models']:

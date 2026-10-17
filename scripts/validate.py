@@ -93,14 +93,22 @@ def main():
             assert asset.is_file(), item[key]
             assert hashlib.sha256(asset.read_bytes()).hexdigest() == item[key + 'Sha256'], item[key]
         assert item['previewBytes'] <= item['sourceBytes']
-        assert f'data-src="{item["preview"]}"' in content
-        assert f'poster="{item["poster"]}"' in content
+        # Easy previews remain available; only Medium cards appear on the homepage.
+        if item['source'].endswith('/medium.mp4'):
+            assert f'data-src="{item["preview"]}"' in content
+            assert f'poster="{item["poster"]}"' in content
         assert item['video']['width'] == 640 and item['video']['height'] == 480
         assert item['video']['r_frame_rate'] == '30/1'
         assert item['usesOriginal'] or item['ssim'] >= .98
     assert (ROOT / 'media/fonts/space-grotesk/SpaceGrotesk-Variable.woff2').read_bytes().startswith(b'wOF2')
     assert (ROOT / 'media/fonts/space-grotesk/OFL.txt').is_file()
-    print('PASS: 30 homepage previews, posters, source hashes and local licensed font')
+    print('PASS: 30 preserved preview assets, 15 homepage previews, source hashes and local licensed fonts')
+    assert 'Co-first Authors' in content and 'Project Lead' in content
+    assert 'Provisional author list' not in content
+    assert 'benchmark.html' in content and 'Feishu' in content
+    for weight in ('Regular', 'Semibold'):
+        assert (ROOT / f'media/fonts/source-serif/SourceSerif4-{weight}.woff2').read_bytes().startswith(b'wOF2')
+    assert (ROOT / 'media/fonts/source-serif/LICENSE.md').is_file()
     from validate_hero import validate_hero
     validate_hero(content)
 

@@ -81,8 +81,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--force', action='store_true')
     args = parser.parse_args()
-    sources = sorted(set(re.findall(r'data-src="(media/task-demos/[^\"]+)"',
-                                    (ROOT / 'scripts/research_intro.html').read_text())))
+    # The homepage now shows only Medium; keep all 30 exports reproducible.
+    cases = json.loads((ROOT / 'data/showcase-cases.json').read_text())
+    sources = sorted(f'media/task-demos/{case["id"]}/{level}.mp4'
+                     for case in cases for level in ('easy', 'medium'))
     assert len(sources) == 30
     old = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
     previous = {x['source']: x for x in old.get('previews', [])} if old.get('recipe') == RECIPE else {}
