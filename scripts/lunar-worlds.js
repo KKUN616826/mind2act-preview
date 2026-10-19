@@ -27,3 +27,9 @@ for(const [index,tab] of tabs.entries()) tab.addEventListener('keydown',event=>{
 });
 
 
+
+// Keep the existing illustration in sync with the public three-view table.
+window.addEventListener('message', event => {
+ if (event.origin !== location.origin || event.source !== window.parent || window.parent === window) return;
+ if (event.data?.type === 'mind2act-select-world' && Object.hasOwn(worlds, event.data.world)) render(event.data.world, false);
+});

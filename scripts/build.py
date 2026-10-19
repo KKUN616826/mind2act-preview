@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 from render_cases import card, case_md, cover, e
 from leaderboard import render as render_leaderboard
+from view_leaderboard import render as render_view_leaderboard
 from build_rollouts import build_rollouts
 from hero_demo import render as render_hero
 from task_previews import apply_previews
@@ -71,6 +72,10 @@ def main():
         payload = payload.replace(char, escape)
     page = (ROOT / 'scripts/showcase.html').read_text()
     page = page.replace('__RESEARCH_INTRO__', (ROOT / 'scripts/research_intro.html').read_text())
+    public_board = render_view_leaderboard()
+    page = page.replace('__VIEW_LEADERBOARD__', public_board)
+    full_board = (ROOT / 'scripts/leaderboard-page.html').read_text().replace('__VIEW_LEADERBOARD__', public_board)
+    (ROOT / 'leaderboard.html').write_text(full_board, newline='\n')
     page = page.replace('__HERO_DEMO__', render_hero())
     page = page.replace('__ACADEMIC_COVER_CSS__', (ROOT / 'scripts/academic-cover.css').read_text())
     page = page.replace('__PROJECT_POLISH_CSS__', (ROOT / 'scripts/project-polish.css').read_text())

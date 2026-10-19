@@ -410,7 +410,7 @@ body .rd-hero .mind-reference-hero{height:calc(100svh - 90px)!important;min-heig
 
 <a class="skip" href="#tasks">Skip to task examples</a>
 
-<header class="header"><div class="wrap header-inner"><a class="brand official-nav-logo" href="index.html" aria-label="Mind2Act World home"><img src="media/images/mind2act-nav-world.svg?v=33" alt="Mind2Act World" width="1330" height="400"></a><button id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button><nav class="nav" id="siteNav" aria-label="Main navigation"><div class="nav-left"><a href="index.html" aria-current="page">Home</a><a href="leaderboard.html">Leaderboard</a><a href="benchmark.html">Benchmark</a><a href="tasks/index.html">Tasks</a><a href="resources.html">Resources</a></div><div class="nav-right"><a href="https://github.com/KKUN616826/mind2act-preview" target="_blank" rel="noreferrer">Code ↗</a><a class="paper-link" href="index.html#contributors">Contributors</a></div></nav></div></header>
+<header class="header"><div class="wrap header-inner"><a class="brand official-nav-logo" href="index.html" aria-label="Mind2Act World home"><img src="media/images/mind2act-nav-world.svg?v=33" alt="Mind2Act World" width="1330" height="400"></a><button id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button><nav class="nav" id="siteNav" aria-label="Main navigation"><div class="nav-left"><a href="index.html" aria-current="page">Home</a><a href="leaderboard.html">Leaderboard</a><a href="benchmark.html">Benchmark</a><a href="resources.html">Documents</a></div><div class="nav-right"><a href="https://github.com/KKUN616826/preview-7k4-r9m2" target="_blank" rel="noreferrer">Code ↗</a><a class="paper-link" href="index.html#contributors">Contributors</a></div></nav></div></header>
 
 <div class="article-layout wrap"><aside class="article-nav" aria-label="文章目录"><details open><summary>本文目录</summary><nav><a href="#motivation">为什么需要 Mind2Act World</a><a href="#insight">三个核心观点</a><a href="#insight-goal" class="sub">01 · 任务级推理</a><a href="#insight-action" class="sub">02 · 约束感知执行</a><a href="#insight-feedback" class="sub">03 · 推理—执行协同</a><a href="#design">任务怎样检验</a><a href="#evaluation">从失败走向诊断</a><a href="#mindact">Mind2Act Harness · 模型架构</a><a href="#leaderboard">排行榜 · 待评测</a><a href="#cases">15 项任务与演示</a><a href="#resources">资源与开放问题</a></nav></details></aside><main class="article-body">
 
@@ -1606,7 +1606,7 @@ body #top-ten .section-copy p{font:15px/1.5 Arial,sans-serif;color:#476578}
 
 body #top-ten td{white-space:nowrap;font-size:14px}
 
-</style><script src="scripts/lunar-embed.js?v=act-reference-1" defer></script><style id="leaderboard-comparison-polish">
+</style><script src="scripts/lunar-embed.js?v=sage-selected-1" defer></script><style id="leaderboard-comparison-polish">
 
 body #top-ten{padding-top:12px!important;padding-bottom:36px!important;margin-top:0!important}body #top-ten>.section-copy{display:none}
 
@@ -1618,7 +1618,7 @@ body #top-ten .score-preview-table{border:1px solid #d6dfdc!important;border-rad
 
 body main #research-overview.academic-section{padding:0!important;margin-bottom:8px!important}body main #top-ten.academic-section{width:min(1600px,calc(100% - 32px))!important;padding-top:0!important}
 
-</style><script>(()=>{const section=document.querySelector('#top-ten'),search=document.querySelector('#model-search');search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();section.querySelectorAll('tbody tr').forEach(row=>row.hidden=!row.cells[1].textContent.toLowerCase().includes(q))});function select(world){const col=-1;section.querySelectorAll('tr').forEach(row=>Array.from(row.cells).forEach((cell,i)=>cell.classList.toggle('selected-dimension',i===col)))}select('mind');window.addEventListener('message',event=>{if(event.origin===location.origin&&event.source===document.querySelector('.lunar-worlds-frame').contentWindow&&event.data?.type==='mind2act-world')select(event.data.world)})})();</script><style>body main #top-ten.academic-section{padding-top:32px!important}.full-leader-link{text-align:center;margin:26px 0 12px}.full-leader-link a{display:inline-flex;align-items:center;gap:22px;text-decoration:none;border:1px solid #b8c9c9;border-radius:9px;padding:12px 22px;color:#305f72;font:600 15px Arial;background:#eef2ea}.full-leader-link a:hover{background:#e0e9e2}</style><style id="academic-information-oct13">
+</style><style>body main #top-ten.academic-section{padding-top:32px!important}.full-leader-link{text-align:center;margin:26px 0 12px}.full-leader-link a{display:inline-flex;align-items:center;gap:22px;text-decoration:none;border:1px solid #b8c9c9;border-radius:9px;padding:12px 22px;color:#305f72;font:600 15px Arial;background:#eef2ea}.full-leader-link a:hover{background:#e0e9e2}</style><style id="academic-information-oct13">
 
 body .project-identity{width:min(1200px,calc(100% - 64px))!important;padding-top:60px!important}
 
@@ -1636,7 +1636,7 @@ body .project-identity .paper-title .project-tagline strong{color:#305f72!import
 
 @media(max-width:650px){.academic-project-meta{width:calc(100% - 36px)}.academic-project-meta dl>div{grid-template-columns:1fr;gap:3px;padding:10px 0}.sigs-logo{max-width:290px}.meta-social dd{gap:14px}body .project-identity{width:calc(100% - 36px)!important}}
 
-</style><script>document.getElementById('copy-project-link').addEventListener('click',async()=>{const url='https://kkun616826.github.io/mind2act-preview/';try{await navigator.clipboard.writeText(url);document.getElementById('copy-feedback').textContent='Link copied';}catch(e){document.getElementById('copy-feedback').textContent=url;}});</script><style>.academic-project-meta dd{text-align:left!important;justify-content:flex-start!important}.academic-project-meta dl>div{text-align:left!important}.academic-project-meta .sigs-logo{margin:0!important}body #top-ten th,body #top-ten td{padding:13px 10px!important}</style><style>body #news{width:min(1040px,calc(100% - 48px));margin-inline:auto}.news-list{list-style:none;padding:8px 30px;margin:24px 0;border:1px solid #d9e1de;border-radius:20px;background:#f0f3ef}.news-list li{display:grid;grid-template-columns:110px 1fr;gap:26px;padding:24px 0}.news-list time{font:600 19px Space,Arial}.news-list time span{display:block;font-size:14px;color:#7c8a8c;margin-top:4px}.news-list p{margin:0;font-size:20px;line-height:1.6;border-left:2px solid #d0ded6;padding-left:24px;position:relative}.news-list p:before{content:'';position:absolute;left:-6px;top:10px;border-radius:50%;width:10px;height:10px;background:#628f83}.news-label{font-size:14px;color:#61756d}body #news .section-copy h2{text-align:left!important;font-size:28px!important;margin-bottom:18px!important}body #news{padding:24px 0!important;margin-block:28px!important}body #news .news-list{max-height:400px;overflow:auto} @media(max-width:600px){body #news .news-list{padding:8px 18px}body #news .news-list li{grid-template-columns:70px 1fr;gap:16px}body #news .news-list p{font-size:18px}}</style></body></html>
+</style><script>document.getElementById('copy-project-link').addEventListener('click',async()=>{const url='https://kkun616826.github.io/preview-7k4-r9m2/';try{await navigator.clipboard.writeText(url);document.getElementById('copy-feedback').textContent='Link copied';}catch(e){document.getElementById('copy-feedback').textContent=url;}});</script><style>.academic-project-meta dd{text-align:left!important;justify-content:flex-start!important}.academic-project-meta dl>div{text-align:left!important}.academic-project-meta .sigs-logo{margin:0!important}body #top-ten th,body #top-ten td{padding:13px 10px!important}</style><style>body #news{width:min(1040px,calc(100% - 48px));margin-inline:auto}.news-list{list-style:none;padding:8px 30px;margin:24px 0;border:1px solid #d9e1de;border-radius:20px;background:#f0f3ef}.news-list li{display:grid;grid-template-columns:110px 1fr;gap:26px;padding:24px 0}.news-list time{font:600 19px Space,Arial}.news-list time span{display:block;font-size:14px;color:#7c8a8c;margin-top:4px}.news-list p{margin:0;font-size:20px;line-height:1.6;border-left:2px solid #d0ded6;padding-left:24px;position:relative}.news-list p:before{content:'';position:absolute;left:-6px;top:10px;border-radius:50%;width:10px;height:10px;background:#628f83}.news-label{font-size:14px;color:#61756d}body #news .section-copy h2{text-align:left!important;font-size:28px!important;margin-bottom:18px!important}body #news{padding:24px 0!important;margin-block:28px!important}body #news .news-list{max-height:400px;overflow:auto} @media(max-width:600px){body #news .news-list{padding:8px 18px}body #news .news-list li{grid-template-columns:70px 1fr;gap:16px}body #news .news-list p{font-size:18px}}</style></body></html>
 
 <style id="project-polish-20261013">__PROJECT_POLISH_CSS__
 
@@ -1727,4 +1727,13 @@ body #research-motivation.facet-motivation .dimension-evidence{min-height:100px}
 @media(max-width:700px){:root{--unified-column:calc(100% - 32px)}body .benchmark-facts{gap:8px!important}}
 
 </style><style id="benchmark-detail-entry">.benchmark-detail-entry{width:min(920px,calc(100% - 48px));margin:0 auto 48px;text-align:center}.benchmark-detail-entry a{display:inline-flex;gap:32px;align-items:center;color:#315f72;border:1px solid #cbd8d5;border-radius:6px;padding:12px 22px;text-decoration:none;font-size:16px}.benchmark-detail-entry a:hover{background:#e9efec}@media(max-width:700px){.benchmark-detail-entry{width:calc(100% - 32px)}}</style>
-<style id="academic-cover-20261017">__ACADEMIC_COVER_CSS__</style>
+
+<style id="academic-cover-20261017">__ACADEMIC_COVER_CSS__
+
+</style>
+
+<link rel="stylesheet" href="media/review-oct19.css?v=sage-selected-1">
+
+
+<link rel="stylesheet" href="scripts/view-leaderboard.css?v=three-views-1">
+<script src="scripts/view-leaderboard.js?v=three-views-1" defer></script>

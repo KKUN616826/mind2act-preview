@@ -15,8 +15,8 @@ const { chromium } = require('playwright');
     // Trigger the lazy iframe before waiting for its rendered model nodes.
     await page.locator('.lunar-worlds-frame').scrollIntoViewIfNeeded();
     await frame.locator('.node').first().waitFor();
-    const tableHeaders = await page.locator('#top-ten th').allTextContents();
-    assert.ok(tableHeaders.includes('Generalization') && tableHeaders.includes('Memory'));
+    const tableHeaders = await page.locator('#top-ten thead th').allTextContents();
+    assert.deepEqual(tableHeaders, ['Rank','Model','Paradigm','Score 0–100','Success %','Demos']);
     for (const [width, height] of [[1440,900], [1920,1080], [1440,768], [1920,700], [820,1100], [390,900], [320,900], [1440,900]]) {
       await page.setViewportSize({width,height});
       await page.locator('.lunar-worlds-frame').scrollIntoViewIfNeeded();
@@ -36,24 +36,24 @@ const { chromium } = require('playwright');
       assert.equal(layout.overflow, false); assert.equal(layout.childOverflow, false);
       assert.equal(layout.legendFits, true);
       if (width >= 1024) {
-        assert.ok(Math.abs(layout.height - layout.expected) <= 1, JSON.stringify(layout));
+        assert.ok(layout.height >= layout.main && layout.height - layout.main < 40, JSON.stringify(layout));
+        assert.equal(layout.natural, true);
         assert.ok(Math.abs(layout.ratio - 1) < 0.001, 'Keep SVG icons undistorted');
         assert.equal(layout.nodesInStage, true);
       } else assert.equal(layout.natural, true);
-      for (const [key, image, background] of [
-        ['mind', 'mind-moon-upper.png', '#0c2034'],
-        ['act', 'act-moon-lower.png', '#92bcd2'],
-        ['coupling', 'lunar-ranking-moon.png', '#adc4c3'],
+      for (const [key, image] of [
+        ['mind', 'mind-moon-upper.png'],
+        ['act', 'act-moon-lower.png'],
+        ['coupling', 'lunar-ranking-moon.png'],
       ]) {
         await frame.locator(`button[data-world="${key}"]`).click();
         assert.equal(await frame.locator(`button[data-world="${key}"]`).getAttribute('aria-selected'), 'true');
-        assert.equal(await frame.locator('#scene > image').getAttribute('href'), 'media/images/earth-moon-distance-approved.webp');
+        assert.equal(await frame.locator('#scene > image').getAttribute('href'), 'media/images/lunar-palette-sage.webp');
         assert.equal(await frame.locator(`button[data-world="${key}"] img`).getAttribute('src'), 'media/images/' + image);
-        assert.equal(await frame.locator('#scene > rect').getAttribute('fill'), background);
         assert.equal(await frame.locator(`button[data-world="${key}"] img`).evaluate(img => img.complete && img.naturalWidth > 0), true);
-        // The latest comprehensive table keeps all capability columns visible.
-        assert.equal(await page.locator('#top-ten th.selected-dimension').count(), 0);
-        assert.deepEqual(await page.locator('#top-ten th').allTextContents(), tableHeaders);
+        // The public table follows the selected view while retaining its two metrics.
+        await page.waitForFunction(key=>document.querySelector('.view-leaderboard').dataset.view===key,key);
+        assert.deepEqual(await page.locator('#top-ten thead th').allTextContents(), tableHeaders);
         await frame.locator('.node').first().focus();
         assert.match(await frame.locator('.tooltip').textContent(), /illustrative/);
         if (process.env.HERO_SCREENSHOTS && [390,1440,1920].includes(width)) {
@@ -74,9 +74,9 @@ const { chromium } = require('playwright');
     await page.locator('#model-search').fill('');
     assert.ok(await page.locator('#top-ten tbody tr:visible').count() > 1);
     assert.ok(await page.locator('#top-ten a[href^="rollouts/"]').count() > 0);
-    assert.match(await page.locator('.leader-status').textContent(), /pending validation.*unreported result/);
+    assert.match(await page.locator('.board-note').first().textContent(), /result not yet published/);
     await page.locator('.full-leader-link a').click();
-    await page.waitForURL('**/leaderboard.html');
+    await page.waitForURL('**/leaderboard.html?**');
     assert.ok(await page.locator('table tbody tr').count() > 0);
     assert.deepEqual(errors, []);
     console.log('PASS: model search, case links and full leaderboard');

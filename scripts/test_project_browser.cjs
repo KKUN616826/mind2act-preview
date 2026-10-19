@@ -41,10 +41,12 @@ const {chromium} = require('playwright');
       }
       console.log('PASS: formal cover, author markers, typography and alignment',width);
     }
+    // Use the current share destination; collaborators may update the preview URL.
+    const shareURL = new URL(await page.locator('a[aria-label="Share on X"]').getAttribute('href')).searchParams.get('url');
     // Test both clipboard success and its existing manual-copy fallback.
     await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>window.__copied=text}}));
     await page.locator('#copy-project-link').click();
-    assert.equal(await page.evaluate(()=>window.__copied),'https://kkun616826.github.io/mind2act-preview/');
+    assert.equal(await page.evaluate(()=>window.__copied),shareURL);
     assert.equal(await page.locator('#copy-feedback').textContent(),'Link copied');
     await page.evaluate(()=>navigator.clipboard.writeText=async()=>{throw Error('Clipboard unavailable');});
     await page.setViewportSize({width:320,height:900});
