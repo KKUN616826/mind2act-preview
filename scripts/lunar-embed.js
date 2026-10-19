@@ -11,7 +11,7 @@
     let height;
     if (desktop) {
       const header = document.querySelector('.header').getBoundingClientRect().height;
-      height = Math.max(440, Math.floor((window.visualViewport?.height || innerHeight) - header - 32));
+      height = Math.min(640, Math.max(440, Math.floor((window.visualViewport?.height || innerHeight) - header - 32)));
       doc.documentElement.style.setProperty('--lunar-panel-height', height + 'px');
     } else {
       doc.documentElement.style.removeProperty('--lunar-panel-height');
